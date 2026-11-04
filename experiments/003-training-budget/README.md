@@ -11,3 +11,30 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=2 bash experiments/003-training-budget/ru
 ```
 
 比较每个种子全量验证 bits/byte 的差值、改善的文章数以及后 900 步耗时。第 100 步处理 409,600 个训练字节，第 1,000 步累计处理 4,096,000 个。数据按原训练器随机抽取，累计处理字节可能重复。
+
+完整验证和汇总都可以独立复查。下列 CPU 测试按目标字节分别计算概率，覆盖短文章、重叠窗口、末尾不足一窗与批次补齐。汇总器检查 256 篇文章在六份报告中的计分字节数和逐篇加权平均值。
+
+```bash
+OMP_NUM_THREADS=1 python experiments/003-training-budget/test_evaluate.py
+python experiments/003-training-budget/summarize.py runs/budget-v1
+```
+
+## RTX PRO 6000 实测
+
+三次配对实验的平均验证分数从 **5.705** 降至 **3.399 bits/byte**。每个种子多处理 3,686,400 个训练字节，后 900 步平均用时 **40.8 秒**。吞吐与耗时只覆盖训练更新循环，排除了中途写盘和完整验证。启动时另有约 47 GiB 显存已被占用。[运行环境](results/environment.json) · [硬件记录](results/hardware.csv) · [汇总数据](results/summary.json)
+
+| 种子 | 100 步 bits/byte | 1,000 步 bits/byte | 下降量 | 改善文章数 / 256 | 后 900 步耗时 |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 42 | 5.485 | 3.164 | 2.321 | 256 | 40.5 秒 |
+| 43 | 6.219 | 3.874 | 2.346 | 256 | 40.7 秒 |
+| 44 | 5.410 | 3.160 | 2.250 | 256 | 41.3 秒 |
+
+这里的均值对三个种子等权，每个种子的分数对 985,775 个有效目标字节等权。逐篇分数保存在 [seed 42](results/seed-42/)、[seed 43](results/seed-43/) 和 [seed 44](results/seed-44/) 目录。结论适用于这份中文维基留出集、这三个种子和这段训练预算。
+
+**与实验 002 的关系。** 用同一全量评分器重新评价实验 002 留存的原始 100 步权重，得到 5.419 bits/byte。该实验最初公布的 5.386 来自 8 个随机批次。这次种子 42 的第 100 步权重与原始权重共有 148 个可比较张量，其中 0 个逐位相同，最大绝对差为 0.01265。产生差异的原因尚未定位。表内的改进量只比较同一轨迹的前后快照。[原始权重全量评分](results/original-002-full.json) · [权重对比](results/baseline-weights.json)
+
+重新汇总已发布的记录只需 Python 标准库：
+
+```bash
+python experiments/003-training-budget/summarize.py experiments/003-training-budget/results
+```
