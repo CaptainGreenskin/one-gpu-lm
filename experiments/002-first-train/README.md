@@ -14,19 +14,21 @@ OMP_NUM_THREADS=1 python "$D/train.py" --train "$D/toy-train.txt" --val "$D/toy-
 
 ## Linux 工作站上的首轮 GPU 训练
 
-使用单张 RTX PRO 6000 Blackwell 96 GB，Python 3.10–3.12，Linux x86_64。请在装卡的机器上运行。带数据的移交包解压后，仓库、Git 提交、语料和文章来源都在同一个目录里；模型从随机权重开始训练。
+首轮使用单张 RTX PRO 6000 Blackwell，Linux x86_64、Python 3.10.12、PyTorch 2.14.1+cu130、驱动 595.99.02。以下命令从 Git 仓库重建语料，启动同一组实验。[首轮实测结果](results/pro6000-first/)
 
 ```bash
-tar -xzf one-gpu-lm-first-gpu.tar.gz
+git clone https://github.com/CaptainGreenskin/one-gpu-lm.git
 cd one-gpu-lm
 nvidia-smi
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
-CUDA_VISIBLE_DEVICES=0 bash scripts/first_gpu.sh
+python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu130
+python -m pip install pyarrow==20.0.0
+python scripts/wiki_zh.py prepare
+OMP_NUM_THREADS=2 CUDA_VISIBLE_DEVICES=0 bash scripts/first_gpu.sh
 ```
 
-若工作站使用多张显卡，将 0 换成目标卡的索引。仅有 Git 源码时，先按下文重建语料。移交包含真实语料，因此训练所需的 Python 第三方依赖只有 PyTorch 及其安装依赖。PyTorch 2.8.0 + cu128 是本次固定的构建；RTX PRO 6000 Blackwell 的计算能力为 12.0。驱动需要能运行 CUDA 12.8。启动器会实际运行 BF16 因果注意力的反向传播，检验驱动、软件构建和选中的卡能否协同工作。[PyTorch 官方安装命令](https://pytorch.org/get-started/previous-versions/) · [NVIDIA 计算能力表](https://developer.nvidia.com/cuda/gpus)
+如果已有包含语料的移交包，解压后可直接验证数据并启动训练。多卡工作站可将 0 换成目标卡索引。本次复用了工作站已有的 cu130 构建。最初移交包中记录的 2.8.0 + cu128 方案尚未在这台机器上验证。启动器会执行 BF16 因果注意力的反向传播，检验驱动、构建和所选显卡。[PyTorch 安装命令](https://pytorch.org/get-started/previous-versions/) · [NVIDIA 计算能力表](https://developer.nvidia.com/cuda/gpus)
 
 | 阶段 | 做什么 | 留下什么 |
 | --- | --- | --- |
@@ -39,7 +41,7 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/first_gpu.sh
 
 观察每秒训练字节数、PyTorch 峰值已分配显存和训练前后验证 bits/byte。吞吐只覆盖训练更新循环，包含首步开销；显存数与 nvidia-smi 的整卡占用定义不同。验证固定抽取 8 个批次，本轮用于建立机器和程序的基线。将这份 summary 和运行元数据带回项目，再据吞吐计划下一阶段的语料量和卡时。
 
-**如果启动失败。** 若 `nvidia-smi` 查不到卡，先检查主机驱动或容器 GPU 映射。若显示 CUDA 不可用或内核不支持 sm_120，核对当前虚拟环境、cu128 wheel 和驱动，并重新运行自检。若显存不足，先在 `nvidia-smi` 确认选中的卡和可用显存，再以相同参数重跑。如主动更改 batch 或上下文，请另记一次实验。GPU 上的真实性能以实际工作站记录为准。
+**如果启动失败。** 若 `nvidia-smi` 查不到卡，先检查主机驱动或容器 GPU 映射。若显示 CUDA 不可用或内核不支持 sm_120，核对当前虚拟环境、cu130 wheel 和驱动，并重新运行自检。若显存不足，先在 `nvidia-smi` 确认选中的卡和可用显存，再以相同参数重跑。如主动更改 batch 或上下文，请另记一次实验。GPU 上的真实性能以实际工作站记录为准。
 
 ## 本次中文语料
 
@@ -59,4 +61,4 @@ python scripts/wiki_zh.py verify
 
 原始玩具语料的 CPU 验证见 [cpu-smoke.json](cpu-smoke.json)。
 
-本地还用本次维基训练集与验证集实跑了 tiny 模式 12 步，确认 mmap 读取、评估和保存模型可以配合工作。两次验证使用相同的抽样位置，bits/byte 从 8.003 到 7.815。这是 CPU 上 34,176 参数的流程检查。85,645,824 参数的 RTX PRO 6000 校准结果应由工作站的 summary.json 提供。[本次 CPU 运行记录](wiki-zh-cpu-smoke.json)
+本地还用本次维基训练集与验证集实跑了 tiny 模式 12 步，确认 mmap 读取、评估和保存模型可以配合工作。两次验证使用相同的抽样位置，bits/byte 从 8.003 到 7.815。这是 CPU 上 34,176 参数的流程检查。随后完成了 85,645,824 参数的 RTX PRO 6000 校准。[GPU 摘要](results/pro6000-first/summary.json) [本次 CPU 运行记录](wiki-zh-cpu-smoke.json)

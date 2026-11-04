@@ -1,0 +1,13 @@
+{
+  "file_bytes": 342624035,
+  "sha256": "554781e07f8575c60c25dc4841f8d0d0cbb88720e6625c0c4e1a8730e7aea1f2",
+  "strict_load": true,
+  "test_device": "cpu",
+  "input_utf8": "一张显卡",
+  "logits_shape": [
+    1,
+    12,
+    256
+  ],
+  "all_logits_finite": true
+}

@@ -4,7 +4,7 @@
 
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
-**第一轮上卡。** 在 Linux 工作站上准备 PyTorch 2.8.0 + cu128 环境，使用已固定的中文维基百科子集运行 `CUDA_VISIBLE_DEVICES=0 bash scripts/first_gpu.sh`。该命令做 GPU 自检、100 步训练和结果核验。[安装、语料与验收步骤](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
+**首轮实测。** RTX PRO 6000 Blackwell 单卡完成了 100 步训练。8,565 万参数的 GPT 在中文维基验证样本上从 8.106 降到 5.386 bits/byte，训练更新用时 4.376 秒。读者可按相同数据、软件和计时口径复跑。[实测条件与原始结果](experiments/002-first-train/results/pro6000-first/) · [安装与复现](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
 
 | 实验 | 能回答什么 | 复现入口 |
 | --- | --- | --- |
@@ -15,6 +15,6 @@
 
 **后续一年。** 第 2–3 个月写出可从干净环境复现的中文预训练和监督微调教程。第 4–6 个月试验短预算的训练改进，并将候选配置延长训练复核；若有第二张卡，可以分头重复对照组。第 7–12 个月把同一模型用于推理实验，记录首 token 延迟和吞吐，请外部贡献者在其他显卡上复跑。此前讨论的 Text-to-SQL 可以作为后续的下游任务。
 
-**每个实验留什么。** 记录假设、数据来源与版本、设备与环境、代码提交、完整配置、命令、原始指标、失败原因及下一步。权重另存并按数据许可提供获取方式。第一轮真实 GPU 训练完成后，在 GitHub 发布独立训练仓库，然后把稳定链接补进 InfraGuide 的 AI Infra 知识入口。
+**每个实验留什么。** 记录假设、数据来源与版本、设备与环境、代码提交、完整配置、命令、原始指标、失败原因及下一步。权重另存并按数据许可提供获取方式。InfraGuide 的 AI Infra 章节提供对应知识点。
 
 设计参考包括 [build-nanogpt](https://github.com/karpathy/build-nanogpt) 的渐进式教学、[nanochat](https://github.com/karpathy/nanochat) 的完整训练流程和 [autoresearch](https://github.com/karpathy/autoresearch) 的固定算时实验。中文从零训练可以与 [MiniMind](https://github.com/jingyaogong/minimind) 交叉学习。
