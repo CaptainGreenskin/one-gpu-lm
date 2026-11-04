@@ -1,5 +1,7 @@
 """One fixed-time pretraining trial on common raw-text chunks for byte/BPE models."""
 import argparse
+import hashlib
+import struct
 from contextlib import nullcontext
 import json
 import math
@@ -43,16 +45,51 @@ def tensors(table, bos, device):
     return x.to(device), y.to(device), int(lengths.sum())
 
 
+def score_model(model, val, device, val_meta, arm, bos):
+    model.eval()
+    val_start = time.monotonic()
+    nats = 0.
+    val_tokens = 0
+    with torch.inference_mode():
+        for rows in val.split(16):
+            x, y, count = tensors(rows, bos, device)
+            with torch.autocast("cuda", dtype=torch.bfloat16) if device == "cuda" else nullcontext():
+                logits = model(x)
+            losses = F.cross_entropy(logits.float().transpose(1, 2), y, reduction="none", ignore_index=-100)
+            nats += float(losses.sum(dtype=torch.float64))
+            val_tokens += count
+    actual_bytes = val_meta["raw_bytes"]
+    expected_tokens = actual_bytes if arm == "byte" else val_meta["bpe_tokens"]
+    if val_tokens != expected_tokens:
+        raise ValueError("incomplete validation coverage")
+    score = nats / (math.log(2) * actual_bytes)
+    if not math.isfinite(score):
+        raise ValueError("non-finite validation loss")
+    validation_seconds = time.monotonic()-val_start
+    return score, val_tokens, validation_seconds
+
+
+def batch_ids(size, rng, epochs):
+    if epochs is None:
+        while True:
+            yield torch.randint(size, (8,), generator=rng)
+    else:
+        for _ in range(epochs):
+            yield from torch.randperm(size, generator=rng).split(8)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--arm", choices=["byte", "bpe"], required=True)
     parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--seconds", type=float, required=True)
+    budget = parser.add_mutually_exclusive_group(required=True)
+    budget.add_argument("--seconds", type=float)
+    budget.add_argument("--epochs", type=int, help="read each raw chunk once per epoch, shuffled without replacement")
     parser.add_argument("--tiny-cpu", action="store_true")
     args = parser.parse_args()
-    if args.seconds <= 0:
+    if (args.seconds is not None and args.seconds <= 0) or (args.epochs is not None and args.epochs < 1):
         parser.error("positive training budget required")
     args.out.mkdir(parents=True, exist_ok=False)
     m = json.loads((args.data / "manifest.json").read_text())
@@ -82,8 +119,12 @@ def main():
     elapsed = 0.
     steps = tokens = raw_bytes = 0
     next_record = 30
-    while elapsed < args.seconds:
-        ix = torch.randint(len(data), (8,), generator=rng)
+    trace = hashlib.sha256()
+    for ix in batch_ids(len(data), rng, args.epochs):
+        if args.seconds is not None and elapsed >= args.seconds:
+            break
+        if args.epochs is not None:
+            trace.update(struct.pack(f"<{len(ix)}I", *ix.tolist()))
         x, y, count = tensors(data[ix], bos, device)
         optimizer.zero_grad(set_to_none=True)
         with precision():
@@ -105,33 +146,18 @@ def main():
                                                      "raw_bytes": raw_bytes, "at": time.time()})
             next_record += 30
     peak = torch.cuda.max_memory_allocated() if device == "cuda" else None
-    model.eval()
-    val_start = time.monotonic()
-    nats = 0.
-    val_tokens = 0
-    with torch.inference_mode():
-        for rows in val.split(16):
-            x, y, count = tensors(rows, bos, device)
-            with precision():
-                logits = model(x)
-            losses = F.cross_entropy(logits.float().transpose(1, 2), y, reduction="none", ignore_index=-100)
-            nats += float(losses.sum(dtype=torch.float64))
-            val_tokens += count
-    actual_bytes = m["splits"]["val"]["raw_bytes"]
-    expected_tokens = actual_bytes if args.arm == "byte" else m["splits"]["val"]["bpe_tokens"]
-    if val_tokens != expected_tokens:
-        raise ValueError("incomplete validation coverage")
-    score = nats / (math.log(2) * actual_bytes)
-    if not math.isfinite(score):
-        raise ValueError("non-finite validation loss")
-    validation_seconds = time.monotonic()-val_start
+    score, val_tokens, validation_seconds = score_model(model, val, device, m["splits"]["val"], args.arm, bos)
     torch.save({"model": model.state_dict(), "arm": args.arm, "bos": bos, "config": [hid, heads, layers, width, bos+1, ffn]},
                args.out / "model.pt")
     metrics = {"arm": args.arm, "seed": args.seed, "requested_seconds": args.seconds, "train_seconds": elapsed,
                "steps": steps, "train_raw_bytes": raw_bytes, "train_tokens": tokens, "train_bytes_per_second": raw_bytes/elapsed,
-               "bpb": score, "val_raw_bytes": actual_bytes, "val_tokens": val_tokens, "val_seconds": validation_seconds,
+               "bpb": score, "val_raw_bytes": m["splits"]["val"]["raw_bytes"], "val_tokens": val_tokens, "val_seconds": validation_seconds,
                "parameters": sum(p.numel() for p in model.parameters()), "peak_allocated_bytes": peak, "device": device,
                "manifest_sha256": digest(args.data / "manifest.json"), "torch": str(torch.__version__)}
+    if args.epochs is not None:
+        if raw_bytes != args.epochs * m["splits"]["train"]["raw_bytes"]:
+            raise ValueError("raw-byte exposure mismatch")
+        metrics.update(epochs=args.epochs, sample_order_sha256=trace.hexdigest())
     atomic_json(args.out / "metrics.json", metrics)
     print(json.dumps(metrics), flush=True)
 

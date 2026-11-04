@@ -63,14 +63,14 @@ def write_row(file, tokens):
     file.write(row.tobytes())
 
 
-def build(data, out, tokenizer_file):
+def build(data, out, tokenizer_file, *, source=None, reader=documents):
     tok = Tokenizer.from_file(str(tokenizer_file))
-    record = {"source": json.loads(REFERENCE.read_text()), "width_bytes": WIDTH, "bpe_vocab": tok.get_vocab_size(),
+    record = {"source": json.loads(REFERENCE.read_text()) if source is None else source, "width_bytes": WIDTH, "bpe_vocab": tok.get_vocab_size(),
               "bpe_sha256": sha256(tokenizer_file), "splits": {}}
     for split in ("train", "val"):
         rows = byte_count = bpe_count = 0
         with (out / f"{split}-byte.bin").open("wb") as byte_out, (out / f"{split}-bpe.bin").open("wb") as bpe_out:
-            for _, text in documents(data, split):
+            for _, text in reader(data, split):
                 for piece in chunks(text):
                     text_piece = piece.decode()
                     ids = tok.encode(text_piece, add_special_tokens=False).ids

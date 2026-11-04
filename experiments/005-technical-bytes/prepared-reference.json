@@ -1,0 +1,35 @@
+{
+  "source": {
+    "repository": "rust-lang-cn/book-cn",
+    "revision": "cde74c448e301ce8ac7960a0d3dc879efd83635d",
+    "license": "MIT OR Apache-2.0",
+    "files": 94,
+    "val_chapters": [
+      "04",
+      "10",
+      "15",
+      "20"
+    ],
+    "exact_train_chunks_matching_validation_removed": 0,
+    "file_index_sha256": "1b0b38ddab703712645e22b81a6969bdb5b9d3ce2b26aaf25db585d00610c2c9"
+  },
+  "width_bytes": 384,
+  "bpe_vocab": 2048,
+  "bpe_sha256": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02",
+  "splits": {
+    "train": {
+      "rows": 1904,
+      "raw_bytes": 715084,
+      "bpe_tokens": 356079,
+      "byte_sha256": "d1c4369c3f27b15fdf6e0731e561be689fb4c99b21937642b305f94630f83965",
+      "bpe_sha256": "cbb1c27cdf160b82f93e1fd7bc09a2f8cc4774236e555d89a9871b6d4ca413de"
+    },
+    "val": {
+      "rows": 704,
+      "raw_bytes": 267047,
+      "bpe_tokens": 134090,
+      "byte_sha256": "8027e70998752523406bd0d8e557e47fb4178ebd2d45269643a9d93498efd9ca",
+      "bpe_sha256": "a11f6643bdc85988a5adbd4deb0b8b568213ed3714bd81a4813712bf82e152a6"
+    }
+  }
+}
