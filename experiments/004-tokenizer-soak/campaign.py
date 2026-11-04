@@ -5,7 +5,6 @@ import fcntl
 import json
 from pathlib import Path
 import shutil
-import signal
 import subprocess
 import sys
 import threading
@@ -96,7 +95,7 @@ def main():
             if time.time() >= deadline:
                 break
             name = f"t{budget}-s{seed}-{arm}"
-            attempts = sorted(out.glob(name+"-a*"))
+            attempts = sorted(d for d in out.glob(name+"-a*") if d.is_dir())
             if any((d/"metrics.json").is_file() for d in attempts):
                 continue
             if len(attempts) >= 3:
