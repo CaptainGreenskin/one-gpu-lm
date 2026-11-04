@@ -87,8 +87,11 @@ def main():
     budget = parser.add_mutually_exclusive_group(required=True)
     budget.add_argument("--seconds", type=float)
     budget.add_argument("--epochs", type=int, help="read each raw chunk once per epoch, shuffled without replacement")
+    parser.add_argument("--epoch-curve", action="store_true", help="score the full train and validation splits at each epoch boundary")
     parser.add_argument("--tiny-cpu", action="store_true")
     args = parser.parse_args()
+    if args.epoch_curve and args.epochs is None:
+        parser.error("--epoch-curve requires --epochs")
     if (args.seconds is not None and args.seconds <= 0) or (args.epochs is not None and args.epochs < 1):
         parser.error("positive training budget required")
     args.out.mkdir(parents=True, exist_ok=False)
@@ -120,6 +123,8 @@ def main():
     steps = tokens = raw_bytes = 0
     next_record = 30
     trace = hashlib.sha256()
+    curve = []
+    steps_per_epoch = math.ceil(len(data) / 8)
     for ix in batch_ids(len(data), rng, args.epochs):
         if args.seconds is not None and elapsed >= args.seconds:
             break
@@ -145,8 +150,19 @@ def main():
             atomic_json(args.out / "progress.json", {"steps": steps, "elapsed": elapsed, "loss": last_loss,
                                                      "raw_bytes": raw_bytes, "at": time.time()})
             next_record += 30
+        if args.epoch_curve and steps % steps_per_epoch == 0:
+            eval_start = time.monotonic()
+            train_bpb, _, _ = score_model(model, data, device, m["splits"]["train"], args.arm, bos)
+            score, val_tokens, validation_seconds = score_model(model, val, device, m["splits"]["val"], args.arm, bos)
+            model.train()
+            curve.append({"epoch": steps // steps_per_epoch, "steps": steps, "train_raw_bytes": raw_bytes,
+                          "train_tokens": tokens, "train_bpb": train_bpb, "val_bpb": score,
+                          "train_seconds": elapsed, "sample_order_sha256": trace.hexdigest()})
+            atomic_json(args.out / "curve.json", curve)
+            start += time.monotonic() - eval_start
     peak = torch.cuda.max_memory_allocated() if device == "cuda" else None
-    score, val_tokens, validation_seconds = score_model(model, val, device, m["splits"]["val"], args.arm, bos)
+    if not args.epoch_curve:
+        score, val_tokens, validation_seconds = score_model(model, val, device, m["splits"]["val"], args.arm, bos)
     torch.save({"model": model.state_dict(), "arm": args.arm, "bos": bos, "config": [hid, heads, layers, width, bos+1, ffn]},
                args.out / "model.pt")
     metrics = {"arm": args.arm, "seed": args.seed, "requested_seconds": args.seconds, "train_seconds": elapsed,
