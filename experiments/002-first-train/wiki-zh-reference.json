@@ -1,0 +1,26 @@
+{
+  "dataset": "wikimedia/wikipedia",
+  "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+  "shard": "20231101.zh/train-00002-of-00006.parquet",
+  "shard_sha256": "ec8f6c0dd1418b8fcd454278fb4f2bc7cd0ce8312f29c80b672533942601338f",
+  "train_articles": 2048,
+  "val_articles": 256,
+  "files": {
+    "train.txt": {
+      "bytes": 7669687,
+      "sha256": "7e3a2e1fc1f0b837ad82af676ca20c670e84dc4b37b78aa2bc51a6f62a86effd"
+    },
+    "val.txt": {
+      "bytes": 986543,
+      "sha256": "a61fefe83b989135c6917766811224af4e9a01c2be27043a20a576c16629749a"
+    },
+    "articles.jsonl": {
+      "bytes": 563343,
+      "sha256": "83b93e35e3136ebf7cabc4b85ef8f84acfe3620a801e4720a0430f3c065be5e3"
+    },
+    "ATTRIBUTION.txt": {
+      "bytes": 586,
+      "sha256": "5e9ab0e0d5b6b1d8700fbb74964ed126f727ec7b2692bf3523dd4029e01f7636"
+    }
+  }
+}

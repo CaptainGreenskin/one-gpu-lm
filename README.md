@@ -4,6 +4,8 @@
 
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
+**第一轮上卡。** 在 Linux 工作站上准备 PyTorch 2.8.0 + cu128 环境，使用已固定的中文维基百科子集运行 `CUDA_VISIBLE_DEVICES=0 bash scripts/first_gpu.sh`。该命令做 GPU 自检、100 步训练和结果核验。[安装、语料与验收步骤](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
+
 | 实验 | 能回答什么 | 复现入口 |
 | --- | --- | --- |
 | 001 · 同一段文字被切成几个 token | 两个公开分词器编码 12 条固定样例时，输入长度有什么不同？ | [实验记录](experiments/001-tokenizer/README.md) |
