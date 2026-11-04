@@ -60,12 +60,15 @@ def main():
     parser.add_argument("--run-dir", required=True, type=Path)
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cuda")
     parser.add_argument("--steps", type=int, default=500)
+    parser.add_argument("--snapshot-step", type=int, help="also save weights after this update, before the final step")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--tiny", action="store_true", help="small model for a pipeline check")
     args = parser.parse_args()
     width, heads, layers, length, batch = (32, 2, 2, 16, 4) if args.tiny else (768, 12, 12, 512, 8)
     if args.steps < 1 or min(args.train.stat().st_size, args.val.stat().st_size) <= length:
         parser.error("steps must be positive and each corpus must exceed the sequence length in bytes")
+    if args.snapshot_step is not None and not 0 < args.snapshot_step < args.steps:
+        parser.error("snapshot-step must be between 1 and steps-1")
     train_hash, val_hash = digest(args.train), digest(args.val)
     if train_hash == val_hash:
         parser.error("training and validation data must differ")
@@ -109,21 +112,31 @@ def main():
         report["gpu"] = torch.cuda.get_device_name()
         torch.cuda.reset_peak_memory_stats()
         torch.cuda.synchronize()
+    def save_model(name):
+        torch.save({"model": model.state_dict(), "config": [width, heads, layers, length]}, args.run_dir / name)
+
+    earlier_seconds = 0.0
     started = perf_counter()
-    for _ in range(args.steps):
+    for step in range(1, args.steps + 1):
         optimizer.zero_grad(set_to_none=True)
         loss = loss_on(train, train_rng)
         loss.backward()
         optimizer.step()
+        if step == args.snapshot_step:
+            if args.device == "cuda":
+                torch.cuda.synchronize()
+            earlier_seconds = perf_counter() - started
+            report.update(snapshot_step=step, snapshot_train_seconds=earlier_seconds)
+            save_model(f"step-{step}.pt")
+            started = perf_counter()
     if args.device == "cuda":
         torch.cuda.synchronize()
         report["peak_allocated_bytes"] = torch.cuda.max_memory_allocated()
-    seconds = perf_counter() - started
+    seconds = earlier_seconds + (perf_counter() - started)
     tokens = args.steps * batch * length
     report.update(train_wall_seconds=seconds, train_tokens=tokens,
                   train_tokens_per_second=tokens / seconds, val_bpb_final=val_bpb())
-    torch.save({"model": model.state_dict(), "config": [width, heads, layers, length]},
-               args.run_dir / "model.pt")
+    save_model("model.pt")
     result = json.dumps(report, indent=2)
     (args.run_dir / "metrics.json").write_text(result + "\n", encoding="utf-8")
     print(result)
