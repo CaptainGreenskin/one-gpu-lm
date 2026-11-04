@@ -18,3 +18,5 @@
 **每个实验留什么。** 记录假设、数据来源与版本、设备与环境、代码提交、完整配置、命令、原始指标、失败原因及下一步。权重另存并按数据许可提供获取方式。InfraGuide 的 AI Infra 章节提供对应知识点。
 
 设计参考包括 [build-nanogpt](https://github.com/karpathy/build-nanogpt) 的渐进式教学、[nanochat](https://github.com/karpathy/nanochat) 的完整训练流程和 [autoresearch](https://github.com/karpathy/autoresearch) 的固定算时实验。中文从零训练可以与 [MiniMind](https://github.com/jingyaogong/minimind) 交叉学习。
+
+本仓库的原创代码采用 MIT 许可。中文维基百科语料和实验调用的第三方分词器分别遵循各自的许可，文章出处和处理方式随数据准备脚本生成。[代码许可](LICENSE) · [语料来源与许可](experiments/002-first-train/README.md#本次中文语料) · [分词器来源](experiments/001-tokenizer/README.md)
