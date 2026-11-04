@@ -58,3 +58,5 @@ python scripts/wiki_zh.py verify
 命令校验原始分片和生成文件，已有正确输出时会直接复用。也可用 `prepare --shard /path/to/train-00002-of-00006.parquet` 读取已有分片。原文、模型权重和运行目录均由 Git 忽略。
 
 原始玩具语料的 CPU 验证见 [cpu-smoke.json](cpu-smoke.json)。
+
+本地还用本次维基训练集与验证集实跑了 tiny 模式 12 步，确认 mmap 读取、评估和保存模型可以配合工作。两次验证使用相同的抽样位置，bits/byte 从 8.003 到 7.815。这是 CPU 上 34,176 参数的流程检查。85,645,824 参数的 RTX PRO 6000 校准结果应由工作站的 summary.json 提供。[本次 CPU 运行记录](wiki-zh-cpu-smoke.json)
