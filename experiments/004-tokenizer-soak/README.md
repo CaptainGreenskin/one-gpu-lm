@@ -17,3 +17,5 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=2 python experiments/004-tokenizer-soak/c
 ```
 
 同一路径重启将沿用原始截止时刻，并跳过已完成的试验。准备脚本验证原料、逐片段检查编码可逆性，运行器验证编码缓存的 SHA-256。冻结的词表由训练文章拟合，词表数据随中文维基来源按 CC BY-SA 3.0 分享；原创程序沿用仓库的 MIT 许可。[语料来源](../002-first-train/README.md#本次中文语料) · [固定清单](prepared-reference.json)
+
+[八小时实测报告](results/2026-11-04/) 汇总完整配对、失败尝试、截止时被中断的试验与硬件采样。

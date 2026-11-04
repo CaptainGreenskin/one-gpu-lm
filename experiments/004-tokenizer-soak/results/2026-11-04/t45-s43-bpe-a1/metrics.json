@@ -1,0 +1,19 @@
+{
+  "arm": "bpe",
+  "seed": 43,
+  "requested_seconds": 45.0,
+  "train_seconds": 45.02771325199865,
+  "steps": 974,
+  "train_raw_bytes": 2838481,
+  "train_tokens": 1031529,
+  "train_bytes_per_second": 63038.53327204015,
+  "bpb": 2.9997216935393904,
+  "val_raw_bytes": 986031,
+  "val_tokens": 341052,
+  "val_seconds": 1.0141676789789926,
+  "parameters": 85596576,
+  "peak_allocated_bytes": 2388316160,
+  "device": "cuda",
+  "manifest_sha256": "35445ab03697d736870defcff655f03602d9f92e8b9a3bb9d92cd6a06c630121",
+  "torch": "2.14.1+cu130"
+}
