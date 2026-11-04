@@ -14,14 +14,15 @@ from torch.nn import functional as F
 
 
 class Block(nn.Module):
-    def __init__(self, width, heads):
+    def __init__(self, width, heads, mlp_width=None):
         super().__init__()
         self.heads = heads
         self.norm1 = nn.LayerNorm(width)
         self.qkv = nn.Linear(width, 3 * width)
         self.proj = nn.Linear(width, width)
         self.norm2 = nn.LayerNorm(width)
-        self.mlp = nn.Sequential(nn.Linear(width, width * 4), nn.GELU(), nn.Linear(width * 4, width))
+        mlp_width = mlp_width or width * 4
+        self.mlp = nn.Sequential(nn.Linear(width, mlp_width), nn.GELU(), nn.Linear(mlp_width, width))
 
     def forward(self, x):
         batch, length, width = x.shape
@@ -32,11 +33,11 @@ class Block(nn.Module):
 
 
 class GPT(nn.Module):
-    def __init__(self, width, heads, layers, length):
+    def __init__(self, width, heads, layers, length, vocab_size=256, mlp_width=None):
         super().__init__()
-        self.tokens = nn.Embedding(256, width)
+        self.tokens = nn.Embedding(vocab_size, width)
         self.position = nn.Embedding(length, width)
-        self.layers = nn.Sequential(*(Block(width, heads) for _ in range(layers)))
+        self.layers = nn.Sequential(*(Block(width, heads, mlp_width) for _ in range(layers)))
         self.norm = nn.LayerNorm(width)
 
     def forward(self, x):

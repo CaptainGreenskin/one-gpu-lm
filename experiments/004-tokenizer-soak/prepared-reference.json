@@ -1,0 +1,47 @@
+{
+  "source": {
+    "dataset": "wikimedia/wikipedia",
+    "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+    "shard": "20231101.zh/train-00002-of-00006.parquet",
+    "shard_sha256": "ec8f6c0dd1418b8fcd454278fb4f2bc7cd0ce8312f29c80b672533942601338f",
+    "train_articles": 2048,
+    "val_articles": 256,
+    "files": {
+      "train.txt": {
+        "bytes": 7669687,
+        "sha256": "7e3a2e1fc1f0b837ad82af676ca20c670e84dc4b37b78aa2bc51a6f62a86effd"
+      },
+      "val.txt": {
+        "bytes": 986543,
+        "sha256": "a61fefe83b989135c6917766811224af4e9a01c2be27043a20a576c16629749a"
+      },
+      "articles.jsonl": {
+        "bytes": 563343,
+        "sha256": "83b93e35e3136ebf7cabc4b85ef8f84acfe3620a801e4720a0430f3c065be5e3"
+      },
+      "ATTRIBUTION.txt": {
+        "bytes": 586,
+        "sha256": "5e9ab0e0d5b6b1d8700fbb74964ed126f727ec7b2692bf3523dd4029e01f7636"
+      }
+    }
+  },
+  "width_bytes": 384,
+  "bpe_vocab": 2048,
+  "bpe_sha256": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02",
+  "splits": {
+    "train": {
+      "rows": 21020,
+      "raw_bytes": 7665591,
+      "bpe_tokens": 2784308,
+      "byte_sha256": "be0d153858f7fdf49e87bd210d5b53ce34fedf0ea12879a038cf3e182a17cd7d",
+      "bpe_sha256": "b9cddcb1b77f4384096cfbc320f1f2cae1fd95cc3a4b296d3e7b774308554c82"
+    },
+    "val": {
+      "rows": 2684,
+      "raw_bytes": 986031,
+      "bpe_tokens": 341052,
+      "byte_sha256": "ec1ce2141fd9d49782958184c9353361c1bd85458b70de3d9560f28467df6357",
+      "bpe_sha256": "420bf5595f7c854eb911270c64f5535c7b2d0685e4f1931d656c7f951033bda9"
+    }
+  }
+}
