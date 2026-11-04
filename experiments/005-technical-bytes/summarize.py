@@ -22,13 +22,13 @@ def group(rows):
             "mean_bpe_bpb":mean(r["bpe_bpb"] for r in rows),"mean_bpe_gain":mean(r["bpe_gain"] for r in rows)}
 
 
-def summarize(out):
+def summarize(out, include_transfer=True):
     ref_path=HERE/"prepared-reference.json"
     ref=json.loads(ref_path.read_text())
     manifest=hashlib.sha256(ref_path.read_bytes()).hexdigest()
     train,val=ref["splits"]["train"],ref["splits"]["val"]
     transfer={}
-    for budget in (1200,2400):
+    for budget in (1200,2400) if include_transfer else ():
         rows=[]
         for seed in (42,43,44):
             metrics=[json.loads((out/f"transfer-t{budget}-s{seed}-{arm}.json").read_text()) for arm in ("byte","bpe")]
@@ -38,8 +38,10 @@ def summarize(out):
                     m["technical_val_bytes"]!=val["raw_bytes"] or m["technical_val_tokens"]!=tokens or
                     m["data_manifest_sha256"]!=manifest):
                     raise ValueError("invalid transfer comparison")
-            rows.append(paired(metrics,"technical_bpb"))
-        transfer[str(budget)]=group(rows)
+            a,b=metrics
+            rows.append({**paired(metrics,"technical_bpb"),"wiki_byte_bpb":a["wiki_bpb"],
+                         "wiki_bpe_bpb":b["wiki_bpb"],"wiki_bpe_gain":a["wiki_bpb"]-b["wiki_bpb"]})
+        transfer[str(budget)]={**group(rows),"mean_wiki_bpe_gain":mean(row["wiki_bpe_gain"] for row in rows)}
     equal={}
     for epochs in (4,24):
         rows=[]
@@ -71,4 +73,6 @@ def summarize(out):
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("out",type=Path)
-    print(json.dumps(summarize(parser.parse_args().out),indent=2,allow_nan=False))
+    parser.add_argument("--equal-only",action="store_true",help="summarize technical training without upstream weights")
+    args=parser.parse_args()
+    print(json.dumps(summarize(args.out, include_transfer=not args.equal_only),indent=2,allow_nan=False))

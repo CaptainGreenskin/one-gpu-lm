@@ -16,3 +16,23 @@ python experiments/005-technical-bytes/summarize.py runs/rust-equal-bytes
 ```
 
 启动器要同时确认八小时窗口已结束、原任务状态已完成且相符的结果已经公开到 GitHub。等待期间不启动 GPU 计算。代码使用仓库的 MIT 许可，数据准备时保存上游两份许可和每个章节的源路径及 SHA-256。原始文本、编码缓存和权重留在工作站。
+
+若只复现等原文字节的对照，可以从数据准备步骤直接开始，无需取得 004 的权重。在仓库根目录用下面的命令运行；已有同名目录时请换一个新的实验目录。
+
+```bash
+export OMP_NUM_THREADS=2 CUDA_VISIBLE_DEVICES=0
+out=runs/rust-equal-independent
+for epochs in 4 24; do
+  for seed in 42 43 44; do
+    arms="byte bpe"
+    if (( (seed + epochs / 4) % 2 )); then arms="bpe byte"; fi
+    for arm in $arms; do
+      python experiments/004-tokenizer-soak/trial.py --data data/rust-zh-pairs --arm "$arm" \
+        --seed "$seed" --epochs "$epochs" --out "$out/equal_bytes-$epochs-$seed-$arm-a1"
+    done
+  done
+done
+python experiments/005-technical-bytes/summarize.py --equal-only "$out"
+```
+
+判读时看每个种子的配对差和均值。三个种子都指向同一侧可报告为“一致领先”；若方向不一致，同时列出两侧赢的次数和差值范围。20/40 分钟模型在维基与技术文本上的方向分开列出。
