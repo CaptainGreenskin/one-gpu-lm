@@ -1,0 +1,158 @@
+{
+  "source_revision": "cde74c448e301ce8ac7960a0d3dc879efd83635d",
+  "val_raw_bytes": 267047,
+  "cross_domain_from_wiki": {
+    "1200": {
+      "pairs": [
+        {
+          "seed": 42,
+          "byte_bpb": 4.456406960893761,
+          "bpe_bpb": 4.443899888529983,
+          "bpe_gain": 0.012507072363778349,
+          "wiki_byte_bpb": 2.659957664941823,
+          "wiki_bpe_bpb": 2.4919869984585605,
+          "wiki_bpe_gain": 0.1679706664832623
+        },
+        {
+          "seed": 43,
+          "byte_bpb": 4.472025136548378,
+          "bpe_bpb": 4.2692501672562795,
+          "bpe_gain": 0.20277496929209882,
+          "wiki_byte_bpb": 2.6583235835725696,
+          "wiki_bpe_bpb": 2.4085059013386223,
+          "wiki_bpe_gain": 0.2498176822339473
+        },
+        {
+          "seed": 44,
+          "byte_bpb": 4.614493109876391,
+          "bpe_bpb": 4.429937917941311,
+          "bpe_gain": 0.18455519193507985,
+          "wiki_byte_bpb": 2.7458592800482178,
+          "wiki_bpe_bpb": 2.4684008855323336,
+          "wiki_bpe_gain": 0.27745839451588417
+        }
+      ],
+      "mean_byte_bpb": 4.51430840243951,
+      "mean_bpe_bpb": 4.381029324575858,
+      "mean_bpe_gain": 0.13327907786365234,
+      "mean_wiki_bpe_gain": 0.23174891441103126
+    },
+    "2400": {
+      "pairs": [
+        {
+          "seed": 42,
+          "byte_bpb": 6.2865622699456845,
+          "bpe_bpb": 6.5089900973853485,
+          "bpe_gain": -0.22242782743966405,
+          "wiki_byte_bpb": 3.9166022219716763,
+          "wiki_bpe_bpb": 3.6115355737006616,
+          "wiki_bpe_gain": 0.3050666482710147
+        },
+        {
+          "seed": 43,
+          "byte_bpb": 6.2079122671671785,
+          "bpe_bpb": 6.299595583926937,
+          "bpe_gain": -0.0916833167597586,
+          "wiki_byte_bpb": 3.855859979376181,
+          "wiki_bpe_bpb": 3.6211085870496857,
+          "wiki_bpe_gain": 0.23475139232649544
+        },
+        {
+          "seed": 44,
+          "byte_bpb": 6.5520224865902374,
+          "bpe_bpb": 6.144591529393257,
+          "bpe_gain": 0.4074309571969801,
+          "wiki_byte_bpb": 3.9012882259727992,
+          "wiki_bpe_bpb": 3.590176324197277,
+          "wiki_bpe_gain": 0.31111190177552217
+        }
+      ],
+      "mean_byte_bpb": 6.348832341234367,
+      "mean_bpe_bpb": 6.317725736901847,
+      "mean_bpe_gain": 0.031106604332519144,
+      "mean_wiki_bpe_gain": 0.2836433141243441
+    }
+  },
+  "matched_technical_training": {
+    "4": {
+      "pairs": [
+        {
+          "seed": 42,
+          "byte_bpb": 3.028254804381143,
+          "bpe_bpb": 2.406258958126962,
+          "bpe_gain": 0.621995846254181,
+          "raw_bytes_per_arm": 2860336,
+          "steps_per_arm": 952,
+          "byte_seconds": 43.47675049997633,
+          "bpe_seconds": 42.8942662429763,
+          "sample_order_sha256": "9f081d46b351a859184b4633399f53d5389f31df9746c7bfdba02cb76d78f1a0"
+        },
+        {
+          "seed": 43,
+          "byte_bpb": 2.559919805480619,
+          "bpe_bpb": 2.273013350465438,
+          "bpe_gain": 0.28690645501518075,
+          "raw_bytes_per_arm": 2860336,
+          "steps_per_arm": 952,
+          "byte_seconds": 40.57883200401557,
+          "bpe_seconds": 44.22243727999739,
+          "sample_order_sha256": "c3e8d8bf5814c021497883d811e06682983eea73013daa1452a20316034011f8"
+        },
+        {
+          "seed": 44,
+          "byte_bpb": 2.7091525671726093,
+          "bpe_bpb": 2.2573553123194636,
+          "bpe_gain": 0.4517972548531457,
+          "raw_bytes_per_arm": 2860336,
+          "steps_per_arm": 952,
+          "byte_seconds": 43.95467719199951,
+          "bpe_seconds": 43.33419084001798,
+          "sample_order_sha256": "96ee4c89e70b95936c8b107a8ffb6ef05e8a1c429dc5d20f0742dd0279e7c8a1"
+        }
+      ],
+      "mean_byte_bpb": 2.765775725678124,
+      "mean_bpe_bpb": 2.3122092069706213,
+      "mean_bpe_gain": 0.4535665187075025
+    },
+    "24": {
+      "pairs": [
+        {
+          "seed": 42,
+          "byte_bpb": 3.7176109977001106,
+          "bpe_bpb": 3.0683115352100208,
+          "bpe_gain": 0.6492994624900899,
+          "raw_bytes_per_arm": 17162016,
+          "steps_per_arm": 5712,
+          "byte_seconds": 261.03423563897377,
+          "bpe_seconds": 263.34645829402143,
+          "sample_order_sha256": "666bd951164e7061ab8b9b7fc97bbda6f3a9da705d9634e786e6c75630299258"
+        },
+        {
+          "seed": 43,
+          "byte_bpb": 3.834368148122181,
+          "bpe_bpb": 3.0857057999077737,
+          "bpe_gain": 0.7486623482144075,
+          "raw_bytes_per_arm": 17162016,
+          "steps_per_arm": 5712,
+          "byte_seconds": 263.8644165000005,
+          "bpe_seconds": 260.11380075500347,
+          "sample_order_sha256": "81f0c259d4aa53c1debf4767f3428c968d4ab6c5480143442bae1995951c6cef"
+        },
+        {
+          "seed": 44,
+          "byte_bpb": 3.7879552154284193,
+          "bpe_bpb": 3.0868710103339083,
+          "bpe_gain": 0.701084205094511,
+          "raw_bytes_per_arm": 17162016,
+          "steps_per_arm": 5712,
+          "byte_seconds": 259.47657248500036,
+          "bpe_seconds": 262.8680644100241,
+          "sample_order_sha256": "52d8c12ac64bab65d29ce8ecf28f86f1199dcddba4a84150c0cd9d2fe839b96d"
+        }
+      ],
+      "mean_byte_bpb": 3.779978120416904,
+      "mean_bpe_bpb": 3.0802961151505674,
+      "mean_bpe_gain": 0.6996820052663361
+    }
+  }
+}

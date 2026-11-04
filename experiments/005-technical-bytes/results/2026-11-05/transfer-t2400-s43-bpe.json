@@ -1,0 +1,12 @@
+{
+  "arm": "bpe",
+  "seed": 43,
+  "train_seconds_budget": 2400,
+  "source_checkpoint_sha256": "aec4d5ce62ce06adc35f234defef02ad59218c11e76c27015a3c91d6c2ae4130",
+  "wiki_bpb": 3.6211085870496857,
+  "technical_bpb": 6.299595583926937,
+  "technical_val_tokens": 134090,
+  "technical_val_bytes": 267047,
+  "validation_seconds": 0.26605258299969137,
+  "data_manifest_sha256": "dd0554766e6266ee01733b249302f624104711740cd64c5bdbb87005e3e0bbe5"
+}

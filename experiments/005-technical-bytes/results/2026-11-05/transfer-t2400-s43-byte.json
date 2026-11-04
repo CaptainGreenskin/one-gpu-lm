@@ -1,0 +1,12 @@
+{
+  "arm": "byte",
+  "seed": 43,
+  "train_seconds_budget": 2400,
+  "source_checkpoint_sha256": "142b6e5b47f0503b18aead5f7a16cc1fd4137d715f9c01c794afc78100ef013d",
+  "wiki_bpb": 3.855859979376181,
+  "technical_bpb": 6.2079122671671785,
+  "technical_val_tokens": 267047,
+  "technical_val_bytes": 267047,
+  "validation_seconds": 0.23369115599780343,
+  "data_manifest_sha256": "dd0554766e6266ee01733b249302f624104711740cd64c5bdbb87005e3e0bbe5"
+}
