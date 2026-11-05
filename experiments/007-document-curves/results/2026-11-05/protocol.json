@@ -1,0 +1,11 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 24,
+  "arm": "bpe",
+  "device": "cuda",
+  "tiny_cpu": false
+}

@@ -1,0 +1,174 @@
+{
+  "mean_curve": [
+    {
+      "epoch": 1,
+      "train_bpb": 3.7107100614397055,
+      "val_bpb": 3.6678064500879373,
+      "train_seconds": 10.67274925133097
+    },
+    {
+      "epoch": 2,
+      "train_bpb": 3.016732811320051,
+      "val_bpb": 3.022799868497142,
+      "train_seconds": 21.00717568799155
+    },
+    {
+      "epoch": 3,
+      "train_bpb": 2.586837661868655,
+      "val_bpb": 2.652031905557477,
+      "train_seconds": 31.3833378959874
+    },
+    {
+      "epoch": 4,
+      "train_bpb": 2.234036279037539,
+      "val_bpb": 2.373242209848759,
+      "train_seconds": 41.84327097432106
+    },
+    {
+      "epoch": 5,
+      "train_bpb": 1.9698808238943535,
+      "val_bpb": 2.212032714597904,
+      "train_seconds": 52.22891074665434
+    },
+    {
+      "epoch": 6,
+      "train_bpb": 1.7547332709871442,
+      "val_bpb": 2.1036687840853396,
+      "train_seconds": 62.62874968833057
+    },
+    {
+      "epoch": 7,
+      "train_bpb": 1.5671912984641718,
+      "val_bpb": 2.057915850244338,
+      "train_seconds": 73.06947745333309
+    },
+    {
+      "epoch": 8,
+      "train_bpb": 1.3727608245715004,
+      "val_bpb": 2.029924973682597,
+      "train_seconds": 83.40260317667465
+    },
+    {
+      "epoch": 9,
+      "train_bpb": 1.1966314687622104,
+      "val_bpb": 2.0336550191664147,
+      "train_seconds": 93.76286629699946
+    },
+    {
+      "epoch": 10,
+      "train_bpb": 1.024370530360996,
+      "val_bpb": 2.0702646647522656,
+      "train_seconds": 104.0748589449892
+    },
+    {
+      "epoch": 11,
+      "train_bpb": 0.8503952245999975,
+      "val_bpb": 2.13447185397745,
+      "train_seconds": 114.41753497733346
+    },
+    {
+      "epoch": 12,
+      "train_bpb": 0.7165635629105959,
+      "val_bpb": 2.217229271141418,
+      "train_seconds": 125.18325678031154
+    },
+    {
+      "epoch": 13,
+      "train_bpb": 0.6072202990690906,
+      "val_bpb": 2.3033215485529692,
+      "train_seconds": 135.61301747865704
+    },
+    {
+      "epoch": 14,
+      "train_bpb": 0.545549948680193,
+      "val_bpb": 2.3939361964792045,
+      "train_seconds": 146.004657480662
+    },
+    {
+      "epoch": 15,
+      "train_bpb": 0.49760732769616567,
+      "val_bpb": 2.4591089145685943,
+      "train_seconds": 156.52031734833145
+    },
+    {
+      "epoch": 16,
+      "train_bpb": 0.4618686379494712,
+      "val_bpb": 2.5139130558309204,
+      "train_seconds": 167.03682010998213
+    },
+    {
+      "epoch": 17,
+      "train_bpb": 0.43505480113889006,
+      "val_bpb": 2.5673641490202863,
+      "train_seconds": 177.55471155699342
+    },
+    {
+      "epoch": 18,
+      "train_bpb": 0.40233246979862036,
+      "val_bpb": 2.5921802717913054,
+      "train_seconds": 188.07575609033424
+    },
+    {
+      "epoch": 19,
+      "train_bpb": 0.36418290202409453,
+      "val_bpb": 2.660612271105408,
+      "train_seconds": 198.5641665069852
+    },
+    {
+      "epoch": 20,
+      "train_bpb": 0.32630945789529076,
+      "val_bpb": 2.6993554479230557,
+      "train_seconds": 209.0498373240019
+    },
+    {
+      "epoch": 21,
+      "train_bpb": 0.2668539041656047,
+      "val_bpb": 2.749340026045855,
+      "train_seconds": 219.67723651766815
+    },
+    {
+      "epoch": 22,
+      "train_bpb": 0.220384670110777,
+      "val_bpb": 2.795063542426377,
+      "train_seconds": 230.1036853060068
+    },
+    {
+      "epoch": 23,
+      "train_bpb": 0.17438328559445404,
+      "val_bpb": 2.8683842172354126,
+      "train_seconds": 240.57375804068093
+    },
+    {
+      "epoch": 24,
+      "train_bpb": 0.13885815659497242,
+      "val_bpb": 2.9060249194097705,
+      "train_seconds": 251.04526203435185
+    }
+  ],
+  "mean_turning_points": {
+    "best_epoch": 8,
+    "best_val_bpb": 2.029924973682597,
+    "first_rise_epoch": 9,
+    "two_diverging_epochs_start": 9
+  },
+  "by_seed": {
+    "42": {
+      "best_epoch": 8,
+      "best_val_bpb": 2.0572381202186865,
+      "first_rise_epoch": 9,
+      "two_diverging_epochs_start": 9
+    },
+    "43": {
+      "best_epoch": 9,
+      "best_val_bpb": 1.9958500000886632,
+      "first_rise_epoch": 10,
+      "two_diverging_epochs_start": 10
+    },
+    "44": {
+      "best_epoch": 9,
+      "best_val_bpb": 2.0199853032446016,
+      "first_rise_epoch": 10,
+      "two_diverging_epochs_start": 10
+    }
+  }
+}

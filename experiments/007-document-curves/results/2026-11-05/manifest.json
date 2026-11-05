@@ -1,0 +1,29 @@
+{
+  "source": {
+    "document_counts": {
+      "train": 60,
+      "val": 20
+    },
+    "document_index_sha256": "c84cddb83fd8a2c0d7453848013f6eafb183f503ab58cc3ad43d9a013da80bea",
+    "exact_train_chunks_excluded": 0
+  },
+  "width_bytes": 384,
+  "bpe_vocab": 2048,
+  "bpe_sha256": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02",
+  "splits": {
+    "train": {
+      "rows": 1802,
+      "raw_bytes": 679992,
+      "bpe_tokens": 404892,
+      "byte_sha256": "fc9e9476eea10998e784068788a37001f596f5dc3cf54364ddc5614db41296cb",
+      "bpe_sha256": "11fcc82ae279e5feb8ac19254792a0e6f905ec03791cf1f15606caf48df1ef22"
+    },
+    "val": {
+      "rows": 497,
+      "raw_bytes": 187227,
+      "bpe_tokens": 109374,
+      "byte_sha256": "88620496713cab485a8c27104e2fc37759ebdf630656e73b9385b97ee5d49302",
+      "bpe_sha256": "82c9aa35701aa3a84c73c1134951a7a09e050ef090b5cf960e94c85d44dc6826"
+    }
+  }
+}

@@ -4,6 +4,8 @@
 
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
+**拿自己的文档做实验。** 把 UTF-8 文档按篇放入训练和留出两个目录，即可逐遍比较训练分数和留出分数，找出继续训练何时开始影响未见文档。可用小型 CPU 模型先检查流程，也可用单张支持 BF16 的 CUDA 显卡跑完整配置。[用自己的文档训练和出图](experiments/007-document-curves/#用自己的文档跑)
+
 **首轮实测。** RTX PRO 6000 Blackwell 单卡完成了 100 步训练。8,565 万参数的 GPT 在中文维基验证样本上从 8.106 降到 5.386 bits/byte，训练更新用时 4.376 秒。读者可按相同数据、软件和计时口径复跑。[实测条件与原始结果](experiments/002-first-train/results/pro6000-first/) · [安装与复现](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
 
 | 实验 | 能回答什么 | 复现入口 |
@@ -14,6 +16,7 @@
 | 004 · 八小时分词对照 | 在同样的单卡时间内，两种表示怎样影响验证分数和原文字节吞吐？ | [实验设计与复现](experiments/004-tokenizer-soak/) |
 | 005 · 中文技术语料 | 长预算的维基结果能否迁移到 Rust 技术文本？相同原文字节数下哪组学习效果更好？ | [预注册方案与复现](experiments/005-technical-bytes/) |
 | 006 · 中文 BPE 学习曲线 | 逐遍比较训练章节和留出章节，从哪一遍起出现过拟合迹象？ | [实验方法、曲线与结果](experiments/006-bpe-epoch-curve/) |
+| 007 · 换文档复验过拟合 | Rust 的拐点能迁移到 Vue 文档吗？自己的文档应该练几遍？ | [两个目录跑出自己的验证曲线](experiments/007-document-curves/) |
 
 **首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
 
