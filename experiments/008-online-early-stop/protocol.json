@@ -1,0 +1,11 @@
+{
+  "corpora": ["rust", "vue"],
+  "seeds": [101, 102, 103],
+  "policies": ["early", "fixed8", "fixed24"],
+  "max_epochs": 24,
+  "patience": 2,
+  "minimum_improvement_bpb": 0.0,
+  "practical_margin_bpb": 0.05,
+  "rust_test_appendices": ["01", "02", "03", "04", "05", "07"],
+  "vue_test_steps": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
