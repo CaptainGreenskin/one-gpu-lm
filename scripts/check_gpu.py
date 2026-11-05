@@ -1,4 +1,5 @@
 """Run a real BF16 attention backward pass and report the visible card."""
+import argparse
 import json
 import os
 import sys
@@ -8,13 +9,16 @@ from torch.nn import functional as F
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--any-bf16-gpu", action="store_true", help="accept other single CUDA GPUs that pass the BF16 test")
+    args = parser.parse_args()
     if not torch.cuda.is_available():
         raise SystemExit("CUDA is unavailable. Check nvidia-smi and the installed PyTorch CUDA build.")
     if torch.cuda.device_count() != 1:
         raise SystemExit("Select one GPU, e.g. CUDA_VISIBLE_DEVICES=0.")
     name = torch.cuda.get_device_name(0)
     capability = torch.cuda.get_device_capability(0)
-    if capability != (12, 0) or "RTX PRO 6000" not in name.upper():
+    if not args.any_bf16_gpu and (capability != (12, 0) or "RTX PRO 6000" not in name.upper()):
         raise SystemExit(f"Expected RTX PRO 6000 Blackwell (sm_120), got {name}, capability={capability}")
     if not torch.cuda.is_bf16_supported():
         raise SystemExit("PyTorch reports that BF16 is unavailable.")

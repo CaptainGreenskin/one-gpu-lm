@@ -1,0 +1,406 @@
+{
+  "repository": "vuejs-translations/docs-zh-cn",
+  "revision": "9f4cd576000707fe65ec600fb154724951dcdfd0",
+  "pages": [
+    {
+      "path": "src/api/sfc-css-features.md",
+      "split": "val",
+      "sha256": "9c0dbbeb2878ed0df24fb23a7bbf26dc2f013e647817f1b8bf29066d383a7920"
+    },
+    {
+      "path": "src/api/reactivity-core.md",
+      "split": "train",
+      "sha256": "0f5deede8321d03f8698294749351a97e76c29183a6ece815501f197d6f61bae"
+    },
+    {
+      "path": "src/api/composition-api-dependency-injection.md",
+      "split": "train",
+      "sha256": "866e9776a0d91cf4e1f408a1b893df9f08e352ce5aad4218608f8706035c9ea4"
+    },
+    {
+      "path": "src/api/options-lifecycle.md",
+      "split": "train",
+      "sha256": "e7e17f899482e1375bd12a415f3d3e24188030bf8e3b1d9484f1a3ab7d4b94f1"
+    },
+    {
+      "path": "src/api/built-in-components.md",
+      "split": "val",
+      "sha256": "98dc93d25eff713616829e113d865abda6602e3482706dd4e4ee888ab51f0e8e"
+    },
+    {
+      "path": "src/api/component-instance.md",
+      "split": "train",
+      "sha256": "6fa81225d15eb941957f8686d92acf2600d2c86ab82cd7e6ec9d4ac12bff39d4"
+    },
+    {
+      "path": "src/api/built-in-directives.md",
+      "split": "train",
+      "sha256": "97ff3c84f5f863989508c6c183e0e34c43caf8cf3c2f6beacdff69b90644766a"
+    },
+    {
+      "path": "src/api/general.md",
+      "split": "train",
+      "sha256": "f5bead39b7876a0b4026828a2efbc11def44e0bce52821a7c61c3739884660cd"
+    },
+    {
+      "path": "src/api/built-in-special-elements.md",
+      "split": "val",
+      "sha256": "27116de813af467427f28768982afd48a1b16352e5a5d55e2eb32129ae97d184"
+    },
+    {
+      "path": "src/api/custom-renderer.md",
+      "split": "train",
+      "sha256": "d2ab943f620f2fc08e90379447afa0e3cf07008c075bb1e20f4464e4f5bea98c"
+    },
+    {
+      "path": "src/api/reactivity-advanced.md",
+      "split": "train",
+      "sha256": "0f4fed022ea39fc17ce741fcb1bf79ce4d36591cad4a703c5e09034ddaaacc78"
+    },
+    {
+      "path": "src/api/ssr.md",
+      "split": "train",
+      "sha256": "8c1ab5847e19dcac40e626731011aa4616763c70e21680cb031f8ee4b02b4bb1"
+    },
+    {
+      "path": "src/api/options-misc.md",
+      "split": "val",
+      "sha256": "73a1e068ce4cb60b3772d882afbf9f6fb77a0cd8efd733d47f54c49b5605ad5f"
+    },
+    {
+      "path": "src/api/utility-types.md",
+      "split": "train",
+      "sha256": "3ca6ea283e1e8d2c70408852b33bdfb4c8f31a908e087a764bbfc8c427ab0ad0"
+    },
+    {
+      "path": "src/api/options-rendering.md",
+      "split": "train",
+      "sha256": "5e0a565e40278564611ded8164de406ececf0b15e9b28313e7fc400abaeb76fd"
+    },
+    {
+      "path": "src/api/options-state.md",
+      "split": "train",
+      "sha256": "d0f861371cb030bac78ce042e52de79e979a02f0254da26d8b0c2804fb07d81a"
+    },
+    {
+      "path": "src/api/render-function.md",
+      "split": "val",
+      "sha256": "b56a357065ed9f5d2e5c768603dac3e7b72b00ba91e81099ba988a87fd23d3b4"
+    },
+    {
+      "path": "src/api/sfc-script-setup.md",
+      "split": "train",
+      "sha256": "05c3b500d9f34f71656440e72927a76712b221ccfff32161124d9769897f8053"
+    },
+    {
+      "path": "src/api/sfc-spec.md",
+      "split": "train",
+      "sha256": "7345fe131b5a9d2633575fe0387d28f248f531d29b882cd2cab466f7ad477b34"
+    },
+    {
+      "path": "src/api/application.md",
+      "split": "train",
+      "sha256": "9bff622b3b3707cd4f2c8c6004c43f8918782a474b307960ea9c069cb099d3fe"
+    },
+    {
+      "path": "src/api/compile-time-flags.md",
+      "split": "val",
+      "sha256": "f437bb995ce8e7f7b99f6e86782d29517950ab57ba936089a9300d50253d8d51"
+    },
+    {
+      "path": "src/api/options-composition.md",
+      "split": "train",
+      "sha256": "2b38745661f47a89a54b048888609741b6d5d6d4c5c002e87fce7880e687caa5"
+    },
+    {
+      "path": "src/api/composition-api-helpers.md",
+      "split": "train",
+      "sha256": "6347759d7e1a0f1ae525f2afe5a027833679c897d30e77147f412083ecf9d803"
+    },
+    {
+      "path": "src/api/custom-elements.md",
+      "split": "train",
+      "sha256": "4529ac9086cf667c8c0cc9cc4a651ebf2976c8cf09e19beee04ab82ec6b752e3"
+    },
+    {
+      "path": "src/api/reactivity-utilities.md",
+      "split": "val",
+      "sha256": "19972d992b42332209ac183213595a76fe6b47f059be8ba6276bd062dd3f8126"
+    },
+    {
+      "path": "src/api/built-in-special-attributes.md",
+      "split": "train",
+      "sha256": "3cfa2bdf8af28af19c6dac749d97cfc92ef22ef2e29a5b66715a8ce7ee61bf26"
+    },
+    {
+      "path": "src/api/composition-api-setup.md",
+      "split": "train",
+      "sha256": "2f7899c9ffa009c1545549c829390be2aaa220f7c14ee760779eb4a13cea9b5e"
+    },
+    {
+      "path": "src/api/composition-api-lifecycle.md",
+      "split": "train",
+      "sha256": "839390893b262077c49e382d006d37921ce8b35147b75fd40b33296ad0891d92"
+    },
+    {
+      "path": "src/guide/components/props.md",
+      "split": "val",
+      "sha256": "761b1efcbbe84975510b88b0f53dec64b3e0d9d2f034987e89c4a670e60f414b"
+    },
+    {
+      "path": "src/guide/essentials/list.md",
+      "split": "train",
+      "sha256": "11fa9beb6216617d5221253337403ae91d3df58bdd572435b75f188cefeeeb36"
+    },
+    {
+      "path": "src/guide/scaling-up/routing.md",
+      "split": "train",
+      "sha256": "c148e2316d71ec31cb96d0522327fcdabc765b99177b6402a2763befdb32dc39"
+    },
+    {
+      "path": "src/guide/extras/rendering-mechanism.md",
+      "split": "train",
+      "sha256": "208589acf278eb9b0b7e45068646cca4e26ece9b6ea73ba7e8dbb3c2d85afedc"
+    },
+    {
+      "path": "src/guide/scaling-up/state-management.md",
+      "split": "val",
+      "sha256": "f7caddcabd3cc50a7eb7834614926136ff2234043fff72a158581fd9d4a54880"
+    },
+    {
+      "path": "src/guide/essentials/reactivity-fundamentals.md",
+      "split": "train",
+      "sha256": "34ad3944ca8584ac9f82adf96607139b57b7817652e24bf44c1098c18db3cb3b"
+    },
+    {
+      "path": "src/guide/typescript/options-api.md",
+      "split": "train",
+      "sha256": "558a274bc4519eff37a2b8b5323748a2fad5dd2532886f52e42a1f2f8a1afc77"
+    },
+    {
+      "path": "src/guide/extras/render-function.md",
+      "split": "train",
+      "sha256": "086cd0be32655793034eee1e0f50aa94c51c103c565af7310293393841da5e86"
+    },
+    {
+      "path": "src/guide/extras/ways-of-using-vue.md",
+      "split": "val",
+      "sha256": "0a5ee28862a144ce19a97e66f79394fe4f47aea7bbd280aee2589228c8aa05d1"
+    },
+    {
+      "path": "src/guide/components/slots.md",
+      "split": "train",
+      "sha256": "78c4ee1ef3f145753ef72c04021bb981e708e95062714f3fb4cb0be9288dd39a"
+    },
+    {
+      "path": "src/guide/reusability/custom-directives.md",
+      "split": "train",
+      "sha256": "f381496adfa50f81900de6f3e17a008cd47eadf6739ed4ea41964a949a7532e5"
+    },
+    {
+      "path": "src/guide/essentials/conditional.md",
+      "split": "train",
+      "sha256": "973f3d7ed061582a2adcf2783c4c49c02a069f9eb304fabb34d44e3beb162ddd"
+    },
+    {
+      "path": "src/guide/typescript/overview.md",
+      "split": "val",
+      "sha256": "4a2799e128c42927c99301c5291e5451df2a64b39b9048b249a814f035899087"
+    },
+    {
+      "path": "src/guide/essentials/watchers.md",
+      "split": "train",
+      "sha256": "f3d51fd4654637d254e2f35b572048541de164d001799587a683998f0be283cd"
+    },
+    {
+      "path": "src/guide/extras/web-components.md",
+      "split": "train",
+      "sha256": "edcec57e8488dc4e8ddf034c04f5c8b8602a9cf87e1f87c9c764cb84273f7c92"
+    },
+    {
+      "path": "src/guide/built-ins/transition-group.md",
+      "split": "train",
+      "sha256": "af4b514bf4f6e6c46c5c37d7d529b9411eaef8338a8f98182400d7b3c2aa213b"
+    },
+    {
+      "path": "src/guide/essentials/lifecycle.md",
+      "split": "val",
+      "sha256": "3ef373bfc168a564dfc3f86f3e106ad04f23bf5449da57518c7043636053d893"
+    },
+    {
+      "path": "src/guide/built-ins/suspense.md",
+      "split": "train",
+      "sha256": "42ea3bb1b0bf671226bd71b7dde196fe034f455f4d0b4675d15b38d857315bb7"
+    },
+    {
+      "path": "src/guide/scaling-up/testing.md",
+      "split": "train",
+      "sha256": "97f79a12d56c982daa4610f6a2376c9c0d20cfdae3e75f6981843a1d779bef99"
+    },
+    {
+      "path": "src/guide/built-ins/transition.md",
+      "split": "train",
+      "sha256": "7c337d5e11f577c6e7064219f6de51cf96a2a11207ff1c95b30bd8ff6cae6187"
+    },
+    {
+      "path": "src/guide/best-practices/security.md",
+      "split": "val",
+      "sha256": "891cc4b703c586d45345f0409bc6c534f6f5a36db678c6ba28cf1eb23a29da83"
+    },
+    {
+      "path": "src/guide/extras/reactivity-in-depth.md",
+      "split": "train",
+      "sha256": "9c0e9b1db7827a7c16d7cc2ee7c7d61c6cb6035be7c24806c2c79aaece1ce49a"
+    },
+    {
+      "path": "src/guide/components/async.md",
+      "split": "train",
+      "sha256": "8d81e7518d0905b50f4407781d46571665d1fb5cc5f32c1502ea5dde94d82f8f"
+    },
+    {
+      "path": "src/guide/built-ins/teleport.md",
+      "split": "train",
+      "sha256": "72e16ba53e1e2abcc2d10d5bb4f5b2323a1c6b59b92d62a552fafa7e3bc8e42c"
+    },
+    {
+      "path": "src/guide/extras/reactivity-transform.md",
+      "split": "val",
+      "sha256": "1e7a481ebb6346e8bd2c5daa46d2480340cea120b16b15644fb6032bba742c78"
+    },
+    {
+      "path": "src/guide/components/provide-inject.md",
+      "split": "train",
+      "sha256": "2e3981f4685f0906461182e18bf5a281e8e7738185bbc8fcf041845218e29908"
+    },
+    {
+      "path": "src/guide/components/v-model.md",
+      "split": "train",
+      "sha256": "d2948333f1ea797face148baacac67763492afb1ef46cf0f3dd994a60cd11d8c"
+    },
+    {
+      "path": "src/guide/scaling-up/sfc.md",
+      "split": "train",
+      "sha256": "1410b6f361c484cabe5384f5937736c9146b037403716c614bd1f09c4bc2e442"
+    },
+    {
+      "path": "src/guide/scaling-up/ssr.md",
+      "split": "val",
+      "sha256": "49a843f826e0dcbe1b8520b61c507c8898e6e24ff47b9aa2a8f70fcccf28ba48"
+    },
+    {
+      "path": "src/guide/built-ins/keep-alive.md",
+      "split": "train",
+      "sha256": "8c839c0fcdd0461cb2189f052b91c38435455ec9c6e7ccbb72b5b35c945a0b20"
+    },
+    {
+      "path": "src/guide/extras/composition-api-faq.md",
+      "split": "train",
+      "sha256": "d2d0d83bec89d6c4f4f07aaadba14452a917664fde1abe4c046042aa380aec68"
+    },
+    {
+      "path": "src/guide/quick-start.md",
+      "split": "train",
+      "sha256": "a8c189bc1b2d53852080c3687a8fa5a65873feb70df9308621d3a8a9acce4aab"
+    },
+    {
+      "path": "src/guide/extras/animation.md",
+      "split": "val",
+      "sha256": "a925d62c3314e105a291b31bfa855a9b22844076d117604ca6baa1b3f7f9fe49"
+    },
+    {
+      "path": "src/guide/best-practices/production-deployment.md",
+      "split": "train",
+      "sha256": "79d28abcebbb80b735867ee9df89ea3d7d4f7a1c1d8d47d1c84cc76107c634f7"
+    },
+    {
+      "path": "src/guide/best-practices/performance.md",
+      "split": "train",
+      "sha256": "26cf5eb3516c509c9107c1872198d7f135832b70d1bb9544f26bde3e6b7408c0"
+    },
+    {
+      "path": "src/guide/reusability/composables.md",
+      "split": "train",
+      "sha256": "a14814d559a6623ace77f5ed3d7660cef7914adf43ec5cb5196b85aa360bd8bd"
+    },
+    {
+      "path": "src/guide/typescript/composition-api.md",
+      "split": "val",
+      "sha256": "0b726902d23e442882542cb85067c02cd00bb7b20191de3892bf2f47864a130b"
+    },
+    {
+      "path": "src/guide/essentials/application.md",
+      "split": "train",
+      "sha256": "b5cb98323dc6c74d8e35f89922f57078b88e7903935291855e1ee24b2e4c5161"
+    },
+    {
+      "path": "src/guide/components/events.md",
+      "split": "train",
+      "sha256": "f80528b40e8a6d910a6eba6f5302d1e20a4166f65137e8d62aa65e24bd537993"
+    },
+    {
+      "path": "src/guide/essentials/event-handling.md",
+      "split": "train",
+      "sha256": "3a83f45b7a3f3fc351221ccf68560c3e6b2a776f91fffb24008e16b134b701b7"
+    },
+    {
+      "path": "src/guide/components/attrs.md",
+      "split": "val",
+      "sha256": "d3390610a928529f245d24989a6987c62b43224785bc8f16b90b8e9cd64c9600"
+    },
+    {
+      "path": "src/guide/scaling-up/tooling.md",
+      "split": "train",
+      "sha256": "c86d0255d0ea64ebaa18edf2e4349b1b90b43910fe8cda1c98043fa1355bc559"
+    },
+    {
+      "path": "src/guide/essentials/computed.md",
+      "split": "train",
+      "sha256": "52a4897eadde66867ba3618821b7b0bb3cf3b3aca3a233b9c58602c58624f861"
+    },
+    {
+      "path": "src/guide/components/registration.md",
+      "split": "train",
+      "sha256": "3ade4f5eecaf1206c0b9d1df2dba7e7e4c4d918f4b1e3be2c4fc7153a2c74114"
+    },
+    {
+      "path": "src/guide/essentials/template-syntax.md",
+      "split": "val",
+      "sha256": "f94a097f522df854790e2233dde7968a17835cf458b452fb00279530af3ae64f"
+    },
+    {
+      "path": "src/guide/best-practices/accessibility.md",
+      "split": "train",
+      "sha256": "4bea58da6d92929c125c35990b497ce77dd6e600d5b18198568d08732c57084b"
+    },
+    {
+      "path": "src/guide/essentials/class-and-style.md",
+      "split": "train",
+      "sha256": "347f2fbc43774386187772e332591839a6e5e52ef76a0fccb151ecf596e8cbf7"
+    },
+    {
+      "path": "src/guide/essentials/template-refs.md",
+      "split": "train",
+      "sha256": "cdc0ade4b597774e38e462eb9cb7444569ff219a6c146ddc231eedad8519094c"
+    },
+    {
+      "path": "src/guide/essentials/forms.md",
+      "split": "val",
+      "sha256": "70dbf762d7ac67b59366ee997343cfa00907b8b5e8aba3bc49693e80a833e832"
+    },
+    {
+      "path": "src/guide/reusability/plugins.md",
+      "split": "train",
+      "sha256": "e820dc07e029186e8418fbe76cb972167f6ffc80023509d574049a84656269d4"
+    },
+    {
+      "path": "src/guide/introduction.md",
+      "split": "train",
+      "sha256": "c59e3ea93ab52ba04b0017ff72d700eafd7f521d98601c1fdea861ce74eac918"
+    },
+    {
+      "path": "src/guide/essentials/component-basics.md",
+      "split": "train",
+      "sha256": "13955a7bc2d554426d0eff61ab2847b9d5cd925df6b122dfad8f49886b41a63d"
+    }
+  ]
+}
