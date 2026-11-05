@@ -1,0 +1,19 @@
+{
+  "format": "one-gpu-lm-bpe-v1",
+  "config": [
+    768,
+    12,
+    12,
+    384,
+    2049,
+    3000
+  ],
+  "provenance": {
+    "trial": "vue-101-early",
+    "seal_sha256": "1d97bc5d1c51f83317da0fa3def3f254457a9f9bdbd4119ac98b430aef6c791a"
+  },
+  "sha256": {
+    "weights.pt": "bfd6e9ce8e5da810393b74b066b55a8e9531bd1c6ca81c2a7f0dfb2d5548951d",
+    "tokenizer.json": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02"
+  }
+}

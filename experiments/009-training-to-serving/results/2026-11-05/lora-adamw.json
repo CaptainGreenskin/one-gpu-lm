@@ -1,0 +1,52 @@
+{
+  "mode": "lora-adamw",
+  "config": [
+    4096,
+    32,
+    32,
+    384,
+    32000,
+    18048
+  ],
+  "bootstrap": "random weights, synthetic token IDs",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "torch": "2.14.1+cu130",
+  "base_parameters": 7013068800,
+  "trainable_parameters": 4194304,
+  "trainable_elements_with_gradient": 4194304,
+  "parameter_dtype": "torch.bfloat16",
+  "batch": 1,
+  "sequence": 128,
+  "records": [
+    {
+      "step": 1,
+      "seconds": 0.6782062329875771,
+      "loss": 11.267001152038574,
+      "grad_norm": 0.2914111614227295
+    },
+    {
+      "step": 2,
+      "seconds": 0.052662041009170935,
+      "loss": 11.220547676086426,
+      "grad_norm": 0.2993053197860718
+    },
+    {
+      "step": 3,
+      "seconds": 0.047548486007144675,
+      "loss": 11.267866134643555,
+      "grad_norm": 0.3416956067085266
+    },
+    {
+      "step": 4,
+      "seconds": 0.06206739798653871,
+      "loss": 11.502589225769043,
+      "grad_norm": 0.37429380416870117
+    }
+  ],
+  "tokens_per_second_after_warmup": 2366.310759724379,
+  "peak_allocated_bytes": 14741883904,
+  "peak_reserved_bytes": 14799601664,
+  "free_before_bytes": 50871926784,
+  "device_memory_bytes": 101973491712,
+  "probe_max_abs_update": 0.001203459338285029
+}

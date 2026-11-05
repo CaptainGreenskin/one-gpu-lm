@@ -1,0 +1,50 @@
+[
+  {
+    "corpus": "rust",
+    "policy": "early",
+    "seeds": 3,
+    "processed_bpe_tokens": 11038449,
+    "update_tokens_s": 29835.012843344233,
+    "wall_tokens_s": 26909.20854566359
+  },
+  {
+    "corpus": "rust",
+    "policy": "fixed8",
+    "seeds": 3,
+    "processed_bpe_tokens": 8545896,
+    "update_tokens_s": 27889.199034405287,
+    "wall_tokens_s": 26730.767227661294
+  },
+  {
+    "corpus": "rust",
+    "policy": "fixed24",
+    "seeds": 3,
+    "processed_bpe_tokens": 25637688,
+    "update_tokens_s": 28503.454971321422,
+    "wall_tokens_s": 28095.546041128782
+  },
+  {
+    "corpus": "vue",
+    "policy": "early",
+    "seeds": 3,
+    "processed_bpe_tokens": 14171220,
+    "update_tokens_s": 35128.542859744644,
+    "wall_tokens_s": 31804.28646153395
+  },
+  {
+    "corpus": "vue",
+    "policy": "fixed8",
+    "seeds": 3,
+    "processed_bpe_tokens": 9717408,
+    "update_tokens_s": 33143.72461210648,
+    "wall_tokens_s": 31739.818098707663
+  },
+  {
+    "corpus": "vue",
+    "policy": "fixed24",
+    "seeds": 3,
+    "processed_bpe_tokens": 29152224,
+    "update_tokens_s": 33328.202924523976,
+    "wall_tokens_s": 32840.44845534401
+  }
+]

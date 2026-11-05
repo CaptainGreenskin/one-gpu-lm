@@ -48,6 +48,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--bundle", type=Path, required=True)
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--extended", action="store_true", help="measure the follow-up batch/long-prefix sweep")
     args = p.parse_args()
     if args.out.exists():
         p.error("choose a new output path")
@@ -62,19 +63,20 @@ def main():
     cache_output = rt.generate(sample_prompt, 24)
     plain_output = rt.generate(sample_prompt, 24, use_cache=False)
     rows = []
-    for batch in (1, 8):
-        for prompt in (32, 128):
-            steps = 32
-            tokens = stream(batch, prompt+steps)
-            for mode in (False, True):
-                measure(rt, tokens, prompt, steps, mode)
-            samples = {False: [], True: []}
-            for rep in range(5):
-                for mode in ((False, True) if rep % 2 == 0 else (True, False)):
-                    samples[mode].append(measure(rt, tokens, prompt, steps, mode))
-            for mode, runs in samples.items():
-                rows.append({"batch": batch, "prompt_tokens": prompt, "decode_steps": steps, "cached": mode,
-                             "median": {k: median(r[k] for r in runs) for k in runs[0]}, "samples": runs})
+    settings = [(1, 320), (8, 320), (32, 128), (32, 320)] if args.extended else [
+        (1, 32), (1, 128), (8, 32), (8, 128)]
+    for batch, prompt in settings:
+        steps = 32
+        tokens = stream(batch, prompt+steps)
+        for mode in (False, True):
+            measure(rt, tokens, prompt, steps, mode)
+        samples = {False: [], True: []}
+        for rep in range(5):
+            for mode in ((False, True) if rep % 2 == 0 else (True, False)):
+                samples[mode].append(measure(rt, tokens, prompt, steps, mode))
+        for mode, runs in samples.items():
+            rows.append({"batch": batch, "prompt_tokens": prompt, "decode_steps": steps, "cached": mode,
+                         "median": {k: median(r[k] for r in runs) for k in runs[0]}, "samples": runs})
     # Reload original FP32 weights to separate cache semantics from BF16 kernel rounding.
     cpu = Runtime.load(args.bundle, "cpu")
     cpu_fp32 = parity(cpu, checked.cpu())

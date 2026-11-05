@@ -26,3 +26,11 @@ curl -s -H 'Content-Type: application/json' -d '{"prompt":"计算属性","max_ne
 ```
 
 权重、编码缓存和文本留在本地。公开证据包括模型包清单、硬件和软件信息、逐次耗时、缓存一致性检查、HTTP 状态码和优化器步数。
+
+[单卡实测结果、模型导出验收及 KV cache 曲线](results/2026-11-05/) 含 7B 全参数和 LoRA 更新的显存与吞吐。初始四组解码规模之外，追加了四组更长提示或更大批次的测量。复现追加测量与重画公开图：
+
+```bash
+exp=experiments/009-training-to-serving
+python "$exp/bench.py" --bundle runs/system/bundle --out runs/system/extended.json --extended
+python "$exp/plot.py" "$exp/results/2026-11-05" --out runs/cache-speedup.png
+```

@@ -1,0 +1,13 @@
+{
+  "health": {
+    "status": "ready",
+    "device": "cuda",
+    "context": 384
+  },
+  "completion_http": 200,
+  "overlength_http": 400,
+  "startup_seconds": 2.910361814982025,
+  "first_request_seconds": 0.3983308619935997,
+  "generated_tokens": 8,
+  "output_ids_sha256": "880e930199dddf978f07bfa5b64b846d273829e766bf91375e6999cdff6d935c"
+}

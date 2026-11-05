@@ -1,0 +1,375 @@
+{
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "torch": "2.14.1+cu130",
+  "dtype": "bfloat16",
+  "bundle_checkpoint_sha256": "bfd6e9ce8e5da810393b74b066b55a8e9531bd1c6ca81c2a7f0dfb2d5548951d",
+  "equivalence": {
+    "cpu_fp32": {
+      "per_logit_max_abs": 5.7220458984375e-06,
+      "per_logit_mean_abs": 7.373888024631015e-07,
+      "argmax_matches": 84,
+      "positions": 84
+    },
+    "gpu_bf16": {
+      "per_logit_max_abs": 0.125,
+      "per_logit_mean_abs": 0.007385635282844305,
+      "argmax_matches": 84,
+      "positions": 84
+    },
+    "greedy_24_identical_bf16": true
+  },
+  "runs": [
+    {
+      "batch": 1,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": false,
+      "median": {
+        "prefill_ms": 3.5287539940327406,
+        "decode_tokens_s": 286.8022854963825,
+        "ms_per_decode_step": 3.4867225631387555,
+        "peak_allocated_bytes": 214074368
+      },
+      "samples": [
+        {
+          "prefill_ms": 3.599611984100193,
+          "decode_tokens_s": 286.06167953776156,
+          "ms_per_decode_step": 3.49574959363963,
+          "peak_allocated_bytes": 214074368
+        },
+        {
+          "prefill_ms": 3.5287539940327406,
+          "decode_tokens_s": 286.8022854963825,
+          "ms_per_decode_step": 3.4867225631387555,
+          "peak_allocated_bytes": 214074368
+        },
+        {
+          "prefill_ms": 3.5488170105963945,
+          "decode_tokens_s": 288.5590762894761,
+          "ms_per_decode_step": 3.465494874944852,
+          "peak_allocated_bytes": 214074368
+        },
+        {
+          "prefill_ms": 3.487669018795714,
+          "decode_tokens_s": 283.7583068184474,
+          "ms_per_decode_step": 3.524125905641995,
+          "peak_allocated_bytes": 214074368
+        },
+        {
+          "prefill_ms": 3.4883990010712296,
+          "decode_tokens_s": 288.99506608606987,
+          "ms_per_decode_step": 3.4602666873979615,
+          "peak_allocated_bytes": 214074368
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": true,
+      "median": {
+        "prefill_ms": 4.1717709973454475,
+        "decode_tokens_s": 266.7356356236548,
+        "ms_per_decode_step": 3.749030374819995,
+        "peak_allocated_bytes": 225289728
+      },
+      "samples": [
+        {
+          "prefill_ms": 4.184032004559413,
+          "decode_tokens_s": 266.30880529453606,
+          "ms_per_decode_step": 3.75503918803588,
+          "peak_allocated_bytes": 225289728
+        },
+        {
+          "prefill_ms": 4.189183993730694,
+          "decode_tokens_s": 266.5379932398428,
+          "ms_per_decode_step": 3.7518103436013917,
+          "peak_allocated_bytes": 225289728
+        },
+        {
+          "prefill_ms": 4.161579010542482,
+          "decode_tokens_s": 270.794186148187,
+          "ms_per_decode_step": 3.6928414683643496,
+          "peak_allocated_bytes": 225289728
+        },
+        {
+          "prefill_ms": 4.130325018195435,
+          "decode_tokens_s": 270.3779236145054,
+          "ms_per_decode_step": 3.6985268125135917,
+          "peak_allocated_bytes": 225289728
+        },
+        {
+          "prefill_ms": 4.1717709973454475,
+          "decode_tokens_s": 266.7356356236548,
+          "ms_per_decode_step": 3.749030374819995,
+          "peak_allocated_bytes": 225289728
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": false,
+      "median": {
+        "prefill_ms": 3.6479170084930956,
+        "decode_tokens_s": 2276.390009399986,
+        "ms_per_decode_step": 3.5143362811140832,
+        "peak_allocated_bytes": 273939456
+      },
+      "samples": [
+        {
+          "prefill_ms": 3.6495680105872452,
+          "decode_tokens_s": 2276.390009399986,
+          "ms_per_decode_step": 3.5143362811140832,
+          "peak_allocated_bytes": 273939456
+        },
+        {
+          "prefill_ms": 3.6120830045547336,
+          "decode_tokens_s": 2293.2060059045416,
+          "ms_per_decode_step": 3.488565780571662,
+          "peak_allocated_bytes": 273939456
+        },
+        {
+          "prefill_ms": 3.6894920049235225,
+          "decode_tokens_s": 2261.9141022167437,
+          "ms_per_decode_step": 3.5368275002838345,
+          "peak_allocated_bytes": 273939456
+        },
+        {
+          "prefill_ms": 3.635336004663259,
+          "decode_tokens_s": 2274.660774927944,
+          "ms_per_decode_step": 3.517007937261951,
+          "peak_allocated_bytes": 273939456
+        },
+        {
+          "prefill_ms": 3.6479170084930956,
+          "decode_tokens_s": 2284.0749116392335,
+          "ms_per_decode_step": 3.5025120932914433,
+          "peak_allocated_bytes": 273939456
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": true,
+      "median": {
+        "prefill_ms": 4.300105007132515,
+        "decode_tokens_s": 1968.0135526737372,
+        "ms_per_decode_step": 4.065012656610634,
+        "peak_allocated_bytes": 369150464
+      },
+      "samples": [
+        {
+          "prefill_ms": 4.300105007132515,
+          "decode_tokens_s": 1968.3932631845225,
+          "ms_per_decode_step": 4.064228500283207,
+          "peak_allocated_bytes": 369150464
+        },
+        {
+          "prefill_ms": 4.258289991412312,
+          "decode_tokens_s": 1970.3804557391575,
+          "ms_per_decode_step": 4.06012959410873,
+          "peak_allocated_bytes": 369150464
+        },
+        {
+          "prefill_ms": 4.3220180086791515,
+          "decode_tokens_s": 1935.242272911403,
+          "ms_per_decode_step": 4.1338493438161095,
+          "peak_allocated_bytes": 369150464
+        },
+        {
+          "prefill_ms": 4.425449995324016,
+          "decode_tokens_s": 1939.4527840792166,
+          "ms_per_decode_step": 4.12487484391022,
+          "peak_allocated_bytes": 369150464
+        },
+        {
+          "prefill_ms": 4.278631997294724,
+          "decode_tokens_s": 1968.0135526737372,
+          "ms_per_decode_step": 4.065012656610634,
+          "peak_allocated_bytes": 369150464
+        }
+      ]
+    },
+    {
+      "batch": 32,
+      "prompt_tokens": 128,
+      "decode_steps": 32,
+      "cached": false,
+      "median": {
+        "prefill_ms": 3.4545330272521824,
+        "decode_tokens_s": 8993.082177368626,
+        "ms_per_decode_step": 3.5582906248237123,
+        "peak_allocated_bytes": 333073920
+      },
+      "samples": [
+        {
+          "prefill_ms": 3.4900979953818023,
+          "decode_tokens_s": 9046.131781912634,
+          "ms_per_decode_step": 3.537423594025313,
+          "peak_allocated_bytes": 333073920
+        },
+        {
+          "prefill_ms": 3.618723014369607,
+          "decode_tokens_s": 8894.59192890977,
+          "ms_per_decode_step": 3.5976917497464456,
+          "peak_allocated_bytes": 333073920
+        },
+        {
+          "prefill_ms": 3.4361010184511542,
+          "decode_tokens_s": 8993.082177368626,
+          "ms_per_decode_step": 3.5582906248237123,
+          "peak_allocated_bytes": 333073920
+        },
+        {
+          "prefill_ms": 3.402716014534235,
+          "decode_tokens_s": 8985.457679047116,
+          "ms_per_decode_step": 3.561309968063142,
+          "peak_allocated_bytes": 333073920
+        },
+        {
+          "prefill_ms": 3.4545330272521824,
+          "decode_tokens_s": 9003.699264157198,
+          "ms_per_decode_step": 3.5540947183108074,
+          "peak_allocated_bytes": 333073920
+        }
+      ]
+    },
+    {
+      "batch": 32,
+      "prompt_tokens": 128,
+      "decode_steps": 32,
+      "cached": true,
+      "median": {
+        "prefill_ms": 4.078088008100167,
+        "decode_tokens_s": 8129.389845338615,
+        "ms_per_decode_step": 3.936334781428741,
+        "peak_allocated_bytes": 489769984
+      },
+      "samples": [
+        {
+          "prefill_ms": 4.278922016965225,
+          "decode_tokens_s": 7994.344188729206,
+          "ms_per_decode_step": 4.0028299063123995,
+          "peak_allocated_bytes": 489769984
+        },
+        {
+          "prefill_ms": 4.315356025472283,
+          "decode_tokens_s": 7964.94589966232,
+          "ms_per_decode_step": 4.017604187538382,
+          "peak_allocated_bytes": 489769984
+        },
+        {
+          "prefill_ms": 4.025481001008302,
+          "decode_tokens_s": 8481.434867388734,
+          "ms_per_decode_step": 3.7729465002485085,
+          "peak_allocated_bytes": 489769984
+        },
+        {
+          "prefill_ms": 4.025541013106704,
+          "decode_tokens_s": 8494.209219407436,
+          "ms_per_decode_step": 3.7672724056392326,
+          "peak_allocated_bytes": 489769984
+        },
+        {
+          "prefill_ms": 4.078088008100167,
+          "decode_tokens_s": 8129.389845338615,
+          "ms_per_decode_step": 3.936334781428741,
+          "peak_allocated_bytes": 489769984
+        }
+      ]
+    },
+    {
+      "batch": 32,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": false,
+      "median": {
+        "prefill_ms": 6.651242001680657,
+        "decode_tokens_s": 4353.812671788268,
+        "ms_per_decode_step": 7.349879843786766,
+        "peak_allocated_bytes": 479192064
+      },
+      "samples": [
+        {
+          "prefill_ms": 6.63679200806655,
+          "decode_tokens_s": 4360.8604159076685,
+          "ms_per_decode_step": 7.338001437346975,
+          "peak_allocated_bytes": 479192064
+        },
+        {
+          "prefill_ms": 6.637982005486265,
+          "decode_tokens_s": 4358.622709312038,
+          "ms_per_decode_step": 7.3417687499386375,
+          "peak_allocated_bytes": 479192064
+        },
+        {
+          "prefill_ms": 7.414935011183843,
+          "decode_tokens_s": 4118.693059650226,
+          "ms_per_decode_step": 7.769454906338069,
+          "peak_allocated_bytes": 479192064
+        },
+        {
+          "prefill_ms": 6.651242001680657,
+          "decode_tokens_s": 4353.812671788268,
+          "ms_per_decode_step": 7.349879843786766,
+          "peak_allocated_bytes": 479192064
+        },
+        {
+          "prefill_ms": 7.428274984704331,
+          "decode_tokens_s": 4112.111037187667,
+          "ms_per_decode_step": 7.781891031299892,
+          "peak_allocated_bytes": 479192064
+        }
+      ]
+    },
+    {
+      "batch": 32,
+      "prompt_tokens": 320,
+      "decode_steps": 32,
+      "cached": true,
+      "median": {
+        "prefill_ms": 7.772817014483735,
+        "decode_tokens_s": 8366.166931018957,
+        "ms_per_decode_step": 3.824929655820597,
+        "peak_allocated_bytes": 841880064
+      },
+      "samples": [
+        {
+          "prefill_ms": 7.772817014483735,
+          "decode_tokens_s": 8313.454178319018,
+          "ms_per_decode_step": 3.8491822188007063,
+          "peak_allocated_bytes": 841880064
+        },
+        {
+          "prefill_ms": 6.973601994104683,
+          "decode_tokens_s": 8366.166931018957,
+          "ms_per_decode_step": 3.824929655820597,
+          "peak_allocated_bytes": 841880064
+        },
+        {
+          "prefill_ms": 8.264085015980527,
+          "decode_tokens_s": 8388.290632007505,
+          "ms_per_decode_step": 3.8148415933392243,
+          "peak_allocated_bytes": 841880064
+        },
+        {
+          "prefill_ms": 6.961620005313307,
+          "decode_tokens_s": 8165.519025864959,
+          "ms_per_decode_step": 3.91891806248168,
+          "peak_allocated_bytes": 841880064
+        },
+        {
+          "prefill_ms": 7.9615089925937355,
+          "decode_tokens_s": 8383.225395999863,
+          "ms_per_decode_step": 3.8171465621417155,
+          "peak_allocated_bytes": 841880064
+        }
+      ]
+    }
+  ]
+}
