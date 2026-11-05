@@ -9,3 +9,21 @@
 - **结果判据。** 测试差定义为“早停 − 固定”的 bits/字节，正数为变差。分别报告两种基线、两套语料的配对差、均值和范围。预先选定 +0.05 bits/字节为实用容忍上限（对应按字节计算的困惑度约 +3.5%）。仅当某语料对某基线的三个种子都不超过此上限，才称该组“观察到的退化均在容忍范围内”。另报实际数值升降。三个种子和有限文档支持描述性结论。
 
 [机器可读参数](protocol.json) · [Rust 固定语料与来源](../005-technical-bytes/) · [Vue 固定语料与来源](../007-document-curves/)
+
+## 复现
+
+在仓库根目录运行。使用 Python 3.10+、支持 BF16 的 RTX PRO 6000 Blackwell、与 006/007 一致的 PyTorch 环境，以及 `tokenizers==0.21.4`。绘图需要 Matplotlib 3.6+。留出约 8 GiB 磁盘保存 18 份本地权重。准备步骤分别重建原训练/验证缓存和新增测试文档，逐字节核对旧数据清单。训练入口只接收前者，测试入口要求全部训练选择已锁定。
+
+```bash
+python -m pip install tokenizers==0.21.4 "matplotlib>=3.6"
+exp=experiments/008-online-early-stop
+python "$exp/prepare_data.py" --out data/online-008
+export CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=2 CUBLAS_WORKSPACE_CONFIG=:4096:8
+python "$exp/run.py" --rust data/online-008/trainval/rust --vue data/online-008/trainval/vue --out runs/008
+python "$exp/evaluate.py" --run runs/008 --test data/online-008/test
+python "$exp/report.py" runs/008 --out runs/008/report
+```
+
+训练进程中断后可在相同数据、软件和输出目录下重试训练命令。已完整写入的试验会保留，未完成项从该种子初始状态重跑。数据准备支持 `--rust-archive` 和 `--vue-archive` 指定本地固定版本压缩包。复现实验时请保留上游署名与许可。[Rust 来源与许可](../005-technical-bytes/) · [Vue 来源与许可](../007-document-curves/)
+
+Rust 的 6 篇新附录共 37,688 个测试字节；Vue 的 15 课新教程共 25,906 个测试字节。逐文档保存上游文件哈希、原文字节、分块和 token 数。对照两套原训练/验证集，测试文档路径均未使用，两套测试各有 0 个同边界片段需要排除。这项检查无法识别改写或局部重合。[Rust 测试清单](test-references/rust.json) · [Vue 测试清单](test-references/vue.json)

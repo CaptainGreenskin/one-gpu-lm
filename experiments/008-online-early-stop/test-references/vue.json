@@ -1,0 +1,138 @@
+{
+  "source_revision": "9f4cd576000707fe65ec600fb154724951dcdfd0",
+  "trainval_manifest_sha256": "0a4d938f85a98f1e2a9c83a0a5a967e66b1e18978d7c3e1a2f30881246674c8e",
+  "bpe_sha256": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02",
+  "width_bytes": 384,
+  "bpe_vocab": 2048,
+  "splits": {
+    "test": {
+      "rows": 75,
+      "raw_bytes": 25906,
+      "bpe_tokens": 14874,
+      "excluded_chunks": 0,
+      "bpe_sha256": "478e2e06cf585c81d25ddd2d0ba11037008eaf4c1dbcb950f004a5cf077979b1"
+    }
+  },
+  "documents": [
+    {
+      "path": "src/tutorial/src/step-1/description.md",
+      "original_sha256": "607ab655e0198acb6c11821ff6494942edb62297f908d6ec457026310b5da4e2",
+      "rows": 8,
+      "raw_bytes": 2725,
+      "bpe_tokens": 1349,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-2/description.md",
+      "original_sha256": "a2befa3b7c123706be7db800917a144333a6b8eab576a6caa6b0a4b36331d964",
+      "rows": 10,
+      "raw_bytes": 3793,
+      "bpe_tokens": 2155,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-3/description.md",
+      "original_sha256": "4d5718213b3c47d54a9b1a29c881547ba8c0a3ad833399a01846ba9985442934",
+      "rows": 3,
+      "raw_bytes": 1112,
+      "bpe_tokens": 598,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-4/description.md",
+      "original_sha256": "1515f5495642188aad8821f509e952a3cfd0a700e707117d3b0086cc73fc3b41",
+      "rows": 6,
+      "raw_bytes": 2011,
+      "bpe_tokens": 1208,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-5/description.md",
+      "original_sha256": "48d3f7e45b47bd8b5076a84e8aba998dc5538611cf52c6fe506db069b32d2855",
+      "rows": 4,
+      "raw_bytes": 1210,
+      "bpe_tokens": 677,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-6/description.md",
+      "original_sha256": "ba0169ce31dd08d761848d62202ab2817663c90656a1e5bc192d08c3f63077e6",
+      "rows": 3,
+      "raw_bytes": 941,
+      "bpe_tokens": 577,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-7/description.md",
+      "original_sha256": "c03b6042abf7c8597f7483bccc7ac6a0934a60c13daa38e301f0ebcd72da3418",
+      "rows": 5,
+      "raw_bytes": 1570,
+      "bpe_tokens": 946,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-8/description.md",
+      "original_sha256": "38dcbe219cf9c5800a8ccb7d85b9fbb59fbb901a92eaa991879a7cd02f1322fc",
+      "rows": 7,
+      "raw_bytes": 2580,
+      "bpe_tokens": 1542,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-9/description.md",
+      "original_sha256": "337a62dc1e91b9d7db401192e088057fca1ebcdeb357bbc6ee15cc76fab31d63",
+      "rows": 7,
+      "raw_bytes": 2655,
+      "bpe_tokens": 1635,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-10/description.md",
+      "original_sha256": "f26d14a6ed4e35d13340918ca76ec2147387832806c64d8e94b9e089c70b34c1",
+      "rows": 5,
+      "raw_bytes": 1562,
+      "bpe_tokens": 836,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-11/description.md",
+      "original_sha256": "f3929a47ad7ffaa96aa25fd6c985399625f41e8db18af05ea86a07c3eb4ad0c3",
+      "rows": 4,
+      "raw_bytes": 1386,
+      "bpe_tokens": 784,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-12/description.md",
+      "original_sha256": "1e3c08b40fa075a3976fb3ff3908d99d6e14dee84d17fc2ec60999c3d12c0165",
+      "rows": 4,
+      "raw_bytes": 1370,
+      "bpe_tokens": 825,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-13/description.md",
+      "original_sha256": "a514b77ce377f80589ce38e4181166ae07616f90bb15f1ff45167bd2bc201e68",
+      "rows": 4,
+      "raw_bytes": 1317,
+      "bpe_tokens": 850,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-14/description.md",
+      "original_sha256": "57873bf48da51391e28a39c65afd9510a5c7f0dde612fe66de47b3699ad289dc",
+      "rows": 3,
+      "raw_bytes": 992,
+      "bpe_tokens": 599,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/tutorial/src/step-15/description.md",
+      "original_sha256": "8abe5da70de59b4c50f1502af9f3c264c38b3400e03fa07e383b599600379c18",
+      "rows": 2,
+      "raw_bytes": 682,
+      "bpe_tokens": 293,
+      "excluded_chunks": 0
+    }
+  ]
+}

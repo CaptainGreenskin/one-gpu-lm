@@ -1,0 +1,66 @@
+{
+  "source_revision": "cde74c448e301ce8ac7960a0d3dc879efd83635d",
+  "trainval_manifest_sha256": "dd0554766e6266ee01733b249302f624104711740cd64c5bdbb87005e3e0bbe5",
+  "bpe_sha256": "77815d9e48b04ca954b4d09f4a89864e047cf22ee2b37a11ffe2615f4fed2d02",
+  "width_bytes": 384,
+  "bpe_vocab": 2048,
+  "splits": {
+    "test": {
+      "rows": 101,
+      "raw_bytes": 37688,
+      "bpe_tokens": 19096,
+      "excluded_chunks": 0,
+      "bpe_sha256": "ebb6851884226b8bebf22e1327d31502115bd4147e94c54baaf02fd4d3f97417"
+    }
+  },
+  "documents": [
+    {
+      "path": "src/appendix-01-keywords.md",
+      "original_sha256": "68046894de5fec4d47884593d0e19d518cb92adf560c99ed5ad2503262d60f29",
+      "rows": 12,
+      "raw_bytes": 4332,
+      "bpe_tokens": 2197,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/appendix-02-operators.md",
+      "original_sha256": "1047b241fa7fcbd129adbf408c7cdaf17f4fd69dc927265f418a9bd5c770e41d",
+      "rows": 24,
+      "raw_bytes": 9077,
+      "bpe_tokens": 5357,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/appendix-03-derivable-traits.md",
+      "original_sha256": "3d5593ffd5b8314aaa71f7fc188ed034d2d4d4186d28e03da59b8533a06e7c0a",
+      "rows": 23,
+      "raw_bytes": 8602,
+      "bpe_tokens": 4094,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/appendix-04-useful-development-tools.md",
+      "original_sha256": "a5b2ce9bade987a911658a87c062cef13eed421aa1545bf1ff2a40bfe1255d5b",
+      "rows": 13,
+      "raw_bytes": 4645,
+      "bpe_tokens": 2764,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/appendix-05-editions.md",
+      "original_sha256": "f591772547ead9d2e1f32e67b3fb8ec16d529ed57155e74d140f970acb8fbffb",
+      "rows": 7,
+      "raw_bytes": 2655,
+      "bpe_tokens": 1074,
+      "excluded_chunks": 0
+    },
+    {
+      "path": "src/appendix-07-nightly-rust.md",
+      "original_sha256": "211bc530a19ed62d7d5d824ccc19664de34e1190175c4d7a74885943655a009e",
+      "rows": 22,
+      "raw_bytes": 8377,
+      "bpe_tokens": 3610,
+      "excluded_chunks": 0
+    }
+  ]
+}
