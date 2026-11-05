@@ -1,0 +1,66 @@
+[
+  {
+    "epoch": 1,
+    "update_seconds": 12.286533553997288,
+    "steps": 238,
+    "train_raw_bytes": 715084,
+    "order_sha256": "4afef96af02bb80e8dda635a5cf839682be378c6bd02b8b8a24a2a976448f0c6",
+    "last_batch_loss": 4.845684051513672
+  },
+  {
+    "epoch": 2,
+    "update_seconds": 25.399324208992766,
+    "steps": 476,
+    "train_raw_bytes": 1430168,
+    "order_sha256": "200981480d08b44de77bf8a403de29deeb373c2d12a2d2784d1a261b841f5e7b",
+    "last_batch_loss": 3.6827213764190674
+  },
+  {
+    "epoch": 3,
+    "update_seconds": 38.49611787300091,
+    "steps": 714,
+    "train_raw_bytes": 2145252,
+    "order_sha256": "0f69da1dbfa15c64c978e016acba571ec608dc1bc51fd3e7a86a4c12434bf90f",
+    "last_batch_loss": 3.4363372325897217
+  },
+  {
+    "epoch": 4,
+    "update_seconds": 50.97004112799186,
+    "steps": 952,
+    "train_raw_bytes": 2860336,
+    "order_sha256": "69ad6cd61b1e4f3c9b181639d6730ca187b35d9b86c3b52820ac232369119156",
+    "last_batch_loss": 2.5751678943634033
+  },
+  {
+    "epoch": 5,
+    "update_seconds": 62.877966569998534,
+    "steps": 1190,
+    "train_raw_bytes": 3575420,
+    "order_sha256": "e625397d5292a35a31c126a90029274c90616047ecce9e4112e0704ec99e0993",
+    "last_batch_loss": 2.7393834590911865
+  },
+  {
+    "epoch": 6,
+    "update_seconds": 75.93815334700048,
+    "steps": 1428,
+    "train_raw_bytes": 4290504,
+    "order_sha256": "37d2e95c2007f9db6ff67b6022424402aab6c0d703e3439dcfd1ba7a435d3650",
+    "last_batch_loss": 2.2398624420166016
+  },
+  {
+    "epoch": 7,
+    "update_seconds": 88.99574888800271,
+    "steps": 1666,
+    "train_raw_bytes": 5005588,
+    "order_sha256": "6598d6b5b4930190a793532b3fb687cab969b9a81bc7fa109d0c845235868b08",
+    "last_batch_loss": 2.2575454711914062
+  },
+  {
+    "epoch": 8,
+    "update_seconds": 102.05004779397859,
+    "steps": 1904,
+    "train_raw_bytes": 5720672,
+    "order_sha256": "a7a2f9fdc9907229c5937af15c188abbb1636a8230b3477a1414fdbcaf3b95e2",
+    "last_batch_loss": 1.9769151210784912
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "epoch": 1,
+    "update_seconds": 13.006764543009922,
+    "steps": 238,
+    "train_raw_bytes": 715084,
+    "order_sha256": "9983268cbf5bec5814dff00855b03c4a66f9720bd12f446d5022b8a508eab483",
+    "last_batch_loss": 4.825571537017822
+  },
+  {
+    "epoch": 2,
+    "update_seconds": 25.94352275202982,
+    "steps": 476,
+    "train_raw_bytes": 1430168,
+    "order_sha256": "01d15eed4fa90bef84a2bc080e20aebf7b811237b4f1c61d9a75716ef3d350fb",
+    "last_batch_loss": 4.364178657531738
+  },
+  {
+    "epoch": 3,
+    "update_seconds": 38.864974703028565,
+    "steps": 714,
+    "train_raw_bytes": 2145252,
+    "order_sha256": "c01514eed763bdff663a1ce0466513df3936d1836682a75827838bd4b06e7897",
+    "last_batch_loss": 3.346388578414917
+  },
+  {
+    "epoch": 4,
+    "update_seconds": 51.812395105022006,
+    "steps": 952,
+    "train_raw_bytes": 2860336,
+    "order_sha256": "9007ae3e755f5f1ce299391526269a67e55817895d3901f643cb5616eb840aec",
+    "last_batch_loss": 2.8858206272125244
+  },
+  {
+    "epoch": 5,
+    "update_seconds": 64.77228307700716,
+    "steps": 1190,
+    "train_raw_bytes": 3575420,
+    "order_sha256": "e0df637c0f6c32e1bdc34deadffffe1bedf6fd74b1ffca792dbfcb0418711037",
+    "last_batch_loss": 2.440457820892334
+  },
+  {
+    "epoch": 6,
+    "update_seconds": 77.50056849000975,
+    "steps": 1428,
+    "train_raw_bytes": 4290504,
+    "order_sha256": "e84bd6d941b50a6e06f85b59f0cdde841c1e1cb0fcfceffdde2b734db2ad764f",
+    "last_batch_loss": 2.466729164123535
+  },
+  {
+    "epoch": 7,
+    "update_seconds": 90.05138476099819,
+    "steps": 1666,
+    "train_raw_bytes": 5005588,
+    "order_sha256": "f0b36c8d24a09080570d0c0c15741715ceb7f622d53d5b57d21b9010d9ba73d1",
+    "last_batch_loss": 1.8473905324935913
+  },
+  {
+    "epoch": 8,
+    "update_seconds": 102.61368500100798,
+    "steps": 1904,
+    "train_raw_bytes": 5720672,
+    "order_sha256": "b442e0e27213d35320dc2147da14c836c4150afa8111d34836727323ab9244d8",
+    "last_batch_loss": 1.6564767360687256
+  },
+  {
+    "epoch": 9,
+    "update_seconds": 115.25616095101577,
+    "steps": 2142,
+    "train_raw_bytes": 6435756,
+    "order_sha256": "e51230d001505ded433bb48c4c13f76d390f16ed7673542724256a04cb96f734",
+    "last_batch_loss": 2.101210832595825
+  },
+  {
+    "epoch": 10,
+    "update_seconds": 127.89383965302841,
+    "steps": 2380,
+    "train_raw_bytes": 7150840,
+    "order_sha256": "7284a65c0d17a8c5a657bff2dab9d5568a9ba8ab99a43a2c2a7fd9c6efa52b79",
+    "last_batch_loss": 1.8259952068328857
+  },
+  {
+    "epoch": 11,
+    "update_seconds": 140.55368973803706,
+    "steps": 2618,
+    "train_raw_bytes": 7865924,
+    "order_sha256": "10ef5e13f316e2fa6b5f2f7587b77cf02083316c6fb50bae8e7e873b3fdcd0d2",
+    "last_batch_loss": 1.4839982986450195
+  },
+  {
+    "epoch": 12,
+    "update_seconds": 153.2111901170283,
+    "steps": 2856,
+    "train_raw_bytes": 8581008,
+    "order_sha256": "72fa6baae4c81c3fe847c7cc9d16afebf68d1ad5623a78d6ad5339a18dd0167a",
+    "last_batch_loss": 1.7000370025634766
+  },
+  {
+    "epoch": 13,
+    "update_seconds": 165.8798891970364,
+    "steps": 3094,
+    "train_raw_bytes": 9296092,
+    "order_sha256": "bcc6b4960296367595f39bdad845825920e30250efe572b4da9ecfb5ddf7a22d",
+    "last_batch_loss": 0.841728150844574
+  },
+  {
+    "epoch": 14,
+    "update_seconds": 178.55796590604587,
+    "steps": 3332,
+    "train_raw_bytes": 10011176,
+    "order_sha256": "82f6c8cfc0de91799d0f2d06555898be75bf7a9c9e51976968c9bad4a936650c",
+    "last_batch_loss": 0.6385565400123596
+  },
+  {
+    "epoch": 15,
+    "update_seconds": 191.20598769604112,
+    "steps": 3570,
+    "train_raw_bytes": 10726260,
+    "order_sha256": "906f618d5c186996db1f87e586cad1d0816b522feeb16b92646eaa52c32c9898",
+    "last_batch_loss": 0.39913469552993774
+  },
+  {
+    "epoch": 16,
+    "update_seconds": 203.83794875402236,
+    "steps": 3808,
+    "train_raw_bytes": 11441344,
+    "order_sha256": "c0e1423b06cdd7c253377cee383c997e00faa61d44ad75e197b52ed8719633f5",
+    "last_batch_loss": 0.2834269404411316
+  },
+  {
+    "epoch": 17,
+    "update_seconds": 216.4597374580335,
+    "steps": 4046,
+    "train_raw_bytes": 12156428,
+    "order_sha256": "6c4cd583002c88167df34cfec5ded25c5931afd80578901e295328d5f7fb4382",
+    "last_batch_loss": 0.24886322021484375
+  },
+  {
+    "epoch": 18,
+    "update_seconds": 229.13959082702058,
+    "steps": 4284,
+    "train_raw_bytes": 12871512,
+    "order_sha256": "644a7b7e58458efed0c7eb3bbfde4e094b63431e55ef8f8bba5470c3eb330e77",
+    "last_batch_loss": 0.17692826688289642
+  },
+  {
+    "epoch": 19,
+    "update_seconds": 241.82186881403322,
+    "steps": 4522,
+    "train_raw_bytes": 13586596,
+    "order_sha256": "25321773a8d6072a9565126d6509d76ed598fc7e625d9a6c53e219de63e70dec",
+    "last_batch_loss": 0.1598372459411621
+  },
+  {
+    "epoch": 20,
+    "update_seconds": 254.48004687405773,
+    "steps": 4760,
+    "train_raw_bytes": 14301680,
+    "order_sha256": "fc381581fd3b98ce440c06a2ddad551c9ceefc54361feb25ccb4b4a0717637fc",
+    "last_batch_loss": 0.1728459596633911
+  },
+  {
+    "epoch": 21,
+    "update_seconds": 267.17740695606335,
+    "steps": 4998,
+    "train_raw_bytes": 15016764,
+    "order_sha256": "dd43b979fc431b56a168f1fa864346b13db9c9300d382ecc5a74c5bbc716c588",
+    "last_batch_loss": 0.13230091333389282
+  },
+  {
+    "epoch": 22,
+    "update_seconds": 279.7924446230754,
+    "steps": 5236,
+    "train_raw_bytes": 15731848,
+    "order_sha256": "53543c2dc6861d42aaf1e7a580425d666b2ab75f5706e588f472c53ad2d05379",
+    "last_batch_loss": 0.1741606593132019
+  },
+  {
+    "epoch": 23,
+    "update_seconds": 292.44915266206954,
+    "steps": 5474,
+    "train_raw_bytes": 16446932,
+    "order_sha256": "ab096347f25513c41979fce0cc21ae1cdcbdf5b921c348ffeaae16a0e9ba626f",
+    "last_batch_loss": 0.16708461940288544
+  },
+  {
+    "epoch": 24,
+    "update_seconds": 305.1095109770831,
+    "steps": 5712,
+    "train_raw_bytes": 17162016,
+    "order_sha256": "4348d20faffa6258fa44ce25afbe2ceb5115ee8ff2a8cd086b089c4095302ae7",
+    "last_batch_loss": 0.1889396756887436
+  }
+]

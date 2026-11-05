@@ -1,0 +1,1059 @@
+{
+  "seal_sha256": "1d97bc5d1c51f83317da0fa3def3f254457a9f9bdbd4119ac98b430aef6c791a",
+  "test_stage_seconds_including_integrity_checks": 9.895829201006563,
+  "trials": {
+    "rust-101-early": {
+      "test_bpb": 2.59099085513713,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.43021635118668
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.4593514305319157
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.023381523881253
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.3036005355617943
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.1480164229775696
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.615816786559954
+        }
+      ]
+    },
+    "rust-101-fixed8": {
+      "test_bpb": 2.5913183866067975,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.3954014427526684
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.386426649412311
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.063739715352854
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.378405230567138
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.15457803495796
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.6293121162055493
+        }
+      ]
+    },
+    "rust-101-fixed24": {
+      "test_bpb": 3.771863832649833,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 3.560951472870383
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 4.917997008530772
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.9498985535566353
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 3.345326719995689
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 3.2251760171580304
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 3.8928484183323224
+        }
+      ]
+    },
+    "rust-102-fixed8": {
+      "test_bpb": 2.6221580781947433,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.4276698623235182
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.5506936182674083
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.0477673950632833
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.3360012829326355
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.1417697263445237
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.6173525270864944
+        }
+      ]
+    },
+    "rust-102-fixed24": {
+      "test_bpb": 3.7706713444868436,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 3.5492306916051857
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 4.9735415647546874
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 3.0102309878986926
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 3.264723283006088
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 3.194872258081435
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 3.8257043140783282
+        }
+      ]
+    },
+    "rust-102-early": {
+      "test_bpb": 2.6221580781947433,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.4276698623235182
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.5506936182674083
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.0477673950632833
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.3360012829326355
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.1417697263445237
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.6173525270864944
+        }
+      ]
+    },
+    "rust-103-fixed24": {
+      "test_bpb": 3.7982096256718623,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 3.5793804290084683
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 4.97211848742443
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 3.004192041533817
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 3.3334147153057003
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 3.2349921841224365
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 3.8909458398938717
+        }
+      ]
+    },
+    "rust-103-early": {
+      "test_bpb": 2.592609468245336,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.387660648274732
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.456276696109373
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.021182428714431
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.3794078674176697
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.1636195695250326
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.603715576850152
+        }
+      ]
+    },
+    "rust-103-fixed8": {
+      "test_bpb": 2.592609468245336,
+      "test_raw_bytes": 37688,
+      "documents": [
+        {
+          "path": "src/appendix-01-keywords.md",
+          "raw_bytes": 4332,
+          "bpb": 2.387660648274732
+        },
+        {
+          "path": "src/appendix-02-operators.md",
+          "raw_bytes": 9077,
+          "bpb": 3.456276696109373
+        },
+        {
+          "path": "src/appendix-03-derivable-traits.md",
+          "raw_bytes": 8602,
+          "bpb": 2.021182428714431
+        },
+        {
+          "path": "src/appendix-04-useful-development-tools.md",
+          "raw_bytes": 4645,
+          "bpb": 2.3794078674176697
+        },
+        {
+          "path": "src/appendix-05-editions.md",
+          "raw_bytes": 2655,
+          "bpb": 2.1636195695250326
+        },
+        {
+          "path": "src/appendix-07-nightly-rust.md",
+          "raw_bytes": 8377,
+          "bpb": 2.603715576850152
+        }
+      ]
+    },
+    "vue-101-fixed8": {
+      "test_bpb": 1.884031948492497,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.387173086599598
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.683859389933407
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 2.0160148077534403
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.352828143750143
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.9860990380542651
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 2.0708537977569788
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.3478048756576286
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 2.059066971807757
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.7459681103722806
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.8060469515525364
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.5846418030102045
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.604638257188376
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.7375025530018022
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.8028953578829605
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.4562156679670384
+        }
+      ]
+    },
+    "vue-101-fixed24": {
+      "test_bpb": 2.411809178982072,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 3.0309780266219626
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 2.1102803260507668
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 2.667656002590608
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.6252316978408106
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 2.55919864929165
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 2.039621530731599
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.9509228399828094
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 2.7396039120184987
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 2.2392588318843996
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 2.3989461314228815
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 2.2375260209491254
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 2.0196036363636813
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 2.2464227473448295
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 2.489252717983889
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 3.337937004532178
+        }
+      ]
+    },
+    "vue-101-early": {
+      "test_bpb": 1.7327403865150475,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.2514750895403726
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.5366902437861385
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 1.9176677257905577
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.1951614229533563
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.8601986870049514
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 1.8019081218706536
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.119702844414193
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 1.8957807052717248
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.5759415804938322
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.6665030322460623
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.5277417971398524
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.4141922669040032
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.6027354265892686
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.6610479559060802
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.3788543538180136
+        }
+      ]
+    },
+    "vue-102-fixed24": {
+      "test_bpb": 2.495477783001053,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 3.1329167896388976
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 2.2659799566635104
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 2.5825190571535104
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.7646353800755799
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 2.713468361793872
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 2.2208417404020504
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 3.014124933702933
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 2.753850853888298
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 2.3281408827462453
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 2.3510647607206407
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 2.2916215672705142
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 2.1017445983204004
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 2.5382382250037017
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 2.329013733766786
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 3.405759495035538
+        }
+      ]
+    },
+    "vue-102-early": {
+      "test_bpb": 1.6994643129050828,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.172671813830928
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.5385632050001108
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 1.8295934772649083
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.194778951558107
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.825330586274186
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 1.723828953519083
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.012374477162398
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 1.8536086334375603
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.5997944161469668
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.6656626498414473
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.5379159372536215
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.3649191259365336
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.5243003356605271
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.6299580906339353
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.3242961745344157
+        }
+      ]
+    },
+    "vue-102-fixed8": {
+      "test_bpb": 1.6994643129050828,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.172671813830928
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.5385632050001108
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 1.8295934772649083
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.194778951558107
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.825330586274186
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 1.723828953519083
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.012374477162398
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 1.8536086334375603
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.5997944161469668
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.6656626498414473
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.5379159372536215
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.3649191259365336
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.5243003356605271
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.6299580906339353
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.3242961745344157
+        }
+      ]
+    },
+    "vue-103-early": {
+      "test_bpb": 1.7597488057588186,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.252171388593296
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.5379274360931818
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 1.9698167368199335
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.2097832093023873
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.8979038246581006
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 1.7410535454792542
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.161980491085762
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 2.0197697368715644
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.6421534285281179
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.7106903506042788
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.4806860146342724
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.4046068661155495
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.7245838901966175
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.5696755118129069
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.371192400437785
+        }
+      ]
+    },
+    "vue-103-fixed8": {
+      "test_bpb": 1.795706057695911,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 2.3103960240875043
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 1.5818763810815528
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 1.96406988869531
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.3143166522157201
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 1.9606465512762297
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 1.8884339415886189
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.141680227625054
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 1.9844788430313853
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 1.643684064251248
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 1.730824509616255
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 1.5270164124780596
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.5091720966787376
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 1.724451138814584
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 1.6343187884232782
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 2.376628044862521
+        }
+      ]
+    },
+    "vue-103-fixed24": {
+      "test_bpb": 2.4381554254063094,
+      "test_raw_bytes": 25906,
+      "documents": [
+        {
+          "path": "src/tutorial/src/step-1/description.md",
+          "raw_bytes": 2725,
+          "bpb": 3.1311070888064596
+        },
+        {
+          "path": "src/tutorial/src/step-2/description.md",
+          "raw_bytes": 3793,
+          "bpb": 2.158836166290093
+        },
+        {
+          "path": "src/tutorial/src/step-3/description.md",
+          "raw_bytes": 1112,
+          "bpb": 2.6051152340502877
+        },
+        {
+          "path": "src/tutorial/src/step-4/description.md",
+          "raw_bytes": 2011,
+          "bpb": 1.675545420988576
+        },
+        {
+          "path": "src/tutorial/src/step-5/description.md",
+          "raw_bytes": 1210,
+          "bpb": 2.5438324210481307
+        },
+        {
+          "path": "src/tutorial/src/step-6/description.md",
+          "raw_bytes": 941,
+          "bpb": 2.4728059559142075
+        },
+        {
+          "path": "src/tutorial/src/step-7/description.md",
+          "raw_bytes": 1570,
+          "bpb": 2.903997334367084
+        },
+        {
+          "path": "src/tutorial/src/step-8/description.md",
+          "raw_bytes": 2580,
+          "bpb": 2.7396915013615715
+        },
+        {
+          "path": "src/tutorial/src/step-9/description.md",
+          "raw_bytes": 2655,
+          "bpb": 2.274613681647618
+        },
+        {
+          "path": "src/tutorial/src/step-10/description.md",
+          "raw_bytes": 1562,
+          "bpb": 2.43417758091384
+        },
+        {
+          "path": "src/tutorial/src/step-11/description.md",
+          "raw_bytes": 1386,
+          "bpb": 2.138547961080705
+        },
+        {
+          "path": "src/tutorial/src/step-12/description.md",
+          "raw_bytes": 1370,
+          "bpb": 1.9861246551433223
+        },
+        {
+          "path": "src/tutorial/src/step-13/description.md",
+          "raw_bytes": 1317,
+          "bpb": 2.360190914403759
+        },
+        {
+          "path": "src/tutorial/src/step-14/description.md",
+          "raw_bytes": 992,
+          "bpb": 2.30761479125289
+        },
+        {
+          "path": "src/tutorial/src/step-15/description.md",
+          "raw_bytes": 682,
+          "bpb": 3.2540414744232113
+        }
+      ]
+    }
+  }
+}

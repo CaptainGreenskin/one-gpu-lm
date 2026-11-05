@@ -1,0 +1,178 @@
+{
+  "corpora": {
+    "rust": {
+      "policies": {
+        "early": {
+          "wall_s": 136.73694615566637,
+          "updates_s": 123.32768279068598,
+          "test_bpb": 2.601919467192403
+        },
+        "fixed8": {
+          "wall_s": 106.56753604334274,
+          "updates_s": 102.14104738131088,
+          "test_bpb": 2.602028644348959
+        },
+        "fixed24": {
+          "wall_s": 304.1726253509987,
+          "updates_s": 299.8196537436743,
+          "test_bpb": 3.7802482676028464
+        }
+      },
+      "comparisons": {
+        "fixed8": {
+          "mean_saved_s": -30.16941011232363,
+          "saved_pct": -28.310131989964788,
+          "mean_delta_bpb": -0.0001091771565557842,
+          "range_delta_bpb": [
+            -0.0003275314696673526,
+            0.0
+          ],
+          "within_margin": 3,
+          "seeds": 3
+        },
+        "fixed24": {
+          "mean_saved_s": 167.43567919533234,
+          "saved_pct": 55.046268217634854,
+          "mean_delta_bpb": -1.178328800410443,
+          "range_delta_bpb": [
+            -1.2056001574265265,
+            -1.1485132662921003
+          ],
+          "within_margin": 3,
+          "seeds": 3
+        }
+      }
+    },
+    "vue": {
+      "policies": {
+        "early": {
+          "wall_s": 148.52526264700768,
+          "updates_s": 134.4701378266715,
+          "test_bpb": 1.730651168392983
+        },
+        "fixed8": {
+          "wall_s": 102.0527587753216,
+          "updates_s": 97.7299937743519,
+          "test_bpb": 1.7930674396978303
+        },
+        "fixed24": {
+          "wall_s": 295.89754272733506,
+          "updates_s": 291.56711575497565,
+          "test_bpb": 2.448480795796478
+        }
+      },
+      "comparisons": {
+        "fixed8": {
+          "mean_saved_s": -46.47250387168606,
+          "saved_pct": -45.5377242412422,
+          "mean_delta_bpb": -0.06241627130484728,
+          "range_delta_bpb": [
+            -0.15129156197744953,
+            0.0
+          ],
+          "within_margin": 3,
+          "seeds": 3
+        },
+        "fixed24": {
+          "mean_saved_s": 147.37228008032739,
+          "saved_pct": 49.805171993648024,
+          "mean_delta_bpb": -0.7178296274034952,
+          "range_delta_bpb": [
+            -0.7960134700959702,
+            -0.6784066196474907
+          ],
+          "within_margin": 3,
+          "seeds": 3
+        }
+      }
+    }
+  },
+  "paired": [
+    {
+      "corpus": "rust",
+      "seed": 101,
+      "baseline": "fixed8",
+      "saved_s": -35.583009380992735,
+      "delta_bpb": -0.0003275314696673526
+    },
+    {
+      "corpus": "rust",
+      "seed": 102,
+      "baseline": "fixed8",
+      "saved_s": -25.650959154969314,
+      "delta_bpb": 0.0
+    },
+    {
+      "corpus": "rust",
+      "seed": 103,
+      "baseline": "fixed8",
+      "saved_s": -29.274261801008834,
+      "delta_bpb": 0.0
+    },
+    {
+      "corpus": "rust",
+      "seed": 101,
+      "baseline": "fixed24",
+      "saved_s": 149.6029592039995,
+      "delta_bpb": -1.1808729775127027
+    },
+    {
+      "corpus": "rust",
+      "seed": 102,
+      "baseline": "fixed24",
+      "saved_s": 180.2711064220057,
+      "delta_bpb": -1.1485132662921003
+    },
+    {
+      "corpus": "rust",
+      "seed": 103,
+      "baseline": "fixed24",
+      "saved_s": 172.43297195999185,
+      "delta_bpb": -1.2056001574265265
+    },
+    {
+      "corpus": "vue",
+      "seed": 101,
+      "baseline": "fixed8",
+      "saved_s": -63.924229771015234,
+      "delta_bpb": -0.15129156197744953
+    },
+    {
+      "corpus": "vue",
+      "seed": 102,
+      "baseline": "fixed8",
+      "saved_s": -22.23045973601984,
+      "delta_bpb": 0.0
+    },
+    {
+      "corpus": "vue",
+      "seed": 103,
+      "baseline": "fixed8",
+      "saved_s": -53.2628221080231,
+      "delta_bpb": -0.035957251937092316
+    },
+    {
+      "corpus": "vue",
+      "seed": 101,
+      "baseline": "fixed24",
+      "saved_s": 131.6172645149927,
+      "delta_bpb": -0.6790687924670247
+    },
+    {
+      "corpus": "vue",
+      "seed": 102,
+      "baseline": "fixed24",
+      "saved_s": 172.08442050797748,
+      "delta_bpb": -0.7960134700959702
+    },
+    {
+      "corpus": "vue",
+      "seed": 103,
+      "baseline": "fixed24",
+      "saved_s": 138.41515521801193,
+      "delta_bpb": -0.6784066196474907
+    }
+  ],
+  "max_paired_prefix_last_batch_loss_gap": 0.0,
+  "actual_training_wall_seconds_all_18": 3281.8580150990165
+}
