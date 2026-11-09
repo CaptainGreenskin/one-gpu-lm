@@ -32,3 +32,15 @@ python -m one_gpu_lm.evaluation.preflight \
 训练使用 `python -m one_gpu_lm train --config experiments/014-coding-quality/train-config.json --out runs/candidate`，配置的五个 `ONE_GPU_*` 输入同运行手册。必须先完成控制检查并冻结协议，再开展底座/候选配对评测。
 
 本轮同时改变了样本筛选与 013 确定性训练运行时，因此它是候选与底座的质量筛查，不能把结果全部归因于均衡采样。源码、修复答案、轨迹、权重和优化器状态不公开；MIT 仅覆盖本项目原创代码，上游权利记录见 [sources.json](sources.json)。
+
+## 一次性配对执行
+
+入场记录完整且协议冻结后，`run.py` 先检查所有冻结文件的哈希，再顺序执行：底座加载与 GPU 占用时的干净控制、27 个仓库任务、9 个函数回归、96 步候选训练、候选同组评测。它核对实际加载的 adapter 哈希，使用私有 Unix socket，采集整个流程的 GPU 指标，并在故障或超时后回收自己启动的进程。
+
+```bash
+python experiments/014-coding-quality/run.py --root . --out runs/quality
+```
+
+执行根目录需包含 `runtime.json`（`model`、`model_python`、`node_root`）、`private/inputs.json`（训练配置所需的五个 `ONE_GPU_*` 值）、`private/tasks.json`、`private/legacy-functions.jsonl`、`sources/`、`.venv-agent` 与 `node-deps/`。这些机器相关文件留在本地；运行手册与冻结哈希说明其用途。目录已存在时拒绝重复启动，失败记录保留；恢复须先判断哪一步完成，不能把新尝试当作原尝试覆盖。
+
+本轮总流程上限 4 小时、每组仓库评测上限 90 分钟、训练上限 1 小时，另有每任务 900 秒和 12 次模型调用预算。时间上限用于停止失控作业，不保证所有任务必能在限时内完成；未完成实验不能进入通过结论。
