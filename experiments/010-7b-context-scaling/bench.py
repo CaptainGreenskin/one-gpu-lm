@@ -77,6 +77,8 @@ def trial(args, protocol, result):
         return
     torch.cuda.set_per_process_memory_fraction(cap / total)
     torch.cuda.reset_peak_memory_stats()
+    torch.use_deterministic_algorithms(protocol["deterministic_algorithms"])
+    result["deterministic_algorithms"] = torch.are_deterministic_algorithms_enabled()
     torch.manual_seed(protocol["model_seed"])
     config = protocol["model_config"]
     started = time.monotonic()

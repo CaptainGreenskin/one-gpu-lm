@@ -10,6 +10,7 @@
   "measured_steps": 6,
   "model_seed": 1729,
   "data_seed": 991,
+  "deterministic_algorithms": true,
   "max_allocated_gib": 88,
   "reserve_free_gib": 4,
   "trial_timeout_seconds": 180,
