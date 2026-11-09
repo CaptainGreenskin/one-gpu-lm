@@ -11,6 +11,7 @@ from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.runstate import gpu_lock_path, single_writer
 from one_gpu_lm.serving.client import request
 from one_gpu_lm.common.checkpoints import load_checkpoint
+from one_gpu_lm.models.verify import verify_model
 
 
 def main():
@@ -25,8 +26,11 @@ def main():
     checkpoint,_,manifest=load_checkpoint(run,identity)
     locations=json.loads((run/'private/input-locations.json').read_text())
     if sha256(run/'profile.json')!=identity['input_hashes']['profile']:raise ValueError('Profile changed')
+    if sha256(Path(locations['weights_manifest']))!=identity['input_hashes']['weights_manifest']:
+        raise ValueError('Base weights manifest changed')
     out.mkdir(parents=True);(out/'private').mkdir(mode=0o700)
     with single_writer(gpu_lock_path()),tempfile.TemporaryDirectory(prefix='oglm-backend-') as temp:
+        verified=verify_model(Path(locations['model_dir']),Path(locations['weights_manifest']),identity['profile'])
         socket=Path(temp)/'model.sock'
         command=[sys.executable,'-m','one_gpu_lm.serving.local_backend','--model',locations['model_dir'],
                  '--profile',str(run/'profile.json'),'--socket',str(socket),'--out',str(out/'private/backend')]
@@ -47,7 +51,7 @@ def main():
                 subprocess.run([sys.executable,'-m','one_gpu_lm.evaluation.regression','--tasks',str(args.tasks.resolve()),
                     '--socket',str(socket),'--node',str(args.node.resolve()),'--out',str(out/'metrics')],check=True,timeout=1800)
                 write_json(out/'artifact.json',{'variant':args.variant,'training_identity_sha256':json.loads((run/'result.json').read_text())['identity_sha256'],
-                    'backend':health,'task_sha256':sha256(args.tasks),'purpose':'function-regression-smoke-not-daily-model-acceptance'})
+                    'base_content_verification':verified,'backend':health,'task_sha256':sha256(args.tasks),'purpose':'function-regression-smoke-not-daily-model-acceptance'})
             finally:
                 if backend.poll() is None:
                     backend.terminate()
