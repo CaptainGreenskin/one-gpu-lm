@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "quality_status": "candidate_comparison_in_progress_no_promotion_decision",
+  "adapter": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "weights_public": false,
+    "files": {
+      "adapter_model.safetensors": "af05dc7e06a9ef1af02d84cf4eb98304b034de2c414ab1a7708d8ee668829ce0"
+    }
+  },
+  "finished_training_utc": "2026-11-09T10:13:41.662467+00:00",
+  "training": {
+    "steps": 96,
+    "training_seconds": 208.26195086797816,
+    "input_tokens": 180312,
+    "supervised_tokens": 6280,
+    "trainable_parameters": 58363904,
+    "data_sha256": "f0e390bf5defd4e15fe2437a4b7c7afebb88b7941749c7f3fc9fc36ba590890a",
+    "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+    "protocol_sha256": "de163b5dc8cc6743a2d194ca37494fdaef61d60d2366a886612ac5c27ad623f5",
+    "saved_reload_greedy_ids_equal": true
+  },
+  "selection": {
+    "records": 96,
+    "excluded": 49,
+    "kinds": {
+      "verified-local-base-trajectory": 96
+    },
+    "maximum_actual_sequence_tokens": 4070
+  },
+  "weights_public": false
+}
