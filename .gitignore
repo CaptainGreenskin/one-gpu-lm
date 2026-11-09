@@ -6,3 +6,7 @@ checkpoints/
 runs/
 *.pt
 data/
+models/
+adapters/
+private/
+*.safetensors
