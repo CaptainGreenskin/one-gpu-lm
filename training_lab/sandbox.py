@@ -15,11 +15,14 @@ def extract_code(text):
 
 
 class Sandbox:
-    def __init__(self, node=None, *, readonly_mounts=(), environment=None, virtual_memory_gib=2):
+    def __init__(self, node=None, *, readonly_mounts=(), environment=None, virtual_memory_gib=2, process_limit=512):
         self.node = Path(node).resolve() if node else None
         self.readonly_mounts = [(Path(source).resolve(), str(destination)) for source, destination in readonly_mounts]
         self.environment = dict(environment or {})
         self.virtual_memory_gib = virtual_memory_gib
+        # RLIMIT_NPROC counts all threads for this real UID, including the GPU backend.
+        # It is a shared-user guard, not a per-workspace cgroup process quota.
+        self.process_limit = process_limit
 
     def execute(self, root, command, stdin="", timeout=10, node=False):
         args = ["bwrap", "--unshare-all", "--die-with-parent", "--new-session",
@@ -45,7 +48,7 @@ class Sandbox:
             resource.setrlimit(resource.RLIMIT_AS, ((16 if node else self.virtual_memory_gib) * 2**30,) * 2)
             resource.setrlimit(resource.RLIMIT_FSIZE, (4 * 2**20,) * 2)
             resource.setrlimit(resource.RLIMIT_NOFILE, (64, 64))
-            resource.setrlimit(resource.RLIMIT_NPROC, (128, 128))
+            resource.setrlimit(resource.RLIMIT_NPROC, (self.process_limit, self.process_limit))
             resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
 
         # Capture to bounded regular files, rather than an unbounded PIPE.

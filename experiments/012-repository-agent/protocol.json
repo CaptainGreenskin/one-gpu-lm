@@ -33,7 +33,8 @@
     "accepted_action_formats": [
       "one fenced bash/sh block",
       "one Qwen XML bash/command tool call"
-    ]
+    ],
+    "shared_uid_process_thread_limit": 512
   },
   "training_candidate": {
     "base_model": "Qwen/Qwen3.8-27B",
@@ -115,6 +116,7 @@
     "observation_scope": "training partition only; no dev or heldout model rollout observed",
     "prior_attempt": "baseline-001 retained as invalidated interface probe, excluded from quality scores and supervision",
     "change": "accept exactly one unambiguous fenced bash OR native Qwen XML bash/command action; same commands, tools, budgets, tasks and grading",
-    "new_baseline": "baseline-002"
+    "new_baseline": "baseline-002",
+    "runtime_correction": "Before baseline-002, GPU-loaded control tests found that RLIMIT_NPROC=128 counts the backend threads under the shared UID and prevented namespace creation. Fixed shared-user guard to 512; rerun all Linux contracts with the loaded backend. This is not a per-task cgroup quota."
   }
 }
