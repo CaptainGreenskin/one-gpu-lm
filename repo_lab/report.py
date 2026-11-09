@@ -81,6 +81,11 @@ def render(run):
     source, adapter = read('source.json'), read('adapter.json')
     if source['backends']['adapted']['adapter_sha256'] != adapter['files']:
         raise ValueError('Evaluated adapter differs from saved candidate')
+    loading_names=['loading-base.json','loading-candidate.json','loading-training.json']
+    for name in loading_names:
+        loading=read(name)
+        if any(loading.get(key) for key in ['missing_keys','unexpected_keys','mismatched_keys','error_msgs']):
+            raise ValueError('Loading inspection failed in '+name)
     test = summary['splits']['test']
     recovery = {name:[{'id':r['id'],'passed':r['passed'],'calls':r['calls'],'generated_tokens':r['generated_tokens']}
                      for r in value['results'] if r['recovered']] for name,value in [('base',base),('adapted',adapted)]}
@@ -196,6 +201,7 @@ The provenance records preserve repository revisions, file/license hashes and re
         'regression-base.json','regression-adapted.json','telemetry.csv','runtime.json','pipeline.json','source.json']
     if (run/'action-audit.json').exists():
         allowed.append('action-audit.json')
+    allowed.extend(loading_names)
     write_json(run/'artifacts.json',{'schema_version':1,'weights_public':False,'raw_trajectories_public':False,
         'generator_sha256':sha256(__file__),'matplotlib_version':matplotlib.__version__,
         'files':{name:sha256(run/name) for name in allowed}})
