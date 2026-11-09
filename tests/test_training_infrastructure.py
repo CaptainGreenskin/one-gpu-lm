@@ -13,9 +13,15 @@ from one_gpu_lm.common.runstate import single_writer
 from one_gpu_lm.models.verify import verify_model
 from one_gpu_lm.training.collect import collect
 from one_gpu_lm.training.config import read_training_data, resolve_path
+from one_gpu_lm.training.doctor import package_name
 
 
 class InfrastructureContracts(unittest.TestCase):
+    def test_package_metadata_aliases_match_requirement_names(self):
+        self.assertEqual(package_name('huggingface_hub'),'huggingface-hub')
+        self.assertEqual(package_name('FLA_Core'),'fla-core')
+        self.assertEqual(package_name('flash.linear-attention'),'flash-linear-attention')
+
     def test_checkpoint_commits_and_rejects_changed_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
             run=Path(tmp);identity={'data':'a','code':'b'}

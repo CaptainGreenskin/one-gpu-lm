@@ -46,5 +46,13 @@
     "Single GPU, BF16, rank at most 8, microbatch 1, at most 4096 input tokens, one pass.",
     "Controlled complete-update process interruption; no claim that arbitrary GPU kernels or remote/distributed filesystems are transactionally recoverable.",
     "No full-parameter 27B, distributed trainer, production inference server or improved coding-quality claim."
+  ],
+  "integration_amendments": [
+    {
+      "stage": "preflight before any optimizer update",
+      "attempt": "initial recovery run retained privately",
+      "reason": "Distribution metadata uses underscore/dot/hyphen package-name aliases; unnormalized name comparison incorrectly rejected matching versions",
+      "change": "Normalize distribution names before comparison; package versions, data, training settings and numerical tolerances unchanged"
+    }
   ]
 }

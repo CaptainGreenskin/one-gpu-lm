@@ -6,6 +6,7 @@ import math
 import os
 from pathlib import Path
 import platform
+import re
 import shutil
 import subprocess
 
@@ -13,6 +14,10 @@ from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.runstate import gpu_lock_path, single_writer, utc
 from one_gpu_lm.models.verify import verify_model
 from .config import load_config, read_training_data
+
+
+def package_name(value):
+    return re.sub(r'[-_.]+','-',value).lower()
 
 
 def source_files():
@@ -25,8 +30,8 @@ def inspect(config, output_parent):
     if platform.system()!='Linux' or os.environ.get('CUDA_VISIBLE_DEVICES','0')!='0':
         raise ValueError('Validated v1 runtime requires Linux and physical CUDA GPU 0 only')
     expected=json.loads(config['paths']['environment_lock'].read_text())
-    packages={d.metadata['Name'].lower():d.version for d in importlib.metadata.distributions() if d.metadata.get('Name')}
-    if any(packages.get(k.lower())!=v for k,v in expected['packages'].items()):
+    packages={package_name(d.metadata['Name']):d.version for d in importlib.metadata.distributions() if d.metadata.get('Name')}
+    if any(packages.get(package_name(k))!=v for k,v in expected['packages'].items()):
         raise ValueError('Model environment differs from its pinned package versions')
     if platform.python_version_tuple()[:2]!=tuple(expected['python_major_minor']):
         raise ValueError('Python version differs from the validated environment')
