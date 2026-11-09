@@ -62,7 +62,15 @@ def inspect(config, output_parent):
     if float(free)/1024<config['run']['minimum_free_gpu_gib']:
         raise ValueError('Insufficient free GPU memory for this recipe')
     verified=verify_model(config['paths']['model_dir'],config['paths']['weights_manifest'],config['profile'])
+    workspace=os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
+    if workspace!=':4096:8':
+        raise ValueError('Validated recovery requires CUBLAS_WORKSPACE_CONFIG=:4096:8')
     import torch
+    torch.use_deterministic_algorithms(True)
+    torch.backends.cudnn.deterministic=True
+    torch.backends.cudnn.benchmark=False
+    torch.backends.cudnn.allow_tf32=False
+    torch.backends.cuda.matmul.allow_tf32=False
     torch.set_num_threads(2)
     if not torch.cuda.is_available() or torch.cuda.device_count()!=1 or not torch.cuda.is_bf16_supported():
         raise ValueError('One visible BF16 CUDA device is required')
@@ -77,7 +85,8 @@ def inspect(config, output_parent):
         'shadowed_distributions':shadowed,
         'torch_cuda':torch.version.cuda,'gpu_name':name,'compute_capability':list(torch.cuda.get_device_capability()),
         'driver_version':driver,'gpu_total_mib':float(total),
-        'numerics':{'deterministic_algorithms':torch.are_deterministic_algorithms_enabled(),
+        'numerics':{'cublas_workspace_config':workspace,
+            'deterministic_algorithms':torch.are_deterministic_algorithms_enabled(),
             'float32_matmul_precision':torch.get_float32_matmul_precision(),
             'matmul_allow_tf32':torch.backends.cuda.matmul.allow_tf32,
             'cudnn_allow_tf32':torch.backends.cudnn.allow_tf32,

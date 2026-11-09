@@ -59,6 +59,12 @@
       "attempt": "second preflight rejection retained privately",
       "reason": "The legacy venv inherited system packages; enumeration saw both active new dependencies and shadowed older distributions",
       "change": "Use importlib.metadata.version resolution and report shadowed distributions separately; build an isolated venv for acceptance. Training data, budgets and numeric thresholds remain unchanged."
+    },
+    {
+      "stage": "after first complete GPU pair failed frozen numerical thresholds",
+      "attempt": "recovery-v3 retained, both initial states identical but first backward gradients and later losses differed before the stop boundary",
+      "change": "Require deterministic PyTorch/cuDNN algorithms, fixed cuBLAS workspace, and disabled TF32. Start a new pair with a new source identity; preserve the failed pair. No change to data, updates, optimizer, or numerical thresholds.",
+      "root_cause_scope": "Nonrepeatable training computation observed before interruption; no specific upstream kernel defect established."
     }
   ]
 }
