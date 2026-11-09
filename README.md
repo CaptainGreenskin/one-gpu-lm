@@ -10,6 +10,8 @@
 
 **让下一代基模复用成果。** [模型升级协议](docs/model-upgrades.md) 规定新模型如何接入、对照和发布；[training_lab](training_lab/) 把模型 profile 与数据、隔离评测、LoRA 和报告流程分开。GitHub 保存可审计的实现和实验，ModelScope 承载后续通过验收的具体模型版本，InfraGuide 解释原理。当前尚未发布编码模型权重。
 
+**正在运行仓库级对照。** [012 的 36 道准入任务与冻结协议](experiments/012-repository-agent/) 将训练、开发、留出按仓库拆开，比较原始 27B 和一次受控 LoRA，并检查工具步骤中断恢复。[repo_lab](repo_lab/) 提供更换合法任务、本地模型后端和独立判分的入口。当前尚未形成该轮完整前后结论。
+
 **拿自己的文档做实验。** 把 UTF-8 文档按篇放入训练和留出两个目录，即可逐遍比较训练分数和留出分数，找出继续训练何时开始影响未见文档。可用小型 CPU 模型先检查流程，也可用单张支持 BF16 的 CUDA 显卡跑完整配置。[用自己的文档训练和出图](experiments/007-document-curves/#用自己的文档跑)
 
 **首轮实测。** RTX PRO 6000 Blackwell 单卡完成了 100 步训练。8,565 万参数的 GPT 在中文维基验证样本上从 8.106 降到 5.386 bits/byte，训练更新用时 4.376 秒。读者可按相同数据、软件和计时口径复跑。[实测条件与原始结果](experiments/002-first-train/results/pro6000-first/) · [安装与复现](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
@@ -27,6 +29,7 @@
 | 009 · 数据到部署 | 训练、早停、模型导出、KV cache 和 HTTP 续写如何串起来？单卡能否实际更新 7B 参数？ | [全链路入口](experiments/009-training-to-serving/) · [吞吐与显存实测](experiments/009-training-to-serving/results/2026-11-05/) |
 | 010 · 7B 长序列训练 | 512–4096 token 的全参数与 LoRA 训练需要多少显存？按层重算何时值得开启？ | [复现与数值审计](experiments/010-7b-context-scaling/) · [曲线与原始结果](experiments/010-7b-context-scaling/results/2026-11-09/) |
 | 011 · 编码底座与 LoRA 链路 | 真实 27B 能否加载、微调、重载和隔离评测？工程成功是否等于能力提升？ | [固定版本与复用入口](experiments/011-coding-model-selection/) · [9/9 → 7/9 的回归结果](experiments/011-coding-model-selection/results/2026-11-09/) |
+| 012 · 仓库编码 agent | 固定任务、工具和预算后，后训练能否提高独立仓库的修复率？中断恢复是否保留预算？ | [冻结协议与准入控制](experiments/012-repository-agent/) · [换自己的任务](repo_lab/)；运行中 |
 
 **首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
 

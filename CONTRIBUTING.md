@@ -17,9 +17,9 @@
 ## 代码与验证
 
 ```bash
-python -m unittest training_lab.test_contracts
+python -m unittest training_lab.test_contracts repo_lab.test_contracts
 # 在支持用户命名空间的 Linux 主机上：
-python -m unittest training_lab.test_sandbox_linux
+python -m unittest training_lab.test_sandbox_linux repo_lab.test_recovery_linux
 ```
 
 GitHub CI 只检查 CPU 数据契约和可编译性，不代表 GPU 训练或代码隔离已通过。真实模型改动需另附 GPU 结果。更改公开 JSON 格式应明确 schema 版本与兼容性；更改评价规则后不能将旧、新分数放进同一排名而不说明。
