@@ -12,6 +12,7 @@ import time
 
 from .records import data_receipt, load_split, sha256, write_json
 from .sandbox import Sandbox, extract_code
+from one_gpu_lm.common.source import historical_pilot_dependencies
 
 
 def utc():
@@ -31,7 +32,8 @@ def main():
     profile = json.loads(args.profile.read_text())
     write_json(args.out / "profile.json", profile)
     write_json(args.out / "source.json", {"schema_version": 1, "profile_sha256": sha256(args.profile),
-        "files": {"training_lab/" + p.name: sha256(p) for p in sorted(Path(__file__).parent.glob("*.py"))}})
+        "files": {**{"training_lab/" + p.name: sha256(p) for p in sorted(Path(__file__).parent.glob("*.py"))},
+                  **historical_pilot_dependencies()}})
     started = time.monotonic()
     result = {"schema_version": 1, "started_utc": utc(), "status": "starting", "purpose": "pipeline-smoke-only"}
     telemetry = None

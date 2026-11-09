@@ -1,9 +1,9 @@
 name: Training data and evaluation contracts
 on:
   push:
-    paths: ["training_lab/**", "repo_lab/**", ".github/workflows/training-contracts.yml"]
+    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", ".github/workflows/training-contracts.yml"]
   pull_request:
-    paths: ["training_lab/**", "repo_lab/**", ".github/workflows/training-contracts.yml"]
+    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", ".github/workflows/training-contracts.yml"]
 permissions:
   contents: read
 jobs:
@@ -18,5 +18,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m unittest training_lab.test_contracts repo_lab.test_contracts
-      - run: python -m compileall -q training_lab repo_lab
+      - run: python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules
+      - run: python -m compileall -q training_lab repo_lab one_gpu_lm tests

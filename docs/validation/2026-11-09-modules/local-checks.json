@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "previous_commit": "fa7c5346d4af47101db5299f08df60eda1d84918",
+  "ast_checks": [
+    {
+      "previous_file": "repo_lab/backend.py",
+      "canonical_file": "one_gpu_lm/models/hf_runtime.py",
+      "symbol": "Runtime",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/train.py",
+      "canonical_file": "one_gpu_lm/training/repository_lora.py",
+      "symbol": "select_examples",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/train.py",
+      "canonical_file": "one_gpu_lm/training/repository_lora.py",
+      "symbol": "main",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/agent.py",
+      "canonical_file": "one_gpu_lm/evaluation/agent.py",
+      "symbol": "LocalModel",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/agent.py",
+      "canonical_file": "one_gpu_lm/evaluation/agent.py",
+      "symbol": "main",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/agent.py",
+      "canonical_file": "one_gpu_lm/evaluation/agent.py",
+      "symbol": "atomic_json",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/agent.py",
+      "canonical_file": "one_gpu_lm/common/actions.py",
+      "symbol": "parse_action",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "training_lab/sandbox.py",
+      "canonical_file": "one_gpu_lm/evaluation/sandbox.py",
+      "symbol": "Sandbox",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "training_lab/sandbox.py",
+      "canonical_file": "one_gpu_lm/evaluation/sandbox.py",
+      "symbol": "extract_code",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/dataset.py",
+      "canonical_file": "one_gpu_lm/data/repository.py",
+      "symbol": "main",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/environment.py",
+      "canonical_file": "one_gpu_lm/evaluation/environment.py",
+      "symbol": "RepositoryEnvironment",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/grading.py",
+      "canonical_file": "one_gpu_lm/evaluation/grading.py",
+      "symbol": "grade",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/grading.py",
+      "canonical_file": "one_gpu_lm/evaluation/grading.py",
+      "symbol": "changed_protected",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/grading.py",
+      "canonical_file": "one_gpu_lm/evaluation/grading.py",
+      "symbol": "generated_files",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/tasks.py",
+      "canonical_file": "one_gpu_lm/evaluation/tasks.py",
+      "symbol": "prepare",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/tasks.py",
+      "canonical_file": "one_gpu_lm/evaluation/tasks.py",
+      "symbol": "apply_mutation",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/tasks.py",
+      "canonical_file": "one_gpu_lm/evaluation/tasks.py",
+      "symbol": "file_manifest",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/report.py",
+      "canonical_file": "one_gpu_lm/evaluation/report.py",
+      "symbol": "paired",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/report.py",
+      "canonical_file": "one_gpu_lm/evaluation/report.py",
+      "symbol": "hardware",
+      "ast_unchanged": true
+    },
+    {
+      "previous_file": "repo_lab/report.py",
+      "canonical_file": "one_gpu_lm/evaluation/report.py",
+      "symbol": "render",
+      "ast_unchanged": true
+    }
+  ],
+  "js_runtime_assets_unchanged": true,
+  "historical_report_rebuild": {
+    "compatibility_entry": true,
+    "canonical_entry": true,
+    "identical_artifacts": [
+      "summary.json",
+      "hardware.json",
+      "comparison.png",
+      "loss.png"
+    ]
+  },
+  "limitations": [
+    "AST equality covers the listed implementations; import wiring and source identity were deliberately changed.",
+    "This is a structural refactor, not new model-quality evidence."
+  ]
+}

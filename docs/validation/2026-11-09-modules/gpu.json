@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "purpose": "module-refactor-integrity-not-quality-evaluation",
+  "adapter": true,
+  "greedy_ids_equal_to_pre_refactor_probe": true,
+  "generated_tokens": 16,
+  "greedy_ids_sha256": "6e8e4665af2dd27d67db5540f96d824528d7fecb79ce4b8f43b117e3f1b932ee",
+  "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+  "adapter_file_sha256": "af05dc7e06a9ef1af02d84cf4eb98304b034de2c414ab1a7708d8ee668829ce0",
+  "generation_seconds": 4.214254562015412,
+  "implementation_files": {
+    "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+    "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+    "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+    "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+    "one_gpu_lm/common/source.py": "eb341bf2ec0f3f1bde14ce0615b8776a317747d1a758c4a5082519b88e137e1c",
+    "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+    "one_gpu_lm/evaluation/agent.py": "61df4179446585a3a2e0bfab509a5cbaba49e4b403c252a93b2e12c382d99181",
+    "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+    "one_gpu_lm/evaluation/campaign.py": "a0d78b30ef2e15c4fb3c6c27f6923e4cfdd41977325d347bcb387a3f626f4e9d",
+    "one_gpu_lm/evaluation/environment.py": "938bcac1e9696c8920b758c6f943f843e2b901682ac777a608a202ef32d5791f",
+    "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+    "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+    "one_gpu_lm/evaluation/tasks.py": "004b93e0f14235a1e0992ba7f0d3ed0eb682ca0d5173fe092773afced04a0b1d",
+    "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+    "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+    "one_gpu_lm/models/hf_runtime.py": "0ca079b9e721c9e8cbd9b3f194bbd5ae5e68a55570cd479f43a70572bd8a1b8f",
+    "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+    "one_gpu_lm/serving/client.py": "097d04c4bc4c4e774f6f0b963e84a7eb9c2587228474726c3dbafbd93a2ce265",
+    "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+  }
+}

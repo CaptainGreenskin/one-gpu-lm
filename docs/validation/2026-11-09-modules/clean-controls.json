@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-09T11:59:48.426334+00:00",
+  "task_spec_sha256": "9cf8ccf8734a739630959314b544f637fba269f4ad40af921b19ca97b9ce10a7",
+  "clean": [
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.4717619990115054,
+      "reason": "ok"
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 5.830137537006522,
+      "reason": "ok"
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 31.835653504997026,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.3668611499888357,
+      "reason": "ok"
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.085169433994452,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 9.137998921010876,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [],
+  "complete": true,
+  "finished_utc": "2026-11-09T12:00:45.291001+00:00",
+  "admitted": 0
+}
