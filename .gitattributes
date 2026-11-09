@@ -1,0 +1,2 @@
+# Preserve raw evidence bytes: artifact hashes include the CSV line endings.
+experiments/013-training-infrastructure/results/**/*.csv -text
