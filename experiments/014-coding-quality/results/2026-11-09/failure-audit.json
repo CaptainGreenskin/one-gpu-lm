@@ -1,0 +1,947 @@
+{
+  "schema_version": 1,
+  "purpose": "post-run descriptive audit; scores and parser unchanged",
+  "raw_outputs_public": false,
+  "parser_sha256": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+  "audit_source_sha256": "2ec52a6ce7ddcbf63429f214cb340a05480dde2536315937ff3663969347a80b",
+  "variants": {
+    "baseline": [
+      {
+        "id": "more-itertools-windowed",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 11,
+          "qwen_tool_call_rejected": 1
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "09551c0156efa3baa104587d0a2bfe7ad145136d516ac379408ac4668bb2bb60",
+        "grader_log_sha256": "377a2603a541441139875c727bf9e5b197f15ee37413ac5f21577e90d10e2f3f"
+      },
+      {
+        "id": "more-itertools-split_at",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "2dc2f017df1af0f1014d01f473a7c120f783bc2851a331548eb4781d044ad411",
+        "grader_log_sha256": "41e49796e1ce4376680b4720eea755d6e72a35837be2cc4f61e03cd001848e02"
+      },
+      {
+        "id": "more-itertools-consume-and-window",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 2,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "fenced_block_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "114ab3169a373861e6acf8f859572863384ba43e417659ae458993d69e868ef4",
+        "grader_log_sha256": "97ad48e15b823a70ef443069600243bf4c073edf288a2c187c7ad3cc9d8227de"
+      },
+      {
+        "id": "fast-deep-equal-nan",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 180,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 6,
+          "qwen_tool_call_rejected": 5
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 6
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 5
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "3ea78207a662635c35bb24bb28f3177fbf7724c7a3d131781eafebda8c26254d",
+        "grader_log_sha256": "8bd7f9f7ce523f7dc31b136dc1ff7f2e34a42ee1523e434b8994b22c4f7873da"
+      },
+      {
+        "id": "fast-deep-equal-array-members",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 60,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "4f3b837100e409e3d1433840718542a43caabb97b2e7e730c11820fc6a8188ab",
+        "grader_log_sha256": "c3e94c12fe957063a0c394d561a3ac849ed4a89081f6b071b5132f8f70b3995d"
+      },
+      {
+        "id": "fast-deep-equal-map-values",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 16,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "qwen_tool_call_rejected": 2
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 2
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "00bccdcfbd39361b42977b24d91e2a9e1e5cf291c4057a1a195b168714ea368f",
+        "grader_log_sha256": "6e8ca1315b818a3abfd0f347db3ad502ae7445e5c2fa62b82ed21028604c452a"
+      },
+      {
+        "id": "attrs-asdict",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "fenced_block_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "f816c5490fafb83805a932768230030f375c26a3cdfbd0a5d28c4ef5b7a36f4f",
+        "grader_log_sha256": "2102b5f1573f187941b7eab522460aed553306439a091b23594b96b01938f263"
+      },
+      {
+        "id": "attrs-filters-and-tuples",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "afe954104e74d3c1592794b83017d75ab47d2a24ad46e37d43c39eed6a25a4f3",
+        "grader_log_sha256": "bf316c2df9d6ba9b7fff764201219964d650cbb661992a28dcd391d11c396f50"
+      },
+      {
+        "id": "p-limit-arguments",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "816dc59e8cd8a04d0146055196701ed34a13640a773d074addabd845ddf816b7",
+        "grader_log_sha256": "c8942dda42ca830b934c9ccc21196da06105846566ca6d53fe0df1f50f9a13a4"
+      },
+      {
+        "id": "new-jmes-filter",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 6,
+          "qwen_tool_call_rejected": 5
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 6
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 5
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "525038d8ac6e07bd12bdf2c9545c8fb44b3161b3de8acc8c9c5f131d1945a4d9",
+        "grader_log_sha256": "3f8031dde8b17406c5e162040fb640d1d4d8d6ab4fbf8497a8d577817354d500"
+      },
+      {
+        "id": "new-jmes-multiselect",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "3cbc7e2e5cca90f545be5f355b5340e9d7c26988fe56e69957892c1fc42f5709",
+        "grader_log_sha256": "222fac33df4629a726220d2d27a4171317580b80a8abbffff4efc8bc55e0e96f"
+      },
+      {
+        "id": "new-jmes-sort-expression",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "qwen_tool_call_rejected": 2
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 2
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "61ca143c813ea72807ccc9b5ed197ca5b7b417e9bcc60928a5cf7103e5287bef",
+        "grader_log_sha256": "f9ab5398e6bde4188ae0e45bfd2009915ccd1539db9f9422ff1b2de60ac43ee9"
+      },
+      {
+        "id": "new-jmes-raw-string",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 3,
+          "qwen_tool_call_accepted": 8
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "d68e5189437819c58f144ebcd1a4de6c6893e7d41fd222f15a86bc582a79a5bf",
+        "grader_log_sha256": "228c3c050230a6417d3be8b362bbcb6b8ab4b73852731b4dfee611ea87bc85ac"
+      },
+      {
+        "id": "new-jmes-index-slice",
+        "exit_status": "RuntimeError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 10
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [
+          "context_limit"
+        ],
+        "trajectory_sha256": "b2ac2fb8dc1cd768eead4c507415f669adf4ff399e4c243cf82b3ba9cc72f135",
+        "grader_log_sha256": "60b184abcfec323c0de1d0ba9604ff985ea6aaf817bf29078bd24bf99d8fd9fb"
+      },
+      {
+        "id": "new-jmes-pipe-map",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 2,
+          "qwen_tool_call_accepted": 10
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 2
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 2
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "0c7bb04a5b44a3828af54d5c424b3af899c97cd5a6677a827ff56c01d81974ec",
+        "grader_log_sha256": "acf699562a96014b84255fae76a1a111fc4d52058e26ed51e20a1598128bb119"
+      },
+      {
+        "id": "new-json-comparator",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "5502f2909115bfbf4a19162e5fe3250db036637c6bc8a930a9d644ea365e820f",
+        "grader_log_sha256": "ae691c773d64928184996a69fcf3fca5f4208a8ec491b0940aa75f1c70ea6e59"
+      },
+      {
+        "id": "new-json-cycle-reuse",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "fbb74705ed35dda748f51f97558689c0adab959c620c92886ecdf3b6d6db9c1a",
+        "grader_log_sha256": "7e7909fd3c65cf40c859d97316697ec87e7f4efbc0130dec92eb6b796f6a0b89"
+      }
+    ],
+    "adapted": [
+      {
+        "id": "more-itertools-windowed",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 8,
+          "qwen_tool_call_rejected": 4
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 4
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 3
+          },
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "7be87ddcd2fb50b1b67e7b123781b4c9446797f48cb039a92ec7c0a5813b1063",
+        "grader_log_sha256": "c5a76a3def0df811c2a7eb83634611a3084e7910fd63b6a963b9279baa678272"
+      },
+      {
+        "id": "more-itertools-split_at",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "8b19180edf5f51d704246f654910794acb2757745b5772f0ff044e2e11d5274f",
+        "grader_log_sha256": "b50c4315e00d78de16f99cfbeed80006a4fe7c6a5305cc113667541010ffc0fd"
+      },
+      {
+        "id": "more-itertools-consume-and-window",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "0e3937ce7dbf17e733b7c6ef312b0f050d644a0de958a30a1b2b5b709f8b5b72",
+        "grader_log_sha256": "4372b94e81ed9ff5ddcd84838679dff6b7f596c3c34856a8a8b5f204502a050a"
+      },
+      {
+        "id": "fast-deep-equal-nan",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 180,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 6,
+          "qwen_tool_call_rejected": 5
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 6
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 5
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "f976544024016e4f1da1759ea76d5af604115f20266465bbf543ed89683dfc35",
+        "grader_log_sha256": "abab0df12ca342eb2e0227b2a4122d42412b9c3372576f4241d59a3886a73d06"
+      },
+      {
+        "id": "fast-deep-equal-array-members",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 60,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "739ea4901c02ad83c5b5016aa24c10e44b73426a11c724c13ccc16a4f72949b0",
+        "grader_log_sha256": "2a5e97314e9fcf305aa100202e4348a1c82b49d80959c481a9cd0c2142705148"
+      },
+      {
+        "id": "fast-deep-equal-map-values",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 16,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "qwen_tool_call_rejected": 2
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 2
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "d4b9baed5918a827677b8bdfbe03542c3c155bf7e86324a0e13532885e379eed",
+        "grader_log_sha256": "72fe987b67260445c8b4aafb794b11456fa8b4780c611f8b64f8ac36b53f6de6"
+      },
+      {
+        "id": "attrs-asdict",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "fenced_block_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "70c7491fe67dc0f95de38195e7f5f004158abfa2a17900a4d02637e2644fad92",
+        "grader_log_sha256": "03eff61fb076721e25a9ec60cc01343b6a7dda73bca561d2971f54f39c3c4ee0"
+      },
+      {
+        "id": "attrs-filters-and-tuples",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "f7c5e062d39a0900b59c44d707bc8117b20ea877638532da146321ba4d648ca2",
+        "grader_log_sha256": "2c571b379390a47487ad3104b1baf9b12ce525675dfaf449ac90d6e398006705"
+      },
+      {
+        "id": "p-limit-arguments",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 1
+          },
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 2
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "86b0e6a16edbbe5bd4ff1c107c41f613cafd4eb681333622d75b868bf832a5f2",
+        "grader_log_sha256": "5bcc134d47f003f7ae54874e66badb67978366f6ae714fc9239992c862e3afa1"
+      },
+      {
+        "id": "new-jmes-filter",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "8c9c0c6b9220020f09e95ca3dbcdeb9c3866f915fa6c229d536d920c1a549727",
+        "grader_log_sha256": "0f5d6d4e82a52ee4f63148432bb155160e1ced50a67b4a20c7d5bc1a0a0cc063"
+      },
+      {
+        "id": "new-jmes-multiselect",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "bf6535df33f85fb26e371af61690a4d68eea07e7e4f7cbbcb5453951b7f5ec83",
+        "grader_log_sha256": "172b8de1219868d1a1e5faabeefc8377ad73f7acd288b0906446566fa0346fa2"
+      },
+      {
+        "id": "new-jmes-sort-expression",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "81ec497ce2bcb9e07941c4add1fb84bf8cd762f82a21eb2ae8176862de48b71f",
+        "grader_log_sha256": "b2ca3beae2643f7fb9d5c548c65f065b69b1a697fff2fcdb95d96a346e6c10cb"
+      },
+      {
+        "id": "new-jmes-raw-string",
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "other_text_rejected": 1,
+          "fenced_block_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": false,
+              "tool_call_close": 0,
+              "tool_call_open": 0
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "c204afa253c53767ea624e01aa2b1c5bd35f65b874f997e6681c73dce44c9b5e",
+        "grader_log_sha256": "83fe3f73db962aeb29f343896f2b8a94ace4cb9a50d2b81904ab9be1da42d9fd"
+      },
+      {
+        "id": "new-jmes-index-slice",
+        "exit_status": "RuntimeError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "fenced_block_accepted": 11
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [
+          "context_limit"
+        ],
+        "trajectory_sha256": "c164f955370ffa102db456622980727875909c61a346f813205708314033edbd",
+        "grader_log_sha256": "00372f410133dc8aa18e970223101e05423826106b87670ffb5dd59c6a6099aa"
+      },
+      {
+        "id": "new-jmes-pipe-map",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "799d81aee34813d80b0c0dd52b2c1839c8263970cd7d6368126ec9829702fa6b",
+        "grader_log_sha256": "abfa02877d4776426bcf038f4cca7ae06f97c7ac6aeb3a1b8f2c80a68e27c2b9"
+      },
+      {
+        "id": "new-json-comparator",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": false,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 1,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "8219e3acff925baa04a37b5798786eb5ebec3b30cfb964fa242f8e2e614b208f",
+        "grader_log_sha256": "ae691c773d64928184996a69fcf3fca5f4208a8ec491b0940aa75f1c70ea6e59"
+      },
+      {
+        "id": "new-json-cycle-reuse",
+        "exit_status": "RepeatedFormatError",
+        "grading_returncode": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 3
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 3
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 3
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "05e9b54b8917bb95fface420e43a49cbc219523b119fc229564a7da731aa8a64",
+        "grader_log_sha256": "7e7909fd3c65cf40c859d97316697ec87e7f4efbc0130dec92eb6b796f6a0b89"
+      }
+    ]
+  },
+  "campaign_sha256": {
+    "baseline": "4df1215e83b6f1f64844dcbd879c2a04bb779b371a698fd089aac097b317f40a",
+    "adapted": "5cde8bfd269c079e1682c8731a79b0c3573e2fd4f8cb976563b2c5ed8a68b2de"
+  }
+}

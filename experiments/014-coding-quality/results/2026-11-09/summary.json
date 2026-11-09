@@ -1,0 +1,707 @@
+{
+  "pairs": [
+    {
+      "id": "more-itertools-windowed",
+      "split": "dev",
+      "repository": "more-itertools/more-itertools",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 166.55004572868347,
+      "adapted_seconds": 400.11753511428833,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 1449,
+      "adapted_tokens": 2411,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "more-itertools-spy",
+      "split": "dev",
+      "repository": "more-itertools/more-itertools",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 177.49808263778687,
+      "adapted_seconds": 333.97360944747925,
+      "baseline_calls": 11,
+      "adapted_calls": 11,
+      "baseline_tokens": 954,
+      "adapted_tokens": 1123,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "more-itertools-split_at",
+      "split": "dev",
+      "repository": "more-itertools/more-itertools",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 249.54847645759583,
+      "adapted_seconds": 381.1409823894501,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 1350,
+      "adapted_tokens": 1626,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "more-itertools-consume-and-window",
+      "split": "dev",
+      "repository": "more-itertools/more-itertools",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 171.10298562049866,
+      "adapted_seconds": 73.3833920955658,
+      "baseline_calls": 12,
+      "adapted_calls": 3,
+      "baseline_tokens": 1115,
+      "adapted_tokens": 209,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 2,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "fast-deep-equal-nan",
+      "split": "dev",
+      "repository": "epoberezkin/fast-deep-equal",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 33.38799571990967,
+      "adapted_seconds": 60.453588008880615,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 353,
+      "adapted_tokens": 363,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "fast-deep-equal-array-members",
+      "split": "dev",
+      "repository": "epoberezkin/fast-deep-equal",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 79.27220463752747,
+      "adapted_seconds": 148.83106970787048,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 822,
+      "adapted_tokens": 901,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "fast-deep-equal-map-values",
+      "split": "dev",
+      "repository": "epoberezkin/fast-deep-equal",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 6.197555780410767,
+      "adapted_seconds": 11.404361486434937,
+      "baseline_calls": 3,
+      "adapted_calls": 3,
+      "baseline_tokens": 70,
+      "adapted_tokens": 70,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "fast-deep-equal-regexp-flags",
+      "split": "dev",
+      "repository": "epoberezkin/fast-deep-equal",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 96.42030811309814,
+      "adapted_seconds": 135.11014199256897,
+      "baseline_calls": 12,
+      "adapted_calls": 10,
+      "baseline_tokens": 1063,
+      "adapted_tokens": 846,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "attrs-asdict",
+      "split": "dev",
+      "repository": "python-attrs/attrs",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 99.07370114326477,
+      "adapted_seconds": 137.69540095329285,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 1032,
+      "adapted_tokens": 805,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "attrs-to-bool",
+      "split": "dev",
+      "repository": "python-attrs/attrs",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 72.7246527671814,
+      "adapted_seconds": 102.89834594726562,
+      "baseline_calls": 8,
+      "adapted_calls": 7,
+      "baseline_tokens": 662,
+      "adapted_tokens": 572,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "attrs-optional-validator",
+      "split": "dev",
+      "repository": "python-attrs/attrs",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 65.75574064254761,
+      "adapted_seconds": 84.63308119773865,
+      "baseline_calls": 7,
+      "adapted_calls": 5,
+      "baseline_tokens": 591,
+      "adapted_tokens": 461,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "attrs-filters-and-tuples",
+      "split": "dev",
+      "repository": "python-attrs/attrs",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 94.72910380363464,
+      "adapted_seconds": 144.55512070655823,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 731,
+      "adapted_tokens": 730,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "p-limit-arguments",
+      "split": "dev",
+      "repository": "sindresorhus/p-limit",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 19.084110975265503,
+      "adapted_seconds": 27.30403208732605,
+      "baseline_calls": 3,
+      "adapted_calls": 3,
+      "baseline_tokens": 114,
+      "adapted_tokens": 118,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "p-limit-pending-count",
+      "split": "dev",
+      "repository": "sindresorhus/p-limit",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 84.24994730949402,
+      "adapted_seconds": 116.49119067192078,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 732,
+      "adapted_tokens": 600,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "p-limit-map-index",
+      "split": "dev",
+      "repository": "sindresorhus/p-limit",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 56.602805614471436,
+      "adapted_seconds": 124.90022110939026,
+      "baseline_calls": 7,
+      "adapted_calls": 12,
+      "baseline_tokens": 435,
+      "adapted_tokens": 632,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "new-jmes-filter",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 30.497599124908447,
+      "adapted_seconds": 70.47845506668091,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 269,
+      "adapted_tokens": 393,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 14.76238203048706,
+      "adapted_seconds": 141.7119746208191,
+      "baseline_calls": 3,
+      "adapted_calls": 12,
+      "baseline_tokens": 143,
+      "adapted_tokens": 853,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 9.073047876358032,
+      "adapted_seconds": 24.482591152191162,
+      "baseline_calls": 3,
+      "adapted_calls": 3,
+      "baseline_tokens": 77,
+      "adapted_tokens": 146,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 131.32070231437683,
+      "adapted_seconds": 76.13278317451477,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 1515,
+      "adapted_tokens": 456,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "LimitsExceeded",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 67.24137353897095,
+      "adapted_seconds": 85.38080286979675,
+      "baseline_calls": 11,
+      "adapted_calls": 12,
+      "baseline_tokens": 676,
+      "adapted_tokens": 466,
+      "baseline_exit": "RuntimeError",
+      "adapted_exit": "RuntimeError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "split": "test",
+      "repository": "jmespath/jmespath.py",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 49.08194947242737,
+      "adapted_seconds": 24.928290367126465,
+      "baseline_calls": 12,
+      "adapted_calls": 3,
+      "baseline_tokens": 476,
+      "adapted_tokens": 150,
+      "baseline_exit": "LimitsExceeded",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 124.35241198539734,
+      "adapted_seconds": 197.54984211921692,
+      "baseline_calls": 11,
+      "adapted_calls": 10,
+      "baseline_tokens": 1396,
+      "adapted_tokens": 1266,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "new-json-comparator",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 14.53951644897461,
+      "adapted_seconds": 26.3771915435791,
+      "baseline_calls": 3,
+      "adapted_calls": 3,
+      "baseline_tokens": 176,
+      "adapted_tokens": 176,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 99.70235896110535,
+      "adapted_seconds": 175.03305768966675,
+      "baseline_calls": 12,
+      "adapted_calls": 12,
+      "baseline_tokens": 1125,
+      "adapted_tokens": 1105,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "new-json-to-json",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 38.98486018180847,
+      "adapted_seconds": 73.62962484359741,
+      "baseline_calls": 7,
+      "adapted_calls": 7,
+      "baseline_tokens": 449,
+      "adapted_tokens": 479,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "new-json-nonfinite",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": true,
+      "adapted_passed": true,
+      "baseline_seconds": 38.53924608230591,
+      "adapted_seconds": 95.02451539039612,
+      "baseline_calls": 7,
+      "adapted_calls": 9,
+      "baseline_tokens": 430,
+      "adapted_tokens": 606,
+      "baseline_exit": "Submitted",
+      "adapted_exit": "Submitted",
+      "baseline_changed_files": 1,
+      "adapted_changed_files": 1
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "split": "test",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "baseline_passed": false,
+      "adapted_passed": false,
+      "baseline_seconds": 14.762420654296875,
+      "adapted_seconds": 26.517866134643555,
+      "baseline_calls": 3,
+      "adapted_calls": 3,
+      "baseline_tokens": 179,
+      "adapted_tokens": 179,
+      "baseline_exit": "RepeatedFormatError",
+      "adapted_exit": "RepeatedFormatError",
+      "baseline_changed_files": 0,
+      "adapted_changed_files": 0
+    }
+  ],
+  "splits": {
+    "train": {
+      "pairs": 0,
+      "baseline_passed": 0,
+      "adapted_passed": 0,
+      "improved": [],
+      "regressed": [],
+      "baseline_seconds": 0,
+      "adapted_seconds": 0
+    },
+    "dev": {
+      "pairs": 15,
+      "baseline_passed": 6,
+      "adapted_passed": 6,
+      "improved": [],
+      "regressed": [],
+      "baseline_seconds": 1472.1977169513702,
+      "adapted_seconds": 2282.892072916031
+    },
+    "test": {
+      "pairs": 12,
+      "baseline_passed": 4,
+      "adapted_passed": 4,
+      "improved": [],
+      "regressed": [],
+      "baseline_seconds": 632.8578686714172,
+      "adapted_seconds": 1017.246994972229
+    }
+  },
+  "schema_version": 1,
+  "gate": {
+    "fresh_net_gain": false,
+    "no_fresh_regressions": true,
+    "no_historical_regressions": true,
+    "all_legacy_functions_pass": true,
+    "adapter_reload_exact": true
+  },
+  "advance_to_replication": false,
+  "daily_model_accepted": false,
+  "per_repository": {
+    "epoberezkin/fast-deep-equal": {
+      "pairs": 4,
+      "role": "historical_regression",
+      "base_passed": 1,
+      "adapted_passed": 1,
+      "improved": [],
+      "regressed": []
+    },
+    "epoberezkin/fast-json-stable-stringify": {
+      "pairs": 6,
+      "role": "fresh_holdout",
+      "base_passed": 4,
+      "adapted_passed": 4,
+      "improved": [],
+      "regressed": []
+    },
+    "jmespath/jmespath.py": {
+      "pairs": 6,
+      "role": "fresh_holdout",
+      "base_passed": 0,
+      "adapted_passed": 0,
+      "improved": [],
+      "regressed": []
+    },
+    "more-itertools/more-itertools": {
+      "pairs": 4,
+      "role": "historical_regression",
+      "base_passed": 1,
+      "adapted_passed": 1,
+      "improved": [],
+      "regressed": []
+    },
+    "python-attrs/attrs": {
+      "pairs": 4,
+      "role": "historical_regression",
+      "base_passed": 2,
+      "adapted_passed": 2,
+      "improved": [],
+      "regressed": []
+    },
+    "sindresorhus/p-limit": {
+      "pairs": 3,
+      "role": "historical_regression",
+      "base_passed": 2,
+      "adapted_passed": 2,
+      "improved": [],
+      "regressed": []
+    }
+  },
+  "legacy": {
+    "base_passed": 9,
+    "adapted_passed": 9,
+    "tasks": 9
+  },
+  "inference_exit_counts": {
+    "base": {
+      "LimitsExceeded": 10,
+      "Submitted": 10,
+      "RepeatedFormatError": 6,
+      "RuntimeError": 1
+    },
+    "adapted": {
+      "RepeatedFormatError": 8,
+      "Submitted": 10,
+      "LimitsExceeded": 8,
+      "RuntimeError": 1
+    }
+  },
+  "grading_exit_categories": {
+    "base": {
+      "nonzero_regression_exit": 17
+    },
+    "adapted": {
+      "nonzero_regression_exit": 17
+    }
+  },
+  "failure_audit": {
+    "baseline": {
+      "failed_tasks": 17,
+      "format_error_exits": 6,
+      "no_source_change": 13,
+      "runtime_categories": {
+        "context_limit": 1
+      }
+    },
+    "adapted": {
+      "failed_tasks": 17,
+      "format_error_exits": 8,
+      "no_source_change": 14,
+      "runtime_categories": {
+        "context_limit": 1
+      }
+    }
+  },
+  "time": {
+    "started_utc": "2026-11-09T15:11:03.253713+00:00",
+    "finished_utc": "2026-11-09T16:54:36.833933+00:00",
+    "pipeline_seconds": 6213.5801956653595,
+    "training_update_seconds": 183.49323617492337,
+    "stages": [
+      {
+        "name": "doctor",
+        "seconds": 70.47117110999534
+      },
+      {
+        "name": "loaded-controls",
+        "seconds": 59.69366651400924
+      },
+      {
+        "name": "baseline",
+        "seconds": 2112.2461851910048
+      },
+      {
+        "name": "legacy-baseline",
+        "seconds": 110.20269485298195
+      },
+      {
+        "name": "training",
+        "seconds": 290.340761836007
+      },
+      {
+        "name": "adapted",
+        "seconds": 3307.230953031016
+      },
+      {
+        "name": "legacy-adapted",
+        "seconds": 194.8328997839999
+      }
+    ]
+  },
+  "coverage": {
+    "input_records": 145,
+    "eligible_records": 122,
+    "selected_records": 96,
+    "required_tasks": 21,
+    "covered_tasks": 21,
+    "kinds": {
+      "verified-reference-repair": 7,
+      "verified-local-base-trajectory": 89
+    },
+    "input_tokens": 163515,
+    "supervised_tokens": 7665
+  },
+  "hardware": {
+    "samples": 1232,
+    "errors": 0,
+    "interval_seconds": 5,
+    "first_utc": "2026-11-09T15:11:03.316405+00:00",
+    "last_utc": "2026-11-09T16:54:31.875316+00:00",
+    "max_sampling_gap_seconds": 5.2289369106292725,
+    "sampled_span_seconds": 6208.55891084671,
+    "sampled_span_fraction": 0.9991918854089705,
+    "temperature_c": {
+      "min": 18.0,
+      "median": 40.0,
+      "mean": 40.09334415584416,
+      "max": 68.0
+    },
+    "power_w": {
+      "min": 13.23,
+      "median": 190.585,
+      "mean": 207.98074675324676,
+      "max": 556.28
+    },
+    "utilization_percent": {
+      "min": 0.0,
+      "median": 33.0,
+      "mean": 34.84983766233766,
+      "max": 100.0
+    },
+    "memory_used_mib": {
+      "min": 219.0,
+      "median": 60915.0,
+      "mean": 59436.71428571428,
+      "max": 86353.0
+    },
+    "sampled_gpu_energy_kwh": 0.35878457904155575,
+    "training_sampler": {
+      "samples": 48,
+      "max_temperature_c": 69.0
+    }
+  },
+  "evaluation_cost": {
+    "base": {
+      "tasks": 27,
+      "controller_seconds": 2105.0555856227875,
+      "model_calls": 243,
+      "successful_generation_seconds": 1607.5431678748573,
+      "generated_tokens": 18384,
+      "generated_tokens_per_second": 11.436084807789834,
+      "tool_seconds": 250.88783937887638,
+      "peak_generation_allocated_bytes": 57065089536
+    },
+    "adapted": {
+      "tasks": 27,
+      "controller_seconds": 3300.13906788826,
+      "model_calls": 236,
+      "successful_generation_seconds": 2782.0131123496976,
+      "generated_tokens": 17742,
+      "generated_tokens_per_second": 6.3773962535406765,
+      "tool_seconds": 272.0352950882225,
+      "peak_generation_allocated_bytes": 57802027008
+    }
+  }
+}

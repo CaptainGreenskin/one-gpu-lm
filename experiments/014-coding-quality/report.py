@@ -8,6 +8,7 @@ import hashlib
 import random
 from pathlib import Path
 import statistics
+import platform
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 from one_gpu_lm.common.receipts import sha256, write_json
@@ -21,6 +22,9 @@ def assess(base,adapted,protocol,legacy_base,legacy_adapted,training):
     ids=[r['id'] for r in legacy_base['results']]
     if not ids or len(ids)!=len(set(ids)) or ids!=[r['id'] for r in legacy_adapted['results']]:
         raise ValueError('Legacy result membership changed')
+    for expected,legacy in [(False,legacy_base),(True,legacy_adapted)]:
+        if any(r.get('adapter') is not expected for r in legacy['results']):
+            raise ValueError('Legacy regression came from the wrong model variant')
     if training['status']!='completed' or training['steps']!=protocol['execution']['max_optimizer_updates']:
         raise ValueError('Training did not finish the frozen budget')
     gate=protocol['promotion'];fresh=summary['splits']['test'];historical=summary['splits']['dev']
@@ -39,7 +43,8 @@ def assess(base,adapted,protocol,legacy_base,legacy_adapted,training):
     summary.update(schema_version=1,gate=checks,advance_to_replication=all(checks.values()),daily_model_accepted=False,
         per_repository=per_repo,legacy={'base_passed':sum(r['passed'] for r in legacy_base['results']),
             'adapted_passed':sum(r['passed'] for r in legacy_adapted['results']),'tasks':len(ids)},
-        failures={name:dict(Counter(r['exit_status'] for r in value['results'])) for name,value in [('base',base),('adapted',adapted)]})
+        inference_exit_counts={name:dict(Counter(r['exit_status'] for r in value['results'])) for name,value in [('base',base),('adapted',adapted)]},
+        grading_exit_categories={name:dict(Counter('nonzero_regression_exit' if r.get('reason') in {'ok','runtime_error'} and r.get('returncode',0)!=0 else r.get('reason','unspecified') for r in value['results'] if not r['passed'])) for name,value in [('base',base),('adapted',adapted)]})
     return summary
 
 
@@ -75,11 +80,28 @@ def render(root):
         if any(read('loading-'+variant+'.json').get(k) for k in ['missing_keys','unexpected_keys','mismatched_keys','error_msgs']):
             raise ValueError('Model loading had key mismatch')
     summary=assess(base,adapted,protocol,read('legacy-baseline.json'),read('legacy-adapted.json'),training)
+    failure_audit=read('failure-audit.json')
+    if failure_audit['parser_sha256']!=base['identity']['source_files']['one_gpu_lm/common/actions.py']:
+        raise ValueError('Failure audit did not use the frozen parser')
+    failure_summary={}
+    for name,value in [('baseline',base),('adapted',adapted)]:
+        if failure_audit['campaign_sha256'][name]!=sha256(root/(name+'.json')):
+            raise ValueError('Failure audit belongs to a different campaign')
+        rows=failure_audit['variants'][name]
+        if [r['id'] for r in rows]!=[r['id'] for r in value['results'] if not r['passed']]:
+            raise ValueError('Failure audit omitted or added failed tasks')
+        failure_summary[name]={'failed_tasks':len(rows),
+            'format_error_exits':sum(r['exit_status']=='RepeatedFormatError' for r in rows),
+            'no_source_change':sum(r['modified_source_files']==0 for r in rows),
+            'runtime_categories':dict(Counter(c for r in rows for c in r['runtime_categories']))}
+    summary['failure_audit']=failure_summary
     telemetry=list(csv.DictReader((root/'telemetry.csv').open()))
     epochs=[datetime.fromisoformat(r['utc']).timestamp() for r in telemetry]
     hw={'samples':len(telemetry),'errors':controller['telemetry']['errors'],'interval_seconds':5,
         'first_utc':telemetry[0]['utc'],'last_utc':telemetry[-1]['utc'],
         'max_sampling_gap_seconds':max(b-a for a,b in zip(epochs,epochs[1:])) if len(epochs)>1 else None}
+    hw['sampled_span_seconds']=epochs[-1]-epochs[0]
+    hw['sampled_span_fraction']=hw['sampled_span_seconds']/(controller['finished_epoch']-controller['started_epoch'])
     for column in ['temperature_c','power_w','utilization_percent','memory_used_mib']:
         values=[float(r[column]) for r in telemetry]
         hw[column]={'min':min(values),'median':statistics.median(values),'mean':statistics.mean(values),'max':max(values)}
@@ -89,6 +111,8 @@ def render(root):
         'pipeline_seconds':controller['finished_epoch']-controller['started_epoch'],
         'training_update_seconds':training['training_update_seconds'],'stages':controller['stages']}
     summary['coverage']={k:selection[k] for k in ['input_records','eligible_records','selected_records','required_tasks','covered_tasks','kinds','input_tokens','supervised_tokens']}
+    training_samples=list(csv.DictReader((root/'training/telemetry.csv').open()))
+    hw['training_sampler']={'samples':len(training_samples),'max_temperature_c':max(float(r['temperature_c']) for r in training_samples)}
     summary['hardware']=hw
     costs={}
     for name,value in [('base',base),('adapted',adapted)]:
@@ -117,6 +141,14 @@ Legacy function regression: {summary['legacy']['base_passed']}/9 → {summary['l
 
 These are constructed defects in pinned real OSS repositories, not historical issues or SWE-bench scores. The two fresh repositories did not enter posttraining; base pretraining exposure is unknown. Tests are visible. The grader checks allowed source changes against a fresh snapshot; no additional hidden test suite is claimed. The 15 previously observed dev/test tasks are explicitly historical regression, not fresh evidence. One seed and two small repository clusters cannot establish broad coding or long-task quality.
 
+## Failure analysis
+
+New-repository breakdown: JMESPath {summary['per_repository']['jmespath/jmespath.py']['base_passed']}/6 → {summary['per_repository']['jmespath/jmespath.py']['adapted_passed']}/6; stable JSON serialization {summary['per_repository']['epoberezkin/fast-json-stable-stringify']['base_passed']}/6 → {summary['per_repository']['epoberezkin/fast-json-stable-stringify']['adapted_passed']}/6.
+
+The base / candidate had {failure_summary['baseline']['format_error_exits']} / {failure_summary['adapted']['format_error_exits']} `RepeatedFormatError` exits and {failure_summary['baseline']['runtime_categories'].get('context_limit',0)} / {failure_summary['adapted']['runtime_categories'].get('context_limit',0)} context-limit exits. Rejected outputs include missing command-parameter wrappers and unclosed tool-call markup; these are structural observations, not counterfactual successful repairs. The base / candidate had {failure_summary['baseline']['failed_tasks']} / {failure_summary['adapted']['failed_tasks']} nonzero final regression commands. The sandbox's raw `runtime_error` label includes ordinary nonzero test exits; it is not a count of GPU or controller crashes.
+
+The [post-run audit](failure-audit.json) uses the frozen parser and exports categories and hashes only. It does not execute rejected commands, relax the parser, rerun tasks, or change scores. Interface/format and context failures limit what this screen says about latent coding ability. A future isolated interface/context experiment is a hypothesis, not evidence that those changes will solve the failed tasks. These now-observed holdout tasks must become historical regression for any further tuning.
+
 ## Training coverage and cost
 
 The same 145 licensed source records were audited. Exactly {selection['selected_records']} records cover {selection['covered_tasks']}/{selection['required_tasks']} training tasks, including {selection['kinds'].get('verified-reference-repair',0)} verified reference repairs. Selection filters oversized actions and samples the full trajectories within task-balanced quotas. Task coverage alone does not mean every record is a patch; successful inspection/test actions remain in the dataset. No evaluation trace was added to training.
@@ -129,26 +161,27 @@ Loss is on different single examples at each step in one pass; it is not a heldo
 
 ## Evaluation cost
 
-Repository campaigns use the same greedy decoding, unmerged adapter serving path and per-task budgets. Base / candidate generated {costs['base']['generated_tokens']:,} / {costs['adapted']['generated_tokens']:,} tokens in {costs['base']['successful_generation_seconds']:.1f} / {costs['adapted']['successful_generation_seconds']:.1f} successful generation seconds, with {costs['base']['model_calls']} / {costs['adapted']['model_calls']} calls. These are sequential task measurements, not a production serving throughput benchmark. Tool time and full controller durations are separately retained in the summary; failed-request waits are not represented as successful generation time.
+Both campaigns use the same greedy decoding and per-task budgets. The candidate serves an unmerged LoRA adapter; its timing includes that overhead. Base / candidate generated {costs['base']['generated_tokens']:,} / {costs['adapted']['generated_tokens']:,} tokens in {costs['base']['successful_generation_seconds']:.1f} / {costs['adapted']['successful_generation_seconds']:.1f} successful generation seconds, with {costs['base']['model_calls']} / {costs['adapted']['model_calls']} calls. These are sequential task measurements, not a production serving throughput benchmark. Tool time and full controller durations are separately retained in the summary; failed-request waits are not represented as successful generation time.
 
 ## Hardware and completion
 
-Actual UTC: {controller['started_utc']} to {controller['finished_utc']}. {len(telemetry)} GPU samples, {hw['errors']} collection errors; peak {hw['temperature_c']['max']:.0f} °C and {hw['power_w']['max']:.1f} W. The timestamped record includes evaluation and loading as well as training. Sampled GPU energy estimate {hw['sampled_gpu_energy_kwh']:.3f} kWh excludes CPU, system power and unobserved intervals. [telemetry.csv](telemetry.csv) and per-stage durations retain the measurement scope.
+Actual UTC: {controller['started_utc']} to {controller['finished_utc']}. {len(telemetry)} GPU samples, {hw['errors']} collection errors, maximum sampling gap {hw['max_sampling_gap_seconds']:.2f} seconds; sampled peak {hw['temperature_c']['max']:.0f} °C and {hw['power_w']['max']:.1f} W. The separate training sampler recorded {hw['training_sampler']['samples']} samples and a {hw['training_sampler']['max_temperature_c']:.0f} °C maximum. The timestamped campaign record includes evaluation and loading as well as training. Five-second sampling can miss transient memory or power peaks; allocator peaks are reported separately. Sampled GPU energy estimate {hw['sampled_gpu_energy_kwh']:.3f} kWh linearly interpolates between recorded samples; it excludes CPU/system power and time outside the sampled span. [telemetry.csv](telemetry.csv) and per-stage durations retain the measurement scope.
 
 Raw tasks, answers, trajectories, source snapshots, host information and weights stay private. Public artifacts contain code, frozen configuration, provenance IDs/hashes and numeric evidence. MIT applies to original project code; upstream licenses remain separate. No ModelScope weight release or daily-use quality certification is implied.
 ''')
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False})
+    plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.hashsalt':'one-gpu-lm-014'})
+    write_json(root/'report-environment.json',{'python':platform.python_version(),'matplotlib':matplotlib.__version__,'backend':'Agg','report_sha256':sha256(Path(__file__))})
     fig,ax=plt.subplots(figsize=(8,4));labels=['Fresh holdout','Historical regression','Legacy functions'];groups=[summary['splits']['test'],summary['splits']['dev'],{'pairs':9,'baseline_passed':summary['legacy']['base_passed'],'adapted_passed':summary['legacy']['adapted_passed']}]
     for offset,key,label,color in [(-.18,'baseline_passed','Base','#65758b'),(.18,'adapted_passed','LoRA','#197d83')]:
         bars=ax.bar([i+offset for i in range(3)],[v[key]/v['pairs']*100 for v in groups],width=.35,label=label,color=color)
         for bar,v in zip(bars,groups):ax.text(bar.get_x()+bar.get_width()/2,bar.get_height()+1,f"{v[key]}/{v['pairs']}",ha='center',fontsize=9)
-    ax.set(xticks=range(3),xticklabels=labels,ylabel='Tasks passed (%)',ylim=(0,112),title='One frozen candidate · constructed repository defects');ax.legend();fig.tight_layout();fig.savefig(root/'comparison.png',dpi=170);plt.close(fig)
+    ax.set(xticks=range(3),xticklabels=labels,ylabel='Tasks passed (%)',ylim=(0,112),title='One frozen candidate · paired coding screen');ax.legend();fig.tight_layout();fig.savefig(root/'comparison.png',dpi=170);fig.savefig(root/'comparison.svg',metadata={'Date':None});plt.close(fig)
     metrics=read('training/metrics.json');fig,axes=plt.subplots(1,2,figsize=(10,3.7));steps=[r['step'] for r in metrics]
     axes[0].plot(steps,[r['loss'] for r in metrics],color='#197d83',linewidth=1);axes[0].set(xlabel='Optimizer update',ylabel='Assistant-only cross entropy',title='Different example at each update')
-    axes[1].plot(steps,[r['seconds'] for r in metrics],color='#65758b',linewidth=1);axes[1].set(xlabel='Optimizer update',ylabel='Seconds',title='Update time (excludes checkpoint writes)');fig.tight_layout();fig.savefig(root/'training.png',dpi=170);plt.close(fig)
+    axes[1].plot(steps,[r['seconds'] for r in metrics],color='#65758b',linewidth=1);axes[1].set(xlabel='Optimizer update',ylabel='Seconds',title='Update time (excludes checkpoint writes)');fig.tight_layout();fig.savefig(root/'training.png',dpi=170);fig.savefig(root/'training.svg',metadata={'Date':None});plt.close(fig)
     return summary
 
 

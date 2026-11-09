@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-09T15:11:03.253713+00:00",
+  "started_epoch": 1794237063.2537453,
+  "complete": true,
+  "protocol_sha256": "2ae9016c4b5490d111a6231efda39d2afa16975543ca846ebe9de8e23520da2c",
+  "stages": [
+    {
+      "name": "doctor",
+      "seconds": 70.47117110999534
+    },
+    {
+      "name": "loaded-controls",
+      "seconds": 59.69366651400924
+    },
+    {
+      "name": "baseline",
+      "seconds": 2112.2461851910048
+    },
+    {
+      "name": "legacy-baseline",
+      "seconds": 110.20269485298195
+    },
+    {
+      "name": "training",
+      "seconds": 290.340761836007
+    },
+    {
+      "name": "adapted",
+      "seconds": 3307.230953031016
+    },
+    {
+      "name": "legacy-adapted",
+      "seconds": 194.8328997839999
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-09T16:54:36.833942+00:00",
+  "finished_utc": "2026-11-09T16:54:36.833933+00:00",
+  "finished_epoch": 1794243276.833941,
+  "telemetry": {
+    "samples": 1232,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

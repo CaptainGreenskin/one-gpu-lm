@@ -1,0 +1,2620 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-09T15:56:14.332344+00:00",
+  "identity": {
+    "tasks_sha256": "94a47cfda2e7552bd6eb1fa38479368dfc813eb5160ccae03448150c8dbbd980",
+    "admission_sha256": "88bb7ca221215c87c13c55b93fecbdd30ed9462b7cbd62d14cada860a7e1fdf2",
+    "protocol_sha256": "2ae9016c4b5490d111a6231efda39d2afa16975543ca846ebe9de8e23520da2c",
+    "ids": [
+      "more-itertools-windowed",
+      "more-itertools-spy",
+      "more-itertools-split_at",
+      "more-itertools-consume-and-window",
+      "fast-deep-equal-nan",
+      "fast-deep-equal-array-members",
+      "fast-deep-equal-map-values",
+      "fast-deep-equal-regexp-flags",
+      "attrs-asdict",
+      "attrs-to-bool",
+      "attrs-optional-validator",
+      "attrs-filters-and-tuples",
+      "p-limit-arguments",
+      "p-limit-pending-count",
+      "p-limit-map-index",
+      "new-jmes-filter",
+      "new-jmes-multiselect",
+      "new-jmes-sort-expression",
+      "new-jmes-raw-string",
+      "new-jmes-index-slice",
+      "new-jmes-pipe-map",
+      "new-json-key-order",
+      "new-json-comparator",
+      "new-json-undefined",
+      "new-json-to-json",
+      "new-json-nonfinite",
+      "new-json-cycle-reuse"
+    ],
+    "source_files": {
+      "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+      "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+      "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+      "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+      "one_gpu_lm/common/source.py": "eb341bf2ec0f3f1bde14ce0615b8776a317747d1a758c4a5082519b88e137e1c",
+      "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+      "one_gpu_lm/evaluation/agent.py": "61df4179446585a3a2e0bfab509a5cbaba49e4b403c252a93b2e12c382d99181",
+      "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+      "one_gpu_lm/evaluation/campaign.py": "a0d78b30ef2e15c4fb3c6c27f6923e4cfdd41977325d347bcb387a3f626f4e9d",
+      "one_gpu_lm/evaluation/environment.py": "938bcac1e9696c8920b758c6f943f843e2b901682ac777a608a202ef32d5791f",
+      "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+      "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+      "one_gpu_lm/evaluation/tasks.py": "004b93e0f14235a1e0992ba7f0d3ed0eb682ca0d5173fe092773afced04a0b1d",
+      "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+      "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+      "one_gpu_lm/models/hf_runtime.py": "0ca079b9e721c9e8cbd9b3f194bbd5ae5e68a55570cd479f43a70572bd8a1b8f",
+      "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+      "one_gpu_lm/serving/client.py": "097d04c4bc4c4e774f6f0b963e84a7eb9c2587228474726c3dbafbd93a2ce265",
+      "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "id": "more-itertools-windowed",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-windowed",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 400.11753511428833,
+      "modified_source_files": [
+        "more_itertools/more.py"
+      ],
+      "source_sha256": {
+        "more_itertools/more.py": "5a4d13e6fd0200a4a88739d3f857b982337050304131eb08e010a8c80d69796b"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 2411,
+      "tool_calls": 8,
+      "tool_seconds": 0.3436471570166759,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 252,
+          "generated_tokens": 61,
+          "seconds": 10.590906744007953,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55226168832,
+          "adapter": true
+        },
+        {
+          "input_tokens": 365,
+          "generated_tokens": 50,
+          "seconds": 7.554947826982243,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55263745024,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1268,
+          "generated_tokens": 57,
+          "seconds": 8.652342196990503,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55572852224,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1681,
+          "generated_tokens": 46,
+          "seconds": 7.145973008009605,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55712680960,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2629,
+          "generated_tokens": 76,
+          "seconds": 11.800572352018207,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56024381440,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2733,
+          "generated_tokens": 54,
+          "seconds": 8.562475049984641,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56057627136,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3090,
+          "generated_tokens": 46,
+          "seconds": 7.523783553013345,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56178667520,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3231,
+          "generated_tokens": 424,
+          "seconds": 63.23784227698343,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56226213888,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3675,
+          "generated_tokens": 61,
+          "seconds": 9.893731071002549,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56379905536,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4053,
+          "generated_tokens": 512,
+          "seconds": 76.7698021499964,
+          "hit_generation_limit": true,
+          "peak_allocated_bytes": 56503643648,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4594,
+          "generated_tokens": 512,
+          "seconds": 76.78016436900361,
+          "hit_generation_limit": true,
+          "peak_allocated_bytes": 56683312640,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5135,
+          "generated_tokens": 512,
+          "seconds": 77.60101797399693,
+          "hit_generation_limit": true,
+          "peak_allocated_bytes": 56864832000,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "more-itertools-spy",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-spy",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 333.97360944747925,
+      "modified_source_files": [
+        "more_itertools/more.py"
+      ],
+      "source_sha256": {
+        "more_itertools/more.py": "040d75e86ccb3a1201a64f5065836656511f338a9768ffb807debabe25916d52"
+      },
+      "ignored_new_files": [],
+      "calls": 11,
+      "generated_tokens": 1123,
+      "tool_calls": 11,
+      "tool_seconds": 130.10915681810002,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 251,
+          "generated_tokens": 59,
+          "seconds": 8.778477235988248,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230098944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 342,
+          "generated_tokens": 50,
+          "seconds": 7.420841120998375,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55258077696,
+          "adapter": true
+        },
+        {
+          "input_tokens": 981,
+          "generated_tokens": 54,
+          "seconds": 8.05722147799679,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55477261824,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1180,
+          "generated_tokens": 48,
+          "seconds": 7.253522303013597,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55538484224,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1676,
+          "generated_tokens": 171,
+          "seconds": 25.637067360978108,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55712227840,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1867,
+          "generated_tokens": 98,
+          "seconds": 14.825268486019922,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55787459584,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2240,
+          "generated_tokens": 186,
+          "seconds": 28.11158839397831,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55893535744,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2509,
+          "generated_tokens": 70,
+          "seconds": 11.036635391996242,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55986258944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2722,
+          "generated_tokens": 197,
+          "seconds": 30.2104686590028,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56052305408,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2986,
+          "generated_tokens": 62,
+          "seconds": 9.808124322997173,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56146415104,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3099,
+          "generated_tokens": 128,
+          "seconds": 19.572619799000677,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56179759104,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "more-itertools-split_at",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-split_at",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 381.1409823894501,
+      "modified_source_files": [
+        "more_itertools/more.py"
+      ],
+      "source_sha256": {
+        "more_itertools/more.py": "f876ce7177ff7136856b1d7793071be4a8384a6acf454d27c02fd22f27f3fc01"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1626,
+      "tool_calls": 12,
+      "tool_seconds": 98.15552402997855,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 252,
+          "generated_tokens": 59,
+          "seconds": 8.777779586991528,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230174720,
+          "adapter": true
+        },
+        {
+          "input_tokens": 351,
+          "generated_tokens": 50,
+          "seconds": 7.43796479399316,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55263707648,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1073,
+          "generated_tokens": 57,
+          "seconds": 8.519799658999545,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55504106496,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1237,
+          "generated_tokens": 48,
+          "seconds": 7.2814183899899945,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55562083840,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1916,
+          "generated_tokens": 262,
+          "seconds": 39.07872259998112,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55804621312,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2198,
+          "generated_tokens": 61,
+          "seconds": 9.467319180985214,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55880265728,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2460,
+          "generated_tokens": 64,
+          "seconds": 9.969068043021252,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55968594944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2749,
+          "generated_tokens": 366,
+          "seconds": 54.586941178975394,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56061768704,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3135,
+          "generated_tokens": 64,
+          "seconds": 10.141008481994504,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56191938560,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3451,
+          "generated_tokens": 362,
+          "seconds": 55.71047651901608,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56305664512,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3833,
+          "generated_tokens": 64,
+          "seconds": 10.962006363988621,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56428363264,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4070,
+          "generated_tokens": 169,
+          "seconds": 27.312231156014604,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56506415104,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "more-itertools-consume-and-window",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-recipes-integration",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 73.3833920955658,
+      "modified_source_files": [],
+      "source_sha256": {
+        "more_itertools/more.py": "890b4766d94c9d10465bf31e4a3d9253b47ec4d752f15d69bd75bde021e6cdf9",
+        "more_itertools/recipes.py": "f3bfde732461e2f4d85f0f93df49fbca0f713231b3931b1e52fb54f32b69e4df"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 209,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 263,
+          "generated_tokens": 75,
+          "seconds": 11.28952260199003,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55227841024,
+          "adapter": true
+        },
+        {
+          "input_tokens": 366,
+          "generated_tokens": 59,
+          "seconds": 8.841585098998621,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55264764928,
+          "adapter": true
+        },
+        {
+          "input_tokens": 453,
+          "generated_tokens": 75,
+          "seconds": 11.33638066900312,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55292595200,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fast-deep-equal-nan",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:nan-equality",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 180,
+      "seconds": 60.453588008880615,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/index.jst": "707e8e4bf749845bf62d935da8618595a05f28c6e8b689d3fb430da461a9a42c"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 363,
+      "tool_calls": 6,
+      "tool_seconds": 0.21428156903130002,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 256,
+          "generated_tokens": 16,
+          "seconds": 2.532268583017867,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55225235968,
+          "adapter": true
+        },
+        {
+          "input_tokens": 299,
+          "generated_tokens": 17,
+          "seconds": 2.640668089996325,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55257059840,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1575,
+          "generated_tokens": 42,
+          "seconds": 6.568237414991017,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55669710336,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1645,
+          "generated_tokens": 13,
+          "seconds": 2.2239458929980174,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55699690496,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2346,
+          "generated_tokens": 59,
+          "seconds": 9.37088600100833,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55927300608,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2433,
+          "generated_tokens": 35,
+          "seconds": 5.7741295080049895,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55961625088,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2486,
+          "generated_tokens": 35,
+          "seconds": 5.772830736008473,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55976082432,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2549,
+          "generated_tokens": 18,
+          "seconds": 3.2130982050148305,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55998239232,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2585,
+          "generated_tokens": 45,
+          "seconds": 7.2786387449887116,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56007649280,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2658,
+          "generated_tokens": 26,
+          "seconds": 4.35978021597839,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56030638080,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2936,
+          "generated_tokens": 33,
+          "seconds": 5.539217804005602,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56132664832,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2997,
+          "generated_tokens": 24,
+          "seconds": 4.2805427980201785,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56149722112,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fast-deep-equal-array-members",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:array-equality",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 60,
+      "seconds": 148.83106970787048,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/index.jst": "d803513b7bb6629556d47ad8160ea529f0856fd9e2b64da8e62c15b77a121b51"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 901,
+      "tool_calls": 12,
+      "tool_seconds": 1.4704857640026603,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 251,
+          "generated_tokens": 86,
+          "seconds": 12.956215890997555,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230098944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1738,
+          "generated_tokens": 74,
+          "seconds": 11.321375493978849,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55732797440,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2695,
+          "generated_tokens": 56,
+          "seconds": 8.886401566996938,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56043120128,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2914,
+          "generated_tokens": 71,
+          "seconds": 11.198507749009877,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56125929472,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3640,
+          "generated_tokens": 72,
+          "seconds": 11.684497067006305,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56367716352,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3880,
+          "generated_tokens": 45,
+          "seconds": 7.678462784999283,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56441060864,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4593,
+          "generated_tokens": 84,
+          "seconds": 13.671598504006397,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56683154944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4944,
+          "generated_tokens": 77,
+          "seconds": 12.938669298979221,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56804421632,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5057,
+          "generated_tokens": 67,
+          "seconds": 11.261068856983911,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56845408256,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5847,
+          "generated_tokens": 113,
+          "seconds": 18.34630052698776,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57109673472,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6247,
+          "generated_tokens": 59,
+          "seconds": 10.445918710989645,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57238772736,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6857,
+          "generated_tokens": 97,
+          "seconds": 16.39971760098706,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57448331264,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fast-deep-equal-map-values",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:map-equality",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 16,
+      "seconds": 11.404361486434937,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/index.jst": "6ebf827de69ae9573df1bbd8bab7ebb3699de68f550a274358e1309486b63637"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 70,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 255,
+          "generated_tokens": 16,
+          "seconds": 2.5747897929977626,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230403072,
+          "adapter": true
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 30,
+          "seconds": 4.6442851629981305,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55253381632,
+          "adapter": true
+        },
+        {
+          "input_tokens": 356,
+          "generated_tokens": 24,
+          "seconds": 3.8222913540084846,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55264966656,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fast-deep-equal-regexp-flags",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:regexp-equality",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 135.11014199256897,
+      "modified_source_files": [
+        "src/index.jst"
+      ],
+      "source_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 846,
+      "tool_calls": 10,
+      "tool_seconds": 0.6653424079995602,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 257,
+          "generated_tokens": 86,
+          "seconds": 12.890700977004599,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55225112064,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1744,
+          "generated_tokens": 76,
+          "seconds": 11.651846580993151,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55737512960,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2690,
+          "generated_tokens": 55,
+          "seconds": 8.729314694995992,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56041490944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3022,
+          "generated_tokens": 81,
+          "seconds": 12.733001320011681,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56156359680,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3253,
+          "generated_tokens": 45,
+          "seconds": 7.420890523004346,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56236628992,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3555,
+          "generated_tokens": 93,
+          "seconds": 14.637086906994227,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56343512064,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4191,
+          "generated_tokens": 117,
+          "seconds": 18.444306985998992,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56548483584,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4348,
+          "generated_tokens": 62,
+          "seconds": 10.309681934013497,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56601478656,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5096,
+          "generated_tokens": 67,
+          "seconds": 11.2895224840031,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56854792192,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5297,
+          "generated_tokens": 164,
+          "seconds": 25.830210120009724,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56919601152,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "attrs-asdict",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-serialization",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 137.69540095329285,
+      "modified_source_files": [
+        "src/attr/_funcs.py"
+      ],
+      "source_sha256": {
+        "src/attr/_funcs.py": "bf2579acb140aa0f3455d11ce85d86bb057fbd81b6c2ca14e8de0b85e750ce25"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 805,
+      "tool_calls": 12,
+      "tool_seconds": 0.4941846230358351,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 260,
+          "generated_tokens": 49,
+          "seconds": 7.280423274001805,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55226795520,
+          "adapter": true
+        },
+        {
+          "input_tokens": 892,
+          "generated_tokens": 58,
+          "seconds": 8.744720057991799,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55441973760,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1509,
+          "generated_tokens": 59,
+          "seconds": 9.279870486003347,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55646726144,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2131,
+          "generated_tokens": 53,
+          "seconds": 8.425690768985078,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55857581568,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2904,
+          "generated_tokens": 39,
+          "seconds": 6.354808364005294,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56123185664,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3544,
+          "generated_tokens": 31,
+          "seconds": 5.382780991989421,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56336877056,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3593,
+          "generated_tokens": 86,
+          "seconds": 13.663543709000805,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56354514432,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3807,
+          "generated_tokens": 44,
+          "seconds": 7.4201165289850906,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56419182080,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4183,
+          "generated_tokens": 48,
+          "seconds": 8.218211618019268,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56546073088,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4564,
+          "generated_tokens": 59,
+          "seconds": 9.87680320101208,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56672444928,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5171,
+          "generated_tokens": 242,
+          "seconds": 37.09753086400451,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56877632512,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5433,
+          "generated_tokens": 37,
+          "seconds": 6.868315161991632,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56963920896,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "attrs-to-bool",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-converters",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 102.89834594726562,
+      "modified_source_files": [
+        "src/attr/converters.py"
+      ],
+      "source_sha256": {
+        "src/attr/converters.py": "7cef14ae16b479259f3a4fd2736058dd06fc49364037168c13a20d4951f6e1b4"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 572,
+      "tool_calls": 7,
+      "tool_seconds": 8.24617596596363,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 261,
+          "generated_tokens": 63,
+          "seconds": 9.337118731986266,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55226167808,
+          "adapter": true
+        },
+        {
+          "input_tokens": 815,
+          "generated_tokens": 48,
+          "seconds": 7.117682037991472,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55425244672,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1342,
+          "generated_tokens": 62,
+          "seconds": 9.345029163989238,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55589873664,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1671,
+          "generated_tokens": 47,
+          "seconds": 7.2602798769949,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55709400576,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1900,
+          "generated_tokens": 222,
+          "seconds": 33.16226930098492,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55799214080,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2142,
+          "generated_tokens": 64,
+          "seconds": 9.889311823004391,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55861647872,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2281,
+          "generated_tokens": 66,
+          "seconds": 10.159637013013707,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55905467392,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "attrs-optional-validator",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-validators",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 84.63308119773865,
+      "modified_source_files": [
+        "src/attr/validators.py"
+      ],
+      "source_sha256": {
+        "src/attr/validators.py": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5"
+      },
+      "ignored_new_files": [],
+      "calls": 5,
+      "generated_tokens": 461,
+      "tool_calls": 5,
+      "tool_seconds": 8.173880614020163,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 267,
+          "generated_tokens": 54,
+          "seconds": 8.011648157000309,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55229216256,
+          "adapter": true
+        },
+        {
+          "input_tokens": 377,
+          "generated_tokens": 44,
+          "seconds": 6.538383715989767,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55268157952,
+          "adapter": true
+        },
+        {
+          "input_tokens": 752,
+          "generated_tokens": 211,
+          "seconds": 31.081701558985515,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55395129344,
+          "adapter": true
+        },
+        {
+          "input_tokens": 983,
+          "generated_tokens": 82,
+          "seconds": 12.15167023401591,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55476766208,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1140,
+          "generated_tokens": 70,
+          "seconds": 10.482544183993014,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55527027200,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "attrs-filters-and-tuples",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-filters-serialization",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 144.55512070655823,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/attr/_funcs.py": "b2404be25f72a95879df09505aa23e0f133a71816f170d6c096bb958b61585cc",
+        "src/attr/filters.py": "3840f58b850f60b23e097917ef63d2d13bd82d8d4bdee4919068183595a80011"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 730,
+      "tool_calls": 12,
+      "tool_seconds": 0.4627948270062916,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 272,
+          "generated_tokens": 55,
+          "seconds": 8.170294231007574,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55235957248,
+          "adapter": true
+        },
+        {
+          "input_tokens": 765,
+          "generated_tokens": 57,
+          "seconds": 8.432185887999367,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55396575744,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1558,
+          "generated_tokens": 104,
+          "seconds": 15.571767457993701,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55661245440,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1706,
+          "generated_tokens": 46,
+          "seconds": 7.07674757798668,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55720953344,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2372,
+          "generated_tokens": 47,
+          "seconds": 7.418038642004831,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55937217536,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2952,
+          "generated_tokens": 48,
+          "seconds": 7.712372440990293,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56137029120,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3620,
+          "generated_tokens": 81,
+          "seconds": 12.724570312013384,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56362017280,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4208,
+          "generated_tokens": 70,
+          "seconds": 11.320554278005147,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56555736064,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5127,
+          "generated_tokens": 46,
+          "seconds": 8.100907929998357,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56862208512,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5774,
+          "generated_tokens": 46,
+          "seconds": 8.286099041986745,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57084675584,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6505,
+          "generated_tokens": 46,
+          "seconds": 8.501781666011084,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57326807040,
+          "adapter": true
+        },
+        {
+          "input_tokens": 7049,
+          "generated_tokens": 84,
+          "seconds": 14.32363012098358,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57507482112,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "p-limit-arguments",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-arguments",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 27.30403208732605,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "8e183dc42904984508bb490c658379e2a28d7d1ce6c5789f5d3e66cfaa3ff677"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 118,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 260,
+          "generated_tokens": 52,
+          "seconds": 8.08252673901734,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55226795520,
+          "adapter": true
+        },
+        {
+          "input_tokens": 340,
+          "generated_tokens": 39,
+          "seconds": 5.913968228007434,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55274038784,
+          "adapter": true
+        },
+        {
+          "input_tokens": 407,
+          "generated_tokens": 27,
+          "seconds": 4.119538968981942,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55277940736,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "p-limit-pending-count",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-observability",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 116.49119067192078,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 600,
+      "tool_calls": 12,
+      "tool_seconds": 9.761258460988756,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 263,
+          "generated_tokens": 39,
+          "seconds": 5.855621298978804,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55227841024,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1391,
+          "generated_tokens": 34,
+          "seconds": 5.242521936976118,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55607933952,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1988,
+          "generated_tokens": 35,
+          "seconds": 5.567348563985433,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55813074944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2203,
+          "generated_tokens": 41,
+          "seconds": 6.513522985012969,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55880639488,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2629,
+          "generated_tokens": 39,
+          "seconds": 6.318296964018373,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56024381440,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3424,
+          "generated_tokens": 44,
+          "seconds": 7.273596259998158,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56296239616,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3539,
+          "generated_tokens": 45,
+          "seconds": 7.462861514010001,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56332446208,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3873,
+          "generated_tokens": 71,
+          "seconds": 11.421845842996845,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56439073280,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3972,
+          "generated_tokens": 23,
+          "seconds": 4.364948189002462,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56473678336,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4070,
+          "generated_tokens": 78,
+          "seconds": 12.541402342991205,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56506415104,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4223,
+          "generated_tokens": 68,
+          "seconds": 11.126403133996064,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56559980032,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4606,
+          "generated_tokens": 83,
+          "seconds": 13.736611105006887,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56685208064,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "p-limit-map-index",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-mapping",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 124.90022110939026,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 632,
+      "tool_calls": 12,
+      "tool_seconds": 9.610299656895222,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 260,
+          "generated_tokens": 39,
+          "seconds": 5.896875358012039,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55226795520,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1388,
+          "generated_tokens": 34,
+          "seconds": 5.44570864198613,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55607263232,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1937,
+          "generated_tokens": 36,
+          "seconds": 5.767466554010753,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55795825664,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2153,
+          "generated_tokens": 36,
+          "seconds": 5.9257455299957655,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55864580096,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2914,
+          "generated_tokens": 37,
+          "seconds": 6.420970913983183,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56125929472,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3668,
+          "generated_tokens": 34,
+          "seconds": 5.966831697995076,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56375033344,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4416,
+          "generated_tokens": 34,
+          "seconds": 6.265776486019604,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56631400448,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4629,
+          "generated_tokens": 42,
+          "seconds": 7.649097104993416,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56693362688,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4826,
+          "generated_tokens": 72,
+          "seconds": 12.13251150000724,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56760926720,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4933,
+          "generated_tokens": 116,
+          "seconds": 18.944852155982517,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56799754240,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5130,
+          "generated_tokens": 72,
+          "seconds": 12.144637356017483,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56863192576,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5517,
+          "generated_tokens": 80,
+          "seconds": 13.358075586002087,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56993764352,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 70.47845506668091,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "7e64d29fe91fefb20e82660b34c37607ea2a8e885bfc721e92d56f45eb7789cb"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 393,
+      "tool_calls": 11,
+      "tool_seconds": 0.4229619490215555,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 16,
+          "seconds": 2.473166145995492,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55225509376,
+          "adapter": true
+        },
+        {
+          "input_tokens": 301,
+          "generated_tokens": 25,
+          "seconds": 3.8200358529866207,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55258076672,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1481,
+          "generated_tokens": 31,
+          "seconds": 4.856059073004872,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55640082432,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1939,
+          "generated_tokens": 27,
+          "seconds": 4.390891735005425,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55798961152,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2559,
+          "generated_tokens": 27,
+          "seconds": 4.558805903972825,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56000145920,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2862,
+          "generated_tokens": 48,
+          "seconds": 7.820532047015149,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56107656704,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3263,
+          "generated_tokens": 44,
+          "seconds": 7.3054348550213035,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56240450560,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3535,
+          "generated_tokens": 25,
+          "seconds": 4.540394565992756,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56331273216,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3603,
+          "generated_tokens": 26,
+          "seconds": 4.721804592991248,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56356886528,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3847,
+          "generated_tokens": 41,
+          "seconds": 6.990407117002178,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56431018496,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4125,
+          "generated_tokens": 24,
+          "seconds": 4.553030395996757,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56529478656,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4678,
+          "generated_tokens": 59,
+          "seconds": 10.12025549300597,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56711245824,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 141.7119746208191,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/parser.py": "fcb10342d0c1ddb2cb34a033ecb4829634db722a65afc6607a6d5b922879f84b"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 853,
+      "tool_calls": 12,
+      "tool_seconds": 0.4941021070408169,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 252,
+          "generated_tokens": 64,
+          "seconds": 9.450805606000358,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230174720,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1418,
+          "generated_tokens": 148,
+          "seconds": 21.934889748023124,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55617444352,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2409,
+          "generated_tokens": 62,
+          "seconds": 9.578223182994407,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55954468864,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3030,
+          "generated_tokens": 52,
+          "seconds": 8.279473581002094,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56158004736,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3665,
+          "generated_tokens": 83,
+          "seconds": 13.037175132980337,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56374283776,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3805,
+          "generated_tokens": 62,
+          "seconds": 9.945422336983029,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56418625024,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4707,
+          "generated_tokens": 66,
+          "seconds": 10.846489317977102,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56720705536,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5310,
+          "generated_tokens": 64,
+          "seconds": 10.767948342981981,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56923180032,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5857,
+          "generated_tokens": 70,
+          "seconds": 11.786890801013215,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57112232960,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6510,
+          "generated_tokens": 47,
+          "seconds": 8.670371315994998,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57328243712,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6634,
+          "generated_tokens": 37,
+          "seconds": 7.23189277597703,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57367936000,
+          "adapter": true
+        },
+        {
+          "input_tokens": 7441,
+          "generated_tokens": 98,
+          "seconds": 16.438267150020692,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57645388288,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 24.482591152191162,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "8d45977f36271654fcc520363d0d81a0c69c37098f8a069c592abc407cb92de9"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 146,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 255,
+          "generated_tokens": 53,
+          "seconds": 7.935638322000159,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230403072,
+          "adapter": true
+        },
+        {
+          "input_tokens": 336,
+          "generated_tokens": 53,
+          "seconds": 7.973042291996535,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55272816640,
+          "adapter": true
+        },
+        {
+          "input_tokens": 417,
+          "generated_tokens": 40,
+          "seconds": 6.0194663330039475,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55282155008,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 76.13278317451477,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/lexer.py": "96e1c3e57a239632163617eb1fc9a88b664cd81c27ad70bba3835e4f7abbe288"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 456,
+      "tool_calls": 11,
+      "tool_seconds": 0.4251746709633153,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 251,
+          "generated_tokens": 20,
+          "seconds": 3.0334484549821354,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55230098944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 22,
+          "seconds": 3.3340362760063726,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55253381632,
+          "adapter": true
+        },
+        {
+          "input_tokens": 917,
+          "generated_tokens": 24,
+          "seconds": 3.6384401970135514,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55450486784,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1489,
+          "generated_tokens": 25,
+          "seconds": 3.9233244610077236,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55641494016,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1596,
+          "generated_tokens": 47,
+          "seconds": 7.274462881992804,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55677389824,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2158,
+          "generated_tokens": 49,
+          "seconds": 7.734436497994466,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55865244672,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2248,
+          "generated_tokens": 38,
+          "seconds": 6.06599188601831,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55895473152,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2342,
+          "generated_tokens": 38,
+          "seconds": 6.0989675679884385,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55925145088,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2436,
+          "generated_tokens": 54,
+          "seconds": 8.50873117701849,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55962509824,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2559,
+          "generated_tokens": 57,
+          "seconds": 8.995150337985251,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56000145920,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3336,
+          "generated_tokens": 40,
+          "seconds": 6.693700917006936,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56264886784,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3623,
+          "generated_tokens": 42,
+          "seconds": 7.065404563996708,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56362872320,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 85.38080286979675,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "5d3ade9498fe2fbf61e5fe7795987c9516e9495e82837b8f36ddd9ffbc6e0b6d"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 466,
+      "tool_calls": 11,
+      "tool_seconds": 0.4249329080339521,
+      "exit_status": "RuntimeError",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 41,
+          "seconds": 6.183319767995272,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55225509376,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1454,
+          "generated_tokens": 48,
+          "seconds": 7.354036781005561,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55634940416,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2174,
+          "generated_tokens": 39,
+          "seconds": 6.226225204998627,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55869382144,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2497,
+          "generated_tokens": 68,
+          "seconds": 10.640634756011423,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55981955072,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3417,
+          "generated_tokens": 50,
+          "seconds": 8.104131486004917,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56293987840,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3541,
+          "generated_tokens": 17,
+          "seconds": 3.3073977369931526,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56333032960,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4270,
+          "generated_tokens": 17,
+          "seconds": 3.5614111770119052,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56576363008,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5597,
+          "generated_tokens": 40,
+          "seconds": 7.328510777006159,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57018703360,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6549,
+          "generated_tokens": 58,
+          "seconds": 10.329164755996317,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57341212672,
+          "adapter": true
+        },
+        {
+          "input_tokens": 7299,
+          "generated_tokens": 30,
+          "seconds": 6.444715803983854,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57598601728,
+          "adapter": true
+        },
+        {
+          "input_tokens": 7912,
+          "generated_tokens": 58,
+          "seconds": 10.744929221022176,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57802027008,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "split": "test",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 24.928290367126465,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "bc11b82dba4d6aa9496ab944bf703eba8930676e8220353ddc93ae9308187913",
+        "jmespath/visitor.py": "ee107fc6c1a5605abb520247a8b6a296a412f10649db937ad010f7d80d02d814"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 150,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 265,
+          "generated_tokens": 72,
+          "seconds": 10.612161342985928,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55228302848,
+          "adapter": true
+        },
+        {
+          "input_tokens": 365,
+          "generated_tokens": 39,
+          "seconds": 5.7677838770032395,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55263745024,
+          "adapter": true
+        },
+        {
+          "input_tokens": 432,
+          "generated_tokens": 39,
+          "seconds": 5.789453915989725,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55285678592,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 197.54984211921692,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "0d3a89e9b492aafdc7469df5461466581065417512e7baa1f771932b7a1fb540"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 1266,
+      "tool_calls": 10,
+      "tool_seconds": 0.8292407110275235,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 67,
+          "seconds": 9.934094515978359,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55224543232,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1345,
+          "generated_tokens": 68,
+          "seconds": 10.185497608006699,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55589612544,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2207,
+          "generated_tokens": 77,
+          "seconds": 11.73984220100101,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55881721856,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3389,
+          "generated_tokens": 62,
+          "seconds": 9.846931959007634,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56285618176,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4382,
+          "generated_tokens": 124,
+          "seconds": 19.26725030899979,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56619860992,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5332,
+          "generated_tokens": 203,
+          "seconds": 31.128179294988513,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56930724352,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5711,
+          "generated_tokens": 64,
+          "seconds": 10.897391507023713,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57068498944,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5932,
+          "generated_tokens": 232,
+          "seconds": 35.53218745498452,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57135645184,
+          "adapter": true
+        },
+        {
+          "input_tokens": 6749,
+          "generated_tokens": 111,
+          "seconds": 18.103325008007232,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57410819584,
+          "adapter": true
+        },
+        {
+          "input_tokens": 7010,
+          "generated_tokens": 258,
+          "seconds": 39.764112184988335,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57494910976,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 26.3771915435791,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 176,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 62,
+          "seconds": 9.223336658003973,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55224543232,
+          "adapter": true
+        },
+        {
+          "input_tokens": 330,
+          "generated_tokens": 49,
+          "seconds": 7.3177490659873,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55267261440,
+          "adapter": true
+        },
+        {
+          "input_tokens": 407,
+          "generated_tokens": 65,
+          "seconds": 9.67760127899237,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55277940736,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 175.03305768966675,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "75f8a4f30bf9ba5485010b35eec74b458a44ab8b1cfb89e7cca702d72bba77e3"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1105,
+      "tool_calls": 12,
+      "tool_seconds": 0.8731196450535208,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 236,
+          "generated_tokens": 67,
+          "seconds": 9.900601555011235,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55227008000,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1341,
+          "generated_tokens": 62,
+          "seconds": 9.295506894006394,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55589570560,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1939,
+          "generated_tokens": 61,
+          "seconds": 9.335853441996733,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55798961152,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2922,
+          "generated_tokens": 43,
+          "seconds": 6.917807391000679,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56127512576,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3397,
+          "generated_tokens": 59,
+          "seconds": 9.39858796299086,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56287334400,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3737,
+          "generated_tokens": 63,
+          "seconds": 10.092919348971918,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56397784064,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4255,
+          "generated_tokens": 54,
+          "seconds": 8.982831586006796,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56570935296,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4671,
+          "generated_tokens": 72,
+          "seconds": 11.757317643001443,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56708026368,
+          "adapter": true
+        },
+        {
+          "input_tokens": 4815,
+          "generated_tokens": 252,
+          "seconds": 38.334987480018754,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56757517312,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5353,
+          "generated_tokens": 62,
+          "seconds": 10.514408324001124,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56937219072,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5462,
+          "generated_tokens": 193,
+          "seconds": 30.41393426398281,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56977052160,
+          "adapter": true
+        },
+        {
+          "input_tokens": 5809,
+          "generated_tokens": 117,
+          "seconds": 18.871636328985915,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 57098851328,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 73.62962484359741,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 479,
+      "tool_calls": 7,
+      "tool_seconds": 0.3517113590205554,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 238,
+          "generated_tokens": 57,
+          "seconds": 8.452886409999337,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55223220224,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1324,
+          "generated_tokens": 67,
+          "seconds": 10.051605376007501,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55581954560,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1599,
+          "generated_tokens": 34,
+          "seconds": 5.269193023996195,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55678484480,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1858,
+          "generated_tokens": 98,
+          "seconds": 14.756569427991053,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55785944064,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2524,
+          "generated_tokens": 85,
+          "seconds": 13.047998658003053,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55990348288,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2664,
+          "generated_tokens": 63,
+          "seconds": 9.810214483004529,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56033014784,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2853,
+          "generated_tokens": 75,
+          "seconds": 11.656358233012725,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56105516544,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 95.02451539039612,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 606,
+      "tool_calls": 9,
+      "tool_seconds": 0.5070198440225795,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 58,
+          "seconds": 8.739002619986422,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55223467520,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1325,
+          "generated_tokens": 67,
+          "seconds": 10.256825154006947,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55582250496,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1600,
+          "generated_tokens": 74,
+          "seconds": 11.307792842009803,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55679766528,
+          "adapter": true
+        },
+        {
+          "input_tokens": 1740,
+          "generated_tokens": 43,
+          "seconds": 6.735823634982808,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55733473280,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2215,
+          "generated_tokens": 82,
+          "seconds": 12.721657894988311,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55884364288,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2775,
+          "generated_tokens": 69,
+          "seconds": 10.845889510994311,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56070307328,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2880,
+          "generated_tokens": 74,
+          "seconds": 11.661157574009849,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56112986112,
+          "adapter": true
+        },
+        {
+          "input_tokens": 2995,
+          "generated_tokens": 59,
+          "seconds": 9.437772598001175,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56149315584,
+          "adapter": true
+        },
+        {
+          "input_tokens": 3180,
+          "generated_tokens": 80,
+          "seconds": 12.557231279992266,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 56208541696,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "test",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 26.517866134643555,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 179,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 63,
+          "seconds": 9.237026657996466,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55223518720,
+          "adapter": true
+        },
+        {
+          "input_tokens": 334,
+          "generated_tokens": 50,
+          "seconds": 7.393618280009832,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55271636992,
+          "adapter": true
+        },
+        {
+          "input_tokens": 412,
+          "generated_tokens": 66,
+          "seconds": 9.726683885004604,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55280770048,
+          "adapter": true
+        }
+      ],
+      "recovered": false
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-09T16:51:21.494402+00:00"
+}
