@@ -138,6 +138,13 @@ Hashes alone do not make the private task corpus independently reproducible. Oth
 Rebuild: `python -m repo_lab.report --run THIS_DIRECTORY`. Inputs and generated artifacts are allowlisted in `artifacts.json`.
 """
     (run/'README.md').write_text(report)
+    if (run/'action-audit.json').exists():
+        audit=read('action-audit.json')
+        with (run/'README.md').open('a') as stream:
+            stream.write('\n## Action-interface audit\n\n')
+            for name in ['base','adapted']:
+                stream.write(f"{name}: `{json.dumps(audit[name]['format_categories'],sort_keys=True)}`.\n\n")
+            stream.write('These are heuristic interface categories. They distinguish missing actions, case/parameter mismatch and generation truncation; they do not assign all failures to the underlying coding model. See [action-audit.json](action-audit.json).\n')
     profile=read('profile.json');data=read('data.json')
     (run/'MODEL_CARD.md').write_text(f"""# Model card — private repository-agent LoRA candidate
 
@@ -187,6 +194,8 @@ The provenance records preserve repository revisions, file/license hashes and re
     allowed=['README.md','MODEL_CARD.md','DATA_CARD.md','summary.json','hardware.json','comparison.png','loss.png','baseline.json','adapted.json',
         'protocol.json','profile.json','training.json','selection.json','data.json','curve.json','adapter.json',
         'regression-base.json','regression-adapted.json','telemetry.csv','runtime.json','pipeline.json','source.json']
+    if (run/'action-audit.json').exists():
+        allowed.append('action-audit.json')
     write_json(run/'artifacts.json',{'schema_version':1,'weights_public':False,'raw_trajectories_public':False,
         'generator_sha256':sha256(__file__),'matplotlib_version':matplotlib.__version__,
         'files':{name:sha256(run/name) for name in allowed}})
