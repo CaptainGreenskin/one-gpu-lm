@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from .records import data_receipt, load_split
+from .records import data_receipt, load_split, write_json
 from .sandbox import extract_code
 
 
@@ -53,6 +53,11 @@ class Contracts(unittest.TestCase):
     def test_fenced_and_bare_code(self):
         self.assertEqual(extract_code("```python\ndef solve(x): return x\n```"), "def solve(x): return x")
         self.assertEqual(extract_code("function solve(x) {return x;}"), "function solve(x) {return x;}")
+
+    def test_library_loading_sets_have_stable_json(self):
+        path = self.root / "load.json"
+        write_json(path, {"missing_keys": set(), "unexpected_keys": {"b", "a"}})
+        self.assertEqual(json.loads(path.read_text()), {"missing_keys": [], "unexpected_keys": ["a", "b"]})
 
 
 if __name__ == "__main__":

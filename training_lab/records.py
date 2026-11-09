@@ -48,4 +48,9 @@ def data_receipt(train_path, test_path, train, test):
 
 
 def write_json(path, value):
-    Path(path).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
+    def encode_special(item):
+        if isinstance(item, (set, frozenset)):
+            return sorted(item)
+        raise TypeError(f"Unsupported receipt type: {type(item).__name__}")
+    Path(path).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False,
+                                    default=encode_special) + "\n")

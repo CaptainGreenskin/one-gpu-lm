@@ -1,0 +1,13 @@
+# Install a CUDA-compatible torch separately; the measured environment is in each run.
+transformers==5.19.0
+peft==0.21.2
+accelerate==1.15.0
+huggingface-hub==1.31.0
+safetensors==0.8.0
+tokenizers==0.23.3
+flash-linear-attention==0.6.0
+fla-core==0.6.0
+httpx==0.28.1
+socksio==1.0.0
+# Report generation, which can be run on a separate CPU machine:
+matplotlib==3.9.4
