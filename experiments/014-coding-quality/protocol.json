@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "status": "draft_before_admission",
+  "purpose": "single-candidate-task-balanced-posttraining-screen",
+  "task_origin": "deterministic defects in pinned real open-source repositories; not historical issue benchmark scores",
+  "target_task_counts": {
+    "train": 21,
+    "dev": 15,
+    "test": 12
+  },
+  "split_policy": "Train uses only original 012 train partition. Original dev/test are historical regression; only two new repositories are fresh holdout. Fixed constructed mutations, not historical issue or SWE-bench scores.",
+  "admission": {
+    "clean_reference_must_pass": true,
+    "broken_workspace_must_fail_targeted_test": true,
+    "restored_reference_must_pass": true,
+    "test_and_harness_files_immutable": true,
+    "third_party_file_notices_reviewed": true,
+    "flaky_or_environment_broken_tasks_excluded_before_model_scores": true
+  },
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "training_candidate": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "method": "BF16 frozen backbone, rank-8 LoRA, assistant-output-only SFT",
+    "seed": 101,
+    "learning_rate": 2e-06,
+    "epochs": 1,
+    "max_training_sequence_tokens": 4096,
+    "maximum_training_examples": 96,
+    "example_selection": "Validate 012 source rights/admission; deduplicate exact message+target pairs; reject target >512 or total >4096 tokens; allocate 96 slots round-robin over every admitted training task; select uniformly spaced trajectory positions within each quota; seeded shuffle101, one pass.",
+    "supervision": [
+      "local base-model trajectories passing task checks",
+      "explicitly labeled reference-repair demonstrations from authorized training snapshots"
+    ],
+    "exclude_dev_test_traces_and_answers": true,
+    "additional_teacher_api": false,
+    "expected_all_reference_repairs_selected": 7
+  },
+  "comparison": {
+    "same_tasks_tools_budgets_and_runtime": true,
+    "primary": "paired task success: targeted checks and declared regression suite pass, no protected file tampering",
+    "secondary": [
+      "regressed tasks",
+      "tool errors",
+      "format failures",
+      "model calls",
+      "generated tokens",
+      "wall seconds",
+      "modified source files",
+      "peak GPU memory"
+    ],
+    "resumption": "persist completed tool boundaries, reconstruct a new controller from saved state and workspace, preserve consumed budgets; separately disclose lack of mid-command crash recovery"
+  },
+  "publication": {
+    "code_protocol_sources_metrics_reports": "GitHub",
+    "raw_corpus_trajectories_weights": "private",
+    "modelscope_weight_release": false
+  },
+  "regression_scope_exclusions": {
+    "more-itertools": "TestConcurrentTee thread-stress class exceeds process guard and is unrelated to selected iterator APIs",
+    "p-limit": "concurrency: 1 timing-only test has a narrow scheduling tolerance; 29 other tests retained",
+    "underscore": "authored modules rebuilt with upstream non-strict UMD settings before six upstream test files run"
+  },
+  "exposure": {
+    "new_holdout_used_for_training": false,
+    "new_holdout_used_for_candidate_selection": false,
+    "historical_results_known": true,
+    "pretraining_contamination_unknown": true,
+    "evaluation_only_once_per_variant": true
+  },
+  "promotion": {
+    "meaning": "advance to multi-seed replication, not daily-use certification or weight release",
+    "minimum_net_fresh_holdout_gain": 2,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "legacy_function_passes_required": 9,
+    "all_campaigns_and_training_complete": true,
+    "all_fresh_tasks_admitted_before_rollouts": true
+  },
+  "comparison_note": "This compares the fixed candidate with the unchanged base under the same runtime. It is not a causal ablation against 012: sample selection, target length filtering, and the validated 013 training runtime differ.",
+  "sample_size_warning": "12 constructed tasks clustered in two small repositories, one training seed; no general coding or long-task quality claim.",
+  "execution": {
+    "max_pipeline_seconds": 14400,
+    "max_training_seconds": 3600,
+    "max_campaign_seconds": 5400,
+    "max_legacy_seconds": 900,
+    "max_backend_start_seconds": 300,
+    "gpu_count": 1,
+    "additional_teacher_api": false,
+    "candidate_count": 1,
+    "max_optimizer_updates": 96
+  }
+}

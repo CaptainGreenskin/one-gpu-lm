@@ -21,10 +21,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--node-root", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--manifest", type=Path, help="Optional repository slug -> exact npm versions JSON; replaces defaults")
     args = parser.parse_args()
+    dependencies_by_repo = json.loads(args.manifest.read_text()) if args.manifest else DEPENDENCIES
+    import re
+    if not isinstance(dependencies_by_repo, dict) or not dependencies_by_repo:
+        raise ValueError("Expected a nonempty dependency mapping")
+    for repository, dependencies in dependencies_by_repo.items():
+        if not re.fullmatch(r'[A-Za-z0-9_.-]+--[A-Za-z0-9_.-]+', repository) or not isinstance(dependencies, dict) or not dependencies:
+            raise ValueError("Invalid repository dependency mapping")
+        if any(not re.fullmatch(r'(?:@[a-z0-9_.-]+/)?[a-z0-9_.-]+', name) or not re.fullmatch(r'[0-9]+\.[0-9]+\.[0-9]+', version)
+               for name, version in dependencies.items()):
+            raise ValueError("Dependencies require package names and exact stable versions")
     env = dict(os.environ, PATH=str(args.node_root.resolve() / "bin") + os.pathsep + os.environ.get("PATH", ""))
     receipts = []
-    for repository, dependencies in DEPENDENCIES.items():
+    for repository, dependencies in dependencies_by_repo.items():
         target = args.out / repository
         target.mkdir(parents=True, exist_ok=True)
         manifest = {"name": "repository-runtime-dependencies", "private": True, "version": "0.0.0", "dependencies": dependencies}
