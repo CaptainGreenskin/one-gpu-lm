@@ -6,6 +6,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from one_gpu_lm.common.checkpoints import commit_checkpoint, load_checkpoint
 from one_gpu_lm.common.receipts import sha256, write_json
@@ -13,7 +15,7 @@ from one_gpu_lm.common.runstate import single_writer
 from one_gpu_lm.models.verify import verify_model
 from one_gpu_lm.training.collect import collect
 from one_gpu_lm.training.config import read_training_data, resolve_path
-from one_gpu_lm.training.doctor import package_name
+from one_gpu_lm.training.doctor import package_name, active_packages
 
 
 class InfrastructureContracts(unittest.TestCase):
@@ -21,6 +23,14 @@ class InfrastructureContracts(unittest.TestCase):
         self.assertEqual(package_name('huggingface_hub'),'huggingface-hub')
         self.assertEqual(package_name('FLA_Core'),'fla-core')
         self.assertEqual(package_name('flash.linear-attention'),'flash-linear-attention')
+
+    def test_shadowed_system_distribution_does_not_override_active_version(self):
+        values=[SimpleNamespace(metadata={'Name':'huggingface_hub'},version='1.31.0'),
+                SimpleNamespace(metadata={'Name':'huggingface-hub'},version='0.36.2')]
+        with patch('importlib.metadata.distributions',return_value=values),patch('importlib.metadata.version',return_value='1.31.0'):
+            active,shadowed=active_packages()
+        self.assertEqual(active['huggingface-hub'],'1.31.0')
+        self.assertEqual(shadowed['huggingface-hub'],['0.36.2','1.31.0'])
 
     def test_checkpoint_commits_and_rejects_changed_identity(self):
         with tempfile.TemporaryDirectory() as tmp:

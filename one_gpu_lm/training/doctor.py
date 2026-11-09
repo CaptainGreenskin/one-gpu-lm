@@ -9,6 +9,7 @@ import platform
 import re
 import shutil
 import subprocess
+import sys
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.runstate import gpu_lock_path, single_writer, utc
@@ -18,6 +19,18 @@ from .config import load_config, read_training_data
 
 def package_name(value):
     return re.sub(r'[-_.]+','-',value).lower()
+
+
+def active_packages():
+    discovered={}
+    for distribution in importlib.metadata.distributions():
+        name=distribution.metadata.get('Name')
+        if name:discovered.setdefault(package_name(name),set()).add(distribution.version)
+    # metadata.version uses the interpreter's resolution order; do not overwrite it
+    # with a later, shadowed distribution from inherited system site-packages.
+    active={name:importlib.metadata.version(name) for name in sorted(discovered)}
+    shadowed={name:sorted(versions) for name,versions in discovered.items() if len(versions)>1}
+    return active,shadowed
 
 
 def source_files():
@@ -30,7 +43,7 @@ def inspect(config, output_parent):
     if platform.system()!='Linux' or os.environ.get('CUDA_VISIBLE_DEVICES','0')!='0':
         raise ValueError('Validated v1 runtime requires Linux and physical CUDA GPU 0 only')
     expected=json.loads(config['paths']['environment_lock'].read_text())
-    packages={package_name(d.metadata['Name']):d.version for d in importlib.metadata.distributions() if d.metadata.get('Name')}
+    packages,shadowed=active_packages()
     if any(packages.get(package_name(k))!=v for k,v in expected['packages'].items()):
         raise ValueError('Model environment differs from its pinned package versions')
     if platform.python_version_tuple()[:2]!=tuple(expected['python_major_minor']):
@@ -61,6 +74,7 @@ def inspect(config, output_parent):
     del probe
     torch.cuda.empty_cache()
     environment={'python':platform.python_version(),'packages':dict(sorted(packages.items())),
+        'shadowed_distributions':shadowed,
         'torch_cuda':torch.version.cuda,'gpu_name':name,'compute_capability':list(torch.cuda.get_device_capability()),
         'driver_version':driver,'gpu_total_mib':float(total),
         'numerics':{'deterministic_algorithms':torch.are_deterministic_algorithms_enabled(),
