@@ -4,6 +4,8 @@
 
 目前包含两条相互补充的实验线：约 85.6M 参数的中文模型用于真实文档训练、早停、独立测试和部署；约 7B 参数的随机模型用于训练系统的容量与性能测量。后者使用合成 token，并未作为具有中文能力的预训练模型发布。
 
+下一阶段面向可长期使用的多语言编码模型：在已有开源底座上做后训练，以仓库任务完成率和长任务恢复能力验收，同时保留模型、教师与训练数据的来源和许可记录。[候选底座与实施路线](experiments/011-coding-model-selection/) 当前处于选型阶段，尚未发布新的能力模型。
+
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
 **拿自己的文档做实验。** 把 UTF-8 文档按篇放入训练和留出两个目录，即可逐遍比较训练分数和留出分数，找出继续训练何时开始影响未见文档。可用小型 CPU 模型先检查流程，也可用单张支持 BF16 的 CUDA 显卡跑完整配置。[用自己的文档训练和出图](experiments/007-document-curves/#用自己的文档跑)
@@ -22,6 +24,7 @@
 | 008 · 在线早停 | 只用当前验证分数何时停机？与固定 8、24 遍比，独立测试质量与卡时如何？ | [规则、曲线与独立测试](experiments/008-online-early-stop/results/2026-11-05/) |
 | 009 · 数据到部署 | 训练、早停、模型导出、KV cache 和 HTTP 续写如何串起来？单卡能否实际更新 7B 参数？ | [全链路入口](experiments/009-training-to-serving/) · [吞吐与显存实测](experiments/009-training-to-serving/results/2026-11-05/) |
 | 010 · 7B 长序列训练 | 512–4096 token 的全参数与 LoRA 训练需要多少显存？按层重算何时值得开启？ | [复现与数值审计](experiments/010-7b-context-scaling/) · [曲线与原始结果](experiments/010-7b-context-scaling/results/2026-11-09/) |
+| 011 · 多语言编码底座选择 | 用哪份已有权重做后训练？如何比较仓库任务、长任务与来源许可？ | [选型记录与固定版本](experiments/011-coding-model-selection/)（准备中） |
 
 **首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
 

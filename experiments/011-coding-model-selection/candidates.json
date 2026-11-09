@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-11-09",
+  "models": [
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+      "declared_license": "apache-2.0",
+      "status": "candidate_not_benchmarked",
+      "review_date": "2026-11-09",
+      "evidence": {
+        "LICENSE": {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/37561816e66b5b9153b1b64c10968c18c1e6f4a0/LICENSE",
+          "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/37561816e66b5b9153b1b64c10968c18c1e6f4a0/README.md",
+          "sha256": "7c24f46af1e0024e6ce9b799df6f4865f9200acf3b6f92b6530c37248cc9e821"
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/37561816e66b5b9153b1b64c10968c18c1e6f4a0/config.json",
+          "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+        }
+      }
+    },
+    {
+      "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+      "declared_license": "apache-2.0",
+      "status": "candidate_not_benchmarked",
+      "review_date": "2026-11-09",
+      "evidence": {
+        "LICENSE": {
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/resolve/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/LICENSE",
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/resolve/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/README.md",
+          "sha256": "98e8f0e00f2d6c7f1743fc4ef2b6297dcc57bec73d71f36588aed984370ac3f3"
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/resolve/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/config.json",
+          "sha256": "e2c8d8eea39471785cd93379d8b48241ad7dcda299013155dd02526e34a0de62"
+        }
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "declared_license": "apache-2.0",
+      "status": "candidate_not_benchmarked",
+      "review_date": "2026-11-09",
+      "evidence": {
+        "LICENSE": {
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/resolve/c202236235762e1c871ad0ccb60c8ee5ba337b9a/LICENSE",
+          "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/resolve/c202236235762e1c871ad0ccb60c8ee5ba337b9a/README.md",
+          "sha256": "c5f5a8c2dddab69cfbf05279235aa5fddb137939a06539c4c7637aa900fef6d0"
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/resolve/c202236235762e1c871ad0ccb60c8ee5ba337b9a/config.json",
+          "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+        }
+      }
+    }
+  ]
+}
