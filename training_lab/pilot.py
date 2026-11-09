@@ -110,7 +110,7 @@ def main():
 
         def prompt_tokens(row):
             return tokenizer.apply_chat_template([{"role": "user", "content": row["prompt"]}],
-                tokenize=True, add_generation_prompt=True, **profile["chat_template_kwargs"])
+                tokenize=True, return_dict=False, add_generation_prompt=True, **profile["chat_template_kwargs"])
 
         def generate(row, max_new_tokens=None):
             inputs = torch.tensor([prompt_tokens(row)], device="cuda")
