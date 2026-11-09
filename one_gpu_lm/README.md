@@ -4,10 +4,10 @@
 
 | 模块 | 负责什么 | 主要实现 |
 | --- | --- | --- |
-| `common/` | 内容哈希、JSON 回执、动作格式、执行代码身份 | `receipts.py`、`actions.py`、`source.py` |
+| `common/` | 内容哈希、JSON 回执、动作格式、执行代码身份、原子检查点和硬件记录 | `receipts.py`、`checkpoints.py`、`runstate.py`、`telemetry.py` |
 | `data/` | 私有训练记录、来源信息、训练分区约束、已验证轨迹/参考修复的准备 | `repository.py`、`function_records.py` |
-| `models/` | 按 profile 加载固定权重、模板、精度和本地生成 | `hf_runtime.py` |
-| `training/` | assistant-only LoRA、样本选择、更新检查和保存重载 | `repository_lora.py` |
+| `models/` | 按 profile 验证/加载固定权重、模板、精度和本地生成 | `verify.py`、`hf_runtime.py` |
+| `training/` | 配置预检、assistant-only LoRA、完整状态恢复、公开证据收集 | `config.py`、`doctor.py`、`runner.py`、`verify_resume.py`、`collect.py` |
 | `evaluation/` | 任务准入、工具预算、离线工作区、独立评分、恢复、配对报告 | `preflight.py`、`agent.py`、`campaign.py`、`grading.py`、`report.py` |
 | `serving/` | 模型进程与评测进程之间的本地请求协议和 Unix socket 服务 | `client.py`、`local_backend.py` |
 
@@ -17,7 +17,9 @@
 
 ## 从哪里运行
 
-从仓库根目录、使用相应的已准备 Python 环境运行。依赖和硬件条件见 [仓库任务操作说明](../repo_lab/README.md)；模块划分没有将实验环境变成自动安装工具。
+从仓库根目录、使用相应的 Python 环境运行。27B 的独立环境安装、训练和恢复见 [操作手册](../docs/27b-training.md)；仓库任务的隔离依赖另见 [仓库任务操作说明](../repo_lab/README.md)。
+
+`python -m one_gpu_lm` 提供 `doctor`、`train`、`status`、`collect`、`verify-resume`、`evaluate` 和 `serve` 子命令。`train` 是新建的可恢复运行入口，旧 `repository_lora` 单次实验入口保留原有行为。
 
 | 操作 | 新入口 | 兼容入口 |
 | --- | --- | --- |
@@ -44,7 +46,7 @@
 评测工具出现独立使用者、独立依赖和发布周期，或推理服务需要独立部署与维护时，再将对应模块拆成仓库，并定义版本化的输入输出契约。当前仍以一个提交核对“数据 → 训练 → 评测”的一致性为主，不按目录数量衡量项目进展。
 
 ```bash
-python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules
+python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules tests.test_training_infrastructure
 # Linux、bwrap 和固定 agent 环境：
 python -m unittest training_lab.test_sandbox_linux repo_lab.test_recovery_linux
 ```

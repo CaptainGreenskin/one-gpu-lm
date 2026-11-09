@@ -19,7 +19,7 @@
 新的通用实现写入 [one_gpu_lm](one_gpu_lm/README.md) 的相应模块：模型加载与生成放 `models/`，训练放 `training/`，数据准备放 `data/`，任务/评分/报告放 `evaluation/`，服务传输放 `serving/`。`repo_lab/` 保留兼容转发，避免再次形成第二份实现。模型和训练层不依赖服务进程；评测用客户端访问模型。
 
 ```bash
-python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules
+python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules tests.test_training_infrastructure
 # 在支持用户命名空间的 Linux 主机上：
 python -m unittest training_lab.test_sandbox_linux repo_lab.test_recovery_linux
 ```
