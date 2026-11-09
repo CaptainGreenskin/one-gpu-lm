@@ -29,7 +29,11 @@
     "wall_time_limit_seconds": 900,
     "decoding": "greedy",
     "network": "disabled inside tool workspace",
-    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget"
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ]
   },
   "training_candidate": {
     "base_model": "Qwen/Qwen3.8-27B",
@@ -104,5 +108,13 @@
     "more-itertools": "TestConcurrentTee thread-stress class exceeds process guard and is unrelated to selected iterator APIs",
     "p-limit": "concurrency: 1 timing-only test has a narrow scheduling tolerance; 29 other tests retained",
     "underscore": "authored modules rebuilt with upstream non-strict UMD settings before six upstream test files run"
+  },
+  "protocol_revision": 2,
+  "interface_amendment": {
+    "reason": "Qwen emitted native XML bash tool calls, rejected by initial fenced-only parser",
+    "observation_scope": "training partition only; no dev or heldout model rollout observed",
+    "prior_attempt": "baseline-001 retained as invalidated interface probe, excluded from quality scores and supervision",
+    "change": "accept exactly one unambiguous fenced bash OR native Qwen XML bash/command action; same commands, tools, budgets, tasks and grading",
+    "new_baseline": "baseline-002"
   }
 }

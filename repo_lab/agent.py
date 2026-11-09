@@ -36,9 +36,15 @@ def atomic_json(path, value):
 
 def parse_action(text):
     blocks = re.findall(r"```(?:bash|sh)\s*\n(.*?)```", text, re.S)
-    if len(blocks) != 1 or not blocks[0].strip():
-        raise ValueError("Expected exactly one nonempty fenced bash block")
-    return {"command": blocks[0].strip()}
+    # Some Qwen checkpoints emit their native tool syntax even when asked for a fence.
+    # Accept only one explicitly named bash/command action; never execute prose.
+    native = re.findall(r"<tool_call>\s*<function=bash>\s*<parameter=command>\s*(.*?)\s*</parameter>\s*</function>\s*</tool_call>", text, re.S)
+    actions = blocks + native
+    if len(actions) != 1 or not actions[0].strip():
+        raise ValueError("Expected exactly one nonempty bash action")
+    if native and (text.count('<tool_call>') != 1 or text.count('<parameter=') != 1):
+        raise ValueError('Ambiguous native tool call')
+    return {"command": actions[0].strip()}
 
 
 class LocalModel:

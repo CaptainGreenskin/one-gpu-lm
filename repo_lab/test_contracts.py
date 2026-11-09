@@ -5,6 +5,7 @@ import unittest
 from .agent import parse_action
 from .grading import changed_protected, grade
 from .tasks import apply_mutation, file_manifest, prepare
+from .train import select_examples
 
 
 class RepositoryContracts(unittest.TestCase):
@@ -21,6 +22,13 @@ class RepositoryContracts(unittest.TestCase):
         self.assertIn('"""API documentation."""', broken)
         self.assertIn('def g():\n    return 2', broken)
         self.assertNotIn('y = x + 1', broken)
+
+    def test_native_bash_tool_requires_exactly_one_action(self):
+        native = '<tool_call>\n<function=bash>\n<parameter=command>\ncat source.py\n</parameter>\n</function>\n</tool_call>'
+        self.assertEqual(parse_action(native), {'command':'cat source.py'})
+        for text in [native+native, native+'\n```bash\nls\n```', native.replace('function=bash','function=unknown')]:
+            with self.assertRaises(ValueError):
+                parse_action(text)
 
     def test_nonunique_mutation_fails_closed(self):
         with self.assertRaises(ValueError):
@@ -59,6 +67,23 @@ class RepositoryContracts(unittest.TestCase):
             (path/'link').symlink_to('/etc/passwd')
             with self.assertRaises(ValueError):
                 file_manifest(path)
+
+    def test_training_masks_prefix_and_rejects_evaluation_tasks(self):
+        class Tokenizer:
+            eos_token = '!'
+            def apply_chat_template(self, messages, **kwargs):
+                return [1,2,3]
+            def encode(self, text, **kwargs):
+                return [4,5]
+        row = {'id':'a:turn-1','messages':[{'role':'user','content':'task'}],'target':'answer',
+               'provenance':{'split':'train','task_id':'a','kind':'fixture'}}
+        profile = {'training':{'max_sequence_length':5},'chat_template_kwargs':{}}
+        selected, excluded = select_examples([row],Tokenizer(),profile,{'a'})
+        self.assertEqual(selected[0]['labels'],[-100,-100,-100,4,5])
+        self.assertEqual(excluded,[])
+        row['provenance']['split']='test'
+        with self.assertRaises(ValueError):
+            select_examples([row],Tokenizer(),profile,{'a'})
 
 
 if __name__ == '__main__':
