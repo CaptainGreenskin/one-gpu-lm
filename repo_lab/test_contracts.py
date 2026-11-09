@@ -1,4 +1,5 @@
 import tempfile
+import copy
 from pathlib import Path
 import unittest
 
@@ -6,6 +7,7 @@ from .agent import parse_action
 from .grading import changed_protected, grade
 from .tasks import apply_mutation, file_manifest, prepare
 from .train import select_examples
+from .report import paired
 
 
 class RepositoryContracts(unittest.TestCase):
@@ -84,6 +86,25 @@ class RepositoryContracts(unittest.TestCase):
         row['provenance']['split']='test'
         with self.assertRaises(ValueError):
             select_examples([row],Tokenizer(),profile,{'a'})
+
+    def test_paired_report_rejects_incomplete_or_wrong_variant(self):
+        rows=[]
+        for split in ['train','dev','test']:
+            rows.append({'id':split,'split':split,'repository':split+'/repo','family':split,
+                'passed':True,'seconds':1.0,'calls':1,'generated_tokens':3,'exit_status':'Submitted',
+                'modified_source_files':['a.py'],'generations':[{'adapter':False}]})
+        base={'complete':True,'identity':{'ids':['train','dev','test']},'results':rows}
+        adapted=copy.deepcopy(base)
+        for row in adapted['results']:
+            row['generations'][0]['adapter']=True
+        counts={'train':1,'dev':1,'test':1}
+        self.assertEqual(paired(base,adapted,counts)['splits']['test']['adapted_passed'],1)
+        adapted['results'][0]['generations'][0]['adapter']=False
+        with self.assertRaisesRegex(ValueError,'wrong model variant'):
+            paired(base,adapted,counts)
+        adapted['results'].pop()
+        with self.assertRaisesRegex(ValueError,'Missing'):
+            paired(base,adapted,counts)
 
 
 if __name__ == '__main__':
