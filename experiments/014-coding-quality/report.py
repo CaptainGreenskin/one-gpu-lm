@@ -56,6 +56,11 @@ def render(root):
     if sha256(root/'data-selection.json')!=protocol['frozen_files']['runs/prepared-data/selection.json'] or selection['data_sha256']!=protocol['prepared_data_sha256']:
         raise ValueError('Selection differs from frozen training inputs')
     identity=read('training/identity.json');trainer_selection=read('training/selection.json')
+    if sha256(root/'profile.json')!=identity['input_hashes']['profile'] or sha256(root/'data-receipt.json')!=selection['receipt_sha256']:
+        raise ValueError('Published profile or data receipt changed')
+    for sources in [base['identity']['source_files'],identity['source_files']]:
+        if any(protocol['frozen_files'].get(name)!=digest for name,digest in sources.items()):
+            raise ValueError('Execution source differs from frozen protocol')
     if identity['input_hashes']['data']!=selection['data_sha256'] or identity['input_hashes']['data_receipt']!=selection['receipt_sha256']:
         raise ValueError('Trainer used a different prepared partition')
     expected_order=list(selection['selected']);random.Random(protocol['training_candidate']['seed']).shuffle(expected_order)
@@ -85,6 +90,16 @@ def render(root):
         'training_update_seconds':training['training_update_seconds'],'stages':controller['stages']}
     summary['coverage']={k:selection[k] for k in ['input_records','eligible_records','selected_records','required_tasks','covered_tasks','kinds','input_tokens','supervised_tokens']}
     summary['hardware']=hw
+    costs={}
+    for name,value in [('base',base),('adapted',adapted)]:
+        generations=[g for r in value['results'] for g in r['generations']]
+        seconds=sum(g['seconds'] for g in generations);tokens=sum(g['generated_tokens'] for g in generations)
+        costs[name]={'tasks':len(value['results']),'controller_seconds':sum(r['seconds'] for r in value['results']),
+            'model_calls':sum(r['calls'] for r in value['results']),'successful_generation_seconds':seconds,
+            'generated_tokens':tokens,'generated_tokens_per_second':tokens/seconds if seconds else None,
+            'tool_seconds':sum(r.get('tool_seconds',0) for r in value['results']),
+            'peak_generation_allocated_bytes':max((g['peak_allocated_bytes'] for g in generations),default=0)}
+    summary['evaluation_cost']=costs
     write_json(root/'summary.json',summary)
     rows=['| Scope | Base | LoRA | Improved | Regressed |','| --- | --- | --- | --- | --- |']
     for label,key in [('New repository holdout','test'),('Historical regression','dev')]:
@@ -111,6 +126,10 @@ Frozen BF16 27B backbone, {training['trainable_parameters']:,} trainable LoRA pa
 ![Training diagnostics](training.png)
 
 Loss is on different single examples at each step in one pass; it is not a heldout loss curve or evidence of improved coding quality. The comparison with 012 is observational: sample membership, action-length filtering and the deterministic 013 runtime differ, so gains cannot be attributed to balanced selection alone.
+
+## Evaluation cost
+
+Repository campaigns use the same greedy decoding, unmerged adapter serving path and per-task budgets. Base / candidate generated {costs['base']['generated_tokens']:,} / {costs['adapted']['generated_tokens']:,} tokens in {costs['base']['successful_generation_seconds']:.1f} / {costs['adapted']['successful_generation_seconds']:.1f} successful generation seconds, with {costs['base']['model_calls']} / {costs['adapted']['model_calls']} calls. These are sequential task measurements, not a production serving throughput benchmark. Tool time and full controller durations are separately retained in the summary; failed-request waits are not represented as successful generation time.
 
 ## Hardware and completion
 

@@ -4,8 +4,8 @@
 
 | 模块 | 负责什么 | 主要实现 |
 | --- | --- | --- |
-| `common/` | 内容哈希、JSON 回执、动作格式、执行代码身份、原子检查点和硬件记录 | `receipts.py`、`checkpoints.py`、`runstate.py`、`telemetry.py` |
-| `data/` | 私有训练记录、来源信息、训练分区约束、已验证轨迹/参考修复的准备 | `repository.py`、`function_records.py` |
+| `common/` | 内容哈希、JSON 回执、动作格式、执行代码身份、原子检查点和硬件记录 | `receipts.py`、`training_data.py`、`checkpoints.py`、`runstate.py`、`telemetry.py` |
+| `data/` | 私有训练记录、来源信息、训练分区约束、已验证轨迹/参考修复的准备 | `repository.py`、`balanced.py`、`function_records.py` |
 | `models/` | 按 profile 验证/加载固定权重、模板、精度和本地生成 | `verify.py`、`hf_runtime.py` |
 | `training/` | 配置预检、assistant-only LoRA、完整状态恢复、公开证据收集 | `config.py`、`doctor.py`、`runner.py`、`verify_resume.py`、`collect.py` |
 | `evaluation/` | 任务准入、工具预算、离线工作区、独立评分、恢复、配对报告 | `preflight.py`、`agent.py`、`campaign.py`、`grading.py`、`report.py` |
@@ -24,6 +24,7 @@
 | 操作 | 新入口 | 兼容入口 |
 | --- | --- | --- |
 | 任务控制/准入 | `python -m one_gpu_lm.evaluation.preflight` | `python -m repo_lab.preflight` |
+| 审计并均衡选择训练记录 | `python -m one_gpu_lm.data.balanced` | — |
 | 构造训练记录 | `python -m one_gpu_lm.data.repository` | `python -m repo_lab.dataset` |
 | 一轮 LoRA | `python -m one_gpu_lm.training.repository_lora` | `python -m repo_lab.train` |
 | 启动本地模型服务 | `python -m one_gpu_lm.serving.local_backend` | `python -m repo_lab.backend` |
