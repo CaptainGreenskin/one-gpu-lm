@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_gpu_acceptance",
+  "purpose": "27b-single-gpu-training-infrastructure-acceptance",
+  "model": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "data": "unchanged private training partition from 012; no additional corpus or teacher API",
+  "training": {
+    "max_examples": 16,
+    "updates": 12,
+    "seed": 101,
+    "checkpoint_every": 4,
+    "interruption_after": 4,
+    "method": "BF16 frozen backbone and FP32 rank-8 LoRA, one example per optimizer update"
+  },
+  "comparison": {
+    "continuous": "one fresh process, 12 updates",
+    "resumed": "fresh process stops after update 4, next process restores full state and reaches update 12",
+    "restored_state": "adapter, optimizer, and Python/torch CPU/CUDA RNG fingerprints must match the committed checkpoint exactly",
+    "sample_order": "identical tokenized selected-example order and completed update count",
+    "adapter_and_loss_tolerance": {
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    "optimizer_tolerance": {
+      "atol": 1e-10,
+      "rtol": 1e-06
+    },
+    "final_rng": "exact match",
+    "greedy_probe": "same 16 IDs and save/reload exact; training context, not quality evaluation"
+  },
+  "other_checks": [
+    "checkpoint writer failure leaves previous pointer intact",
+    "corrupted or incompatible checkpoint refused",
+    "single-writer lock",
+    "model shards and metadata rehashed against pinned official manifest",
+    "allowlisted publication excludes raw data and optimizer/adapter tensors"
+  ],
+  "evaluation": "managed local backend plus existing 9 function regression fixtures; engineering smoke, not new independent quality benchmark",
+  "publication": {
+    "weights": false,
+    "raw_data": false,
+    "optimizer_state": false
+  },
+  "limitations": [
+    "Single GPU, BF16, rank at most 8, microbatch 1, at most 4096 input tokens, one pass.",
+    "Controlled complete-update process interruption; no claim that arbitrary GPU kernels or remote/distributed filesystems are transactionally recoverable.",
+    "No full-parameter 27B, distributed trainer, production inference server or improved coding-quality claim."
+  ]
+}

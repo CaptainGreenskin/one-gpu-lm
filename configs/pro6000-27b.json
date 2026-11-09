@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "profile": "../experiments/012-repository-agent/model-profile.json",
+  "weights_manifest": "../experiments/011-coding-model-selection/weights-manifest.json",
+  "environment_lock": "../environments/pro6000-cu130.json",
+  "inputs": {
+    "model_dir": "${ONE_GPU_MODEL}",
+    "data": "${ONE_GPU_TRAIN_DATA}",
+    "data_receipt": "${ONE_GPU_DATA_RECEIPT}",
+    "admission": "${ONE_GPU_ADMISSION}",
+    "licenses": "${ONE_GPU_LICENSES}"
+  },
+  "run": {
+    "max_steps": 96,
+    "max_examples": 96,
+    "checkpoint_every": 16,
+    "minimum_free_gpu_gib": 92,
+    "minimum_free_disk_gib": 16,
+    "max_attempt_seconds": 3600,
+    "telemetry_interval_seconds": 5
+  }
+}
