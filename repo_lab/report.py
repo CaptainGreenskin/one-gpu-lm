@@ -138,6 +138,31 @@ Hashes alone do not make the private task corpus independently reproducible. Oth
 Rebuild: `python -m repo_lab.report --run THIS_DIRECTORY`. Inputs and generated artifacts are allowlisted in `artifacts.json`.
 """
     (run/'README.md').write_text(report)
+    profile=read('profile.json');data=read('data.json')
+    (run/'MODEL_CARD.md').write_text(f"""# Model card — private repository-agent LoRA candidate
+
+Status: experimental local adapter. Daily-use acceptance: **false**. Small screening gate passed: **{summary['candidate_passes_this_screen']}**. No ModelScope weight release is represented by this card.
+
+Base: [{profile['model_id']}](https://huggingface.co/{profile['model_id']}/tree/{profile['revision']}), revision `{profile['revision']}`. Loader `{profile['loader']}`, dtype `{profile['dtype']}`; tokenizer/template and exact LoRA targets are fixed in `profile.json`. Rank {profile['lora']['r']}, alpha {profile['lora']['lora_alpha']}, {training['trainable_parameters']:,} trainable parameters. This adapter requires the matching base; it is not a standalone model.
+
+Intended use: a bounded engineering experiment in repository repair. Evaluation uses one greedy run per task and one training seed, visible tests and constructed defects. Final repository-disjoint tasks: {test['baseline_passed']}/{test['pairs']} base, {test['adapted_passed']}/{test['pairs']} candidate, {len(test['regressed'])} regressions. Previous simple fixtures: {old_adapted['passed']}/9 after training. These results do not establish advanced coding, autonomous long-task reliability, security, general language coverage or production serving performance.
+
+The exact adapter file hashes are in `adapter.json` and match the evaluated backend identity in `source.json`. Saving/reloading reproduced a short greedy probe. Original orchestration code is MIT; the base uses its recorded {profile['model_license']} license and corpus components retain their own notices. This is not an audit or warranty of the base's upstream pretraining corpus.
+
+Before a later ModelScope release: pass substantially broader independent tasks, review the precise data and weight distribution package, retain applicable licenses/notices, specify base/tokenizer/adapter hashes and dependency versions, and link a matching GitHub result. A future model version must rerun these checks; old LoRA weights are not assumed portable to a new architecture.
+""")
+    (run/'DATA_CARD.md').write_text(f"""# Data card — repository repair supervision and evaluation
+
+Raw source, private task specifications, trajectories, reference patches and model outputs are not redistributed. Exact task-spec SHA-256: `{data['task_spec_sha256']}`. Exact training JSONL SHA-256: `{data['sha256']}`. Source identities and selected file notices are in the experiment-level source records.
+
+Training examples: {data['records']} prepared records; {len(selection['selected'])} selected after the predeclared context/example limits; {len(selection['excluded'])} excluded. Selected kinds: `{json.dumps(selection['kinds'],sort_keys=True)}`. Repositories: `{json.dumps(selection['repositories'])}`. Successful baseline trajectories are self-generated local supervision, not outputs purchased from a teacher API. Failed training tasks may contribute separately labeled, executed reference repairs from their authorized snapshots. Only the current assistant response contributes to loss.
+
+Task controls admitted {sum(protocol['admitted_task_counts'].values())} of {sum(protocol['target_task_counts'].values())} constructed tasks. Frozen counts: `{json.dumps(protocol['admitted_task_counts'],sort_keys=True)}`. Training, development and final tasks use different repositories and API families; no development/test answers or trajectories enter SFT. This separation does not prove absence from base-model pretraining, nor does it make a {test['pairs']}-task final sample representative.
+
+Public upstream tests are visible. Independent final grading reconstructs a fresh task and submits allowed source files only; it does not introduce new hidden assertions. Rejected tasks and excluded timing/thread-stress tests remain disclosed. The invalidated interface probe supplies no supervision.
+
+The provenance records preserve repository revisions, file/license hashes and required notices. The project MIT license does not replace third-party source terms. Hashes cannot recreate withheld content: contributors can use the public input contract to evaluate their own authorized repositories, while exact reproduction of this private dataset needs the corresponding source preparation and task specifications.
+""")
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -159,11 +184,12 @@ Rebuild: `python -m repo_lab.report --run THIS_DIRECTORY`. Inputs and generated 
     ax.plot([r['step'] for r in curve],[r['loss'] for r in curve],'o-',markersize=3)
     ax.set(xlabel='Optimizer update',ylabel='Assistant-token loss',title='One pass: different task contexts at each step')
     ax.grid(alpha=.2);fig.tight_layout();fig.savefig(run/'loss.png',dpi=170);plt.close(fig)
-    allowed=['README.md','summary.json','hardware.json','comparison.png','loss.png','baseline.json','adapted.json',
+    allowed=['README.md','MODEL_CARD.md','DATA_CARD.md','summary.json','hardware.json','comparison.png','loss.png','baseline.json','adapted.json',
         'protocol.json','profile.json','training.json','selection.json','data.json','curve.json','adapter.json',
         'regression-base.json','regression-adapted.json','telemetry.csv','runtime.json','pipeline.json','source.json']
     write_json(run/'artifacts.json',{'schema_version':1,'weights_public':False,'raw_trajectories_public':False,
-        'generator_sha256':sha256(__file__),'files':{name:sha256(run/name) for name in allowed}})
+        'generator_sha256':sha256(__file__),'matplotlib_version':matplotlib.__version__,
+        'files':{name:sha256(run/name) for name in allowed}})
 
 
 if __name__ == '__main__':
