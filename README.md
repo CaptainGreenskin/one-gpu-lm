@@ -1,6 +1,8 @@
 # One GPU LM
 
-在一台工作站上，从随机初始化训练一个中文小语言模型。每次只改一件事，再问：同样的卡时，这项改动能让模型在未见文本上预测得更好吗？读者可以沿着 Git 历史看见模型、训练方法和证据一起演进。
+在一台工作站上，把数据准备、训练与验证、模型导出和推理服务串起来，记录模型质量、卡时、吞吐与显存成本。每项改动都提供对照、原始记录和复现入口，让读者用自己的文档或显卡核验结论。
+
+目前包含两条相互补充的实验线：约 85.6M 参数的中文模型用于真实文档训练、早停、独立测试和部署；约 7B 参数的随机模型用于训练系统的容量与性能测量。后者使用合成 token，并未作为具有中文能力的预训练模型发布。
 
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
@@ -19,6 +21,7 @@
 | 007 · 换文档复验过拟合 | Rust 的拐点能迁移到 Vue 文档吗？自己的文档应该练几遍？ | [两个目录跑出自己的验证曲线](experiments/007-document-curves/) |
 | 008 · 在线早停 | 只用当前验证分数何时停机？与固定 8、24 遍比，独立测试质量与卡时如何？ | [规则、曲线与独立测试](experiments/008-online-early-stop/results/2026-11-05/) |
 | 009 · 数据到部署 | 训练、早停、模型导出、KV cache 和 HTTP 续写如何串起来？单卡能否实际更新 7B 参数？ | [全链路入口](experiments/009-training-to-serving/) · [吞吐与显存实测](experiments/009-training-to-serving/results/2026-11-05/) |
+| 010 · 7B 长序列训练 | 512–4096 token 的全参数与 LoRA 训练需要多少显存？按层重算何时值得开启？ | [复现与数值审计](experiments/010-7b-context-scaling/) · [曲线与原始结果](experiments/010-7b-context-scaling/results/2026-11-09/) |
 
 **首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
 

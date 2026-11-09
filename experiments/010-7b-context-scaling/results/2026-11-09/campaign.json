@@ -1,0 +1,250 @@
+{
+  "started_utc": "2026-11-09T03:30:53.755165+00:00",
+  "planned_trials": 48,
+  "records": [
+    {
+      "name": "full-adafactor-s512-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.528848621994257
+    },
+    {
+      "name": "full-adafactor-s512-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.7303750030114315
+    },
+    {
+      "name": "lora-adamw-s512-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 4.626522136008134
+    },
+    {
+      "name": "lora-adamw-s512-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.225232083001174
+    },
+    {
+      "name": "full-adafactor-s1024-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 7.029905797011452
+    },
+    {
+      "name": "full-adafactor-s1024-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 7.180875357007608
+    },
+    {
+      "name": "lora-adamw-s1024-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 4.825040373019874
+    },
+    {
+      "name": "lora-adamw-s1024-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.328515889006667
+    },
+    {
+      "name": "full-adafactor-s2048-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 8.183925351011567
+    },
+    {
+      "name": "full-adafactor-s2048-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 8.785105642018607
+    },
+    {
+      "name": "lora-adamw-s2048-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.827299383992795
+    },
+    {
+      "name": "lora-adamw-s2048-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.479131653992226
+    },
+    {
+      "name": "full-adafactor-s4096-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 11.189077351999003
+    },
+    {
+      "name": "full-adafactor-s4096-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 12.443213565013139
+    },
+    {
+      "name": "lora-adamw-s4096-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 8.27853640198009
+    },
+    {
+      "name": "lora-adamw-s4096-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 9.688179741002386
+    },
+    {
+      "name": "lora-adamw-s512-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 5.225902197998948
+    },
+    {
+      "name": "lora-adamw-s512-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 4.626576581998961
+    },
+    {
+      "name": "full-adafactor-s512-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 6.578566146985395
+    },
+    {
+      "name": "full-adafactor-s512-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 6.278165363008156
+    },
+    {
+      "name": "lora-adamw-s1024-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 5.3783502310107
+    },
+    {
+      "name": "lora-adamw-s1024-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 4.9774515030148905
+    },
+    {
+      "name": "full-adafactor-s1024-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 7.079513039992889
+    },
+    {
+      "name": "full-adafactor-s1024-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 6.779126016015653
+    },
+    {
+      "name": "lora-adamw-s2048-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 6.428019154991489
+    },
+    {
+      "name": "lora-adamw-s2048-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 6.077463416004321
+    },
+    {
+      "name": "full-adafactor-s2048-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 8.68274410199956
+    },
+    {
+      "name": "full-adafactor-s2048-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 8.081875058996957
+    },
+    {
+      "name": "lora-adamw-s4096-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 9.73486689699348
+    },
+    {
+      "name": "lora-adamw-s4096-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 8.332227870007046
+    },
+    {
+      "name": "full-adafactor-s4096-ac1-r1",
+      "status": "ok",
+      "process_wall_seconds": 12.391694918012945
+    },
+    {
+      "name": "full-adafactor-s4096-ac0-r1",
+      "status": "ok",
+      "process_wall_seconds": 11.391198333993088
+    },
+    {
+      "name": "full-adafactor-s512-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 6.27808310801629
+    },
+    {
+      "name": "full-adafactor-s512-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 6.626883471006295
+    },
+    {
+      "name": "lora-adamw-s512-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 4.52379322599154
+    },
+    {
+      "name": "lora-adamw-s512-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 5.176798177009914
+    },
+    {
+      "name": "full-adafactor-s1024-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 6.981183110998245
+    },
+    {
+      "name": "full-adafactor-s1024-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 7.179534519993467
+    },
+    {
+      "name": "lora-adamw-s1024-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 4.825004785001511
+    },
+    {
+      "name": "lora-adamw-s1024-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 5.2256884000089485
+    },
+    {
+      "name": "full-adafactor-s2048-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 8.23377838099259
+    },
+    {
+      "name": "full-adafactor-s2048-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 8.633123134990456
+    },
+    {
+      "name": "lora-adamw-s2048-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 5.877184519980801
+    },
+    {
+      "name": "lora-adamw-s2048-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 6.478321186994435
+    },
+    {
+      "name": "full-adafactor-s4096-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 11.289842494006734
+    },
+    {
+      "name": "full-adafactor-s4096-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 12.492419440008234
+    },
+    {
+      "name": "lora-adamw-s4096-ac0-r2",
+      "status": "ok",
+      "process_wall_seconds": 8.532459182984894
+    },
+    {
+      "name": "lora-adamw-s4096-ac1-r2",
+      "status": "ok",
+      "process_wall_seconds": 9.585100665019127
+    }
+  ],
+  "state": "completed",
+  "driver_version": "595.99.02",
+  "finished_utc": "2026-11-09T03:36:48.221742+00:00",
+  "wall_seconds": 354.46660175101715
+}

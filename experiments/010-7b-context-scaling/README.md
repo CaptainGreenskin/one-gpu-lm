@@ -22,3 +22,13 @@ python "$exp/report.py" runs/context010 --out runs/context010-report
 ```
 
 输出目录必须是新目录，防止覆盖和重复启动。报告依赖 Matplotlib；训练依赖 PyTorch 和 NumPy。仓库只同步源码、配置、指标和曲线，日志及模型留在本机。**随机权重、合成 token 和短测只能证明该配置的容量与性能，不能证明长训收敛、真实语料质量或兼容现成的 Llama/Qwen 权重。**
+
+[2026-11-09 实测曲线与原始指标](results/2026-11-09/)：正式复测完成 48 次运行、24 个有效配对，没有 OOM。4096 token 下，全参数训练的峰值 allocated 为 33.92 GiB，开启重算后为 27.22 GiB；LoRA 从 28.44 GiB 降至 16.03 GiB。两种模式均有吞吐代价，表格和波动范围见结果页。首批数值审计失败的记录单独保留。
+
+仅重新审计和绘图：
+
+```bash
+python experiments/010-7b-context-scaling/report.py \
+  experiments/010-7b-context-scaling/results/2026-11-09 \
+  --out runs/context010-replot
+```

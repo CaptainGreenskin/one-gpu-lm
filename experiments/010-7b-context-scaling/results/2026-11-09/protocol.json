@@ -1,0 +1,21 @@
+{
+  "experiment": "010-7b-context-scaling",
+  "model_config": [4096, 32, 32, 4096, 32000, 18048],
+  "modes": ["full-adafactor", "lora-adamw"],
+  "sequences": [512, 1024, 2048, 4096],
+  "checkpoint": [false, true],
+  "repeats": 3,
+  "batch": 1,
+  "warmup_steps": 2,
+  "measured_steps": 6,
+  "model_seed": 1729,
+  "data_seed": 991,
+  "deterministic_algorithms": true,
+  "max_allocated_gib": 88,
+  "reserve_free_gib": 4,
+  "trial_timeout_seconds": 180,
+  "campaign_timeout_seconds": 1800,
+  "comparison_loss_atol": 0.001,
+  "comparison_grad_norm_rtol": 0.01,
+  "scope": "Random weights and synthetic token IDs; capacity and short-step performance only. No convergence claim."
+}

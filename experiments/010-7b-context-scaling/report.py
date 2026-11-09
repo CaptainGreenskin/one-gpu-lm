@@ -45,6 +45,7 @@ def summarize(root):
             assert r["returncode"] == 0
             assert r["protocol_sha256"] == hashlib.sha256(protocol_bytes).hexdigest()
             assert r["config"] == protocol["model_config"] and r["batch"] == protocol["batch"]
+            assert r["deterministic_algorithms"] == protocol.get("deterministic_algorithms", False)
             assert r["base_parameters"] == 7028273152
             assert r["trainable_elements_with_gradient"] == r["trainable_parameters"]
             assert all(x > 0 for x in r["probe_max_abs_updates"])
@@ -113,26 +114,47 @@ def plot(summary, output):
             ax.set_xscale("log", base=2)
             ax.set_xticks(summary["protocol"]["sequences"], labels=[str(s) for s in summary["protocol"]["sequences"]])
             ax.grid(alpha=.2)
-            ax.set_ylim(bottom=0)
+            upper = max((max(line.get_ydata()) for line in ax.lines if len(line.get_ydata())), default=1)
+            ax.set_ylim(0, upper * 1.15)
         axes[0, col].set_ylabel("Training token/s (median; band = min/max)")
         axes[1, col].set_ylabel("Peak PyTorch allocated (GiB, median)")
         axes[1, col].set_xlabel("Sequence tokens, batch = 1")
         axes[0, col].legend(fontsize=8)
-    fig.suptitle("7.028B on RTX PRO 6000: context length vs recomputation\nSynthetic tokens; 2 warmup + 6 measured updates per process; 3 process repeats", fontsize=12)
+    counts = [g["complete_pairs"] for g in summary["groups"]] or [0]
+    coverage = str(min(counts)) if min(counts) == max(counts) else f"{min(counts)}-{max(counts)}"
+    fig.suptitle("7.028B on RTX PRO 6000: context length vs recomputation\n"
+                 f"Synthetic tokens; 2 warmup + 6 measured updates; valid repeats per setting: {coverage}/3", fontsize=12)
     fig.savefig(output, dpi=160)
     plt.close(fig)
 
 
 def markdown(summary):
+    campaign = summary["campaign"]
+    timing = (f"实际起止（UTC）：{campaign['started_utc']} 至 {campaign['finished_utc']}；总计 {campaign['wall_seconds']:.1f} 秒。"
+              if "finished_utc" in campaign else f"开始时间（UTC）：{campaign['started_utc']}；当前为未完成快照，不能当作整轮结果。")
     lines = ["# 010 · 7B 上下文与重算实测", "", "同一随机初始化的 7,028,273,152 参数 GPT，batch 1，合成 token。表格仅纳入通过数值与输入审计的完整配对，报告进程重复中位数。", "",
              f"完成状态：`{summary['campaign']['state']}`；记录 {sum(summary['status_counts'].values())} 个进程，状态 `{summary['status_counts']}`，有效配对 {summary['valid_pairs']}/{summary['planned_pairs']}。",
-             f"实际起止（UTC）：{summary['campaign']['started_utc']} 至 {summary['campaign']['finished_utc']}；总计 {summary['campaign']['wall_seconds']:.1f} 秒。", "",
+             timing, "",
              "![上下文长度与重算曲线](context-scaling.png)", "", "| 更新方式 | 长度 | 重算 | 完整配对 | token/s | 峰值 allocated GiB |", "| --- | ---: | --- | ---: | ---: | ---: |"]
     for g in summary["groups"]:
         lines.append(f"| {g['mode']} | {g['sequence']} | {'开' if g['checkpoint'] else '关'} | {g['complete_pairs']} | {g['tokens_per_second_median']:.1f} | {g['peak_allocated_gib_median']:.2f} |")
+    lookup = {(g["mode"], g["sequence"], g["checkpoint"]): g for g in summary["groups"]}
+    longest = max(summary["protocol"]["sequences"])
+    lines += ["", "最高已测长度的取舍（两侧分别取中位数）："]
+    for mode in summary["protocol"]["modes"]:
+        a, b = [lookup.get((mode, longest, ac)) for ac in (False, True)]
+        if a and b:
+            memory = 100 * (1 - b["peak_allocated_gib_median"] / a["peak_allocated_gib_median"])
+            speed = 100 * (1 - b["tokens_per_second_median"] / a["tokens_per_second_median"])
+            lines += ["", f"- `{mode}`，{longest} token：重算使峰值 allocated 降低 {memory:.1f}%，训练吞吐降低 {speed:.1f}%。"]
+    lines += ["", "这是 batch 1 下的实测范围，不能当成显卡的最大上下文或最大 batch。是否开启重算，应按实际显存余量与吞吐取舍。"]
     valid = [p for p in summary["pairs"] if p["valid"]]
     if valid:
         lines += ["", f"配对最大逐步 loss 差 {max(p['max_loss_gap'] for p in valid):.8g}；最大梯度范数相对差 {max(p['max_grad_relative_gap'] for p in valid):.8g}。两种实现均有所有可训练参数的梯度和可测参数改动。"]
+    telemetry = summary["telemetry"]
+    lines += ["", f"硬件采样 {telemetry['samples']} 条，目标间隔 {telemetry['nominal_interval_seconds']} 秒。"]
+    if "temperature_c" in telemetry and "power_w" in telemetry:
+        lines += [f"温度最高 {telemetry['temperature_c']['max']:.0f} °C，采样功率最高 {telemetry['power_w']['max']:.1f} W。这些值覆盖进程初始化和间隙，不只是更新步骤。"]
     lines += ["", "原始进程 JSON、配对审计 `summary.json`、扁平表 `runs.csv`、设备采样 `telemetry.csv` 与源码 SHA-256 `sources.json` 一并公开。峰值 allocated 不含驱动/其他进程，设备采样是离散点，不替代分配器峰值。耗时包含检查与裁剪，未包含合成数据生成与上传。",
               "", "短测重复的范围不是统计置信区间。BF16 参数与 Adafactor 没有 FP32 主权重；本结果不证明该精度方案长训稳定，也不代表现成 7B 架构的吞吐。没有把随机模型作为中文能力模型发布。", "",
               "复现与重画见[实验入口](../../README.md)。"]
@@ -152,7 +174,10 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     plot(summary, args.out / "context-scaling.png")
-    (args.out / "README.md").write_text(markdown(summary))
+    text = markdown(summary)
+    if (args.root / "aborted-nondeterministic").exists():
+        text += "\n首批未启用确定性算法的测量在数值审计失败后中止，整批排除在上述结果之外。[失败记录与修订说明](aborted-nondeterministic/) 保留原始协议和指标。\n"
+    (args.out / "README.md").write_text(text)
     print(json.dumps(dict(valid_pairs=summary["valid_pairs"], planned_pairs=summary["planned_pairs"], statuses=summary["status_counts"])))
 
 

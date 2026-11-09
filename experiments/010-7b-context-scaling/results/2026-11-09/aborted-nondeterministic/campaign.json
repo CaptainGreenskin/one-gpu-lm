@@ -1,0 +1,74 @@
+{
+  "started_utc": "2026-11-09T03:28:40.412322+00:00",
+  "planned_trials": 48,
+  "records": [
+    {
+      "name": "full-adafactor-s512-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.630231654999079
+    },
+    {
+      "name": "full-adafactor-s512-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.4784776759915985
+    },
+    {
+      "name": "lora-adamw-s512-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 4.624194214993622
+    },
+    {
+      "name": "lora-adamw-s512-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.02421890097321
+    },
+    {
+      "name": "full-adafactor-s1024-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.828997719014296
+    },
+    {
+      "name": "full-adafactor-s1024-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 7.131818135996582
+    },
+    {
+      "name": "lora-adamw-s1024-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 4.7748004109889735
+    },
+    {
+      "name": "lora-adamw-s1024-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.125280455016764
+    },
+    {
+      "name": "full-adafactor-s2048-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 7.779076643026201
+    },
+    {
+      "name": "full-adafactor-s2048-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 8.582710037997458
+    },
+    {
+      "name": "lora-adamw-s2048-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 5.7766226649982855
+    },
+    {
+      "name": "lora-adamw-s2048-ac1-r0",
+      "status": "ok",
+      "process_wall_seconds": 6.177608494006563
+    },
+    {
+      "name": "full-adafactor-s4096-ac0-r0",
+      "status": "ok",
+      "process_wall_seconds": 10.48835557300481
+    }
+  ],
+  "state": "aborted_numerical_audit",
+  "driver_version": "595.99.02",
+  "aborted_reason": "Paired BF16 loss exceeded preregistered tolerance; retain records, investigate deterministic backward before repeating."
+}

@@ -1,0 +1,105 @@
+{
+  "mode": "lora-adamw",
+  "sequence": 1024,
+  "checkpoint": false,
+  "repeat": 0,
+  "batch": 1,
+  "config": [
+    4096,
+    32,
+    32,
+    4096,
+    32000,
+    18048
+  ],
+  "records": [
+    {
+      "step": 1,
+      "warmup": true,
+      "seconds": 0.64105340000242,
+      "loss": 11.20255184173584,
+      "grad_norm": 0.11028774082660675
+    },
+    {
+      "step": 2,
+      "warmup": true,
+      "seconds": 0.10110297097708099,
+      "loss": 11.152881622314453,
+      "grad_norm": 0.10980089753866196
+    },
+    {
+      "step": 3,
+      "warmup": false,
+      "seconds": 0.10737937199883163,
+      "loss": 11.19427490234375,
+      "grad_norm": 0.13726504147052765
+    },
+    {
+      "step": 4,
+      "warmup": false,
+      "seconds": 0.10983615298755467,
+      "loss": 11.24150562286377,
+      "grad_norm": 0.18766500055789948
+    },
+    {
+      "step": 5,
+      "warmup": false,
+      "seconds": 0.1107488890120294,
+      "loss": 11.154966354370117,
+      "grad_norm": 0.24085849523544312
+    },
+    {
+      "step": 6,
+      "warmup": false,
+      "seconds": 0.11120998198748566,
+      "loss": 11.136062622070312,
+      "grad_norm": 0.29503461718559265
+    },
+    {
+      "step": 7,
+      "warmup": false,
+      "seconds": 0.11135604599257931,
+      "loss": 11.070581436157227,
+      "grad_norm": 0.353059858083725
+    },
+    {
+      "step": 8,
+      "warmup": false,
+      "seconds": 0.11137568799313158,
+      "loss": 11.196590423583984,
+      "grad_norm": 0.41831687092781067
+    }
+  ],
+  "protocol_sha256": "c1f089ef42a373e4b1b8048cca298b2c017722bc593b1580a2efaa6d9633652e",
+  "scope": "Random weights and synthetic token IDs; capacity and short-step performance only. No convergence claim.",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "python": "3.10.12",
+  "free_before_bytes": 101076566016,
+  "device_memory_bytes": 101970345984,
+  "allocator_cap_bytes": 94489280512,
+  "deterministic_algorithms": true,
+  "base_parameters": 7028273152,
+  "initial_probe_sha256": "b6dffab283dd49d5f98ade78f7d6f39cf0da517b4b6430a623c038712fcbf5bb",
+  "trainable_parameters": 4194304,
+  "parameter_bytes": 14073323520,
+  "parameter_dtype": "torch.bfloat16",
+  "adapter_dtype": "torch.float32",
+  "initialization_seconds": 0.10731539101107046,
+  "input_sha256": "0c61339e7f0a16f1ed307191209cca2f156f43d58ca0ec675ec6c171b88ba85f",
+  "status": "ok",
+  "probe_max_abs_updates": [
+    0.0023367544636130333,
+    0.002337079029530287
+  ],
+  "trainable_elements_with_gradient": 4194304,
+  "gradient_bytes": 16777216,
+  "optimizer_state_bytes": 33554688,
+  "tokens_per_second": 9282.2829730607,
+  "peak_allocated_bytes": 18342618624,
+  "peak_reserved_bytes": 18559795200,
+  "trial_body_seconds": 2.6807563430047594,
+  "process_wall_seconds": 4.825040373019874,
+  "returncode": 0
+}

@@ -1,0 +1,75 @@
+{
+  "status_counts": {
+    "ok": 13
+  },
+  "valid_pairs": 2,
+  "pairs": [
+    {
+      "mode": "full-adafactor",
+      "sequence": 512,
+      "repeat": 0,
+      "valid": false,
+      "reason": "numerical_mismatch",
+      "max_loss_gap": 0.00133514404296875,
+      "max_grad_relative_gap": 0.0,
+      "throughput_ratio_checkpoint_over_plain": 0.8841719206499432,
+      "allocated_reduction_fraction": 2.7229921372162735e-05
+    },
+    {
+      "mode": "full-adafactor",
+      "sequence": 1024,
+      "repeat": 0,
+      "valid": false,
+      "reason": "numerical_mismatch",
+      "max_loss_gap": 0.001018524169921875,
+      "max_grad_relative_gap": 0.0,
+      "throughput_ratio_checkpoint_over_plain": 0.8747091396808659,
+      "allocated_reduction_fraction": 0.0
+    },
+    {
+      "mode": "full-adafactor",
+      "sequence": 2048,
+      "repeat": 0,
+      "valid": true,
+      "reason": "ok",
+      "max_loss_gap": 0.0008325576782226562,
+      "max_grad_relative_gap": 0.0,
+      "throughput_ratio_checkpoint_over_plain": 0.8587287051013355,
+      "allocated_reduction_fraction": -3.621418085075767e-05
+    },
+    {
+      "mode": "lora-adamw",
+      "sequence": 512,
+      "repeat": 0,
+      "valid": false,
+      "reason": "numerical_mismatch",
+      "max_loss_gap": 0.002349853515625,
+      "max_grad_relative_gap": 0.002357999861294126,
+      "throughput_ratio_checkpoint_over_plain": 0.5326083757296902,
+      "allocated_reduction_fraction": 0.10301980131590183
+    },
+    {
+      "mode": "lora-adamw",
+      "sequence": 1024,
+      "repeat": 0,
+      "valid": false,
+      "reason": "numerical_mismatch",
+      "max_loss_gap": 0.0013751983642578125,
+      "max_grad_relative_gap": 0.0013584937146850302,
+      "throughput_ratio_checkpoint_over_plain": 0.6980782747827304,
+      "allocated_reduction_fraction": 0.1828703395496165
+    },
+    {
+      "mode": "lora-adamw",
+      "sequence": 2048,
+      "repeat": 0,
+      "valid": true,
+      "reason": "ok",
+      "max_loss_gap": 0.0009412765502929688,
+      "max_grad_relative_gap": 0.00044308739505753995,
+      "throughput_ratio_checkpoint_over_plain": 0.7442099185029007,
+      "allocated_reduction_fraction": 0.2970716178358924
+    }
+  ],
+  "included_in_final_aggregates": false
+}
