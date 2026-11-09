@@ -33,6 +33,16 @@ class SandboxChecks(unittest.TestCase):
             score = self.sandbox.execute(Path(tmp), ["/usr/bin/python3", "-c", "while True: pass"], timeout=1)
         self.assertFalse(score["ok"])
 
+    def test_readonly_dependency_mount_and_stderr(self):
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as dep:
+            (Path(dep) / 'value').write_text('pinned')
+            sandbox = Sandbox(readonly_mounts=[(dep, '/opt/dependency')])
+            result = sandbox.execute(Path(tmp), ['/bin/bash', '-c', 'cat /opt/dependency/value; echo changed > /opt/dependency/value'])
+            self.assertNotEqual(result['returncode'], 0)
+            self.assertEqual(result['stdout'], 'pinned')
+            self.assertIn('Read-only', result['stderr'])
+            self.assertEqual((Path(dep) / 'value').read_text(), 'pinned')
+
 
 if __name__ == "__main__":
     unittest.main()

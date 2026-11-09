@@ -15,8 +15,11 @@ def extract_code(text):
 
 
 class Sandbox:
-    def __init__(self, node=None):
+    def __init__(self, node=None, *, readonly_mounts=(), environment=None, virtual_memory_gib=2):
         self.node = Path(node).resolve() if node else None
+        self.readonly_mounts = [(Path(source).resolve(), str(destination)) for source, destination in readonly_mounts]
+        self.environment = dict(environment or {})
+        self.virtual_memory_gib = virtual_memory_gib
 
     def execute(self, root, command, stdin="", timeout=10, node=False):
         args = ["bwrap", "--unshare-all", "--die-with-parent", "--new-session",
@@ -29,11 +32,17 @@ class Sandbox:
             if not self.node:
                 raise ValueError("JavaScript requires an explicit Node binary")
             args += ["--ro-bind", str(self.node), "/node"]
+        for source, destination in self.readonly_mounts:
+            if not source.exists() or not destination.startswith("/"):
+                raise ValueError("Invalid readonly runtime mount")
+            args += ["--ro-bind", str(source), destination]
+        for key, value in self.environment.items():
+            args += ["--setenv", key, value]
         args += ["--"] + command
 
         def limits():
             resource.setrlimit(resource.RLIMIT_CPU, (timeout, timeout + 1))
-            resource.setrlimit(resource.RLIMIT_AS, ((16 if node else 2) * 2**30,) * 2)
+            resource.setrlimit(resource.RLIMIT_AS, ((16 if node else self.virtual_memory_gib) * 2**30,) * 2)
             resource.setrlimit(resource.RLIMIT_FSIZE, (4 * 2**20,) * 2)
             resource.setrlimit(resource.RLIMIT_NOFILE, (64, 64))
             resource.setrlimit(resource.RLIMIT_NPROC, (128, 128))
@@ -51,10 +60,13 @@ class Sandbox:
                 return {"ok": False, "reason": "timeout"}
             output.seek(0)
             raw = output.read(2**20 + 1)
+            error.seek(0)
+            stderr = error.read(2**20)
             if len(raw) > 2**20:
                 return {"ok": False, "reason": "output_limit"}
             return {"ok": proc.returncode == 0, "reason": "ok" if proc.returncode == 0 else "runtime_error",
-                    "stdout": raw.decode(errors="replace")}
+                    "stdout": raw.decode(errors="replace"), "stderr": stderr.decode(errors="replace"),
+                    "returncode": proc.returncode}
 
     def score(self, task, code):
         language = task["language"]

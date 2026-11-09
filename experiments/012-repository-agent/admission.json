@@ -1,0 +1,1192 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-09T08:54:53.088954+00:00",
+  "task_spec_sha256": "9cf8ccf8734a739630959314b544f637fba269f4ad40af921b19ca97b9ce10a7",
+  "clean": [
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.4207440230238717,
+      "reason": "ok"
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 5.731775394990109,
+      "reason": "ok"
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 31.936508284998126,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.46953390300041065,
+      "reason": "ok"
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.76795239400235,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 9.243047550000483,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "boltons-camel2under",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-camel2under",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "7117b29f627677a427edafed2eeb6bb4ec4ec37ded39935adec5fe318e1762c1"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4218657030141912,
+        "reason": "ok"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.421488613996189,
+        "reason": "ok"
+      },
+      "admitted": false
+    },
+    {
+      "id": "boltons-slugify",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-slugify",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "dd05564f05cce68def16e34f53560218e6a5bc75c0053c5fbe707e6082074927"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.4215558379946742,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.3712857399950735,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-ordinalize",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-ordinalize",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "54d260a43b613bfd715ef96e28bbfb629d217225c754eb92143adc46903c214d"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4221626239886973,
+        "reason": "ok"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4217244439932983,
+        "reason": "ok"
+      },
+      "admitted": false
+    },
+    {
+      "id": "boltons-pluralize",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-pluralize",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "1c0a4118e3510638c98a9c5cdb8430dca7864c5d5f6c7215de7eeef364a40a44"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.4717899219831452,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.3719007020117715,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-bytes2human",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-bytes2human",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "aee538dd6f7549691e08f8354a3be29f7dbc862e3d37de74b27e88fcb7728609"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.4217294720001519,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.421639848005725,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-asciify",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:text-asciify",
+      "source_files": [
+        "boltons/strutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/strutils.py": "3d4941ebbd4b4a3a5d7bd9db11651a467ba6f4be34fc0ab7355128fc0ec646be"
+      },
+      "reference_sha256": {
+        "boltons/strutils.py": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.421874890977051,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4213068269891664,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:cache-make_cache_key",
+      "source_files": [
+        "boltons/cacheutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/cacheutils.py": "4be91e6c9ffef7b52f3691ddc46ad4ce4747a81636ff8732792bf28fd0ba846f"
+      },
+      "reference_sha256": {
+        "boltons/cacheutils.py": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.5219721879984718,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4214834139856976,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:cache-LRI.__setitem__",
+      "source_files": [
+        "boltons/cacheutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/cacheutils.py": "0fb14ce39116429d46d6222d2be00818da3f2f6f9dacdb253f25e28e5b150ec2"
+      },
+      "reference_sha256": {
+        "boltons/cacheutils.py": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.7722358529863413,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.42189894898911,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:cache-LRU.__getitem__",
+      "source_files": [
+        "boltons/cacheutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/cacheutils.py": "b5e11c0fd6b112604b208f1bbd5b38b5cbbde1745fb580eb8e576c46140d96e6"
+      },
+      "reference_sha256": {
+        "boltons/cacheutils.py": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.5708534529840108,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4220768450177275,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-multi-dict",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:multi-dict",
+      "source_files": [
+        "boltons/dictutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/dictutils.py": "160b80e13fa7e8f5065a998c3e8c2fc8d1e7114fd3364cc8aab0a347a9583b17"
+      },
+      "reference_sha256": {
+        "boltons/dictutils.py": "68d9a7a55dd50b577d470d0df4f537e57f056da6e4749014d408c153bc8b1e7f"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.6217626609723084,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.421805010002572,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-research",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:tree-search",
+      "source_files": [
+        "boltons/iterutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/iterutils.py": "4d3a3cf2f31e788fd22296bb95e72041e64731cf762c43e45fe20b5fcd621437"
+      },
+      "reference_sha256": {
+        "boltons/iterutils.py": "8f62bb690159f7d88eb3bbf38caa15df7d0495b4022ba175fc716629c1495241"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.4712848470080644,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4221930380153935,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "family": "mahmoud/boltons:cache-frozen-integration",
+      "source_files": [
+        "boltons/cacheutils.py",
+        "boltons/dictutils.py"
+      ],
+      "broken_sha256": {
+        "boltons/cacheutils.py": "4be91e6c9ffef7b52f3691ddc46ad4ce4747a81636ff8732792bf28fd0ba846f",
+        "boltons/dictutils.py": "95e5473530ffb1d3028d499c20493ace8affb48e72b4b3620ffa381372a1680a"
+      },
+      "reference_sha256": {
+        "boltons/cacheutils.py": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80",
+        "boltons/dictutils.py": "68d9a7a55dd50b577d470d0df4f537e57f056da6e4749014d408c153bc8b1e7f"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.521994689013809,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.4223346959915943,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-index-nan",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:index-search",
+      "source_files": [
+        "modules/_createIndexFinder.js"
+      ],
+      "broken_sha256": {
+        "modules/_createIndexFinder.js": "cf025cb813a8c96b65cb890dbb383ddcc2d93a1f3e3f294e9ca0e16c30296b3e"
+      },
+      "reference_sha256": {
+        "modules/_createIndexFinder.js": "6c280755c03f6b2783522ec522b4bbaec633e567b4641588fc8ade9708a6e575"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.733378926990554,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.732629589008866,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-defaults",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:object-defaults",
+      "source_files": [
+        "modules/_createAssigner.js"
+      ],
+      "broken_sha256": {
+        "modules/_createAssigner.js": "bdb51ef708f125ebacb0665d823a6ebb0d20ca1f9ab9cf4cc3fae500cc34b1e9"
+      },
+      "reference_sha256": {
+        "modules/_createAssigner.js": "728247543f2c01aa503e9ca0995cc1cdea0269b8c88e8b4acef489241c5966c6"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732204415020533,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.731894925003871,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:reductions",
+      "source_files": [
+        "modules/_createReduce.js"
+      ],
+      "broken_sha256": {
+        "modules/_createReduce.js": "bf4dcd24fe74036494488d4f91264448c2957c8bee763e7784f340b7bdd260aa"
+      },
+      "reference_sha256": {
+        "modules/_createReduce.js": "761effc6ffd6129128dbc87b6a3d0fb822106f98e4455dcac05f74e4a6f3b619"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732784660998732,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.733455873007188,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-flatten-depth",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:flatten-depth",
+      "source_files": [
+        "modules/_flatten.js"
+      ],
+      "broken_sha256": {
+        "modules/_flatten.js": "c3b0624cdbc4b6bfc6d35477a24798916db1347b12e6a9eb3718cb07a4661fff"
+      },
+      "reference_sha256": {
+        "modules/_flatten.js": "fcb73e8bcbab8c387f9f517717c69e120d3408954850b78079645d722842d556"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": -1,
+        "seconds": 5.735088519984856,
+        "reason": "output_limit"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.782924232014921,
+        "reason": "ok"
+      },
+      "admitted": false
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:unique-projection",
+      "source_files": [
+        "modules/uniq.js"
+      ],
+      "broken_sha256": {
+        "modules/uniq.js": "e4a493ea55df9f6760fbe5afe5e9377f63550af1dbf3eeb1acde166f2ffa334d"
+      },
+      "reference_sha256": {
+        "modules/uniq.js": "62adc926561bd9f8d884ec557f7eeb41f5349f6ac69efcecd11e82683e76c2ee"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732465011009481,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.732883581978967,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-intersection",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:intersection",
+      "source_files": [
+        "modules/intersection.js"
+      ],
+      "broken_sha256": {
+        "modules/intersection.js": "7d2130a95148a90aed4990310299f7a9e0d976d62333d16c936b07aa49a8176c"
+      },
+      "reference_sha256": {
+        "modules/intersection.js": "061258a7306a9b12b35d408c797fb48351b1b873c2aa6b43eab55c75a2e36723"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.7330535420042,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.732248758984497,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-difference",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:difference",
+      "source_files": [
+        "modules/difference.js"
+      ],
+      "broken_sha256": {
+        "modules/difference.js": "d017fb61599826fc8fd05fb865eb0df86ad3a4cfecd15954aa3e07956eedebc6"
+      },
+      "reference_sha256": {
+        "modules/difference.js": "2d9be0911858a6157c10be7ba3971b1f6ef4028da6750cd3dfdb77700666e1b8"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732740615989314,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.681766348017845,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-stable-sort",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:stable-sorting",
+      "source_files": [
+        "modules/sortBy.js"
+      ],
+      "broken_sha256": {
+        "modules/sortBy.js": "4677869845ab4efa9600cac720ee419d806582e5a1bdb8a209d4395bb743c772"
+      },
+      "reference_sha256": {
+        "modules/sortBy.js": "5b686208341485708e976f37282a97c5eae763e77c94f8e86bcd5c0026839f79"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.729972573986743,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.782554261997575,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-range-step",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:arithmetic-range",
+      "source_files": [
+        "modules/range.js"
+      ],
+      "broken_sha256": {
+        "modules/range.js": "076ec9367e4d630a03390bcb72c837f2786779da0b64340273890368352a7e24"
+      },
+      "reference_sha256": {
+        "modules/range.js": "02c800f074e227eef2c9b59546440ddb866f6d615cc6563e26580bcc328e346d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732543698977679,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.732592861982994,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-object-pairs",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:pair-to-object",
+      "source_files": [
+        "modules/object.js"
+      ],
+      "broken_sha256": {
+        "modules/object.js": "0e811a6656069b86bfb71f4072acb3a540a72a22ed5e1806b05efe9832b7e445"
+      },
+      "reference_sha256": {
+        "modules/object.js": "3c2b6d2100f432a6f00c216be915b04fe44ba207e3c40356ba9e2cca7f5cc115"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.732992132019717,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.733163445984246,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-map-object",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:object-mapping",
+      "source_files": [
+        "modules/mapObject.js"
+      ],
+      "broken_sha256": {
+        "modules/mapObject.js": "f995d22eac59985c266dac7f68757cb61e5e98ec9fa9ffc301c8c7a165ac9bf4"
+      },
+      "reference_sha256": {
+        "modules/mapObject.js": "cb18fb48039cd0f7e6730f1b4c1f71a5595560d2cbb5849a333b231deed0b43f"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.7339441560034174,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.733822529000463,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "underscore-group-partition",
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "family": "jashkenas/underscore:group-partition-integration",
+      "source_files": [
+        "modules/groupBy.js",
+        "modules/partition.js"
+      ],
+      "broken_sha256": {
+        "modules/groupBy.js": "5024ae3c0005171affc5f6f2b8a91c79f5e36936c78008d1bb94e41c1b9a9ef2",
+        "modules/partition.js": "f066ce5fdfa93b8a5588769cab48288a498f337e125c99ead4aa8c416a25f23f"
+      },
+      "reference_sha256": {
+        "modules/groupBy.js": "9ece5108c9f6757f3dc0c5ff0f70bc48049a946fc84c04c5349bd666c34ae633",
+        "modules/partition.js": "c46d1f8f0127c66a7e45510e72d6824aee711be2534f627c5db25463558824b6"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.733145368023543,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.733312632015441,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-windowed",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-windowed",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "890b4766d94c9d10465bf31e4a3d9253b47ec4d752f15d69bd75bde021e6cdf9"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 40.35396758001298,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 31.988751427998068,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-spy",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-spy",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "873501983770a32a816c366b697cd003ffdc087d0042db67e4e18e963241943a"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 33.94279144000029,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 31.889994054014096,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-split_at",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-split_at",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "729e9b9971fc00d420576fc2d60d6faab52e896f9eda26c84b5d11d56af87d3f"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 36.74752278099186,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 32.03916732801008,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-consume-and-window",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-recipes-integration",
+      "source_files": [
+        "more_itertools/more.py",
+        "more_itertools/recipes.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "890b4766d94c9d10465bf31e4a3d9253b47ec4d752f15d69bd75bde021e6cdf9",
+        "more_itertools/recipes.py": "f3bfde732461e2f4d85f0f93df49fbca0f713231b3931b1e52fb54f32b69e4df"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d",
+        "more_itertools/recipes.py": "468ab191bbb5fd62e8603d741e6983acdfa9d697d0ff9252b0c56ffdd24ca9bc"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 41.559181118995184,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 32.48823620102485,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-nan",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:nan-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "707e8e4bf749845bf62d935da8618595a05f28c6e8b689d3fb430da461a9a42c"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 180,
+        "seconds": 0.37087822798639536,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.32024472500779666,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-array-members",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:array-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "d803513b7bb6629556d47ad8160ea529f0856fd9e2b64da8e62c15b77a121b51"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 60,
+        "seconds": 0.3195271379954647,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3708149100129958,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-map-values",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:map-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "6ebf827de69ae9573df1bbd8bab7ebb3699de68f550a274358e1309486b63637"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 16,
+        "seconds": 0.37011828197864816,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3208228389848955,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-regexp-flags",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:regexp-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "058291cda7df2e5f4fb7da92d46660683b4b5ff564fdbd85497a2a5f349a769c"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 8,
+        "seconds": 0.36922462200163864,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.7210323290200904,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-asdict",
+      "repository": "python-attrs/attrs",
+      "split": "test",
+      "family": "python-attrs/attrs:class-serialization",
+      "source_files": [
+        "src/attr/_funcs.py"
+      ],
+      "broken_sha256": {
+        "src/attr/_funcs.py": "58b75e7670563cda1c52ea7ee7da2e4f1a01103e6b11176c308cc8a6fa800ce7"
+      },
+      "reference_sha256": {
+        "src/attr/_funcs.py": "eb6623ffeb7a3052483a39635fda25da4ebbe36e4ca6d8dfe66d6e02d8ed9b88"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 22.0179334700224,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.73238199899788,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-to-bool",
+      "repository": "python-attrs/attrs",
+      "split": "test",
+      "family": "python-attrs/attrs:class-converters",
+      "source_files": [
+        "src/attr/converters.py"
+      ],
+      "broken_sha256": {
+        "src/attr/converters.py": "e1fa92376f10f7c7692bed62d15f1a6329cd67e5571c47a132b20c1b8065fc04"
+      },
+      "reference_sha256": {
+        "src/attr/converters.py": "be3ce4f8ee6feb27a881b13a734665690fe4c81cfe030089c648f428229a8ed7"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.839681601995835,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.632849071989767,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-optional-validator",
+      "repository": "python-attrs/attrs",
+      "split": "test",
+      "family": "python-attrs/attrs:class-validators",
+      "source_files": [
+        "src/attr/validators.py"
+      ],
+      "broken_sha256": {
+        "src/attr/validators.py": "1f0a21d6e4b271efab5bd9f12385f522887105fe0c20e2e59a1f1427ae164823"
+      },
+      "reference_sha256": {
+        "src/attr/validators.py": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 2,
+        "seconds": 1.1694034299871419,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 7.986603223020211,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-filters-and-tuples",
+      "repository": "python-attrs/attrs",
+      "split": "test",
+      "family": "python-attrs/attrs:class-filters-serialization",
+      "source_files": [
+        "src/attr/_funcs.py",
+        "src/attr/filters.py"
+      ],
+      "broken_sha256": {
+        "src/attr/_funcs.py": "b2404be25f72a95879df09505aa23e0f133a71816f170d6c096bb958b61585cc",
+        "src/attr/filters.py": "3840f58b850f60b23e097917ef63d2d13bd82d8d4bdee4919068183595a80011"
+      },
+      "reference_sha256": {
+        "src/attr/_funcs.py": "eb6623ffeb7a3052483a39635fda25da4ebbe36e4ca6d8dfe66d6e02d8ed9b88",
+        "src/attr/filters.py": "64188a58ba774742df099b2aed7d75a67f565fc36c952db05cce23b272ce19cf"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 25.17413093900541,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.581641520984704,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-arguments",
+      "repository": "sindresorhus/p-limit",
+      "split": "test",
+      "family": "sindresorhus/p-limit:async-arguments",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "8e183dc42904984508bb490c658379e2a28d7d1ce6c5789f5d3e66cfaa3ff677"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 9.442990307987202,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.092850674001966,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-pending-count",
+      "repository": "sindresorhus/p-limit",
+      "split": "test",
+      "family": "sindresorhus/p-limit:async-observability",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "47958037f07c8621cb63a9f2f15526fc4eb64eefadbdcd9346e5ddca08f05fc3"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 6.936498139984906,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.143420487002004,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-map-index",
+      "repository": "sindresorhus/p-limit",
+      "split": "test",
+      "family": "sindresorhus/p-limit:async-mapping",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "544f721a9516135ee307a9d04b3f90bff7b0f195b8ba23ede931a081767af55f"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 9.393676120002056,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.3446695630264,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-infinite-limit",
+      "repository": "sindresorhus/p-limit",
+      "split": "test",
+      "family": "sindresorhus/p-limit:async-validation",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "ec453632858f6ffe82faba6b19bcbb0e1f4f2a20b2da416610fee96e93b271ad"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.44471906797844,
+        "reason": "ok"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.193719319999218,
+        "reason": "ok"
+      },
+      "admitted": false
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-09T09:06:03.548863+00:00",
+  "admitted": 36
+}
