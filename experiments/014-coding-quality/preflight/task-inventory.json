@@ -1,0 +1,386 @@
+[
+  {
+    "id": "boltons-slugify",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:text-slugify",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-pluralize",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:text-pluralize",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-bytes2human",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:text-bytes2human",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-asciify",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:text-asciify",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-make_cache_key",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:cache-make_cache_key",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-LRI-__setitem__",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:cache-LRI.__setitem__",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-LRU-__getitem__",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:cache-LRU.__getitem__",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-multi-dict",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:multi-dict",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-research",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:tree-search",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-cache-and-frozen",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "split": "train",
+    "family": "mahmoud/boltons:cache-frozen-integration",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-index-nan",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:index-search",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-defaults",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:object-defaults",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-reduce-initial",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:reductions",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-uniq-iteratee",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:unique-projection",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-intersection",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:intersection",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-difference",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:difference",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-stable-sort",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:stable-sorting",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-range-step",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:arithmetic-range",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-object-pairs",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:pair-to-object",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-map-object",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:object-mapping",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-group-partition",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "split": "train",
+    "family": "jashkenas/underscore:group-partition-integration",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "more-itertools-windowed",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "split": "dev",
+    "family": "more-itertools/more-itertools:iterator-windowed",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-spy",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "split": "dev",
+    "family": "more-itertools/more-itertools:iterator-spy",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-split_at",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "split": "dev",
+    "family": "more-itertools/more-itertools:iterator-split_at",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-consume-and-window",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "split": "dev",
+    "family": "more-itertools/more-itertools:iterator-recipes-integration",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-nan",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "split": "dev",
+    "family": "epoberezkin/fast-deep-equal:nan-equality",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-array-members",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "split": "dev",
+    "family": "epoberezkin/fast-deep-equal:array-equality",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-map-values",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "split": "dev",
+    "family": "epoberezkin/fast-deep-equal:map-equality",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-regexp-flags",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "split": "dev",
+    "family": "epoberezkin/fast-deep-equal:regexp-equality",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "attrs-asdict",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "split": "dev",
+    "family": "python-attrs/attrs:class-serialization",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-to-bool",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "split": "dev",
+    "family": "python-attrs/attrs:class-converters",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-optional-validator",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "split": "dev",
+    "family": "python-attrs/attrs:class-validators",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-filters-and-tuples",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "split": "dev",
+    "family": "python-attrs/attrs:class-filters-serialization",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-arguments",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "split": "dev",
+    "family": "sindresorhus/p-limit:async-arguments",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-pending-count",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "split": "dev",
+    "family": "sindresorhus/p-limit:async-observability",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-map-index",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "split": "dev",
+    "family": "sindresorhus/p-limit:async-mapping",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "new-jmes-filter",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-filter-projection",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-jmes-multiselect",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-object-syntax",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-jmes-sort-expression",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-expression-sort",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-jmes-raw-string",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-raw-string-lexer",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-jmes-index-slice",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-index-slice",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-jmes-pipe-map",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "test",
+    "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-key-order",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-comparator",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-undefined",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-to-json",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-nonfinite",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+    "evaluation_role": "new_repository_holdout"
+  },
+  {
+    "id": "new-json-cycle-reuse",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "test",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+    "evaluation_role": "new_repository_holdout"
+  }
+]

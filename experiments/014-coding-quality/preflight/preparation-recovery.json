@@ -1,0 +1,14 @@
+{
+  "status": "recovered_before_model_rollouts",
+  "reason": "Preparation wrapper referenced non-existent repo_lab.test_linux; correct repo_lab.test_recovery_linux suite independently passed 46 checks. No task or training input changed.",
+  "original_failure": {
+    "stage": "linux-contracts",
+    "complete": false,
+    "updated_epoch": 1794236980.4766545,
+    "error_type": "CalledProcessError"
+  },
+  "checks": {
+    "passed": true,
+    "summary": "..............................................\n----------------------------------------------------------------------\nRan 46 tests in 3.209s\n\nOK\n"
+  }
+}
