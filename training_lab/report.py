@@ -7,20 +7,31 @@ from pathlib import Path
 from .records import sha256, write_json
 
 
-def render(run):
-    read = lambda name: json.loads((run / name).read_text())
-    result, profile, data = read("result.json"), read("profile.json"), read("data.json")
+def paired_summary(result, expected_tasks):
     if result["status"] != "completed":
         raise ValueError("Cannot make a completed model card from an incomplete run")
     base, adapted = result["baseline"], result["adapted"]
     if [r["id"] for r in base] != [r["id"] for r in adapted]:
         raise ValueError("Unpaired evaluation")
+    if not base or len(base) != expected_tasks or len({r["id"] for r in base}) != len(base):
+        raise ValueError("Incomplete or duplicate evaluation tasks")
     base_pass, adapted_pass = sum(r["passed"] for r in base), sum(r["passed"] for r in adapted)
     regressions = [a["id"] for b, a in zip(base, adapted) if b["passed"] and not a["passed"]]
     improvements = [a["id"] for b, a in zip(base, adapted) if not b["passed"] and a["passed"]]
-    summary = {"schema_version": 1, "pairs": len(base), "baseline_passed": base_pass,
+    return {"schema_version": 1, "pairs": len(base), "baseline_passed": base_pass,
         "adapted_passed": adapted_pass, "regressions": regressions, "improvements": improvements,
-        "quality_conclusion": "smoke_only_no_general_quality_claim", "daily_model_accepted": False}
+        "quality_conclusion": "smoke_only_no_general_quality_claim", "regression_check_passed": not regressions,
+        "daily_model_accepted": False,
+        "rejection_reason": "heldout_regressions" if regressions else "smoke_scope_only"}
+
+
+def render(run):
+    read = lambda name: json.loads((run / name).read_text())
+    result, profile, data = read("result.json"), read("profile.json"), read("data.json")
+    summary = paired_summary(result, data["splits"]["test"]["records"])
+    base, adapted = result["baseline"], result["adapted"]
+    base_pass, adapted_pass = summary["baseline_passed"], summary["adapted_passed"]
+    regressions, improvements = summary["regressions"], summary["improvements"]
     write_json(run / "summary.json", summary)
     rows = []
     for language in sorted({r["language"] for r in base}):
@@ -28,6 +39,12 @@ def render(run):
         a = [r for r in adapted if r["language"] == language]
         rows.append(f"| {language} | {sum(r['passed'] for r in b)}/{len(b)} | {sum(r['passed'] for r in a)}/{len(a)} |")
     table = "| Language | Base | LoRA |\n| --- | --- | --- |\n" + "\n".join(rows)
+    diagnostics = ""
+    if (run / "control.json").exists():
+        control = read("control.json")
+        on = sum(t["adapter_enabled"]["passed"] for t in control["tasks"])
+        off = sum(t["adapter_disabled"]["passed"] for t in control["tasks"])
+        diagnostics = f"\nA separate saved-adapter on/off diagnostic rechecked {len(control['tasks'])} regressed tasks: enabled {on} passed; disabled {off} passed. It made no training updates. See [control.json](control.json) for exact output reproduction checks and its separate timing. This is a diagnosis of this run, not an independent final holdout.\n"
     report = f"""# Coding pilot result
 
 This is a **pipeline smoke test**, not a coding benchmark or evidence of state-of-the-art ability.
@@ -37,12 +54,13 @@ This is a **pipeline smoke test**, not a coding benchmark or evidence of state-o
 - Parameters: {result['model_parameters']:,}; trainable: {result['trainable_parameters']:,}.
 - Training: {result['training_steps']} updates, {result['training_seconds']:.1f} s, peak allocated {result['train_peak_allocated_bytes']/2**30:.2f} GiB.
 - Sequence lengths actually used: {result['training_token_lengths']['min']}–{result['training_token_lengths']['max']}; profile maximum is only a limit, not tested context capacity.
-- {data['splits']['train']['records']} private synthetic training tasks; {len(base)} held-out tasks; single seed.
+- {data['splits']['train']['records']} private training tasks; {len(base)} held-out tasks; single seed.
 - Same prompt, greedy decoding and generation budget before/after. A task passes only if all its cases pass in the offline sandbox.
 
 {table}
 
-Improvements: {len(improvements)}; regressions: {len(regressions)}. Small, simple fixtures can saturate and are not representative of repository work. This run does not establish a quality improvement and does not qualify the adapter as a daily-use model. Test results were not used for gradient updates, early stopping or choosing a checkpoint. Training uses the predeclared two epochs.
+Improvements: {len(improvements)}; regressions: {len(regressions)}. Small, simple fixtures can saturate and are not representative of repository work. This run does not establish a quality improvement and does not qualify the adapter as a daily-use model. Test results were not used for gradient updates, early stopping or choosing a checkpoint. Training uses the predeclared {profile['training']['epochs']} epochs.
+{diagnostics}
 
 Frozen parameter sample unchanged: `{result['frozen_sample_unchanged']}`; frozen gradients absent: `{result['frozen_gradients_absent']}`; adapter changed: `{result['adapter_changed']}`; save/reload greedy ID equality: `{result['adapter_reload_greedy_ids_equal']}`. The frozen sample check is not a full hash of all frozen parameters.
 
@@ -69,7 +87,7 @@ Private held-out smoke tasks: base {base_pass}/{len(base)}, adapter {adapted_pas
 
 ## Rights and redistribution
 
-Original orchestration code is MIT. The base's pinned LICENSE is {profile['model_license']}; this does not audit upstream training data or warrant non-infringement. Adapter distribution requires the appropriate upstream license/notices and a separate review of data rights and actual packaging. No weight upload is authorized by this card. Private training/test text is not redistributed; see DATA_CARD.md. No external teacher API was used for this pilot.
+Original orchestration code is MIT. The base's pinned LICENSE is {profile['model_license']}; this does not audit upstream training data or warrant non-infringement. Adapter distribution requires the appropriate upstream license/notices and a separate review of data rights and actual packaging. No weight upload is authorized by this card. Private training/test text is not redistributed; see DATA_CARD.md and the run-specific audit for input and teacher provenance.
 
 ## Use and release requirements
 
@@ -83,7 +101,7 @@ The adapter must be paired with the exact base revision and tokenizer; it is not
             f"- Provenance kinds: `{', '.join(split['provenance_kinds'])}`.",
             f"- Rights record: {'; '.join(split['rights_basis'])}.",
             f"- Redistribution allowed in the input manifest: `{split['redistribution_allowed']}`.", ""]
-    dataset += ["Train/test IDs and exact prompts are disjoint. For this pilot, task families were also separated during authoring; the generic validator does not prove semantic deduplication. References were executed before evaluating the model. Existing model exposure to common algorithms cannot be ruled out. There is no external repository corpus or paid teacher API in this pilot.", "", "The input contract requires a provenance kind, source description, affirmative training permission and rights basis. These fields record an operator's decision; software cannot determine legal ownership. Future datasets need per-source license/version/attribution records and repository/task-family splits, not just a dataset-level license label."]
+    dataset += ["Train/test IDs and exact prompts are disjoint. The generic validator does not prove semantic, translation, repository or task-family separation; any such claim requires a separate preparation audit. References were executed before evaluating the model. Existing model exposure to common algorithms cannot be ruled out. See the run-specific audit for authoring and teacher provenance. Synthetic material is not automatically a rights-cleared distillation dataset.", "", "The input contract requires a provenance kind, source description, affirmative training permission and rights basis. These fields record an operator's decision; software cannot determine legal ownership. Future datasets need per-source license/version/attribution records and repository/task-family splits, not just a dataset-level license label."]
     (run / "DATA_CARD.md").write_text("\n".join(dataset) + "\n")
     import matplotlib
     matplotlib.use("Agg")
@@ -91,7 +109,7 @@ The adapter must be paired with the exact base revision and tokenizer; it is not
     curve = read("curve.json")
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.plot([r["step"] for r in curve], [r["loss"] for r in curve], "o-", markersize=3)
-    ax.set(xlabel="Optimizer step", ylabel="Assistant-token training loss", title="27B LoRA plumbing smoke: mixed-task loss")
+    ax.set(xlabel="Optimizer step", ylabel="Assistant-token training loss", title=f"{profile['model_id'].split('/')[-1]} LoRA smoke: mixed-task loss")
     ax.grid(alpha=.2)
     fig.tight_layout()
     fig.savefig(run / "loss.png", dpi=160, metadata={"Software": "one-gpu-lm training_lab"})
@@ -100,7 +118,18 @@ The adapter must be paired with the exact base revision and tokenizer; it is not
     allowed = ["README.md", "MODEL_CARD.md", "DATA_CARD.md", "loss.png", "summary.json", "result.json",
                "profile.json", "source.json", "data.json", "references.json", "environment.json", "download.json",
                "loading.json", "baseline.json", "adapted.json", "curve.json", "adapter.json", "telemetry.csv", "events.jsonl", "status.json"]
+    for name in ["runtimes.json", "code-identity.json", "audit.md", "hardware.json", "control.json", "validation.json"]:
+        if (run / name).exists():
+            allowed.append(name)
+    for directory in sorted((run / "attempts").glob("*")):
+        if not directory.is_dir():
+            continue
+        for name in ["result.json", "source.json", "status.json", "events.jsonl"]:
+            relative = f"attempts/{directory.name}/{name}"
+            if (run / relative).exists():
+                allowed.append(relative)
     write_json(run / "artifacts.json", {"schema_version": 1, "weight_release": False,
+        "report_generator_sha256": sha256(__file__),
         "files": {name: sha256(run / name) for name in allowed}})
 
 

@@ -1,0 +1,326 @@
+[
+  {
+    "step": 1,
+    "epoch": 1,
+    "id": "cpp-sum-squares",
+    "loss": 0.7117099165916443,
+    "grad_norm": 3.6723251342773438,
+    "seconds": 45.84187180301524,
+    "tokens": 94
+  },
+  {
+    "step": 2,
+    "epoch": 1,
+    "id": "cpp-alternating-sum",
+    "loss": 0.6204613447189331,
+    "grad_norm": 2.4220714569091797,
+    "seconds": 0.969208324997453,
+    "tokens": 127
+  },
+  {
+    "step": 3,
+    "epoch": 1,
+    "id": "cpp-max-element",
+    "loss": 0.606241762638092,
+    "grad_norm": 2.732877254486084,
+    "seconds": 0.930306459980784,
+    "tokens": 108
+  },
+  {
+    "step": 4,
+    "epoch": 1,
+    "id": "cpp-count-positive",
+    "loss": 0.6997467279434204,
+    "grad_norm": 4.084898948669434,
+    "seconds": 0.9428431169944815,
+    "tokens": 98
+  },
+  {
+    "step": 5,
+    "epoch": 1,
+    "id": "python-bracket-balance",
+    "loss": 0.8206319212913513,
+    "grad_norm": 3.0970475673675537,
+    "seconds": 1.1960241310007405,
+    "tokens": 109
+  },
+  {
+    "step": 6,
+    "epoch": 1,
+    "id": "python-stable-unique",
+    "loss": 0.6019125580787659,
+    "grad_norm": 5.019492149353027,
+    "seconds": 0.9434427099768072,
+    "tokens": 75
+  },
+  {
+    "step": 7,
+    "epoch": 1,
+    "id": "python-rotate-left",
+    "loss": 0.6211878061294556,
+    "grad_norm": 2.3485302925109863,
+    "seconds": 0.9444208530185279,
+    "tokens": 113
+  },
+  {
+    "step": 8,
+    "epoch": 1,
+    "id": "javascript-stable-unique",
+    "loss": 0.774760901927948,
+    "grad_norm": 6.2074689865112305,
+    "seconds": 0.9444140050036367,
+    "tokens": 72
+  },
+  {
+    "step": 9,
+    "epoch": 1,
+    "id": "python-transpose",
+    "loss": 1.0213297605514526,
+    "grad_norm": 5.3672099113464355,
+    "seconds": 0.9453093350166455,
+    "tokens": 86
+  },
+  {
+    "step": 10,
+    "epoch": 1,
+    "id": "cpp-count-distinct",
+    "loss": 1.0392661094665527,
+    "grad_norm": 5.035001277923584,
+    "seconds": 0.9456878790224437,
+    "tokens": 95
+  },
+  {
+    "step": 11,
+    "epoch": 1,
+    "id": "javascript-word-count",
+    "loss": 1.1114864349365234,
+    "grad_norm": 5.607421875,
+    "seconds": 0.9413431329885498,
+    "tokens": 83
+  },
+  {
+    "step": 12,
+    "epoch": 1,
+    "id": "python-word-count",
+    "loss": 0.12870626151561737,
+    "grad_norm": 4.8155364990234375,
+    "seconds": 1.1528004430001602,
+    "tokens": 71
+  },
+  {
+    "step": 13,
+    "epoch": 1,
+    "id": "javascript-bracket-balance",
+    "loss": 0.7628182172775269,
+    "grad_norm": 2.8422014713287354,
+    "seconds": 0.9440157809876837,
+    "tokens": 103
+  },
+  {
+    "step": 14,
+    "epoch": 1,
+    "id": "javascript-transpose",
+    "loss": 0.7353193759918213,
+    "grad_norm": 3.787105083465576,
+    "seconds": 0.9408917750115506,
+    "tokens": 91
+  },
+  {
+    "step": 15,
+    "epoch": 1,
+    "id": "python-sum-squares",
+    "loss": 0.441387414932251,
+    "grad_norm": 3.8903443813323975,
+    "seconds": 0.9458377330156509,
+    "tokens": 78
+  },
+  {
+    "step": 16,
+    "epoch": 1,
+    "id": "cpp-gcd-all",
+    "loss": 0.6138606071472168,
+    "grad_norm": 2.6586010456085205,
+    "seconds": 0.9333317700074986,
+    "tokens": 114
+  },
+  {
+    "step": 17,
+    "epoch": 1,
+    "id": "javascript-rotate-left",
+    "loss": 0.6042675375938416,
+    "grad_norm": 2.493797540664673,
+    "seconds": 0.933853138005361,
+    "tokens": 103
+  },
+  {
+    "step": 18,
+    "epoch": 1,
+    "id": "javascript-sum-squares",
+    "loss": 0.6710125803947449,
+    "grad_norm": 3.8895556926727295,
+    "seconds": 0.937380112009123,
+    "tokens": 80
+  },
+  {
+    "step": 19,
+    "epoch": 2,
+    "id": "cpp-max-element",
+    "loss": 0.33983471989631653,
+    "grad_norm": 1.9906059503555298,
+    "seconds": 0.9306407299882267,
+    "tokens": 108
+  },
+  {
+    "step": 20,
+    "epoch": 2,
+    "id": "python-word-count",
+    "loss": 0.027919119223952293,
+    "grad_norm": 0.8452587723731995,
+    "seconds": 1.1532092730049044,
+    "tokens": 71
+  },
+  {
+    "step": 21,
+    "epoch": 2,
+    "id": "cpp-sum-squares",
+    "loss": 0.2900106906890869,
+    "grad_norm": 2.2181828022003174,
+    "seconds": 0.942658643994946,
+    "tokens": 94
+  },
+  {
+    "step": 22,
+    "epoch": 2,
+    "id": "python-stable-unique",
+    "loss": 0.18506307899951935,
+    "grad_norm": 1.7334586381912231,
+    "seconds": 0.9387520320015028,
+    "tokens": 75
+  },
+  {
+    "step": 23,
+    "epoch": 2,
+    "id": "python-sum-squares",
+    "loss": 0.24792328476905823,
+    "grad_norm": 2.1346325874328613,
+    "seconds": 0.9423416270001326,
+    "tokens": 78
+  },
+  {
+    "step": 24,
+    "epoch": 2,
+    "id": "javascript-stable-unique",
+    "loss": 0.26891157031059265,
+    "grad_norm": 2.3695855140686035,
+    "seconds": 0.9399739950022195,
+    "tokens": 72
+  },
+  {
+    "step": 25,
+    "epoch": 2,
+    "id": "cpp-gcd-all",
+    "loss": 0.46898236870765686,
+    "grad_norm": 2.6661291122436523,
+    "seconds": 0.934391429007519,
+    "tokens": 114
+  },
+  {
+    "step": 26,
+    "epoch": 2,
+    "id": "cpp-count-positive",
+    "loss": 0.301141619682312,
+    "grad_norm": 1.9960826635360718,
+    "seconds": 0.9470199100032914,
+    "tokens": 98
+  },
+  {
+    "step": 27,
+    "epoch": 2,
+    "id": "cpp-alternating-sum",
+    "loss": 0.28634682297706604,
+    "grad_norm": 1.5844463109970093,
+    "seconds": 1.1398458470066544,
+    "tokens": 127
+  },
+  {
+    "step": 28,
+    "epoch": 2,
+    "id": "javascript-sum-squares",
+    "loss": 0.467859148979187,
+    "grad_norm": 1.9055920839309692,
+    "seconds": 0.9483254460210446,
+    "tokens": 80
+  },
+  {
+    "step": 29,
+    "epoch": 2,
+    "id": "python-bracket-balance",
+    "loss": 0.33496955037117004,
+    "grad_norm": 1.884121298789978,
+    "seconds": 0.9339412430126686,
+    "tokens": 109
+  },
+  {
+    "step": 30,
+    "epoch": 2,
+    "id": "javascript-word-count",
+    "loss": 0.44034963846206665,
+    "grad_norm": 2.0548439025878906,
+    "seconds": 0.9411671639827546,
+    "tokens": 83
+  },
+  {
+    "step": 31,
+    "epoch": 2,
+    "id": "javascript-transpose",
+    "loss": 0.36524859070777893,
+    "grad_norm": 1.7741063833236694,
+    "seconds": 0.9362247289973311,
+    "tokens": 91
+  },
+  {
+    "step": 32,
+    "epoch": 2,
+    "id": "cpp-count-distinct",
+    "loss": 0.5047339200973511,
+    "grad_norm": 3.762509346008301,
+    "seconds": 0.9385951159929391,
+    "tokens": 95
+  },
+  {
+    "step": 33,
+    "epoch": 2,
+    "id": "javascript-bracket-balance",
+    "loss": 0.4092300534248352,
+    "grad_norm": 1.2968822717666626,
+    "seconds": 0.9336743719759397,
+    "tokens": 103
+  },
+  {
+    "step": 34,
+    "epoch": 2,
+    "id": "python-rotate-left",
+    "loss": 0.3092227280139923,
+    "grad_norm": 1.1176037788391113,
+    "seconds": 1.140499274013564,
+    "tokens": 113
+  },
+  {
+    "step": 35,
+    "epoch": 2,
+    "id": "javascript-rotate-left",
+    "loss": 0.37183091044425964,
+    "grad_norm": 1.6544194221496582,
+    "seconds": 0.9333294840180315,
+    "tokens": 103
+  },
+  {
+    "step": 36,
+    "epoch": 2,
+    "id": "python-transpose",
+    "loss": 0.2463930994272232,
+    "grad_norm": 2.567307949066162,
+    "seconds": 0.9359934810199775,
+    "tokens": 86
+  }
+]

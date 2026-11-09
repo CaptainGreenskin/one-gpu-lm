@@ -6,6 +6,7 @@ import unittest
 
 from .records import data_receipt, load_split, write_json
 from .sandbox import extract_code
+from .report import paired_summary
 
 
 class Contracts(unittest.TestCase):
@@ -58,6 +59,26 @@ class Contracts(unittest.TestCase):
         path = self.root / "load.json"
         write_json(path, {"missing_keys": set(), "unexpected_keys": {"b", "a"}})
         self.assertEqual(json.loads(path.read_text()), {"missing_keys": [], "unexpected_keys": ["a", "b"]})
+
+    def test_completed_run_with_missing_pairs_is_rejected(self):
+        r = {"status": "completed", "baseline": [{"id": "a", "passed": True}], "adapted": [{"id": "a", "passed": True}]}
+        with self.assertRaisesRegex(ValueError, "Incomplete"):
+            paired_summary(r, 2)
+
+    def test_reordered_or_mismatched_tasks_are_rejected(self):
+        r = {"status": "completed", "baseline": [{"id": "a", "passed": True}], "adapted": [{"id": "b", "passed": True}]}
+        with self.assertRaisesRegex(ValueError, "Unpaired"):
+            paired_summary(r, 1)
+
+    def test_regression_fails_quality_gate(self):
+        r = {"status": "completed", "baseline": [{"id": "a", "passed": True}], "adapted": [{"id": "a", "passed": False}]}
+        value = paired_summary(r, 1)
+        self.assertFalse(value["regression_check_passed"])
+        self.assertEqual(value["rejection_reason"], "heldout_regressions")
+
+    def test_perfect_smoke_is_not_daily_model_acceptance(self):
+        r = {"status": "completed", "baseline": [{"id": "a", "passed": True}], "adapted": [{"id": "a", "passed": True}]}
+        self.assertFalse(paired_summary(r, 1)["daily_model_accepted"])
 
 
 if __name__ == "__main__":

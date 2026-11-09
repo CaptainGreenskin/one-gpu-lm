@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "pairs": 9,
+  "baseline_passed": 9,
+  "adapted_passed": 7,
+  "regressions": [
+    "javascript-frequency-order",
+    "cpp-nonadjacent-sum"
+  ],
+  "improvements": [],
+  "quality_conclusion": "smoke_only_no_general_quality_claim",
+  "regression_check_passed": false,
+  "daily_model_accepted": false,
+  "rejection_reason": "heldout_regressions"
+}

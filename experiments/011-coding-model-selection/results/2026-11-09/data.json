@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "raw_data_public": false,
+  "splits": {
+    "train": {
+      "sha256": "6d02e5e2c142c86aafc9daf00057de7037b1fc01d49a1a5bcefe14feaaac640f",
+      "records": 18,
+      "languages": {
+        "python": 6,
+        "javascript": 6,
+        "cpp": 6
+      },
+      "case_count": 38,
+      "provenance_kinds": [
+        "project-authored-synthetic"
+      ],
+      "rights_basis": [
+        "Project-authored synthetic fixtures; inputs and reference solutions authored in this task; no external teacher service"
+      ],
+      "redistribution_allowed": false
+    },
+    "test": {
+      "sha256": "65874d057d1b9dd19b07adc95f2b3062c37be9ab13acf0c5fdfe01e3632d8d2b",
+      "records": 9,
+      "languages": {
+        "python": 3,
+        "javascript": 3,
+        "cpp": 3
+      },
+      "case_count": 33,
+      "provenance_kinds": [
+        "project-authored-synthetic"
+      ],
+      "rights_basis": [
+        "Project-authored synthetic fixtures; inputs and reference solutions authored in this task; no external teacher service"
+      ],
+      "redistribution_allowed": false
+    }
+  }
+}

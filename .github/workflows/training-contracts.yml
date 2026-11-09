@@ -1,0 +1,22 @@
+name: Training data and evaluation contracts
+on:
+  push:
+    paths: ["training_lab/**", ".github/workflows/training-contracts.yml"]
+  pull_request:
+    paths: ["training_lab/**", ".github/workflows/training-contracts.yml"]
+permissions:
+  contents: read
+jobs:
+  cpu-contracts:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest training_lab.test_contracts
+      - run: python -m compileall -q training_lab

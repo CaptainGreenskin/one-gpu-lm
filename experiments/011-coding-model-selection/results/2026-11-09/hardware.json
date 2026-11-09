@@ -1,0 +1,11 @@
+{
+  "samples": 207,
+  "sample_window_seconds": 412.0880000591278,
+  "max_sample_gap_seconds": 2.008999824523926,
+  "peak_temperature_c": 43.0,
+  "peak_board_power_w": 263.56,
+  "mean_sampled_utilization_percent": 25.314009661835748,
+  "peak_sampled_memory_mib": 56579.0,
+  "sampled_board_energy_wh": 19.0265963271363,
+  "scope": "sampled GPU board only; includes loading/warmup/evaluation/training; excludes reference preflight and earlier failed attempts"
+}

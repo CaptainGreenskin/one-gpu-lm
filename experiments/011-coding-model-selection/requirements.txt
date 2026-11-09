@@ -7,6 +7,7 @@ safetensors==0.8.0
 tokenizers==0.23.3
 flash-linear-attention==0.6.0
 fla-core==0.6.0
+einops==0.8.2
 httpx==0.28.1
 socksio==1.0.0
 # Report generation, which can be run on a separate CPU machine:

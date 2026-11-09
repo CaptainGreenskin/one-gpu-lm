@@ -1,0 +1,110 @@
+[
+  {
+    "id": "python-merge-intervals",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 83,
+    "generated_tokens": 90,
+    "generation_seconds": 13.833397431008052,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "python-topological-order",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 94,
+    "generated_tokens": 149,
+    "generation_seconds": 22.815470016008476,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "python-run-length",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 3,
+    "cases": 3,
+    "reason": "ok",
+    "input_tokens": 61,
+    "generated_tokens": 30,
+    "generation_seconds": 4.691049215995008,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-frequency-order",
+    "language": "javascript",
+    "passed": false,
+    "passed_cases": 1,
+    "cases": 3,
+    "reason": "wrong_answer",
+    "input_tokens": 67,
+    "generated_tokens": 48,
+    "generation_seconds": 7.4460503199952655,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-first-repeat",
+    "language": "javascript",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 74,
+    "generated_tokens": 30,
+    "generation_seconds": 4.7090809700021055,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-deep-merge",
+    "language": "javascript",
+    "passed": true,
+    "passed_cases": 3,
+    "cases": 3,
+    "reason": "ok",
+    "input_tokens": 96,
+    "generated_tokens": 97,
+    "generation_seconds": 14.832877669017762,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-nonadjacent-sum",
+    "language": "cpp",
+    "passed": false,
+    "passed_cases": 2,
+    "cases": 4,
+    "reason": "wrong_answer",
+    "input_tokens": 77,
+    "generated_tokens": 47,
+    "generation_seconds": 7.340779086982366,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-zero-sum-subarrays",
+    "language": "cpp",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 67,
+    "generated_tokens": 58,
+    "generation_seconds": 9.033786398009397,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-strict-lis",
+    "language": "cpp",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 68,
+    "generated_tokens": 78,
+    "generation_seconds": 12.18693042898667,
+    "hit_generation_limit": false
+  }
+]

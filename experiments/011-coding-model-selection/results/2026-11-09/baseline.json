@@ -1,0 +1,110 @@
+[
+  {
+    "id": "python-merge-intervals",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 83,
+    "generated_tokens": 118,
+    "generation_seconds": 9.675820328004193,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "python-topological-order",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 94,
+    "generated_tokens": 236,
+    "generation_seconds": 19.325849868997466,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "python-run-length",
+    "language": "python",
+    "passed": true,
+    "passed_cases": 3,
+    "cases": 3,
+    "reason": "ok",
+    "input_tokens": 61,
+    "generated_tokens": 110,
+    "generation_seconds": 9.143809961999068,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-frequency-order",
+    "language": "javascript",
+    "passed": true,
+    "passed_cases": 3,
+    "cases": 3,
+    "reason": "ok",
+    "input_tokens": 67,
+    "generated_tokens": 197,
+    "generation_seconds": 16.457497063995106,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-first-repeat",
+    "language": "javascript",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 74,
+    "generated_tokens": 62,
+    "generation_seconds": 5.2525348700000905,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "javascript-deep-merge",
+    "language": "javascript",
+    "passed": true,
+    "passed_cases": 3,
+    "cases": 3,
+    "reason": "ok",
+    "input_tokens": 96,
+    "generated_tokens": 177,
+    "generation_seconds": 14.684153480979148,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-nonadjacent-sum",
+    "language": "cpp",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 77,
+    "generated_tokens": 121,
+    "generation_seconds": 10.065874510997673,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-zero-sum-subarrays",
+    "language": "cpp",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 67,
+    "generated_tokens": 130,
+    "generation_seconds": 11.077678472996922,
+    "hit_generation_limit": false
+  },
+  {
+    "id": "cpp-strict-lis",
+    "language": "cpp",
+    "passed": true,
+    "passed_cases": 4,
+    "cases": 4,
+    "reason": "ok",
+    "input_tokens": 68,
+    "generated_tokens": 128,
+    "generation_seconds": 11.012921574001666,
+    "hit_generation_limit": false
+  }
+]
