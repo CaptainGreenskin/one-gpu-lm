@@ -1,0 +1,39 @@
+{
+  "baseline_launch": {
+    "source_commit": "fdeaf975935a22ab217b4e654bec02cc0a84ffe2",
+    "tasks": 36,
+    "recovery_task": "boltons-slugify"
+  },
+  "backends": {
+    "base": {
+      "ready": true,
+      "model_id": "Qwen/Qwen3.8-27B",
+      "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+      "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+      "adapter": false,
+      "adapter_sha256": {}
+    },
+    "adapted": {
+      "ready": true,
+      "model_id": "Qwen/Qwen3.8-27B",
+      "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+      "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+      "adapter": true,
+      "adapter_sha256": {
+        "adapter_model.safetensors": "af05dc7e06a9ef1af02d84cf4eb98304b034de2c414ab1a7708d8ee668829ce0"
+      }
+    }
+  },
+  "training_files": {
+    "repo_lab/train.py": "a63f12949ff490886cd0b0509271260e9fc716f90423c69a44aaaeb8323d9927",
+    "repo_lab/dataset.py": "268696185f6e67c09ee69a186d0068f302826d2720cc2c3cc4bf361e77ca2803",
+    "repo_lab/backend.py": "77394256ab1d8e64b50a8be995af1920877d1aef5eee8703d0fa06fb6b688cfd",
+    "repo_lab/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+    "repo_lab/environment.py": "8c703d2414f2388fcd8153f2933dda193150c59144d04bee6d38ef167f9619af",
+    "repo_lab/tasks.py": "2ac83cc23694042003317296c9be4b3a8b33ab0bab6a3b9a39bdf1eefae8c17e",
+    "training_lab/records.py": "3622621113f842eeb9c6f3150ce7505f2391caffd22bcab1ba8a510b4301873e",
+    "training_lab/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11"
+  },
+  "training_source_commit": "86058f7c93e77d4f014ab761821b32bd416b7846",
+  "source_hashes_verified_against_git": true
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "raw_data_public": false,
+  "records": 145,
+  "sha256": "f0e390bf5defd4e15fe2437a4b7c7afebb88b7941749c7f3fc9fc36ba590890a",
+  "source_campaign_sha256": "f1cb8afcbf68b0bd032c96871384dbf2e05922eb80716dd093f5cd793efb86d4",
+  "task_spec_sha256": "9cf8ccf8734a739630959314b544f637fba269f4ad40af921b19ca97b9ce10a7",
+  "kinds": {
+    "verified-local-base-trajectory": 138,
+    "verified-reference-repair": 7
+  },
+  "repositories": [
+    "jashkenas/underscore",
+    "mahmoud/boltons"
+  ],
+  "task_ids": [
+    "boltons-LRI-__setitem__",
+    "boltons-LRU-__getitem__",
+    "boltons-asciify",
+    "boltons-bytes2human",
+    "boltons-cache-and-frozen",
+    "boltons-make_cache_key",
+    "boltons-multi-dict",
+    "boltons-pluralize",
+    "boltons-research",
+    "boltons-slugify",
+    "underscore-defaults",
+    "underscore-difference",
+    "underscore-group-partition",
+    "underscore-index-nan",
+    "underscore-intersection",
+    "underscore-map-object",
+    "underscore-object-pairs",
+    "underscore-range-step",
+    "underscore-reduce-initial",
+    "underscore-stable-sort",
+    "underscore-uniq-iteratee"
+  ],
+  "reference_controls": [
+    {
+      "id": "boltons-LRI-__setitem__",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "boltons-bytes2human",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "boltons-research",
+      "patch_applied": true,
+      "passed": true
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "patch_applied": true,
+      "passed": true
+    }
+  ],
+  "license_record_sha256": "5fec94de7391d8f3231a21fbeba726c5e041d43965e2e9c861b3607f03a864bc"
+}

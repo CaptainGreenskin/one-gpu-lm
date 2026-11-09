@@ -1,0 +1,866 @@
+[
+  {
+    "step": 1,
+    "id": "underscore-index-nan:turn-002",
+    "tokens": 285,
+    "supervised_tokens": 39,
+    "loss": 0.14387497305870056,
+    "grad_norm": 2.4780690670013428,
+    "seconds": 3.143473761010682
+  },
+  {
+    "step": 2,
+    "id": "underscore-range-step:turn-006",
+    "tokens": 577,
+    "supervised_tokens": 49,
+    "loss": 0.1219424456357956,
+    "grad_norm": 0.5493434071540833,
+    "seconds": 0.9600183979782742
+  },
+  {
+    "step": 3,
+    "id": "underscore-defaults:turn-010",
+    "tokens": 3404,
+    "supervised_tokens": 55,
+    "loss": 0.08338595181703568,
+    "grad_norm": 1.294677972793579,
+    "seconds": 14.699160484975437
+  },
+  {
+    "step": 4,
+    "id": "boltons-asciify:turn-008",
+    "tokens": 1909,
+    "supervised_tokens": 48,
+    "loss": 0.02636953443288803,
+    "grad_norm": 0.1859997659921646,
+    "seconds": 13.68879407501663
+  },
+  {
+    "step": 5,
+    "id": "underscore-range-step:turn-014",
+    "tokens": 2798,
+    "supervised_tokens": 27,
+    "loss": 0.07315317541360855,
+    "grad_norm": 0.8071586489677429,
+    "seconds": 2.4473775080114137
+  },
+  {
+    "step": 6,
+    "id": "underscore-range-step:turn-008",
+    "tokens": 1041,
+    "supervised_tokens": 44,
+    "loss": 0.2084680050611496,
+    "grad_norm": 0.9492051005363464,
+    "seconds": 0.9335791780031286
+  },
+  {
+    "step": 7,
+    "id": "underscore-map-object:turn-020",
+    "tokens": 2690,
+    "supervised_tokens": 59,
+    "loss": 0.02490951679646969,
+    "grad_norm": 0.22489172220230103,
+    "seconds": 2.39647694901214
+  },
+  {
+    "step": 8,
+    "id": "boltons-multi-dict:turn-004",
+    "tokens": 1305,
+    "supervised_tokens": 38,
+    "loss": 0.13309693336486816,
+    "grad_norm": 0.7750241756439209,
+    "seconds": 1.1244126959936693
+  },
+  {
+    "step": 9,
+    "id": "underscore-map-object:turn-010",
+    "tokens": 848,
+    "supervised_tokens": 64,
+    "loss": 0.09913274645805359,
+    "grad_norm": 0.4111596345901489,
+    "seconds": 0.9281741640006658
+  },
+  {
+    "step": 10,
+    "id": "boltons-slugify:turn-024",
+    "tokens": 3227,
+    "supervised_tokens": 139,
+    "loss": 0.153176411986351,
+    "grad_norm": 0.5100510120391846,
+    "seconds": 2.9867985470045824
+  },
+  {
+    "step": 11,
+    "id": "underscore-difference:turn-018",
+    "tokens": 2001,
+    "supervised_tokens": 69,
+    "loss": 0.11487521976232529,
+    "grad_norm": 0.5698348879814148,
+    "seconds": 1.89851228101179
+  },
+  {
+    "step": 12,
+    "id": "underscore-defaults:turn-008",
+    "tokens": 2677,
+    "supervised_tokens": 46,
+    "loss": 0.05232829600572586,
+    "grad_norm": 0.5113058686256409,
+    "seconds": 2.390808032010682
+  },
+  {
+    "step": 13,
+    "id": "underscore-intersection:turn-006",
+    "tokens": 762,
+    "supervised_tokens": 88,
+    "loss": 0.10451433807611465,
+    "grad_norm": 0.4193030595779419,
+    "seconds": 0.9333341390010901
+  },
+  {
+    "step": 14,
+    "id": "underscore-group-partition:turn-002",
+    "tokens": 299,
+    "supervised_tokens": 35,
+    "loss": 0.2145751267671585,
+    "grad_norm": 2.2751495838165283,
+    "seconds": 0.9305156040063594
+  },
+  {
+    "step": 15,
+    "id": "underscore-index-nan:turn-004",
+    "tokens": 1692,
+    "supervised_tokens": 62,
+    "loss": 0.1512746810913086,
+    "grad_norm": 0.9497644305229187,
+    "seconds": 1.4796668910130393
+  },
+  {
+    "step": 16,
+    "id": "boltons-slugify:turn-020",
+    "tokens": 2690,
+    "supervised_tokens": 69,
+    "loss": 0.06110769137740135,
+    "grad_norm": 0.6235535740852356,
+    "seconds": 2.4169955579855014
+  },
+  {
+    "step": 17,
+    "id": "underscore-index-nan:turn-010",
+    "tokens": 3924,
+    "supervised_tokens": 40,
+    "loss": 0.11112570762634277,
+    "grad_norm": 0.498224675655365,
+    "seconds": 3.6521161329874303
+  },
+  {
+    "step": 18,
+    "id": "underscore-object-pairs:turn-014",
+    "tokens": 3311,
+    "supervised_tokens": 46,
+    "loss": 0.034580375999212265,
+    "grad_norm": 0.23637689650058746,
+    "seconds": 3.14009395102039
+  },
+  {
+    "step": 19,
+    "id": "boltons-multi-dict:turn-014",
+    "tokens": 3887,
+    "supervised_tokens": 45,
+    "loss": 0.2547873258590698,
+    "grad_norm": 3.576305627822876,
+    "seconds": 3.685908711020602
+  },
+  {
+    "step": 20,
+    "id": "boltons-pluralize:turn-006",
+    "tokens": 1273,
+    "supervised_tokens": 56,
+    "loss": 0.0820389911532402,
+    "grad_norm": 0.8185912370681763,
+    "seconds": 1.0930140879936516
+  },
+  {
+    "step": 21,
+    "id": "underscore-map-object:turn-016",
+    "tokens": 1700,
+    "supervised_tokens": 46,
+    "loss": 0.01875833235681057,
+    "grad_norm": 0.14044037461280823,
+    "seconds": 1.5006526490033139
+  },
+  {
+    "step": 22,
+    "id": "underscore-map-object:turn-014",
+    "tokens": 1365,
+    "supervised_tokens": 38,
+    "loss": 0.04821215197443962,
+    "grad_norm": 0.5244984030723572,
+    "seconds": 1.1719889499945566
+  },
+  {
+    "step": 23,
+    "id": "underscore-intersection:turn-012",
+    "tokens": 3015,
+    "supervised_tokens": 294,
+    "loss": 0.19756586849689484,
+    "grad_norm": 0.6199033260345459,
+    "seconds": 2.8060519639984705
+  },
+  {
+    "step": 24,
+    "id": "boltons-multi-dict:turn-008",
+    "tokens": 2110,
+    "supervised_tokens": 29,
+    "loss": 0.04315812140703201,
+    "grad_norm": 0.4516696035861969,
+    "seconds": 1.8923483440012205
+  },
+  {
+    "step": 25,
+    "id": "underscore-map-object:turn-008",
+    "tokens": 764,
+    "supervised_tokens": 72,
+    "loss": 0.13056866824626923,
+    "grad_norm": 1.4658249616622925,
+    "seconds": 1.1428770110069308
+  },
+  {
+    "step": 26,
+    "id": "underscore-group-partition:turn-004",
+    "tokens": 508,
+    "supervised_tokens": 32,
+    "loss": 0.13651511073112488,
+    "grad_norm": 1.1930534839630127,
+    "seconds": 0.9348443130147643
+  },
+  {
+    "step": 27,
+    "id": "boltons-asciify:turn-006",
+    "tokens": 982,
+    "supervised_tokens": 48,
+    "loss": 0.04802778363227844,
+    "grad_norm": 0.5422175526618958,
+    "seconds": 0.9319150539813563
+  },
+  {
+    "step": 28,
+    "id": "underscore-object-pairs:turn-020",
+    "tokens": 4070,
+    "supervised_tokens": 96,
+    "loss": 0.12350483983755112,
+    "grad_norm": 0.6645856499671936,
+    "seconds": 3.839478162000887
+  },
+  {
+    "step": 29,
+    "id": "boltons-asciify:turn-012",
+    "tokens": 2730,
+    "supervised_tokens": 51,
+    "loss": 0.07122082263231277,
+    "grad_norm": 0.7545300126075745,
+    "seconds": 2.470959747006418
+  },
+  {
+    "step": 30,
+    "id": "underscore-difference:turn-002",
+    "tokens": 293,
+    "supervised_tokens": 48,
+    "loss": 0.1135215163230896,
+    "grad_norm": 1.1696981191635132,
+    "seconds": 0.9292724830156658
+  },
+  {
+    "step": 31,
+    "id": "underscore-range-step:turn-002",
+    "tokens": 278,
+    "supervised_tokens": 29,
+    "loss": 0.16351979970932007,
+    "grad_norm": 1.8892614841461182,
+    "seconds": 0.927024781005457
+  },
+  {
+    "step": 32,
+    "id": "underscore-map-object:turn-022",
+    "tokens": 2810,
+    "supervised_tokens": 73,
+    "loss": 0.07500392943620682,
+    "grad_norm": 0.7925718426704407,
+    "seconds": 2.5153208439878654
+  },
+  {
+    "step": 33,
+    "id": "boltons-pluralize:turn-002",
+    "tokens": 319,
+    "supervised_tokens": 58,
+    "loss": 0.10363088548183441,
+    "grad_norm": 1.1132850646972656,
+    "seconds": 1.1306729040225036
+  },
+  {
+    "step": 34,
+    "id": "underscore-difference:turn-012",
+    "tokens": 1263,
+    "supervised_tokens": 55,
+    "loss": 0.16260609030723572,
+    "grad_norm": 0.6389066576957703,
+    "seconds": 1.0943346850108355
+  },
+  {
+    "step": 35,
+    "id": "underscore-defaults:turn-004",
+    "tokens": 1638,
+    "supervised_tokens": 101,
+    "loss": 0.12090457230806351,
+    "grad_norm": 0.7260522842407227,
+    "seconds": 1.418754562997492
+  },
+  {
+    "step": 36,
+    "id": "boltons-slugify:turn-002",
+    "tokens": 315,
+    "supervised_tokens": 55,
+    "loss": 0.09084124118089676,
+    "grad_norm": 2.4011874198913574,
+    "seconds": 0.923104677000083
+  },
+  {
+    "step": 37,
+    "id": "boltons-asciify:turn-004",
+    "tokens": 480,
+    "supervised_tokens": 48,
+    "loss": 0.04105027765035629,
+    "grad_norm": 0.20005005598068237,
+    "seconds": 0.9306582330027595
+  },
+  {
+    "step": 38,
+    "id": "boltons-pluralize:turn-014",
+    "tokens": 3273,
+    "supervised_tokens": 47,
+    "loss": 0.0394287146627903,
+    "grad_norm": 0.40007737278938293,
+    "seconds": 3.079169809992891
+  },
+  {
+    "step": 39,
+    "id": "underscore-range-step:turn-004",
+    "tokens": 510,
+    "supervised_tokens": 40,
+    "loss": 0.11529210954904556,
+    "grad_norm": 0.5515110492706299,
+    "seconds": 0.9275861049827654
+  },
+  {
+    "step": 40,
+    "id": "underscore-defaults:turn-002",
+    "tokens": 305,
+    "supervised_tokens": 58,
+    "loss": 0.11127810925245285,
+    "grad_norm": 1.8442585468292236,
+    "seconds": 1.137244893994648
+  },
+  {
+    "step": 41,
+    "id": "underscore-map-object:turn-004",
+    "tokens": 525,
+    "supervised_tokens": 61,
+    "loss": 0.14028912782669067,
+    "grad_norm": 0.658665120601654,
+    "seconds": 0.9330782569886651
+  },
+  {
+    "step": 42,
+    "id": "underscore-object-pairs:turn-008",
+    "tokens": 2181,
+    "supervised_tokens": 57,
+    "loss": 0.12472697347402573,
+    "grad_norm": 0.6318680047988892,
+    "seconds": 1.9953806110133883
+  },
+  {
+    "step": 43,
+    "id": "boltons-asciify:turn-002",
+    "tokens": 320,
+    "supervised_tokens": 59,
+    "loss": 0.09892480075359344,
+    "grad_norm": 0.9600567817687988,
+    "seconds": 0.9248904729902279
+  },
+  {
+    "step": 44,
+    "id": "underscore-intersection:turn-010",
+    "tokens": 2263,
+    "supervised_tokens": 44,
+    "loss": 0.021850621327757835,
+    "grad_norm": 0.21208395063877106,
+    "seconds": 2.044038576015737
+  },
+  {
+    "step": 45,
+    "id": "underscore-group-partition:turn-012",
+    "tokens": 2151,
+    "supervised_tokens": 41,
+    "loss": 0.17460864782333374,
+    "grad_norm": 1.144871711730957,
+    "seconds": 1.9573167369817384
+  },
+  {
+    "step": 46,
+    "id": "underscore-intersection:turn-014",
+    "tokens": 3260,
+    "supervised_tokens": 64,
+    "loss": 0.042149074375629425,
+    "grad_norm": 0.3120439648628235,
+    "seconds": 3.0383246330020484
+  },
+  {
+    "step": 47,
+    "id": "boltons-asciify:turn-010",
+    "tokens": 2594,
+    "supervised_tokens": 54,
+    "loss": 0.1199917271733284,
+    "grad_norm": 1.293619155883789,
+    "seconds": 2.363008421001723
+  },
+  {
+    "step": 48,
+    "id": "underscore-object-pairs:turn-006",
+    "tokens": 1718,
+    "supervised_tokens": 50,
+    "loss": 0.03063734620809555,
+    "grad_norm": 0.2409730702638626,
+    "seconds": 1.7136182249814738
+  },
+  {
+    "step": 49,
+    "id": "boltons-multi-dict:turn-012",
+    "tokens": 3148,
+    "supervised_tokens": 69,
+    "loss": 0.19339241087436676,
+    "grad_norm": 1.1769213676452637,
+    "seconds": 2.9404881299997214
+  },
+  {
+    "step": 50,
+    "id": "underscore-map-object:turn-006",
+    "tokens": 605,
+    "supervised_tokens": 62,
+    "loss": 0.11503079533576965,
+    "grad_norm": 0.478965163230896,
+    "seconds": 0.9306841500219889
+  },
+  {
+    "step": 51,
+    "id": "underscore-group-partition:turn-006",
+    "tokens": 703,
+    "supervised_tokens": 53,
+    "loss": 0.1572234332561493,
+    "grad_norm": 0.5980972647666931,
+    "seconds": 0.9334730719856452
+  },
+  {
+    "step": 52,
+    "id": "boltons-slugify:turn-006",
+    "tokens": 1030,
+    "supervised_tokens": 85,
+    "loss": 0.11432643234729767,
+    "grad_norm": 1.0177795886993408,
+    "seconds": 0.9347711150185205
+  },
+  {
+    "step": 53,
+    "id": "boltons-pluralize:turn-004",
+    "tokens": 514,
+    "supervised_tokens": 48,
+    "loss": 0.04456055164337158,
+    "grad_norm": 0.2638184130191803,
+    "seconds": 0.9302285499870777
+  },
+  {
+    "step": 54,
+    "id": "underscore-object-pairs:turn-004",
+    "tokens": 1621,
+    "supervised_tokens": 98,
+    "loss": 0.13419146835803986,
+    "grad_norm": 0.5800171494483948,
+    "seconds": 1.4316974919929635
+  },
+  {
+    "step": 55,
+    "id": "boltons-pluralize:turn-012",
+    "tokens": 2618,
+    "supervised_tokens": 67,
+    "loss": 0.07836735993623734,
+    "grad_norm": 0.4082305133342743,
+    "seconds": 2.5062905689992476
+  },
+  {
+    "step": 56,
+    "id": "underscore-difference:turn-010",
+    "tokens": 786,
+    "supervised_tokens": 59,
+    "loss": 0.04452269524335861,
+    "grad_norm": 0.4757460057735443,
+    "seconds": 0.933505619992502
+  },
+  {
+    "step": 57,
+    "id": "underscore-defaults:turn-012",
+    "tokens": 3616,
+    "supervised_tokens": 50,
+    "loss": 0.04101298376917839,
+    "grad_norm": 0.37101954221725464,
+    "seconds": 3.4348220500105526
+  },
+  {
+    "step": 58,
+    "id": "underscore-group-partition:turn-010",
+    "tokens": 1210,
+    "supervised_tokens": 42,
+    "loss": 0.13715332746505737,
+    "grad_norm": 0.6323273181915283,
+    "seconds": 1.060220710001886
+  },
+  {
+    "step": 59,
+    "id": "underscore-range-step:turn-010",
+    "tokens": 1884,
+    "supervised_tokens": 36,
+    "loss": 0.13286805152893066,
+    "grad_norm": 2.4001238346099854,
+    "seconds": 1.6627169070125092
+  },
+  {
+    "step": 60,
+    "id": "boltons-asciify:turn-016",
+    "tokens": 3439,
+    "supervised_tokens": 45,
+    "loss": 0.08775366842746735,
+    "grad_norm": 2.197265863418579,
+    "seconds": 3.254377300007036
+  },
+  {
+    "step": 61,
+    "id": "boltons-multi-dict:turn-010",
+    "tokens": 2771,
+    "supervised_tokens": 50,
+    "loss": 0.2016252875328064,
+    "grad_norm": 2.0315613746643066,
+    "seconds": 2.55955230499967
+  },
+  {
+    "step": 62,
+    "id": "boltons-pluralize:turn-008",
+    "tokens": 1462,
+    "supervised_tokens": 48,
+    "loss": 0.025322720408439636,
+    "grad_norm": 0.2108965516090393,
+    "seconds": 1.4604316749901045
+  },
+  {
+    "step": 63,
+    "id": "boltons-slugify:turn-016",
+    "tokens": 2463,
+    "supervised_tokens": 144,
+    "loss": 0.06348404288291931,
+    "grad_norm": 0.34057459235191345,
+    "seconds": 2.314120320021175
+  },
+  {
+    "step": 64,
+    "id": "underscore-group-partition:turn-016",
+    "tokens": 3228,
+    "supervised_tokens": 44,
+    "loss": 0.05531078204512596,
+    "grad_norm": 0.5028945207595825,
+    "seconds": 3.0473744469927624
+  },
+  {
+    "step": 65,
+    "id": "boltons-asciify:turn-018",
+    "tokens": 3827,
+    "supervised_tokens": 46,
+    "loss": 0.06315232068300247,
+    "grad_norm": 0.786034107208252,
+    "seconds": 3.6722836540138815
+  },
+  {
+    "step": 66,
+    "id": "boltons-slugify:turn-008",
+    "tokens": 1234,
+    "supervised_tokens": 70,
+    "loss": 0.06941727548837662,
+    "grad_norm": 0.29917067289352417,
+    "seconds": 1.0791272769856732
+  },
+  {
+    "step": 67,
+    "id": "underscore-group-partition:turn-014",
+    "tokens": 3008,
+    "supervised_tokens": 150,
+    "loss": 0.09938690066337585,
+    "grad_norm": 0.6874246597290039,
+    "seconds": 2.8040520020003896
+  },
+  {
+    "step": 68,
+    "id": "underscore-group-partition:turn-008",
+    "tokens": 762,
+    "supervised_tokens": 41,
+    "loss": 0.1295996755361557,
+    "grad_norm": 0.5104437470436096,
+    "seconds": 0.9305935960146599
+  },
+  {
+    "step": 69,
+    "id": "boltons-slugify:turn-018",
+    "tokens": 2579,
+    "supervised_tokens": 96,
+    "loss": 0.013319325633347034,
+    "grad_norm": 0.15177588164806366,
+    "seconds": 2.5121798229811247
+  },
+  {
+    "step": 70,
+    "id": "underscore-difference:turn-004",
+    "tokens": 499,
+    "supervised_tokens": 80,
+    "loss": 0.1271161586046219,
+    "grad_norm": 0.5291752815246582,
+    "seconds": 0.9277077779988758
+  },
+  {
+    "step": 71,
+    "id": "underscore-index-nan:turn-008",
+    "tokens": 3002,
+    "supervised_tokens": 44,
+    "loss": 0.1344505399465561,
+    "grad_norm": 1.7904860973358154,
+    "seconds": 2.800633341015782
+  },
+  {
+    "step": 72,
+    "id": "underscore-object-pairs:turn-016",
+    "tokens": 3688,
+    "supervised_tokens": 120,
+    "loss": 0.07700971513986588,
+    "grad_norm": 0.3225494623184204,
+    "seconds": 3.508469544001855
+  },
+  {
+    "step": 73,
+    "id": "underscore-difference:turn-016",
+    "tokens": 1885,
+    "supervised_tokens": 59,
+    "loss": 0.02075381949543953,
+    "grad_norm": 0.20213712751865387,
+    "seconds": 1.6891780000005383
+  },
+  {
+    "step": 74,
+    "id": "underscore-intersection:turn-016",
+    "tokens": 3397,
+    "supervised_tokens": 90,
+    "loss": 0.12850536406040192,
+    "grad_norm": 0.5876681804656982,
+    "seconds": 3.252192379004555
+  },
+  {
+    "step": 75,
+    "id": "underscore-object-pairs:turn-002",
+    "tokens": 303,
+    "supervised_tokens": 56,
+    "loss": 0.11646001785993576,
+    "grad_norm": 1.9572683572769165,
+    "seconds": 0.9274223700049333
+  },
+  {
+    "step": 76,
+    "id": "boltons-multi-dict:turn-006",
+    "tokens": 2012,
+    "supervised_tokens": 45,
+    "loss": 0.09125223010778427,
+    "grad_norm": 2.259828805923462,
+    "seconds": 1.914661368005909
+  },
+  {
+    "step": 77,
+    "id": "boltons-pluralize:turn-010",
+    "tokens": 2317,
+    "supervised_tokens": 48,
+    "loss": 0.07354934513568878,
+    "grad_norm": 0.7242962718009949,
+    "seconds": 2.182243388990173
+  },
+  {
+    "step": 78,
+    "id": "underscore-range-step:turn-012",
+    "tokens": 2733,
+    "supervised_tokens": 139,
+    "loss": 0.181605726480484,
+    "grad_norm": 0.6770218014717102,
+    "seconds": 2.5480980729917064
+  },
+  {
+    "step": 79,
+    "id": "boltons-slugify:turn-022",
+    "tokens": 2851,
+    "supervised_tokens": 103,
+    "loss": 0.13182631134986877,
+    "grad_norm": 0.8058300018310547,
+    "seconds": 2.6884880639845505
+  },
+  {
+    "step": 80,
+    "id": "boltons-multi-dict:turn-002",
+    "tokens": 308,
+    "supervised_tokens": 50,
+    "loss": 0.13650977611541748,
+    "grad_norm": 2.8354337215423584,
+    "seconds": 0.9267404769780114
+  },
+  {
+    "step": 81,
+    "id": "underscore-group-partition:turn-018",
+    "tokens": 3417,
+    "supervised_tokens": 142,
+    "loss": 0.1361495852470398,
+    "grad_norm": 0.4881938099861145,
+    "seconds": 3.2614367580099497
+  },
+  {
+    "step": 82,
+    "id": "underscore-difference:turn-006",
+    "tokens": 577,
+    "supervised_tokens": 60,
+    "loss": 0.058550868183374405,
+    "grad_norm": 0.3093204200267792,
+    "seconds": 0.9286414720118046
+  },
+  {
+    "step": 83,
+    "id": "underscore-object-pairs:turn-018",
+    "tokens": 3927,
+    "supervised_tokens": 65,
+    "loss": 0.029576104134321213,
+    "grad_norm": 0.405087411403656,
+    "seconds": 3.8062867170083337
+  },
+  {
+    "step": 84,
+    "id": "underscore-intersection:turn-002",
+    "tokens": 297,
+    "supervised_tokens": 50,
+    "loss": 0.12094400078058243,
+    "grad_norm": 3.0773022174835205,
+    "seconds": 1.1306568260188214
+  },
+  {
+    "step": 85,
+    "id": "underscore-defaults:turn-006",
+    "tokens": 2270,
+    "supervised_tokens": 85,
+    "loss": 0.10776393115520477,
+    "grad_norm": 0.5909367203712463,
+    "seconds": 2.0465628170059063
+  },
+  {
+    "step": 86,
+    "id": "boltons-slugify:turn-012",
+    "tokens": 2107,
+    "supervised_tokens": 202,
+    "loss": 0.07859621942043304,
+    "grad_norm": 0.3868263065814972,
+    "seconds": 1.9560702870076057
+  },
+  {
+    "step": 87,
+    "id": "underscore-map-object:turn-018",
+    "tokens": 2463,
+    "supervised_tokens": 111,
+    "loss": 0.10425852984189987,
+    "grad_norm": 0.5334845781326294,
+    "seconds": 2.3223078629816882
+  },
+  {
+    "step": 88,
+    "id": "boltons-slugify:turn-010",
+    "tokens": 1658,
+    "supervised_tokens": 46,
+    "loss": 0.06530187278985977,
+    "grad_norm": 0.6453811526298523,
+    "seconds": 1.4500900080020074
+  },
+  {
+    "step": 89,
+    "id": "underscore-intersection:turn-008",
+    "tokens": 1944,
+    "supervised_tokens": 66,
+    "loss": 0.19563816487789154,
+    "grad_norm": 0.9647117257118225,
+    "seconds": 1.7567247739934828
+  },
+  {
+    "step": 90,
+    "id": "underscore-object-pairs:turn-012",
+    "tokens": 3042,
+    "supervised_tokens": 52,
+    "loss": 0.14903417229652405,
+    "grad_norm": 0.7415553331375122,
+    "seconds": 2.843174275010824
+  },
+  {
+    "step": 91,
+    "id": "boltons-asciify:turn-014",
+    "tokens": 2816,
+    "supervised_tokens": 45,
+    "loss": 0.05596970394253731,
+    "grad_norm": 0.3403170704841614,
+    "seconds": 2.7069803290069103
+  },
+  {
+    "step": 92,
+    "id": "underscore-index-nan:turn-006",
+    "tokens": 2552,
+    "supervised_tokens": 46,
+    "loss": 0.16751837730407715,
+    "grad_norm": 1.7445279359817505,
+    "seconds": 2.341438086994458
+  },
+  {
+    "step": 93,
+    "id": "underscore-difference:turn-014",
+    "tokens": 1699,
+    "supervised_tokens": 74,
+    "loss": 0.05022355169057846,
+    "grad_norm": 0.37358537316322327,
+    "seconds": 1.5550588729965966
+  },
+  {
+    "step": 94,
+    "id": "underscore-map-object:turn-002",
+    "tokens": 294,
+    "supervised_tokens": 49,
+    "loss": 0.10334646701812744,
+    "grad_norm": 1.1698273420333862,
+    "seconds": 0.9353337209904566
+  },
+  {
+    "step": 95,
+    "id": "boltons-slugify:turn-004",
+    "tokens": 485,
+    "supervised_tokens": 47,
+    "loss": 0.04824896156787872,
+    "grad_norm": 0.21470648050308228,
+    "seconds": 0.9349277229921427
+  },
+  {
+    "step": 96,
+    "id": "underscore-map-object:turn-012",
+    "tokens": 921,
+    "supervised_tokens": 37,
+    "loss": 0.001555057941004634,
+    "grad_norm": 0.04456101357936859,
+    "seconds": 0.9450508650043048
+  }
+]

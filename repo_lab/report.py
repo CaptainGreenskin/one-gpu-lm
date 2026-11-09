@@ -78,7 +78,15 @@ def render(run):
         raise ValueError('Legacy regression membership mismatch')
     if training['status'] != 'completed':
         raise ValueError('Candidate training incomplete')
-    source, adapter = read('source.json'), read('adapter.json')
+    source, adapter, profile, data = read('source.json'), read('adapter.json'), read('profile.json'), read('data.json')
+    for label,expected_adapter in [('base',False),('adapted',True)]:
+        backend = source['backends'][label]
+        if any(backend[key] != profile[key] for key in ['model_id','revision']) or backend['profile_sha256'] != sha256(run/'profile.json') or backend['adapter'] != expected_adapter:
+            raise ValueError('Backend model/profile identity differs in '+label)
+    if training['profile_sha256'] != sha256(run/'profile.json') or training['protocol_sha256'] != sha256(run/'protocol.json'):
+        raise ValueError('Training profile or protocol identity differs')
+    if training['data_sha256'] != data['sha256'] or data['source_campaign_sha256'] != sha256(run/'baseline.json') or data['task_spec_sha256'] != base['identity']['tasks_sha256']:
+        raise ValueError('Training data provenance differs from the baseline campaign')
     if source['backends']['adapted']['adapter_sha256'] != adapter['files']:
         raise ValueError('Evaluated adapter differs from saved candidate')
     loading_names=['loading-base.json','loading-candidate.json','loading-training.json']
@@ -106,10 +114,17 @@ def render(run):
             'agent_tool_seconds':tool,'grading_and_controller_overhead_seconds':total-generation-tool,
             'residual_includes':'fresh grading, workspace hashing, controller/RPC overhead, recovery pause and any unrecorded failed request wait; not a pure grading measurement'}
     summary['timing']=timing
+    selection = read('selection.json')
+    selected_tasks = Counter(r['id'].rsplit(':',1)[0] for r in selection['selected'])
+    train_ids = {r['id'] for r in base['results'] if r['split']=='train'}
+    if not set(selected_tasks).issubset(train_ids):
+        raise ValueError('Selected supervision includes an unknown/non-training task')
+    summary['supervision_coverage'] = {'selected_task_count':len(selected_tasks),
+        'admitted_training_task_count':len(train_ids),'records_by_task':dict(sorted(selected_tasks.items())),
+        'note':'A selected record can be an inspection or test command, not only a repair; task success and command return code were checked.'}
     write_json(run/'summary.json',summary)
     hw = hardware(run/'telemetry.csv',read('runtime.json')['telemetry_utc_offset_minutes'])
     write_json(run/'hardware.json',hw)
-    selection = read('selection.json')
     tables = ['| Partition | Base | LoRA | Improved | Regressed |','| --- | --- | --- | --- | --- |']
     for split,v in summary['splits'].items():
         tables.append(f"| {split} | {v['baseline_passed']}/{v['pairs']} | {v['adapted_passed']}/{v['pairs']} | {len(v['improved'])} | {len(v['regressed'])} |")
@@ -129,7 +144,7 @@ Legacy function fixtures: {old_base['passed']}/9 → {old_adapted['passed']}/9. 
 - Baseline UTC: {base['started_utc']} — {base['finished_utc']}.
 - Candidate campaign UTC: {adapted['started_utc']} — {adapted['finished_utc']}.
 - One LoRA pass: {training['steps']} updates, {training['training_seconds']:.1f} update seconds, {training['supervised_tokens']:,} supervised tokens; peak allocated {training['peak_allocated_bytes']/2**30:.2f} GiB.
-- Selected supervision: {len(selection['selected'])} records; {len(selection['excluded'])} excluded by frozen size/example budget. Kinds: `{json.dumps(selection['kinds'],sort_keys=True)}`.
+- Selected supervision: {len(selection['selected'])} records covering {len(selected_tasks)}/{len(train_ids)} admitted training tasks; {len(selection['excluded'])} excluded by frozen size/example budget. Kinds: `{json.dumps(selection['kinds'],sort_keys=True)}`. Records include inspection and test commands, not only code repairs; record count is not the number of distinct solved tasks.
 - Recovery at completed steps: `{json.dumps(recovery,sort_keys=True)}`. Independent deterministic continuous/restart contracts are recorded in the preflight receipts. This does not cover arbitrary mid-command crashes or context compression.
 - Sampling: {hw['samples']} GPU readings every nominal 5 s; maximum gap {hw['maximum_gap_seconds']:.2f} s; {hw['gaps_over_10_seconds']} gaps above 10 s. Observed peak {hw['temperature_c']['maximum']:.0f} °C, {hw['memory_used_mib']['maximum']:.0f} MiB used, {hw['power_w']['maximum']:.1f} W. Monitoring includes setup and the invalidated interface probe; it is not a training-only utilization benchmark.
 
@@ -159,7 +174,7 @@ Rebuild: `python -m repo_lab.report --run THIS_DIRECTORY`. Inputs and generated 
             for name in ['base','adapted']:
                 stream.write(f"{name}: `{json.dumps(audit[name]['format_categories'],sort_keys=True)}`.\n\n")
             stream.write('These are heuristic interface categories. They distinguish missing actions, case/parameter mismatch and generation truncation; they do not assign all failures to the underlying coding model. See [action-audit.json](action-audit.json).\n')
-    profile=read('profile.json');data=read('data.json');storage=read('adapter-storage.json')
+    storage=read('adapter-storage.json')
     (run/'MODEL_CARD.md').write_text(f"""# Model card — private repository-agent LoRA candidate
 
 Status: experimental local adapter. Daily-use acceptance: **false**. Small screening gate passed: **{summary['candidate_passes_this_screen']}**. No ModelScope weight release is represented by this card.
@@ -176,7 +191,7 @@ Before a later ModelScope release: pass substantially broader independent tasks,
 
 Raw source, private task specifications, trajectories, reference patches and model outputs are not redistributed. Exact task-spec SHA-256: `{data['task_spec_sha256']}`. Exact training JSONL SHA-256: `{data['sha256']}`. Source identities and selected file notices are in the experiment-level source records.
 
-Training examples: {data['records']} prepared records; {len(selection['selected'])} selected after the predeclared context/example limits; {len(selection['excluded'])} excluded. Selected kinds: `{json.dumps(selection['kinds'],sort_keys=True)}`. Repositories: `{json.dumps(selection['repositories'])}`. Successful baseline trajectories are self-generated local supervision, not outputs purchased from a teacher API. Failed training tasks may contribute separately labeled, executed reference repairs from their authorized snapshots. Only the current assistant response contributes to loss.
+Training examples: {data['records']} prepared records; {len(selection['selected'])} selected after the predeclared context/example limits; {len(selection['excluded'])} excluded. Selected kinds: `{json.dumps(selection['kinds'],sort_keys=True)}`. Repositories: `{json.dumps(selection['repositories'])}`. The selected records cover {len(selected_tasks)}/{len(train_ids)} admitted training tasks; counts per task are in `summary.json`. Successful baseline trajectories are self-generated local supervision, not outputs purchased from a teacher API. They include successful inspection/test commands and repairs from tasks that passed independent grading; each record is not necessarily a new repair demonstration. Failed training tasks may contribute separately labeled, executed reference repairs from their authorized snapshots, but the selected kind counts determine whether any actually entered training. Only the current assistant response contributes to loss.
 
 Task controls admitted {sum(protocol['admitted_task_counts'].values())} of {sum(protocol['target_task_counts'].values())} constructed tasks. Frozen counts: `{json.dumps(protocol['admitted_task_counts'],sort_keys=True)}`. Training, development and final tasks use different repositories and API families; no development/test answers or trajectories enter SFT. This separation does not prove absence from base-model pretraining, nor does it make a {test['pairs']}-task final sample representative.
 

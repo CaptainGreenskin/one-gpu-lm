@@ -1,0 +1,1009 @@
+{
+  "base": {
+    "schema_version": 1,
+    "campaign_sha256": "f1cb8afcbf68b0bd032c96871384dbf2e05922eb80716dd093f5cd793efb86d4",
+    "tasks": [
+      {
+        "id": "boltons-slugify",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-pluralize",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "2": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-bytes2human",
+        "split": "train",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "truncated_at_generation_limit": 3
+        },
+        "tool_returncode_counts": {
+          "0": 6
+        },
+        "generation_limit_hits": 3,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-asciify",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-make_cache_key",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1
+        },
+        "tool_returncode_counts": {
+          "0": 9,
+          "1": 2
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-LRI-__setitem__",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-LRU-__getitem__",
+        "split": "train",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_tool_name_case": 3
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-multi-dict",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-research",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1
+        },
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-cache-and-frozen",
+        "split": "train",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_or_malformed_parameter": 3
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-index-nan",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-defaults",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-reduce-initial",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-uniq-iteratee",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-intersection",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-difference",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 8,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-stable-sort",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-range-step",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 8
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-object-pairs",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-map-object",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-group-partition",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-windowed",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_or_malformed_parameter": 1
+        },
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-spy",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-split_at",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-consume-and-window",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-nan",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1,
+          "unsupported_or_malformed_parameter": 5
+        },
+        "tool_returncode_counts": {
+          "0": 4,
+          "1": 2
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-array-members",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-map-values",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1,
+          "unsupported_or_malformed_parameter": 2
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-regexp-flags",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-asdict",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-to-bool",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-optional-validator",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-filters-and-tuples",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-arguments",
+        "split": "test",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_or_malformed_parameter": 3
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-pending-count",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-map-index",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      }
+    ],
+    "format_categories": {
+      "truncated_at_generation_limit": 3,
+      "no_supported_action": 4,
+      "unsupported_tool_name_case": 3,
+      "unsupported_or_malformed_parameter": 14
+    },
+    "interpretation": "Heuristic classification of observed interface failures, not a causal diagnosis or intrinsic coding score. Nonzero tool status can be an expected grep/test result. Raw messages and commands are excluded."
+  },
+  "adapted": {
+    "schema_version": 1,
+    "campaign_sha256": "65d0d3fcbd4813540fbe9a658f21907bf66e83413739cc5aa7ebc8174ea32bac",
+    "tasks": [
+      {
+        "id": "boltons-slugify",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "1": 2
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-pluralize",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "2": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-bytes2human",
+        "split": "train",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "truncated_at_generation_limit": 3
+        },
+        "tool_returncode_counts": {
+          "0": 6
+        },
+        "generation_limit_hits": 3,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-asciify",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-make_cache_key",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "1": 2
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-LRI-__setitem__",
+        "split": "train",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "truncated_at_generation_limit": 3
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 3,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-LRU-__getitem__",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-multi-dict",
+        "split": "train",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-research",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1
+        },
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "boltons-cache-and-frozen",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "1": 2
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-index-nan",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "128": 1,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-defaults",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-reduce-initial",
+        "split": "train",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10,
+          "1": 1,
+          "128": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-uniq-iteratee",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-intersection",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-difference",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 8,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-stable-sort",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 8
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-range-step",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-object-pairs",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 5
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-map-object",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 8
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "underscore-group-partition",
+        "split": "train",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-windowed",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_or_malformed_parameter": 1
+        },
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-spy",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-split_at",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "more-itertools-consume-and-window",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-nan",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-array-members",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "128": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-map-values",
+        "split": "dev",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "no_supported_action": 1,
+          "unsupported_or_malformed_parameter": 2
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "fast-deep-equal-regexp-flags",
+        "split": "dev",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 10
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-asdict",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 11,
+          "1": 1
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-to-bool",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-optional-validator",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {
+          "other_unsupported_native_action": 1
+        },
+        "tool_returncode_counts": {
+          "0": 7
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "attrs-filters-and-tuples",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-arguments",
+        "split": "test",
+        "passed": false,
+        "exit_status": "RepeatedFormatError",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {
+          "unsupported_or_malformed_parameter": 3
+        },
+        "tool_returncode_counts": {},
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-pending-count",
+        "split": "test",
+        "passed": false,
+        "exit_status": "LimitsExceeded",
+        "grading_reason": "runtime_error",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 12
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      },
+      {
+        "id": "p-limit-map-index",
+        "split": "test",
+        "passed": true,
+        "exit_status": "Submitted",
+        "grading_reason": "ok",
+        "format_error_categories": {},
+        "tool_returncode_counts": {
+          "0": 9
+        },
+        "generation_limit_hits": 0,
+        "backend_limit": null
+      }
+    ],
+    "format_categories": {
+      "truncated_at_generation_limit": 6,
+      "no_supported_action": 2,
+      "unsupported_or_malformed_parameter": 6,
+      "other_unsupported_native_action": 1
+    },
+    "interpretation": "Heuristic classification of observed interface failures, not a causal diagnosis or intrinsic coding score. Nonzero tool status can be an expected grep/test result. Raw messages and commands are excluded."
+  }
+}

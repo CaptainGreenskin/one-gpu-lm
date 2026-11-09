@@ -1,0 +1,11 @@
+# Model card — private repository-agent LoRA candidate
+
+Status: experimental local adapter. Daily-use acceptance: **false**. Small screening gate passed: **False**. No ModelScope weight release is represented by this card.
+
+Base: [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B/tree/37561816e66b5b9153b1b64c10968c18c1e6f4a0), revision `37561816e66b5b9153b1b64c10968c18c1e6f4a0`. Loader `AutoModelForImageTextToText`, base dtype `bfloat16`; tokenizer/template and exact LoRA targets are fixed in `profile.json`. Rank 8, alpha 16, 58,363,904 trainable parameters. Saved adapter storage: `[{"file": "adapter_model.safetensors", "file_bytes": 233605480, "parameter_counts": {"F32": 58363904}, "tensor_counts": {"F32": 992}}]`. The backbone dtype does not imply the adapter tensors use that same dtype; see `adapter-storage.json` for the actual safetensors header counts. This adapter requires the matching base; it is not a standalone model. Inference uses an unmerged PEFT adapter, so task timings include its extra execution overhead.
+
+Intended use: a bounded engineering experiment in repository repair. Evaluation uses one greedy run per task and one training seed, visible tests and constructed defects. Final repository-disjoint tasks: 3/7 base, 3/7 candidate, 0 regressions. Previous simple fixtures: 9/9 after training. These results do not establish advanced coding, autonomous long-task reliability, security, general language coverage or production serving performance.
+
+The exact adapter file hashes are in `adapter.json` and match the evaluated backend identity in `source.json`. Saving/reloading reproduced a short greedy probe. Original orchestration code is MIT; the base uses its recorded Apache-2.0 license and corpus components retain their own notices. This is not an audit or warranty of the base's upstream pretraining corpus.
+
+Before a later ModelScope release: pass substantially broader independent tasks, review the precise data and weight distribution package, retain applicable licenses/notices, specify base/tokenizer/adapter hashes and dependency versions, and link a matching GitHub result. A future model version must rerun these checks; old LoRA weights are not assumed portable to a new architecture.

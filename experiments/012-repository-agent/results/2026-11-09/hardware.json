@@ -1,0 +1,33 @@
+{
+  "samples": 1964,
+  "first_utc": "2026-11-09T09:02:49.058000+00:00",
+  "last_utc": "2026-11-09T11:46:26.392000+00:00",
+  "nominal_interval_seconds": 5,
+  "maximum_gap_seconds": 5.287,
+  "gaps_over_10_seconds": 0,
+  "scope": "entire experiment monitoring including setup and invalidated interface probe, not only training",
+  "temperature_c": {
+    "minimum": 19.0,
+    "median": 41.0,
+    "mean": 41.14154786150713,
+    "maximum": 74.0
+  },
+  "power_w": {
+    "minimum": 14.53,
+    "median": 190.905,
+    "mean": 201.20604378818737,
+    "maximum": 562.09
+  },
+  "gpu_utilization_percent": {
+    "minimum": 0.0,
+    "median": 33.0,
+    "mean": 33.781568228105904,
+    "maximum": 100.0
+  },
+  "memory_used_mib": {
+    "minimum": 295.0,
+    "median": 60443.0,
+    "mean": 62141.68126272912,
+    "maximum": 93561.0
+  }
+}

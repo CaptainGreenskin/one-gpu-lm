@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-09T10:08:54.819051+00:00",
+  "status": "completed",
+  "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+  "protocol_sha256": "de163b5dc8cc6743a2d194ca37494fdaef61d60d2366a886612ac5c27ad623f5",
+  "data_sha256": "f0e390bf5defd4e15fe2437a4b7c7afebb88b7941749c7f3fc9fc36ba590890a",
+  "training_scope": "assistant-only-constructed-repository-control",
+  "trainable_parameters": 58363904,
+  "training_seconds": 208.26195086797816,
+  "steps": 96,
+  "input_tokens": 180312,
+  "supervised_tokens": 6280,
+  "peak_allocated_bytes": 72617595904,
+  "peak_reserved_bytes": 95644811264,
+  "frozen_sample_unchanged": true,
+  "frozen_gradients_absent": true,
+  "adapter_changed": true,
+  "saved_reload_greedy_ids_equal": true,
+  "reload_probe_ids_sha256": "6e8e4665af2dd27d67db5540f96d824528d7fecb79ce4b8f43b117e3f1b932ee",
+  "finished_utc": "2026-11-09T10:13:41.662467+00:00"
+}

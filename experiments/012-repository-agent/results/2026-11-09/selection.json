@@ -1,0 +1,835 @@
+{
+  "selected": [
+    {
+      "id": "boltons-asciify:turn-002",
+      "tokens": 320,
+      "supervised_tokens": 59,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-004",
+      "tokens": 480,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-006",
+      "tokens": 982,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-008",
+      "tokens": 1909,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-010",
+      "tokens": 2594,
+      "supervised_tokens": 54,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-012",
+      "tokens": 2730,
+      "supervised_tokens": 51,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-014",
+      "tokens": 2816,
+      "supervised_tokens": 45,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-016",
+      "tokens": 3439,
+      "supervised_tokens": 45,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-asciify:turn-018",
+      "tokens": 3827,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-002",
+      "tokens": 308,
+      "supervised_tokens": 50,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-004",
+      "tokens": 1305,
+      "supervised_tokens": 38,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-006",
+      "tokens": 2012,
+      "supervised_tokens": 45,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-008",
+      "tokens": 2110,
+      "supervised_tokens": 29,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-010",
+      "tokens": 2771,
+      "supervised_tokens": 50,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-012",
+      "tokens": 3148,
+      "supervised_tokens": 69,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-multi-dict:turn-014",
+      "tokens": 3887,
+      "supervised_tokens": 45,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-002",
+      "tokens": 319,
+      "supervised_tokens": 58,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-004",
+      "tokens": 514,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-006",
+      "tokens": 1273,
+      "supervised_tokens": 56,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-008",
+      "tokens": 1462,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-010",
+      "tokens": 2317,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-012",
+      "tokens": 2618,
+      "supervised_tokens": 67,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-pluralize:turn-014",
+      "tokens": 3273,
+      "supervised_tokens": 47,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-002",
+      "tokens": 315,
+      "supervised_tokens": 55,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-004",
+      "tokens": 485,
+      "supervised_tokens": 47,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-006",
+      "tokens": 1030,
+      "supervised_tokens": 85,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-008",
+      "tokens": 1234,
+      "supervised_tokens": 70,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-010",
+      "tokens": 1658,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-012",
+      "tokens": 2107,
+      "supervised_tokens": 202,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-016",
+      "tokens": 2463,
+      "supervised_tokens": 144,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-018",
+      "tokens": 2579,
+      "supervised_tokens": 96,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-020",
+      "tokens": 2690,
+      "supervised_tokens": 69,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-022",
+      "tokens": 2851,
+      "supervised_tokens": 103,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "boltons-slugify:turn-024",
+      "tokens": 3227,
+      "supervised_tokens": 139,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-002",
+      "tokens": 305,
+      "supervised_tokens": 58,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-004",
+      "tokens": 1638,
+      "supervised_tokens": 101,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-006",
+      "tokens": 2270,
+      "supervised_tokens": 85,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-008",
+      "tokens": 2677,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-010",
+      "tokens": 3404,
+      "supervised_tokens": 55,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-defaults:turn-012",
+      "tokens": 3616,
+      "supervised_tokens": 50,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-002",
+      "tokens": 293,
+      "supervised_tokens": 48,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-004",
+      "tokens": 499,
+      "supervised_tokens": 80,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-006",
+      "tokens": 577,
+      "supervised_tokens": 60,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-010",
+      "tokens": 786,
+      "supervised_tokens": 59,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-012",
+      "tokens": 1263,
+      "supervised_tokens": 55,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-014",
+      "tokens": 1699,
+      "supervised_tokens": 74,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-016",
+      "tokens": 1885,
+      "supervised_tokens": 59,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-difference:turn-018",
+      "tokens": 2001,
+      "supervised_tokens": 69,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-002",
+      "tokens": 299,
+      "supervised_tokens": 35,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-004",
+      "tokens": 508,
+      "supervised_tokens": 32,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-006",
+      "tokens": 703,
+      "supervised_tokens": 53,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-008",
+      "tokens": 762,
+      "supervised_tokens": 41,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-010",
+      "tokens": 1210,
+      "supervised_tokens": 42,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-012",
+      "tokens": 2151,
+      "supervised_tokens": 41,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-014",
+      "tokens": 3008,
+      "supervised_tokens": 150,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-016",
+      "tokens": 3228,
+      "supervised_tokens": 44,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-group-partition:turn-018",
+      "tokens": 3417,
+      "supervised_tokens": 142,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-index-nan:turn-002",
+      "tokens": 285,
+      "supervised_tokens": 39,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-index-nan:turn-004",
+      "tokens": 1692,
+      "supervised_tokens": 62,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-index-nan:turn-006",
+      "tokens": 2552,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-index-nan:turn-008",
+      "tokens": 3002,
+      "supervised_tokens": 44,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-index-nan:turn-010",
+      "tokens": 3924,
+      "supervised_tokens": 40,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-002",
+      "tokens": 297,
+      "supervised_tokens": 50,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-006",
+      "tokens": 762,
+      "supervised_tokens": 88,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-008",
+      "tokens": 1944,
+      "supervised_tokens": 66,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-010",
+      "tokens": 2263,
+      "supervised_tokens": 44,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-012",
+      "tokens": 3015,
+      "supervised_tokens": 294,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-014",
+      "tokens": 3260,
+      "supervised_tokens": 64,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-intersection:turn-016",
+      "tokens": 3397,
+      "supervised_tokens": 90,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-002",
+      "tokens": 294,
+      "supervised_tokens": 49,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-004",
+      "tokens": 525,
+      "supervised_tokens": 61,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-006",
+      "tokens": 605,
+      "supervised_tokens": 62,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-008",
+      "tokens": 764,
+      "supervised_tokens": 72,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-010",
+      "tokens": 848,
+      "supervised_tokens": 64,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-012",
+      "tokens": 921,
+      "supervised_tokens": 37,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-014",
+      "tokens": 1365,
+      "supervised_tokens": 38,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-016",
+      "tokens": 1700,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-018",
+      "tokens": 2463,
+      "supervised_tokens": 111,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-020",
+      "tokens": 2690,
+      "supervised_tokens": 59,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-map-object:turn-022",
+      "tokens": 2810,
+      "supervised_tokens": 73,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-002",
+      "tokens": 303,
+      "supervised_tokens": 56,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-004",
+      "tokens": 1621,
+      "supervised_tokens": 98,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-006",
+      "tokens": 1718,
+      "supervised_tokens": 50,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-008",
+      "tokens": 2181,
+      "supervised_tokens": 57,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-012",
+      "tokens": 3042,
+      "supervised_tokens": 52,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-014",
+      "tokens": 3311,
+      "supervised_tokens": 46,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-016",
+      "tokens": 3688,
+      "supervised_tokens": 120,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-018",
+      "tokens": 3927,
+      "supervised_tokens": 65,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-object-pairs:turn-020",
+      "tokens": 4070,
+      "supervised_tokens": 96,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-002",
+      "tokens": 278,
+      "supervised_tokens": 29,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-004",
+      "tokens": 510,
+      "supervised_tokens": 40,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-006",
+      "tokens": 577,
+      "supervised_tokens": 49,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-008",
+      "tokens": 1041,
+      "supervised_tokens": 44,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-010",
+      "tokens": 1884,
+      "supervised_tokens": 36,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-012",
+      "tokens": 2733,
+      "supervised_tokens": 139,
+      "kind": "verified-local-base-trajectory"
+    },
+    {
+      "id": "underscore-range-step:turn-014",
+      "tokens": 2798,
+      "supervised_tokens": 27,
+      "kind": "verified-local-base-trajectory"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "boltons-asciify:turn-020",
+      "reason": "context_limit",
+      "tokens": 4413
+    },
+    {
+      "id": "boltons-asciify:turn-022",
+      "reason": "context_limit",
+      "tokens": 4546
+    },
+    {
+      "id": "boltons-asciify:turn-024",
+      "reason": "context_limit",
+      "tokens": 4650
+    },
+    {
+      "id": "boltons-multi-dict:turn-016",
+      "reason": "context_limit",
+      "tokens": 4139
+    },
+    {
+      "id": "boltons-multi-dict:turn-018",
+      "reason": "context_limit",
+      "tokens": 4676
+    },
+    {
+      "id": "boltons-multi-dict:turn-020",
+      "reason": "context_limit",
+      "tokens": 5369
+    },
+    {
+      "id": "boltons-multi-dict:turn-022",
+      "reason": "context_limit",
+      "tokens": 5435
+    },
+    {
+      "id": "boltons-multi-dict:turn-024",
+      "reason": "context_limit",
+      "tokens": 5547
+    },
+    {
+      "id": "boltons-pluralize:turn-018",
+      "reason": "context_limit",
+      "tokens": 4578
+    },
+    {
+      "id": "boltons-pluralize:turn-020",
+      "reason": "context_limit",
+      "tokens": 5026
+    },
+    {
+      "id": "boltons-pluralize:turn-022",
+      "reason": "context_limit",
+      "tokens": 5111
+    },
+    {
+      "id": "boltons-pluralize:turn-024",
+      "reason": "context_limit",
+      "tokens": 5253
+    },
+    {
+      "id": "underscore-defaults:turn-014",
+      "reason": "context_limit",
+      "tokens": 4408
+    },
+    {
+      "id": "underscore-defaults:turn-016",
+      "reason": "context_limit",
+      "tokens": 4517
+    },
+    {
+      "id": "underscore-defaults:turn-018",
+      "reason": "context_limit",
+      "tokens": 4869
+    },
+    {
+      "id": "underscore-defaults:turn-020",
+      "reason": "context_limit",
+      "tokens": 5173
+    },
+    {
+      "id": "underscore-defaults:turn-022",
+      "reason": "context_limit",
+      "tokens": 5351
+    },
+    {
+      "id": "underscore-index-nan:turn-012",
+      "reason": "context_limit",
+      "tokens": 4806
+    },
+    {
+      "id": "underscore-index-nan:turn-014",
+      "reason": "context_limit",
+      "tokens": 5654
+    },
+    {
+      "id": "underscore-index-nan:turn-016",
+      "reason": "context_limit",
+      "tokens": 6449
+    },
+    {
+      "id": "underscore-index-nan:turn-018",
+      "reason": "context_limit",
+      "tokens": 7243
+    },
+    {
+      "id": "underscore-index-nan:turn-020",
+      "reason": "context_limit",
+      "tokens": 7432
+    },
+    {
+      "id": "underscore-index-nan:turn-024",
+      "reason": "context_limit",
+      "tokens": 7887
+    },
+    {
+      "id": "underscore-range-step:turn-016",
+      "reason": "example_budget",
+      "tokens": 2921
+    },
+    {
+      "id": "underscore-stable-sort:turn-002",
+      "reason": "example_budget",
+      "tokens": 278
+    },
+    {
+      "id": "underscore-stable-sort:turn-004",
+      "reason": "example_budget",
+      "tokens": 584
+    },
+    {
+      "id": "underscore-stable-sort:turn-006",
+      "reason": "example_budget",
+      "tokens": 659
+    },
+    {
+      "id": "underscore-stable-sort:turn-008",
+      "reason": "example_budget",
+      "tokens": 709
+    },
+    {
+      "id": "underscore-stable-sort:turn-010",
+      "reason": "example_budget",
+      "tokens": 1160
+    },
+    {
+      "id": "underscore-stable-sort:turn-012",
+      "reason": "example_budget",
+      "tokens": 1479
+    },
+    {
+      "id": "underscore-stable-sort:turn-014",
+      "reason": "example_budget",
+      "tokens": 1790
+    },
+    {
+      "id": "underscore-stable-sort:turn-016",
+      "reason": "example_budget",
+      "tokens": 1897
+    },
+    {
+      "id": "underscore-stable-sort:turn-018",
+      "reason": "example_budget",
+      "tokens": 2021
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-002",
+      "reason": "example_budget",
+      "tokens": 279
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-004",
+      "reason": "example_budget",
+      "tokens": 711
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-006",
+      "reason": "example_budget",
+      "tokens": 773
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-008",
+      "reason": "example_budget",
+      "tokens": 1538
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-010",
+      "reason": "example_budget",
+      "tokens": 1988
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-012",
+      "reason": "example_budget",
+      "tokens": 2576
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-014",
+      "reason": "example_budget",
+      "tokens": 3556
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-016",
+      "reason": "example_budget",
+      "tokens": 3615
+    },
+    {
+      "id": "underscore-uniq-iteratee:turn-018",
+      "reason": "example_budget",
+      "tokens": 3733
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference",
+      "reason": "example_budget",
+      "tokens": 569
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference",
+      "reason": "example_budget",
+      "tokens": 509
+    },
+    {
+      "id": "boltons-bytes2human:reference",
+      "reason": "example_budget",
+      "tokens": 591
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference",
+      "reason": "example_budget",
+      "tokens": 780
+    },
+    {
+      "id": "boltons-make_cache_key:reference",
+      "reason": "example_budget",
+      "tokens": 537
+    },
+    {
+      "id": "boltons-research:reference",
+      "reason": "example_budget",
+      "tokens": 546
+    },
+    {
+      "id": "underscore-reduce-initial:reference",
+      "reason": "example_budget",
+      "tokens": 399
+    }
+  ],
+  "kinds": {
+    "verified-local-base-trajectory": 96
+  },
+  "repositories": [
+    "jashkenas/underscore",
+    "mahmoud/boltons"
+  ],
+  "no_dev_test_supervision": true
+}

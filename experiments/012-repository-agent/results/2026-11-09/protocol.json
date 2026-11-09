@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_model_rollouts",
+  "purpose": "repository-agent-engineering-and-controlled-posttraining",
+  "task_origin": "deterministic defects in pinned real open-source repositories; not historical issue benchmark scores",
+  "target_task_counts": {
+    "train": 24,
+    "dev": 8,
+    "test": 8
+  },
+  "split_policy": "repository-disjoint and API/task-family-disjoint; exact task count frozen after reference/broken controls and before any model rollout",
+  "admission": {
+    "clean_reference_must_pass": true,
+    "broken_workspace_must_fail_targeted_test": true,
+    "restored_reference_must_pass": true,
+    "test_and_harness_files_immutable": true,
+    "third_party_file_notices_reviewed": true,
+    "flaky_or_environment_broken_tasks_excluded_before_model_scores": true
+  },
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "training_candidate": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "method": "BF16 frozen backbone, rank-8 LoRA, assistant-output-only SFT",
+    "seed": 101,
+    "learning_rate": 2e-06,
+    "epochs": 1,
+    "max_training_sequence_tokens": 4096,
+    "maximum_training_examples": 96,
+    "example_selection": "successful training-task trajectories first, ordered by task ID and turn; failed training tasks may contribute verified reference-repair demonstrations; drop oversized examples, then deterministic first 96",
+    "supervision": [
+      "local base-model trajectories passing task checks",
+      "explicitly labeled reference-repair demonstrations from authorized training snapshots"
+    ],
+    "exclude_dev_test_traces_and_answers": true,
+    "additional_teacher_api": false
+  },
+  "comparison": {
+    "same_tasks_tools_budgets_and_runtime": true,
+    "primary": "paired task success: targeted checks and declared regression suite pass, no protected file tampering",
+    "secondary": [
+      "regressed tasks",
+      "tool errors",
+      "format failures",
+      "model calls",
+      "generated tokens",
+      "wall seconds",
+      "modified source files",
+      "peak GPU memory"
+    ],
+    "resumption": "persist completed tool boundaries, reconstruct a new controller from saved state and workspace, preserve consumed budgets; separately disclose lack of mid-command crash recovery"
+  },
+  "promotion": {
+    "minimum_net_test_task_gain": 1,
+    "maximum_regressed_test_tasks": 0,
+    "previous_011_regression_fixtures_must_all_pass": true,
+    "resumption_must_preserve_acceptance": true,
+    "passing_this_small_constructed_set_is_not_general_daily_use_certification": true
+  },
+  "publication": {
+    "code_protocol_sources_metrics_reports": "GitHub",
+    "raw_corpus_trajectories_weights": "private",
+    "modelscope_weight_release": false
+  },
+  "admission_sha256": "12a8f6bc9407807f212191aca659e6d20ed049dc1913b655540f4a49d15f4add",
+  "task_spec_sha256": "9cf8ccf8734a739630959314b544f637fba269f4ad40af921b19ca97b9ce10a7",
+  "admitted_task_counts": {
+    "train": 21,
+    "dev": 8,
+    "test": 7
+  },
+  "excluded_before_model_scores": [
+    {
+      "id": "boltons-camel2under",
+      "reason": "broken version still passes declared checks"
+    },
+    {
+      "id": "boltons-ordinalize",
+      "reason": "broken version still passes declared checks"
+    },
+    {
+      "id": "underscore-flatten-depth",
+      "reason": "output_limit"
+    },
+    {
+      "id": "p-limit-infinite-limit",
+      "reason": "broken version still passes declared checks"
+    }
+  ],
+  "regression_scope_exclusions": {
+    "more-itertools": "TestConcurrentTee thread-stress class exceeds process guard and is unrelated to selected iterator APIs",
+    "p-limit": "concurrency: 1 timing-only test has a narrow scheduling tolerance; 29 other tests retained",
+    "underscore": "authored modules rebuilt with upstream non-strict UMD settings before six upstream test files run"
+  },
+  "protocol_revision": 2,
+  "interface_amendment": {
+    "reason": "Qwen emitted native XML bash tool calls, rejected by initial fenced-only parser",
+    "observation_scope": "training partition only; no dev or heldout model rollout observed",
+    "prior_attempt": "baseline-001 retained as invalidated interface probe, excluded from quality scores and supervision",
+    "change": "accept exactly one unambiguous fenced bash OR native Qwen XML bash/command action; same commands, tools, budgets, tasks and grading",
+    "new_baseline": "baseline-002",
+    "runtime_correction": "Before baseline-002, GPU-loaded control tests found that RLIMIT_NPROC=128 counts the backend threads under the shared UID and prevented namespace creation. Fixed shared-user guard to 512; rerun all Linux contracts with the loaded backend. This is not a per-task cgroup quota."
+  }
+}
