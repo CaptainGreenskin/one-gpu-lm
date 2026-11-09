@@ -12,7 +12,7 @@ source .venv-27b/bin/activate
 python -m one_gpu_lm --help
 ```
 
-安装脚本创建不继承系统包的 venv，固定核心版本，从官方 PyTorch/PyPI 获取包，执行 `pip check`，保存 `installation.json` 和包含间接依赖的 `environment.lock.txt`。下载错误最多重试三次，保留 TLS 验证。已存在的环境不会被覆盖；失败环境先保留，再选择新目录重试。驱动不由脚本安装。实测的完整依赖快照随 013 结果保存，核心要求在 [environments](../environments/)。
+安装脚本创建不继承系统包的 venv，固定核心版本，从官方 PyTorch/PyPI 获取包，执行 `pip check`，保存 `installation.json` 和包含间接依赖的 `environment.lock.txt`。下载错误最多重试三次，保留 TLS 验证。已存在的环境不会被覆盖；失败环境先保留，再选择新目录重试。驱动不由脚本安装。实测的 61 包版本快照在 [constraints](../environments/pro6000-cu130-constraints.txt)，安装脚本使用它限制间接依赖版本；核心要求在 [environments](../environments/)。它固定包版本，不是 wheel 内容哈希锁。
 
 GPU 必须空闲，配方要求至少 92 GiB 可用显存；预检还按检查点数量估算磁盘余量。它使用同一用户下的协作锁，不能阻止其他程序或其他用户抢占 GPU。单个例子的实际 token 长度决定显存开销，短样本验收并不保证所有 4096-token 数据都能装下。
 

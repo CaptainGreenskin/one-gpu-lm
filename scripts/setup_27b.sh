@@ -11,7 +11,7 @@ fi
 venv_python="$venv_path/bin/python"
 install() {
   for attempt in 1 2 3; do
-    if "$venv_python" -m pip --isolated --disable-pip-version-check install --timeout 30 --retries 3 "$@"; then
+    if "$venv_python" -m pip --isolated --disable-pip-version-check install --timeout 30 --retries 3 --constraint "$repo_root/environments/pro6000-cu130-constraints.txt" "$@"; then
       return 0
     fi
     printf 'Package installation attempt %s failed; preserving cache and TLS verification.\n' "$attempt" >&2
