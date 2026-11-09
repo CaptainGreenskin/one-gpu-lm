@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "comparison": {
+    "schema_version": 1,
+    "passed": true,
+    "checks": {
+      "adapter_numerically_equal": true,
+      "per_step_losses_equal_within_tolerance": true,
+      "sample_order_equal": true,
+      "steps_equal": true,
+      "saved_reload_probes_pass": true,
+      "final_greedy_probe_equal": true,
+      "loaded_optimizer_rng_and_adapter_match_checkpoint": true,
+      "final_optimizer_state_equal_within_tolerance": true,
+      "final_rng_state_exact": true
+    },
+    "steps": 12,
+    "tolerance": {
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    "adapter_max_absolute_error": 0.0,
+    "adapter_state_bitwise_equal": true,
+    "optimizer_state_bitwise_equal": true,
+    "optimizer_tolerance": {
+      "atol": 1e-10,
+      "rtol": 1e-06
+    },
+    "per_step_losses_bitwise_equal": true,
+    "restored_steps": [
+      4
+    ],
+    "purpose": "training-recovery-integrity-not-coding-quality",
+    "raw_examples_public": false,
+    "weights_public": false
+  },
+  "continuous": {
+    "result": {
+      "schema_version": 1,
+      "status": "completed",
+      "finished_utc": "2026-11-09T13:36:30.248419+00:00",
+      "steps": 12,
+      "identity_sha256": "58a35571cccce881963a21bc68b0eec2007ff11c6215f6a7d907fc2c481947a3",
+      "trainable_parameters": 58363904,
+      "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269",
+      "training_update_seconds": 24.882576630014228,
+      "input_tokens": 22117,
+      "supervised_tokens": 559,
+      "peak_allocated_bytes": 71622235136,
+      "peak_reserved_bytes": 84867547136,
+      "frozen_sample_unchanged": true,
+      "frozen_gradients_absent": true,
+      "adapter_changed": true,
+      "saved_reload_greedy_ids_equal": true,
+      "probe_ids_sha256": "0193218c8e533db038f37a639d3bac9e0c586d4252f89b5df813b9d0e98cddaf",
+      "adapter_state_sha256": "400796dcf223467c4e8fb28942906e629db8483996b83c4cb3529906e811cfad",
+      "optimizer_state_sha256": "d45e6a864df2b8f56d413721b528e3f23fee622b1949fef1aa7049120afd5e49",
+      "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+      "adapter_files": {
+        "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+        "adapter_model.safetensors": "7c9d6781a3334879cbb4333b969d3dc711f8612230d12b9da2db23835a172f6a"
+      },
+      "weights_public": false,
+      "model_quality_accepted": false
+    },
+    "started_utc": "2026-11-09T13:33:21.922895+00:00",
+    "finished_utc": "2026-11-09T13:36:30.252161+00:00",
+    "attempt_wall_seconds_sum": 188.3278057440184,
+    "elapsed_including_restart_seconds": 188.329266,
+    "hardware": [
+      {
+        "attempt": 1,
+        "samples": 23,
+        "sampling_errors": 0,
+        "thread_stopped": true,
+        "first_utc": "2026-11-09T13:34:35.600616+00:00",
+        "last_utc": "2026-11-09T13:36:26.621232+00:00",
+        "sampled_span_seconds": 111.020616,
+        "max_gap_seconds": 5.112967,
+        "peak_temperature_c": 46.0,
+        "peak_power_w": 542.77,
+        "peak_memory_used_mib": 81907.0,
+        "mean_utilization_percent": 23.347826086956523
+      }
+    ],
+    "committed_steps": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "restores": []
+  },
+  "resumed": {
+    "result": {
+      "schema_version": 1,
+      "status": "completed",
+      "finished_utc": "2026-11-09T13:42:10.725212+00:00",
+      "steps": 12,
+      "identity_sha256": "58a35571cccce881963a21bc68b0eec2007ff11c6215f6a7d907fc2c481947a3",
+      "trainable_parameters": 58363904,
+      "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269",
+      "training_update_seconds": 26.635376341990195,
+      "input_tokens": 22117,
+      "supervised_tokens": 559,
+      "peak_allocated_bytes": 71622235136,
+      "peak_reserved_bytes": 84865449984,
+      "frozen_sample_unchanged": true,
+      "frozen_gradients_absent": true,
+      "adapter_changed": true,
+      "saved_reload_greedy_ids_equal": true,
+      "probe_ids_sha256": "0193218c8e533db038f37a639d3bac9e0c586d4252f89b5df813b9d0e98cddaf",
+      "adapter_state_sha256": "400796dcf223467c4e8fb28942906e629db8483996b83c4cb3529906e811cfad",
+      "optimizer_state_sha256": "d45e6a864df2b8f56d413721b528e3f23fee622b1949fef1aa7049120afd5e49",
+      "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+      "adapter_files": {
+        "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+        "adapter_model.safetensors": "7c9d6781a3334879cbb4333b969d3dc711f8612230d12b9da2db23835a172f6a"
+      },
+      "weights_public": false,
+      "model_quality_accepted": false
+    },
+    "started_utc": "2026-11-09T13:36:32.158259+00:00",
+    "finished_utc": "2026-11-09T13:42:10.729233+00:00",
+    "attempt_wall_seconds_sum": 336.69366274098866,
+    "elapsed_including_restart_seconds": 338.570974,
+    "hardware": [
+      {
+        "attempt": 1,
+        "samples": 18,
+        "sampling_errors": 0,
+        "thread_stopped": true,
+        "first_utc": "2026-11-09T13:37:45.614620+00:00",
+        "last_utc": "2026-11-09T13:39:11.733340+00:00",
+        "sampled_span_seconds": 86.11872,
+        "max_gap_seconds": 5.385669,
+        "peak_temperature_c": 47.0,
+        "peak_power_w": 542.24,
+        "peak_memory_used_mib": 81905.0,
+        "mean_utilization_percent": 14.444444444444445
+      },
+      {
+        "attempt": 2,
+        "samples": 21,
+        "sampling_errors": 0,
+        "thread_stopped": true,
+        "first_utc": "2026-11-09T13:40:27.459839+00:00",
+        "last_utc": "2026-11-09T13:42:08.745064+00:00",
+        "sampled_span_seconds": 101.285225,
+        "max_gap_seconds": 5.236294,
+        "peak_temperature_c": 46.0,
+        "peak_power_w": 544.01,
+        "peak_memory_used_mib": 80763.0,
+        "mean_utilization_percent": 16.38095238095238
+      }
+    ],
+    "committed_steps": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "restores": [
+      {
+        "utc": "2026-11-09T13:41:40.733196+00:00",
+        "event": "state_restored",
+        "attempt": 2,
+        "step": 4,
+        "checks": {
+          "adapter": true,
+          "optimizer": true,
+          "rng": true
+        }
+      }
+    ]
+  },
+  "regression": {
+    "base": {
+      "schema_version": 1,
+      "task_sha256": "65874d057d1b9dd19b07adc95f2b3062c37be9ab13acf0c5fdfe01e3632d8d2b",
+      "complete": true,
+      "results": [
+        {
+          "id": "python-merge-intervals",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 83,
+          "generated_tokens": 118,
+          "seconds": 10.987402903003385,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54925368832,
+          "adapter": false
+        },
+        {
+          "id": "python-topological-order",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 94,
+          "generated_tokens": 236,
+          "seconds": 18.68490126999677,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54935651840,
+          "adapter": false
+        },
+        {
+          "id": "python-run-length",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 61,
+          "generated_tokens": 110,
+          "seconds": 8.819530031993054,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54920518656,
+          "adapter": false
+        },
+        {
+          "id": "javascript-frequency-order",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 67,
+          "generated_tokens": 197,
+          "seconds": 15.68126711001969,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54923600896,
+          "adapter": false
+        },
+        {
+          "id": "javascript-first-repeat",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 74,
+          "generated_tokens": 62,
+          "seconds": 4.972295460989699,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54923364352,
+          "adapter": false
+        },
+        {
+          "id": "javascript-deep-merge",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 96,
+          "generated_tokens": 177,
+          "seconds": 14.071522963000461,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54935873024,
+          "adapter": false
+        },
+        {
+          "id": "cpp-nonadjacent-sum",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 77,
+          "generated_tokens": 121,
+          "seconds": 9.634415822976734,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54924032512,
+          "adapter": false
+        },
+        {
+          "id": "cpp-zero-sum-subarrays",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 67,
+          "generated_tokens": 130,
+          "seconds": 10.57399758999236,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54921808384,
+          "adapter": false
+        },
+        {
+          "id": "cpp-strict-lis",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 68,
+          "generated_tokens": 128,
+          "seconds": 10.728197156975511,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 54922029568,
+          "adapter": false
+        }
+      ],
+      "passed": 9
+    },
+    "adapted": {
+      "schema_version": 1,
+      "task_sha256": "65874d057d1b9dd19b07adc95f2b3062c37be9ab13acf0c5fdfe01e3632d8d2b",
+      "complete": true,
+      "results": [
+        {
+          "id": "python-merge-intervals",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 83,
+          "generated_tokens": 118,
+          "seconds": 19.284102939011063,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55163895296,
+          "adapter": true
+        },
+        {
+          "id": "python-topological-order",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 94,
+          "generated_tokens": 236,
+          "seconds": 34.89062315100455,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55169107456,
+          "adapter": true
+        },
+        {
+          "id": "python-run-length",
+          "language": "python",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 61,
+          "generated_tokens": 110,
+          "seconds": 16.34398165901075,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55156609024,
+          "adapter": true
+        },
+        {
+          "id": "javascript-frequency-order",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 67,
+          "generated_tokens": 197,
+          "seconds": 29.735099301993614,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55158029312,
+          "adapter": true
+        },
+        {
+          "id": "javascript-first-repeat",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 74,
+          "generated_tokens": 62,
+          "seconds": 9.488918012008071,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55160382464,
+          "adapter": true
+        },
+        {
+          "id": "javascript-deep-merge",
+          "language": "javascript",
+          "passed": true,
+          "passed_cases": 3,
+          "cases": 3,
+          "reason": "ok",
+          "input_tokens": 96,
+          "generated_tokens": 177,
+          "seconds": 26.78036603401415,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55169328640,
+          "adapter": true
+        },
+        {
+          "id": "cpp-nonadjacent-sum",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 77,
+          "generated_tokens": 126,
+          "seconds": 18.845435497001745,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55161391104,
+          "adapter": true
+        },
+        {
+          "id": "cpp-zero-sum-subarrays",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 67,
+          "generated_tokens": 130,
+          "seconds": 19.476495089998934,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55158029312,
+          "adapter": true
+        },
+        {
+          "id": "cpp-strict-lis",
+          "language": "cpp",
+          "passed": true,
+          "passed_cases": 4,
+          "cases": 4,
+          "reason": "ok",
+          "input_tokens": 68,
+          "generated_tokens": 128,
+          "seconds": 19.260227920982288,
+          "hit_generation_limit": false,
+          "peak_allocated_bytes": 55158365184,
+          "adapter": true
+        }
+      ],
+      "passed": 9
+    }
+  },
+  "quality_improvement_claim": false,
+  "checkpoint_storage": {
+    "continuous": {
+      "checkpoint_count": 4,
+      "retained_bytes": 2337503057,
+      "checkpoints": [
+        {
+          "name": "step-00000000-9bdc30406572",
+          "bytes": 233627021,
+          "step": 0,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "optimizer_state_sha256": "c5313519e05476e100fdbc7321ea4d25fa1edff40d06686d2c945d93a4db47eb",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000004-0d5c7830c7ea",
+          "bytes": 701290531,
+          "step": 4,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "3730470da957916e0f7ca87b05997cce78e44a1a9b789dfc02c4c62cb3551b91",
+          "optimizer_state_sha256": "72d017fcc40c1c603c99c6619139f4b6427a8e17e7a814277df846a11b0b02c5",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000008-8d2334816020",
+          "bytes": 701292011,
+          "step": 8,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "f41493bfd1608f18ff0e935eb1dbe53c6ed88b968ba9b84429358fa23ed0428b",
+          "optimizer_state_sha256": "7b0b3432a7488d3e73b3a24100119700be2a35091df47cd944d77cfcb660be07",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000012-5c6b12298e61",
+          "bytes": 701293494,
+          "step": 12,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "400796dcf223467c4e8fb28942906e629db8483996b83c4cb3529906e811cfad",
+          "optimizer_state_sha256": "d45e6a864df2b8f56d413721b528e3f23fee622b1949fef1aa7049120afd5e49",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        }
+      ]
+    },
+    "resumed": {
+      "checkpoint_count": 4,
+      "retained_bytes": 2337503059,
+      "checkpoints": [
+        {
+          "name": "step-00000000-d1678ab138c2",
+          "bytes": 233627021,
+          "step": 0,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "optimizer_state_sha256": "c5313519e05476e100fdbc7321ea4d25fa1edff40d06686d2c945d93a4db47eb",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000004-7252854b5352",
+          "bytes": 701290532,
+          "step": 4,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "3730470da957916e0f7ca87b05997cce78e44a1a9b789dfc02c4c62cb3551b91",
+          "optimizer_state_sha256": "72d017fcc40c1c603c99c6619139f4b6427a8e17e7a814277df846a11b0b02c5",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000008-3151ae58e6ce",
+          "bytes": 701292012,
+          "step": 8,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "f41493bfd1608f18ff0e935eb1dbe53c6ed88b968ba9b84429358fa23ed0428b",
+          "optimizer_state_sha256": "7b0b3432a7488d3e73b3a24100119700be2a35091df47cd944d77cfcb660be07",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        },
+        {
+          "name": "step-00000012-4f4fb800c0f2",
+          "bytes": 701293494,
+          "step": 12,
+          "initial_adapter_sha256": "4a8290279479060e982103740acef63581378e07e1f95cb00b7d803e2f48184d",
+          "adapter_state_sha256": "400796dcf223467c4e8fb28942906e629db8483996b83c4cb3529906e811cfad",
+          "optimizer_state_sha256": "d45e6a864df2b8f56d413721b528e3f23fee622b1949fef1aa7049120afd5e49",
+          "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+          "order_sha256": "2cfdf0ea4f83c5fbfb671baf46b9bfadc9083a23d779d870687529eb71820269"
+        }
+      ]
+    }
+  },
+  "installation": {
+    "schema_version": 1,
+    "isolated_venv": true,
+    "python": "3.10.12",
+    "core_packages": {
+      "torch": "2.14.1+cu130",
+      "transformers": "5.19.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "huggingface-hub": "1.31.0",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.3",
+      "flash-linear-attention": "0.6.0",
+      "fla-core": "0.6.0"
+    }
+  },
+  "checks_linux": {
+    "source_commit": "ae6d7aaf9050876786e599b5d0cf0d434dca4653",
+    "returncode": 0,
+    "seconds": 4.968753096007276,
+    "output": "...........................................\n----------------------------------------------------------------------\nRan 43 tests in 4.792s\n\nOK\n"
+  },
+  "source": {
+    "source_commit": "ae6d7aaf9050876786e599b5d0cf0d434dca4653",
+    "label": "recovery-v4",
+    "steps": 12,
+    "interruption_after": 4
+  },
+  "integration": {
+    "schema_version": 1,
+    "preflight_failures": [
+      {
+        "name": "package-alias",
+        "source_commit": "164e53cbe492c1748a519703cb795cce9482f7d4",
+        "optimizer_updates": 0,
+        "cause": "Package metadata aliases were not normalized",
+        "fix_commit": "48d00a9e4ede91a1a19db49298ca89c0f236125d"
+      },
+      {
+        "name": "package-shadow",
+        "source_commit": "48d00a9e4ede91a1a19db49298ca89c0f236125d",
+        "optimizer_updates": 0,
+        "cause": "Inherited system distributions overrode active versions during enumeration",
+        "fix_commit": "a641830ac34217310b4f6ebfbc549b9da3c9dc60"
+      }
+    ],
+    "environment_build": {
+      "install_attempts": 2,
+      "first_install_failed": "TLS connection ended during package download; no training updates",
+      "second_install_completed": true,
+      "second_install_package_step_retries": 3,
+      "tls_verification_disabled": false
+    },
+    "formal_training_source_commit": "ae6d7aaf9050876786e599b5d0cf0d434dca4653",
+    "training_data_changed": false,
+    "training_budget_changed": false,
+    "numeric_tolerances_changed": false,
+    "installation_recipe": "fresh isolated installation with direct requirements; full 61-package constraints captured afterward and verified with an offline dry run",
+    "source_of_data": "unchanged private 012 training partition; external readers must prepare their own admitted data",
+    "failed_complete_gpu_pairs": [
+      {
+        "run": "recovery-v3",
+        "source_commit": "57f09cef67158b7d998570974d86c4a0cb7358eb",
+        "failure": "Numerical thresholds failed; identical initialization but gradients already differed before interruption",
+        "adapter_max_absolute_error": 3.3124662877526134e-05,
+        "restored_state_checks_passed": true,
+        "fix": "New pair uses deterministic PyTorch/cuDNN, fixed cuBLAS workspace, disabled TF32; no individual-switch ablation or upstream kernel attribution"
+      }
+    ]
+  },
+  "failed_pair": {
+    "schema_version": 1,
+    "passed": false,
+    "checks": {
+      "adapter_numerically_equal": false,
+      "per_step_losses_equal_within_tolerance": false,
+      "sample_order_equal": true,
+      "steps_equal": true,
+      "saved_reload_probes_pass": true,
+      "final_greedy_probe_equal": true,
+      "loaded_optimizer_rng_and_adapter_match_checkpoint": true,
+      "final_optimizer_state_equal_within_tolerance": false,
+      "final_rng_state_exact": true
+    },
+    "steps": 12,
+    "tolerance": {
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    "adapter_max_absolute_error": 3.3124662877526134e-05,
+    "adapter_state_bitwise_equal": false,
+    "optimizer_state_bitwise_equal": false,
+    "optimizer_tolerance": {
+      "atol": 1e-10,
+      "rtol": 1e-06
+    },
+    "per_step_losses_bitwise_equal": false,
+    "restored_steps": [
+      4
+    ],
+    "purpose": "training-recovery-integrity-not-coding-quality",
+    "raw_examples_public": false,
+    "weights_public": false
+  }
+}

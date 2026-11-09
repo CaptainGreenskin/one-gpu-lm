@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "checks": {
+    "adapter_numerically_equal": false,
+    "per_step_losses_equal_within_tolerance": false,
+    "sample_order_equal": true,
+    "steps_equal": true,
+    "saved_reload_probes_pass": true,
+    "final_greedy_probe_equal": true,
+    "loaded_optimizer_rng_and_adapter_match_checkpoint": true,
+    "final_optimizer_state_equal_within_tolerance": false,
+    "final_rng_state_exact": true
+  },
+  "steps": 12,
+  "tolerance": {
+    "atol": 1e-07,
+    "rtol": 1e-06
+  },
+  "adapter_max_absolute_error": 3.3124662877526134e-05,
+  "adapter_state_bitwise_equal": false,
+  "optimizer_state_bitwise_equal": false,
+  "optimizer_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-06
+  },
+  "per_step_losses_bitwise_equal": false,
+  "restored_steps": [
+    4
+  ],
+  "purpose": "training-recovery-integrity-not-coding-quality",
+  "raw_examples_public": false,
+  "weights_public": false
+}

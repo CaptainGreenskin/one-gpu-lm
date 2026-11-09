@@ -1,0 +1,6 @@
+{"utc": "2026-11-09T13:33:21.924389+00:00", "event": "attempt_started", "attempt": 1, "resumed": false}
+{"utc": "2026-11-09T13:35:47.238290+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 0, "manifest_sha256": "5de25e931ec1e0b319ce30164ce5d756ecdf28894ce9fb40c61b1f6a5628fb07"}
+{"utc": "2026-11-09T13:36:01.985946+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 4, "manifest_sha256": "d90cc39852d7223e72c5d5aac08a905f5379383ed3c5d7f63e8177c9c61c6bc8"}
+{"utc": "2026-11-09T13:36:10.524610+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 8, "manifest_sha256": "787b26f3e33094e9064394a2caed0b079f025eae288dd53d328d9c2222b3c731"}
+{"utc": "2026-11-09T13:36:22.636211+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 12, "manifest_sha256": "e403053eb7e19748ba8e2b25bffd0c3a478e88691263fa50f5943f1b48c1a4a1"}
+{"utc": "2026-11-09T13:36:30.251656+00:00", "event": "training_completed", "attempt": 1, "step": 12}

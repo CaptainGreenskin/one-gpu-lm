@@ -1,0 +1,9 @@
+{"utc": "2026-11-09T13:36:32.159681+00:00", "event": "attempt_started", "attempt": 1, "resumed": false}
+{"utc": "2026-11-09T13:38:57.381803+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 0, "manifest_sha256": "5de25e931ec1e0b319ce30164ce5d756ecdf28894ce9fb40c61b1f6a5628fb07"}
+{"utc": "2026-11-09T13:39:12.001910+00:00", "event": "checkpoint_committed", "attempt": 1, "step": 4, "manifest_sha256": "26bcf771bdff4aec5e280bfe495c58f1dece23a52e6ae7d369236fb81168ec21"}
+{"utc": "2026-11-09T13:39:12.056537+00:00", "event": "training_paused", "step": 4, "reason": "controlled_process_interruption"}
+{"utc": "2026-11-09T13:39:13.933002+00:00", "event": "attempt_started", "attempt": 2, "resumed": true}
+{"utc": "2026-11-09T13:41:40.733196+00:00", "event": "state_restored", "attempt": 2, "step": 4, "checks": {"adapter": true, "optimizer": true, "rng": true}}
+{"utc": "2026-11-09T13:41:50.856515+00:00", "event": "checkpoint_committed", "attempt": 2, "step": 8, "manifest_sha256": "c52e5795425a7c55fd37d4a1811c2beab2ff264ab7314322830d5fb030d04e7a"}
+{"utc": "2026-11-09T13:42:02.943151+00:00", "event": "checkpoint_committed", "attempt": 2, "step": 12, "manifest_sha256": "553790b1d497abdef2cc85649b488f26490367242eee28993d2adca46cb777a3"}
+{"utc": "2026-11-09T13:42:10.728585+00:00", "event": "training_completed", "attempt": 2, "step": 12}

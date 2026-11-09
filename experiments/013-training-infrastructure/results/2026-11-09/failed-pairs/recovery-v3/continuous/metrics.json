@@ -1,0 +1,134 @@
+[
+  {
+    "step": 1,
+    "example_sha256": "22d5cdaa8df5d5e4b91d089aa6cec5c55ab568a9f2ab89d6f292922f6be4276d",
+    "tokens": 2110,
+    "supervised_tokens": 29,
+    "loss": 0.043249618262052536,
+    "grad_norm": 0.4150240123271942,
+    "seconds": 3.4197028480120935,
+    "peak_allocated_bytes": 63744911872,
+    "peak_reserved_bytes": 65538097152
+  },
+  {
+    "step": 2,
+    "example_sha256": "1b96eaa4e0c2ab4a7ffcc8cd841659839c44481eae25fbef0625f193cfee62f3",
+    "tokens": 1305,
+    "supervised_tokens": 38,
+    "loss": 0.13014131784439087,
+    "grad_norm": 1.3386905193328857,
+    "seconds": 1.1320743359974585,
+    "peak_allocated_bytes": 63744911872,
+    "peak_reserved_bytes": 65540194304
+  },
+  {
+    "step": 3,
+    "example_sha256": "693e438e0ffda007afadfd391db0621bc074bb9147e7e643201c6ad38e549265",
+    "tokens": 2594,
+    "supervised_tokens": 54,
+    "loss": 0.12223514169454575,
+    "grad_norm": 24.731983184814453,
+    "seconds": 2.26549276500009,
+    "peak_allocated_bytes": 66256113664,
+    "peak_reserved_bytes": 73276588032
+  },
+  {
+    "step": 4,
+    "example_sha256": "2cf5def6ace224fc048020a215fe427c5c31fd166b94c0b8c831ea10dbd51457",
+    "tokens": 3887,
+    "supervised_tokens": 45,
+    "loss": 0.25412702560424805,
+    "grad_norm": 4.06089448928833,
+    "seconds": 3.7060723929898813,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 5,
+    "example_sha256": "ab61b4cca8ec4c85cc22fd019f95055facd7476f77243b8a91c3b1d5eaceb56f",
+    "tokens": 480,
+    "supervised_tokens": 48,
+    "loss": 0.04198065772652626,
+    "grad_norm": 0.19151513278484344,
+    "seconds": 0.9426308820256963,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 6,
+    "example_sha256": "091dd5c73fbc3e672ade4f79815486a635888e15f8414b5b350b84641513e256",
+    "tokens": 2012,
+    "supervised_tokens": 45,
+    "loss": 0.09169570356607437,
+    "grad_norm": 0.8082062005996704,
+    "seconds": 1.7073801159858704,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 7,
+    "example_sha256": "58a0714789acef8bdedf4f3e88f8568d6b130e5893344a054dbdc1bc38f741d8",
+    "tokens": 982,
+    "supervised_tokens": 48,
+    "loss": 0.04660891368985176,
+    "grad_norm": 0.43923163414001465,
+    "seconds": 0.9350853470095899,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 8,
+    "example_sha256": "29e1dd02956f55c9586773fc2ad0ce71131badf39f5a229e0ab9a0bea7b18682",
+    "tokens": 308,
+    "supervised_tokens": 50,
+    "loss": 0.14220643043518066,
+    "grad_norm": 2.372114896774292,
+    "seconds": 0.9269718080176972,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 9,
+    "example_sha256": "333f03c13b6d72a6d25dd22b98667219d604f87a32a98bcc605c838ae16cfa41",
+    "tokens": 1909,
+    "supervised_tokens": 48,
+    "loss": 0.02700447477400303,
+    "grad_norm": 0.19808977842330933,
+    "seconds": 1.8033913279941771,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84865449984
+  },
+  {
+    "step": 10,
+    "example_sha256": "80a33ffa38dbeb0a58e54f4e004186c51c0d9441daf82e0d0946978ee8dfa96f",
+    "tokens": 2771,
+    "supervised_tokens": 50,
+    "loss": 0.1995842009782791,
+    "grad_norm": 1.048140287399292,
+    "seconds": 2.4514366099901963,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84867547136
+  },
+  {
+    "step": 11,
+    "example_sha256": "2305a375fa75b75c1dc4388a60499e482845bb7adcf6500d618e602a07cec8ea",
+    "tokens": 320,
+    "supervised_tokens": 59,
+    "loss": 0.10146091878414154,
+    "grad_norm": 0.8830710053443909,
+    "seconds": 0.9181130450160708,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84867547136
+  },
+  {
+    "step": 12,
+    "example_sha256": "ed4cd8d0597cabab6e4b90d0319943dc27d62682f0fac2ed1f7ace8cb084e335",
+    "tokens": 3439,
+    "supervised_tokens": 45,
+    "loss": 0.08645695447921753,
+    "grad_norm": 0.9521967172622681,
+    "seconds": 3.120547919010278,
+    "peak_allocated_bytes": 71622235136,
+    "peak_reserved_bytes": 84867547136
+  }
+]

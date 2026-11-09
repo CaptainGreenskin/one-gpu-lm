@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "preflight_failures": [
+    {
+      "name": "package-alias",
+      "source_commit": "164e53cbe492c1748a519703cb795cce9482f7d4",
+      "optimizer_updates": 0,
+      "cause": "Package metadata aliases were not normalized",
+      "fix_commit": "48d00a9e4ede91a1a19db49298ca89c0f236125d"
+    },
+    {
+      "name": "package-shadow",
+      "source_commit": "48d00a9e4ede91a1a19db49298ca89c0f236125d",
+      "optimizer_updates": 0,
+      "cause": "Inherited system distributions overrode active versions during enumeration",
+      "fix_commit": "a641830ac34217310b4f6ebfbc549b9da3c9dc60"
+    }
+  ],
+  "environment_build": {
+    "install_attempts": 2,
+    "first_install_failed": "TLS connection ended during package download; no training updates",
+    "second_install_completed": true,
+    "second_install_package_step_retries": 3,
+    "tls_verification_disabled": false
+  },
+  "formal_training_source_commit": "ae6d7aaf9050876786e599b5d0cf0d434dca4653",
+  "training_data_changed": false,
+  "training_budget_changed": false,
+  "numeric_tolerances_changed": false,
+  "installation_recipe": "fresh isolated installation with direct requirements; full 61-package constraints captured afterward and verified with an offline dry run",
+  "source_of_data": "unchanged private 012 training partition; external readers must prepare their own admitted data",
+  "failed_complete_gpu_pairs": [
+    {
+      "run": "recovery-v3",
+      "source_commit": "57f09cef67158b7d998570974d86c4a0cb7358eb",
+      "failure": "Numerical thresholds failed; identical initialization but gradients already differed before interruption",
+      "adapter_max_absolute_error": 3.3124662877526134e-05,
+      "restored_state_checks_passed": true,
+      "fix": "New pair uses deterministic PyTorch/cuDNN, fixed cuBLAS workspace, disabled TF32; no individual-switch ablation or upstream kernel attribution"
+    }
+  ]
+}

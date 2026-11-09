@@ -14,6 +14,8 @@
 
 **仓库级对照已完成。** [012 的 36 道配对结果](experiments/012-repository-agent/results/2026-11-09/)：训练 14/21 → 15/21，开发 3/8 → 3/8，独立留出 3/7 → 3/7，旧回归保持 9/9；实际工具步骤恢复通过，但候选没有达到留出提升门槛，未晋升。[repo_lab](repo_lab/) 提供更换合法任务、本地模型后端和独立判分的入口。
 
+**27B 训练基础设施。** [统一操作手册](docs/27b-training.md) 提供独立环境、权重与数据预检、有限步数 LoRA、完整状态检查点、换进程恢复、产物回归及公开证据收集。实际恢复对照、失败修复和硬件记录见 [013 的验收结果](experiments/013-training-infrastructure/results/2026-11-09/)。它是单卡后训练基础设施，模型质量仍需独立验收。
+
 **拿自己的文档做实验。** 把 UTF-8 文档按篇放入训练和留出两个目录，即可逐遍比较训练分数和留出分数，找出继续训练何时开始影响未见文档。可用小型 CPU 模型先检查流程，也可用单张支持 BF16 的 CUDA 显卡跑完整配置。[用自己的文档训练和出图](experiments/007-document-curves/#用自己的文档跑)
 
 **首轮实测。** RTX PRO 6000 Blackwell 单卡完成了 100 步训练。8,565 万参数的 GPT 在中文维基验证样本上从 8.106 降到 5.386 bits/byte，训练更新用时 4.376 秒。读者可按相同数据、软件和计时口径复跑。[实测条件与原始结果](experiments/002-first-train/results/pro6000-first/) · [安装与复现](experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
@@ -32,6 +34,7 @@
 | 010 · 7B 长序列训练 | 512–4096 token 的全参数与 LoRA 训练需要多少显存？按层重算何时值得开启？ | [复现与数值审计](experiments/010-7b-context-scaling/) · [曲线与原始结果](experiments/010-7b-context-scaling/results/2026-11-09/) |
 | 011 · 编码底座与 LoRA 链路 | 真实 27B 能否加载、微调、重载和隔离评测？工程成功是否等于能力提升？ | [固定版本与复用入口](experiments/011-coding-model-selection/) · [9/9 → 7/9 的回归结果](experiments/011-coding-model-selection/results/2026-11-09/) |
 | 012 · 仓库编码 agent | 固定任务、工具和预算后，后训练能否提高独立仓库的修复率？中断恢复是否保留预算？ | [冻结协议与准入控制](experiments/012-repository-agent/) · [未达晋升门槛的完整结果](experiments/012-repository-agent/results/2026-11-09/) · [换自己的任务](repo_lab/) |
+| 013 · 27B 训练基础设施 | 独立环境能否重建？换进程恢复后是否与连续训练一致？保存的产物能否完成回归？ | [操作手册](docs/27b-training.md) · [协议与实测](experiments/013-training-infrastructure/) |
 
 **首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
 

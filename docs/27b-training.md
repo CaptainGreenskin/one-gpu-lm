@@ -14,6 +14,8 @@ python -m one_gpu_lm --help
 
 安装脚本创建不继承系统包的 venv，固定核心版本，从官方 PyTorch/PyPI 获取包，执行 `pip check`，保存 `installation.json` 和包含间接依赖的 `environment.lock.txt`。下载错误最多重试三次，保留 TLS 验证。已存在的环境不会被覆盖；失败环境先保留，再选择新目录重试。驱动不由脚本安装。实测的 61 包版本快照在 [constraints](../environments/pro6000-cu130-constraints.txt)，安装脚本使用它限制间接依赖版本；核心要求在 [environments](../environments/)。它固定包版本，不是 wheel 内容哈希锁。
 
+训练预检设置 PyTorch/cuDNN 确定性算法、`CUBLAS_WORKSPACE_CONFIG=:4096:8`，并关闭 TF32；这些实际数值设置进入运行身份。自定义内核是否可重复仍要用完整恢复对照实测，不能仅凭开关判定。
+
 GPU 必须空闲，配方要求至少 92 GiB 可用显存；预检还按检查点数量估算磁盘余量。它使用同一用户下的协作锁，不能阻止其他程序或其他用户抢占 GPU。单个例子的实际 token 长度决定显存开销，短样本验收并不保证所有 4096-token 数据都能装下。
 
 ## 2. 准备权重和合法训练记录

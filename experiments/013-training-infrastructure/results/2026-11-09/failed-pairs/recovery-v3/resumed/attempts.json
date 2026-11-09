@@ -1,0 +1,28 @@
+[
+  {
+    "attempt": 1,
+    "started_utc": "2026-11-09T13:23:34.496294+00:00",
+    "status": "paused",
+    "resumed": false,
+    "finished_utc": "2026-11-09T13:26:11.836823+00:00",
+    "wall_seconds": 157.33899115899112,
+    "telemetry": {
+      "samples": 17,
+      "errors": 0,
+      "thread_stopped": true
+    }
+  },
+  {
+    "attempt": 2,
+    "started_utc": "2026-11-09T13:26:13.981304+00:00",
+    "status": "completed",
+    "resumed": true,
+    "finished_utc": "2026-11-09T13:29:06.158840+00:00",
+    "wall_seconds": 172.17584735600394,
+    "telemetry": {
+      "samples": 20,
+      "errors": 0,
+      "thread_stopped": true
+    }
+  }
+]

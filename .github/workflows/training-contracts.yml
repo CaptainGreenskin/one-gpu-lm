@@ -1,9 +1,9 @@
 name: Training data and evaluation contracts
 on:
   push:
-    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", "scripts/setup_27b.sh", "environments/**", "configs/**", ".github/workflows/training-contracts.yml"]
+    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", "scripts/setup_27b.sh", "environments/**", "configs/**", "experiments/013-training-infrastructure/**", ".github/workflows/training-contracts.yml"]
   pull_request:
-    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", "scripts/setup_27b.sh", "environments/**", "configs/**", ".github/workflows/training-contracts.yml"]
+    paths: ["training_lab/**", "repo_lab/**", "one_gpu_lm/**", "tests/**", "scripts/setup_27b.sh", "environments/**", "configs/**", "experiments/013-training-infrastructure/**", ".github/workflows/training-contracts.yml"]
 permissions:
   contents: read
 jobs:
@@ -21,3 +21,4 @@ jobs:
       - run: python -m unittest training_lab.test_contracts repo_lab.test_contracts tests.test_modules tests.test_training_infrastructure
       - run: python -m compileall -q training_lab repo_lab one_gpu_lm tests
       - run: bash -n scripts/setup_27b.sh
+      - run: python -m py_compile experiments/013-training-infrastructure/report.py

@@ -1,0 +1,24 @@
+{
+  "variant": "base",
+  "training_identity_sha256": "58a35571cccce881963a21bc68b0eec2007ff11c6215f6a7d907fc2c481947a3",
+  "base_content_verification": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "manifest_sha256": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "weight_files": 18,
+    "metadata_files": 12,
+    "verified_bytes": 55586105207,
+    "verification_seconds": 70.18431709901779,
+    "content_verified": true
+  },
+  "backend": {
+    "ready": true,
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "profile_sha256": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+    "adapter": false,
+    "adapter_sha256": {}
+  },
+  "task_sha256": "65874d057d1b9dd19b07adc95f2b3062c37be9ab13acf0c5fdfe01e3632d8d2b",
+  "purpose": "function-regression-smoke-not-daily-model-acceptance"
+}
