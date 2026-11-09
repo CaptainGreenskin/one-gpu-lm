@@ -26,7 +26,7 @@ def main():
     if not campaign['complete']:
         raise ValueError('Baseline campaign must be complete')
     runtime = json.loads((root/'runtime.json').read_text())
-    rows, references = [], []
+    rows, reference_rows, references = [], [], []
     for result in sorted(campaign['results'], key=lambda r:r['id']):
         task = tasks[result['id']]
         if task['split'] != 'train':
@@ -76,8 +76,9 @@ def main():
             raise ValueError('Reference repair demonstration failed independent grading')
         prompt = ('Task: '+task['description']+'\nAllowed source files: '+', '.join(task['editable_files'])+
                   '\nRegression command: '+task['regression_command']+'\n'+('\n'.join(context))[:4000])
-        rows.append({'id':task['id']+':reference', 'messages':[{'role':'system','content':SYSTEM},{'role':'user','content':prompt}],
+        reference_rows.append({'id':task['id']+':reference', 'messages':[{'role':'system','content':SYSTEM},{'role':'user','content':prompt}],
                      'target':'```bash\n'+command+'\n```','provenance':{**provenance,'kind':'verified-reference-repair'}})
+    rows.extend(reference_rows)
     if not rows or any(row['provenance']['split'] != 'train' for row in rows):
         raise ValueError('Invalid training split')
     path = args.out/'train.jsonl'

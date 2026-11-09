@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "path": "boltons/strutils.py",
+      "sha256": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3",
+      "split": "train",
+      "notice_review": "Embedded three-clause BSD-style copyright and redistribution notice present; preserve full file notice."
+    },
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "path": "boltons/cacheutils.py",
+      "sha256": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80",
+      "split": "train",
+      "notice_review": "Embedded three-clause BSD-style copyright and redistribution notice present; preserve full file notice."
+    },
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "path": "boltons/dictutils.py",
+      "sha256": "68d9a7a55dd50b577d470d0df4f537e57f056da6e4749014d408c153bc8b1e7f",
+      "split": "train",
+      "notice_review": "Embedded three-clause BSD-style copyright and redistribution notice present; preserve full file notice."
+    },
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "path": "boltons/iterutils.py",
+      "sha256": "8f62bb690159f7d88eb3bbf38caa15df7d0495b4022ba175fc716629c1495241",
+      "split": "train",
+      "notice_review": "Embedded three-clause BSD-style copyright and redistribution notice present; preserve full file notice."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/_createIndexFinder.js",
+      "sha256": "6c280755c03f6b2783522ec522b4bbaec633e567b4641588fc8ade9708a6e575",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/_createAssigner.js",
+      "sha256": "728247543f2c01aa503e9ca0995cc1cdea0269b8c88e8b4acef489241c5966c6",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/_createReduce.js",
+      "sha256": "761effc6ffd6129128dbc87b6a3d0fb822106f98e4455dcac05f74e4a6f3b619",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/uniq.js",
+      "sha256": "62adc926561bd9f8d884ec557f7eeb41f5349f6ac69efcecd11e82683e76c2ee",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/intersection.js",
+      "sha256": "061258a7306a9b12b35d408c797fb48351b1b873c2aa6b43eab55c75a2e36723",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/difference.js",
+      "sha256": "2d9be0911858a6157c10be7ba3971b1f6ef4028da6750cd3dfdb77700666e1b8",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/sortBy.js",
+      "sha256": "5b686208341485708e976f37282a97c5eae763e77c94f8e86bcd5c0026839f79",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/range.js",
+      "sha256": "02c800f074e227eef2c9b59546440ddb866f6d615cc6563e26580bcc328e346d",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/object.js",
+      "sha256": "3c2b6d2100f432a6f00c216be915b04fe44ba207e3c40356ba9e2cca7f5cc115",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/mapObject.js",
+      "sha256": "cb18fb48039cd0f7e6730f1b4c1f71a5595560d2cbb5849a333b231deed0b43f",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/groupBy.js",
+      "sha256": "9ece5108c9f6757f3dc0c5ff0f70bc48049a946fc84c04c5349bd666c34ae633",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "path": "modules/partition.js",
+      "sha256": "c46d1f8f0127c66a7e45510e72d6824aee711be2534f627c5db25463558824b6",
+      "split": "train",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "path": "more_itertools/more.py",
+      "sha256": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d",
+      "split": "dev",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "path": "more_itertools/recipes.py",
+      "sha256": "468ab191bbb5fd62e8603d741e6983acdfa9d697d0ff9252b0c56ffdd24ca9bc",
+      "split": "dev",
+      "notice_review": "File explicitly attributes Python itertools documentation recipes. Retain provenance alongside repository MIT notice; this source is evaluation-only and excluded from SFT. Current Python documentation code licensing is recorded separately; do not relabel the whole file as 0BSD."
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "path": "src/index.jst",
+      "sha256": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226",
+      "split": "dev",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "path": "src/attr/_funcs.py",
+      "sha256": "eb6623ffeb7a3052483a39635fda25da4ebbe36e4ca6d8dfe66d6e02d8ed9b88",
+      "split": "test",
+      "notice_review": "Explicit SPDX-License-Identifier: MIT file header."
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "path": "src/attr/converters.py",
+      "sha256": "be3ce4f8ee6feb27a881b13a734665690fe4c81cfe030089c648f428229a8ed7",
+      "split": "test",
+      "notice_review": "Explicit SPDX-License-Identifier: MIT file header."
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "path": "src/attr/validators.py",
+      "sha256": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5",
+      "split": "test",
+      "notice_review": "Explicit SPDX-License-Identifier: MIT file header."
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "path": "src/attr/filters.py",
+      "sha256": "64188a58ba774742df099b2aed7d75a67f565fc36c952db05cce23b272ce19cf",
+      "split": "test",
+      "notice_review": "Explicit SPDX-License-Identifier: MIT file header."
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "path": "index.js",
+      "sha256": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60",
+      "split": "test",
+      "notice_review": "No file-specific license override found in selected source; retain repository license."
+    }
+  ],
+  "python_recipe_reference": {
+    "url": "https://docs.python.org/3/license.html",
+    "observation": "Python documents PSF-2.0 and 0BSD dual licensing for documentation examples/recipes starting with 3.8.6. The selected historical file retains its own provenance and repo notice."
+  },
+  "scope": "selected edited source files, not an exhaustive audit of every transitive dependency",
+  "raw_source_public": false
+}
