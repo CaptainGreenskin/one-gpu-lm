@@ -97,6 +97,15 @@ def render(run):
     summary.update(schema_version=1,gate=gate,candidate_passes_this_screen=all(gate.values()),daily_model_accepted=False,
         legacy={'base_passed':old_base['passed'],'adapted_passed':old_adapted['passed'],'tasks':9},recovery=recovery,
         inference_exit_counts={name:dict(Counter(r['exit_status'] for r in value['results'])) for name,value in [('base',base),('adapted',adapted)]})
+    timing={}
+    for name,value in [('base',base),('adapted',adapted)]:
+        total=sum(r['seconds'] for r in value['results'])
+        generation=sum(g.get('seconds',0) for r in value['results'] for g in r['generations'])
+        tool=sum(r.get('tool_seconds',0) for r in value['results'])
+        timing[name]={'controller_through_grading_seconds':total,'generation_seconds':generation,
+            'agent_tool_seconds':tool,'grading_and_controller_overhead_seconds':total-generation-tool,
+            'residual_includes':'fresh grading, workspace hashing, controller/RPC overhead, recovery pause and any unrecorded failed request wait; not a pure grading measurement'}
+    summary['timing']=timing
     write_json(run/'summary.json',summary)
     hw = hardware(run/'telemetry.csv',read('runtime.json')['telemetry_utc_offset_minutes'])
     write_json(run/'hardware.json',hw)
@@ -126,7 +135,7 @@ Legacy function fixtures: {old_base['passed']}/9 → {old_adapted['passed']}/9. 
 
 ![Task success and task time](comparison.png)
 
-Task time covers controller initialization through fresh grading; it excludes snapshot preparation and model loading. Model calls, generated tokens, final grading and exit status are separate fields. A valid patch may pass after the call budget is exhausted; successful self-reported tests alone never count. Commands run sequentially on one GPU backend; these are not isolated serving TTFT, continuous-batching throughput or concurrency benchmarks.
+Task time covers controller initialization through fresh grading; it excludes initial snapshot preparation and model loading. Generation and agent-tool durations are measured separately; the residual combines fresh grading with controller/RPC/checkpoint overhead and recovery pauses, because this run did not retain a separate final-grading wall timer. Model calls, generated tokens, grading outcomes and exit status are separate fields. A valid patch may pass after the call budget is exhausted; successful self-reported tests alone never count. Cold compilation and filesystem/kernel cache effects are included where incurred and were not independently controlled. Commands run sequentially on one GPU backend; these are not isolated serving TTFT, continuous-batching throughput or concurrency benchmarks.
 
 ![Mixed-task training loss](loss.png)
 

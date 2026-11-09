@@ -33,10 +33,13 @@ def summarize(campaign):
             else:
                 kind='no_supported_action'
             formats[kind]+=1
+        exception=messages[-1].get('extra',{}).get('exception_str','')
+        backend_limit=exception if exception in {'context_limit','generation_budget_exhausted','OutOfMemoryError'} else None
         rows.append({'id':result['id'],'split':result['split'],'passed':result['passed'],
             'exit_status':result['exit_status'],'grading_reason':result['reason'],
             'format_error_categories':dict(formats),'tool_returncode_counts':dict(observations),
-            'generation_limit_hits':sum(g['hit_generation_limit'] for g in result['generations'])})
+            'generation_limit_hits':sum(g['hit_generation_limit'] for g in result['generations']),
+            'backend_limit':backend_limit})
     return {'schema_version':1,'campaign_sha256':sha256(campaign/'campaign.json'),'tasks':rows,
         'format_categories':dict(sum((Counter(r['format_error_categories']) for r in rows),Counter())),
         'interpretation':'Heuristic classification of observed interface failures, not a causal diagnosis or intrinsic coding score. Nonzero tool status can be an expected grep/test result. Raw messages and commands are excluded.'}
