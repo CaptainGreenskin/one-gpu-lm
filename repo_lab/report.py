@@ -159,12 +159,12 @@ Rebuild: `python -m repo_lab.report --run THIS_DIRECTORY`. Inputs and generated 
             for name in ['base','adapted']:
                 stream.write(f"{name}: `{json.dumps(audit[name]['format_categories'],sort_keys=True)}`.\n\n")
             stream.write('These are heuristic interface categories. They distinguish missing actions, case/parameter mismatch and generation truncation; they do not assign all failures to the underlying coding model. See [action-audit.json](action-audit.json).\n')
-    profile=read('profile.json');data=read('data.json')
+    profile=read('profile.json');data=read('data.json');storage=read('adapter-storage.json')
     (run/'MODEL_CARD.md').write_text(f"""# Model card — private repository-agent LoRA candidate
 
 Status: experimental local adapter. Daily-use acceptance: **false**. Small screening gate passed: **{summary['candidate_passes_this_screen']}**. No ModelScope weight release is represented by this card.
 
-Base: [{profile['model_id']}](https://huggingface.co/{profile['model_id']}/tree/{profile['revision']}), revision `{profile['revision']}`. Loader `{profile['loader']}`, dtype `{profile['dtype']}`; tokenizer/template and exact LoRA targets are fixed in `profile.json`. Rank {profile['lora']['r']}, alpha {profile['lora']['lora_alpha']}, {training['trainable_parameters']:,} trainable parameters. This adapter requires the matching base; it is not a standalone model.
+Base: [{profile['model_id']}](https://huggingface.co/{profile['model_id']}/tree/{profile['revision']}), revision `{profile['revision']}`. Loader `{profile['loader']}`, base dtype `{profile['dtype']}`; tokenizer/template and exact LoRA targets are fixed in `profile.json`. Rank {profile['lora']['r']}, alpha {profile['lora']['lora_alpha']}, {training['trainable_parameters']:,} trainable parameters. Saved adapter storage: `{json.dumps(storage,sort_keys=True)}`. The backbone dtype does not imply the adapter tensors use that same dtype; see `adapter-storage.json` for the actual safetensors header counts. This adapter requires the matching base; it is not a standalone model. Inference uses an unmerged PEFT adapter, so task timings include its extra execution overhead.
 
 Intended use: a bounded engineering experiment in repository repair. Evaluation uses one greedy run per task and one training seed, visible tests and constructed defects. Final repository-disjoint tasks: {test['baseline_passed']}/{test['pairs']} base, {test['adapted_passed']}/{test['pairs']} candidate, {len(test['regressed'])} regressions. Previous simple fixtures: {old_adapted['passed']}/9 after training. These results do not establish advanced coding, autonomous long-task reliability, security, general language coverage or production serving performance.
 
@@ -211,6 +211,7 @@ The provenance records preserve repository revisions, file/license hashes and re
     if (run/'action-audit.json').exists():
         allowed.append('action-audit.json')
     allowed.extend(loading_names)
+    allowed.append('adapter-storage.json')
     write_json(run/'artifacts.json',{'schema_version':1,'weights_public':False,'raw_trajectories_public':False,
         'generator_sha256':sha256(__file__),'matplotlib_version':matplotlib.__version__,
         'files':{name:sha256(run/name) for name in allowed}})
