@@ -9,7 +9,7 @@ This preregistered 2×2 study tests whether an interface change improves reposit
 | context | Existing format contract | Bounded |
 | combined | Native schema contract | Bounded |
 
-The parser remains unchanged for every arm. Incomplete or ambiguous actions are rejected; neither prose nor guessed commands are executed. The format factor combines the schema and matching instructions, so it cannot identify their separate effects. It does not claim constrained decoding.
+The parser remains unchanged for every arm. Multiple recognized actions and incomplete native-only responses are rejected; the parser never repairs an incomplete response or executes prose as a guessed command. The format factor combines the schema and matching instructions, so it cannot identify their separate effects. It does not claim constrained decoding.
 
 Bounded context starts above 7,168 actual template tokens. It removes the oldest **complete assistant/observation pairs** toward 6,144 tokens, preserving the system, complete task, newest pair and on-disk workspace. An omission notice is appended to the task. It never cuts a command or invents a summary. The same 8,192 input-token maximum still applies; an oversized pinned core fails. Full private trajectories are retained. Lost history may harm quality, which is why success and regressions must be compared.
 
