@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T01:40:43.389020+00:00",
+  "task_spec_sha256": "b4d5000d4ce2080e8ec921c6b48fd0dd3b0b5198c1ac0474483e342fd57de2dd",
+  "clean": [
+    {
+      "repository": "jmespath/jmespath.py",
+      "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.2724117810139433,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.11744069098494947,
+      "reason": "ok"
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.5208961440075655,
+      "reason": "ok"
+    },
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.5703607629984617,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "source_files": [
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/visitor.py": "7e64d29fe91fefb20e82660b34c37607ea2a8e885bfc721e92d56f45eb7789cb"
+      },
+      "reference_sha256": {
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.677002434997121,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.2234900890034623,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "source_files": [
+        "jmespath/parser.py"
+      ],
+      "broken_sha256": {
+        "jmespath/parser.py": "fcb10342d0c1ddb2cb34a033ecb4829634db722a65afc6607a6d5b922879f84b"
+      },
+      "reference_sha256": {
+        "jmespath/parser.py": "5630d0379ca349ee467f973d227700e84e18c55473621254697059ada0ec5137"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.874813324015122,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.272700898000039,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "source_files": [
+        "jmespath/functions.py"
+      ],
+      "broken_sha256": {
+        "jmespath/functions.py": "8d45977f36271654fcc520363d0d81a0c69c37098f8a069c592abc407cb92de9"
+      },
+      "reference_sha256": {
+        "jmespath/functions.py": "73d29131314d9ba2a457a23d42f82386264673bb3120bb3e2f79afc47055fe4c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.473783565015765,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.2729148440121207,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "source_files": [
+        "jmespath/lexer.py"
+      ],
+      "broken_sha256": {
+        "jmespath/lexer.py": "96e1c3e57a239632163617eb1fc9a88b664cd81c27ad70bba3835e4f7abbe288"
+      },
+      "reference_sha256": {
+        "jmespath/lexer.py": "2c4dfe74cef99f2f51311f265e65a528a453225cfc9e3bd6cfe33edb2e2de560"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.07559560899972,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.2737532810133416,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "source_files": [
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/visitor.py": "5d3ade9498fe2fbf61e5fe7795987c9516e9495e82837b8f36ddd9ffbc6e0b6d"
+      },
+      "reference_sha256": {
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 4.378611005988205,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.2737517890054733,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "source_files": [
+        "jmespath/functions.py",
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/functions.py": "bc11b82dba4d6aa9496ab944bf703eba8930676e8220353ddc93ae9308187913",
+        "jmespath/visitor.py": "ee107fc6c1a5605abb520247a8b6a296a412f10649db937ad010f7d80d02d814"
+      },
+      "reference_sha256": {
+        "jmespath/functions.py": "73d29131314d9ba2a457a23d42f82386264673bb3120bb3e2f79afc47055fe4c",
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.6746902730083093,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.3229110760148615,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "bbc683931fb212f30a6e965d893484c68dd2d8f9d20ec82937cb6bda15cdadad"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11734397802501917,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11846661500749178,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.16858021297957748,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11796792800305411,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "46fbc9d9cd5a87fabb4eb5320862a8b563a370ce325fd4fe95a05ed9cafb7d3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11834711098344997,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11820630601141602,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "56119f81bf94a0bbfdbd24031ba638ef0dd3f74f6c61b69a37e18a66c9e260e3"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11830932999146171,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11812810398987494,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "d50c898a435343a9ff215df5b2f879a3ad0695a9fe99964c5dac6c0236136e3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11790133599424735,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11748290198738687,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11858809800469317,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11851796699920669,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-base64",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-base64",
+      "source_files": [
+        "src/itsdangerous/encoding.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/encoding.py": "e1bc795bf339a04252b908a98e5a16547311da477e3ce82e155b5cf1430bf993"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/encoding.py": "c304f3e6aff7ccb71a01dba793afef4a84adc06a9859edf4ed997f53ceda4453"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.72970028599957,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.521732360997703,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-key-derivation",
+      "source_files": [
+        "src/itsdangerous/signer.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/signer.py": "ce4be6ab31190e8c817b18fed7501eab5f9bd266d01137e1ff66b1a9c1e9589d"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/signer.py": "60ed0257b341bc703a8f9e3d4441c91548d4a23c36a47ab0714a509d4ef23584"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 4.429528473003302,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.5718931410228834,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-fallbacks",
+      "source_files": [
+        "src/itsdangerous/serializer.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/serializer.py": "2e95c8f42181562bc7d8a7211c92e8bae7cf69189d7245da2b4fe9f28d3d1f75"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/serializer.py": "6d6f1687897c7e3ac6eeff5bfd6794df90e299feedcc6aae3faa0e53ffe925e8"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.6272922130010556,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.5718858799955342,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-serialize",
+      "source_files": [
+        "src/itsdangerous/serializer.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/serializer.py": "f4a53ce9dbc6a992aa52da7f877db1691900f829350e553719fb31e88c06bf16"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/serializer.py": "6d6f1687897c7e3ac6eeff5bfd6794df90e299feedcc6aae3faa0e53ffe925e8"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.3764820790092926,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.5217740899825003,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-url-compression",
+      "source_files": [
+        "src/itsdangerous/url_safe.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/url_safe.py": "ca5cf4d9de914101321c3ea645d7d40db86d50ea13a82128b430eae967924dc9"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/url_safe.py": "6b3e1ee5f5e2fefb3e61b5a3f186709f8c2254a7de0fef8610a453e547aee0fe"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.1232678609958384,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.5221281010017265,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "repository": "pallets/itsdangerous",
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-timestamp",
+      "source_files": [
+        "src/itsdangerous/timed.py"
+      ],
+      "broken_sha256": {
+        "src/itsdangerous/timed.py": "abc831530507eef493d5e7a522af707eeaaef5684717382a99112dd8041af746"
+      },
+      "reference_sha256": {
+        "src/itsdangerous/timed.py": "3afbf6050e8b73605931d1e516f374835456979e4319c098bfe5f284f120c6c5"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.473748443007935,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.521950274007395,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-decode",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "55b1a0f911d23552677f625d43ed3e8b4676b1e9197772c5e6e92a5140779ee3"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5704157949949149,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5702649099985138,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-sparse",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "31acf03db19b46eb40b58740ad0620815b21a5ccb1ae0ed164666a791fe6e895"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5705955399898812,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5707520660071168,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-null",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "3de0687ab57c6bee258d6721a4fe2cdbe5553086969ba9fe9e98e0dc38aabd5c"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5705988010158762,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5707775669870898,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-combine",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "c7a6169accc72c252a1f19a5bddb37bb108b505208611c57c751f43d78d654a9"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.6217702440044377,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5705691799812485,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-plain-objects",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "a08b04c2ef970f48851c343a8d536281424a38410c86a1007a0d226689dcee57"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.569285708013922,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5701088549976703,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-sort",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "c33e16e9e49b08ac4288c87a16d14959cf6de9c06594a1c050db9da272a541d1"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5705903100024443,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5709678420098498,
+        "reason": "ok"
+      },
+      "admitted": true
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-10T01:41:58.714570+00:00",
+  "admitted": 24
+}

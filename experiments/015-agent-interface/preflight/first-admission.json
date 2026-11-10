@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T01:39:00.492974+00:00",
+  "task_spec_sha256": "b4d5000d4ce2080e8ec921c6b48fd0dd3b0b5198c1ac0474483e342fd57de2dd",
+  "clean": [
+    {
+      "repository": "jmespath/jmespath.py",
+      "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "passed": false,
+      "returncode": 1,
+      "seconds": 0.06753131002187729,
+      "reason": "runtime_error"
+    },
+    {
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.11823618900962174,
+      "reason": "ok"
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "passed": false,
+      "returncode": 1,
+      "seconds": 0.06823430300573818,
+      "reason": "runtime_error"
+    },
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.5701905169989914,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "bbc683931fb212f30a6e965d893484c68dd2d8f9d20ec82937cb6bda15cdadad"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.1183841530000791,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11769960197852924,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11788069698377512,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11830594099592417,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "46fbc9d9cd5a87fabb4eb5320862a8b563a370ce325fd4fe95a05ed9cafb7d3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.1183378330024425,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11786270700395107,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "56119f81bf94a0bbfdbd24031ba638ef0dd3f74f6c61b69a37e18a66c9e260e3"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11771506100194529,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.1183574520109687,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "d50c898a435343a9ff215df5b2f879a3ad0695a9fe99964c5dac6c0236136e3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.1178264059999492,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.117309077992104,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11863153200829402,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11794470899621956,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-decode",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "55b1a0f911d23552677f625d43ed3e8b4676b1e9197772c5e6e92a5140779ee3"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5709103010012768,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5706036709889304,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-sparse",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "31acf03db19b46eb40b58740ad0620815b21a5ccb1ae0ed164666a791fe6e895"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5708542689972091,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5205583330243826,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-null",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "3de0687ab57c6bee258d6721a4fe2cdbe5553086969ba9fe9e98e0dc38aabd5c"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5703131310001481,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5693946109968238,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-combine",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "c7a6169accc72c252a1f19a5bddb37bb108b505208611c57c751f43d78d654a9"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.6218798689951655,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5708755500090774,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-plain-objects",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "a08b04c2ef970f48851c343a8d536281424a38410c86a1007a0d226689dcee57"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5713282540091313,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5704631060070824,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "split": "test",
+      "family": "ljharb/qs:query-sort",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "c33e16e9e49b08ac4288c87a16d14959cf6de9c06594a1c050db9da272a541d1"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5705836800043471,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5711516680021305,
+        "reason": "ok"
+      },
+      "admitted": true
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-10T01:39:09.972981+00:00",
+  "admitted": 12
+}
