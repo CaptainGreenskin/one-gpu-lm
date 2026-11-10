@@ -149,6 +149,22 @@ def render(root):
     if controller['schedule']!=expected or [{'id':s['id'],'variant':s['variant']} for s in controller['stages'] if s['name']=='task']!=expected:
         raise ValueError('Execution order changed or runs duplicated')
     summary,call_rows=assess(campaigns,protocol,inventory)
+    audit=read('failure-audit.json');audit_summary={}
+    parser_hash=campaigns['baseline']['identity']['source_files']['one_gpu_lm/common/actions.py']
+    if audit['parser_sha256']!=parser_hash:
+        raise ValueError('Failure audit used a different parser')
+    for arm in ARMS:
+        if audit['campaign_sha256'][arm]!=sha256(root/(arm+'.json')):
+            raise ValueError('Failure audit belongs to another campaign')
+        rows=audit['variants'][arm]
+        if [r['id'] for r in rows]!=[r['id'] for r in campaigns[arm]['results']]:
+            raise ValueError('Failure audit omitted a task')
+        categories=dict(sum((Counter(r['format_categories']) for r in rows),Counter()))
+        if sum(categories.values())!=summary['totals'][arm]['format_invalid_calls']:
+            raise ValueError('Parser audit and recorded generation outcomes disagree')
+        audit_summary[arm]={'format_categories':categories,
+            'rejected_shapes':[{'id':r['id'],'shapes':r['rejected_shapes']} for r in rows if r['rejected_shapes']]}
+    summary['structural_format_audit']=audit_summary
     with (root/'call-metrics.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=list(call_rows[0]));writer.writeheader();writer.writerows(call_rows)
     telemetry=list(csv.DictReader((root/'telemetry.csv').open()));ts=[datetime.fromisoformat(r['utc']).timestamp() for r in telemetry]
@@ -233,6 +249,8 @@ The curves average requests at each call index, including recorded backend-limit
 ## Failure and cost interpretation
 
 Format-invalid calls include rejected generations before an agent eventually stops; repeated-format exit counts are separate. A nonzero final regression command is a failed repair, not a GPU crash. Per-arm backend errors, no-source-change failures, output-limit hits and exit categories are in the summary. Tokens per second measures successful sequential generation requests only, not production serving throughput. Task controller times include tools and grading; interleaving means they are sums, not the elapsed span of an arm. Packing time is separately recorded. Missing generation times on failed requests are not treated as zero-cost inference.
+
+[failure-audit.json](failure-audit.json) checks every recorded response with the original parser and retains structural categories, tag-count shapes and private trace hashes. It exports no response text or commands, executes nothing, and cannot change scores. Marker-based categories are observations, not causal proof that a particular wrapper change would solve a task. Invalid responses hitting the output limit are explicitly separated from other malformed shapes.
 
 Actual UTC: {controller['started_utc']} to {controller['finished_utc']}; total{summary['time']['wall_seconds']/3600:.3f} hours. Hardware sampling: {hw['samples']} records, {hw['collection_errors']} collection errors, maximum gap{hw['max_gap_seconds']:.2f}s. Sampled peaks: {hw['temperature_c']['max']:.0f}C, {hw['power_w']['max']:.1f}W, {hw['memory_used_mib']['max']:.0f}MiB. Sampled GPU energy approximately{hw['sampled_gpu_energy_kwh']:.3f}kWh, trapezoid interpolation excluding CPU/system power and time outside sampled coverage. Five-second sampling can miss peaks.
 

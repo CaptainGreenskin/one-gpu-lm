@@ -1,6 +1,8 @@
 import copy
 import importlib.util
+import json
 from pathlib import Path
+import tempfile
 import unittest
 
 SPEC=importlib.util.spec_from_file_location('interface_report',Path(__file__).resolve().parents[1]/'experiments/015-agent-interface/report.py')
@@ -29,6 +31,32 @@ def fixture():
 
 
 class InterfaceReportContracts(unittest.TestCase):
+    def test_postrun_audit_exports_shapes_only_and_checks_original_parser_decisions(self):
+        from one_gpu_lm.common.receipts import sha256,write_json
+        import one_gpu_lm.common.actions as actions
+        path=Path(__file__).resolve().parents[1]/'experiments/015-agent-interface/audit.py'
+        spec=importlib.util.spec_from_file_location('interface_audit',path)
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);write_json(root/'controller.json',{'complete':True})
+            for arm in REPORT.ARMS:
+                private=root/'private'/arm/'synthetic';private.mkdir(parents=True)
+                messages=[{'role':'assistant','content':'```bash\necho PRIVATE_MODEL_TEXT\n```'},
+                    {'role':'assistant','content':'<tool_call><function=bash>PRIVATE_COMMAND'}]
+                write_json(private/'trajectory.json',{'messages':messages})
+                row={'id':'synthetic','split':'test','passed':False,'exit_status':'RepeatedFormatError',
+                    'reason':'protected_file_tampering','modified_source_files':[],
+                    'generations':[{'action_format_valid':True},{'action_format_valid':False}],'backend_errors':[]}
+                write_json(root/(arm+'.json'),{'complete':True,'identity':{'source_files':{
+                    'one_gpu_lm/common/actions.py':sha256(Path(actions.__file__))}},'results':[row]})
+            output=module.audit(root)
+            self.assertNotIn('PRIVATE_',json.dumps(output))
+            self.assertEqual(output['variants']['baseline'][0]['format_categories'],{'unclosed_native_markup':1})
+            self.assertIsNone(output['variants']['baseline'][0]['grader_log_sha256'])
+            c=json.loads((root/'baseline.json').read_text());c['results'][0]['generations'][1]['action_format_valid']=True
+            write_json(root/'baseline.json',c)
+            with self.assertRaises(ValueError):module.audit(root)
+
     def test_no_gain_does_not_promote_and_gains_are_paired(self):
         c,p,i=fixture();s,calls=REPORT.assess(c,p,i)
         self.assertFalse(any(v['advance_to_replication'] for v in s['promotion'].values()))
