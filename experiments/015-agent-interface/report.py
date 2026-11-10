@@ -189,14 +189,17 @@ def render(root):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
     matplotlib.rcParams.update({'svg.hashsalt':'one-gpu-lm-015','font.family':'DejaVu Sans'})
     colors=['#65748b','#2563eb','#0d9488','#d97706'];labels=list(ARMS)
     fig,axes=plt.subplots(1,3,figsize=(13,4),layout='constrained')
     for i,arm in enumerate(ARMS):
-        axes[0].bar([i-.17,i+.17],[summary['totals'][arm]['passed']['historical'],summary['totals'][arm]['passed']['fresh']],width=.32,color=[colors[i],colors[i]],alpha=.8)
+        for shift,scope,hatch in [(-.17,'historical',None),(.17,'fresh','///')]:
+            axes[0].bar(i+shift,summary['totals'][arm]['passed'][scope],width=.32,color=colors[i],alpha=.8,hatch=hatch,edgecolor='white')
         axes[1].bar(i,100*(summary['totals'][arm]['format_invalid_rate'] or 0),color=colors[i])
         axes[2].bar(i,summary['totals'][arm]['task_controller_seconds']/60,color=colors[i])
-    axes[0].set(title='Final successes: historical / fresh',ylabel='Tasks passed (each group n=12)',ylim=(0,13))
+    axes[0].set(title='Final successes: historical / fresh',ylabel='Tasks passed (each group n=12)',ylim=(0,14))
+    axes[0].legend(handles=[Patch(facecolor='#65748b',label='Historical'),Patch(facecolor='#65748b',edgecolor='white',hatch='///',label='Fresh')],ncol=2,fontsize=8,loc='upper left')
     for i,arm in enumerate(ARMS):
         for shift,scope in [(-.17,'historical'),(.17,'fresh')]:
             n=summary['totals'][arm]['passed'][scope];axes[0].text(i+shift,n+.15,str(n),ha='center',fontsize=9)
@@ -234,13 +237,13 @@ The same unchanged Qwen27B base ran all four arms. No weights were updated. The 
 
 ![Paired outcomes and cost](comparison.png)
 
-Each scope has12 tasks. Historical means the already observed014 holdout. Fresh means6 ItsDangerous and6 qs constructed defects, with clean/broken/restored controls. Tests are visible; these are not historical issues or SWE-bench. Unknown pretraining exposure, two small repository clusters and one deterministic decode limit generalization. Every individual improved/regressed ID, five predeclared contrasts and the factorial interaction are retained in [summary.json](summary.json). All contrasts are reported; no post-hoc best-policy selection is hidden.
+Each scope has 12 tasks. Historical means the already observed 014 holdout. Fresh means 6 ItsDangerous and 6 qs constructed defects, with clean/broken/restored controls. Tests are visible; these are not historical issues or SWE-bench. Unknown pretraining exposure, two small repository clusters and one deterministic decode limit generalization. Every individual improved/regressed ID, five predeclared contrasts and the factorial interaction are retained in [summary.json](summary.json). All contrasts are reported; no post-hoc best-policy selection is hidden.
 
 ## What changed
 
 Format supplies the pinned native chat template with one bash JSON tool schema and matching system/error instructions. The action parser and sandbox remain unchanged; no incomplete response is repaired into an executable command. This factor does not separate schema effects from prompt effects.
 
-Context acts above7168 actual template tokens: remove oldest complete interaction pairs toward6144, retain system, full task and newest pair, and append an omission notice. The on-disk workspace and full private audit history persist. Same8192 hard input limit. Losing history can harm repair quality; fewer context errors alone is not success.
+Context acts above 7168 actual template tokens: remove oldest complete interaction pairs toward 6144, retain system, full task and newest pair, and append an omission notice. The on-disk workspace and full private audit history persist. Same 8192 hard input limit. Losing history can harm repair quality; fewer context errors alone is not success.
 
 ![Context curves](context-curves.png)
 
@@ -252,11 +255,11 @@ Format-invalid calls include rejected generations before an agent eventually sto
 
 [failure-audit.json](failure-audit.json) checks every recorded response with the original parser and retains structural categories, tag-count shapes and private trace hashes. It exports no response text or commands, executes nothing, and cannot change scores. Marker-based categories are observations, not causal proof that a particular wrapper change would solve a task. Invalid responses hitting the output limit are explicitly separated from other malformed shapes.
 
-Actual UTC: {controller['started_utc']} to {controller['finished_utc']}; total{summary['time']['wall_seconds']/3600:.3f} hours. Hardware sampling: {hw['samples']} records, {hw['collection_errors']} collection errors, maximum gap{hw['max_gap_seconds']:.2f}s. Sampled peaks: {hw['temperature_c']['max']:.0f}C, {hw['power_w']['max']:.1f}W, {hw['memory_used_mib']['max']:.0f}MiB. Sampled GPU energy approximately{hw['sampled_gpu_energy_kwh']:.3f}kWh, trapezoid interpolation excluding CPU/system power and time outside sampled coverage. Five-second sampling can miss peaks.
+Actual UTC: {controller['started_utc']} to {controller['finished_utc']}; total {summary['time']['wall_seconds']/3600:.3f} hours. Hardware sampling: {hw['samples']} records, {hw['collection_errors']} collection errors, maximum gap {hw['max_gap_seconds']:.2f}s. Sampled peaks: {hw['temperature_c']['max']:.0f}C, {hw['power_w']['max']:.1f}W, {hw['memory_used_mib']['max']:.0f}MiB. Sampled GPU energy approximately {hw['sampled_gpu_energy_kwh']:.3f}kWh, trapezoid interpolation excluding CPU/system power and time outside sampled coverage. Five-second sampling can miss peaks.
 
 ## Reuse and limitations
 
-The initial environment packaging failures and their correction were recorded before model rollout in [preparation-recovery.json](preparation-recovery.json). No task or policy was selected using015 scores. These fresh tasks become historical regression if future tuning uses their outcomes.
+The initial environment packaging failures and their correction were recorded before model rollout in [preparation-recovery.json](preparation-recovery.json). No task or policy was selected using 015 scores. These fresh tasks become historical regression if future tuning uses their outcomes.
 
 Reusable policies, frozen orchestration, scoring, context instrumentation and this report are in the [experiment workflow](../../README.md). Original code is MIT; upstream BSD-3-Clause/MIT rights remain separate. Raw tasks, source snapshots, answers, trajectories and model files remain private. Exact score reconstruction requires private inputs; others can run the workflow with their own authorized repositories. No ModelScope weight release occurred.
 ''')
