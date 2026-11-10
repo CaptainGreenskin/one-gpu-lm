@@ -46,6 +46,9 @@ def copy_snapshot(snapshot, destination, repository):
         if repository == "jashkenas/underscore" and Path(directory) == snapshot:
             # Built distributions and source maps expose unmutated source answers.
             omit |= {n for n in names if n.startswith("underscore") or n in {"amd", "cjs", "docs", "index.html"}}
+        if repository == "ljharb/qs" and Path(directory) == snapshot:
+            # Bundled source is an unmodified duplicate of the repair targets.
+            omit.add("dist")
         return omit
     shutil.copytree(snapshot, destination, ignore=ignore)
 

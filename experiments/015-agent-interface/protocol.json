@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "experiment": "015-agent-interface",
+  "status": "draft_before_admission",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "weight_updates": 0,
+  "adapter": false,
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "variants": {
+    "baseline": {
+      "format": "legacy",
+      "context": "full"
+    },
+    "format": {
+      "format": "native_schema",
+      "context": "full"
+    },
+    "context": {
+      "format": "legacy",
+      "context": "bounded_history_v1"
+    },
+    "combined": {
+      "format": "native_schema",
+      "context": "bounded_history_v1"
+    }
+  },
+  "factor_definitions": {
+    "format": "Pinned model chat template receives one bash JSON tool definition; system prompt and invalid-format feedback describe native syntax. Parser and executor unchanged. This factor bundles schema and matching instructions, not their individual effects.",
+    "context": "Above7168 input tokens discard oldest complete assistant/user pairs toward6144, retaining system, complete initial task and newest pair; append omission notice. Same8192 maximum. No semantic summaries or mid-message truncation. Full private audit history preserved."
+  },
+  "comparisons": [
+    "format-baseline",
+    "context-baseline",
+    "combined-baseline",
+    "combined-format",
+    "combined-context",
+    "interaction: combined-format-context+baseline"
+  ],
+  "ordering": "Historic12 then fresh12 in frozen task order. For task index i rotate baseline/format/context/combined left by i modulo4. Shared unchanged base backend, no cross-request stateful cache.",
+  "primary": "Fresh repository paired success: declared upstream regression suite passes with no protected-file tampering. Error categories and timing are secondary descriptive outcomes.",
+  "exposure": {
+    "historical": "014 holdout is now historical diagnostics; no training on015 data",
+    "fresh": "Two independent repositories,6 constructed tasks each; no prior posttraining. Pretraining exposure unknown. Tests visible; no additional hidden suite.",
+    "no_model_scores_before_freeze": true,
+    "no_teacher_api": true
+  },
+  "promotion": {
+    "minimum_net_fresh_gain": 2,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "all_four_arms_complete": true,
+    "meaning": "Advance interface policy to independent replication, not daily-use certification",
+    "selection": "Report every predeclared contrast. One deterministic decode per arm/task, small clustered sample, exploratory multiple comparisons."
+  },
+  "execution": {
+    "max_pipeline_seconds": 28800,
+    "max_task_seconds": 1000,
+    "max_backend_start_seconds": 300,
+    "gpu_count": 1,
+    "expected_tasks_per_variant": 24,
+    "expected_model_task_runs": 96
+  },
+  "publication": {
+    "original_code_license": "MIT",
+    "source_licenses_separate": true,
+    "raw_tasks_trajectories_source_snapshots": "private",
+    "weights": "private",
+    "metrics_curves_protocol_code": "GitHub"
+  },
+  "source_workspace_exclusions": {
+    "ljharb/qs": "Omit dist bundle, an unmodified duplicate of target source, from agent/grader snapshots"
+  },
+  "failure_policy": "Preserve controller failures. Recovery only at completed-step boundaries with unchanged artifacts and original deadline. Never rerun a scored task or tune after scoring."
+}

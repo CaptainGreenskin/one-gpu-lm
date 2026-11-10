@@ -21,6 +21,7 @@ def main():
     p.add_argument('--split', nargs='+', choices=['train','dev','test'], default=['train','dev','test'])
     p.add_argument('--recovery-task')
     p.add_argument('--resume', action='store_true')
+    p.add_argument('--variant', help='Named policy from frozen protocol')
     args = p.parse_args()
     args.out = args.out.resolve()
     receipt_path = args.out/'campaign.json'
@@ -36,6 +37,7 @@ def main():
     if protocol['admission_sha256'] != sha256(args.admission):
         raise ValueError('Admission receipt differs from frozen protocol')
     identity = {'tasks_sha256':sha256(args.tasks), 'admission_sha256':sha256(args.admission),
+        'variant':args.variant,
         'protocol_sha256':sha256(args.protocol), 'ids':[t['id'] for t in selected],
         'source_files':campaign_sources()}
     if args.out.exists():
@@ -59,6 +61,8 @@ def main():
                 '--tasks',str(args.tasks.resolve()),'--protocol',str(args.protocol.resolve()),
                 '--socket',str(args.socket.resolve()),'--out',str(out),'--id',task['id']]
             out.mkdir(parents=True, exist_ok=True)
+            if args.variant:
+                command += ['--variant', args.variant]
             if (out/'checkpoint.json').exists():
                 command += ['--resume']
             elif task['id'] == args.recovery_task:

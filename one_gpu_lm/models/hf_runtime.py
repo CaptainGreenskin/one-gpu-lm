@@ -2,6 +2,7 @@
 import json
 import time
 from one_gpu_lm.common.receipts import write_json
+from one_gpu_lm.common.agent_policy import BASH_TOOLS, prepare_context, validate_policy
 
 
 class Runtime:
@@ -35,11 +36,20 @@ class Runtime:
         messages = [{"role": m["role"], "content": m["content"]} for m in value["messages"]]
         if any(m["role"] not in {"system", "user", "assistant"} for m in messages):
             raise ValueError("Unexpected message role")
-        tokens = self.tokenizer.apply_chat_template(messages, tokenize=True, return_dict=False,
-            add_generation_prompt=True, **self.profile["chat_template_kwargs"])
+        policy = validate_policy(value.get("agent_policy"))
+        kwargs = dict(self.profile["chat_template_kwargs"])
+        if policy["format"] == "native_schema":
+            kwargs["tools"] = BASH_TOOLS
+        def encode(items):
+            return self.tokenizer.apply_chat_template(items, tokenize=True, return_dict=False,
+                add_generation_prompt=True, **kwargs)
         limit = min(int(value.get("max_input_tokens", 8192)), 8192)
+        packing_started = time.monotonic()
+        tokens, context = prepare_context(messages, encode, limit, policy["context"])
+        packing_seconds = time.monotonic() - packing_started
         if len(tokens) > limit:
-            return {"error": "context_limit", "input_tokens": len(tokens)}
+            return {"error": "context_limit", "input_tokens": len(tokens), "context": context,
+                    "packing_seconds": packing_seconds}
         new = min(int(value.get("max_new_tokens", 512)), 512)
         if new < 1:
             return {"error": "generation_budget_exhausted"}
@@ -55,4 +65,5 @@ class Runtime:
         return {"text": self.tokenizer.decode(suffix, skip_special_tokens=True), "ids": suffix,
                 "input_tokens": len(tokens), "generated_tokens": len(suffix),
                 "seconds": time.monotonic() - started, "hit_generation_limit": len(suffix) >= new,
+                "agent_policy": policy, "context": context, "packing_seconds": packing_seconds,
                 "peak_allocated_bytes": torch.cuda.max_memory_allocated(), "adapter": self.adapter}

@@ -7,7 +7,8 @@ import time
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.actions import SYSTEM, INSTANCE, parse_action
-from one_gpu_lm.serving.client import request
+from one_gpu_lm.common.agent_policy import validate_policy, system_prompt, format_feedback
+from one_gpu_lm.serving.client import request, BackendError
 from .environment import RepositoryEnvironment
 from .grading import generated_files, grade
 from .tasks import file_manifest, prepare
@@ -30,10 +31,12 @@ def atomic_json(path, value):
 
 
 class LocalModel:
-    def __init__(self, socket, budget):
+    def __init__(self, socket, budget, policy=None):
         self.socket, self.config = socket, dict(budget)
+        self.policy = validate_policy(policy)
         self.generated_tokens = 0
         self.responses = []
+        self.backend_errors = []
         self.timeout = 180
 
     def query(self, messages):
@@ -41,16 +44,22 @@ class LocalModel:
         remaining = self.config["max_total_generated_tokens"] - self.generated_tokens
         if remaining <= 0:
             raise LimitsExceeded(self.format_message(role="exit", content="TokenLimit", extra={"exit_status": "TokenLimit"}))
-        value = request(self.socket, {"operation": "generate", "messages": messages,
-            "max_new_tokens": min(remaining, self.config["max_generated_tokens_per_call"]),
-            "max_input_tokens": self.config["max_input_tokens"]}, timeout=self.timeout)
+        try:
+            value = request(self.socket, {"operation": "generate", "messages": messages,
+                "max_new_tokens": min(remaining, self.config["max_generated_tokens_per_call"]),
+                "max_input_tokens": self.config["max_input_tokens"], "agent_policy": self.policy}, timeout=self.timeout)
+        except BackendError as error:
+            self.backend_errors.append(error.result)
+            raise RuntimeError(str(error)) from error
         self.generated_tokens += value["generated_tokens"]
         self.responses.append({k: v for k, v in value.items() if k not in {"text", "ids"}})
         message = self.format_message(role="assistant", content=value["text"], extra={"generation": self.responses[-1], "cost": 0.0})
         try:
             message["extra"]["actions"] = [parse_action(value["text"])]
+            self.responses[-1]["action_format_valid"] = True
         except ValueError:
-            raise FormatError(message, self.format_message(role="user", content="Format error: respond with exactly one fenced bash block containing your next command."))
+            self.responses[-1]["action_format_valid"] = False
+            raise FormatError(message, self.format_message(role="user", content=format_feedback(self.policy)))
         return message
 
     def format_message(self, **kwargs):
@@ -69,7 +78,8 @@ class LocalModel:
         return kwargs
 
     def serialize(self):
-        return {"local_model": {"config": self.config, "generated_tokens": self.generated_tokens, "responses": self.responses}}
+        return {"local_model": {"config": self.config, "policy": self.policy,
+            "generated_tokens": self.generated_tokens, "responses": self.responses, "backend_errors": self.backend_errors}}
 
 
 def main():
@@ -77,6 +87,7 @@ def main():
     for name in ["root", "tasks", "protocol", "socket", "out"]:
         p.add_argument("--" + name, type=Path, required=True)
     p.add_argument("--id", required=True)
+    p.add_argument("--variant", help="Named policy from the frozen protocol")
     p.add_argument("--resume", action="store_true")
     p.add_argument("--interrupt-after", type=int, default=0)
     args = p.parse_args()
@@ -89,6 +100,7 @@ def main():
     task = next(t for t in json.loads(args.tasks.read_text())["tasks"] if t["id"] == args.id)
     protocol = json.loads(args.protocol.read_text())
     budget = protocol["agent"]
+    policy = validate_policy(protocol["variants"][args.variant] if args.variant else None)
     runtime = json.loads((root / "runtime.json").read_text())
     slug = task["repository"].replace("/", "--")
     deps = root / "node-deps" / slug / "node_modules"
@@ -101,9 +113,10 @@ def main():
             timeout=budget["max_tool_seconds"], output_chars=output_chars)
 
     identity = {"id": args.id, "task_spec_sha256": sha256(args.tasks), "protocol_sha256": sha256(args.protocol),
+                "variant": args.variant, "agent_policy": policy,
                 "backend": request(args.socket, {"operation": "health"})}
     checkpoint = out / "checkpoint.json"
-    model = LocalModel(args.socket, budget)
+    model = LocalModel(args.socket, budget, policy)
     if args.resume:
         state = json.loads(checkpoint.read_text())
         if state["identity"] != identity or state["boundary"] != "completed_step":
@@ -146,7 +159,7 @@ def main():
                 raise SystemExit(75)
             return data
 
-    agent = CheckpointAgent(model, make_env(workspace), system_template=SYSTEM, instance_template=INSTANCE,
+    agent = CheckpointAgent(model, make_env(workspace), system_template=system_prompt(policy), instance_template=INSTANCE,
         step_limit=budget["max_model_calls"], cost_limit=0, wall_time_limit_seconds=budget["wall_time_limit_seconds"],
         output_path=out / "trajectory.json")
     run_kwargs = dict(task=task["description"], editable_files=", ".join(task["editable_files"]), regression_command=task["regression_command"])
@@ -163,6 +176,7 @@ def main():
             agent.extra_template_vars = state["extra_template_vars"]
             model.generated_tokens = state["trajectory"]["local_model"]["generated_tokens"]
             model.responses = state["trajectory"]["local_model"]["responses"]
+            model.backend_errors = state["trajectory"]["local_model"].get("backend_errors", [])
             agent.env.calls = state["trajectory"]["environment"]["tool_calls"]
             agent.env.seconds = state["trajectory"]["environment"]["tool_seconds"]
             return agent.messages
@@ -177,6 +191,7 @@ def main():
         pass
     score = grade(task, workspace, snapshot, out / "grader", original, lambda work: make_env(work, 100000))
     write_json(out / "result.json", {"schema_version": 1, "id": args.id, "repository": task["repository"],
+        "variant": args.variant, "agent_policy": policy, "backend_errors": model.backend_errors,
         "split": task["split"], "family": task["family"], **score, "calls": agent.n_calls,
         "generated_tokens": model.generated_tokens, "seconds": time.time() - agent._start_time,
         "tool_calls": agent.env.calls, "tool_seconds": agent.env.seconds,
