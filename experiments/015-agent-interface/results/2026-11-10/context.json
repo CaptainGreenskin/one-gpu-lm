@@ -1,0 +1,5333 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T01:45:32.019270+00:00",
+  "complete": true,
+  "identity": {
+    "tasks_sha256": "b4d5000d4ce2080e8ec921c6b48fd0dd3b0b5198c1ac0474483e342fd57de2dd",
+    "admission_sha256": "95fa3d7ef57480f97ea90651013937241c3abb47abcd7872369d966abc787736",
+    "protocol_sha256": "94af8d0f9b245cd6b0025bd2f919b8eecb0ea7fa93b7d77504ce58800e3fb267",
+    "ids": [
+      "new-jmes-filter",
+      "new-jmes-multiselect",
+      "new-jmes-sort-expression",
+      "new-jmes-raw-string",
+      "new-jmes-index-slice",
+      "new-jmes-pipe-map",
+      "new-json-key-order",
+      "new-json-comparator",
+      "new-json-undefined",
+      "new-json-to-json",
+      "new-json-nonfinite",
+      "new-json-cycle-reuse",
+      "fresh-signed-base64",
+      "fresh-signed-key-derivation",
+      "fresh-signed-fallbacks",
+      "fresh-signed-serialize",
+      "fresh-signed-url-compression",
+      "fresh-signed-timestamp",
+      "fresh-query-decode",
+      "fresh-query-sparse",
+      "fresh-query-null",
+      "fresh-query-combine",
+      "fresh-query-plain-objects",
+      "fresh-query-sort"
+    ],
+    "variant": "context",
+    "policy": {
+      "format": "legacy",
+      "context": "bounded_history_v1"
+    },
+    "source_files": {
+      "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+      "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+      "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+      "one_gpu_lm/common/agent_policy.py": "eb55380d330190fd3e26dd2d0326b3e02b182d97afc16f20e0965b8efe6d50b2",
+      "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+      "one_gpu_lm/common/source.py": "83a791d56a95f72fc512e82ab3af8e2a219f1597c05f7370e04a6cb0018ee16e",
+      "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+      "one_gpu_lm/evaluation/agent.py": "b8e9591847c72fb165cba3af775f4434733c653fe3fdfae27a54746e3132dd57",
+      "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+      "one_gpu_lm/evaluation/campaign.py": "cd05407cb2dd38592bbf6d21aa7059bb0b6cc277c22d9ca5c22529e30546e041",
+      "one_gpu_lm/evaluation/environment.py": "938bcac1e9696c8920b758c6f943f843e2b901682ac777a608a202ef32d5791f",
+      "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+      "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+      "one_gpu_lm/evaluation/tasks.py": "cb298493399728008b5b51eeabe5177bd07618bb4fc307aaafc55782f3b90542",
+      "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+      "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+      "one_gpu_lm/models/hf_runtime.py": "ba49fc8b9fd0680c6db892ec268741915fcbf0e4ed220cd448cab9675383b3d0",
+      "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+      "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+      "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 30.621811628341675,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "7e64d29fe91fefb20e82660b34c37607ea2a8e885bfc721e92d56f45eb7789cb"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 269,
+      "tool_calls": 6,
+      "tool_seconds": 0.2307867449708283,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 16,
+          "seconds": 1.3781800669967197,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 258,
+            "packed_input_tokens": 258,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001918521011248231,
+          "peak_allocated_bytes": 54976062464,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 301,
+          "generated_tokens": 25,
+          "seconds": 2.080077121994691,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 301,
+            "packed_input_tokens": 301,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011413799948059022,
+          "peak_allocated_bytes": 55002035200,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1481,
+          "generated_tokens": 26,
+          "seconds": 2.3072646360087674,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1481,
+            "packed_input_tokens": 1481,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.002806564007187262,
+          "peak_allocated_bytes": 55301948416,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1535,
+          "generated_tokens": 26,
+          "seconds": 2.3144619849917945,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1535,
+            "packed_input_tokens": 1535,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.002892685995902866,
+          "peak_allocated_bytes": 55313902080,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2187,
+          "generated_tokens": 14,
+          "seconds": 1.4732239980075974,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2187,
+            "packed_input_tokens": 2187,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0040291860059369355,
+          "peak_allocated_bytes": 55491389440,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2229,
+          "generated_tokens": 27,
+          "seconds": 2.5305260790046304,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2229,
+            "packed_input_tokens": 2229,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0042049910116475075,
+          "peak_allocated_bytes": 55503288320,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2808,
+          "generated_tokens": 14,
+          "seconds": 1.5756740380020346,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2808,
+            "packed_input_tokens": 2808,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.005163246009033173,
+          "peak_allocated_bytes": 55660921856,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2850,
+          "generated_tokens": 27,
+          "seconds": 2.6589360419893637,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2850,
+            "packed_input_tokens": 2850,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005252798990113661,
+          "peak_allocated_bytes": 55670123520,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3454,
+          "generated_tokens": 14,
+          "seconds": 1.7144004089932423,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3454,
+            "packed_input_tokens": 3454,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006455750990426168,
+          "peak_allocated_bytes": 55838205440,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3496,
+          "generated_tokens": 27,
+          "seconds": 2.7974379289953504,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3496,
+            "packed_input_tokens": 3496,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006257345987251028,
+          "peak_allocated_bytes": 55849542144,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3541,
+          "generated_tokens": 14,
+          "seconds": 1.7427015340072103,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3541,
+            "packed_input_tokens": 3541,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.006737738993251696,
+          "peak_allocated_bytes": 55857454592,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3583,
+          "generated_tokens": 39,
+          "seconds": 3.773034872021526,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3583,
+            "packed_input_tokens": 3583,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.00648106200969778,
+          "peak_allocated_bytes": 55868363264,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 14.68234634399414,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/parser.py": "fcb10342d0c1ddb2cb34a033ecb4829634db722a65afc6607a6d5b922879f84b"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 143,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 252,
+          "generated_tokens": 61,
+          "seconds": 5.029293778992724,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 252,
+            "packed_input_tokens": 252,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019468539976514876,
+          "peak_allocated_bytes": 54975131136,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 341,
+          "generated_tokens": 53,
+          "seconds": 4.337722036987543,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 341,
+            "packed_input_tokens": 341,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011975030065514147,
+          "peak_allocated_bytes": 55017458176,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 422,
+          "generated_tokens": 29,
+          "seconds": 2.4081445510091726,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 422,
+            "packed_input_tokens": 422,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014398089842870831,
+          "peak_allocated_bytes": 55024062976,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 8.967716932296753,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "8d45977f36271654fcc520363d0d81a0c69c37098f8a069c592abc407cb92de9"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 77,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 255,
+          "generated_tokens": 16,
+          "seconds": 1.3845497649745084,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 255,
+            "packed_input_tokens": 255,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0020313469867687672,
+          "peak_allocated_bytes": 54976905728,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 39,
+          "seconds": 3.197464527998818,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 298,
+            "packed_input_tokens": 298,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011069310130551457,
+          "peak_allocated_bytes": 54999278080,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 365,
+          "generated_tokens": 22,
+          "seconds": 1.8335117009992246,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 365,
+            "packed_input_tokens": 365,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0012734259944409132,
+          "peak_allocated_bytes": 55008049664,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 130.4226176738739,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/lexer.py": "96e1c3e57a239632163617eb1fc9a88b664cd81c27ad70bba3835e4f7abbe288"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1515,
+      "tool_calls": 11,
+      "tool_seconds": 0.42184466996695846,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 251,
+          "generated_tokens": 20,
+          "seconds": 1.70815815901733,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 251,
+            "packed_input_tokens": 251,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0018949460063595325,
+          "peak_allocated_bytes": 54974721536,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 22,
+          "seconds": 1.8232751280011144,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 298,
+            "packed_input_tokens": 298,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011296439915895462,
+          "peak_allocated_bytes": 54999278080,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 917,
+          "generated_tokens": 24,
+          "seconds": 2.041751321987249,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 917,
+            "packed_input_tokens": 917,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0022714580118190497,
+          "peak_allocated_bytes": 55158431744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1489,
+          "generated_tokens": 25,
+          "seconds": 2.218364740983816,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1489,
+            "packed_input_tokens": 1489,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0032271759991999716,
+          "peak_allocated_bytes": 55305343488,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1596,
+          "generated_tokens": 73,
+          "seconds": 6.118218160001561,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1596,
+            "packed_input_tokens": 1596,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.003496044024359435,
+          "peak_allocated_bytes": 55334992896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2150,
+          "generated_tokens": 61,
+          "seconds": 5.2563812650041655,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2150,
+            "packed_input_tokens": 2150,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004544436000287533,
+          "peak_allocated_bytes": 55480892416,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2252,
+          "generated_tokens": 41,
+          "seconds": 3.650564081995981,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2252,
+            "packed_input_tokens": 2252,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.004805513977771625,
+          "peak_allocated_bytes": 55509660160,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2358,
+          "generated_tokens": 249,
+          "seconds": 20.486728855990805,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2358,
+            "packed_input_tokens": 2358,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005247387016424909,
+          "peak_allocated_bytes": 55539083776,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3364,
+          "generated_tokens": 250,
+          "seconds": 20.72233058398706,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3364,
+            "packed_input_tokens": 3364,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006351349991746247,
+          "peak_allocated_bytes": 55815447552,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3670,
+          "generated_tokens": 250,
+          "seconds": 20.75176278600702,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3670,
+            "packed_input_tokens": 3670,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.00631682897801511,
+          "peak_allocated_bytes": 55890575360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3976,
+          "generated_tokens": 250,
+          "seconds": 20.81700148800155,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3976,
+            "packed_input_tokens": 3976,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.0072960990073625,
+          "peak_allocated_bytes": 55972514304,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4282,
+          "generated_tokens": 250,
+          "seconds": 20.960610869980883,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4282,
+            "packed_input_tokens": 4282,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.007183026027632877,
+          "peak_allocated_bytes": 56051247616,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 82.47163844108582,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "5d3ade9498fe2fbf61e5fe7795987c9516e9495e82837b8f36ddd9ffbc6e0b6d"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 849,
+      "tool_calls": 12,
+      "tool_seconds": 0.46277518596616574,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 60,
+          "seconds": 4.910809167980915,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 258,
+            "packed_input_tokens": 258,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0020390419813338667,
+          "peak_allocated_bytes": 54976062464,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1473,
+          "generated_tokens": 125,
+          "seconds": 10.373739550996106,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1473,
+            "packed_input_tokens": 1473,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.002995140996063128,
+          "peak_allocated_bytes": 55300996608,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2270,
+          "generated_tokens": 62,
+          "seconds": 5.335536341008265,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2270,
+            "packed_input_tokens": 2270,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004064802982611582,
+          "peak_allocated_bytes": 55515165184,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2616,
+          "generated_tokens": 95,
+          "seconds": 8.080016449996037,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2616,
+            "packed_input_tokens": 2616,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.00517970701912418,
+          "peak_allocated_bytes": 55605600768,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3563,
+          "generated_tokens": 85,
+          "seconds": 7.559729728003731,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3563,
+            "packed_input_tokens": 3563,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.006109594978624955,
+          "peak_allocated_bytes": 55864078848,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3722,
+          "generated_tokens": 58,
+          "seconds": 5.328338261984754,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3722,
+            "packed_input_tokens": 3722,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006308472016826272,
+          "peak_allocated_bytes": 55904321024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4493,
+          "generated_tokens": 47,
+          "seconds": 4.645886101992801,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4493,
+            "packed_input_tokens": 4493,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008207539998693392,
+          "peak_allocated_bytes": 56110489600,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5342,
+          "generated_tokens": 36,
+          "seconds": 3.9156615230022,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5342,
+            "packed_input_tokens": 5342,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.008948802016675472,
+          "peak_allocated_bytes": 56341905920,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6688,
+          "generated_tokens": 48,
+          "seconds": 5.202183051005704,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6688,
+            "packed_input_tokens": 6688,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.010316034022253007,
+          "peak_allocated_bytes": 56709957632,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5450,
+          "generated_tokens": 86,
+          "seconds": 7.950229963986203,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 7431,
+            "packed_input_tokens": 5450,
+            "dropped_rounds": 2,
+            "original_messages": 20,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.027918848994886503,
+          "peak_allocated_bytes": 56367919104,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5908,
+          "generated_tokens": 101,
+          "seconds": 9.224370852985885,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 8235,
+            "packed_input_tokens": 5908,
+            "dropped_rounds": 3,
+            "original_messages": 22,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.0434431419998873,
+          "peak_allocated_bytes": 56492548096,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5210,
+          "generated_tokens": 46,
+          "seconds": 4.683583326986991,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 8484,
+            "packed_input_tokens": 5210,
+            "dropped_rounds": 4,
+            "original_messages": 24,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.04818492699996568,
+          "peak_allocated_bytes": 56310918144,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 49.84640192985535,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "bc11b82dba4d6aa9496ab944bf703eba8930676e8220353ddc93ae9308187913",
+        "jmespath/visitor.py": "ee107fc6c1a5605abb520247a8b6a296a412f10649db937ad010f7d80d02d814"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 492,
+      "tool_calls": 10,
+      "tool_seconds": 0.38571012602187693,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 265,
+          "generated_tokens": 67,
+          "seconds": 5.493201181001496,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 265,
+            "packed_input_tokens": 265,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0020862040109932423,
+          "peak_allocated_bytes": 54980264448,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 360,
+          "generated_tokens": 52,
+          "seconds": 4.242441528011113,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 360,
+            "packed_input_tokens": 360,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013088600244373083,
+          "peak_allocated_bytes": 55007734784,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 440,
+          "generated_tokens": 54,
+          "seconds": 4.401138941990212,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 440,
+            "packed_input_tokens": 440,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014624549949076027,
+          "peak_allocated_bytes": 55027414528,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1363,
+          "generated_tokens": 35,
+          "seconds": 3.0050350010278635,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1363,
+            "packed_input_tokens": 1363,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.002895879006246105,
+          "peak_allocated_bytes": 55271224832,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2226,
+          "generated_tokens": 42,
+          "seconds": 3.7499093679944053,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2226,
+            "packed_input_tokens": 2226,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0041361270123161376,
+          "peak_allocated_bytes": 55502885888,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2876,
+          "generated_tokens": 31,
+          "seconds": 3.067368374002399,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2876,
+            "packed_input_tokens": 2876,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0053539740038104355,
+          "peak_allocated_bytes": 55675466752,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3489,
+          "generated_tokens": 47,
+          "seconds": 4.470337947015651,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3489,
+            "packed_input_tokens": 3489,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006342524982756004,
+          "peak_allocated_bytes": 55848245248,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4134,
+          "generated_tokens": 46,
+          "seconds": 4.472448151005665,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4134,
+            "packed_input_tokens": 4134,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.007492030010325834,
+          "peak_allocated_bytes": 56020237824,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4358,
+          "generated_tokens": 31,
+          "seconds": 3.316377509996528,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4358,
+            "packed_input_tokens": 4358,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007899152027675882,
+          "peak_allocated_bytes": 56073612800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4583,
+          "generated_tokens": 28,
+          "seconds": 3.1178077069926076,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4583,
+            "packed_input_tokens": 4583,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.00839159800671041,
+          "peak_allocated_bytes": 56131110912,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5429,
+          "generated_tokens": 29,
+          "seconds": 3.4121102999779396,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5429,
+            "packed_input_tokens": 5429,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.00947769099730067,
+          "peak_allocated_bytes": 56362753024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5999,
+          "generated_tokens": 30,
+          "seconds": 3.6421648229879793,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5999,
+            "packed_input_tokens": 5999,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.011127211997518316,
+          "peak_allocated_bytes": 56515880448,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 99.89593458175659,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "c97955fb7bc3863e7f95ab95264072492fa20fd1556019f09442b9c96dc6876f"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 1134,
+      "tool_calls": 10,
+      "tool_seconds": 0.827154343976872,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 67,
+          "seconds": 5.422876361000817,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0014323540090117604,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1345,
+          "generated_tokens": 68,
+          "seconds": 5.6291016780014616,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1345,
+            "packed_input_tokens": 1345,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0029151600028853863,
+          "peak_allocated_bytes": 55268178432,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2207,
+          "generated_tokens": 78,
+          "seconds": 6.60915837000357,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2207,
+            "packed_input_tokens": 2207,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004215119988657534,
+          "peak_allocated_bytes": 55497327616,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3390,
+          "generated_tokens": 68,
+          "seconds": 6.039609380997717,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3390,
+            "packed_input_tokens": 3390,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005857510986970738,
+          "peak_allocated_bytes": 55823126528,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4386,
+          "generated_tokens": 118,
+          "seconds": 10.279877685999963,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4386,
+            "packed_input_tokens": 4386,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.007140889996662736,
+          "peak_allocated_bytes": 56078408704,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5330,
+          "generated_tokens": 197,
+          "seconds": 16.821630830003414,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5330,
+            "packed_input_tokens": 5330,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.008737508993363008,
+          "peak_allocated_bytes": 56337232384,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5676,
+          "generated_tokens": 64,
+          "seconds": 6.252503888012143,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5676,
+            "packed_input_tokens": 5676,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.009199533000355586,
+          "peak_allocated_bytes": 56426338304,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5897,
+          "generated_tokens": 101,
+          "seconds": 9.246249138988787,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5897,
+            "packed_input_tokens": 5897,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.009637196984840557,
+          "peak_allocated_bytes": 56490807808,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6276,
+          "generated_tokens": 138,
+          "seconds": 12.329168720985763,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6276,
+            "packed_input_tokens": 6276,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.010167663975153118,
+          "peak_allocated_bytes": 56590353408,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6143,
+          "generated_tokens": 235,
+          "seconds": 20.104313773015747,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 7217,
+            "packed_input_tokens": 6143,
+            "dropped_rounds": 1,
+            "original_messages": 20,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.020539602992357686,
+          "peak_allocated_bytes": 56550687232,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 15.433694124221802,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 176,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 62,
+          "seconds": 5.387384379981086,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0011105849989689887,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 330,
+          "generated_tokens": 49,
+          "seconds": 4.257131698977901,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 330,
+            "packed_input_tokens": 330,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001212427014252171,
+          "peak_allocated_bytes": 55012859904,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 407,
+          "generated_tokens": 65,
+          "seconds": 5.630806944012875,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 407,
+            "packed_input_tokens": 407,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014110430201981217,
+          "peak_allocated_bytes": 55015079424,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 153.3779332637787,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "e6c71711722767bfccad9b3dfa1ce34bf0a6c71bba3eddf54720b40e021fe107"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1718,
+      "tool_calls": 12,
+      "tool_seconds": 1.1521489220031071,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 236,
+          "generated_tokens": 67,
+          "seconds": 5.435241887986194,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 236,
+            "packed_input_tokens": 236,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0012698860082309693,
+          "peak_allocated_bytes": 54967073280,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1341,
+          "generated_tokens": 74,
+          "seconds": 6.106802524998784,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1341,
+            "packed_input_tokens": 1341,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0026897290081251413,
+          "peak_allocated_bytes": 55264477184,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2285,
+          "generated_tokens": 61,
+          "seconds": 5.235429999011103,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2285,
+            "packed_input_tokens": 2285,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004178285977104679,
+          "peak_allocated_bytes": 55517580800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3362,
+          "generated_tokens": 51,
+          "seconds": 4.668460834014695,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3362,
+            "packed_input_tokens": 3362,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005825002008350566,
+          "peak_allocated_bytes": 55815085056,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4335,
+          "generated_tokens": 185,
+          "seconds": 15.58583579599508,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4335,
+            "packed_input_tokens": 4335,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.007088615995598957,
+          "peak_allocated_bytes": 56064009728,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4616,
+          "generated_tokens": 233,
+          "seconds": 20.66062639199663,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4616,
+            "packed_input_tokens": 4616,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.008568365010432899,
+          "peak_allocated_bytes": 56142546432,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4870,
+          "generated_tokens": 118,
+          "seconds": 10.938071797980228,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4870,
+            "packed_input_tokens": 4870,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008164714992744848,
+          "peak_allocated_bytes": 56216907264,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5722,
+          "generated_tokens": 227,
+          "seconds": 20.031034409010317,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5722,
+            "packed_input_tokens": 5722,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.00917407902306877,
+          "peak_allocated_bytes": 56439254016,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5970,
+          "generated_tokens": 48,
+          "seconds": 5.258625154994661,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5970,
+            "packed_input_tokens": 5970,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.009586712985765189,
+          "peak_allocated_bytes": 56505153024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6065,
+          "generated_tokens": 174,
+          "seconds": 15.360381563019473,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6065,
+            "packed_input_tokens": 6065,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.009731998987263069,
+          "peak_allocated_bytes": 56530586624,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6601,
+          "generated_tokens": 265,
+          "seconds": 23.08578839097754,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6601,
+            "packed_input_tokens": 6601,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.010523526987526566,
+          "peak_allocated_bytes": 56671558656,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6958,
+          "generated_tokens": 215,
+          "seconds": 19.474234941008035,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6958,
+            "packed_input_tokens": 6958,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.010937009996268898,
+          "peak_allocated_bytes": 56772145152,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 39.582011699676514,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 464,
+      "tool_calls": 7,
+      "tool_seconds": 0.35091971399378963,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 238,
+          "generated_tokens": 57,
+          "seconds": 4.636228479008423,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 238,
+            "packed_input_tokens": 238,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001582650002092123,
+          "peak_allocated_bytes": 54967305728,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1324,
+          "generated_tokens": 67,
+          "seconds": 5.544859599991469,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1324,
+            "packed_input_tokens": 1324,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0028780249995179474,
+          "peak_allocated_bytes": 55261376512,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1599,
+          "generated_tokens": 34,
+          "seconds": 2.9554080450034235,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1599,
+            "packed_input_tokens": 1599,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0033371379831805825,
+          "peak_allocated_bytes": 55335745536,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1858,
+          "generated_tokens": 73,
+          "seconds": 6.12570029401104,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1858,
+            "packed_input_tokens": 1858,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0037086250085849315,
+          "peak_allocated_bytes": 55421499904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1949,
+          "generated_tokens": 84,
+          "seconds": 7.04161818898865,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1949,
+            "packed_input_tokens": 1949,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.003915275010513142,
+          "peak_allocated_bytes": 55438156800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2088,
+          "generated_tokens": 49,
+          "seconds": 4.264598123001633,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2088,
+            "packed_input_tokens": 2088,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004151895991526544,
+          "peak_allocated_bytes": 55470513664,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2393,
+          "generated_tokens": 100,
+          "seconds": 8.429062704992248,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2393,
+            "packed_input_tokens": 2393,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.00495293500716798,
+          "peak_allocated_bytes": 55546151936,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 38.56549549102783,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "aea00ec9611a0d82c9b9d4ba7bbd8288dc21a752392a4001ab24074d6b6fa01c"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 430,
+      "tool_calls": 7,
+      "tool_seconds": 0.48276088197599165,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 37,
+          "seconds": 3.0472034180129413,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0018296870111953467,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1339,
+          "generated_tokens": 43,
+          "seconds": 3.651373358006822,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1339,
+            "packed_input_tokens": 1339,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.002625925000756979,
+          "peak_allocated_bytes": 55264136192,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1911,
+          "generated_tokens": 42,
+          "seconds": 3.6667903019988444,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1911,
+            "packed_input_tokens": 1911,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0036801940004806966,
+          "peak_allocated_bytes": 55431725056,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2818,
+          "generated_tokens": 77,
+          "seconds": 6.724639308988117,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2818,
+            "packed_input_tokens": 2818,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005035587004385889,
+          "peak_allocated_bytes": 55663752192,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3703,
+          "generated_tokens": 118,
+          "seconds": 10.195842410001205,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3703,
+            "packed_input_tokens": 3703,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.006288635020609945,
+          "peak_allocated_bytes": 55897520128,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3857,
+          "generated_tokens": 45,
+          "seconds": 4.350313130009454,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3857,
+            "packed_input_tokens": 3857,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006540316011523828,
+          "peak_allocated_bytes": 55939219456,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3993,
+          "generated_tokens": 68,
+          "seconds": 6.204864397004712,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3993,
+            "packed_input_tokens": 3993,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006769675994291902,
+          "peak_allocated_bytes": 55975184896,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 14.947479486465454,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 179,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 63,
+          "seconds": 5.237647191999713,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001258614007383585,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 334,
+          "generated_tokens": 50,
+          "seconds": 4.124904919997789,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 334,
+            "packed_input_tokens": 334,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013015649747103453,
+          "peak_allocated_bytes": 55010843136,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 412,
+          "generated_tokens": 66,
+          "seconds": 5.423979349026922,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 412,
+            "packed_input_tokens": 412,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014963740250095725,
+          "peak_allocated_bytes": 55021225984,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-base64",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-base64",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 71.75040054321289,
+      "modified_source_files": [
+        "src/itsdangerous/encoding.py"
+      ],
+      "source_sha256": {
+        "src/itsdangerous/encoding.py": "bf5bcda3d4e9830dfaa5476c8fe59b276fb448a4c28664fc475f1901b7a1fc68"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 799,
+      "tool_calls": 10,
+      "tool_seconds": 1.9516736859222874,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 36,
+          "seconds": 3.0356062979844864,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0018628970137797296,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 652,
+          "generated_tokens": 45,
+          "seconds": 3.7450965869938955,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 652,
+            "packed_input_tokens": 652,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0023804880038369447,
+          "peak_allocated_bytes": 55091416064,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 839,
+          "generated_tokens": 29,
+          "seconds": 2.453756019996945,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 839,
+            "packed_input_tokens": 839,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.002322395012015477,
+          "peak_allocated_bytes": 55140481024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1178,
+          "generated_tokens": 56,
+          "seconds": 4.714703882986214,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1178,
+            "packed_input_tokens": 1178,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.002810875012073666,
+          "peak_allocated_bytes": 55226860032,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1861,
+          "generated_tokens": 50,
+          "seconds": 4.339369146997342,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1861,
+            "packed_input_tokens": 1861,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004019454005174339,
+          "peak_allocated_bytes": 55421834752,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2197,
+          "generated_tokens": 45,
+          "seconds": 4.018707868992351,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2197,
+            "packed_input_tokens": 2197,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004478771996218711,
+          "peak_allocated_bytes": 55492677632,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2418,
+          "generated_tokens": 305,
+          "seconds": 25.231421493983362,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2418,
+            "packed_input_tokens": 2418,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.004857658001128584,
+          "peak_allocated_bytes": 55556662784,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2743,
+          "generated_tokens": 27,
+          "seconds": 2.639171003975207,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2743,
+            "packed_input_tokens": 2743,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.00540722900768742,
+          "peak_allocated_bytes": 55642670592,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2845,
+          "generated_tokens": 44,
+          "seconds": 4.079717279004399,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2845,
+            "packed_input_tokens": 2845,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.01186091999989003,
+          "peak_allocated_bytes": 55669215232,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3126,
+          "generated_tokens": 162,
+          "seconds": 13.719837313023163,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3126,
+            "packed_input_tokens": 3126,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006471050990512595,
+          "peak_allocated_bytes": 55743537664,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-key-derivation",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-key-derivation",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 84.49828600883484,
+      "modified_source_files": [
+        "src/itsdangerous/signer.py"
+      ],
+      "source_sha256": {
+        "src/itsdangerous/signer.py": "d886ace65cbf2b5d73a4c1701556caca62384172396a306dd17d4dffcc2e92d0"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 908,
+      "tool_calls": 12,
+      "tool_seconds": 2.028274531941861,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 57,
+          "seconds": 4.6836095369944815,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002030848991125822,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 967,
+          "generated_tokens": 30,
+          "seconds": 2.533305955992546,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 967,
+            "packed_input_tokens": 967,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0022314380039460957,
+          "peak_allocated_bytes": 55174952960,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1750,
+          "generated_tokens": 42,
+          "seconds": 3.6766081069945358,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1750,
+            "packed_input_tokens": 1750,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0035622479917947203,
+          "peak_allocated_bytes": 55385553920,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2411,
+          "generated_tokens": 31,
+          "seconds": 2.9130816829856485,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2411,
+            "packed_input_tokens": 2411,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004708914028014988,
+          "peak_allocated_bytes": 55554409984,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3011,
+          "generated_tokens": 89,
+          "seconds": 7.732327918987721,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3011,
+            "packed_input_tokens": 3011,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005656210007146001,
+          "peak_allocated_bytes": 55713117696,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3522,
+          "generated_tokens": 42,
+          "seconds": 4.017914797004778,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3522,
+            "packed_input_tokens": 3522,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006363966997014359,
+          "peak_allocated_bytes": 55853499904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3729,
+          "generated_tokens": 62,
+          "seconds": 5.691833941993536,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3729,
+            "packed_input_tokens": 3729,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.007569673995021731,
+          "peak_allocated_bytes": 55905422336,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4041,
+          "generated_tokens": 40,
+          "seconds": 3.987068981019547,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4041,
+            "packed_input_tokens": 4041,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.007121175993233919,
+          "peak_allocated_bytes": 55986795520,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4412,
+          "generated_tokens": 49,
+          "seconds": 4.805809586017858,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4412,
+            "packed_input_tokens": 4412,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007961747993249446,
+          "peak_allocated_bytes": 56088560640,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4479,
+          "generated_tokens": 76,
+          "seconds": 6.9930555500031915,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4479,
+            "packed_input_tokens": 4479,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.008596433006459847,
+          "peak_allocated_bytes": 56105246208,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4839,
+          "generated_tokens": 354,
+          "seconds": 29.654439078003634,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4839,
+            "packed_input_tokens": 4839,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.008741477999137715,
+          "peak_allocated_bytes": 56200116224,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5213,
+          "generated_tokens": 36,
+          "seconds": 3.922044378996361,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5213,
+            "packed_input_tokens": 5213,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.009644660982303321,
+          "peak_allocated_bytes": 56311512576,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-fallbacks",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-fallbacks",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 11.17492413520813,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/serializer.py": "2e95c8f42181562bc7d8a7211c92e8bae7cf69189d7245da2b4fe9f28d3d1f75"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 91,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 17,
+          "seconds": 1.4529702790023293,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002044177002971992,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 284,
+          "generated_tokens": 37,
+          "seconds": 3.024456023995299,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 284,
+            "packed_input_tokens": 284,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012305570126045495,
+          "peak_allocated_bytes": 54983175168,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 349,
+          "generated_tokens": 37,
+          "seconds": 3.0137263179931324,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 349,
+            "packed_input_tokens": 349,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0013838020095136017,
+          "peak_allocated_bytes": 55003227648,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-serialize",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-serialize",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 58.39671540260315,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/serializer.py": "f4a53ce9dbc6a992aa52da7f877db1691900f829350e553719fb31e88c06bf16"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 562,
+      "tool_calls": 12,
+      "tool_seconds": 0.4597926829883363,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 237,
+          "generated_tokens": 36,
+          "seconds": 3.0701705620158464,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 237,
+            "packed_input_tokens": 237,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019495500018820167,
+          "peak_allocated_bytes": 54967066112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 891,
+          "generated_tokens": 40,
+          "seconds": 3.3366040420078207,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 891,
+            "packed_input_tokens": 891,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.002390265988651663,
+          "peak_allocated_bytes": 55149099520,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1550,
+          "generated_tokens": 41,
+          "seconds": 3.5567412019881885,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1550,
+            "packed_input_tokens": 1550,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003531808004481718,
+          "peak_allocated_bytes": 55321771008,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2303,
+          "generated_tokens": 41,
+          "seconds": 3.6886493180063553,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2303,
+            "packed_input_tokens": 2303,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.00474668201059103,
+          "peak_allocated_bytes": 55520479744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3026,
+          "generated_tokens": 41,
+          "seconds": 3.8480723350076005,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3026,
+            "packed_input_tokens": 3026,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005833039991557598,
+          "peak_allocated_bytes": 55715809792,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3650,
+          "generated_tokens": 41,
+          "seconds": 3.976479977980489,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3650,
+            "packed_input_tokens": 3650,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.007119097979739308,
+          "peak_allocated_bytes": 55884812800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4299,
+          "generated_tokens": 56,
+          "seconds": 5.33266143000219,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4299,
+            "packed_input_tokens": 4299,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008222246018704027,
+          "peak_allocated_bytes": 56056189440,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4870,
+          "generated_tokens": 54,
+          "seconds": 5.403397546993801,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4870,
+            "packed_input_tokens": 4870,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.0090349160018377,
+          "peak_allocated_bytes": 56216907264,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4965,
+          "generated_tokens": 42,
+          "seconds": 4.436672817013459,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4965,
+            "packed_input_tokens": 4965,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.00934212698484771,
+          "peak_allocated_bytes": 56241470976,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5559,
+          "generated_tokens": 41,
+          "seconds": 4.444043816998601,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5559,
+            "packed_input_tokens": 5559,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.010057912993943319,
+          "peak_allocated_bytes": 56394309120,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6213,
+          "generated_tokens": 44,
+          "seconds": 4.824027805996593,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6213,
+            "packed_input_tokens": 6213,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.011041858000680804,
+          "peak_allocated_bytes": 56569282048,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6700,
+          "generated_tokens": 85,
+          "seconds": 8.341725619975477,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6700,
+            "packed_input_tokens": 6700,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.012171439011581242,
+          "peak_allocated_bytes": 56711978496,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-url-compression",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-url-compression",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 61.00270128250122,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/url_safe.py": "ca5cf4d9de914101321c3ea645d7d40db86d50ea13a82128b430eae967924dc9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 617,
+      "tool_calls": 12,
+      "tool_seconds": 0.46103025396587327,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 37,
+          "seconds": 3.181025860016234,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002063533989712596,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 666,
+          "generated_tokens": 43,
+          "seconds": 3.559256106003886,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 666,
+            "packed_input_tokens": 666,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0020485030254349113,
+          "peak_allocated_bytes": 55094989312,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1330,
+          "generated_tokens": 43,
+          "seconds": 3.6679805970052257,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1330,
+            "packed_input_tokens": 1330,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0033233080175705254,
+          "peak_allocated_bytes": 55259820032,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2030,
+          "generated_tokens": 66,
+          "seconds": 5.7831860370060895,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2030,
+            "packed_input_tokens": 2030,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0045575620024465024,
+          "peak_allocated_bytes": 55461051904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2343,
+          "generated_tokens": 31,
+          "seconds": 2.9664090140140615,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2343,
+            "packed_input_tokens": 2343,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0051723749784287065,
+          "peak_allocated_bytes": 55530640896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2945,
+          "generated_tokens": 68,
+          "seconds": 6.181711887009442,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2945,
+            "packed_input_tokens": 2945,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006095327989896759,
+          "peak_allocated_bytes": 55697317888,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3366,
+          "generated_tokens": 42,
+          "seconds": 4.041425483010244,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3366,
+            "packed_input_tokens": 3366,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006743019999703392,
+          "peak_allocated_bytes": 55820953088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4037,
+          "generated_tokens": 31,
+          "seconds": 3.3026309560227674,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4037,
+            "packed_input_tokens": 4037,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.008011815982172266,
+          "peak_allocated_bytes": 55986418176,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4664,
+          "generated_tokens": 86,
+          "seconds": 7.947204680996947,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4664,
+            "packed_input_tokens": 4664,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.008860406000167131,
+          "peak_allocated_bytes": 56154325504,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5261,
+          "generated_tokens": 50,
+          "seconds": 5.175791793997632,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5261,
+            "packed_input_tokens": 5261,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.009572811017278582,
+          "peak_allocated_bytes": 56322482176,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5758,
+          "generated_tokens": 49,
+          "seconds": 5.087543351983186,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5758,
+            "packed_input_tokens": 5758,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.010588208009721711,
+          "peak_allocated_bytes": 56448187904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6416,
+          "generated_tokens": 71,
+          "seconds": 7.18743129100767,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6416,
+            "packed_input_tokens": 6416,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.011591973016038537,
+          "peak_allocated_bytes": 56624041984,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-timestamp",
+      "repository": "pallets/itsdangerous",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-timestamp",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 62.24312615394592,
+      "modified_source_files": [
+        "src/itsdangerous/timed.py"
+      ],
+      "source_sha256": {
+        "src/itsdangerous/timed.py": "99b5fd8cff613b0d6b360772fb477685dc3406252414c34b6dbeb511ef5da6d1"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 668,
+      "tool_calls": 12,
+      "tool_seconds": 1.979143979086075,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 239,
+          "generated_tokens": 42,
+          "seconds": 3.438306167983683,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 239,
+            "packed_input_tokens": 239,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001627180987270549,
+          "peak_allocated_bytes": 54968739328,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 896,
+          "generated_tokens": 41,
+          "seconds": 3.3658573330030777,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 896,
+            "packed_input_tokens": 896,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0025648470036685467,
+          "peak_allocated_bytes": 55150294528,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1526,
+          "generated_tokens": 42,
+          "seconds": 3.580327417992521,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1526,
+            "packed_input_tokens": 1526,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003824799001449719,
+          "peak_allocated_bytes": 55312399360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2094,
+          "generated_tokens": 46,
+          "seconds": 4.013325399981113,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2094,
+            "packed_input_tokens": 2094,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004850429017096758,
+          "peak_allocated_bytes": 55472317440,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2359,
+          "generated_tokens": 54,
+          "seconds": 4.713829974003602,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2359,
+            "packed_input_tokens": 2359,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005281129997456446,
+          "peak_allocated_bytes": 55539239424,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2451,
+          "generated_tokens": 11,
+          "seconds": 1.28563748698798,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2451,
+            "packed_input_tokens": 2451,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.005428156990092248,
+          "peak_allocated_bytes": 55576775680,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2486,
+          "generated_tokens": 16,
+          "seconds": 1.6913747710059397,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2486,
+            "packed_input_tokens": 2486,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.0054911799961701035,
+          "peak_allocated_bytes": 55571289600,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2548,
+          "generated_tokens": 45,
+          "seconds": 4.0347791660169605,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2548,
+            "packed_input_tokens": 2548,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005650197999784723,
+          "peak_allocated_bytes": 55585126912,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3181,
+          "generated_tokens": 63,
+          "seconds": 5.58687102800468,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3181,
+            "packed_input_tokens": 3181,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006720789999235421,
+          "peak_allocated_bytes": 55760861696,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3490,
+          "generated_tokens": 223,
+          "seconds": 18.469681122980546,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3490,
+            "packed_input_tokens": 3490,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.0071945119998417795,
+          "peak_allocated_bytes": 55848429568,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3733,
+          "generated_tokens": 27,
+          "seconds": 2.8219995069957804,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3733,
+            "packed_input_tokens": 3733,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.007687513018026948,
+          "peak_allocated_bytes": 55906048000,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3835,
+          "generated_tokens": 58,
+          "seconds": 5.386508308001794,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3835,
+            "packed_input_tokens": 3835,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.013250691001303494,
+          "peak_allocated_bytes": 55929642496,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-decode",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 39.31710195541382,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "55b1a0f911d23552677f625d43ed3e8b4676b1e9197772c5e6e92a5140779ee3"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 408,
+      "tool_calls": 6,
+      "tool_seconds": 0.2299084319965914,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 244,
+          "generated_tokens": 16,
+          "seconds": 1.3381541239796206,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 244,
+            "packed_input_tokens": 244,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0013681629789061844,
+          "peak_allocated_bytes": 54971204096,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 287,
+          "generated_tokens": 21,
+          "seconds": 1.734927687997697,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 287,
+            "packed_input_tokens": 287,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013286999892443419,
+          "peak_allocated_bytes": 54994462720,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1559,
+          "generated_tokens": 45,
+          "seconds": 3.840687004994834,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1559,
+            "packed_input_tokens": 1559,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0035308210062794387,
+          "peak_allocated_bytes": 55324307968,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1632,
+          "generated_tokens": 15,
+          "seconds": 1.4317460549937095,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1632,
+            "packed_input_tokens": 1632,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0035802119818981737,
+          "peak_allocated_bytes": 55346525696,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2165,
+          "generated_tokens": 39,
+          "seconds": 3.4696852259803563,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2165,
+            "packed_input_tokens": 2165,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004212191008264199,
+          "peak_allocated_bytes": 55484927488,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2232,
+          "generated_tokens": 14,
+          "seconds": 1.4734642539988272,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2232,
+            "packed_input_tokens": 2232,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004196410009171814,
+          "peak_allocated_bytes": 55503691264,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3060,
+          "generated_tokens": 42,
+          "seconds": 3.8796215530019253,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3060,
+            "packed_input_tokens": 3060,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006135236995760351,
+          "peak_allocated_bytes": 55722715648,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3130,
+          "generated_tokens": 23,
+          "seconds": 2.3840414329897612,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3130,
+            "packed_input_tokens": 3130,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005687277007382363,
+          "peak_allocated_bytes": 55744433664,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3856,
+          "generated_tokens": 80,
+          "seconds": 7.099372608005069,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3856,
+            "packed_input_tokens": 3856,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007064788980642334,
+          "peak_allocated_bytes": 55939023872,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3964,
+          "generated_tokens": 46,
+          "seconds": 4.402368976006983,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3964,
+            "packed_input_tokens": 3964,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.007038815994746983,
+          "peak_allocated_bytes": 55970105856,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4108,
+          "generated_tokens": 43,
+          "seconds": 4.204924899007892,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4108,
+            "packed_input_tokens": 4108,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.007862672995543107,
+          "peak_allocated_bytes": 56016261120,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 4179,
+          "generated_tokens": 24,
+          "seconds": 2.694334448024165,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4179,
+            "packed_input_tokens": 4179,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.008014739985810593,
+          "peak_allocated_bytes": 56029259264,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-sparse",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 13.370070457458496,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "31acf03db19b46eb40b58740ad0620815b21a5ccb1ae0ed164666a791fe6e895"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 156,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 62,
+          "seconds": 5.034714301000349,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0013096840120851994,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 330,
+          "generated_tokens": 47,
+          "seconds": 3.8222420729871374,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 330,
+            "packed_input_tokens": 330,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0014167379995342344,
+          "peak_allocated_bytes": 55012859904,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 405,
+          "generated_tokens": 47,
+          "seconds": 3.8392409560037777,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 405,
+            "packed_input_tokens": 405,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.00161063700215891,
+          "peak_allocated_bytes": 55016132608,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-null",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 12.204164743423462,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/stringify.js": "3de0687ab57c6bee258d6721a4fe2cdbe5553086969ba9fe9e98e0dc38aabd5c"
+      },
+      "ignored_new_files": [],
+      "calls": 5,
+      "generated_tokens": 131,
+      "tool_calls": 1,
+      "tool_seconds": 0.038705377985024825,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 245,
+          "generated_tokens": 16,
+          "seconds": 1.3600047010113485,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 245,
+            "packed_input_tokens": 245,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0017654319817665964,
+          "peak_allocated_bytes": 54973199872,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 288,
+          "generated_tokens": 17,
+          "seconds": 1.412108068994712,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 288,
+            "packed_input_tokens": 288,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013350440131034702,
+          "peak_allocated_bytes": 54994724864,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1556,
+          "generated_tokens": 42,
+          "seconds": 3.5972298519918695,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1556,
+            "packed_input_tokens": 1556,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003353716019773856,
+          "peak_allocated_bytes": 55323461632,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1626,
+          "generated_tokens": 24,
+          "seconds": 2.147369385987986,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1626,
+            "packed_input_tokens": 1626,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.003402628004550934,
+          "peak_allocated_bytes": 55344897024,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1678,
+          "generated_tokens": 32,
+          "seconds": 2.8162374519743025,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1678,
+            "packed_input_tokens": 1678,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0035950250166933984,
+          "peak_allocated_bytes": 55370598400,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-combine",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 58.83141469955444,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "c7a6169accc72c252a1f19a5bddb37bb108b505208611c57c751f43d78d654a9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 593,
+      "tool_calls": 12,
+      "tool_seconds": 0.9952750869852025,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 54,
+          "seconds": 4.4270467839960475,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019657679949887097,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1380,
+          "generated_tokens": 66,
+          "seconds": 5.460467216005782,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1380,
+            "packed_input_tokens": 1380,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0031108330003917217,
+          "peak_allocated_bytes": 55282383360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2108,
+          "generated_tokens": 45,
+          "seconds": 3.9501700539840385,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2108,
+            "packed_input_tokens": 2108,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004357603000244126,
+          "peak_allocated_bytes": 55467576320,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2729,
+          "generated_tokens": 45,
+          "seconds": 4.055519665998872,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2729,
+            "packed_input_tokens": 2729,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005417815002147108,
+          "peak_allocated_bytes": 55634740736,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3438,
+          "generated_tokens": 45,
+          "seconds": 4.194058494002093,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3438,
+            "packed_input_tokens": 3438,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.006642313004704192,
+          "peak_allocated_bytes": 55836283392,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4093,
+          "generated_tokens": 45,
+          "seconds": 4.3384972650092095,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4093,
+            "packed_input_tokens": 4093,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.007830710004782304,
+          "peak_allocated_bytes": 55998478848,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4614,
+          "generated_tokens": 45,
+          "seconds": 4.483929668000201,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4614,
+            "packed_input_tokens": 4614,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008529886981705204,
+          "peak_allocated_bytes": 56142132736,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5438,
+          "generated_tokens": 45,
+          "seconds": 4.668532775976928,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5438,
+            "packed_input_tokens": 5438,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.009860188991297036,
+          "peak_allocated_bytes": 56364314624,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5722,
+          "generated_tokens": 45,
+          "seconds": 4.731844218011247,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5722,
+            "packed_input_tokens": 5722,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.0101593209838029,
+          "peak_allocated_bytes": 56439254016,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6078,
+          "generated_tokens": 45,
+          "seconds": 4.830879384011496,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6078,
+            "packed_input_tokens": 6078,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.01069512200774625,
+          "peak_allocated_bytes": 56532802560,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6360,
+          "generated_tokens": 64,
+          "seconds": 6.37605601400719,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6360,
+            "packed_input_tokens": 6360,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.01105676600127481,
+          "peak_allocated_bytes": 56608760832,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5555,
+          "generated_tokens": 49,
+          "seconds": 5.018348965008045,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 7389,
+            "packed_input_tokens": 5555,
+            "dropped_rounds": 2,
+            "original_messages": 24,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.03086039499612525,
+          "peak_allocated_bytes": 56393810944,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-plain-objects",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 71.35248756408691,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "a08b04c2ef970f48851c343a8d536281424a38410c86a1007a0d226689dcee57"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 781,
+      "tool_calls": 12,
+      "tool_seconds": 0.4609800350444857,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 241,
+          "generated_tokens": 51,
+          "seconds": 4.177056521992199,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 241,
+            "packed_input_tokens": 241,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0017974200018215925,
+          "peak_allocated_bytes": 54971134464,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 947,
+          "generated_tokens": 75,
+          "seconds": 6.105470812995918,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 947,
+            "packed_input_tokens": 947,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.003182043001288548,
+          "peak_allocated_bytes": 55157963776,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1406,
+          "generated_tokens": 60,
+          "seconds": 5.006648307986325,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1406,
+            "packed_input_tokens": 1406,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0035580179828684777,
+          "peak_allocated_bytes": 55285904896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1602,
+          "generated_tokens": 64,
+          "seconds": 5.363717696978711,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1602,
+            "packed_input_tokens": 1602,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0043058769952040166,
+          "peak_allocated_bytes": 55338074624,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2071,
+          "generated_tokens": 90,
+          "seconds": 7.67598019001889,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2071,
+            "packed_input_tokens": 2071,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005217981990426779,
+          "peak_allocated_bytes": 55469900288,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2940,
+          "generated_tokens": 71,
+          "seconds": 6.269286745984573,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 2940,
+            "packed_input_tokens": 2940,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0069549690233543515,
+          "peak_allocated_bytes": 55691069952,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3150,
+          "generated_tokens": 66,
+          "seconds": 5.9237137350137345,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3150,
+            "packed_input_tokens": 3150,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006282683025347069,
+          "peak_allocated_bytes": 55755461120,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3653,
+          "generated_tokens": 65,
+          "seconds": 5.857302499003708,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 3653,
+            "packed_input_tokens": 3653,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.006862415000796318,
+          "peak_allocated_bytes": 55885362688,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4294,
+          "generated_tokens": 45,
+          "seconds": 4.406327914999565,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4294,
+            "packed_input_tokens": 4294,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.008490837994031608,
+          "peak_allocated_bytes": 56055199744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4931,
+          "generated_tokens": 69,
+          "seconds": 6.481250404001912,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 4931,
+            "packed_input_tokens": 4931,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.009292878996348009,
+          "peak_allocated_bytes": 56234277376,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5360,
+          "generated_tokens": 70,
+          "seconds": 6.648018970998237,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 5360,
+            "packed_input_tokens": 5360,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.010206663981080055,
+          "peak_allocated_bytes": 56345069056,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6420,
+          "generated_tokens": 55,
+          "seconds": 5.713232320995303,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 6420,
+            "packed_input_tokens": 6420,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.011320377001538873,
+          "peak_allocated_bytes": 56624799744,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "variant": "context",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "bounded_history_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-sort",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 12.113504886627197,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/stringify.js": "c33e16e9e49b08ac4288c87a16d14959cf6de9c06594a1c050db9da272a541d1"
+      },
+      "ignored_new_files": [],
+      "calls": 5,
+      "generated_tokens": 127,
+      "tool_calls": 1,
+      "tool_seconds": 0.038634415017440915,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 16,
+          "seconds": 1.4030267990019638,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019330330251250416,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 285,
+          "generated_tokens": 21,
+          "seconds": 1.7778693260042928,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 285,
+            "packed_input_tokens": 285,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011882039834745228,
+          "peak_allocated_bytes": 54990151680,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1557,
+          "generated_tokens": 42,
+          "seconds": 3.661331090988824,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1557,
+            "packed_input_tokens": 1557,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003178289014613256,
+          "peak_allocated_bytes": 55323743232,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1627,
+          "generated_tokens": 24,
+          "seconds": 2.1894954010203946,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1627,
+            "packed_input_tokens": 1627,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0032798539905343205,
+          "peak_allocated_bytes": 55345170944,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1679,
+          "generated_tokens": 24,
+          "seconds": 2.215713309997227,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "bounded_history_v1"
+          },
+          "context": {
+            "policy": "bounded_history_v1",
+            "raw_input_tokens": 1679,
+            "packed_input_tokens": 1679,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.003415037994273007,
+          "peak_allocated_bytes": 55370702848,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    }
+  ],
+  "finished_utc": "2026-11-10T03:16:13.038323+00:00"
+}

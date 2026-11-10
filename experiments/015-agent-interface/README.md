@@ -2,6 +2,8 @@
 
 This preregistered 2×2 study tests whether an interface change improves repository repairs with the **unchanged Qwen 27B base**. No training or adapter is involved. The 014 adapter was not promoted.
 
+**Completed [results and curves](results/2026-11-10/):** 96 runs, all four variants complete. Native format and combined policies increased fresh successes from 2/12 to 5/12, with one historical regression each; neither passed the preregistered gate. Context packing removed the observed input-limit failures without additional successes. Policies remain explicit opt-ins and the default is unchanged.
+
 | Variant | Format contract | Request history |
 | --- | --- | --- |
 | baseline | Existing fenced-Bash prompt; existing strict parser | Full |

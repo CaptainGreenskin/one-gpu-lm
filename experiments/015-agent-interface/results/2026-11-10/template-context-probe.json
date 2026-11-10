@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "synthetic_generation_performed": false,
+  "model_scores_used_to_select_policy": false,
+  "exact_legacy_template_equivalence": true,
+  "native_schema_changes_template": true,
+  "native_template_token_delta": 274,
+  "native_schema_template_sha256": "19de94d70f502359478e73b12c241463d1b148dcca20efbbbbb5981e09faed28",
+  "historical_prefixes": 107,
+  "historical_overflow_prefixes": 2,
+  "historical_overflows_fit_after_packing": true,
+  "prefixes": [
+    {
+      "id": "new-jmes-filter",
+      "messages": 2,
+      "raw_tokens": 258,
+      "packed_tokens": 258,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 4,
+      "raw_tokens": 301,
+      "packed_tokens": 301,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 6,
+      "raw_tokens": 1481,
+      "packed_tokens": 1481,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 8,
+      "raw_tokens": 1535,
+      "packed_tokens": 1535,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 10,
+      "raw_tokens": 2187,
+      "packed_tokens": 2187,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 12,
+      "raw_tokens": 2229,
+      "packed_tokens": 2229,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 14,
+      "raw_tokens": 2808,
+      "packed_tokens": 2808,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 16,
+      "raw_tokens": 2850,
+      "packed_tokens": 2850,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 18,
+      "raw_tokens": 3454,
+      "packed_tokens": 3454,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 20,
+      "raw_tokens": 3496,
+      "packed_tokens": 3496,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 22,
+      "raw_tokens": 3541,
+      "packed_tokens": 3541,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 24,
+      "raw_tokens": 3583,
+      "packed_tokens": 3583,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-filter",
+      "messages": 26,
+      "raw_tokens": 3987,
+      "packed_tokens": 3987,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 2,
+      "raw_tokens": 258,
+      "packed_tokens": 258,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 4,
+      "raw_tokens": 1473,
+      "packed_tokens": 1473,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 6,
+      "raw_tokens": 2273,
+      "packed_tokens": 2273,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 8,
+      "raw_tokens": 2584,
+      "packed_tokens": 2584,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 10,
+      "raw_tokens": 3531,
+      "packed_tokens": 3531,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 12,
+      "raw_tokens": 3680,
+      "packed_tokens": 3680,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 14,
+      "raw_tokens": 4428,
+      "packed_tokens": 4428,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 16,
+      "raw_tokens": 5310,
+      "packed_tokens": 5310,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 18,
+      "raw_tokens": 6667,
+      "packed_tokens": 6667,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 20,
+      "raw_tokens": 7410,
+      "packed_tokens": 5426,
+      "dropped_rounds": 2
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "messages": 22,
+      "raw_tokens": 8240,
+      "packed_tokens": 5945,
+      "dropped_rounds": 3
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "messages": 2,
+      "raw_tokens": 252,
+      "packed_tokens": 252,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "messages": 4,
+      "raw_tokens": 341,
+      "packed_tokens": 341,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "messages": 6,
+      "raw_tokens": 422,
+      "packed_tokens": 422,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "messages": 8,
+      "raw_tokens": 479,
+      "packed_tokens": 479,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 2,
+      "raw_tokens": 265,
+      "packed_tokens": 265,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 4,
+      "raw_tokens": 360,
+      "packed_tokens": 360,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 6,
+      "raw_tokens": 440,
+      "packed_tokens": 440,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 8,
+      "raw_tokens": 1363,
+      "packed_tokens": 1363,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 10,
+      "raw_tokens": 2226,
+      "packed_tokens": 2226,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 12,
+      "raw_tokens": 2876,
+      "packed_tokens": 2876,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 14,
+      "raw_tokens": 3464,
+      "packed_tokens": 3464,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 16,
+      "raw_tokens": 4077,
+      "packed_tokens": 4077,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 18,
+      "raw_tokens": 4722,
+      "packed_tokens": 4722,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 20,
+      "raw_tokens": 5568,
+      "packed_tokens": 5568,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 22,
+      "raw_tokens": 6138,
+      "packed_tokens": 6138,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 24,
+      "raw_tokens": 6800,
+      "packed_tokens": 6800,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "messages": 26,
+      "raw_tokens": 7438,
+      "packed_tokens": 5508,
+      "dropped_rounds": 4
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 2,
+      "raw_tokens": 251,
+      "packed_tokens": 251,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 4,
+      "raw_tokens": 298,
+      "packed_tokens": 298,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 6,
+      "raw_tokens": 917,
+      "packed_tokens": 917,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 8,
+      "raw_tokens": 1489,
+      "packed_tokens": 1489,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 10,
+      "raw_tokens": 1596,
+      "packed_tokens": 1596,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 12,
+      "raw_tokens": 2150,
+      "packed_tokens": 2150,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 14,
+      "raw_tokens": 2252,
+      "packed_tokens": 2252,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 16,
+      "raw_tokens": 2358,
+      "packed_tokens": 2358,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 18,
+      "raw_tokens": 3364,
+      "packed_tokens": 3364,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 20,
+      "raw_tokens": 3670,
+      "packed_tokens": 3670,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 22,
+      "raw_tokens": 3976,
+      "packed_tokens": 3976,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 24,
+      "raw_tokens": 4282,
+      "packed_tokens": 4282,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "messages": 26,
+      "raw_tokens": 4588,
+      "packed_tokens": 4588,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "messages": 2,
+      "raw_tokens": 255,
+      "packed_tokens": 255,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "messages": 4,
+      "raw_tokens": 298,
+      "packed_tokens": 298,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "messages": 6,
+      "raw_tokens": 365,
+      "packed_tokens": 365,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "messages": 8,
+      "raw_tokens": 415,
+      "packed_tokens": 415,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-comparator",
+      "messages": 2,
+      "raw_tokens": 240,
+      "packed_tokens": 240,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-comparator",
+      "messages": 4,
+      "raw_tokens": 330,
+      "packed_tokens": 330,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-comparator",
+      "messages": 6,
+      "raw_tokens": 407,
+      "packed_tokens": 407,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-comparator",
+      "messages": 8,
+      "raw_tokens": 500,
+      "packed_tokens": 500,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "messages": 2,
+      "raw_tokens": 243,
+      "packed_tokens": 243,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "messages": 4,
+      "raw_tokens": 334,
+      "packed_tokens": 334,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "messages": 6,
+      "raw_tokens": 412,
+      "packed_tokens": 412,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "messages": 8,
+      "raw_tokens": 506,
+      "packed_tokens": 506,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 2,
+      "raw_tokens": 240,
+      "packed_tokens": 240,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 4,
+      "raw_tokens": 1345,
+      "packed_tokens": 1345,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 6,
+      "raw_tokens": 2207,
+      "packed_tokens": 2207,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 8,
+      "raw_tokens": 3389,
+      "packed_tokens": 3389,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 10,
+      "raw_tokens": 4382,
+      "packed_tokens": 4382,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 12,
+      "raw_tokens": 5278,
+      "packed_tokens": 5278,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 14,
+      "raw_tokens": 6204,
+      "packed_tokens": 6204,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 16,
+      "raw_tokens": 6567,
+      "packed_tokens": 6567,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 18,
+      "raw_tokens": 6788,
+      "packed_tokens": 6788,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 20,
+      "raw_tokens": 7098,
+      "packed_tokens": 7098,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 22,
+      "raw_tokens": 8053,
+      "packed_tokens": 6117,
+      "dropped_rounds": 2
+    },
+    {
+      "id": "new-json-key-order",
+      "messages": 24,
+      "raw_tokens": 8346,
+      "packed_tokens": 5228,
+      "dropped_rounds": 3
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 2,
+      "raw_tokens": 242,
+      "packed_tokens": 242,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 4,
+      "raw_tokens": 1339,
+      "packed_tokens": 1339,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 6,
+      "raw_tokens": 1911,
+      "packed_tokens": 1911,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 8,
+      "raw_tokens": 2818,
+      "packed_tokens": 2818,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 10,
+      "raw_tokens": 3703,
+      "packed_tokens": 3703,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 12,
+      "raw_tokens": 3857,
+      "packed_tokens": 3857,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 14,
+      "raw_tokens": 3993,
+      "packed_tokens": 3993,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-nonfinite",
+      "messages": 16,
+      "raw_tokens": 4087,
+      "packed_tokens": 4087,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 2,
+      "raw_tokens": 238,
+      "packed_tokens": 238,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 4,
+      "raw_tokens": 1324,
+      "packed_tokens": 1324,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 6,
+      "raw_tokens": 1599,
+      "packed_tokens": 1599,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 8,
+      "raw_tokens": 1858,
+      "packed_tokens": 1858,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 10,
+      "raw_tokens": 1950,
+      "packed_tokens": 1950,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 12,
+      "raw_tokens": 2091,
+      "packed_tokens": 2091,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 14,
+      "raw_tokens": 2275,
+      "packed_tokens": 2275,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-to-json",
+      "messages": 16,
+      "raw_tokens": 2374,
+      "packed_tokens": 2374,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 2,
+      "raw_tokens": 236,
+      "packed_tokens": 236,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 4,
+      "raw_tokens": 1341,
+      "packed_tokens": 1341,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 6,
+      "raw_tokens": 1939,
+      "packed_tokens": 1939,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 8,
+      "raw_tokens": 2922,
+      "packed_tokens": 2922,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 10,
+      "raw_tokens": 3397,
+      "packed_tokens": 3397,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 12,
+      "raw_tokens": 3737,
+      "packed_tokens": 3737,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 14,
+      "raw_tokens": 4255,
+      "packed_tokens": 4255,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 16,
+      "raw_tokens": 4671,
+      "packed_tokens": 4671,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 18,
+      "raw_tokens": 4798,
+      "packed_tokens": 4798,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 20,
+      "raw_tokens": 5097,
+      "packed_tokens": 5097,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 22,
+      "raw_tokens": 5201,
+      "packed_tokens": 5201,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 24,
+      "raw_tokens": 5441,
+      "packed_tokens": 5441,
+      "dropped_rounds": 0
+    },
+    {
+      "id": "new-json-undefined",
+      "messages": 26,
+      "raw_tokens": 5704,
+      "packed_tokens": 5704,
+      "dropped_rounds": 0
+    }
+  ]
+}

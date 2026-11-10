@@ -223,6 +223,10 @@ def render(root):
     plt.close(fig)
     write_json(root/'report-environment.json',{'python':platform.python_version(),'matplotlib':matplotlib.__version__,'report_sha256':sha256(Path(__file__))})
     table='\n'.join(f"| {a} | {summary['totals'][a]['passed']['historical']}/12 | {summary['totals'][a]['passed']['fresh']}/12 | {summary['totals'][a]['format_invalid_calls']}/{summary['totals'][a]['successful_generation_calls']} | {summary['totals'][a]['context_limit_requests']} | {summary['totals'][a]['compacted_generation_calls']} | {summary['totals'][a]['task_controller_seconds']/60:.1f} |" for a in ARMS)
+    repository_table='\n'.join(f"| {repo} | {v['split']} | {v['tasks']} | "+' | '.join(str(v['passed'][a]) for a in ARMS)+' |' for repo,v in summary['per_repository'].items())
+    contrast_table='\n'.join(f"| {name} | {len(d['historical']['improved'])} / {len(d['historical']['regressed'])} | {len(d['fresh']['improved'])} / {len(d['fresh']['regressed'])} | {d['fresh']['net_gain']:+d} | {100*(d['cost']['task_controller_time_ratio']-1):+.1f}% |" for name,d in summary['contrasts'].items())
+    historical_regressions={arm:summary['contrasts'][arm+'-vs-baseline']['historical']['regressed'] for arm in ARMS[1:]}
+    regressions_text='; '.join(arm+': '+(', '.join(ids) if ids else 'none') for arm,ids in historical_regressions.items())
     promoted=[a for a,v in summary['promotion'].items() if v['advance_to_replication']]
     conclusion=('Eligible for independent replication: '+', '.join(promoted)+'.') if promoted else 'No policy passes the preregistered replication gate.'
     (root/'README.md').write_text(f'''# 015 · Tool format and bounded context
@@ -238,6 +242,20 @@ The same unchanged Qwen27B base ran all four arms. No weights were updated. The 
 ![Paired outcomes and cost](comparison.png)
 
 Each scope has 12 tasks. Historical means the already observed 014 holdout. Fresh means 6 ItsDangerous and 6 qs constructed defects, with clean/broken/restored controls. Tests are visible; these are not historical issues or SWE-bench. Unknown pretraining exposure, two small repository clusters and one deterministic decode limit generalization. Every individual improved/regressed ID, five predeclared contrasts and the factorial interaction are retained in [summary.json](summary.json). All contrasts are reported; no post-hoc best-policy selection is hidden.
+
+## Paired differences and repository coverage
+
+| Contrast | Historical improvements / regressions | Fresh improvements / regressions | Fresh net gain | Task controller time change |
+| --- | --- | --- | --- | --- |
+{contrast_table}
+
+Historical regressions against baseline: {regressions_text}. A higher total does not erase an individual regression. The frozen gate requires at least two net fresh gains, no fresh regression and no historical regression.
+
+| Repository | Role | Tasks | baseline | format | context | combined |
+| --- | --- | --- | --- | --- | --- | --- |
+{repository_table}
+
+Only {summary['totals']['baseline']['context_limit_requests']} baseline and {summary['totals']['format']['context_limit_requests']} format requests exceeded the input limit; bounded-history variants recorded {summary['totals']['context']['context_limit_requests']} and {summary['totals']['combined']['context_limit_requests']}. Context packing was used in {summary['totals']['context']['compacted_generation_calls']} context and {summary['totals']['combined']['compacted_generation_calls']} combined generation requests. This limited exposure does not establish long-horizon robustness.
 
 ## What changed
 

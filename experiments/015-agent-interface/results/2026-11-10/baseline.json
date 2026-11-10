@@ -1,0 +1,5279 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T01:45:32.014480+00:00",
+  "complete": true,
+  "identity": {
+    "tasks_sha256": "b4d5000d4ce2080e8ec921c6b48fd0dd3b0b5198c1ac0474483e342fd57de2dd",
+    "admission_sha256": "95fa3d7ef57480f97ea90651013937241c3abb47abcd7872369d966abc787736",
+    "protocol_sha256": "94af8d0f9b245cd6b0025bd2f919b8eecb0ea7fa93b7d77504ce58800e3fb267",
+    "ids": [
+      "new-jmes-filter",
+      "new-jmes-multiselect",
+      "new-jmes-sort-expression",
+      "new-jmes-raw-string",
+      "new-jmes-index-slice",
+      "new-jmes-pipe-map",
+      "new-json-key-order",
+      "new-json-comparator",
+      "new-json-undefined",
+      "new-json-to-json",
+      "new-json-nonfinite",
+      "new-json-cycle-reuse",
+      "fresh-signed-base64",
+      "fresh-signed-key-derivation",
+      "fresh-signed-fallbacks",
+      "fresh-signed-serialize",
+      "fresh-signed-url-compression",
+      "fresh-signed-timestamp",
+      "fresh-query-decode",
+      "fresh-query-sparse",
+      "fresh-query-null",
+      "fresh-query-combine",
+      "fresh-query-plain-objects",
+      "fresh-query-sort"
+    ],
+    "variant": "baseline",
+    "policy": {
+      "format": "legacy",
+      "context": "full"
+    },
+    "source_files": {
+      "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+      "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+      "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+      "one_gpu_lm/common/agent_policy.py": "eb55380d330190fd3e26dd2d0326b3e02b182d97afc16f20e0965b8efe6d50b2",
+      "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+      "one_gpu_lm/common/source.py": "83a791d56a95f72fc512e82ab3af8e2a219f1597c05f7370e04a6cb0018ee16e",
+      "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+      "one_gpu_lm/evaluation/agent.py": "b8e9591847c72fb165cba3af775f4434733c653fe3fdfae27a54746e3132dd57",
+      "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+      "one_gpu_lm/evaluation/campaign.py": "cd05407cb2dd38592bbf6d21aa7059bb0b6cc277c22d9ca5c22529e30546e041",
+      "one_gpu_lm/evaluation/environment.py": "938bcac1e9696c8920b758c6f943f843e2b901682ac777a608a202ef32d5791f",
+      "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+      "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+      "one_gpu_lm/evaluation/tasks.py": "cb298493399728008b5b51eeabe5177bd07618bb4fc307aaafc55782f3b90542",
+      "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+      "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+      "one_gpu_lm/models/hf_runtime.py": "ba49fc8b9fd0680c6db892ec268741915fcbf0e4ed220cd448cab9675383b3d0",
+      "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+      "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+      "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 32.09343647956848,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "7e64d29fe91fefb20e82660b34c37607ea2a8e885bfc721e92d56f45eb7789cb"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 269,
+      "tool_calls": 6,
+      "tool_seconds": 0.22984515904681757,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 16,
+          "seconds": 2.986890575994039,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 258,
+            "packed_input_tokens": 258,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.06981234499835409,
+          "peak_allocated_bytes": 54978946048,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 301,
+          "generated_tokens": 25,
+          "seconds": 2.0671547550009564,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 301,
+            "packed_input_tokens": 301,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012782819976564497,
+          "peak_allocated_bytes": 55002035200,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1481,
+          "generated_tokens": 26,
+          "seconds": 2.295290718000615,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1481,
+            "packed_input_tokens": 1481,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.00349103900953196,
+          "peak_allocated_bytes": 55301948416,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1535,
+          "generated_tokens": 26,
+          "seconds": 2.3041533019859344,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1535,
+            "packed_input_tokens": 1535,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.003313405002700165,
+          "peak_allocated_bytes": 55313902080,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2187,
+          "generated_tokens": 14,
+          "seconds": 1.4617128960089758,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2187,
+            "packed_input_tokens": 2187,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004509696009336039,
+          "peak_allocated_bytes": 55491389440,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2229,
+          "generated_tokens": 27,
+          "seconds": 2.514368820004165,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2229,
+            "packed_input_tokens": 2229,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004297819978091866,
+          "peak_allocated_bytes": 55503288320,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2808,
+          "generated_tokens": 14,
+          "seconds": 1.5672704750031698,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2808,
+            "packed_input_tokens": 2808,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.005628893995890394,
+          "peak_allocated_bytes": 55660921856,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2850,
+          "generated_tokens": 27,
+          "seconds": 2.642394536989741,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2850,
+            "packed_input_tokens": 2850,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005235774005996063,
+          "peak_allocated_bytes": 55670123520,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3454,
+          "generated_tokens": 14,
+          "seconds": 1.7007928249950055,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3454,
+            "packed_input_tokens": 3454,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.0066509610041975975,
+          "peak_allocated_bytes": 55838205440,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3496,
+          "generated_tokens": 27,
+          "seconds": 2.7733268279989716,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3496,
+            "packed_input_tokens": 3496,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006256380002014339,
+          "peak_allocated_bytes": 55849542144,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3541,
+          "generated_tokens": 14,
+          "seconds": 1.7287963980052155,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3541,
+            "packed_input_tokens": 3541,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.0063097020029090345,
+          "peak_allocated_bytes": 55857454592,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3583,
+          "generated_tokens": 39,
+          "seconds": 3.7486607159953564,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3583,
+            "packed_input_tokens": 3583,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.006474406021879986,
+          "peak_allocated_bytes": 55868363264,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 14.889899253845215,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/parser.py": "fcb10342d0c1ddb2cb34a033ecb4829634db722a65afc6607a6d5b922879f84b"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 143,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 252,
+          "generated_tokens": 61,
+          "seconds": 5.0338282030134,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 252,
+            "packed_input_tokens": 252,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.00186741299694404,
+          "peak_allocated_bytes": 54975131136,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 341,
+          "generated_tokens": 53,
+          "seconds": 4.4210764989838935,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 341,
+            "packed_input_tokens": 341,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001158322993433103,
+          "peak_allocated_bytes": 55017458176,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 422,
+          "generated_tokens": 29,
+          "seconds": 2.4250555049802642,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 422,
+            "packed_input_tokens": 422,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0013615080097224563,
+          "peak_allocated_bytes": 55024062976,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 9.079095602035522,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "8d45977f36271654fcc520363d0d81a0c69c37098f8a069c592abc407cb92de9"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 77,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 255,
+          "generated_tokens": 16,
+          "seconds": 1.3978956190112513,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 255,
+            "packed_input_tokens": 255,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0020054580236319453,
+          "peak_allocated_bytes": 54976905728,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 39,
+          "seconds": 3.3051574649871327,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 298,
+            "packed_input_tokens": 298,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012310850142966956,
+          "peak_allocated_bytes": 54999278080,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 365,
+          "generated_tokens": 22,
+          "seconds": 1.8199574059981387,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 365,
+            "packed_input_tokens": 365,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0013933400041423738,
+          "peak_allocated_bytes": 55008049664,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 130.9194040298462,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/lexer.py": "96e1c3e57a239632163617eb1fc9a88b664cd81c27ad70bba3835e4f7abbe288"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1515,
+      "tool_calls": 11,
+      "tool_seconds": 0.4234270979941357,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 251,
+          "generated_tokens": 20,
+          "seconds": 1.7060227900219616,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 251,
+            "packed_input_tokens": 251,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0018544039921835065,
+          "peak_allocated_bytes": 54974721536,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 298,
+          "generated_tokens": 22,
+          "seconds": 1.8216350179864094,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 298,
+            "packed_input_tokens": 298,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0011230630043428391,
+          "peak_allocated_bytes": 54999278080,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 917,
+          "generated_tokens": 24,
+          "seconds": 2.048482726997463,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 917,
+            "packed_input_tokens": 917,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.002314217999810353,
+          "peak_allocated_bytes": 55158431744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1489,
+          "generated_tokens": 25,
+          "seconds": 2.213459733000491,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1489,
+            "packed_input_tokens": 1489,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0037520799960475415,
+          "peak_allocated_bytes": 55305343488,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1596,
+          "generated_tokens": 73,
+          "seconds": 6.129254156985553,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1596,
+            "packed_input_tokens": 1596,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.003445420996285975,
+          "peak_allocated_bytes": 55334992896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2150,
+          "generated_tokens": 61,
+          "seconds": 5.272195178986294,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2150,
+            "packed_input_tokens": 2150,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004629175993613899,
+          "peak_allocated_bytes": 55480892416,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2252,
+          "generated_tokens": 41,
+          "seconds": 3.6535112530109473,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2252,
+            "packed_input_tokens": 2252,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.0047313190007116646,
+          "peak_allocated_bytes": 55509660160,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2358,
+          "generated_tokens": 249,
+          "seconds": 20.513492397993105,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2358,
+            "packed_input_tokens": 2358,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.00514433000353165,
+          "peak_allocated_bytes": 55539083776,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3364,
+          "generated_tokens": 250,
+          "seconds": 20.80314969801111,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3364,
+            "packed_input_tokens": 3364,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006125448999227956,
+          "peak_allocated_bytes": 55815447552,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3670,
+          "generated_tokens": 250,
+          "seconds": 20.979950381995877,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3670,
+            "packed_input_tokens": 3670,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006430888985050842,
+          "peak_allocated_bytes": 55890575360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3976,
+          "generated_tokens": 250,
+          "seconds": 20.953602606983623,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3976,
+            "packed_input_tokens": 3976,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.007180341985076666,
+          "peak_allocated_bytes": 55972514304,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4282,
+          "generated_tokens": 250,
+          "seconds": 20.992755240004044,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4282,
+            "packed_input_tokens": 4282,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.007201563013950363,
+          "peak_allocated_bytes": 56051247616,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [
+        {
+          "error": "context_limit",
+          "input_tokens": 8266,
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 8266,
+            "packed_input_tokens": 8266,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.01270184401073493
+        }
+      ],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 68.92123126983643,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/visitor.py": "5d3ade9498fe2fbf61e5fe7795987c9516e9495e82837b8f36ddd9ffbc6e0b6d"
+      },
+      "ignored_new_files": [],
+      "calls": 11,
+      "generated_tokens": 701,
+      "tool_calls": 10,
+      "tool_seconds": 0.38551089802058414,
+      "exit_status": "RuntimeError",
+      "generations": [
+        {
+          "input_tokens": 258,
+          "generated_tokens": 60,
+          "seconds": 4.9176154589804355,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 258,
+            "packed_input_tokens": 258,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0020476019999478012,
+          "peak_allocated_bytes": 54976062464,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1473,
+          "generated_tokens": 129,
+          "seconds": 10.618164197017904,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1473,
+            "packed_input_tokens": 1473,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0029506680148188025,
+          "peak_allocated_bytes": 55300996608,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2274,
+          "generated_tokens": 62,
+          "seconds": 5.359979674016358,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2274,
+            "packed_input_tokens": 2274,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004099173995200545,
+          "peak_allocated_bytes": 55515809280,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2620,
+          "generated_tokens": 98,
+          "seconds": 8.360332948010182,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2620,
+            "packed_input_tokens": 2620,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004560476983897388,
+          "peak_allocated_bytes": 55607426048,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3568,
+          "generated_tokens": 85,
+          "seconds": 7.5953410920046736,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3568,
+            "packed_input_tokens": 3568,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0061008740158285946,
+          "peak_allocated_bytes": 55865146880,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3727,
+          "generated_tokens": 58,
+          "seconds": 5.313996218988905,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3727,
+            "packed_input_tokens": 3727,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006363631982821971,
+          "peak_allocated_bytes": 55905105920,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4498,
+          "generated_tokens": 47,
+          "seconds": 4.651606254017679,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4498,
+            "packed_input_tokens": 4498,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.007440165005391464,
+          "peak_allocated_bytes": 56111039488,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5347,
+          "generated_tokens": 36,
+          "seconds": 3.9360865770140663,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5347,
+            "packed_input_tokens": 5347,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.008741504017962143,
+          "peak_allocated_bytes": 56342722048,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6693,
+          "generated_tokens": 48,
+          "seconds": 5.258421070000622,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6693,
+            "packed_input_tokens": 6693,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.010580010013654828,
+          "peak_allocated_bytes": 56710800384,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7436,
+          "generated_tokens": 78,
+          "seconds": 7.8635513379995245,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7436,
+            "packed_input_tokens": 7436,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.01123569899937138,
+          "peak_allocated_bytes": 56904657408,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 49.595101833343506,
+      "modified_source_files": [],
+      "source_sha256": {
+        "jmespath/functions.py": "bc11b82dba4d6aa9496ab944bf703eba8930676e8220353ddc93ae9308187913",
+        "jmespath/visitor.py": "ee107fc6c1a5605abb520247a8b6a296a412f10649db937ad010f7d80d02d814"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 492,
+      "tool_calls": 10,
+      "tool_seconds": 0.38566716903005727,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 265,
+          "generated_tokens": 67,
+          "seconds": 5.493268883990822,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 265,
+            "packed_input_tokens": 265,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019032089912798256,
+          "peak_allocated_bytes": 54980264448,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 360,
+          "generated_tokens": 52,
+          "seconds": 4.246413711021887,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 360,
+            "packed_input_tokens": 360,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012255779874976724,
+          "peak_allocated_bytes": 55007734784,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 440,
+          "generated_tokens": 54,
+          "seconds": 4.404147480992833,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 440,
+            "packed_input_tokens": 440,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0013963630190119147,
+          "peak_allocated_bytes": 55027414528,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1363,
+          "generated_tokens": 35,
+          "seconds": 3.0005016660143156,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1363,
+            "packed_input_tokens": 1363,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0027112830139230937,
+          "peak_allocated_bytes": 55271224832,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2226,
+          "generated_tokens": 42,
+          "seconds": 3.736710882978514,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2226,
+            "packed_input_tokens": 2226,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004041784995933995,
+          "peak_allocated_bytes": 55502885888,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2876,
+          "generated_tokens": 31,
+          "seconds": 2.9752829039935023,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2876,
+            "packed_input_tokens": 2876,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0053245639719534665,
+          "peak_allocated_bytes": 55675466752,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3489,
+          "generated_tokens": 47,
+          "seconds": 4.397358078014804,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3489,
+            "packed_input_tokens": 3489,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006149950000690296,
+          "peak_allocated_bytes": 55848245248,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4134,
+          "generated_tokens": 46,
+          "seconds": 4.472049063013401,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4134,
+            "packed_input_tokens": 4134,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.0072247019852511585,
+          "peak_allocated_bytes": 56020237824,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4358,
+          "generated_tokens": 31,
+          "seconds": 3.317670087009901,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4358,
+            "packed_input_tokens": 4358,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007824600994354114,
+          "peak_allocated_bytes": 56073612800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4583,
+          "generated_tokens": 28,
+          "seconds": 3.116580750007415,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4583,
+            "packed_input_tokens": 4583,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.008224242978030816,
+          "peak_allocated_bytes": 56131110912,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5429,
+          "generated_tokens": 29,
+          "seconds": 3.3985677839955315,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5429,
+            "packed_input_tokens": 5429,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.009288795001339167,
+          "peak_allocated_bytes": 56362753024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5999,
+          "generated_tokens": 30,
+          "seconds": 3.5850634179951157,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5999,
+            "packed_input_tokens": 5999,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.010167372995056212,
+          "peak_allocated_bytes": 56515880448,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 88.96536636352539,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "c97955fb7bc3863e7f95ab95264072492fa20fd1556019f09442b9c96dc6876f"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 983,
+      "tool_calls": 9,
+      "tool_seconds": 0.6738167330040596,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 67,
+          "seconds": 5.425045332987793,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001261639001313597,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1345,
+          "generated_tokens": 68,
+          "seconds": 5.6288145250000525,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1345,
+            "packed_input_tokens": 1345,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0027502250159159303,
+          "peak_allocated_bytes": 55268178432,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2207,
+          "generated_tokens": 77,
+          "seconds": 6.524627150007291,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2207,
+            "packed_input_tokens": 2207,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0040127449901774526,
+          "peak_allocated_bytes": 55497327616,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3389,
+          "generated_tokens": 68,
+          "seconds": 6.019588470022427,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3389,
+            "packed_input_tokens": 3389,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.00660739402519539,
+          "peak_allocated_bytes": 55822981120,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4385,
+          "generated_tokens": 124,
+          "seconds": 11.32864783599507,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4385,
+            "packed_input_tokens": 4385,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0071483700012322515,
+          "peak_allocated_bytes": 56078203904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5335,
+          "generated_tokens": 195,
+          "seconds": 17.087283412984107,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5335,
+            "packed_input_tokens": 5335,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.008961726998677477,
+          "peak_allocated_bytes": 56338058240,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5679,
+          "generated_tokens": 64,
+          "seconds": 6.347864883980947,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5679,
+            "packed_input_tokens": 5679,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.00890950599568896,
+          "peak_allocated_bytes": 56426705920,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5900,
+          "generated_tokens": 141,
+          "seconds": 13.22028104099445,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5900,
+            "packed_input_tokens": 5900,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.009351188986329362,
+          "peak_allocated_bytes": 56491282432,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6122,
+          "generated_tokens": 179,
+          "seconds": 16.406522839009995,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6122,
+            "packed_input_tokens": 6122,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.009603307000361383,
+          "peak_allocated_bytes": 56544248832,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 14.566468000411987,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 176,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 62,
+          "seconds": 5.0871135769994,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0011697059962898493,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 330,
+          "generated_tokens": 49,
+          "seconds": 4.018923581024865,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 330,
+            "packed_input_tokens": 330,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001233357994351536,
+          "peak_allocated_bytes": 55012859904,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 407,
+          "generated_tokens": 65,
+          "seconds": 5.299832853022963,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 407,
+            "packed_input_tokens": 407,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014078539970796555,
+          "peak_allocated_bytes": 55015079424,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 98.15458297729492,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "64011739f21e0ceae2009f84ba9b16bae12f1bab336ddc027160a103e42eed57"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1107,
+      "tool_calls": 12,
+      "tool_seconds": 0.8214122200151905,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 236,
+          "generated_tokens": 67,
+          "seconds": 5.454342743003508,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 236,
+            "packed_input_tokens": 236,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0014366350078489631,
+          "peak_allocated_bytes": 54967073280,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1341,
+          "generated_tokens": 62,
+          "seconds": 5.144601578009315,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1341,
+            "packed_input_tokens": 1341,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.003483528009383008,
+          "peak_allocated_bytes": 55264477184,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1939,
+          "generated_tokens": 61,
+          "seconds": 5.187995782005601,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1939,
+            "packed_input_tokens": 1939,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0036969050124753267,
+          "peak_allocated_bytes": 55435316224,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2922,
+          "generated_tokens": 43,
+          "seconds": 3.9445062989834696,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2922,
+            "packed_input_tokens": 2922,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005396037013269961,
+          "peak_allocated_bytes": 55686182912,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3397,
+          "generated_tokens": 59,
+          "seconds": 5.33075968499179,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3397,
+            "packed_input_tokens": 3397,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005905252008233219,
+          "peak_allocated_bytes": 55824281088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3737,
+          "generated_tokens": 63,
+          "seconds": 5.716693522001151,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3737,
+            "packed_input_tokens": 3737,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0065434630087111145,
+          "peak_allocated_bytes": 55906677248,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4255,
+          "generated_tokens": 54,
+          "seconds": 5.13752935899538,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4255,
+            "packed_input_tokens": 4255,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.007543213985627517,
+          "peak_allocated_bytes": 56046046208,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4671,
+          "generated_tokens": 71,
+          "seconds": 6.5871486400137655,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4671,
+            "packed_input_tokens": 4671,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.007546153996372595,
+          "peak_allocated_bytes": 56156127232,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4798,
+          "generated_tokens": 208,
+          "seconds": 17.648838433000492,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4798,
+            "packed_input_tokens": 4798,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007815092016244307,
+          "peak_allocated_bytes": 56192091136,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5109,
+          "generated_tokens": 57,
+          "seconds": 5.571972328994889,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5109,
+            "packed_input_tokens": 5109,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.008710881986189634,
+          "peak_allocated_bytes": 56278722048,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5213,
+          "generated_tokens": 173,
+          "seconds": 14.950843136000913,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5213,
+            "packed_input_tokens": 5213,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.008671596006024629,
+          "peak_allocated_bytes": 56311512576,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5476,
+          "generated_tokens": 189,
+          "seconds": 16.297511558019323,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5476,
+            "packed_input_tokens": 5476,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.009127047989750281,
+          "peak_allocated_bytes": 56374454784,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 39.16971755027771,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 454,
+      "tool_calls": 7,
+      "tool_seconds": 0.34974480501841754,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 238,
+          "generated_tokens": 57,
+          "seconds": 4.696743183012586,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 238,
+            "packed_input_tokens": 238,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0011993279913440347,
+          "peak_allocated_bytes": 54967305728,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1324,
+          "generated_tokens": 67,
+          "seconds": 5.613809662987478,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1324,
+            "packed_input_tokens": 1324,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.002818996988935396,
+          "peak_allocated_bytes": 55261376512,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1599,
+          "generated_tokens": 34,
+          "seconds": 2.9891482579987496,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1599,
+            "packed_input_tokens": 1599,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0032558669918216765,
+          "peak_allocated_bytes": 55335745536,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1858,
+          "generated_tokens": 74,
+          "seconds": 6.274029318999965,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1858,
+            "packed_input_tokens": 1858,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.003712999023264274,
+          "peak_allocated_bytes": 55421499904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1950,
+          "generated_tokens": 86,
+          "seconds": 7.282227925024927,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1950,
+            "packed_input_tokens": 1950,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.003849125001579523,
+          "peak_allocated_bytes": 55438390272,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2091,
+          "generated_tokens": 49,
+          "seconds": 4.304499419988133,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2091,
+            "packed_input_tokens": 2091,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004119885998079553,
+          "peak_allocated_bytes": 55472203776,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2396,
+          "generated_tokens": 87,
+          "seconds": 7.430541375011671,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2396,
+            "packed_input_tokens": 2396,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.004992988018784672,
+          "peak_allocated_bytes": 55546622464,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 40.029003858566284,
+      "modified_source_files": [
+        "index.js"
+      ],
+      "source_sha256": {
+        "index.js": "aea00ec9611a0d82c9b9d4ba7bbd8288dc21a752392a4001ab24074d6b6fa01c"
+      },
+      "ignored_new_files": [],
+      "calls": 7,
+      "generated_tokens": 435,
+      "tool_calls": 7,
+      "tool_seconds": 0.4288322180218529,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 37,
+          "seconds": 3.204028823005501,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001111910998588428,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1339,
+          "generated_tokens": 43,
+          "seconds": 3.776910636021057,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1339,
+            "packed_input_tokens": 1339,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.003181186009896919,
+          "peak_allocated_bytes": 55264136192,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1911,
+          "generated_tokens": 42,
+          "seconds": 3.825713327008998,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1911,
+            "packed_input_tokens": 1911,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0037568919942714274,
+          "peak_allocated_bytes": 55431725056,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2818,
+          "generated_tokens": 77,
+          "seconds": 6.932292791985674,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2818,
+            "packed_input_tokens": 2818,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004864540998823941,
+          "peak_allocated_bytes": 55663752192,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3703,
+          "generated_tokens": 118,
+          "seconds": 10.398663246014621,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3703,
+            "packed_input_tokens": 3703,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0060867060092277825,
+          "peak_allocated_bytes": 55897520128,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3857,
+          "generated_tokens": 45,
+          "seconds": 4.411662825994426,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3857,
+            "packed_input_tokens": 3857,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006332035991363227,
+          "peak_allocated_bytes": 55939219456,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3993,
+          "generated_tokens": 73,
+          "seconds": 6.807519007998053,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3993,
+            "packed_input_tokens": 3993,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.007379821996437386,
+          "peak_allocated_bytes": 55975184896,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 15.270635604858398,
+      "modified_source_files": [],
+      "source_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 179,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 63,
+          "seconds": 5.347264536976581,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0012012119987048209,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 334,
+          "generated_tokens": 50,
+          "seconds": 4.213460564991692,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 334,
+            "packed_input_tokens": 334,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001220723002916202,
+          "peak_allocated_bytes": 55010843136,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 412,
+          "generated_tokens": 66,
+          "seconds": 5.549916554009542,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 412,
+            "packed_input_tokens": 412,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0014417130150832236,
+          "peak_allocated_bytes": 55021225984,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-base64",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-base64",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 71.78048205375671,
+      "modified_source_files": [
+        "src/itsdangerous/encoding.py"
+      ],
+      "source_sha256": {
+        "src/itsdangerous/encoding.py": "bf5bcda3d4e9830dfaa5476c8fe59b276fb448a4c28664fc475f1901b7a1fc68"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 799,
+      "tool_calls": 10,
+      "tool_seconds": 1.9018659720022697,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 36,
+          "seconds": 3.000449849991128,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0014862429816275835,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 652,
+          "generated_tokens": 45,
+          "seconds": 3.728686034999555,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 652,
+            "packed_input_tokens": 652,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001954853010829538,
+          "peak_allocated_bytes": 55091416064,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 839,
+          "generated_tokens": 29,
+          "seconds": 2.450195048004389,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 839,
+            "packed_input_tokens": 839,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0021470109932124615,
+          "peak_allocated_bytes": 55140481024,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1178,
+          "generated_tokens": 56,
+          "seconds": 4.713573893008288,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1178,
+            "packed_input_tokens": 1178,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0027976679848507047,
+          "peak_allocated_bytes": 55226860032,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1861,
+          "generated_tokens": 50,
+          "seconds": 4.346633772016503,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1861,
+            "packed_input_tokens": 1861,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004923878004774451,
+          "peak_allocated_bytes": 55421834752,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2197,
+          "generated_tokens": 45,
+          "seconds": 4.024148305004928,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2197,
+            "packed_input_tokens": 2197,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.00455949199385941,
+          "peak_allocated_bytes": 55492677632,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2418,
+          "generated_tokens": 305,
+          "seconds": 25.367837195983157,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2418,
+            "packed_input_tokens": 2418,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.00528888197732158,
+          "peak_allocated_bytes": 55556662784,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2743,
+          "generated_tokens": 27,
+          "seconds": 2.638058351003565,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2743,
+            "packed_input_tokens": 2743,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005427866009995341,
+          "peak_allocated_bytes": 55642670592,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2845,
+          "generated_tokens": 44,
+          "seconds": 4.082938645995455,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2845,
+            "packed_input_tokens": 2845,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.013020502985455096,
+          "peak_allocated_bytes": 55669215232,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3126,
+          "generated_tokens": 162,
+          "seconds": 13.751245655992534,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3126,
+            "packed_input_tokens": 3126,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006043132016202435,
+          "peak_allocated_bytes": 55743537664,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-key-derivation",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-key-derivation",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 63.94497776031494,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/signer.py": "ce4be6ab31190e8c817b18fed7501eab5f9bd266d01137e1ff66b1a9c1e9589d"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 646,
+      "tool_calls": 12,
+      "tool_seconds": 0.463631098944461,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 57,
+          "seconds": 4.760796448012115,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019977760093752295,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 967,
+          "generated_tokens": 31,
+          "seconds": 2.625134600995807,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 967,
+            "packed_input_tokens": 967,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0021686220134142786,
+          "peak_allocated_bytes": 55174952960,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1751,
+          "generated_tokens": 42,
+          "seconds": 3.6759547470137477,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1751,
+            "packed_input_tokens": 1751,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003620736999437213,
+          "peak_allocated_bytes": 55385783296,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2412,
+          "generated_tokens": 31,
+          "seconds": 2.8698825300089084,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2412,
+            "packed_input_tokens": 2412,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004890404990874231,
+          "peak_allocated_bytes": 55554663936,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3012,
+          "generated_tokens": 89,
+          "seconds": 7.847733592992881,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3012,
+            "packed_input_tokens": 3012,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005840960016939789,
+          "peak_allocated_bytes": 55713295872,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3426,
+          "generated_tokens": 56,
+          "seconds": 5.067566382000223,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3426,
+            "packed_input_tokens": 3426,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.006466134014772251,
+          "peak_allocated_bytes": 55833379328,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3612,
+          "generated_tokens": 62,
+          "seconds": 5.600865945016267,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3612,
+            "packed_input_tokens": 3612,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006707431981340051,
+          "peak_allocated_bytes": 55874073600,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3924,
+          "generated_tokens": 40,
+          "seconds": 3.902276894019451,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3924,
+            "packed_input_tokens": 3924,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.007403038995107636,
+          "peak_allocated_bytes": 55955363328,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4295,
+          "generated_tokens": 49,
+          "seconds": 4.769806669995887,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4295,
+            "packed_input_tokens": 4295,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.007963128999108449,
+          "peak_allocated_bytes": 56055396352,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4362,
+          "generated_tokens": 70,
+          "seconds": 6.4068688210099936,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4362,
+            "packed_input_tokens": 4362,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.008156476978911087,
+          "peak_allocated_bytes": 56074435072,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4510,
+          "generated_tokens": 77,
+          "seconds": 7.0081283890176564,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4510,
+            "packed_input_tokens": 4510,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.008383854990825057,
+          "peak_allocated_bytes": 56113521664,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4611,
+          "generated_tokens": 42,
+          "seconds": 4.236791004019324,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4611,
+            "packed_input_tokens": 4611,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.008602853020420298,
+          "peak_allocated_bytes": 56141507584,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-fallbacks",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-fallbacks",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 11.438435316085815,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/serializer.py": "2e95c8f42181562bc7d8a7211c92e8bae7cf69189d7245da2b4fe9f28d3d1f75"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 91,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 17,
+          "seconds": 1.4811491039872635,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002087067026877776,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 284,
+          "generated_tokens": 37,
+          "seconds": 3.131863335001981,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 284,
+            "packed_input_tokens": 284,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012377059902064502,
+          "peak_allocated_bytes": 54983175168,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 349,
+          "generated_tokens": 37,
+          "seconds": 3.1245878750050906,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 349,
+            "packed_input_tokens": 349,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0013667299936059862,
+          "peak_allocated_bytes": 55003227648,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-serialize",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-serialize",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 57.48100829124451,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/serializer.py": "f4a53ce9dbc6a992aa52da7f877db1691900f829350e553719fb31e88c06bf16"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 562,
+      "tool_calls": 12,
+      "tool_seconds": 0.46232796797994524,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 237,
+          "generated_tokens": 36,
+          "seconds": 2.9838332130166236,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 237,
+            "packed_input_tokens": 237,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002015172998653725,
+          "peak_allocated_bytes": 54967066112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 891,
+          "generated_tokens": 40,
+          "seconds": 3.2816595349868294,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 891,
+            "packed_input_tokens": 891,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0025123519881162792,
+          "peak_allocated_bytes": 55149099520,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1550,
+          "generated_tokens": 41,
+          "seconds": 3.5082667890237644,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1550,
+            "packed_input_tokens": 1550,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0036856550141237676,
+          "peak_allocated_bytes": 55321771008,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2303,
+          "generated_tokens": 41,
+          "seconds": 3.6376678709930275,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2303,
+            "packed_input_tokens": 2303,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004858086991589516,
+          "peak_allocated_bytes": 55520479744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3026,
+          "generated_tokens": 41,
+          "seconds": 3.7845039639796596,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3026,
+            "packed_input_tokens": 3026,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.005990648991428316,
+          "peak_allocated_bytes": 55715809792,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3650,
+          "generated_tokens": 41,
+          "seconds": 3.9240562969935127,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3650,
+            "packed_input_tokens": 3650,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.007322777004446834,
+          "peak_allocated_bytes": 55884812800,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4299,
+          "generated_tokens": 56,
+          "seconds": 5.264190679998137,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4299,
+            "packed_input_tokens": 4299,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008330304000992328,
+          "peak_allocated_bytes": 56056189440,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4870,
+          "generated_tokens": 54,
+          "seconds": 5.258314083010191,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4870,
+            "packed_input_tokens": 4870,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.009214935998898,
+          "peak_allocated_bytes": 56216907264,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4965,
+          "generated_tokens": 42,
+          "seconds": 4.304158516024472,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4965,
+            "packed_input_tokens": 4965,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.009867720014881343,
+          "peak_allocated_bytes": 56241470976,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5559,
+          "generated_tokens": 41,
+          "seconds": 4.363408746983623,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5559,
+            "packed_input_tokens": 5559,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.010243583004921675,
+          "peak_allocated_bytes": 56394309120,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6213,
+          "generated_tokens": 44,
+          "seconds": 4.761783584981458,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6213,
+            "packed_input_tokens": 6213,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.011234058998525143,
+          "peak_allocated_bytes": 56569282048,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6700,
+          "generated_tokens": 85,
+          "seconds": 8.216593090008246,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6700,
+            "packed_input_tokens": 6700,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.01225500600412488,
+          "peak_allocated_bytes": 56711978496,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-url-compression",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-url-compression",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 60.19544982910156,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/itsdangerous/url_safe.py": "ca5cf4d9de914101321c3ea645d7d40db86d50ea13a82128b430eae967924dc9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 617,
+      "tool_calls": 12,
+      "tool_seconds": 0.4612621840497013,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 37,
+          "seconds": 3.195830125012435,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019892810087185353,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 666,
+          "generated_tokens": 43,
+          "seconds": 3.550458866986446,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 666,
+            "packed_input_tokens": 666,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0020334330038167536,
+          "peak_allocated_bytes": 55094989312,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1330,
+          "generated_tokens": 43,
+          "seconds": 3.6782889629830606,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1330,
+            "packed_input_tokens": 1330,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003619790979428217,
+          "peak_allocated_bytes": 55259820032,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2030,
+          "generated_tokens": 66,
+          "seconds": 5.655908676009858,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2030,
+            "packed_input_tokens": 2030,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004377217002911493,
+          "peak_allocated_bytes": 55461051904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2343,
+          "generated_tokens": 31,
+          "seconds": 2.9000888689770363,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2343,
+            "packed_input_tokens": 2343,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004844534007133916,
+          "peak_allocated_bytes": 55530640896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2945,
+          "generated_tokens": 68,
+          "seconds": 6.020339966984466,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2945,
+            "packed_input_tokens": 2945,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.005844830011483282,
+          "peak_allocated_bytes": 55697317888,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3366,
+          "generated_tokens": 42,
+          "seconds": 3.9823921810020693,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3366,
+            "packed_input_tokens": 3366,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006604207999771461,
+          "peak_allocated_bytes": 55820953088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4037,
+          "generated_tokens": 31,
+          "seconds": 3.243672588985646,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4037,
+            "packed_input_tokens": 4037,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.0078171509958338,
+          "peak_allocated_bytes": 55986418176,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4664,
+          "generated_tokens": 86,
+          "seconds": 7.831441526010167,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4664,
+            "packed_input_tokens": 4664,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.008696911972947419,
+          "peak_allocated_bytes": 56154325504,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5261,
+          "generated_tokens": 50,
+          "seconds": 5.063494775007712,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5261,
+            "packed_input_tokens": 5261,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.009517801983747631,
+          "peak_allocated_bytes": 56322482176,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5758,
+          "generated_tokens": 49,
+          "seconds": 5.099209856009111,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5758,
+            "packed_input_tokens": 5758,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.010288840014254674,
+          "peak_allocated_bytes": 56448187904,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6416,
+          "generated_tokens": 71,
+          "seconds": 7.059101213002577,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6416,
+            "packed_input_tokens": 6416,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.011451361991930753,
+          "peak_allocated_bytes": 56624041984,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-signed-timestamp",
+      "repository": "pallets/itsdangerous",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "pallets/itsdangerous:signed-timestamp",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 62.34506797790527,
+      "modified_source_files": [
+        "src/itsdangerous/timed.py"
+      ],
+      "source_sha256": {
+        "src/itsdangerous/timed.py": "99b5fd8cff613b0d6b360772fb477685dc3406252414c34b6dbeb511ef5da6d1"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 668,
+      "tool_calls": 12,
+      "tool_seconds": 2.0281850329774898,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 239,
+          "generated_tokens": 42,
+          "seconds": 3.464608057984151,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 239,
+            "packed_input_tokens": 239,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002014244004385546,
+          "peak_allocated_bytes": 54968739328,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 896,
+          "generated_tokens": 41,
+          "seconds": 3.367574756994145,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 896,
+            "packed_input_tokens": 896,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0025740400014910847,
+          "peak_allocated_bytes": 55150294528,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1526,
+          "generated_tokens": 42,
+          "seconds": 3.577212463977048,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1526,
+            "packed_input_tokens": 1526,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0036708000116050243,
+          "peak_allocated_bytes": 55312399360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2094,
+          "generated_tokens": 46,
+          "seconds": 4.015896965021966,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2094,
+            "packed_input_tokens": 2094,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0047852720017544925,
+          "peak_allocated_bytes": 55472317440,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2359,
+          "generated_tokens": 54,
+          "seconds": 4.718143182020867,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2359,
+            "packed_input_tokens": 2359,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0052023409807588905,
+          "peak_allocated_bytes": 55539239424,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2451,
+          "generated_tokens": 11,
+          "seconds": 1.2881970320013352,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2451,
+            "packed_input_tokens": 2451,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.005361137009458616,
+          "peak_allocated_bytes": 55576775680,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2486,
+          "generated_tokens": 16,
+          "seconds": 1.6974964720138814,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2486,
+            "packed_input_tokens": 2486,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.005558967008255422,
+          "peak_allocated_bytes": 55571289600,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2548,
+          "generated_tokens": 45,
+          "seconds": 4.023699123004917,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2548,
+            "packed_input_tokens": 2548,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005657890986185521,
+          "peak_allocated_bytes": 55585126912,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3181,
+          "generated_tokens": 63,
+          "seconds": 5.588977481005713,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3181,
+            "packed_input_tokens": 3181,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006479088013293222,
+          "peak_allocated_bytes": 55760861696,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3490,
+          "generated_tokens": 223,
+          "seconds": 18.49689972199849,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3490,
+            "packed_input_tokens": 3490,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.007315905997529626,
+          "peak_allocated_bytes": 55848429568,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3733,
+          "generated_tokens": 27,
+          "seconds": 2.8484286059974693,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3733,
+            "packed_input_tokens": 3733,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.007640449010068551,
+          "peak_allocated_bytes": 55906048000,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3835,
+          "generated_tokens": 58,
+          "seconds": 5.342055743996752,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3835,
+            "packed_input_tokens": 3835,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.01838266701088287,
+          "peak_allocated_bytes": 55929642496,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-decode",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 49.11181092262268,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "55b1a0f911d23552677f625d43ed3e8b4676b1e9197772c5e6e92a5140779ee3"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 527,
+      "tool_calls": 6,
+      "tool_seconds": 0.23084289103280753,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 244,
+          "generated_tokens": 16,
+          "seconds": 1.358460268995259,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 244,
+            "packed_input_tokens": 244,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.001511506998213008,
+          "peak_allocated_bytes": 54971204096,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 287,
+          "generated_tokens": 21,
+          "seconds": 1.758136453019688,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 287,
+            "packed_input_tokens": 287,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0012795960064977407,
+          "peak_allocated_bytes": 54994462720,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1559,
+          "generated_tokens": 42,
+          "seconds": 3.647191391006345,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1559,
+            "packed_input_tokens": 1559,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.003196209989255294,
+          "peak_allocated_bytes": 55324307968,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1629,
+          "generated_tokens": 12,
+          "seconds": 1.207667661976302,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1629,
+            "packed_input_tokens": 1629,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0032753240084275603,
+          "peak_allocated_bytes": 55345712640,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2298,
+          "generated_tokens": 69,
+          "seconds": 5.972780090989545,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2298,
+            "packed_input_tokens": 2298,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004506137978751212,
+          "peak_allocated_bytes": 55519674368,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2395,
+          "generated_tokens": 53,
+          "seconds": 4.70095341297565,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2395,
+            "packed_input_tokens": 2395,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.004758258000947535,
+          "peak_allocated_bytes": 55546466816,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2749,
+          "generated_tokens": 43,
+          "seconds": 3.952517849014839,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2749,
+            "packed_input_tokens": 2749,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.005245979002211243,
+          "peak_allocated_bytes": 55643476992,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 2820,
+          "generated_tokens": 24,
+          "seconds": 2.427610002021538,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2820,
+            "packed_input_tokens": 2820,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.005382335017202422,
+          "peak_allocated_bytes": 55664077824,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3514,
+          "generated_tokens": 98,
+          "seconds": 8.562474209000356,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3514,
+            "packed_input_tokens": 3514,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.006473222019849345,
+          "peak_allocated_bytes": 55850258944,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3640,
+          "generated_tokens": 42,
+          "seconds": 4.053243916016072,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3640,
+            "packed_input_tokens": 3640,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.006670709990430623,
+          "peak_allocated_bytes": 55878451712,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3735,
+          "generated_tokens": 56,
+          "seconds": 5.212046778004151,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3735,
+            "packed_input_tokens": 3735,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.006865869014291093,
+          "peak_allocated_bytes": 55906362880,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 3819,
+          "generated_tokens": 51,
+          "seconds": 4.823141381988535,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3819,
+            "packed_input_tokens": 3819,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.006965631997445598,
+          "peak_allocated_bytes": 55926213120,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-sparse",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 13.412068605422974,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "31acf03db19b46eb40b58740ad0620815b21a5ccb1ae0ed164666a791fe6e895"
+      },
+      "ignored_new_files": [],
+      "calls": 3,
+      "generated_tokens": 156,
+      "tool_calls": 0,
+      "tool_seconds": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 240,
+          "generated_tokens": 62,
+          "seconds": 5.030834604986012,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 240,
+            "packed_input_tokens": 240,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0013273649965412915,
+          "peak_allocated_bytes": 54969091584,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 330,
+          "generated_tokens": 47,
+          "seconds": 3.8162615570181515,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 330,
+            "packed_input_tokens": 330,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.001391258992953226,
+          "peak_allocated_bytes": 55012859904,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 405,
+          "generated_tokens": 47,
+          "seconds": 3.835276237979997,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 405,
+            "packed_input_tokens": 405,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0015945569903124124,
+          "peak_allocated_bytes": 55016132608,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-null",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 12.083672523498535,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/stringify.js": "3de0687ab57c6bee258d6721a4fe2cdbe5553086969ba9fe9e98e0dc38aabd5c"
+      },
+      "ignored_new_files": [],
+      "calls": 5,
+      "generated_tokens": 131,
+      "tool_calls": 1,
+      "tool_seconds": 0.03745516302296892,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 245,
+          "generated_tokens": 16,
+          "seconds": 1.3355729159957264,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 245,
+            "packed_input_tokens": 245,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0013456949964165688,
+          "peak_allocated_bytes": 54973199872,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 288,
+          "generated_tokens": 17,
+          "seconds": 1.415049124014331,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 288,
+            "packed_input_tokens": 288,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013010239927098155,
+          "peak_allocated_bytes": 54994724864,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1556,
+          "generated_tokens": 42,
+          "seconds": 3.6067859010072425,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1556,
+            "packed_input_tokens": 1556,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0033147459907922894,
+          "peak_allocated_bytes": 55323461632,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1626,
+          "generated_tokens": 24,
+          "seconds": 2.1501750239985995,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1626,
+            "packed_input_tokens": 1626,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.0034579929779283702,
+          "peak_allocated_bytes": 55344897024,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1678,
+          "generated_tokens": 32,
+          "seconds": 2.8164132840174716,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1678,
+            "packed_input_tokens": 1678,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0035121350083500147,
+          "peak_allocated_bytes": 55370598400,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-combine",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 61.66917443275452,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "c7a6169accc72c252a1f19a5bddb37bb108b505208611c57c751f43d78d654a9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 615,
+      "tool_calls": 12,
+      "tool_seconds": 0.45948865701211616,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 243,
+          "generated_tokens": 54,
+          "seconds": 4.50177107701893,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 243,
+            "packed_input_tokens": 243,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.002114913018886,
+          "peak_allocated_bytes": 54972697088,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1380,
+          "generated_tokens": 66,
+          "seconds": 5.546530530991731,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1380,
+            "packed_input_tokens": 1380,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.002918374026194215,
+          "peak_allocated_bytes": 55282383360,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2108,
+          "generated_tokens": 45,
+          "seconds": 4.028573479008628,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2108,
+            "packed_input_tokens": 2108,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.004138201999012381,
+          "peak_allocated_bytes": 55467576320,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2729,
+          "generated_tokens": 45,
+          "seconds": 4.114345642999979,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2729,
+            "packed_input_tokens": 2729,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.005241494014626369,
+          "peak_allocated_bytes": 55634740736,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3438,
+          "generated_tokens": 45,
+          "seconds": 4.263778894994175,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3438,
+            "packed_input_tokens": 3438,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.006435201008571312,
+          "peak_allocated_bytes": 55836283392,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4093,
+          "generated_tokens": 45,
+          "seconds": 4.3973778240033425,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4093,
+            "packed_input_tokens": 4093,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.007625006983289495,
+          "peak_allocated_bytes": 55998478848,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4646,
+          "generated_tokens": 60,
+          "seconds": 5.774365292978473,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4646,
+            "packed_input_tokens": 4646,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.008451169996988028,
+          "peak_allocated_bytes": 56148794880,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4756,
+          "generated_tokens": 63,
+          "seconds": 6.044985187007114,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4756,
+            "packed_input_tokens": 4756,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.008640907006338239,
+          "peak_allocated_bytes": 56182871040,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5585,
+          "generated_tokens": 48,
+          "seconds": 5.003289772983408,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5585,
+            "packed_input_tokens": 5585,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.01004711099085398,
+          "peak_allocated_bytes": 56400805888,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6425,
+          "generated_tokens": 48,
+          "seconds": 5.214219329995103,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6425,
+            "packed_input_tokens": 6425,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.011225936003029346,
+          "peak_allocated_bytes": 56625746432,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7134,
+          "generated_tokens": 48,
+          "seconds": 5.3917067750007845,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7134,
+            "packed_input_tokens": 7134,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.012090760021237656,
+          "peak_allocated_bytes": 56816359936,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7969,
+          "generated_tokens": 48,
+          "seconds": 5.5986650150152855,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7969,
+            "packed_input_tokens": 7969,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.013178271998185664,
+          "peak_allocated_bytes": 57042979840,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-plain-objects",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 72.79570889472961,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/utils.js": "a08b04c2ef970f48851c343a8d536281424a38410c86a1007a0d226689dcee57"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 781,
+      "tool_calls": 12,
+      "tool_seconds": 0.46168187604052946,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 241,
+          "generated_tokens": 51,
+          "seconds": 4.187906970997574,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 241,
+            "packed_input_tokens": 241,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019514540035743266,
+          "peak_allocated_bytes": 54971134464,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 947,
+          "generated_tokens": 75,
+          "seconds": 6.115356109017739,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 947,
+            "packed_input_tokens": 947,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0028367890045046806,
+          "peak_allocated_bytes": 55157963776,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1406,
+          "generated_tokens": 60,
+          "seconds": 5.060449860000517,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1406,
+            "packed_input_tokens": 1406,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0034951250127051026,
+          "peak_allocated_bytes": 55285904896,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1602,
+          "generated_tokens": 64,
+          "seconds": 5.560862273006933,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1602,
+            "packed_input_tokens": 1602,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.004352635995019227,
+          "peak_allocated_bytes": 55338074624,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2071,
+          "generated_tokens": 90,
+          "seconds": 7.7323530220019165,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2071,
+            "packed_input_tokens": 2071,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.004799494025064632,
+          "peak_allocated_bytes": 55469900288,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2940,
+          "generated_tokens": 71,
+          "seconds": 6.276422759983689,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2940,
+            "packed_input_tokens": 2940,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "packing_seconds": 0.0059553280007094145,
+          "peak_allocated_bytes": 55691069952,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3150,
+          "generated_tokens": 66,
+          "seconds": 5.902604506991338,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3150,
+            "packed_input_tokens": 3150,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "packing_seconds": 0.006717767013469711,
+          "peak_allocated_bytes": 55755461120,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3653,
+          "generated_tokens": 65,
+          "seconds": 5.990079654002329,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3653,
+            "packed_input_tokens": 3653,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "packing_seconds": 0.007686444005230442,
+          "peak_allocated_bytes": 55885362688,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4294,
+          "generated_tokens": 45,
+          "seconds": 4.605507518019294,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4294,
+            "packed_input_tokens": 4294,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.008762115001445636,
+          "peak_allocated_bytes": 56055199744,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4931,
+          "generated_tokens": 69,
+          "seconds": 6.741114386997651,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4931,
+            "packed_input_tokens": 4931,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "packing_seconds": 0.009263613988878205,
+          "peak_allocated_bytes": 56234277376,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5360,
+          "generated_tokens": 70,
+          "seconds": 6.948975248989882,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5360,
+            "packed_input_tokens": 5360,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "packing_seconds": 0.01016838799114339,
+          "peak_allocated_bytes": 56345069056,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6420,
+          "generated_tokens": 55,
+          "seconds": 5.936845621006796,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6420,
+            "packed_input_tokens": 6420,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.011235129000851884,
+          "peak_allocated_bytes": 56624799744,
+          "adapter": false,
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "variant": "baseline",
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "ljharb/qs:query-sort",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 11.93601369857788,
+      "modified_source_files": [],
+      "source_sha256": {
+        "lib/stringify.js": "c33e16e9e49b08ac4288c87a16d14959cf6de9c06594a1c050db9da272a541d1"
+      },
+      "ignored_new_files": [],
+      "calls": 5,
+      "generated_tokens": 127,
+      "tool_calls": 1,
+      "tool_seconds": 0.03909508901415393,
+      "exit_status": "RepeatedFormatError",
+      "generations": [
+        {
+          "input_tokens": 242,
+          "generated_tokens": 16,
+          "seconds": 1.3772994090104476,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 242,
+            "packed_input_tokens": 242,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "packing_seconds": 0.0019462839991319925,
+          "peak_allocated_bytes": 54970010112,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 285,
+          "generated_tokens": 21,
+          "seconds": 1.7433574750029948,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 285,
+            "packed_input_tokens": 285,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "packing_seconds": 0.0013230500044301152,
+          "peak_allocated_bytes": 54990151680,
+          "adapter": false,
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1557,
+          "generated_tokens": 42,
+          "seconds": 3.6019249289820436,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1557,
+            "packed_input_tokens": 1557,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "packing_seconds": 0.0033159349986817688,
+          "peak_allocated_bytes": 55323743232,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1627,
+          "generated_tokens": 24,
+          "seconds": 2.151877837983193,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1627,
+            "packed_input_tokens": 1627,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "packing_seconds": 0.003429759992286563,
+          "peak_allocated_bytes": 55345170944,
+          "adapter": false,
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 1679,
+          "generated_tokens": 24,
+          "seconds": 2.1910517800133675,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "legacy",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1679,
+            "packed_input_tokens": 1679,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "packing_seconds": 0.0035960060195066035,
+          "peak_allocated_bytes": 55370702848,
+          "adapter": false,
+          "action_format_valid": false
+        }
+      ],
+      "recovered": false
+    }
+  ],
+  "finished_utc": "2026-11-10T03:16:13.007277+00:00"
+}

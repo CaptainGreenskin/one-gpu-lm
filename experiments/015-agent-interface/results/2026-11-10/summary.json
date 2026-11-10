@@ -1,0 +1,1112 @@
+{
+  "schema_version": 1,
+  "pairs_per_variant": 24,
+  "scope_sizes": {
+    "historical": 12,
+    "fresh": 12
+  },
+  "totals": {
+    "baseline": {
+      "passed": {
+        "historical": 4,
+        "fresh": 2
+      },
+      "calls": 204,
+      "successful_generation_calls": 203,
+      "format_invalid_calls": 41,
+      "format_invalid_rate": 0.2019704433497537,
+      "generation_limit_hits": 0,
+      "context_limit_requests": 1,
+      "backend_error_categories": {
+        "context_limit": 1
+      },
+      "compacted_generation_calls": 0,
+      "generated_tokens": 12251,
+      "generation_seconds": 1093.0229412062035,
+      "generation_tokens_per_second": 11.208364928260728,
+      "packing_seconds": 1.1474500711774454,
+      "task_wall_seconds": 1149.847813129425,
+      "median_task_seconds": 49.35345637798309,
+      "tool_seconds": 10.244092232227558,
+      "tool_calls": 162,
+      "exit_status": {
+        "LimitsExceeded": 9,
+        "RepeatedFormatError": 8,
+        "RuntimeError": 1,
+        "Submitted": 6
+      },
+      "failed_without_source_change": 18,
+      "grading_failures": {
+        "nonzero_regression_exit": 18
+      },
+      "task_controller_seconds": 1155.9870346109965
+    },
+    "format": {
+      "passed": {
+        "historical": 5,
+        "fresh": 5
+      },
+      "calls": 248,
+      "successful_generation_calls": 247,
+      "format_invalid_calls": 7,
+      "format_invalid_rate": 0.02834008097165992,
+      "generation_limit_hits": 1,
+      "context_limit_requests": 1,
+      "backend_error_categories": {
+        "context_limit": 1
+      },
+      "compacted_generation_calls": 0,
+      "generated_tokens": 15979,
+      "generation_seconds": 1416.827549287118,
+      "generation_tokens_per_second": 11.27801333905449,
+      "packing_seconds": 1.482216069533024,
+      "task_wall_seconds": 1487.6653254032135,
+      "median_task_seconds": 61.017075538635254,
+      "tool_seconds": 26.79647466924507,
+      "tool_calls": 240,
+      "exit_status": {
+        "LimitsExceeded": 14,
+        "Submitted": 9,
+        "RuntimeError": 1
+      },
+      "failed_without_source_change": 11,
+      "grading_failures": {
+        "nonzero_regression_exit": 14
+      },
+      "task_controller_seconds": 1494.0211168320093
+    },
+    "context": {
+      "passed": {
+        "historical": 4,
+        "fresh": 2
+      },
+      "calls": 206,
+      "successful_generation_calls": 206,
+      "format_invalid_calls": 41,
+      "format_invalid_rate": 0.19902912621359223,
+      "generation_limit_hits": 0,
+      "context_limit_requests": 0,
+      "backend_error_categories": {},
+      "compacted_generation_calls": 5,
+      "generated_tokens": 13287,
+      "generation_seconds": 1178.369805281749,
+      "generation_tokens_per_second": 11.27574717244479,
+      "packing_seconds": 1.228180974139832,
+      "task_wall_seconds": 1235.069979429245,
+      "median_task_seconds": 44.71420681476593,
+      "tool_seconds": 12.957519069808768,
+      "tool_calls": 165,
+      "exit_status": {
+        "LimitsExceeded": 11,
+        "RepeatedFormatError": 8,
+        "Submitted": 5
+      },
+      "failed_without_source_change": 17,
+      "grading_failures": {
+        "nonzero_regression_exit": 18
+      },
+      "task_controller_seconds": 1241.3629146050662
+    },
+    "combined": {
+      "passed": {
+        "historical": 5,
+        "fresh": 5
+      },
+      "calls": 248,
+      "successful_generation_calls": 248,
+      "format_invalid_calls": 7,
+      "format_invalid_rate": 0.028225806451612902,
+      "generation_limit_hits": 1,
+      "context_limit_requests": 0,
+      "backend_error_categories": {},
+      "compacted_generation_calls": 2,
+      "generated_tokens": 16309,
+      "generation_seconds": 1438.389148390008,
+      "generation_tokens_per_second": 11.338378086524568,
+      "packing_seconds": 1.5477848478767555,
+      "task_wall_seconds": 1508.2528219223022,
+      "median_task_seconds": 60.99149465560913,
+      "tool_seconds": 27.25671373787918,
+      "tool_calls": 241,
+      "exit_status": {
+        "LimitsExceeded": 15,
+        "Submitted": 9
+      },
+      "failed_without_source_change": 10,
+      "grading_failures": {
+        "nonzero_regression_exit": 14
+      },
+      "task_controller_seconds": 1514.4556342719588
+    }
+  },
+  "contrasts": {
+    "format-vs-baseline": {
+      "historical": {
+        "pairs": 12,
+        "reference_passed": 4,
+        "treatment_passed": 5,
+        "improved": [
+          "new-json-comparator",
+          "new-json-cycle-reuse"
+        ],
+        "regressed": [
+          "new-json-undefined"
+        ],
+        "net_gain": 1
+      },
+      "fresh": {
+        "pairs": 12,
+        "reference_passed": 2,
+        "treatment_passed": 5,
+        "improved": [
+          "fresh-signed-url-compression",
+          "fresh-query-null",
+          "fresh-query-sort"
+        ],
+        "regressed": [],
+        "net_gain": 3
+      },
+      "cost": {
+        "task_controller_seconds_difference": 338.0340822210128,
+        "task_controller_time_ratio": 1.2924203058512376
+      }
+    },
+    "context-vs-baseline": {
+      "historical": {
+        "pairs": 12,
+        "reference_passed": 4,
+        "treatment_passed": 4,
+        "improved": [],
+        "regressed": [],
+        "net_gain": 0
+      },
+      "fresh": {
+        "pairs": 12,
+        "reference_passed": 2,
+        "treatment_passed": 2,
+        "improved": [],
+        "regressed": [],
+        "net_gain": 0
+      },
+      "cost": {
+        "task_controller_seconds_difference": 85.37587999406969,
+        "task_controller_time_ratio": 1.0738553958114243
+      }
+    },
+    "combined-vs-baseline": {
+      "historical": {
+        "pairs": 12,
+        "reference_passed": 4,
+        "treatment_passed": 5,
+        "improved": [
+          "new-json-comparator",
+          "new-json-cycle-reuse"
+        ],
+        "regressed": [
+          "new-json-undefined"
+        ],
+        "net_gain": 1
+      },
+      "fresh": {
+        "pairs": 12,
+        "reference_passed": 2,
+        "treatment_passed": 5,
+        "improved": [
+          "fresh-signed-url-compression",
+          "fresh-query-null",
+          "fresh-query-sort"
+        ],
+        "regressed": [],
+        "net_gain": 3
+      },
+      "cost": {
+        "task_controller_seconds_difference": 358.46859966096235,
+        "task_controller_time_ratio": 1.3100974223137298
+      }
+    },
+    "combined-vs-format": {
+      "historical": {
+        "pairs": 12,
+        "reference_passed": 5,
+        "treatment_passed": 5,
+        "improved": [],
+        "regressed": [],
+        "net_gain": 0
+      },
+      "fresh": {
+        "pairs": 12,
+        "reference_passed": 5,
+        "treatment_passed": 5,
+        "improved": [],
+        "regressed": [],
+        "net_gain": 0
+      },
+      "cost": {
+        "task_controller_seconds_difference": 20.43451743994956,
+        "task_controller_time_ratio": 1.0136775291926796
+      }
+    },
+    "combined-vs-context": {
+      "historical": {
+        "pairs": 12,
+        "reference_passed": 4,
+        "treatment_passed": 5,
+        "improved": [
+          "new-json-comparator",
+          "new-json-cycle-reuse"
+        ],
+        "regressed": [
+          "new-json-undefined"
+        ],
+        "net_gain": 1
+      },
+      "fresh": {
+        "pairs": 12,
+        "reference_passed": 2,
+        "treatment_passed": 5,
+        "improved": [
+          "fresh-signed-url-compression",
+          "fresh-query-null",
+          "fresh-query-sort"
+        ],
+        "regressed": [],
+        "net_gain": 3
+      },
+      "cost": {
+        "task_controller_seconds_difference": 273.09271966689266,
+        "task_controller_time_ratio": 1.219994263123106
+      }
+    }
+  },
+  "interaction_net_tasks": {
+    "historical": 0,
+    "fresh": 0
+  },
+  "per_repository": {
+    "epoberezkin/fast-json-stable-stringify": {
+      "tasks": 6,
+      "split": "dev",
+      "passed": {
+        "baseline": 4,
+        "format": 5,
+        "context": 4,
+        "combined": 5
+      }
+    },
+    "jmespath/jmespath.py": {
+      "tasks": 6,
+      "split": "dev",
+      "passed": {
+        "baseline": 0,
+        "format": 0,
+        "context": 0,
+        "combined": 0
+      }
+    },
+    "ljharb/qs": {
+      "tasks": 6,
+      "split": "test",
+      "passed": {
+        "baseline": 0,
+        "format": 2,
+        "context": 0,
+        "combined": 2
+      }
+    },
+    "pallets/itsdangerous": {
+      "tasks": 6,
+      "split": "test",
+      "passed": {
+        "baseline": 2,
+        "format": 3,
+        "context": 2,
+        "combined": 3
+      }
+    }
+  },
+  "promotion": {
+    "format": {
+      "checks": {
+        "fresh_gain": true,
+        "no_fresh_regressions": true,
+        "no_historical_regressions": false
+      },
+      "advance_to_replication": false
+    },
+    "context": {
+      "checks": {
+        "fresh_gain": false,
+        "no_fresh_regressions": true,
+        "no_historical_regressions": true
+      },
+      "advance_to_replication": false
+    },
+    "combined": {
+      "checks": {
+        "fresh_gain": true,
+        "no_fresh_regressions": true,
+        "no_historical_regressions": false
+      },
+      "advance_to_replication": false
+    }
+  },
+  "daily_use_certified": false,
+  "structural_format_audit": {
+    "baseline": {
+      "format_categories": {
+        "no_supported_action": 7,
+        "native_without_command_parameter": 31,
+        "unclosed_native_markup": 3
+      },
+      "rejected_shapes": [
+        {
+          "id": "new-jmes-filter",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-multiselect",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-sort-expression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-raw-string",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-pipe-map",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "new-json-comparator",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "new-json-cycle-reuse",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 0,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-signed-fallbacks",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-decode",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-sparse",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-null",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-sort",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    "format": {
+      "format_categories": {
+        "other_rejected_native_shape": 6,
+        "invalid_at_output_limit": 1
+      },
+      "rejected_shapes": [
+        {
+          "id": "new-jmes-sort-expression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-key-order",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-comparator",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-undefined",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-to-json",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "fresh-signed-url-compression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 0,
+                "tool_call_open": 1
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-null",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    "context": {
+      "format_categories": {
+        "no_supported_action": 7,
+        "native_without_command_parameter": 31,
+        "unclosed_native_markup": 3
+      },
+      "rejected_shapes": [
+        {
+          "id": "new-jmes-filter",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-multiselect",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-sort-expression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-raw-string",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-jmes-pipe-map",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "new-json-comparator",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "new-json-cycle-reuse",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 0,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-signed-fallbacks",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-decode",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 5
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-sparse",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-null",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-sort",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": false,
+                "tool_call_close": 0,
+                "tool_call_open": 0
+              },
+              "count": 1
+            },
+            {
+              "shape": {
+                "command_parameter": false,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 1,
+                "tool_call_open": 1
+              },
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    "combined": {
+      "format_categories": {
+        "other_rejected_native_shape": 6,
+        "invalid_at_output_limit": 1
+      },
+      "rejected_shapes": [
+        {
+          "id": "new-jmes-sort-expression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-key-order",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-comparator",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-undefined",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "new-json-to-json",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "fresh-signed-url-compression",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 0,
+                "tool_call_open": 1
+              },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "fresh-query-null",
+          "shapes": [
+            {
+              "shape": {
+                "command_parameter": true,
+                "fenced_bash": false,
+                "function_bash": true,
+                "tool_call_close": 2,
+                "tool_call_open": 2
+              },
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "hardware": {
+    "samples": 1079,
+    "collection_errors": 0,
+    "max_gap_seconds": 5.051743984222412,
+    "sampled_span_seconds": 5436.707561016083,
+    "temperature_c": {
+      "min": 16.0,
+      "median": 51.0,
+      "max": 63.0
+    },
+    "power_w": {
+      "min": 13.5,
+      "median": 275.38,
+      "max": 554.08
+    },
+    "utilization_percent": {
+      "min": 0.0,
+      "median": 50.0,
+      "max": 100.0
+    },
+    "memory_used_mib": {
+      "min": 219.0,
+      "median": 59785.0,
+      "max": 61357.0
+    },
+    "sampled_gpu_energy_kwh": 0.4362552147779647
+  },
+  "time": {
+    "started_utc": "2026-11-10T01:45:32.014394+00:00",
+    "finished_utc": "2026-11-10T03:16:13.054567+00:00",
+    "wall_seconds": 5441.040169715881
+  }
+}

@@ -1,0 +1,988 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T01:45:32.014394+00:00",
+  "started_epoch": 1794275132.0144117,
+  "deadline_epoch": 1794303932.014412,
+  "complete": true,
+  "protocol_sha256": "94af8d0f9b245cd6b0025bd2f919b8eecb0ea7fa93b7d77504ce58800e3fb267",
+  "completed_runs": 96,
+  "schedule": [
+    {
+      "id": "new-jmes-filter",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "format"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "context"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "combined"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "context"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "context"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "context"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "context"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "context"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "combined"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "baseline"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "format"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "context"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "combined"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "baseline"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "format"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "context"
+    }
+  ],
+  "stages": [
+    {
+      "name": "loaded-controls",
+      "seconds": 4.673691544012399
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "baseline",
+      "seconds": 32.33418124000309
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "format",
+      "seconds": 57.43866699698265
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "context",
+      "seconds": 30.880680605012458
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "combined",
+      "seconds": 57.439495141996304
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "format",
+      "seconds": 64.25317262299359
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "context",
+      "seconds": 14.946249285014346
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "combined",
+      "seconds": 64.2524508649949
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "baseline",
+      "seconds": 15.146189761988353
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "context",
+      "seconds": 9.234621982992394
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "combined",
+      "seconds": 63.34990915399976
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "baseline",
+      "seconds": 9.335298102989327
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "format",
+      "seconds": 63.30250436800998
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "combined",
+      "seconds": 61.146513067011256
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "baseline",
+      "seconds": 131.2003660199989
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "format",
+      "seconds": 60.745005390024744
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "context",
+      "seconds": 130.69733430500492
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "baseline",
+      "seconds": 69.16312651400222
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "format",
+      "seconds": 62.097595533996355
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "context",
+      "seconds": 82.74100210799952
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "combined",
+      "seconds": 62.19732914597262
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "format",
+      "seconds": 92.46290764599689
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "context",
+      "seconds": 50.12185256899102
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "combined",
+      "seconds": 92.7128974639927
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "baseline",
+      "seconds": 49.87149372001295
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "context",
+      "seconds": 100.12751750499592
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "combined",
+      "seconds": 43.55726787800086
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "baseline",
+      "seconds": 89.20609965600306
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "format",
+      "seconds": 44.15910127799725
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "combined",
+      "seconds": 45.81140837399289
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "baseline",
+      "seconds": 14.79695563801215
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "format",
+      "seconds": 45.662358155008405
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "context",
+      "seconds": 15.698156572005246
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "baseline",
+      "seconds": 98.42816211600439
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "format",
+      "seconds": 53.731154824985424
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "context",
+      "seconds": 153.64559087899397
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "combined",
+      "seconds": 53.73187713898369
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "format",
+      "seconds": 29.730324539996218
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "context",
+      "seconds": 39.85079439400579
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "combined",
+      "seconds": 30.580666778987506
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "baseline",
+      "seconds": 39.44747340900358
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "context",
+      "seconds": 38.79686514698551
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "combined",
+      "seconds": 35.139294119988335
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "baseline",
+      "seconds": 40.25074527398101
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "format",
+      "seconds": 33.73676660802448
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "combined",
+      "seconds": 40.652521614014404
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "baseline",
+      "seconds": 15.497677422012202
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "format",
+      "seconds": 40.703781071002595
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "context",
+      "seconds": 15.198092805978376
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "baseline",
+      "seconds": 72.02017697598785
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "format",
+      "seconds": 33.58716543400078
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "context",
+      "seconds": 72.02055389201269
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "combined",
+      "seconds": 33.53490520900232
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "format",
+      "seconds": 98.47615081298864
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "context",
+      "seconds": 84.7381134260213
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "combined",
+      "seconds": 98.62413255500724
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "baseline",
+      "seconds": 64.20155804499518
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "context",
+      "seconds": 11.439366289007012
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "combined",
+      "seconds": 86.10265738601447
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "baseline",
+      "seconds": 11.689124115015147
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "format",
+      "seconds": 61.79717052000342
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "combined",
+      "seconds": 66.65833516701241
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "baseline",
+      "seconds": 57.73757257699617
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "format",
+      "seconds": 66.85883617401123
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "context",
+      "seconds": 58.640470950020244
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "baseline",
+      "seconds": 60.444513120979536
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "format",
+      "seconds": 118.71795874799136
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "context",
+      "seconds": 61.24738827502006
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "combined",
+      "seconds": 118.72151359499549
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "format",
+      "seconds": 84.74914372098283
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "context",
+      "seconds": 62.500243283982854
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "combined",
+      "seconds": 81.49116227900959
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "baseline",
+      "seconds": 62.5983384049905
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "context",
+      "seconds": 39.600871709000785
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "combined",
+      "seconds": 54.23210131502128
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "baseline",
+      "seconds": 49.37110348700662
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "format",
+      "seconds": 54.38095614302438
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "combined",
+      "seconds": 59.89258588899975
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "baseline",
+      "seconds": 13.694095017999643
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "format",
+      "seconds": 59.745440058992244
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "context",
+      "seconds": 13.64429936700617
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "baseline",
+      "seconds": 12.340743181994185
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "format",
+      "seconds": 72.56976904699695
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "context",
+      "seconds": 12.491052611003397
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "combined",
+      "seconds": 71.5183057480026
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "format",
+      "seconds": 53.181004914978985
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "context",
+      "seconds": 59.0913982730126
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "combined",
+      "seconds": 55.58418851697934
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "baseline",
+      "seconds": 61.94838814501418
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "context",
+      "seconds": 71.61943813800463
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "combined",
+      "seconds": 61.39596889098175
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "baseline",
+      "seconds": 73.07333923099213
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "format",
+      "seconds": 63.300026907993015
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "combined",
+      "seconds": 76.12814697899739
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "baseline",
+      "seconds": 12.190313435014104
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "format",
+      "seconds": 78.63415531502687
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "context",
+      "seconds": 12.390960232994985
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-10T03:16:13.054583+00:00",
+  "current_id": "fresh-query-sort",
+  "current_variant": "context",
+  "finished_utc": "2026-11-10T03:16:13.054567+00:00",
+  "finished_epoch": 1794280573.0545814,
+  "telemetry": {
+    "samples": 1079,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}
