@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "historical_sources": "../014-coding-quality/sources.json",
+  "sources": [
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "role": "historical_regression_observed_in_015",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.md",
+      "license_sha256": "e7dc37bf662d7f786efcb46c545615e70c1daf458a38385521c63cf6607cdfe1",
+      "license_url": "https://github.com/ljharb/qs/blob/43baea4655cb9b543fb1c5cc0db95cde42852140/LICENSE.md",
+      "rights_review": {
+        "status": "actual pinned license and selected file headers reviewed",
+        "obligations": [
+          "retain original copyright, conditions and disclaimers with redistributed source/binaries",
+          "do not imply upstream endorsement"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "lib/stringify.js",
+          "sha256": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "lib/utils.js",
+          "sha256": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        }
+      ]
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "role": "historical_regression_observed_in_015",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "license_sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7",
+      "license_url": "https://github.com/pallets/itsdangerous/blob/672971d66a2ef9f85151e53283113f33d642dabd/LICENSE.txt",
+      "rights_review": {
+        "status": "actual pinned license and selected file headers reviewed",
+        "obligations": [
+          "retain original copyright, conditions and disclaimers with redistributed source/binaries",
+          "do not imply upstream endorsement"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "src/itsdangerous/encoding.py",
+          "sha256": "c304f3e6aff7ccb71a01dba793afef4a84adc06a9859edf4ed997f53ceda4453",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/serializer.py",
+          "sha256": "6d6f1687897c7e3ac6eeff5bfd6794df90e299feedcc6aae3faa0e53ffe925e8",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/signer.py",
+          "sha256": "60ed0257b341bc703a8f9e3d4441c91548d4a23c36a47ab0714a509d4ef23584",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/timed.py",
+          "sha256": "3afbf6050e8b73605931d1e516f374835456979e4319c098bfe5f284f120c6c5",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/url_safe.py",
+          "sha256": "6b3e1ee5f5e2fefb3e61b5a3f186709f8c2254a7de0fef8610a453e547aee0fe",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        }
+      ]
+    }
+  ],
+  "reuse_from": "../015-agent-interface/sources.json"
+}

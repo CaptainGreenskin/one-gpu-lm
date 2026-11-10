@@ -18,13 +18,13 @@ NATIVE_SYSTEM = SYSTEM.replace(
 
 def validate_policy(policy=None):
     policy = dict(LEGACY_POLICY if policy is None else policy)
-    if set(policy) != {"format", "context"} or policy["format"] not in {"legacy", "native_schema"} or policy["context"] not in {"full", "bounded_history_v1"}:
+    if set(policy) != {"format", "context"} or policy["format"] not in {"legacy", "native_schema", "native_roundtrip"} or policy["context"] not in {"full", "bounded_history_v1"}:
         raise ValueError("Unknown agent policy")
     return policy
 
 
 def system_prompt(policy):
-    return NATIVE_SYSTEM if validate_policy(policy)["format"] == "native_schema" else SYSTEM
+    return NATIVE_SYSTEM if validate_policy(policy)["format"] != "legacy" else SYSTEM
 
 
 def format_feedback(policy):

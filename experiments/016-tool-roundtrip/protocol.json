@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "experiment": "016-tool-roundtrip",
+  "status": "draft_before_admission",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "weight_updates": 0,
+  "adapter": false,
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "variants": {
+    "schema": {
+      "format": "native_schema",
+      "context": "full"
+    },
+    "roundtrip": {
+      "format": "native_roundtrip",
+      "context": "full"
+    }
+  },
+  "factor_definitions": {
+    "roundtrip": "After an executed action, render the validated command as assistant.tool_calls and its recorded observation with role=tool. Preserve prose and exact command/observation content. System/error prompts, tool schema, strict action parser, model and budgets unchanged. Bundles call and result serialization; does not isolate their individual effects."
+  },
+  "comparisons": [
+    "roundtrip-schema"
+  ],
+  "ordering": "All24 already observed tasks in original015 order; alternate schema/roundtrip first per task; one loaded unchanged base, no cross-request KV cache.",
+  "primary": "Paired historical regression success and regressions across all24 tasks. No fresh holdout or generalization claim.",
+  "exposure": {
+    "all_tasks": "All24 already observed in015; inherited14holdout now historical. No task descriptions, mutations, graders or snapshots changed. Only split/evaluation_role relabeled to historical. The known new-json-undefined regression motivated this intervention.",
+    "no_new_model_scores_before_freeze": true,
+    "no_teacher_api": true
+  },
+  "promotion": {
+    "deployment_allowed": false,
+    "independent_replication_allowed": false,
+    "next_fresh_study_candidate_requires": {
+      "target_task": "new-json-undefined",
+      "target_passes": true,
+      "minimum_net_historical_gain": 1,
+      "maximum_regressed_tasks_vs_concurrent_control": 0
+    },
+    "meaning": "Diagnostic candidate only; a new independently frozen holdout is required for a generalization or adoption claim."
+  },
+  "execution": {
+    "max_pipeline_seconds": 7200,
+    "max_task_seconds": 1000,
+    "max_backend_start_seconds": 300,
+    "gpu_count": 1,
+    "expected_tasks_per_variant": 24,
+    "expected_model_task_runs": 48
+  },
+  "publication": {
+    "original_code_license": "MIT",
+    "source_licenses_separate": true,
+    "raw_tasks_trajectories_source_snapshots": "private",
+    "weights": "private",
+    "metrics_curves_protocol_code": "GitHub"
+  },
+  "source_workspace_exclusions": {
+    "ljharb/qs": "Omit dist bundle, an unmodified duplicate of target source, from agent/grader snapshots"
+  },
+  "failure_policy": "Preserve controller failures. Recovery only at completed-step boundaries with unchanged artifacts and original deadline. Never rerun a scored task or tune after scoring.",
+  "repository_count": 4,
+  "evaluation_task_counts": {
+    "dev": 24,
+    "test": 0
+  },
+  "prior_public_commit": "e0489fd6b55d0274ac6ddc52001bcf38c82d1f26",
+  "prior_protocol_sha256": "94af8d0f9b245cd6b0025bd2f919b8eecb0ea7fa93b7d77504ce58800e3fb267"
+}

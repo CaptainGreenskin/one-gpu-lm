@@ -3,6 +3,7 @@ import json
 import time
 from one_gpu_lm.common.receipts import write_json
 from one_gpu_lm.common.agent_policy import BASH_TOOLS, prepare_context, validate_policy
+from one_gpu_lm.common.tool_history import render_history
 
 
 class Runtime:
@@ -33,15 +34,19 @@ class Runtime:
 
     def generate(self, value):
         torch = self.torch
-        messages = [{"role": m["role"], "content": m["content"]} for m in value["messages"]]
+        messages = value["messages"]
         if any(m["role"] not in {"system", "user", "assistant"} for m in messages):
             raise ValueError("Unexpected message role")
         policy = validate_policy(value.get("agent_policy"))
         kwargs = dict(self.profile["chat_template_kwargs"])
-        if policy["format"] == "native_schema":
+        if policy["format"] != "legacy":
             kwargs["tools"] = BASH_TOOLS
+        dialogue = {}
         def encode(items):
-            return self.tokenizer.apply_chat_template(items, tokenize=True, return_dict=False,
+            rendered = render_history(items, policy["format"] == "native_roundtrip")
+            dialogue.update(structured_tool_calls=sum(len(m.get('tool_calls', [])) for m in rendered),
+                            tool_results=sum(m['role'] == 'tool' for m in rendered))
+            return self.tokenizer.apply_chat_template(rendered, tokenize=True, return_dict=False,
                 add_generation_prompt=True, **kwargs)
         limit = min(int(value.get("max_input_tokens", 8192)), 8192)
         packing_started = time.monotonic()
@@ -49,7 +54,7 @@ class Runtime:
         packing_seconds = time.monotonic() - packing_started
         if len(tokens) > limit:
             return {"error": "context_limit", "input_tokens": len(tokens), "context": context,
-                    "packing_seconds": packing_seconds}
+                    "packing_seconds": packing_seconds, "dialogue": dialogue}
         new = min(int(value.get("max_new_tokens", 512)), 512)
         if new < 1:
             return {"error": "generation_budget_exhausted"}
@@ -65,5 +70,5 @@ class Runtime:
         return {"text": self.tokenizer.decode(suffix, skip_special_tokens=True), "ids": suffix,
                 "input_tokens": len(tokens), "generated_tokens": len(suffix),
                 "seconds": time.monotonic() - started, "hit_generation_limit": len(suffix) >= new,
-                "agent_policy": policy, "context": context, "packing_seconds": packing_seconds,
+                "agent_policy": policy, "context": context, "dialogue": dialogue, "packing_seconds": packing_seconds,
                 "peak_allocated_bytes": torch.cuda.max_memory_allocated(), "adapter": self.adapter}
