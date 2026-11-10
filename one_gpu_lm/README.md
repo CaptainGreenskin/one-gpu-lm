@@ -4,7 +4,7 @@
 
 | 模块 | 负责什么 | 主要实现 |
 | --- | --- | --- |
-| `common/` | 内容哈希、JSON 回执、动作格式、执行代码身份、原子检查点和硬件记录 | `receipts.py`、`training_data.py`、`checkpoints.py`、`runstate.py`、`telemetry.py` |
+| `common/` | 内容哈希、JSON 回执、动作格式、上下文策略、执行身份、检查点和硬件记录 | `agent_policy.py`、`receipts.py`、`training_data.py`、`checkpoints.py`、`runstate.py`、`telemetry.py` |
 | `data/` | 私有训练记录、来源信息、训练分区约束、已验证轨迹/参考修复的准备 | `repository.py`、`balanced.py`、`function_records.py` |
 | `models/` | 按 profile 验证/加载固定权重、模板、精度和本地生成 | `verify.py`、`hf_runtime.py` |
 | `training/` | 配置预检、assistant-only LoRA、完整状态恢复、公开证据收集 | `config.py`、`doctor.py`、`runner.py`、`verify_resume.py`、`collect.py` |
@@ -33,6 +33,18 @@
 | 配对报告与曲线 | `python -m one_gpu_lm.evaluation.report` | `python -m repo_lab.report` |
 
 参数保持兼容，可用 `--help` 查看。`repo_lab/` 的 Python 入口转发到同一份实现；`training_lab/` 保留 011 的历史 pilot，公共记录和隔离组件转发到新模块。新的通用能力写入 `one_gpu_lm/`，不在旧入口复制实现。
+
+## 工具格式与上下文策略
+
+[015 四组对照](../experiments/015-agent-interface/)通过冻结协议的 `variants` 显式选择策略，`campaign --variant NAME` 和 `agent --variant NAME` 使用同一入口。省略该参数时保留原提示和完整历史。
+
+```json
+{"variants": {"combined": {"format": "native_schema", "context": "bounded_history_v1"}}}
+```
+
+`native_schema` 为当前固定 Qwen 模板传入 `bash(command)` 工具定义，并使用相应提示；解析器和隔离执行器不变。`bounded_history_v1` 根据真实模板 token 数移除较早的完整交互对，保留任务和近期记录。它只裁剪发往模型的请求，完整审计轨迹和预算仍保留。每次请求记录裁剪前后 token 数、移除轮数、格式检查和耗时，失败的上下文请求也单独留证。
+
+这套格式说明包含当前 Qwen 的 XML 约定。换模型时必须重新检查模板和解析兼容性；上下文裁剪也必须通过新任务对照，不能只凭“没有超限”推断效果改善。
 
 ## 实验、代码和模型版本
 
