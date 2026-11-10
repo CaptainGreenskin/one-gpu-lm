@@ -1,0 +1,11 @@
+{
+  "same_source_snapshots_as_015": true,
+  "same_task_semantics_as_015": true,
+  "changed_task_fields": [
+    "split",
+    "evaluation_role"
+  ],
+  "previous_root_modified": false,
+  "model_generation_before_freeze": false,
+  "dependencies": "reuse existing015 Python/Node installations; version and lock receipts recorded, no dependency installation"
+}

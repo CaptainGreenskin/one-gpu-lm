@@ -42,6 +42,8 @@
 {"variants": {"combined": {"format": "native_schema", "context": "bounded_history_v1"}}}
 ```
 
+[016](../experiments/016-tool-roundtrip/)增加显式 `native_roundtrip` 格式策略：将已执行且核对一致的命令序列化为 `assistant.tool_calls`，结果按 `role=tool` 回传。原始审计消息保留；格式错误反馈不转换，不修补或重执行命令。该策略仍需独立任务验收，默认入口保持不变。
+
 `native_schema` 为当前固定 Qwen 模板传入 `bash(command)` 工具定义，并使用相应提示；解析器和隔离执行器不变。`bounded_history_v1` 根据真实模板 token 数移除较早的完整交互对，保留任务和近期记录。它只裁剪发往模型的请求，完整审计轨迹和预算仍保留。每次请求记录裁剪前后 token 数、移除轮数、格式检查和耗时，失败的上下文请求也单独留证。
 
 这套格式说明包含当前 Qwen 的 XML 约定。换模型时必须重新检查模板和解析兼容性；上下文裁剪也必须通过新任务对照，不能只凭“没有超限”推断效果改善。

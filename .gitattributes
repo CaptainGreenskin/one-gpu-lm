@@ -6,3 +6,6 @@ experiments/014-coding-quality/results/**/*.csv -text whitespace=cr-at-eol
 experiments/014-coding-quality/results/**/*.svg -whitespace
 experiments/015-agent-interface/results/**/*.csv -text whitespace=cr-at-eol
 experiments/015-agent-interface/results/**/*.svg -whitespace
+
+experiments/016-tool-roundtrip/results/**/*.csv -text whitespace=cr-at-eol
+experiments/016-tool-roundtrip/results/**/*.svg -whitespace
