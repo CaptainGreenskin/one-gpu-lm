@@ -1,4 +1,6 @@
 import copy
+import importlib.util
+from pathlib import Path
 import unittest
 
 from one_gpu_lm.common.actions import SYSTEM, parse_action
@@ -7,6 +9,17 @@ from one_gpu_lm.common.agent_policy import (BASH_TOOLS, NATIVE_EXAMPLE, format_f
 
 
 class InterfaceContracts(unittest.TestCase):
+    def test_four_arm_order_balances_positions_without_duplicate_tasks(self):
+        path=Path(__file__).resolve().parents[1]/'experiments/015-agent-interface/run.py'
+        spec=importlib.util.spec_from_file_location('interface_run',path)
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        arms=['baseline','format','context','combined'];ids=[str(i) for i in range(24)]
+        plan=module.schedule(ids,arms)
+        self.assertEqual(len(plan),96)
+        self.assertEqual(len(set(plan)),96)
+        for position in range(4):
+            self.assertEqual({a:sum(plan[i][1]==a for i in range(position,96,4)) for a in arms},dict.fromkeys(arms,6))
+
     def test_default_is_identical_and_no_unregistered_policy(self):
         self.assertEqual(system_prompt(validate_policy()), SYSTEM)
         self.assertIn('fenced bash', format_feedback(validate_policy()))

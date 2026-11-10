@@ -15,6 +15,7 @@ from one_gpu_lm.common.runstate import atomic_json, gpu_lock_path, single_writer
 from one_gpu_lm.common.source import campaign_sources
 from one_gpu_lm.common.telemetry import Telemetry
 from one_gpu_lm.serving.client import request
+from one_gpu_lm.evaluation.tasks import file_manifest
 
 
 def terminate(process):
@@ -49,6 +50,10 @@ def main():
     for path, digest in protocol['frozen_files'].items():
         if sha256(root / path) != digest:
             raise ValueError('Changed frozen input: ' + path)
+    snapshots = json.loads((root/'source-snapshots.json').read_text())
+    for slug, expected in snapshots.items():
+        if file_manifest((root/'sources'/slug).resolve()) != expected:
+            raise ValueError('Pinned repository snapshot changed: ' + slug)
     tasks_path = root / 'private/tasks.json'
     tasks = json.loads(tasks_path.read_text())['tasks']
     admission = json.loads((root / 'runs/admission/admission.json').read_text())
