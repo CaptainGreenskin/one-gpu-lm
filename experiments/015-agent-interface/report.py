@@ -115,10 +115,22 @@ def assess(campaigns,protocol,inventory):
 def render(root):
     read=lambda name:json.loads((root/name).read_text())
     protocol=read('protocol.json');inventory=read('task-inventory.json');controller=read('controller.json')
+    preregistration=read('preregistration.json');launch=read('launch.json')
+    if (preregistration['protocol_sha256']!=sha256(root/'protocol.json')
+            or preregistration['commit']!=launch['source_commit']
+            or not preregistration['anonymous'] or preregistration['ci']['conclusion']!='success'):
+        raise ValueError('Missing pre-rollout public protocol verification')
+    frozen_inventory=Path(__file__).resolve().parent/'preflight/task-inventory.json'
+    if sha256(root/'task-inventory.json')!=sha256(frozen_inventory):
+        raise ValueError('Task roles differ from the preregistered public inventory')
     if not controller['complete'] or controller['protocol_sha256']!=sha256(root/'protocol.json') or controller['completed_runs']!=protocol['execution']['expected_model_task_runs']:
         raise ValueError('Controller did not complete frozen study')
     if sha256(root/'admission.json')!=protocol['admission_sha256']:
         raise ValueError('Admission changed')
+    controls=read('loaded-controls.json')
+    if (not controls['complete'] or controls['task_spec_sha256']!=protocol['task_spec_sha256']
+            or len(controls['clean'])!=protocol['repository_count'] or not all(r['passed'] for r in controls['clean'])):
+        raise ValueError('GPU-loaded control evidence incomplete')
     for local,remote in [('profile.json','experiments/015-agent-interface/model-profile.json'),('sources.json','experiments/015-agent-interface/sources.json'),('source-snapshots.json','source-snapshots.json'),('template-context-probe.json','template-context-probe.json'),('model-verification.json','model-verification.json')]:
         if sha256(root/local)!=protocol['frozen_files'][remote]:raise ValueError('Frozen evidence changed: '+local)
     artifact=read('artifact.json')
