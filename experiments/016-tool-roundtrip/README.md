@@ -1,5 +1,7 @@
 # 016 · Native tool round trips
 
+**Completed:** [48-run paired results and curves](results/2026-11-11/). Roundtrip improved historical successes from 9/24 to 11/24 and fixed the target, but introduced three regressions; the frozen gate failed. No default change, deployment or generalization claim. The unchanged schema control also differed from 015 on one task.
+
 This is a **historical regression diagnostic**, not a fresh benchmark or weight-training run. All 24 tasks have already been observed in [015](../015-agent-interface/results/2026-11-10/). No task text, mutation, grader or source snapshot changes. The known `new-json-undefined` regression motivated this experiment: its native-schema trajectory repeated read commands and exhausted 12 requests without changing source.
 
 015 supplied a native tool schema but sent observations as ordinary user messages. The pinned model template distinguishes tool responses. Here we compare:
@@ -23,5 +25,7 @@ python experiments/016-tool-roundtrip/run.py --root /your/prepared/root --out ru
 ```
 
 The runner refuses an existing output. Use the [shared evaluation contract](../../one_gpu_lm/README.md) and freeze new private task/source/dependency identities for your own authorized repositories. Raw task definitions, traces, answers, source snapshots and model weights are not released, so exact score reconstruction needs private inputs; the workflow can be reused with your own inputs.
+
+The [tool conversation contract](../../docs/tool-conversation-contract.md) explains the single-action boundary, trusted executor metadata, tokenizer replay and checks required when changing the base model.
 
 References: [Transformers tool conversation API](https://huggingface.co/docs/transformers/chat_extras), the pinned local chat template (hash retained in preflight), and [source provenance](sources.json). Original harness code is MIT; upstream source and model rights remain separate.

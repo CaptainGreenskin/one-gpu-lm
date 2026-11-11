@@ -1,0 +1,1331 @@
+{
+  "schema_version": 1,
+  "purpose": "post-run structural observations on every task; no command execution, score changes or parser changes",
+  "raw_outputs_public": false,
+  "parser_sha256": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+  "audit_source_sha256": "46ac4c9774966e3cbbb5f2c91ae9f6c182edbc9c98674807f9a08c0a8b604f32",
+  "variants": {
+    "schema": [
+      {
+        "id": "new-jmes-filter",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "c8723966942584db5d9c302a20d98ee90993d010c84d4f36ff793ba24aab88ff",
+        "grader_log_sha256": "ed0a8cc395e333b722ec22829ceb977c7e45c00e13563d35060b5ffcac1319eb"
+      },
+      {
+        "id": "new-jmes-multiselect",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "2ab9de0ecc5827919688ba78d8753aab8191c6f9912f7ff7328a21eb4d3c3274",
+        "grader_log_sha256": "f76d76f9e86e1640f6ea2c3104f01971f561d5f0c6d726a879861f0fad69c726"
+      },
+      {
+        "id": "new-jmes-sort-expression",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "68417d427f9b6f76bb43efd4f62f2a0809937788663724a9a5982de9f5da0fbb",
+        "grader_log_sha256": "c4f39f4827bb0539a70f0b00a6e90a26bb690d508a68daa7d9c246c3f7fc40a7"
+      },
+      {
+        "id": "new-jmes-raw-string",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "ffd683b7c6d5e34ccdf7481045bd0becf6233cb3a43161f071265693cd17c83a",
+        "grader_log_sha256": "a41343184173f733e36c741991baa1466bb18df73e6d79d8bbd9598fb191811d"
+      },
+      {
+        "id": "new-jmes-index-slice",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "e45ca95ff03ca69dd140b761391bdd189e722a2b14ae540c594b1cbe4e063988",
+        "grader_log_sha256": "a84a525d2db7f46af4151c925988e45c53dcbd8a00f49c473c6fe94d7201c02f"
+      },
+      {
+        "id": "new-jmes-pipe-map",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 2,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "508214862df399064a6911f03c7f0479eedd43849b390d67d471ea8a5e56a1b1",
+        "grader_log_sha256": "0bb2f1adc6bd2f6348cee6bd8719f2f3ec0511e6276c7f0cfc4222fc82a14ca2"
+      },
+      {
+        "id": "new-json-key-order",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 6
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "34ba344de69bd9e750eccb18eee0ecbc1340da4e87e10d8e97f76cfc0dae074d",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-comparator",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 8
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "8364a79be3f2e01749c7dbe71fd0d2082c1ee3d495f57161fc7468b8a9e8efb1",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-undefined",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 3,
+        "consecutive_repeated_commands": 3,
+        "maximum_identical_command_streak": 4,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "ca5f7a71a494ad4b1ab87b1ec31449f5d7937dd938b9bc68800518230b5f479f",
+        "grader_log_sha256": "1eb2e46732cdbc8d9d7094c3a77f3b9232692cdd8d68322ef3fb5c8aa458cc42"
+      },
+      {
+        "id": "new-json-to-json",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 6
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "56508da1d9767e68d6796ca1bb31fa789584ea7f869ce18dfdcaf3f40ac2df3c",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-nonfinite",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 7
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "e182615a71e6a68011080f43c50146dab0be71e8a3664f6deb4422b11b530bb1",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-cycle-reuse",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 4
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "4e44e6d9e90097d23bf223a3d286f6d26af32085f12520d2cbbc28580414397f",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "fresh-signed-base64",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 5
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "a7e4c75c6598072691ab558c8a633f6893d4077056bd1e38aaabb000628b5674",
+        "grader_log_sha256": "19f6f01a1254db27989a53dec97cdd626572e6fc6d49a8457ec12cb0431b5a42"
+      },
+      {
+        "id": "fresh-signed-key-derivation",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "da682e8fdda8096e501d56d0505bf6159b180c95b7da92303e54c2b874de13c8",
+        "grader_log_sha256": "e0ff8902ac542a9105af00e15eabaa1f4db9bc57035582bfed1d143e5de30384"
+      },
+      {
+        "id": "fresh-signed-fallbacks",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "6583b38c56ec7ad0aee61fc3d76a5a38a556d1b348b76abb8ce440acfc122524",
+        "grader_log_sha256": "513086426de805959cd241cb79ed7ad23e2341782c8f18fcfcc04d3884024f21"
+      },
+      {
+        "id": "fresh-signed-serialize",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "7d820d6238e86e911283d00241b90e1eb30d54435b527bd9ffb1784b4008a2c1",
+        "grader_log_sha256": "eee0790861e1b00a64fd340c488091dbbfa7d2dfa9969def45b0cb7768cb37f4"
+      },
+      {
+        "id": "fresh-signed-url-compression",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "invalid_at_output_limit": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 9,
+          "qwen_tool_call_rejected": 1
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 0,
+              "tool_call_open": 1
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "d1d401798c49fe4123d8f2f1ffb8992d19ab47ce416605d615a062c89d14a741",
+        "grader_log_sha256": "19f6f01a1254db27989a53dec97cdd626572e6fc6d49a8457ec12cb0431b5a42"
+      },
+      {
+        "id": "fresh-signed-timestamp",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "3655e83e460320f651c5864ff59b0c9638ca9994c3099184e1929002719888db",
+        "grader_log_sha256": "102bf3b9c66e2fae01f2cf1096de232a889696b6bb50f728d48613fe86ab2730"
+      },
+      {
+        "id": "fresh-query-decode",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "704d6936f7da2c267af3f38216e5fec4c7613a76af3a53f9551accb6d76d29d1",
+        "grader_log_sha256": "578a13e27c5ee01fb643b8acbc64ecccb02aa19b56ea97f1d427e4761b7b5d5b"
+      },
+      {
+        "id": "fresh-query-sparse",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "0802a16b86571d6c7b881af96b51e81ed6316ea6bda526465444ba64d6dc4468",
+        "grader_log_sha256": "74d3208bd81a6be1e5e958ae8db96a71052faa8360a644e32a8efe0689f1239f"
+      },
+      {
+        "id": "fresh-query-null",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 9
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "fc7336fcb6436e5481467d6fcc845d0656d98229e42b22dbaef1e224e39c1dfc",
+        "grader_log_sha256": "81538cfafbc30ec18fc2b32d376ac84cd459da482ddbb4a93135509476580973"
+      },
+      {
+        "id": "fresh-query-combine",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "RuntimeError",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [
+          "context_limit"
+        ],
+        "trajectory_sha256": "aff16dcde8a6733e9ef7e93df64b8795d190efbeb5e499f26928d659bef6fd79",
+        "grader_log_sha256": "8af529e9df4870c5734aa4b9098adde3154574ef33fc43530b71d5b0c7bfb940"
+      },
+      {
+        "id": "fresh-query-plain-objects",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "98ed7ab9a5c63173e4bd227d366064ae586338bc53876770c34cdb0b9a3786c6",
+        "grader_log_sha256": "ce9519c8ab3cb5b877747abda581f4a294f48a8d3517501c2beea267ddfe4282"
+      },
+      {
+        "id": "fresh-query-sort",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "c330c021d819cd80e0b69b97e7c4c2e4b1851e0a0754d5e71300d03c2d4320f9",
+        "grader_log_sha256": "81538cfafbc30ec18fc2b32d376ac84cd459da482ddbb4a93135509476580973"
+      }
+    ],
+    "roundtrip": [
+      {
+        "id": "new-jmes-filter",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "0ebcf84af5382c344393fb8fc09af61db77d75538c8a1be05b414dd6740eecb6",
+        "grader_log_sha256": "84231128ab7dbfbd96a6a9dfe7b78c9412e37cdf56141a2bb771c217e31b1ee4"
+      },
+      {
+        "id": "new-jmes-multiselect",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "2cd0992b61dad5cc6dd9a204bdceae04d2060b20c1286613e0897a8e87913a98",
+        "grader_log_sha256": "cc43d95351474eb823e072c2c040daaa2b85c66b3605aac8f59cbb5f7256935c"
+      },
+      {
+        "id": "new-jmes-sort-expression",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "79477b0a85788d324542ad514e54e0972b227fdd3c260ea2b67b0febc001db7e",
+        "grader_log_sha256": "ff7bc60fd2252b7a3c6d18094ad38ecdba6271a90ae69f56c873ad79ff4e677f"
+      },
+      {
+        "id": "new-jmes-raw-string",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "2ec9315a6f46701328aaef7df882ffa003e0b561c511bcbac59ed9fbdffd0e94",
+        "grader_log_sha256": "43c8622b907139d631659ad3d442d2bef306b81f491efe0cb5ebbbb599440eb3"
+      },
+      {
+        "id": "new-jmes-index-slice",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "081f3f994ef13228209a197f38a8904c25f83c988866435da830d7809f04194c",
+        "grader_log_sha256": "3bf03aef4175eea4aad8516f5b999e7c1672b2139d39d3983dd3b4cff93ad490"
+      },
+      {
+        "id": "new-jmes-pipe-map",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "dfed8c1ea27dd0359dec22bf42d5cef686e2fccc795a9172ff5c9e185416a07e",
+        "grader_log_sha256": "aafe522afb59244d06399b845d5515b063c5fd7337ac6521f4a74c097d1915d4"
+      },
+      {
+        "id": "new-json-key-order",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 6
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "0a6c67368146a910477e10f61d1f9b10f2d829a585ea6990428a69424c65baf8",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-comparator",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 7
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "78d9ff4946007650870c1717f9be8c10a727b9f09a582e309ad102648c11f72c",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-undefined",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "dfea71723b7a6a5046557b53859b943f1f433a26d74e9c6395a294b24b388961",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-to-json",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 6
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "599520c87daa065e1c52e7a08b33044746b710f1f993feacd80e5a271c4f9653",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "new-json-nonfinite",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 8,
+        "consecutive_repeated_commands": 8,
+        "maximum_identical_command_streak": 9,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "ea8960e92b21b778d9da023bfd9fbba58858ed6ecae60c21110c7cb68e536f12",
+        "grader_log_sha256": "831c3bf9ecd93505dab6dcc45ba69cc84745cd8cb4b0a122d89852b554383031"
+      },
+      {
+        "id": "new-json-cycle-reuse",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 4
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "a6fd65354082711f085f5164ad915f6278d08d4ab387f330028d543883ea79a2",
+        "grader_log_sha256": "62c30e9a92006851215a2934696896ee782c283c86ea24aeee4df9245c955362"
+      },
+      {
+        "id": "fresh-signed-base64",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 5
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "a5d295e1458535614168dd7b5fc0d5a68b92b56c6b81c06a9f1472eb4ff67e92",
+        "grader_log_sha256": "fd491a25affae43287210b62ff00e9d3f6f6138544ecabb92f9a0106e962f3f2"
+      },
+      {
+        "id": "fresh-signed-key-derivation",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "70c63410293a286c7092c83919620f46ce86b171657d946770b8aa949623ce86",
+        "grader_log_sha256": "6e0fb2505333d34691804aa903f9dc2910c59ca6408a0b17426a2cdb76774213"
+      },
+      {
+        "id": "fresh-signed-fallbacks",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "67a8573cde085664f389ac12f795696de5c5ada9ab91325d0da027e5b2698801",
+        "grader_log_sha256": "304bd3ff85cd47cb3f3031bd419b635d08825202a377d04bad9bca6ac33b30f7"
+      },
+      {
+        "id": "fresh-signed-serialize",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 10
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "ce404702f7da97b666911cacdb8b9ec67d4208c3332c405715486ab6cd9b0912",
+        "grader_log_sha256": "19f6f01a1254db27989a53dec97cdd626572e6fc6d49a8457ec12cb0431b5a42"
+      },
+      {
+        "id": "fresh-signed-url-compression",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "5084134d61dda9471c19a94d07afb26453fb0549b68a8ec8b2e5bade68b4938e",
+        "grader_log_sha256": "a66e1a857e2a25e88ea9fcb2375ab52572c5e7e4a6ac1e74fea0c40eee1a16c6"
+      },
+      {
+        "id": "fresh-signed-timestamp",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 6
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "1884031bced909ac7430b112dab7d93d51c064c5f41afa7d90636390ca7bad00",
+        "grader_log_sha256": "19f6f01a1254db27989a53dec97cdd626572e6fc6d49a8457ec12cb0431b5a42"
+      },
+      {
+        "id": "fresh-query-decode",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "edffc4478587e0618b756f2a9326d26d68242e24bdaeaad25d140c8a9f8baca0",
+        "grader_log_sha256": "578a13e27c5ee01fb643b8acbc64ecccb02aa19b56ea97f1d427e4761b7b5d5b"
+      },
+      {
+        "id": "fresh-query-sparse",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "c83334096a774d0122f888423d0b51efebf08b35e63e55499dbc83651ddb0401",
+        "grader_log_sha256": "ae92fc782dda9410e2267be7dfaded46a1c858dcf44a7850ec03582ff97a3ac5"
+      },
+      {
+        "id": "fresh-query-null",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {
+          "other_rejected_native_shape": 1
+        },
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_rejected": 1,
+          "qwen_tool_call_accepted": 11
+        },
+        "parser_error_counts": {
+          "Expected exactly one nonempty bash action": 1
+        },
+        "rejected_shapes": [
+          {
+            "shape": {
+              "command_parameter": true,
+              "fenced_bash": false,
+              "function_bash": true,
+              "tool_call_close": 2,
+              "tool_call_open": 2
+            },
+            "count": 1
+          }
+        ],
+        "runtime_categories": [],
+        "trajectory_sha256": "9706b980cbda7128c77910def413ee6c5957ccab96e998de098421c7cac85057",
+        "grader_log_sha256": "81538cfafbc30ec18fc2b32d376ac84cd459da482ddbb4a93135509476580973"
+      },
+      {
+        "id": "fresh-query-combine",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "06ef14aeec784ac0d93b83beb82871be03e61b87691193d2943b218098f5f5e6",
+        "grader_log_sha256": "8af529e9df4870c5734aa4b9098adde3154574ef33fc43530b71d5b0c7bfb940"
+      },
+      {
+        "id": "fresh-query-plain-objects",
+        "passed": true,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "Submitted",
+        "grading_returncode": 0,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "ok",
+        "modified_source_files": 1,
+        "upstream_test_failure_signal": false,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 8
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "a209165f199b4e9fb5e5b3897500725bf07d89baa138a6ab2e9316e8d02dd4c9",
+        "grader_log_sha256": "81538cfafbc30ec18fc2b32d376ac84cd459da482ddbb4a93135509476580973"
+      },
+      {
+        "id": "fresh-query-sort",
+        "passed": false,
+        "split": "dev",
+        "format_categories": {},
+        "exit_status": "LimitsExceeded",
+        "grading_returncode": 1,
+        "native_turns_verified": true,
+        "repeated_accepted_commands": 0,
+        "consecutive_repeated_commands": 0,
+        "maximum_identical_command_streak": 1,
+        "grading_reason": "runtime_error",
+        "modified_source_files": 0,
+        "upstream_test_failure_signal": true,
+        "action_format_counts": {
+          "qwen_tool_call_accepted": 12
+        },
+        "parser_error_counts": {},
+        "rejected_shapes": [],
+        "runtime_categories": [],
+        "trajectory_sha256": "cf9bffab7abc3e4a8160f8417b644d416cfce4bc516bd6a10d9bb36ad949737b",
+        "grader_log_sha256": "9bfc9fe84a8547e938c748b4b29a4cbdcf028cbd0a47aec270b67db8a1ecd686"
+      }
+    ]
+  },
+  "campaign_sha256": {
+    "schema": "ca05e5199341456af1e016589ede9fa8f882206f02f6f20381b6aabcf0126291",
+    "roundtrip": "057d540d7ca2add991501b181fb0991797be2e8e935df1b84d939de3a04f1d17"
+  }
+}

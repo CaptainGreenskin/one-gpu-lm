@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "experiment": "016-tool-roundtrip",
+  "status": "frozen_before_model_rollouts",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "weight_updates": 0,
+  "adapter": false,
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "variants": {
+    "schema": {
+      "format": "native_schema",
+      "context": "full"
+    },
+    "roundtrip": {
+      "format": "native_roundtrip",
+      "context": "full"
+    }
+  },
+  "factor_definitions": {
+    "roundtrip": "After an executed action, render the validated command as assistant.tool_calls and its recorded observation with role=tool. Preserve prose and exact command/observation content. System/error prompts, tool schema, strict action parser, model and budgets unchanged. Bundles call and result serialization; does not isolate their individual effects."
+  },
+  "comparisons": [
+    "roundtrip-schema"
+  ],
+  "ordering": "All24 already observed tasks in original015 order; alternate schema/roundtrip first per task; one loaded unchanged base, no cross-request KV cache.",
+  "primary": "Paired historical regression success and regressions across all24 tasks. No fresh holdout or generalization claim.",
+  "exposure": {
+    "all_tasks": "All24 already observed in015; inherited14holdout now historical. No task descriptions, mutations, graders or snapshots changed. Only split/evaluation_role relabeled to historical. The known new-json-undefined regression motivated this intervention.",
+    "no_new_model_scores_before_freeze": true,
+    "no_teacher_api": true
+  },
+  "promotion": {
+    "deployment_allowed": false,
+    "independent_replication_allowed": false,
+    "next_fresh_study_candidate_requires": {
+      "target_task": "new-json-undefined",
+      "target_passes": true,
+      "minimum_net_historical_gain": 1,
+      "maximum_regressed_tasks_vs_concurrent_control": 0
+    },
+    "meaning": "Diagnostic candidate only; a new independently frozen holdout is required for a generalization or adoption claim."
+  },
+  "execution": {
+    "max_pipeline_seconds": 7200,
+    "max_task_seconds": 1000,
+    "max_backend_start_seconds": 300,
+    "gpu_count": 1,
+    "expected_tasks_per_variant": 24,
+    "expected_model_task_runs": 48
+  },
+  "publication": {
+    "original_code_license": "MIT",
+    "source_licenses_separate": true,
+    "raw_tasks_trajectories_source_snapshots": "private",
+    "weights": "private",
+    "metrics_curves_protocol_code": "GitHub"
+  },
+  "source_workspace_exclusions": {
+    "ljharb/qs": "Omit dist bundle, an unmodified duplicate of target source, from agent/grader snapshots"
+  },
+  "failure_policy": "Preserve controller failures. Recovery only at completed-step boundaries with unchanged artifacts and original deadline. Never rerun a scored task or tune after scoring.",
+  "repository_count": 4,
+  "evaluation_task_counts": {
+    "dev": 24,
+    "test": 0
+  },
+  "prior_public_commit": "e0489fd6b55d0274ac6ddc52001bcf38c82d1f26",
+  "prior_protocol_sha256": "94af8d0f9b245cd6b0025bd2f919b8eecb0ea7fa93b7d77504ce58800e3fb267",
+  "frozen_utc": "2026-11-10T23:22:27.058533+00:00",
+  "frozen_files": {
+    "agent-packages.json": "5391e355393b4f38c0b54663cfea9060b61bf1d1be6928a35e7ee8a60921594a",
+    "environments/pro6000-cu130.json": "699c68a8356e7ee7dc9cd42ebc44e57288e9683607347f882e28c04e98ca3408",
+    "experiments/011-coding-model-selection/weights-manifest.json": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "experiments/016-tool-roundtrip/model-profile.json": "fa5875cb5148cb75dd067f850eb06b881a3b0dcc9a83b95831f44f48b256a35f",
+    "experiments/016-tool-roundtrip/probe.py": "b2bd8c2ad3f27291520ead1d5cbbf10639cd855953b08f292b1542fd90a87298",
+    "experiments/016-tool-roundtrip/run.py": "ac789bb231a4200e45710d9080499f2c5e516d5edfbac4787a387b08828035ea",
+    "experiments/016-tool-roundtrip/sources.json": "bf5b4b6f9e16cea4cd74612e720667cee073a9c88197c354bc7c19ca6ecab0cc",
+    "model-verification.json": "474ad9b1eda9f6e704d794ffb07407d8004fee545b8de8dcfbfac2bcb6dbf206",
+    "node-deps/ljharb--qs/package-lock.json": "319a22a6e6a896528b3748864ab9e81074ae4f800e35135d58c583117902ad48",
+    "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+    "one_gpu_lm/__main__.py": "9ddc85e600937827ce9455569e5cd85a9a7f1eac9b0ae09a7f213fab32675969",
+    "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+    "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+    "one_gpu_lm/common/agent_policy.py": "0f4eb61a49cb3dc01e88a9c370011eacc2618d73bc8367876dc617b78eaa0ec6",
+    "one_gpu_lm/common/checkpoints.py": "cd8b70e378564572db38e59d0d23c7cec0e53625bad0ef3c7f6fcc7817fda4ab",
+    "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+    "one_gpu_lm/common/runstate.py": "32a4fdea1460392f8117105b4b3f9f8b6d2c789aa2a00bfb3ec31e1e0e815bbc",
+    "one_gpu_lm/common/source.py": "46943a7960dd7beb85a8fb91f0ea46885f86d5b4089ce5c9b6ef3f7a0d453388",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450",
+    "one_gpu_lm/common/tool_history.py": "2dd0a40d8607de752c896cf3dd77a276ef60aba9817ea448b7bd4af84611c378",
+    "one_gpu_lm/common/training_data.py": "0c25786eb77ff877fd1d3bf365b137b04db26271a354d1cdd638170cf5178d20",
+    "one_gpu_lm/data/__init__.py": "360f60f6bc5cae7ad8457b07e023ab3874e9d8746fc8fbe07ebe66f701be5f84",
+    "one_gpu_lm/data/balanced.py": "98656851e191ae3f24b39580671dbf687dc87bdd7cdc49b63385246dc26a2ddc",
+    "one_gpu_lm/data/function_records.py": "583193378243500a36225b45659d9dd42a37392d78985a60025e7b8a2771f2a5",
+    "one_gpu_lm/data/repository.py": "9397fc2bcd1a9554dc714bc38347e7a9a8acbbd682cab5321294add4cd330965",
+    "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+    "one_gpu_lm/evaluation/agent.py": "b8e9591847c72fb165cba3af775f4434733c653fe3fdfae27a54746e3132dd57",
+    "one_gpu_lm/evaluation/audit.py": "b3311ae8edf74f8b7a9c1a22859e3b75f7a902de20760f674b7efe69060583fa",
+    "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+    "one_gpu_lm/evaluation/campaign.py": "cd05407cb2dd38592bbf6d21aa7059bb0b6cc277c22d9ca5c22529e30546e041",
+    "one_gpu_lm/evaluation/environment.py": "938bcac1e9696c8920b758c6f943f843e2b901682ac777a608a202ef32d5791f",
+    "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+    "one_gpu_lm/evaluation/install_node_deps.py": "3412a5136f71da4c4dd613bfd6f00ee04e0194812410654848c93e4ca88bda45",
+    "one_gpu_lm/evaluation/preflight.py": "fbc02a4a7637b589555b45f8bcf78bcccf3ac1ec227027d3a205a09bec609918",
+    "one_gpu_lm/evaluation/regression.py": "445bf77edcef56f3717e8694dba351408b727a9ed510ff038f4a1c2a63e5e83c",
+    "one_gpu_lm/evaluation/report.py": "e7e02fb4bc3f90f718376028957d4a191200cef2135eddc9031932282652daf5",
+    "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+    "one_gpu_lm/evaluation/tasks.py": "cb298493399728008b5b51eeabe5177bd07618bb4fc307aaafc55782f3b90542",
+    "one_gpu_lm/evaluation/training_artifact.py": "100aa8ae253cd6a5456f6930931049459638cd7fde1508fdeb3419733ce7ac71",
+    "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+    "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+    "one_gpu_lm/models/hf_runtime.py": "90c18f8a0c34e10183e43641d525ff080f8fe824eeeb11cc25caabe1b372813a",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+    "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+    "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a",
+    "one_gpu_lm/training/__init__.py": "e23aaab58f3558fa74e1b71387e6bea4861b07e9f65b8d7c5b637dd1a1fdc65f",
+    "one_gpu_lm/training/collect.py": "134f4bf137491ff4897af2a825a2b18716364fb7b159a46820429eda8a934380",
+    "one_gpu_lm/training/config.py": "28c352617a4708ccc587b0935ea060f0471db501d1815af185cf930c7c5dc784",
+    "one_gpu_lm/training/doctor.py": "2894b247dfaedfbae97d4622b1a6536227a2c77df1216227c2e86c88664db2ad",
+    "one_gpu_lm/training/repository_lora.py": "3050337c4de8761486da4d2b919727a94ced25b5fe42a893a8a152aa2e2b7aef",
+    "one_gpu_lm/training/runner.py": "6f6f2c6e26c26af48965e756fee167242ff3e41c90d4d480a45d066236eda9b8",
+    "one_gpu_lm/training/state.py": "f7d0fdff7563bdae359af31c49e0ba6d67e6c5576c86f96298ea68c091f5d911",
+    "one_gpu_lm/training/status.py": "6f36b6892efe4ec1dd648a39f5162d4ebad705a429a372ae1973932141a421a1",
+    "one_gpu_lm/training/verify_resume.py": "6f0637c8004a24b0ae4659574a2c599248bc1c214174c09a20f69c5fc3e859d3",
+    "preparation-reuse.json": "e094a34e61e21de6ab98316544588c94874ad189372affafba43e1a321f60071",
+    "private/tasks.json": "b33d681b5ab4b84703bdd22321d36fb4ce6f0d3208f7250a814b3d895d9856f2",
+    "runs/admission/admission.json": "187c4c69d7aa25c8a14f2a8def45d5fd177b589c8a746b3036db08745991fdb9",
+    "runtime.json": "c526f78b6632c00127292fb82dbc3b6b9f77c3b7f41603b989e82076aa5555ed",
+    "source-snapshots.json": "91e95193de00e42116d84a7063190f29560ec6102154311abdfbdb4b6033bebe",
+    "template-roundtrip-probe.json": "1d207c26791218c25fab9fff49c588c0fe214738319c99c637e9a1e60d0caa94"
+  },
+  "admission_sha256": "187c4c69d7aa25c8a14f2a8def45d5fd177b589c8a746b3036db08745991fdb9",
+  "task_spec_sha256": "b33d681b5ab4b84703bdd22321d36fb4ce6f0d3208f7250a814b3d895d9856f2",
+  "excluded_before_model_scores": [],
+  "source_commit": "227cd17da0ab2d12180a1584cfca2f83af14a8e6"
+}

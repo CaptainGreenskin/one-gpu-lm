@@ -91,6 +91,7 @@ def render(root):
         categories=dict(sum((Counter(r['format_categories']) for r in rs),Counter()))
         if sum(categories.values())!=summary['totals'][arm]['format_invalid_calls']:raise ValueError('Audit/parser decisions mismatch')
         summary['totals'][arm].update(format_categories=categories,repeated_accepted_commands=sum(r['repeated_accepted_commands'] for r in rs),consecutive_repeated_commands=sum(r['consecutive_repeated_commands'] for r in rs),maximum_identical_command_streak=max(r['maximum_identical_command_streak'] for r in rs),task_controller_seconds=sum(s['seconds'] for s in c['stages'] if s['name']=='task' and s['variant']==arm))
+    summary['regression_details']=[{k:r[k] for k in ['id','exit_status','modified_source_files','repeated_accepted_commands','maximum_identical_command_streak']} for r in audit['variants']['roundtrip'] if r['id'] in summary['regressed']]
     summary['task_time_ratio']=summary['totals']['roundtrip']['task_controller_seconds']/summary['totals']['schema']['task_controller_seconds']
     hw=list(csv.DictReader((root/'telemetry.csv').open()));ts=[datetime.fromisoformat(r['utc']).timestamp() for r in hw]
     if not hw or len(hw)!=c['telemetry']['samples'] or not all(b>a for a,b in zip(ts,ts[1:])):raise ValueError('Incomplete or unordered hardware evidence')
@@ -101,6 +102,16 @@ def render(root):
     summary.update(time={k:c[k] for k in ['started_utc','finished_utc']},hardware=hardware)
     summary['time']['wall_seconds']=c['finished_epoch']-c['started_epoch']
     if summary['time']['wall_seconds']>p['execution']['max_pipeline_seconds']:raise ValueError('Original total time budget exceeded')
+    prior_rows={r['id']:r for r in prior['results']}
+    paired=[]
+    for left,right in zip(campaigns['schema']['results'],campaigns['roundtrip']['results']):
+        outcome='improved' if right['passed'] and not left['passed'] else 'regressed' if left['passed'] and not right['passed'] else 'both_passed' if left['passed'] else 'both_failed'
+        row={'id':left['id'],'repository':left['repository'],'exposure':'historical','outcome':outcome,'prior_015_format_passed':prior_rows[left['id']]['passed']}
+        for arm,result in [('schema',left),('roundtrip',right)]:
+            row.update({arm+'_'+key:result[key] for key in ['passed','calls','generated_tokens','seconds','tool_seconds','exit_status']})
+        paired.append(row)
+    with (root/'paired-outcomes.csv').open('w',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=list(paired[0]));writer.writeheader();writer.writerows(paired)
     calls=[]
     for arm,campaign in campaigns.items():
         for r in campaign['results']:
@@ -112,11 +123,13 @@ def render(root):
     import matplotlib
     matplotlib.use('Agg');import matplotlib.pyplot as plt
     matplotlib.rcParams.update({'svg.hashsalt':'one-gpu-lm-016','font.family':'DejaVu Sans'})
-    fig,axes=plt.subplots(1,3,figsize=(12,4),layout='constrained');colors=['#64748b','#0d9488']
+    fig,axes=plt.subplots(1,3,figsize=(12,4.5),layout='constrained');colors=['#64748b','#0d9488']
+    gate_label='met' if summary['candidate_for_new_holdout'] else 'failed'
+    fig.suptitle(f"Historical diagnostic: {len(summary['improved'])} gains, {len(summary['regressed'])} regressions; gate {gate_label}")
     for ax,key,title,label in zip(axes,['passed','format_invalid_calls','consecutive_repeated_commands'],['Historical task success','Rejected action generations','Consecutive repeated commands'],['Passed / 24','Requests','Identical accepted command pairs']):
         values=[summary['totals'][a][key] for a in ARMS];ax.bar(ARMS,values,color=colors);ax.set(title=title,ylabel=label);ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True)
         for i,v in enumerate(values):ax.text(i,v+.1,str(v),ha='center')
-        ax.set_ylim(0,max(1,max(values)*1.2))
+        ax.set_ylim(0,summary['historical_tasks'] if key=='passed' else max(1,max(values)*1.2))
     for ext in ['png','svg']:fig.savefig(root/('comparison.'+ext),dpi=160,metadata={'Date':None} if ext=='svg' else {})
     plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(10,4),layout='constrained')
@@ -131,6 +144,7 @@ def render(root):
     write_json(root/'report-environment.json',{'python':platform.python_version(),'matplotlib':matplotlib.__version__,'report_sha256':sha256(Path(__file__))})
     table='\n'.join(f"| {a} | {t['passed']}/24 | {t['format_invalid_calls']}/{t['generation_calls']} | {t['context_limit_requests']} | {t['consecutive_repeated_commands']} | {t['task_controller_seconds']/60:.1f} |" for a,t in summary['totals'].items())
     repo_table='\n'.join(f"| {repo} | {v['tasks']} | {v['passed']['schema']} | {v['passed']['roundtrip']} |" for repo,v in summary['per_repository'].items())
+    regression_table='\n'.join(f"| {r['id']} | {r['exit_status']} | {r['modified_source_files']} | {r['maximum_identical_command_streak']} |" for r in summary['regression_details']) or '| none | — | — | — |'
     label=lambda ids:', '.join(ids) if ids else 'none'
     verdict='Meets the diagnostic gate; requires a new independent holdout.' if summary['candidate_for_new_holdout'] else 'Does not meet the frozen diagnostic gate.'
     (root/'README.md').write_text(f'''# 016 · Native tool round-trip results
@@ -143,13 +157,21 @@ def render(root):
 
 ![Historical outcomes](comparison.png)
 
-Paired improvements: {label(summary['improved'])}. Regressions: {label(summary['regressed'])}. Net gain: {summary['net_gain']:+d}. Known target `{summary['target']['id']}`: {summary['target']['passed']}. Controller time ratio: {summary['task_time_ratio']:.3f}×. Every task is retained, including failures. Higher totals cannot erase individual regressions.
+Paired improvements: {label(summary['improved'])}. Regressions: {label(summary['regressed'])}. Net gain: {summary['net_gain']:+d}. Known target `{summary['target']['id']}`: {summary['target']['passed']}. Controller time ratio: {summary['task_time_ratio']:.3f}×. Every task is retained, including failures. Higher totals cannot erase individual regressions. [Paired outcome table](paired-outcomes.csv) includes each task's success, calls, generated tokens, recorded task seconds (including grading), tool seconds and previous control outcome.
 
 | Repository | Historical tasks | schema | roundtrip |
 | --- | --- | --- | --- |
 {repo_table}
 
 The concurrent schema control compared with 015 format: improvements {label(summary['concurrent_control_vs_015_format']['improved'])}; regressions {label(summary['concurrent_control_vs_015_format']['regressed'])}. This is a repeat-variation check, not a new randomized replicate or a best-of selection. A single greedy run can still vary with numerical/runtime behavior.
+
+## Regression inspection
+
+| Regressed task | Roundtrip exit | Final editable source files changed | Longest identical command streak |
+| --- | --- | --- | --- |
+{regression_table}
+
+The final editable-source state is compared with the initial defective workspace; zero does not exclude temporary edits later undone. The known target's repair is useful diagnostic evidence, but does not establish that the original failure was solely caused by message roles. Inspect new regressions and stalled progress before designing another frozen comparison. This run does not authorize automatic adoption, a new GPU run or a post-hoc change to the gate.
 
 ## Intervention and evidence
 

@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-10T23:26:36.824628+00:00",
+  "started_epoch": 1794353196.8246477,
+  "deadline_epoch": 1794360396.8246477,
+  "complete": true,
+  "protocol_sha256": "940b69d89aafa7ea2a38bdd8e2ad32959ed2d7868268455b4730d2ec598a2eb4",
+  "completed_runs": 48,
+  "schedule": [
+    {
+      "id": "new-jmes-filter",
+      "variant": "schema"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "schema"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "schema"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "schema"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "schema"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "schema"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "schema"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "roundtrip"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "schema"
+    }
+  ],
+  "stages": [
+    {
+      "name": "loaded-controls",
+      "seconds": 4.824194022046868
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "schema",
+      "seconds": 58.54037092102226
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "roundtrip",
+      "seconds": 60.34414394904161
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "roundtrip",
+      "seconds": 70.61516901903087
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "schema",
+      "seconds": 63.300615670974366
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "schema",
+      "seconds": 61.596872207999695
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "roundtrip",
+      "seconds": 69.2622418209794
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "roundtrip",
+      "seconds": 59.542379318038
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "schema",
+      "seconds": 60.743222933029756
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "schema",
+      "seconds": 61.39770186599344
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "roundtrip",
+      "seconds": 64.5522535360069
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "roundtrip",
+      "seconds": 62.90140944800805
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "schema",
+      "seconds": 90.9608703830163
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "schema",
+      "seconds": 42.20589870202821
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "roundtrip",
+      "seconds": 42.5068424490164
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "roundtrip",
+      "seconds": 44.30993299500551
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "schema",
+      "seconds": 45.11243497900432
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "schema",
+      "seconds": 53.98018635000335
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "roundtrip",
+      "seconds": 74.52583197003696
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "roundtrip",
+      "seconds": 35.941836946003605
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "schema",
+      "seconds": 29.628600239986554
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "schema",
+      "seconds": 33.33660397795029
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "roundtrip",
+      "seconds": 85.70051962096477
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "roundtrip",
+      "seconds": 39.6498937960132
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "schema",
+      "seconds": 40.60246636503143
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "schema",
+      "seconds": 33.63782756897854
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "roundtrip",
+      "seconds": 36.74341009801719
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "roundtrip",
+      "seconds": 59.491824575990904
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "schema",
+      "seconds": 98.55760905600619
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "schema",
+      "seconds": 87.05348737502936
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "roundtrip",
+      "seconds": 86.80463680898538
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "roundtrip",
+      "seconds": 63.100274742988404
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "schema",
+      "seconds": 67.15973531303462
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "schema",
+      "seconds": 119.42473885801155
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "roundtrip",
+      "seconds": 77.98442871001316
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "roundtrip",
+      "seconds": 40.34951941802865
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "schema",
+      "seconds": 109.70328615698963
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "schema",
+      "seconds": 54.331342469959054
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "roundtrip",
+      "seconds": 64.45337085501524
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "roundtrip",
+      "seconds": 51.32589837000705
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "schema",
+      "seconds": 59.84460062201833
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "schema",
+      "seconds": 71.56930374598596
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "roundtrip",
+      "seconds": 88.05458077701041
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "roundtrip",
+      "seconds": 55.28419864998432
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "schema",
+      "seconds": 52.12620580900693
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "schema",
+      "seconds": 61.7960740950075
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "roundtrip",
+      "seconds": 40.85212856304133
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "roundtrip",
+      "seconds": 48.919687717047054
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "schema",
+      "seconds": 76.27871684799902
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-11T00:16:38.610405+00:00",
+  "current_id": "fresh-query-sort",
+  "current_variant": "schema",
+  "finished_utc": "2026-11-11T00:16:38.610398+00:00",
+  "finished_epoch": 1794356198.6104045,
+  "telemetry": {
+    "samples": 596,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}
