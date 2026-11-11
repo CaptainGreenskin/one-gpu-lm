@@ -1,0 +1,62 @@
+{
+  "selected": null,
+  "comparisons": {
+    "low": {
+      "pairs": 15,
+      "base_passed": 6,
+      "candidate_passed": 7,
+      "gained": [
+        "fast-deep-equal-array-members",
+        "fast-deep-equal-map-values",
+        "p-limit-arguments"
+      ],
+      "regressed": [
+        "fast-deep-equal-nan",
+        "more-itertools-spy"
+      ],
+      "net_gain": 1,
+      "base_format": {
+        "failures": 4,
+        "calls": 152,
+        "rate": 0.02631578947368421
+      },
+      "candidate_format": {
+        "failures": 2,
+        "calls": 151,
+        "rate": 0.013245033112582781
+      },
+      "candidate_generated_tokens": 9763
+    },
+    "high": {
+      "pairs": 15,
+      "base_passed": 6,
+      "candidate_passed": 1,
+      "gained": [
+        "p-limit-arguments"
+      ],
+      "regressed": [
+        "attrs-optional-validator",
+        "attrs-to-bool",
+        "fast-deep-equal-nan",
+        "fast-deep-equal-regexp-flags",
+        "more-itertools-spy",
+        "p-limit-map-index"
+      ],
+      "net_gain": -5,
+      "base_format": {
+        "failures": 4,
+        "calls": 152,
+        "rate": 0.02631578947368421
+      },
+      "candidate_format": {
+        "failures": 5,
+        "calls": 142,
+        "rate": 0.035211267605633804
+      },
+      "candidate_generated_tokens": 13204
+    }
+  },
+  "final_test_opened": false,
+  "selection_uses_development_only": true,
+  "reason": "no candidate satisfies development gate"
+}

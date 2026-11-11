@@ -7,9 +7,26 @@ import unittest
 
 spec = importlib.util.spec_from_file_location('release_report', Path(__file__).resolve().parents[1]/'experiments/019-coding-release/report.py')
 report = importlib.util.module_from_spec(spec); spec.loader.exec_module(report)
+integrity_spec = importlib.util.spec_from_file_location('release_integrity', report.EXP/'postrun_integrity.py')
+integrity_module = importlib.util.module_from_spec(integrity_spec); integrity_spec.loader.exec_module(integrity_module)
 
 
 class ReleaseReportTests(unittest.TestCase):
+    def test_sealed_test_requires_absent_remote_execution_artifacts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertTrue(integrity_module.check_unselected_final_artifacts(root, None))
+            for name in ['final-base/campaign.json', 'artifact-final-base-attempt-1.json',
+                         'private/backend-final-selected-attempt-1/ready.json',
+                         'private/legacy-final-base-attempt-1.log']:
+                path = root/name; path.parent.mkdir(parents=True, exist_ok=True); path.touch()
+                with self.assertRaisesRegex(ValueError, 'final-test execution artifacts'):
+                    integrity_module.check_unselected_final_artifacts(root, None)
+                self.assertIsNone(integrity_module.check_unselected_final_artifacts(root, 'low'))
+                path.unlink()
+                while path.parent != root:
+                    path = path.parent; path.rmdir()
+
     def fixture(self):
         policy = {'format':'native_roundtrip','context':'full','progress':'edit_checkpoint_v1'}
         protocol = {'task_spec_sha256':'tasks','admission_sha256':'admission',
@@ -91,6 +108,7 @@ class CompleteEvidenceFixture:
         integrity={'protocol_sha256':ph,'public_task_inventory_identity_sha256':report.identity_digest(inventory),
             'all_frozen_file_hashes_match':True,'source_snapshot_contents_unchanged':True,
             'dependency_contents_unchanged':True,'framework_contents_unchanged':True,
+            'unselected_final_test_artifacts_absent':not eligible,
             'base_model_verification':{'content_verified':True,'manifest_sha256':'synthetic-model-manifest',
                 'model_id':protocol['model_id'],'revision':protocol['revision']},
             'training_input_audit_sha256':digest('training-input-audit.json'),'adapter_tensor_audits':{},
@@ -186,6 +204,15 @@ class ReleaseReportIntegrationTests(unittest.TestCase):
             self.assertFalse(value['release_decision']['accepted']);self.assertIsNone(value['selection']['selected'])
             fixture.put('campaigns/final-base.json',{'complete':True});fixture.reseal_collection()
             with self.assertRaisesRegex(ValueError,'opened final scores'):report.assess(directory)
+
+    def test_no_winner_cannot_hide_remote_final_artifacts_by_omitting_collection(self):
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = CompleteEvidenceFixture(directory, eligible=False)
+            value = json.loads((Path(directory)/'postrun-integrity.json').read_text())
+            value.pop('unselected_final_test_artifacts_absent')
+            fixture.put('postrun-integrity.json', value); fixture.reseal_collection()
+            with self.assertRaisesRegex(ValueError, 'Missing remote proof'):
+                report.assess(directory)
 
 
 if __name__ == '__main__':unittest.main()

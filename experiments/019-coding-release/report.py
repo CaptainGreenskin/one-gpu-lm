@@ -174,6 +174,8 @@ def assess(root):
             'all_execution_audits_pass': execution_ok, 'single_training_seed_and_repository_cluster_limits_disclosed': True}
         decision = release_gate(comparisons['fresh'], comparisons['historical'], checks, plan)
     else:
+        require(integrity.get('unselected_final_test_artifacts_absent') is True,
+                'Missing remote proof that unselected final-test artifacts are absent')
         require(not any((root/'campaigns'/(name+'.json')).exists() for name in ['final-base','final-selected']), 'Unselected candidate opened final scores')
         decision = {'accepted':False,'reason':'development_gate_failed','failed_gates':['development_selection'],
                     'final_test_opened':False,'advanced_coding_or_daily_use_certified':False}
@@ -253,6 +255,7 @@ def render(root):
     finaltable='\n'.join(f"| {name} | {v['base_passed']}/24 | {v['candidate_passed']}/24 | {len(v['gained'])} | {len(v['regressed'])} |" for name,v in summary['comparisons'].items())
     trainlines='\n'.join(f"| {name} | {v['steps']} | {v['trainable_parameters']:,} | {v['supervised_tokens']:,} | {v['training_update_seconds']:.1f} | {v['peak_allocated_bytes']/2**30:.2f} |" for name,v in summary['training'].items())
     costlines='\n'.join(f"| {name} | {v['passed']}/{v['tasks']} | {v['calls']} | {v['generated_tokens']} | {v['format_invalid_calls']} | {v['task_seconds']/60:.2f} |" for name,v in summary['evaluation_cost'].items())
+    behaviorlines='\n'.join(f"| {name} | {v['failed_without_any_edit']} | {v['failed_after_edit']} |" for name,v in summary['evaluation_cost'].items())
     final_section=('Final scores remain unopened because neither candidate passed development selection.' if not selection['selected'] else
         '| Final cohort | Base | Selected candidate | Improved | Regressed |\n| --- | --- | --- | --- | --- |\n'+finaltable+'\n\nLegacy checks: '+str(summary['legacy']['final-base']['passed'])+'/9 base; '+str(summary['legacy']['final-selected']['passed'])+'/9 selected candidate.')
     hardware=summary['hardware'];timing=summary['time']
@@ -285,6 +288,12 @@ Every update uses a different example. These curves show training diagnostics, n
 | Evaluation arm | Passes | Model calls | Generated tokens | Invalid formats | Total task minutes |
 | --- | --- | --- | --- | --- | --- |
 {costlines}
+
+| Evaluation arm | Failed with no observed allowed-source edit | Failed after an observed allowed-source edit |
+| --- | --- | --- |
+{behaviorlines}
+
+Edit categories use the source snapshots after executed tools, not the model's claim that it made a repair. Only files allowed by the frozen task count; a change later reverted still counts as an observed edit. These counts describe the failure behavior and do not by themselves establish its cause.
 
 Budgets are equal upper limits: 12 calls, 512 generated tokens/call, 6,144 generated tokens/task, 8,192 input tokens, and 900 seconds/task. Same native tool round trip, parser, full history and edit-progress policy. Actual usage differs and is retained. Candidate inference uses an unmerged adapter; sequential shared-host timings include that overhead and do not establish a production throughput comparison. [All paired outcomes](paired-outcomes.csv) retain regressions. Passing means the final independent grader accepts source changes in a fresh workspace, not simply an edit, an agent claim or a normal exit.
 

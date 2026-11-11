@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "finished_utc": "2026-11-11T14:19:46.765671+00:00",
+  "steps": 330,
+  "identity_sha256": "39079b6e403ee84ba88ad2a600ddcccd26035efdd44d1784724d615913d59d8f",
+  "trainable_parameters": 58363904,
+  "order_sha256": "838fff21393362ff9ad860c7cd06c17a75d297f4019d18b885bb8bdb5e6fd285",
+  "training_update_seconds": 502.1658130157739,
+  "input_tokens": 475778,
+  "supervised_tokens": 21760,
+  "peak_allocated_bytes": 67579534848,
+  "peak_reserved_bytes": 82210455552,
+  "frozen_sample_unchanged": true,
+  "frozen_gradients_absent": true,
+  "adapter_changed": true,
+  "saved_reload_greedy_ids_equal": true,
+  "probe_ids_sha256": "f9c28a9ddb6930cfcdc6cd8c638cdb32a45c57906a6b581eb72d80a319d6754c",
+  "adapter_state_sha256": "faddde7645689117739d0f71e50d38c8fc4523bb74b1b94b480dab2c2b4a3265",
+  "optimizer_state_sha256": "7e8c0fb8ae497714274840a6d9566ac7ff77f6dd367eb42db69b4e793f41db78",
+  "rng_state_sha256": "c079a28b0cb2fc85bcd13e6f4a2a4021175e244e53af844a3fd7440a10362660",
+  "adapter_files": {
+    "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+    "adapter_model.safetensors": "65e3f6790cc7b6cf2ac26cbeab44bcae8fd2c671a9a87233265bfb4053398b28"
+  },
+  "weights_public": false,
+  "model_quality_accepted": false
+}

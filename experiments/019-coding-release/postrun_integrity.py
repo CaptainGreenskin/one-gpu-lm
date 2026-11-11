@@ -18,6 +18,21 @@ from one_gpu_lm.evaluation.tasks import file_manifest
 from one_gpu_lm.models.verify import verify_model
 
 
+def check_unselected_final_artifacts(run, selected):
+    """Check remote disk, not only the subset later copied into a report."""
+    if selected is not None:
+        return None
+    run = Path(run)
+    paths = []
+    for pattern in ['final-*', 'legacy-final-*', 'artifact-final-*',
+                    'private/backend-final-*', 'private/final-*-attempt-*.log',
+                    'private/legacy-final-*-attempt-*.log']:
+        paths.extend(run.glob(pattern))
+    if paths:
+        raise ValueError('Unselected candidate has final-test execution artifacts')
+    return True
+
+
 def check(root, run, out):
     root, run, out = map(lambda p: Path(p).resolve(), (root, run, out))
     if out.exists():
@@ -29,6 +44,7 @@ def check(root, run, out):
     selection = read(run/'selection.json')
     if not controller['complete'] or controller.get('error_type'):
         raise ValueError('Require the completed original campaign')
+    unselected_final_absent = check_unselected_final_artifacts(run, selection['selected'])
     for name, digest in protocol['frozen_files'].items():
         if sha256(root/name) != digest:
             raise ValueError('Frozen input changed: '+name)
@@ -83,6 +99,7 @@ def check(root, run, out):
         'script_sha256': sha256(Path(__file__)), 'protocol_sha256': sha256(exp/'protocol.json'),
         'all_frozen_file_hashes_match': True, 'source_snapshot_contents_unchanged': True,
         'dependency_contents_unchanged': True, 'framework_contents_unchanged': True,
+        'unselected_final_test_artifacts_absent': unselected_final_absent,
         'base_model_verification': verification, 'training_input_audit_sha256': sha256(root/'training-input-audit.json'),
         'adapter_tensor_audits': tensor_audits,
         'public_task_inventory_identity_sha256': identity_digest([

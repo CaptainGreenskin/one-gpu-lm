@@ -1,0 +1,10 @@
+{
+  "ready": true,
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "adapter": true,
+  "adapter_sha256": {
+    "adapter_model.safetensors": "2e3d79cd33ecbf247426c2507b6325d51c66cfd031b8e905acfccf82d7bccd6e"
+  }
+}

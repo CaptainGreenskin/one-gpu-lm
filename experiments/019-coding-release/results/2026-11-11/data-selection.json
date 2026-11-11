@@ -1,0 +1,2724 @@
+{
+  "schema_version": 1,
+  "policy": "task-round-robin-quota-uniform-trajectory-v1",
+  "budget": 330,
+  "requested_budget": 512,
+  "up_to_budget": true,
+  "deduplication": "model-visible-token-ids",
+  "input_records": 330,
+  "eligible_records": 330,
+  "selected_records": 330,
+  "required_tasks": 55,
+  "covered_tasks": 55,
+  "per_task": {
+    "019-inflection-camelize": 6,
+    "019-inflection-dasherize": 6,
+    "019-inflection-humanize": 6,
+    "019-inflection-ordinal": 6,
+    "019-inflection-ordinalize": 6,
+    "019-inflection-parameterize": 6,
+    "019-inflection-pluralize": 6,
+    "019-inflection-singularize": 6,
+    "019-inflection-tableize": 6,
+    "019-inflection-titleize": 6,
+    "019-inflection-transliterate": 6,
+    "019-inflection-underscore": 6,
+    "019-python-semver-Version-__getitem": 6,
+    "019-python-semver-Version-__hash": 6,
+    "019-python-semver-Version-__iter": 6,
+    "019-python-semver-Version-__repr": 6,
+    "019-python-semver-Version-__str": 6,
+    "019-python-semver-Version-_increment_prerelease": 6,
+    "019-python-semver-Version-_nat_cmp": 6,
+    "019-python-semver-Version-_validate_identifiers": 6,
+    "019-python-semver-Version-bump_build": 6,
+    "019-python-semver-Version-bump_major": 6,
+    "019-python-semver-Version-bump_minor": 6,
+    "019-python-semver-Version-bump_patch": 6,
+    "019-python-semver-Version-bump_prerelease": 6,
+    "019-python-semver-Version-compare": 6,
+    "019-python-semver-Version-finalize_version": 6,
+    "019-python-semver-Version-is_compatible": 6,
+    "019-python-semver-Version-is_valid": 6,
+    "019-python-semver-Version-match": 6,
+    "019-python-semver-Version-parse": 6,
+    "019-python-semver-Version-replace": 6,
+    "019-python-semver-Version-to_dict": 6,
+    "019-python-semver-Version-to_tuple": 6,
+    "boltons-LRI-__setitem__": 6,
+    "boltons-LRU-__getitem__": 6,
+    "boltons-asciify": 6,
+    "boltons-bytes2human": 6,
+    "boltons-cache-and-frozen": 6,
+    "boltons-make_cache_key": 6,
+    "boltons-multi-dict": 6,
+    "boltons-pluralize": 6,
+    "boltons-research": 6,
+    "boltons-slugify": 6,
+    "underscore-defaults": 6,
+    "underscore-difference": 6,
+    "underscore-group-partition": 6,
+    "underscore-index-nan": 6,
+    "underscore-intersection": 6,
+    "underscore-map-object": 6,
+    "underscore-object-pairs": 6,
+    "underscore-range-step": 6,
+    "underscore-reduce-initial": 6,
+    "underscore-stable-sort": 6,
+    "underscore-uniq-iteratee": 6
+  },
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "input_tokens": 475778,
+  "supervised_tokens": 21760,
+  "max_input_tokens": 2913,
+  "max_target_tokens": 382,
+  "selected": [
+    {
+      "id": "019-inflection-camelize:reference-inspect",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "1a08a19212fdc74de8f5b599f60f6f01f785d37bbbf916aa2efce19ab2b52aff"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-inspect",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 609,
+      "supervised_tokens": 45,
+      "record_sha256": "a4ab7c27c500954cb34387996be407e79348e8a7c5ea625f441f4c1afbc22994"
+    },
+    {
+      "id": "019-inflection-humanize:reference-inspect",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "5ab67aeeede041a0a5de9a4cfe8b7a712419af31c1c898ad4b556569a2efb1a8"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-inspect",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 607,
+      "supervised_tokens": 45,
+      "record_sha256": "b246435e8afca5c282c86560ccb48c4e23d65c6d461bde3bdbcfdbeedebb62ea"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-inspect",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "3b2f251fb4c52ae3c5897e1f9729f1e75b9c54b4a549673692a6647d67959e34"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-inspect",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "7bcdef754e24ecc79e549b76c104b610d27ac36387a2c2f0b9f8611f7c06e036"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-inspect",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "a877960ca180b96da1dec4835a3512b7a1471aadda875f35ed562a215703fa4d"
+    },
+    {
+      "id": "019-inflection-singularize:reference-inspect",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "6f4868ee7793bcb3773b4b6e623450f5d42510f975623a1493426222bc3d4b10"
+    },
+    {
+      "id": "019-inflection-tableize:reference-inspect",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "6a5f63e68cb1403fd08693f970004a42fc89b15ee095fd41cd604b201846646e"
+    },
+    {
+      "id": "019-inflection-titleize:reference-inspect",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "f10e863f69304265f661e762284a99ffa37e7828158432eefdcc288ac57857e4"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-inspect",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 608,
+      "supervised_tokens": 45,
+      "record_sha256": "710105acb73007368efb9dac71f061ff87f9dc49ccf8c4cc146013996ee4bddb"
+    },
+    {
+      "id": "019-inflection-underscore:reference-inspect",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 607,
+      "supervised_tokens": 45,
+      "record_sha256": "e68c8ce5ff901a0acf0ca35173be36b790c225e27c4440bf554378db12023ee9"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-inspect",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "8fdd661b28326cb0f2725c80dac3284e9d6a3f1d56e122ff482bf5db3ada636e"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-inspect",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "e85dbca94a445a430845ce11cc5a98da1e70552563c6e6d693beced541557656"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-inspect",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "0c56e626cd2159c041be6ca65c57db37334232e20296b144957de424291e2376"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-inspect",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "6f8d7c4e5fb06841da1a4d736641f17fce19ce05d90cc5b7b509165614511185"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-inspect",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "b335e47321e9198d41f5ff9f850c9db1b36bcd446b8ff484bd500d47500ae2d1"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-inspect",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 643,
+      "supervised_tokens": 45,
+      "record_sha256": "a8ccb2eace353952d501424e789fc9e71cbf1b51a88853b9a9ea25e43daf78ee"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-inspect",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "0103957be59a2baf2119fd9fc0f3b2ba1a5d37240882e577ad8224f9d8947a88"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-inspect",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 642,
+      "supervised_tokens": 45,
+      "record_sha256": "6f66502b9af198042434a0fd40bd277501b2fdc7c7ec4cc406f53dee74513cf9"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-inspect",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "d10d312caa74698b791787d98ebf0bc92ba5a409e07bbd748efcb4db91903a91"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-inspect",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "79277a1b99b223442fb9e91428bc1c1f4580635bda849c7fa456dd0843c24186"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-inspect",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "843b9bf4638fd7bcf93a7c345afa27b2cc49738f164c2084f4bd2804ff9d15b5"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-inspect",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "029d060bcfb9adbe0481b41415dddb1d8547783395f34fe3d56464a9e5603b3b"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-inspect",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 643,
+      "supervised_tokens": 45,
+      "record_sha256": "71d3dcc10cebf5b5936fabd12dca41d4780995b4183a1d1543457c93931d78b3"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-inspect",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 639,
+      "supervised_tokens": 45,
+      "record_sha256": "c8feb54d88ea42f25519b2b1f97c715e9f6f306b9c21c4ed593863061a3879e1"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-inspect",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "ec4c9b8e537e829ee978ac0454bb52684f467d036572dfe8faa282e09821aecb"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-inspect",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 641,
+      "supervised_tokens": 45,
+      "record_sha256": "b3a64f9f45678f3c2be4e1dd2f94712bc1854486bd9507c77ae16be0080f2228"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-inspect",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 640,
+      "supervised_tokens": 45,
+      "record_sha256": "b1780447ae538c37695a091f81e2b0ac788f1af3f50b4cd39599927073c310bb"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-inspect",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 639,
+      "supervised_tokens": 45,
+      "record_sha256": "1f8a1e3f2bc9866e1a7d7a73acaf82467179e1f1df79039f9dc86d74d93e0fdf"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-inspect",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 639,
+      "supervised_tokens": 45,
+      "record_sha256": "8c53b0e569131bb7249e21ccfbe24ec5bb21f90ca020e5fe9178ffcb60013d81"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-inspect",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 639,
+      "supervised_tokens": 45,
+      "record_sha256": "29a9c99f9cc9028695da6a70e8751a3ca8f0fe402925a30a0fbef29158402853"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-inspect",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 640,
+      "supervised_tokens": 45,
+      "record_sha256": "a6328a784b3db9d3953ed3447c8d0d5ee17eb055d8343b9e6d46c0044d549c93"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-inspect",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 640,
+      "supervised_tokens": 45,
+      "record_sha256": "80fb7442cf751f48a21c1d5740e66036f685d56aa89274d41367d4bd932f584f"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-inspect",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 618,
+      "supervised_tokens": 44,
+      "record_sha256": "282afcf5f08e505caac71ea45c05be1e605686b95bad2abee384be4734a0ec94"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-inspect",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 617,
+      "supervised_tokens": 44,
+      "record_sha256": "914abc5a2ffba71c5dee5b096b9929a893d39ddd08d1b898c079a620cabd431d"
+    },
+    {
+      "id": "boltons-asciify:reference-inspect",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 617,
+      "supervised_tokens": 45,
+      "record_sha256": "b9dd9fbee486be21c86f8181944e68581b45c89ea38c75942bb2ae78a55cd4a2"
+    },
+    {
+      "id": "boltons-bytes2human:reference-inspect",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 617,
+      "supervised_tokens": 45,
+      "record_sha256": "45640fa82adf4ce676b0522c83dd34920b49a1e88e8a0c656a1f22c821553af7"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-inspect",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 643,
+      "supervised_tokens": 66,
+      "record_sha256": "eb9bb792b5406dc656fbb3b7b748618c7d0300ed8b4c87d4d35b67fae33ce852"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-inspect",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 616,
+      "supervised_tokens": 44,
+      "record_sha256": "ca6738480fc146628b0546473f2c1aa9cb756a85615878c9365a7ac1ac338a7a"
+    },
+    {
+      "id": "boltons-multi-dict:reference-inspect",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 614,
+      "supervised_tokens": 45,
+      "record_sha256": "7164aeb5ce9183e008cadc232c1c0fd63412c11fd1bb8929346a6f261b532c2a"
+    },
+    {
+      "id": "boltons-pluralize:reference-inspect",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 617,
+      "supervised_tokens": 45,
+      "record_sha256": "bbbf2405686565de95a35b03441e3068342ddc96a30619c183bb1abd01ad2001"
+    },
+    {
+      "id": "boltons-research:reference-inspect",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 616,
+      "supervised_tokens": 47,
+      "record_sha256": "596f746d590de72fc7baf5d6c9f612f0815c7b196faaf439c2395bf52de7e337"
+    },
+    {
+      "id": "boltons-slugify:reference-inspect",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 616,
+      "supervised_tokens": 45,
+      "record_sha256": "49578f2fd63d0bdbc5c072030e21deb98ed8754750fb864d9c6d07156c262942"
+    },
+    {
+      "id": "underscore-defaults:reference-inspect",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 42,
+      "record_sha256": "f833a161c6d7a1d99fa3d63454fffe3101ab7a697a89bb581357e2fb86c4c62c"
+    },
+    {
+      "id": "underscore-difference:reference-inspect",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 596,
+      "supervised_tokens": 40,
+      "record_sha256": "9696adc6774caa2f652d4610a732590d43abe7783d32262f9c305a301db199c5"
+    },
+    {
+      "id": "underscore-group-partition:reference-inspect",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 628,
+      "supervised_tokens": 53,
+      "record_sha256": "8ef95a552d92b42a98a3d938457fa28f40f790d21d81ea409314d9eedaddcf36"
+    },
+    {
+      "id": "underscore-index-nan:reference-inspect",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 43,
+      "record_sha256": "ffb8e0e9d7c6c9cf585dbca99b29199d0bdd01599fc4302eb672e11877a760a3"
+    },
+    {
+      "id": "underscore-intersection:reference-inspect",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 599,
+      "supervised_tokens": 41,
+      "record_sha256": "9378cefa66df935a6ce2f4c9ecd00f7cf9ad51b068155b4bb8830a62437beecd"
+    },
+    {
+      "id": "underscore-map-object:reference-inspect",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 596,
+      "supervised_tokens": 40,
+      "record_sha256": "275cf4428f3dd758e094046a49ce55ece597b762c02dc8ecc7a3bb1b4ca6c3f8"
+    },
+    {
+      "id": "underscore-object-pairs:reference-inspect",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 597,
+      "supervised_tokens": 39,
+      "record_sha256": "ef956228701f7040e91f1009be1c055b9027095b8f26214018bacb5cc994d7ac"
+    },
+    {
+      "id": "underscore-range-step:reference-inspect",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 40,
+      "record_sha256": "941314ac8580a267e248653e3d31c9ce9b4d3ac63dbcb37635447a4e83415af4"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-inspect",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 601,
+      "supervised_tokens": 42,
+      "record_sha256": "75d9dd9f5a67d773edfa449310dddf52554acb60af665109922db39d5fa8a3ea"
+    },
+    {
+      "id": "underscore-stable-sort:reference-inspect",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 42,
+      "record_sha256": "f5f6cb9d605efd64703e611ee13e0767269962315ff47bf2906861e054f9f075"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-inspect",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 41,
+      "record_sha256": "3e60d826d78ff8fc01655012a3e1233da99f4a0e204b12d98c1842d22bc6be02"
+    },
+    {
+      "id": "019-inflection-camelize:reference-reproduce",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 761,
+      "supervised_tokens": 37,
+      "record_sha256": "61f3647b087c29b96cb54a7d3708ace211b08ee47ecc31ac9c7c05413e19d3d5"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-reproduce",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 731,
+      "supervised_tokens": 37,
+      "record_sha256": "c24d1a07be3fc76a51d72977b4c95b32374f1e9ba7fed36e6d7ef6520dbe87b9"
+    },
+    {
+      "id": "019-inflection-humanize:reference-reproduce",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 735,
+      "supervised_tokens": 37,
+      "record_sha256": "e6260de2a9a04de7d758888625460e4f7e838b43f5e0330e9d58a20f9aa90e4e"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-reproduce",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 734,
+      "supervised_tokens": 37,
+      "record_sha256": "7692414a87350cb775172111bccde582bb243df9053cfe1ba3780af7c968f983"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-reproduce",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 750,
+      "supervised_tokens": 37,
+      "record_sha256": "35598cc56371a74c193953d702b89eaf7e5dc7d3147907207f3a1c952a1e41ac"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-reproduce",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 728,
+      "supervised_tokens": 37,
+      "record_sha256": "10cfcc1f4da3b768b935c6256ebe1c93dc7bbeb3e6247ea1fd10d1b8f97b1022"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-reproduce",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 744,
+      "supervised_tokens": 37,
+      "record_sha256": "0aeded19b0fe129546995ded497ea577885965666f249fd5c59a122a1e2fe6b6"
+    },
+    {
+      "id": "019-inflection-singularize:reference-reproduce",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 741,
+      "supervised_tokens": 37,
+      "record_sha256": "415cc4cb69ddf8d5ac8e74c28b4c47803766442b091175c553a42a7b5e29c6e0"
+    },
+    {
+      "id": "019-inflection-tableize:reference-reproduce",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 751,
+      "supervised_tokens": 37,
+      "record_sha256": "5eb2125a758b9832b7cdd9eec670a85d43e8b53e8f291fd10ec7bfd4745d419f"
+    },
+    {
+      "id": "019-inflection-titleize:reference-reproduce",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 751,
+      "supervised_tokens": 37,
+      "record_sha256": "dbf0be453c2e76ec852d0fce116732be0ccef85b5a0d972200f497e490b76c7c"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-reproduce",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 743,
+      "supervised_tokens": 37,
+      "record_sha256": "0d498fddb360d034f25bbe06e9444c0c2fa195a2ce1aa261782446ae711c17f7"
+    },
+    {
+      "id": "019-inflection-underscore:reference-reproduce",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 739,
+      "supervised_tokens": 37,
+      "record_sha256": "aa40a7a4db1b7320fe2fc8c755f7ca8e77e3e1f32a2dfed082a0ec5dda596ab1"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-reproduce",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 854,
+      "supervised_tokens": 68,
+      "record_sha256": "0292867b1ea41c76d9c096caa557d8f9791fcad7527ee5e058065baac60ab162"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-reproduce",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 810,
+      "supervised_tokens": 68,
+      "record_sha256": "776f32dcd0faf1836071870ec93b4750d76a98636c32bc36689bb0e02bdb7f03"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-reproduce",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 816,
+      "supervised_tokens": 68,
+      "record_sha256": "6463c21845cb89f4c90ecaa765d2aeae82252b65c8842bdd7ce654eda993c528"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-reproduce",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 830,
+      "supervised_tokens": 68,
+      "record_sha256": "960da46c3df6e0e5537f3d6d5bd79fa4aab48dca0c9ed5c690a379cef1564aa1"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-reproduce",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 839,
+      "supervised_tokens": 68,
+      "record_sha256": "184a734ec2351539e58aae0a375a17da5c868c8d0c1884838f9d8c5c1a0edcb2"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-reproduce",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 829,
+      "supervised_tokens": 68,
+      "record_sha256": "e83bc5363b761a855d375a5b657d37451305cea2d672158ad6708df4a5e39a78"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-reproduce",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 821,
+      "supervised_tokens": 68,
+      "record_sha256": "1a9452878d324faf7484913c411a88a31c7b8d9b9c3c7a8eaf5a7afbc062a941"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-reproduce",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 853,
+      "supervised_tokens": 68,
+      "record_sha256": "58ba7695ce34f64ae0506490aa36b34db51cdf6ef19d4521b68aaf852d7ef4f4"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-reproduce",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 846,
+      "supervised_tokens": 68,
+      "record_sha256": "1c68c6ecd7f675dd0eb2cfc2477d3a00d548928f0b9731fbec871cc8a2e81220"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-reproduce",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 835,
+      "supervised_tokens": 68,
+      "record_sha256": "a8e039a93759040c767f92a0a7ca975938800a0f2b7873cd8233899dc5ffcef8"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-reproduce",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 835,
+      "supervised_tokens": 68,
+      "record_sha256": "41829cc6721be42151d3cf683d74f431c65699611ecae0984d3935d5cd019a8f"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-reproduce",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 835,
+      "supervised_tokens": 68,
+      "record_sha256": "1ef579104dc9c4ac22be108f3a74e03876c1d06247f43b98e30c827a5567ef67"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-reproduce",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 842,
+      "supervised_tokens": 68,
+      "record_sha256": "8eb8fa09fb2b514d588e433dd74e0d53b8ef8dbb2708645bdd9fa4235ca0191e"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-reproduce",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 828,
+      "supervised_tokens": 68,
+      "record_sha256": "8100ec1c87191d2ea7c8458c2f5b372e2f02f40a2fd336878a25f78f0d6b069b"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-reproduce",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 812,
+      "supervised_tokens": 68,
+      "record_sha256": "22b334e5fd3041415f536d31042548a33b508c68a63005f07b18d68d718016ca"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-reproduce",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 815,
+      "supervised_tokens": 68,
+      "record_sha256": "1f29f87eea44cebfd04c629d675c39e08e60176623658fe374e8c3ee973b172e"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-reproduce",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 828,
+      "supervised_tokens": 68,
+      "record_sha256": "221818eb2487e636953186ca92a0ba44c6fa06757ea17c304855fff28588ac88"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-reproduce",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 826,
+      "supervised_tokens": 68,
+      "record_sha256": "d4459785430d5205fb7abbef3c45d9aa7784a4d2eed1cf6f548de69e5733425c"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-reproduce",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 854,
+      "supervised_tokens": 68,
+      "record_sha256": "b12c019f164ca5b98d19a09306a51e94c80fc014aedb5c447605f11e5596be48"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-reproduce",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 844,
+      "supervised_tokens": 68,
+      "record_sha256": "e6bdf22553700cdd4055cef404e513bbe016973a4d2f2b93c6c52250b6b675ca"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-reproduce",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 852,
+      "supervised_tokens": 68,
+      "record_sha256": "098a76a215e11cc61d7cdd2c4cab61421970481093dc40431509ef0d81c0a5e8"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-reproduce",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 808,
+      "supervised_tokens": 68,
+      "record_sha256": "81b8528b27ccd46b784384452112583ca7e5899428baf01e7f61b518fe6f33ae"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-reproduce",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 789,
+      "supervised_tokens": 53,
+      "record_sha256": "67f8f1486e303430471f5c6f59c8921995f6cb3f78a3941b0a3b712ed0c23d16"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-reproduce",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 775,
+      "supervised_tokens": 53,
+      "record_sha256": "a3d02ed989afa18a11133a1bab67f10075312f4b1e0efae79bbefea16d031255"
+    },
+    {
+      "id": "boltons-asciify:reference-reproduce",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 789,
+      "supervised_tokens": 53,
+      "record_sha256": "ceffe32afd3c7968e9c5945aad82845d1943d92c1ea51834af35fcc47776c431"
+    },
+    {
+      "id": "boltons-bytes2human:reference-reproduce",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 781,
+      "supervised_tokens": 53,
+      "record_sha256": "c7cd45d2d86f56fddfae88323950d31fa017890cfd694986b8223292a57a576c"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-reproduce",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 897,
+      "supervised_tokens": 53,
+      "record_sha256": "d9913ac340987e78406132118a77f90ebbe9417da2ac903f617bf95b46b62c59"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-reproduce",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 763,
+      "supervised_tokens": 53,
+      "record_sha256": "eed62998ed497055ee92e67c5e3e1d42d693cfdcd5104a7be651ea9f4aea5527"
+    },
+    {
+      "id": "boltons-multi-dict:reference-reproduce",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 803,
+      "supervised_tokens": 53,
+      "record_sha256": "0028444369619349df9bf104b6a7344bade24b9bb65e90393069ae3baa24d53c"
+    },
+    {
+      "id": "boltons-pluralize:reference-reproduce",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 756,
+      "supervised_tokens": 53,
+      "record_sha256": "712b4641d676880f696ef5e335e31736ce5a443143b504f96872e7fcf322b944"
+    },
+    {
+      "id": "boltons-research:reference-reproduce",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 792,
+      "supervised_tokens": 53,
+      "record_sha256": "5c593eef45dff843bcfd0af79a1894c332a20984f5095f06d6d9e6596615b5e0"
+    },
+    {
+      "id": "boltons-slugify:reference-reproduce",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 775,
+      "supervised_tokens": 53,
+      "record_sha256": "c871d21a6def4dca1feb89fdf31cd1be84e345d334221fe886211c4c530078be"
+    },
+    {
+      "id": "underscore-defaults:reference-reproduce",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 761,
+      "supervised_tokens": 38,
+      "record_sha256": "1091b5187af7461118cbba54ae0acb1d202a69edf0c36f6a365e7980b6505b64"
+    },
+    {
+      "id": "underscore-difference:reference-reproduce",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 728,
+      "supervised_tokens": 38,
+      "record_sha256": "fa690c067db255549a5b4db0805dbb884f0cec82fba5955fc2531b65f2f0fb39"
+    },
+    {
+      "id": "underscore-group-partition:reference-reproduce",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 846,
+      "supervised_tokens": 38,
+      "record_sha256": "663c38647694605e60e2f4ae5c42ddec582e959a66ce7d67bbec4ba9855e5bb2"
+    },
+    {
+      "id": "underscore-index-nan:reference-reproduce",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 795,
+      "supervised_tokens": 38,
+      "record_sha256": "438b1f84fe908c321777ca32194dfa76e746b9409f95aef080f275b168a027f0"
+    },
+    {
+      "id": "underscore-intersection:reference-reproduce",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 737,
+      "supervised_tokens": 38,
+      "record_sha256": "29a399fccece51ba9aac828aef1cb90b1165bccee52ff028a166cb3a470efccd"
+    },
+    {
+      "id": "underscore-map-object:reference-reproduce",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 743,
+      "supervised_tokens": 38,
+      "record_sha256": "bc5f530735346fdccd12ae76f0c898c591f02ea1f257f2b99de97a60569afc4a"
+    },
+    {
+      "id": "underscore-object-pairs:reference-reproduce",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 744,
+      "supervised_tokens": 38,
+      "record_sha256": "244985b774f7d09654f2cd4b3590cc9147e724633e9883fcf41210df92afb518"
+    },
+    {
+      "id": "underscore-range-step:reference-reproduce",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 753,
+      "supervised_tokens": 38,
+      "record_sha256": "9df23d4d57a39d14d565774214d1166e2070f2fcb94df7f5f2b4d0e6fda4523d"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-reproduce",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 739,
+      "supervised_tokens": 38,
+      "record_sha256": "b16fdecf6626a3355f0af40551224074295527771fa9e1abe08c4645a6b67ff7"
+    },
+    {
+      "id": "underscore-stable-sort:reference-reproduce",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 740,
+      "supervised_tokens": 38,
+      "record_sha256": "fed6d3f4b9d93cb837808c66d530c66605632426846d1efecf8d03ba9999201e"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-reproduce",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 772,
+      "supervised_tokens": 38,
+      "record_sha256": "6ecb1b50bd76fbe635156f94a85ab4e3a21f1d6a578c3b345ebe22a410ce2390"
+    },
+    {
+      "id": "019-inflection-camelize:reference-repair",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1457,
+      "supervised_tokens": 143,
+      "record_sha256": "da803db26d2bdeb689e316759f64ab093273d86e2c30bda2ff0e994f5a324d06"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-repair",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1395,
+      "supervised_tokens": 92,
+      "record_sha256": "3a80c83d32b10652dca7bc79e8572a5dc30f3f024a9cb2d161867cefa8eb48aa"
+    },
+    {
+      "id": "019-inflection-humanize:reference-repair",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1522,
+      "supervised_tokens": 169,
+      "record_sha256": "0f5a48e69b4a537e653ee687de6e2b88fb9f52aea4a8967b49ea4f8f339523bf"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-repair",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1527,
+      "supervised_tokens": 176,
+      "record_sha256": "ae97129609e42c9fa0e57cceea06b9a9b4222cd67d679d6230e21dfa35194632"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-repair",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1469,
+      "supervised_tokens": 96,
+      "record_sha256": "bc56fd77ffb1f471c92e7850f8da028a985161ffecc4fb87af0c99ee778284dd"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-repair",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1546,
+      "supervised_tokens": 232,
+      "record_sha256": "394595eef75b0582ab128a9a0d77ff181dcc1bccd40e828873f7e3233cb0d350"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-repair",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1480,
+      "supervised_tokens": 151,
+      "record_sha256": "42af42707e7f6b7e266725027cda9fc02fd2ad5c2d1a426ce2bb57bf93ade784"
+    },
+    {
+      "id": "019-inflection-singularize:reference-repair",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1508,
+      "supervised_tokens": 168,
+      "record_sha256": "07be5510546c2d6442b819c97fd43815efce99d0d0cf43db75801cc2266b5993"
+    },
+    {
+      "id": "019-inflection-tableize:reference-repair",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1420,
+      "supervised_tokens": 94,
+      "record_sha256": "ad5a472a5aee9369de48be11306946453192b54f264b16d8482bb3466c9b5ab1"
+    },
+    {
+      "id": "019-inflection-titleize:reference-repair",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1467,
+      "supervised_tokens": 131,
+      "record_sha256": "6150c1b068408b67c967d11fb3cb385e337ab0100ceaa908e526bb18fb581e1e"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-repair",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1444,
+      "supervised_tokens": 118,
+      "record_sha256": "b6d6332e8ff6cdac90b71a3ecdd1e370c2680fed9c294f744ddc3c9396808c94"
+    },
+    {
+      "id": "019-inflection-underscore:reference-repair",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1502,
+      "supervised_tokens": 160,
+      "record_sha256": "c40509b048772e341c82403ee9597fc423f1b6bc95a640c5852f1d11fa3ed85b"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-repair",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 1883,
+      "supervised_tokens": 293,
+      "record_sha256": "889086a04d8c0a9970994ae3d6e3ac58bb94e7c9a40daf7e9417dc95439c9bff"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-repair",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 1526,
+      "supervised_tokens": 94,
+      "record_sha256": "4e9ed15199811bda9a1ef87e69a8bf33d6be0b7760e1ec0cc3186c71a8c41421"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-repair",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1297,
+      "supervised_tokens": 91,
+      "record_sha256": "a508e4c91069e190c83bc45810408d6f818316439a96c5c8374b1d336db80f12"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-repair",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 1627,
+      "supervised_tokens": 132,
+      "record_sha256": "8372478d58075b8b1468bda3d0ed6b00647b5b8a6b6b1a661dfbb3c3e8febbbb"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-repair",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 1694,
+      "supervised_tokens": 155,
+      "record_sha256": "0362b67599a7959dacebe52ee1386026c484216b979f1219fe289821d08b7d33"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-repair",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1683,
+      "supervised_tokens": 161,
+      "record_sha256": "0d05685bc842a339d65a1e3e400b7f2d0c8da829d5d1c9f315a04df1008701b4"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-repair",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 1878,
+      "supervised_tokens": 312,
+      "record_sha256": "c73ba439bbe27b0dccd25ce7304199104e35cdb24d0298af6e20addef5248231"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-repair",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 1654,
+      "supervised_tokens": 160,
+      "record_sha256": "87b1c37b395dca3c8158c31317d188aee53fe0a431e09195c50d94d2ee284d92"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-repair",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 1784,
+      "supervised_tokens": 291,
+      "record_sha256": "233779caf1d460afd790d73812fe49c3a14c0b4922cc2ea2c791f687cab37c76"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-repair",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 1588,
+      "supervised_tokens": 104,
+      "record_sha256": "3beabf7bb1512780ab88af01a492391d50d3f7b64fff7389976507c6b34af1cd"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-repair",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 1584,
+      "supervised_tokens": 108,
+      "record_sha256": "c9c3b9de689b1c8c430a5597d66bff4c916223f17836f825b9f01f26c64e0dcc"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-repair",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 1604,
+      "supervised_tokens": 112,
+      "record_sha256": "8941b3175a44a349bec73e7c8173d7ff191abf97c42f3522e57ea6fdbee0c3e6"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-repair",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1733,
+      "supervised_tokens": 263,
+      "record_sha256": "1729b3c01f8d265519f2937b673efa0951af8a32024119e7983aa50db4a71fab"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-repair",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 1896,
+      "supervised_tokens": 359,
+      "record_sha256": "7b527d90e7ce3ad1658ee2765a31c422f46aec71b46edfa54eae61f05efb36ae"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-repair",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 1644,
+      "supervised_tokens": 107,
+      "record_sha256": "f06493544cc7fe82656c9ca8312e61b84366a64cb1e19c27533440c8717e7c2b"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-repair",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 1688,
+      "supervised_tokens": 209,
+      "record_sha256": "a78f4240fb6a8761cd749d5c528a63c97beb2e5217d83d8a035264925982be60"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-repair",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 1747,
+      "supervised_tokens": 112,
+      "record_sha256": "f60fc3beb8f04b3fdcc33da9a13a75467665b347846eb9bf9b7059f697c33cc5"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-repair",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 1943,
+      "supervised_tokens": 382,
+      "record_sha256": "0a63d47381097e41a0a6be17f233b6e70d0b2949bc7c124060819904c08dbe90"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-repair",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 1841,
+      "supervised_tokens": 367,
+      "record_sha256": "90e1abd5ca28212d59ca46a32f096522426d41121d931140a851b2043815ba54"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-repair",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 1768,
+      "supervised_tokens": 204,
+      "record_sha256": "b71f00f87adccd9f72457258e3b169d0fced265480582e149fc03b7a384d7cde"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-repair",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1738,
+      "supervised_tokens": 133,
+      "record_sha256": "a62ec389dac3b781a3a12980840a09ed100a6c18667264d97d9b128f9b812082"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-repair",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 1632,
+      "supervised_tokens": 105,
+      "record_sha256": "abf1b6bed9491d1caeb0e9e87cc5f4d5b45b523a096a7ad54a014e06e5a00caa"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-repair",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1683,
+      "supervised_tokens": 216,
+      "record_sha256": "31576c1b2a73385f85aaba0597abfab1d50f9dd6de3c9d2fb03208e622cba0d1"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-repair",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1674,
+      "supervised_tokens": 183,
+      "record_sha256": "435649690be4f12c2f4ad3244cead1e9d8343de6e8fa6a9f3351b35070fac9fe"
+    },
+    {
+      "id": "boltons-asciify:reference-repair",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1344,
+      "supervised_tokens": 170,
+      "record_sha256": "96408d1aaee3c2c1b827807323b68d4ba48a730591f6d5da12da8d648424b797"
+    },
+    {
+      "id": "boltons-bytes2human:reference-repair",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1493,
+      "supervised_tokens": 262,
+      "record_sha256": "e794e93331c52f567afb6e368bb52523ef3ff44cb2ac9a185a579dce4ce4d6e8"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-repair",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 1829,
+      "supervised_tokens": 280,
+      "record_sha256": "af159061d6ed489cfa4ca7a5f9d7e899b9894d52e3466c3c4a6ac5d1df933b1c"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-repair",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 1618,
+      "supervised_tokens": 208,
+      "record_sha256": "b85912edf8225b7761b2ec875b71f5cbea9431e0f5a01b3fc01f3caf6d159751"
+    },
+    {
+      "id": "boltons-multi-dict:reference-repair",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1660,
+      "supervised_tokens": 128,
+      "record_sha256": "cf6f0ba43281eb8e3d0cb7958118a62e3faaa0ea795c514e9027bb5107039024"
+    },
+    {
+      "id": "boltons-pluralize:reference-repair",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1594,
+      "supervised_tokens": 256,
+      "record_sha256": "6e33ba64aafb341dcfeb8fb1ecba5c1b954177d9ba1bcef8c3fc8549c202fd17"
+    },
+    {
+      "id": "boltons-research:reference-repair",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 1639,
+      "supervised_tokens": 216,
+      "record_sha256": "c9d39f795247a9327fd05f9facf1841ec65e8b58552f8ec38605ce46c6cfa6ae"
+    },
+    {
+      "id": "boltons-slugify:reference-repair",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1317,
+      "supervised_tokens": 139,
+      "record_sha256": "beea31a695922a81d20d8c231a6710bb9596f0f7feeb4ed39da003ad2e35f52b"
+    },
+    {
+      "id": "underscore-defaults:reference-repair",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1585,
+      "supervised_tokens": 115,
+      "record_sha256": "f9555fd5790c71d699da2cd73fcf252b6515304fe474a3952449c182cca3cbee"
+    },
+    {
+      "id": "underscore-difference:reference-repair",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1459,
+      "supervised_tokens": 86,
+      "record_sha256": "6bcac997153c220d4e1475691b1c55f18adae3c1ea380685f7a2463ab041b888"
+    },
+    {
+      "id": "underscore-group-partition:reference-repair",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 1837,
+      "supervised_tokens": 167,
+      "record_sha256": "bf5f9c078267647d92eeb9c931871e391347d37634b2e55bbb615f3a50807617"
+    },
+    {
+      "id": "underscore-index-nan:reference-repair",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1049,
+      "supervised_tokens": 101,
+      "record_sha256": "bf7842a73497c411e8bbfa12162958b8506da333cb361278da1089e6417dc03c"
+    },
+    {
+      "id": "underscore-intersection:reference-repair",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1209,
+      "supervised_tokens": 95,
+      "record_sha256": "be1624ffa869f34d132f78aec88a4e3ab4a750a7115e8e53156d6a7b06006f8f"
+    },
+    {
+      "id": "underscore-map-object:reference-repair",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1428,
+      "supervised_tokens": 105,
+      "record_sha256": "4156c613af356e5a5ed6b6410183d34d7ccfea3e740495c5a55ef523901a37ae"
+    },
+    {
+      "id": "underscore-object-pairs:reference-repair",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1052,
+      "supervised_tokens": 95,
+      "record_sha256": "16ba3d4ce1fcb48129fb21ee3afb1131b8979782aeb290423eae7c254cb0d715"
+    },
+    {
+      "id": "underscore-range-step:reference-repair",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1195,
+      "supervised_tokens": 109,
+      "record_sha256": "de8d4eb2cf855d11dcacd16648065b110bac854f3beb2ed774b38d488083c81b"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-repair",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 1614,
+      "supervised_tokens": 93,
+      "record_sha256": "23ac1f33c0ae7734f0fc94febbcbf8d545d5d4515595a29fb42c008d5ad9e9f4"
+    },
+    {
+      "id": "underscore-stable-sort:reference-repair",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 1801,
+      "supervised_tokens": 89,
+      "record_sha256": "1245a8313ba8864d12cf35a9bead0142a920f1fa1ba627954a677c3d7131e672"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-repair",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1424,
+      "supervised_tokens": 91,
+      "record_sha256": "da33f1b7b3f588e69e810034460a6389e05e43af250917387bc9f27c6d58e447"
+    },
+    {
+      "id": "019-inflection-camelize:reference-review",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1533,
+      "supervised_tokens": 45,
+      "record_sha256": "056b4761fed65d3a2fee62881c91b60de7c819e0b739a6451bfd76ff9e950fbc"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-review",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1471,
+      "supervised_tokens": 45,
+      "record_sha256": "799aca075fdb5aed36a985b65ca630f869e9fee4d06722a77ea41a357a1a4f48"
+    },
+    {
+      "id": "019-inflection-humanize:reference-review",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1598,
+      "supervised_tokens": 45,
+      "record_sha256": "34282eb3f103095ce6713843c7a54654403547836bcec4024ffc4e7b3dc9fc2c"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-review",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1603,
+      "supervised_tokens": 45,
+      "record_sha256": "78c53d3bf0b60cd296b9ad4aee55b4b9ad301d7bdd26680d62f0fc35d4ae0711"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-review",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1545,
+      "supervised_tokens": 45,
+      "record_sha256": "5c4eb935b45aa31edbccbd7c864675d6dec64187d9c944b7013bfe884a64f836"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-review",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1622,
+      "supervised_tokens": 45,
+      "record_sha256": "14a9e746d6a09d5308cf51ed375b9b3a5faf0ce5bf94ca3d394e21b50ce2cb90"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-review",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1556,
+      "supervised_tokens": 45,
+      "record_sha256": "b7a199a9807580d90b7ab0dfb1639cf039cbc1519f2505d18d3f4de3dddea291"
+    },
+    {
+      "id": "019-inflection-singularize:reference-review",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1584,
+      "supervised_tokens": 45,
+      "record_sha256": "885ba2f2ae895a36f9b8b75d61b40d3795571376c3cf89eaeead2ab8a2f28bcc"
+    },
+    {
+      "id": "019-inflection-tableize:reference-review",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1496,
+      "supervised_tokens": 45,
+      "record_sha256": "cfb7287e805295d3c91954e4e31d170e42033daae6068074772b53d93a3bcc46"
+    },
+    {
+      "id": "019-inflection-titleize:reference-review",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1543,
+      "supervised_tokens": 45,
+      "record_sha256": "1fd401c8ce3f9a98fa488bf32458950a2f0b72691c2e38df628c257fed0b2556"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-review",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1520,
+      "supervised_tokens": 45,
+      "record_sha256": "3bc145e508fc2720f711053b817d7ca1783894f28089bb6cf8e3269e1ac0c179"
+    },
+    {
+      "id": "019-inflection-underscore:reference-review",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1578,
+      "supervised_tokens": 45,
+      "record_sha256": "4dde4a56c62cd07044c244ecb59c85c3145be693df65b2e4d338888477581d91"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-review",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 1959,
+      "supervised_tokens": 45,
+      "record_sha256": "234476fb7d2470c5ce9769d67926e4a6699d57e6a34ca286d54528f58176caf8"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-review",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 1602,
+      "supervised_tokens": 45,
+      "record_sha256": "c84fc96437d724ab5ac411a2094b8ce003a4f2ea615c68d68a53c82d399d7b7f"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-review",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1373,
+      "supervised_tokens": 45,
+      "record_sha256": "6c5c009504b18e669cabc18ad165aacc2a989111f320b2040039da61afa3d547"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-review",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 1703,
+      "supervised_tokens": 45,
+      "record_sha256": "4edaa21bbe7d79416ac7b0829eedc4f0302520c5454a62e7ce0ba92895ae95c8"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-review",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 1770,
+      "supervised_tokens": 45,
+      "record_sha256": "26259eae39ffdf33a2a79e6f4bd8bdc87d9b5568a0676d7ef3d7cdc75afe5f40"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-review",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1759,
+      "supervised_tokens": 45,
+      "record_sha256": "c30b6ef059ccb0b4095bd07a66f046fd784fc3a86ca166e7df5d2f85e04846c2"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-review",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 1954,
+      "supervised_tokens": 45,
+      "record_sha256": "363a0641044ebab866f123deb6882dd9eebbf17f110b9343031bdfbe70382372"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-review",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 1730,
+      "supervised_tokens": 45,
+      "record_sha256": "b092476f92053263de28bc40ddd4cec1cf90fb90f64b39597d4937f5f54a1bd1"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-review",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 1860,
+      "supervised_tokens": 45,
+      "record_sha256": "6b06f30807a8d836fc0ae89b92a9660a6b0f7b6dc8f993b0a630ef8e2a903eee"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-review",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 1664,
+      "supervised_tokens": 45,
+      "record_sha256": "e1d6c74f3cdda47c1206f9eb620ce31f649558f60b69d78027d3f060c51c94e5"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-review",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 1660,
+      "supervised_tokens": 45,
+      "record_sha256": "df70e1ebe9513025ba37c0e6afbf6ab40f660f834196b198285fae5fd85d0ad4"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-review",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 1680,
+      "supervised_tokens": 45,
+      "record_sha256": "b4179038ec7a18b1aa5a582e0bcc6b9afd605005985c58e4a06c07a77aafb409"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-review",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1809,
+      "supervised_tokens": 45,
+      "record_sha256": "17e19114360e47618300edaae87de918b396c9a10c8b88e630fdea64240ccea7"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-review",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 1972,
+      "supervised_tokens": 45,
+      "record_sha256": "be733ef1906b421061bf1c79eec42cceb52cb526b8c1a13e2cbc92dfb159bf52"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-review",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 1720,
+      "supervised_tokens": 45,
+      "record_sha256": "117b3c598b3166a3745a190ada565c48291ffc2b7f9710bac249f6aec830d2c5"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-review",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 1764,
+      "supervised_tokens": 45,
+      "record_sha256": "b4a245e274dcfd30a6190f689f94862123cc099e86d93898985a6e0a54df582e"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-review",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 1823,
+      "supervised_tokens": 45,
+      "record_sha256": "2464c1edbd286e280e8ad3b9562cfdc5e06da8256f05f456a078ce62ff6ac3d2"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-review",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2019,
+      "supervised_tokens": 45,
+      "record_sha256": "abd3003493e417d82770f660ce8f8528e60649d11919bf1bbb06c970c083a23f"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-review",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 1917,
+      "supervised_tokens": 45,
+      "record_sha256": "711588d15914ccbc3f2b0e1f6be95d8dabb36ea68dd673ea524f9c3b79efcecb"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-review",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 1844,
+      "supervised_tokens": 45,
+      "record_sha256": "6e52fc7a4e210e38deb9e39003a4289ca7c4d03e165b88c9e51e7614ad0c80f2"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-review",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1814,
+      "supervised_tokens": 45,
+      "record_sha256": "254f11607739d21c46a4e08a3bb7fc8a24130fff7fe31d6cc8ff43c4ea3c81b0"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-review",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 1708,
+      "supervised_tokens": 45,
+      "record_sha256": "fd5305d3d897ce5f55748dd9d4dafb8fb6635c5ad74c46d7be138319b67fdb1c"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-review",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1757,
+      "supervised_tokens": 44,
+      "record_sha256": "41dff7fba5cb1b4558cfe217666923099abcd76a6fdeb027dd58b27712034ab5"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-review",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1748,
+      "supervised_tokens": 44,
+      "record_sha256": "569f5225e3f1bc2ceba6070afc90afc865f28f01a6b094fd6d50e1d91851ac54"
+    },
+    {
+      "id": "boltons-asciify:reference-review",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1420,
+      "supervised_tokens": 45,
+      "record_sha256": "e5f65793e724148852e153bc3e9d554f9f778f9738111c11e251fc01ee235916"
+    },
+    {
+      "id": "boltons-bytes2human:reference-review",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1569,
+      "supervised_tokens": 45,
+      "record_sha256": "f5766c876a7d2e6911f1990df495f2a42c2ab99d6c13610b3a65fc7de738f3dc"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-review",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 1935,
+      "supervised_tokens": 66,
+      "record_sha256": "2318648af1e91a75af279cb959a2819769c9cb2040378caa166a887ada3b185e"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-review",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 1692,
+      "supervised_tokens": 44,
+      "record_sha256": "011adb07493ba22772f431522d18875a304f02eb9dd4b6ab3fc66075580eee92"
+    },
+    {
+      "id": "boltons-multi-dict:reference-review",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1736,
+      "supervised_tokens": 45,
+      "record_sha256": "4a6c8872b5af61ea0f5dbfcc0a3cf118860b22d680607bcabd014c5162ce6e55"
+    },
+    {
+      "id": "boltons-pluralize:reference-review",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1670,
+      "supervised_tokens": 45,
+      "record_sha256": "67c31760efc1eed230524c2ac2b4c3fb2bd3a2d9cf524ab353b67c2ef58d572d"
+    },
+    {
+      "id": "boltons-research:reference-review",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 1717,
+      "supervised_tokens": 47,
+      "record_sha256": "05af2c8aab0d22f45ff35d3d9554d2ffe0a5bd3f786922e4c8e9c33d0674ae28"
+    },
+    {
+      "id": "boltons-slugify:reference-review",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1393,
+      "supervised_tokens": 45,
+      "record_sha256": "5ac6d86cdb62094dd3dc2f67605e2afa0b34fc235e9f719b50e6f96ee5135f9a"
+    },
+    {
+      "id": "underscore-defaults:reference-review",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1658,
+      "supervised_tokens": 42,
+      "record_sha256": "62c91d85efbda118a42baf7d612f49eaa03018ce61edcceef6b1513104ca3aec"
+    },
+    {
+      "id": "underscore-difference:reference-review",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1528,
+      "supervised_tokens": 40,
+      "record_sha256": "bb9f12d62b0a31901e89c3e9ed7df71feba258ac4fc7564a91bc772e50fe4aa6"
+    },
+    {
+      "id": "underscore-group-partition:reference-review",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 1927,
+      "supervised_tokens": 53,
+      "record_sha256": "d092487a88ca5f37cc29f6a1ee9d4f86cf7fcd96bef5657d3245dd16ace4ff52"
+    },
+    {
+      "id": "underscore-index-nan:reference-review",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1123,
+      "supervised_tokens": 43,
+      "record_sha256": "5340dfc10415745c889473f0558705d89f7eedaac7792079abecc180a80113bd"
+    },
+    {
+      "id": "underscore-intersection:reference-review",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1279,
+      "supervised_tokens": 41,
+      "record_sha256": "5bf2a538082773a2fcbcd89aa3e36e036d06f9fd047e769252a9913ac39c19ad"
+    },
+    {
+      "id": "underscore-map-object:reference-review",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1497,
+      "supervised_tokens": 40,
+      "record_sha256": "0855e32281dbd3bba502ed8a7bbae724edf2050e5166f2209cf04eb4a43c4631"
+    },
+    {
+      "id": "underscore-object-pairs:reference-review",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1119,
+      "supervised_tokens": 39,
+      "record_sha256": "c4dd4d0cf8e4af220c0072f0c9c09c4cfd917de2953633f2d658afddd0c3f2ff"
+    },
+    {
+      "id": "underscore-range-step:reference-review",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1264,
+      "supervised_tokens": 40,
+      "record_sha256": "8a2208452c9dbe5be257ad58cd07a3188e59da75b94ec499ad3ae40e724d7ee1"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-review",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 1686,
+      "supervised_tokens": 42,
+      "record_sha256": "05e8f2ad3083d09680ca44bedad0c7a707b1e0ae7b7ba01193448bd72c51ec33"
+    },
+    {
+      "id": "underscore-stable-sort:reference-review",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 1873,
+      "supervised_tokens": 42,
+      "record_sha256": "2187709616db3ec5a2aa94a643c5a1bd30be8465f83818e9b0fcda57ecda0b79"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-review",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1494,
+      "supervised_tokens": 41,
+      "record_sha256": "8f0d1f887fd5014750101a7e57b807012096980c122fb6717a625f126aa8752a"
+    },
+    {
+      "id": "019-inflection-camelize:reference-verify",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1731,
+      "supervised_tokens": 37,
+      "record_sha256": "84c8f6f2bf93da4a98bf4c880cefc53a692b842112254f2a39bf7bc2c39063bd"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-verify",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1592,
+      "supervised_tokens": 37,
+      "record_sha256": "e21173465925a39bb7646d18cbe7d89cfd3bbd0eddd018912dfec2e25e8d38eb"
+    },
+    {
+      "id": "019-inflection-humanize:reference-verify",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1795,
+      "supervised_tokens": 37,
+      "record_sha256": "3f67cae612cc0c3a81cebb729f27344ba572a963a78cdd0d6d250d21b9c77dbe"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-verify",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1803,
+      "supervised_tokens": 37,
+      "record_sha256": "3e0cdadcd28cfd9eb358fb6f7db96e28e31b8560143a88d1718591ef4c002d83"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-verify",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1690,
+      "supervised_tokens": 37,
+      "record_sha256": "57a50ce040c2ecb62f3c13e55e2df15a20edfaa166e335fd60d78af8b018bee5"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-verify",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1867,
+      "supervised_tokens": 37,
+      "record_sha256": "f97435fb617060440d7a5c3ccd3dcf3f46c37b1432020b487c2a0f63526c8ed0"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-verify",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1742,
+      "supervised_tokens": 37,
+      "record_sha256": "c557ca5cf54e87fa1eb4f31f51ca63983cb80c6342d7296a5c60e971f9b20ca1"
+    },
+    {
+      "id": "019-inflection-singularize:reference-verify",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1782,
+      "supervised_tokens": 37,
+      "record_sha256": "af6bc1087a5c006d0354a1b44448ba2242a2ab17571935071c0a978dd8cfe79e"
+    },
+    {
+      "id": "019-inflection-tableize:reference-verify",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1640,
+      "supervised_tokens": 37,
+      "record_sha256": "273e93ba5b69fa3cd71e8012a0219b6f3d8b3ab45988af20dbc7a0ba88cf37b9"
+    },
+    {
+      "id": "019-inflection-titleize:reference-verify",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1718,
+      "supervised_tokens": 37,
+      "record_sha256": "8dc8ac2cb25295b719ec55f493d98ed7ca16c599f5345d5dc3f2b8f07aed93c5"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-verify",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1677,
+      "supervised_tokens": 37,
+      "record_sha256": "6e59eb884e21ab109455970986907e97df93b91aa389da349b0ac18275aeb246"
+    },
+    {
+      "id": "019-inflection-underscore:reference-verify",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1772,
+      "supervised_tokens": 37,
+      "record_sha256": "d8a9b946bea9db76145d3bbc04e92e4af57777c3c172adf753bfd32d897c644e"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-verify",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 2348,
+      "supervised_tokens": 68,
+      "record_sha256": "76f493a82808660d37fe164b3068a78f7fb0e68573568777326cfa218493d9f2"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-verify",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 1774,
+      "supervised_tokens": 68,
+      "record_sha256": "5c1358fe1cda2cdb517539ea1d95bae7256864f6ac6861dcbb81f19d96b77efd"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-verify",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1548,
+      "supervised_tokens": 68,
+      "record_sha256": "8ee29d015129d78d7f4e7c3db2461c06bdcdb72f987317354476c9702830276f"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-verify",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 1930,
+      "supervised_tokens": 68,
+      "record_sha256": "844e702618e0ca5ac2862ff336e91ae16b829369b98d789e01b26350311ece05"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-verify",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 2025,
+      "supervised_tokens": 68,
+      "record_sha256": "564185b5d7633142cf9dac72efb16caa3ec730bfb0f04f3e654467c89276a8a7"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-verify",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2007,
+      "supervised_tokens": 68,
+      "record_sha256": "824e2c495303803517dd49063b086adc333ff49c513f7b3facc31614111a845e"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-verify",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 2327,
+      "supervised_tokens": 68,
+      "record_sha256": "739255e314e11c42b400699115be433979f144b7e5e402b7aa597014817528df"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-verify",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2002,
+      "supervised_tokens": 68,
+      "record_sha256": "c75e7ca6e7d4ee54df67595c6b72a948b8c41003a4e71e912c88b94cc7b50bab"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-verify",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 2243,
+      "supervised_tokens": 68,
+      "record_sha256": "a05b6798fcf06ee631399143a2c1861ca1045b6b42d503539b615a7b9e623890"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-verify",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 1868,
+      "supervised_tokens": 68,
+      "record_sha256": "0669bdefc17d3d78ff2feeb6b032ba3c90c0dbd639fc32c29d08d8a05c316280"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-verify",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 1868,
+      "supervised_tokens": 68,
+      "record_sha256": "fea974658cb9852f2e1cc444894bab5d81a7111854d3ab1120c88e7c7d0b51cd"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-verify",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 1892,
+      "supervised_tokens": 68,
+      "record_sha256": "bf1dc18994146b45fda41d711ca81f14c45577626d7da603d2c64afe5fe0e50b"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-verify",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2158,
+      "supervised_tokens": 68,
+      "record_sha256": "4d90f0f3b5db7271c49994046d5810592ed2985e1ecf8386429777d71ab9cc5a"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-verify",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 2393,
+      "supervised_tokens": 68,
+      "record_sha256": "ceac48f0208e04325c477553d91926ffebf98dce72b41b57c1dd7d121df94003"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-verify",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 1904,
+      "supervised_tokens": 68,
+      "record_sha256": "b369026f6bc1586dda459ee49be34d294ba7b4ab3243ebc8a66298967c8deeb9"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-verify",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2040,
+      "supervised_tokens": 68,
+      "record_sha256": "2efd9b2c9c251f8c5265d822e61af182afb48b2cc1bb9cf6af072fc3d3bbb969"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-verify",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 2026,
+      "supervised_tokens": 68,
+      "record_sha256": "2ef70b663e3453b935fe9a9d5ec852779e5f4dd50d7ed010fc8944ee0d1d3f33"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-verify",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2462,
+      "supervised_tokens": 68,
+      "record_sha256": "68fcc82c160346b16f2ed0556ffa0997f1d1f05a4ebe19abfdba930fbc23fc6c"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-verify",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 2375,
+      "supervised_tokens": 68,
+      "record_sha256": "0991ab69644966aadb6ec5f4515727a8d80dd0ce5935f85e2086099205e08620"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-verify",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2147,
+      "supervised_tokens": 68,
+      "record_sha256": "59764b038f6fdef29f5f7d97ed729c75c2242ea283a612b4c4981841f733e8ab"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-verify",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2060,
+      "supervised_tokens": 68,
+      "record_sha256": "f9fe999ec3ad8335ed05f676dc3ebbbec0fa52647a0fe2efe63a7c8be2de1cbc"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-verify",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 1890,
+      "supervised_tokens": 68,
+      "record_sha256": "f62fd69deab8b0e3b94c07bc120d91c5f53f580059244a74898da581b7459527"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-verify",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2038,
+      "supervised_tokens": 53,
+      "record_sha256": "e16693a3fc8761ba0171b11904fa73a06b76571c3eb4ad2ac437c5c3d5822b0d"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-verify",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1983,
+      "supervised_tokens": 53,
+      "record_sha256": "987f00b230d720ada0734f45043568e9b7f19dd4f32a9e1d56e360deaf9bca17"
+    },
+    {
+      "id": "boltons-asciify:reference-verify",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1659,
+      "supervised_tokens": 53,
+      "record_sha256": "32ba4c7ff146f42680a16165cc13392ee8fb0c65b39563d2391f3a0d2c208151"
+    },
+    {
+      "id": "boltons-bytes2human:reference-verify",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1889,
+      "supervised_tokens": 53,
+      "record_sha256": "04c81cc88dd1e47d1f5e1ab1e916c116d461171bf5f353110b9afb9dfa897659"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-verify",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 2309,
+      "supervised_tokens": 53,
+      "record_sha256": "95a9a70737ed3ab5d6bc48a319a45b14feea2e0b38755e475944fef3715145fe"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-verify",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 1942,
+      "supervised_tokens": 53,
+      "record_sha256": "673a8012f271a23b27a2f8d8b880fd626ba36ba19b6a9674b73c4091c87b6844"
+    },
+    {
+      "id": "boltons-multi-dict:reference-verify",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1953,
+      "supervised_tokens": 53,
+      "record_sha256": "8dceab46ce35fe84fabad0b3f3ab75f89dae697b91bb5484ccc325bd85d58b95"
+    },
+    {
+      "id": "boltons-pluralize:reference-verify",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1957,
+      "supervised_tokens": 53,
+      "record_sha256": "ef1967b6920fcb43d9b5bd0d358ffe20d16ce8545d8093d567c6387ff7d6b21a"
+    },
+    {
+      "id": "boltons-research:reference-verify",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 1993,
+      "supervised_tokens": 53,
+      "record_sha256": "97cc209445a0f3d8575b03f1a4db94a72d90aabc668589a08ae74e2d3c60cba3"
+    },
+    {
+      "id": "boltons-slugify:reference-verify",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1591,
+      "supervised_tokens": 53,
+      "record_sha256": "26196bd1b8bce07c679191c34fa681528501ef9fb5862c25740fcaeefa33bd61"
+    },
+    {
+      "id": "underscore-defaults:reference-verify",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1819,
+      "supervised_tokens": 38,
+      "record_sha256": "f5fccf3b223cd4c034241c9f66181cee7ddc5b5f2f0c91d2c0dd187111e7365c"
+    },
+    {
+      "id": "underscore-difference:reference-verify",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1661,
+      "supervised_tokens": 38,
+      "record_sha256": "9a4038994deba5330e38fdf15f5fc0bbccbf8fb89b8d3acb9c7b01d29234b0ca"
+    },
+    {
+      "id": "underscore-group-partition:reference-verify",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 2144,
+      "supervised_tokens": 38,
+      "record_sha256": "a7a2e745e29aea1039d59adf2b1d6558ed6d8096feceedbcb82adc51b0f85f51"
+    },
+    {
+      "id": "underscore-index-nan:reference-verify",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1320,
+      "supervised_tokens": 38,
+      "record_sha256": "c0b859e813e798dc786c2d7c73bee5c16a2d01650599eb6fa98909100c5abf74"
+    },
+    {
+      "id": "underscore-intersection:reference-verify",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1417,
+      "supervised_tokens": 38,
+      "record_sha256": "463d15e4065b2ccbfa3cec4966fd1aea37593121ff189c294132413ee9180b61"
+    },
+    {
+      "id": "underscore-map-object:reference-verify",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1644,
+      "supervised_tokens": 38,
+      "record_sha256": "62cabc57c66d36ef816eb8cccadae65fd71805b1c7cd5640866c13cc41e5b87c"
+    },
+    {
+      "id": "underscore-object-pairs:reference-verify",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1266,
+      "supervised_tokens": 38,
+      "record_sha256": "b0612d32a2af83597747ff066c955ce6f1ab2ac1a52f7f685a69732998bda022"
+    },
+    {
+      "id": "underscore-range-step:reference-verify",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1417,
+      "supervised_tokens": 38,
+      "record_sha256": "53cf418b359a429529805c3d675a4cc62e2e0baf82d3eb17dd03f7fb4467f993"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-verify",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 1824,
+      "supervised_tokens": 38,
+      "record_sha256": "fceda675924de84f7fbe7d466b09deec4b35858e669b6a11e4800bfd5064c214"
+    },
+    {
+      "id": "underscore-stable-sort:reference-verify",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 2013,
+      "supervised_tokens": 38,
+      "record_sha256": "8f1553052cdb123aeee03f341c7bb81f89acb308b6f4fe3a3505caba341e13b9"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-verify",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1666,
+      "supervised_tokens": 38,
+      "record_sha256": "1c66d1c0ca1088cbb17c66690e45ddac16adcf07fbb254bba7e86e3a21f07e02"
+    },
+    {
+      "id": "019-inflection-camelize:reference-submit",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1862,
+      "supervised_tokens": 34,
+      "record_sha256": "313c5edb348e8846034a931dc18f36426474043f085a44a064f36019a7d72b99"
+    },
+    {
+      "id": "019-inflection-dasherize:reference-submit",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1723,
+      "supervised_tokens": 34,
+      "record_sha256": "f7500041e85051ce7a8fa24c32cdc2bd306d63d375a25d4e2c47ffc7de5617e8"
+    },
+    {
+      "id": "019-inflection-humanize:reference-submit",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1926,
+      "supervised_tokens": 34,
+      "record_sha256": "00e68d84ed3337b416aaf67bfda9d7404939606f75db3bfe6188360fb0f7176f"
+    },
+    {
+      "id": "019-inflection-ordinal:reference-submit",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1934,
+      "supervised_tokens": 34,
+      "record_sha256": "39121b1a9204b1be7a9300e367de2e7ffa3550a9dcc08a6fc7fb9667cab35c59"
+    },
+    {
+      "id": "019-inflection-ordinalize:reference-submit",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1821,
+      "supervised_tokens": 34,
+      "record_sha256": "84272c9c2489fb67c1a62795f60a12711e566528777c5b474a9f8c274d39bbf6"
+    },
+    {
+      "id": "019-inflection-parameterize:reference-submit",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1998,
+      "supervised_tokens": 34,
+      "record_sha256": "58b250374322c3f0e43e165a120ecda6e4a43c73619a71356282066c1869c2f9"
+    },
+    {
+      "id": "019-inflection-pluralize:reference-submit",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1873,
+      "supervised_tokens": 34,
+      "record_sha256": "a85dd403569f934b951280bb5ab248427d869a8ec737f6b28e040fa2351ac411"
+    },
+    {
+      "id": "019-inflection-singularize:reference-submit",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1913,
+      "supervised_tokens": 34,
+      "record_sha256": "2ef3ecc45e042d5f97da70369b130b37660ce5319b90d2bcc4c71bb48fb62119"
+    },
+    {
+      "id": "019-inflection-tableize:reference-submit",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1771,
+      "supervised_tokens": 34,
+      "record_sha256": "f2454c34ef696a698c728891bea1867d41d7e1079322b0d663adae9715c3bd7d"
+    },
+    {
+      "id": "019-inflection-titleize:reference-submit",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1849,
+      "supervised_tokens": 34,
+      "record_sha256": "cd939589f0f1b3b5f10a6e7a65b182094be55e460caa1620e93e19e3b51ac920"
+    },
+    {
+      "id": "019-inflection-transliterate:reference-submit",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1808,
+      "supervised_tokens": 34,
+      "record_sha256": "6ae80afc76e70bb10e7590e7c1f9987c04eb5d4d7ba60595043a0e2401f81334"
+    },
+    {
+      "id": "019-inflection-underscore:reference-submit",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1903,
+      "supervised_tokens": 34,
+      "record_sha256": "ddc3fbf3a4d3e0fe1273b097293dd16d201a8933a0d9e25eca2da94efc147d22"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:reference-submit",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 2799,
+      "supervised_tokens": 34,
+      "record_sha256": "c8607a7f063ccccf50593487f17f4600a40404bc8fb633f024014f6b055f1df6"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:reference-submit",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 2225,
+      "supervised_tokens": 34,
+      "record_sha256": "0b7360657a0145aae74d42bb84994bf08cc23c55230cb10e6ac0b52d0ec4ecdc"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:reference-submit",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1999,
+      "supervised_tokens": 34,
+      "record_sha256": "992889f0c236bf981bd2aab0cf14ecb14c219e0982618a88f165878b43693985"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:reference-submit",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 2381,
+      "supervised_tokens": 34,
+      "record_sha256": "ba00a2d2c21f9f9f400ae2e55417d3cabad1742204f48b9445f9cdaffddf38e4"
+    },
+    {
+      "id": "019-python-semver-Version-__str:reference-submit",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 2476,
+      "supervised_tokens": 34,
+      "record_sha256": "59c51063fa0aed1e46f68a999b4211de3f5641111603154ead30b5b0f6a848b5"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:reference-submit",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2458,
+      "supervised_tokens": 34,
+      "record_sha256": "b408b32947c81fd25d28aa32255e7a1fe182c8697d84ecc1e64887db26f048b1"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:reference-submit",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 2778,
+      "supervised_tokens": 34,
+      "record_sha256": "377b4af46e513cc87f713ab288f15698b914b01a637013ccb1cd20801c205367"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:reference-submit",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2453,
+      "supervised_tokens": 34,
+      "record_sha256": "857b415f19c2ca7437b112cfdb98fec94f7cf25aad447189d88126dc5709a71e"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:reference-submit",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 2694,
+      "supervised_tokens": 34,
+      "record_sha256": "3471f5124b1da7f7a8221d07e272ed3560c4aa90a1f208dcb1edae62ae0ccbf3"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:reference-submit",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 2319,
+      "supervised_tokens": 34,
+      "record_sha256": "00f2dd9d8a68d7f000ac3ad65b38c9fd5dcf2dad640570b54b395df394d6002a"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:reference-submit",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 2319,
+      "supervised_tokens": 34,
+      "record_sha256": "712eb91d4aa8eb236276d30404bbd93cd581dbfd4192514b2cdfef995016453b"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:reference-submit",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 2343,
+      "supervised_tokens": 34,
+      "record_sha256": "3ade0d7639b04d046d47d8ca3cf46bdf19cb28e7d82882e49a12851c0a7a0738"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:reference-submit",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2609,
+      "supervised_tokens": 34,
+      "record_sha256": "e4e96ab497b0d5c8d869952f1e64ff2e394b7cbc4abd12c2fb4f9269651aab57"
+    },
+    {
+      "id": "019-python-semver-Version-compare:reference-submit",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 2844,
+      "supervised_tokens": 34,
+      "record_sha256": "9933fbe89a0198652302156beae0e5f5c3fd419fb31494028ae6c62733c14edf"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:reference-submit",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 2355,
+      "supervised_tokens": 34,
+      "record_sha256": "1e21298de9c946e997b5d71e1481109c90ef68ea1362b8033132724bc3ccffc0"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:reference-submit",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2491,
+      "supervised_tokens": 34,
+      "record_sha256": "a284245cfecbd059092279a97a6d5a270659cfe51e621313851803529b5e879f"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:reference-submit",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 2477,
+      "supervised_tokens": 34,
+      "record_sha256": "f7dc80cb2d0d3909a59fd65d9eafc532fe4c94571da89b07c14b729cac326b2d"
+    },
+    {
+      "id": "019-python-semver-Version-match:reference-submit",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2913,
+      "supervised_tokens": 34,
+      "record_sha256": "78a0c0992852d66c2b4e3751da17ec9defb0d70bbfd04aa27c0afdfbf39abf11"
+    },
+    {
+      "id": "019-python-semver-Version-parse:reference-submit",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 2826,
+      "supervised_tokens": 34,
+      "record_sha256": "463ef643a5bc3df3f9ab5beee36b8be4dc955403834ba1eb6c7ee33e34d2da9f"
+    },
+    {
+      "id": "019-python-semver-Version-replace:reference-submit",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2598,
+      "supervised_tokens": 34,
+      "record_sha256": "25b8d86ddb2ebccbb0fda42b66de4019d72763ac578211bfe4fc620fa450692f"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:reference-submit",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2511,
+      "supervised_tokens": 34,
+      "record_sha256": "16f5e471681603febda6fc96d57985cb4b27ba66afeabbdddc1642ed52e2cbe8"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:reference-submit",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 2341,
+      "supervised_tokens": 34,
+      "record_sha256": "0080b561314f0001312dd5498dce7267760f0073086eb764a3577c921694e933"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:reference-submit",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2133,
+      "supervised_tokens": 34,
+      "record_sha256": "f0bb874920b8e92436b746f132014e5ed069a2cfa2816b2aa469ca34d82fac75"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:reference-submit",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2078,
+      "supervised_tokens": 34,
+      "record_sha256": "cae2c0e24190bb2f8ccf5b0a23fd073c683ffe73768c2b8084cd8b9627a39729"
+    },
+    {
+      "id": "boltons-asciify:reference-submit",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1754,
+      "supervised_tokens": 34,
+      "record_sha256": "7b8b826a48a4b537179407ae0b2fdb68c5155a8acfc7758e5b9498d3f3f5678c"
+    },
+    {
+      "id": "boltons-bytes2human:reference-submit",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1984,
+      "supervised_tokens": 34,
+      "record_sha256": "10ce1271905b80440f6bc679c5e1947c553efb775feaf07e7b969056098bee70"
+    },
+    {
+      "id": "boltons-cache-and-frozen:reference-submit",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 2404,
+      "supervised_tokens": 34,
+      "record_sha256": "6809fb7f65c6f4409be5cce740d40e8054e8f653d6a0e036c60ee5ab6539d7e5"
+    },
+    {
+      "id": "boltons-make_cache_key:reference-submit",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 2037,
+      "supervised_tokens": 34,
+      "record_sha256": "590e99fec6efa8bb4d8e83884c7809041e8063a5f426a18f98fb9201df4dea30"
+    },
+    {
+      "id": "boltons-multi-dict:reference-submit",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2048,
+      "supervised_tokens": 34,
+      "record_sha256": "f05ffd34411a989f4eafe94766f5f963906eb94e3c2c4840cce8883c1e5224b7"
+    },
+    {
+      "id": "boltons-pluralize:reference-submit",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2052,
+      "supervised_tokens": 34,
+      "record_sha256": "ca9d2293983e29050d82293a01036efb259dbac02996a42002262581fcee5ba5"
+    },
+    {
+      "id": "boltons-research:reference-submit",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 2088,
+      "supervised_tokens": 34,
+      "record_sha256": "6944b2e40f7f935a9cc24858af20674a3595168cb17bd0db63c539fc3a269f0c"
+    },
+    {
+      "id": "boltons-slugify:reference-submit",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1686,
+      "supervised_tokens": 34,
+      "record_sha256": "8f7ca66eaab6bcf9535a24afa396d98edd91169e14879e89206f80b3ab937c58"
+    },
+    {
+      "id": "underscore-defaults:reference-submit",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1903,
+      "supervised_tokens": 34,
+      "record_sha256": "b8b18d973e42d0337149d2b460bc41700184183c52930a2fe8e7c45094515d62"
+    },
+    {
+      "id": "underscore-difference:reference-submit",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1745,
+      "supervised_tokens": 34,
+      "record_sha256": "4b210ea6eb6e45836d748fd1d8ce6cf34c480d4bf5d0d99fc6ce0dadd03c56da"
+    },
+    {
+      "id": "underscore-group-partition:reference-submit",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 2228,
+      "supervised_tokens": 34,
+      "record_sha256": "6cce97c237ba2516644c33d8beb2efff19d5f49c3f63373d60af300808f1f30e"
+    },
+    {
+      "id": "underscore-index-nan:reference-submit",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1404,
+      "supervised_tokens": 34,
+      "record_sha256": "9cc5253edd056b20e1026471158f405cd71d0b967feb4861682abfdd82f43cdc"
+    },
+    {
+      "id": "underscore-intersection:reference-submit",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1501,
+      "supervised_tokens": 34,
+      "record_sha256": "6f78a3f210f1701a9863f05a0f015a96101442e08a21afa1b59b5315f37f2f7b"
+    },
+    {
+      "id": "underscore-map-object:reference-submit",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1728,
+      "supervised_tokens": 34,
+      "record_sha256": "5e58d0e45f46f681b4034f2b09b5db95f6e23c88b486965478b0ac370b9d2bab"
+    },
+    {
+      "id": "underscore-object-pairs:reference-submit",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1350,
+      "supervised_tokens": 34,
+      "record_sha256": "48ba6a2e311dfc8acc0132ef13dce1e23871b13ac0f906dfd361f97ec3ee3128"
+    },
+    {
+      "id": "underscore-range-step:reference-submit",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1501,
+      "supervised_tokens": 34,
+      "record_sha256": "271614433f18c44ea9b2d8babee5a6289de291c151d10129b469c3709db6add5"
+    },
+    {
+      "id": "underscore-reduce-initial:reference-submit",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 1908,
+      "supervised_tokens": 34,
+      "record_sha256": "228b116e437534a7c892357e8be911de6a923c9572e6e8c1b1fd0be7e043e8c2"
+    },
+    {
+      "id": "underscore-stable-sort:reference-submit",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 2097,
+      "supervised_tokens": 34,
+      "record_sha256": "f77d69851db86aec0bee0012ccb3259c7e5350a6c9f7bf33cb9274763768344f"
+    },
+    {
+      "id": "underscore-uniq-iteratee:reference-submit",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1750,
+      "supervised_tokens": 34,
+      "record_sha256": "34c2486f5402a6a29a702e7d70702fc48de1ada7ec538eb496232e671d0e49dc"
+    }
+  ],
+  "excluded": [],
+  "raw_data_public": false,
+  "evaluation_traces_used": false,
+  "data_sha256": "3efd2029afe78352b99b6f7f7ff271e180e02441e4258a39b920a4ec618eeb82",
+  "receipt_sha256": "8a66a591ea2dbf8782b6e4b2d96052bc04f96290796bb322d715f7d19f8f301e"
+}
