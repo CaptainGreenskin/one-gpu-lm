@@ -20,6 +20,22 @@ def fixture():
  return campaigns,p,inventory
 
 class ProgressReportContracts(unittest.TestCase):
+ def test_reference_screen_detects_duplicates_and_archived_packages(self):
+  import zipfile
+  screen=module('supplement/reference_screen')
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);canonical=root/'src/example';canonical.mkdir(parents=True);source=canonical/'target.py';source.write_text('reference code')
+   digest=hashlib.sha256(source.read_bytes()).hexdigest()
+   self.assertTrue(screen.scan([root],'example',canonical,{digest})['screen_passed'])
+   (root/'renamed.py').write_bytes(source.read_bytes())
+   with zipfile.ZipFile(root/'hidden.whl','w') as z:z.writestr('vendor/example/code.py','reference')
+   v=screen.scan([root],'example',canonical,{digest})
+   self.assertFalse(v['screen_passed']);self.assertEqual(v['duplicate_selected_source_files'],[str(root/'renamed.py')]);self.assertEqual(v['archives_containing_package_name'],[str(root/'hidden.whl')])
+
+ def test_descriptive_supplement_cannot_promote_or_replace_primary_gate(self):
+  c,p,i=fixture();p['promotion']={'automatic_promotion':False};s=REPORT.assess(c,p,i)
+  self.assertFalse(s['candidate_for_replication']);self.assertFalse(s['deployment_allowed']);self.assertEqual(s['gate_checks'],{})
+
  def test_dependency_review_indicators_are_private_and_do_not_claim_no_access(self):
   review=module('dependency_review')
   messages=[{'role':'assistant','extra':{'actions':[{'command':c}]}} for c in ["cat node_modules/p-map/index.js # PRIVATE", "node -e \"import('p-map')\"", 'cat index.js', 'node node_modules/ava/entrypoints/cli.mjs']]

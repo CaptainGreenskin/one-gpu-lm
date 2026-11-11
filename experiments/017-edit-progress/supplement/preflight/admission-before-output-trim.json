@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T02:35:29.674236+00:00",
+  "task_spec_sha256": "00a12e72dd11973bec7637cfff7d536689055559626182205511567a8123916c",
+  "clean": [
+    {
+      "repository": "python-humanize/humanize",
+      "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.0698638840112835,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "supp017-humanize-ordinal",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:ordinal",
+      "source_files": [
+        "src/humanize/number.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/number.py": "f3ac156ec110c8cf3caed65b3b66925301e52dbe832dc1a5876b720801140d0f"
+      },
+      "reference_sha256": {
+        "src/humanize/number.py": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.3711980120278895,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.0708265790017322,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "supp017-humanize-intcomma",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:intcomma",
+      "source_files": [
+        "src/humanize/number.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/number.py": "7f24fbd631677af179515e64a367030ebdc74edb3f0b6a0b707fcd4401f09571"
+      },
+      "reference_sha256": {
+        "src/humanize/number.py": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.6226331039797515,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.1209216190036386,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "supp017-humanize-intword",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:intword",
+      "source_files": [
+        "src/humanize/number.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/number.py": "54ffdb980d65f309068524e20747df014378f02384bd18837616f2d41b2310f9"
+      },
+      "reference_sha256": {
+        "src/humanize/number.py": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.6728216530173086,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.0709587020101026,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "supp017-humanize-fractional",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:fractional",
+      "source_files": [
+        "src/humanize/number.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/number.py": "83d534a669bd93814e98c21abd964af46fc4f4d3acadc70fedca60c5a78a609c"
+      },
+      "reference_sha256": {
+        "src/humanize/number.py": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.3220904800109565,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.0704866809537634,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "supp017-humanize-scientific",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:scientific",
+      "source_files": [
+        "src/humanize/number.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/number.py": "c996761a2a3a5be902640bb66177fb52f810d6efba75837bedf6f8dd2948b4d6"
+      },
+      "reference_sha256": {
+        "src/humanize/number.py": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.4721501030144282,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.0708950129919685,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "supp017-humanize-naturalsize",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:naturalsize",
+      "source_files": [
+        "src/humanize/filesize.py"
+      ],
+      "broken_sha256": {
+        "src/humanize/filesize.py": "b027c5373fddf614989c87d49aec3cddcd7b1bff45ee1eb3c41e1824d7ae2326"
+      },
+      "reference_sha256": {
+        "src/humanize/filesize.py": "9ee01027cf001fb4259d7b36afcb95e8d8a14d3d1a7d15f5819b67bcfc28e87e"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": -1,
+        "seconds": 2.3254555119783618,
+        "reason": "output_limit"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 1.1212978949770331,
+        "reason": "ok"
+      },
+      "admitted": false
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-11T02:35:47.305450+00:00",
+  "admitted": 5
+}

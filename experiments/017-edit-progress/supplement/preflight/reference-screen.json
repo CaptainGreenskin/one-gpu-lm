@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "roots": [
+    "/usr",
+    "/opt/python-site",
+    "/opt/node",
+    "/opt/repo-harness",
+    "/work"
+  ],
+  "package": "humanize",
+  "canonical_source": "/work/src/humanize",
+  "files_seen": 218441,
+  "directories_seen": 23137,
+  "unreadable_entries": 2,
+  "unreadable_details": [
+    {
+      "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+      "error_type": "PermissionError",
+      "errno": 13
+    },
+    {
+      "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+      "error_type": "FileNotFoundError",
+      "errno": 2
+    }
+  ],
+  "blocking_scan_errors": 0,
+  "other_package_name_matches": [],
+  "duplicate_selected_source_files": [],
+  "archives_containing_package_name": [],
+  "screen_passed": true,
+  "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+  "scope": "Known package names, exact selected .py/.pyi source hashes, and zip/wheel member names in agent-visible roots; not all semantic copies or pretraining exposure.",
+  "utc": "2026-11-11T02:36:56.878818+00:00",
+  "scanner_sha256": "52ef7ea6bda7fbfeff8b9a7739f9a7cccd40c7e5ae51fd130aa57a9d6400d035"
+}

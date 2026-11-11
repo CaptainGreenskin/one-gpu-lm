@@ -44,7 +44,7 @@ def review(root, run):
         'accessible_to_both_arms': True,
         'reference_read_access_instrumented': False,
         'clean_reference_free_validation': False,
-        'interpretation': 'AVA imports its own p-map dependency. The agent can also read this mounted dependency. Text indicators cannot prove absence of indirect access, and test execution is not itself evidence that reference source was returned to the model. Keep all frozen scores; report Blinker separately and replicate p-map with reference isolation before claiming reference-free generalization.',
+        'interpretation': 'AVA imports its own p-map dependency, readable by the agent. A separate system Blinker package is also visible through /usr. Text indicators cannot prove absence of indirect access, and test execution is not itself evidence that reference source was returned to the model. Keep all frozen scores; neither original fresh repository establishes reference-free generalization.',
         'variants': {},
     }
     reference_text = reference.read_text()
@@ -61,6 +61,26 @@ def review(root, run):
                 unmutated_replace_fragments_present_in_reference=[m['before'] in reference_text for m in mutations if m['kind'] == 'replace'],
                 **command_indicators(trajectory['messages'])))
         value['variants'][arm] = rows
+    system = []
+    for pattern in ['lib/python*/dist-packages/blinker', 'lib/python*/site-packages/blinker',
+                    'local/lib/python*/dist-packages/blinker', 'local/lib/python*/site-packages/blinker']:
+        for path in Path('/usr').glob(pattern):
+            system.append({'mounted_path': path.as_posix(), 'base_sha256': sha256(path / 'base.py')})
+    value['blinker_system_copies'] = system
+    value['blinker_command_indicators'] = {}
+    for arm in ['control', 'progress']:
+        rows = []
+        for r in json.loads((run / (arm + '.json')).read_text())['results']:
+            if r['repository'] != 'pallets-eco/blinker':
+                continue
+            path = run / 'private' / arm / r['id'] / 'trajectory.json'
+            messages = json.loads(path.read_text())['messages']
+            commands = [a['command'] for m in messages if m.get('role') == 'assistant'
+                        for a in m.get('extra', {}).get('actions', []) if 'command' in a]
+            rows.append({'id': r['id'], 'trajectory_sha256': sha256(path),
+                         'commands_naming_system_blinker_path': sum(bool(re.search(r'/usr/[^\n]*blinker', c)) for c in commands)})
+        assert len(rows) == 6
+        value['blinker_command_indicators'][arm] = rows
     return value
 
 

@@ -1,0 +1,11 @@
+{
+  "changed_before_model_scores": true,
+  "first_admission_admitted": 5,
+  "first_admission_total": 6,
+  "first_admission_sha256": "ad3170d475b7da109571e6b384887cd544716b73583855d32fdb64e32298373e",
+  "reason": "One stub produced more than1MiB pytest traceback output. Same six defects and test selection retained; shorten traceback display for both arms before model scoring.",
+  "tests_or_defects_changed": false,
+  "budget_or_policy_changed": false,
+  "final_admitted": 6,
+  "reference_screen_notes": "Two entries are inaccessible to the same sandbox UID: one missing symlink target, one permission denied. No other scan errors; no known package or byte-identical selected-source reference copies found."
+}

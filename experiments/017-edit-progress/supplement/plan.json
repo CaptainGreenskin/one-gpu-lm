@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "declared_utc": "2026-11-11T02:23:16.899561+00:00",
+  "reason": "Both primary fresh repositories have readable installed reference implementations; preserve primary72runs and original deadline, add a separately preregistered reference-screened repository study.",
+  "candidate_repository": "python-humanize/humanize",
+  "repository_used_in_previous_project_evaluations": false,
+  "task_count": 6,
+  "model_task_runs": 12,
+  "rule": "Exact unchanged edit_checkpoint_v1 from017; no score-based tuning",
+  "budget": "Exact same per-task limits and model as017",
+  "pipeline_limit_seconds": 3600,
+  "gate": "Descriptive replication only; no revision or replacement of original017gate, no automatic promotion",
+  "primary_outcomes_read": false,
+  "source_code_inspected_before_plan": false,
+  "execution": "After primary017finishes and releases GPU; one launch, no scored task reruns",
+  "publication": "Preserve all results including failures. Reference-copy scan and admissions required before public freeze and model scoring.",
+  "rejected_before_source_inspection": [
+    {
+      "repository": "mahmoud/boltons",
+      "reason": "Already used in012; detected in source-ledger check, no snapshot downloaded"
+    }
+  ],
+  "source_selection": {
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "tag": "4.12.3",
+    "reason": "Use a release supporting the same Python3.10 test runtime; inspected main requiresPython3.11. No admissions or model scores used in this choice."
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "supp017-humanize-ordinal",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:ordinal",
+    "evaluation_role": "reference_screened_supplement_017"
+  },
+  {
+    "id": "supp017-humanize-intcomma",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:intcomma",
+    "evaluation_role": "reference_screened_supplement_017"
+  },
+  {
+    "id": "supp017-humanize-intword",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:intword",
+    "evaluation_role": "reference_screened_supplement_017"
+  },
+  {
+    "id": "supp017-humanize-fractional",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:fractional",
+    "evaluation_role": "reference_screened_supplement_017"
+  },
+  {
+    "id": "supp017-humanize-scientific",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:scientific",
+    "evaluation_role": "reference_screened_supplement_017"
+  },
+  {
+    "id": "supp017-humanize-naturalsize",
+    "repository": "python-humanize/humanize",
+    "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+    "split": "test",
+    "family": "python-humanize/humanize:naturalsize",
+    "evaluation_role": "reference_screened_supplement_017"
+  }
+]

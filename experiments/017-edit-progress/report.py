@@ -43,8 +43,8 @@ def assess(campaigns,p,inventory):
    item.update({arm+'_'+k:r[k] for k in ['passed','calls','seconds','generated_tokens','exit_status']});item[arm+'_first_edit_call']=next((s['call_index'] for s in r['source_progress'] if s['changed_editable_files']),None);item[arm+'_final_changed_files']=len(r['modified_source_files'])
   paired.append(item)
  contrasts={name:{kind:[r['id'] for r in paired if r['split']==split and r['outcome']==kind] for kind in ['improved','regressed']} for split,name in SPLITS.items()}
- gate=p['promotion'];checks={'fresh_net_gain':len(contrasts['fresh']['improved'])-len(contrasts['fresh']['regressed'])>=gate['minimum_net_fresh_gain'],'no_fresh_regressions':len(contrasts['fresh']['regressed'])<=gate['maximum_regressed_fresh_tasks'],'no_historical_regressions':len(contrasts['historical']['regressed'])<=gate['maximum_regressed_historical_tasks'],'all_three_targets_pass':all(rows['progress'][i]['passed'] for i in gate['target_tasks'])}
- return {'schema_version':1,'totals':totals,'contrasts':contrasts,'paired':paired,'targets':{i:{a:rows[a][i]['passed'] for a in ARMS} for i in gate['target_tasks']},'gate_checks':checks,'candidate_for_replication':all(checks.values()),'deployment_allowed':False,'weight_updates':0,'per_repository':{repo:{'split':next(t['split'] for t in inventory if t['repository']==repo),'tasks':sum(t['repository']==repo for t in inventory),'passed':{a:sum(r['passed'] for r in rows[a].values() if r['repository']==repo) for a in ARMS}} for repo in sorted({t['repository'] for t in inventory})}}
+ gate=p['promotion'];checks={'fresh_net_gain':len(contrasts['fresh']['improved'])-len(contrasts['fresh']['regressed'])>=gate['minimum_net_fresh_gain'],'no_fresh_regressions':len(contrasts['fresh']['regressed'])<=gate['maximum_regressed_fresh_tasks'],'no_historical_regressions':len(contrasts['historical']['regressed'])<=gate['maximum_regressed_historical_tasks'],'all_three_targets_pass':all(rows['progress'][i]['passed'] for i in gate['target_tasks'])} if 'target_tasks' in gate else {}
+ return {'schema_version':1,'totals':totals,'contrasts':contrasts,'paired':paired,'targets':{i:{a:rows[a][i]['passed'] for a in ARMS} for i in gate.get('target_tasks',[])},'gate_checks':checks,'candidate_for_replication':bool(checks) and all(checks.values()),'deployment_allowed':False,'weight_updates':0,'per_repository':{repo:{'split':next(t['split'] for t in inventory if t['repository']==repo),'tasks':sum(t['repository']==repo for t in inventory),'passed':{a:sum(r['passed'] for r in rows[a].values() if r['repository']==repo) for a in ARMS}} for repo in sorted({t['repository'] for t in inventory})}}
 
 def render(root):
  read=lambda name:json.loads((root/name).read_text());exp=Path(__file__).parent;p=read('protocol.json');c=read('controller.json');inventory=read('task-inventory.json');pub=read('preregistration.json');launch=read('launch.json')
@@ -72,6 +72,8 @@ def render(root):
   if [x['id'] for x in dependency['variants'][arm]]!=[r['id'] for r in campaigns[arm]['results'] if r['repository']==dependency['repository']]:raise ValueError('Incomplete dependency exposure review')
  s['reference_exposure']={'repository':dependency['repository'],'dependency_chain':dependency['dependency_chain'],'clean_reference_free_validation':False,'explicit_dependency_path_commands':{arm:sum(r['explicit_dependency_path_commands'] for r in dependency['variants'][arm]) for arm in ARMS},'bare_package_import_commands':{arm:sum(r['bare_package_import_commands'] for r in dependency['variants'][arm]) for arm in ARMS},'reference_read_access_instrumented':False}
  s['supports_reference_free_fresh_generalization']=False
+ s['reference_exposure']['blinker_system_copies']=dependency['blinker_system_copies']
+ s['reference_exposure']['blinker_commands_naming_system_path']={arm:sum(x['commands_naming_system_blinker_path'] for x in dependency['blinker_command_indicators'][arm]) for arm in ARMS}
  for arm in ARMS:
   s['totals'][arm]['controller_seconds']=sum(t['seconds'] for t in c['stages'] if t['name']=='task' and t['variant']==arm)
   s['totals'][arm]['consecutive_repeated_commands']=sum(t['consecutive_repeated_commands'] for t in audit['variants'][arm])
@@ -114,7 +116,7 @@ def render(root):
  repos='\n'.join(f"| {k} | {v['split']} | {v['tasks']} | {v['passed']['control']} | {v['passed']['progress']} |" for k,v in s['per_repository'].items())
  (root/'README.md').write_text(f'''# 017 · Edit progress results
 
-**Frozen numerical gate {gate}. No default policy change or deployment approval follows.** The same unchanged 27B BF16 base was used, with no weight updates. All 72 runs are retained: 24 historical and 12 fresh task pairs, with no tuning between stages. The p-map dependency exposure described below limits the fresh-validation claim regardless of the gate result.
+**Frozen numerical gate {gate}. No default policy change or deployment approval follows.** The same unchanged 27B BF16 base was used, with no weight updates. All 72 runs are retained: 24 historical and 12 fresh task pairs, with no tuning between stages. Both original fresh repositories have reference exposure, limiting the validation claim regardless of the gate result. See the [separate screened supplement](../../supplement/) for additional validation.
 
 | Policy | Historical passes | Fresh passes | Failed without any observed edit | Reminder requests | Controller minutes |
 | --- | --- | --- | --- | --- | --- |
@@ -148,7 +150,9 @@ Before scoring, an added async-test plugin caused a historical clean test startu
 
 After launch, dependency review found that the AVA test framework includes its own published p-map 7.1.1 package, mounted read-only but readable by both agents. The installed dependency's `index.js` is byte-identical to the unmutated target. This was found after launch but before fresh scoring; the [discovery receipt](../../dependency-exposure-discovery.json) records that boundary. [Dependency review](dependency-review.json) records both source hashes, equality, unmutated repair-fragment overlap and sanitized access indicators. There are {s['reference_exposure']['explicit_dependency_path_commands']} commands explicitly naming the dependency path and {s['reference_exposure']['bare_package_import_commands']} bare-package import commands. These are text indicators, not file-access instrumentation: zero indicators cannot prove that no reference was accessed. AVA's internal runtime use of its dependency is not itself evidence that reference source was shown to the model.
 
-No running input, outcome, denominator or frozen gate was changed after this discovery. All 6 p-map pairs remain in the fixed aggregate, but they cannot establish reference-free fresh-repository repair ability. Blinker is reported separately above. A future reference-isolated replication is needed before a broader claim; this limitation applies even if the numerical gate passes.
+The mounted system directories also contain an older Blinker implementation, discovered before fresh scoring. See its [discovery receipt](../../system-reference-discovery.json) and the system-copy hashes in the dependency review. Commands explicitly naming a system Blinker path: {s['reference_exposure']['blinker_commands_naming_system_path']}. The same limitations of text indicators apply.
+
+No running input, outcome, denominator or frozen gate was changed after these discoveries. All 12 original fresh pairs remain in the fixed aggregate, but neither repository establishes reference-free repair ability. A separately preregistered humanize supplement preserves the same rule, model and per-task budgets after reference screening; its results are not pooled into or substituted for this frozen gate. Preparation of that CPU-only supplement overlapped part of this run, so task time comparisons should also be treated as descriptive shared-host measurements.
 
 ## Limits and reuse
 
