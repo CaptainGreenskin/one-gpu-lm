@@ -19,7 +19,8 @@ class ReleaseReportTests(unittest.TestCase):
             'context':{'policy':'full','dropped_rounds':0},'action_format_valid':True,'seconds':1,'hit_generation_limit':False}
         row = {'id':'t','passed':False,'agent_policy':policy,'variant':'shared','generations':[generation],
             'backend_errors':[],'calls':1,'generated_tokens':20,'seconds':2,'tool_seconds':.5,
-            'exit_status':'Submitted','source_progress':[{'changed_editable_files':1}]}
+            'exit_status':'Submitted','source_progress':[{'call_index':1,'changed_editable_files':1}],
+            'reason':'runtime_error','returncode':1,'modified_source_files':['f.py']}
         campaign = {'complete':True,'identity':{'ids':['t'],'tasks_sha256':'tasks','admission_sha256':'admission',
             'protocol_sha256':'protocol','variant':'shared','source_files':{'code.py':'code'}},'results':[row]}
         return campaign, protocol
@@ -29,6 +30,9 @@ class ReleaseReportTests(unittest.TestCase):
         value = report.validate_campaign(campaign,['t'],protocol,'protocol',False)
         self.assertEqual(value['passed'],0)
         self.assertEqual(value['failed_after_edit'],1)
+        campaign['results'][0]['passed']=True
+        with self.assertRaisesRegex(ValueError,'independent grader exit'):
+            report.validate_campaign(campaign,['t'],protocol,'protocol',False)
 
     def test_missing_pair_wrong_adapter_and_changed_code_fail_closed(self):
         campaign, protocol = self.fixture()
@@ -119,6 +123,7 @@ class CompleteEvidenceFixture:
                 if eligible and arm=='dev-low':threshold=7
                 if t['evaluation_role']=='fresh' and arm=='final-selected':threshold=9
                 row['passed']=i<threshold;row['generations'][0]['adapter']=candidate
+                row['reason']='ok' if row['passed'] else 'runtime_error';row['returncode']=0 if row['passed'] else 1
                 campaign['results'].append(row)
             campaigns[arm]=campaign;put('campaigns/'+arm+'.json',campaign)
             audit['campaign_sha256'][arm]=digest('campaigns/'+arm+'.json')

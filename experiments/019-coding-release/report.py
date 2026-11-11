@@ -41,6 +41,8 @@ def validate_campaign(campaign, ids, protocol, protocol_hash, adapter):
         generations = row['generations']; errors = row['backend_errors']
         require(type(row['passed']) is bool and row['agent_policy'] == policy and row['variant'] == 'shared',
                 'Task policy or score schema changed')
+        require(not row['passed'] or (row.get('returncode') == 0 and row.get('reason') == 'ok'),
+                'A successful score requires a successful independent grader exit')
         require(row['calls'] == len(generations)+len(errors) <= budget['max_model_calls'], 'Wrong call accounting')
         require(row['generated_tokens'] == sum(g['generated_tokens'] for g in generations)
                 and row['generated_tokens'] <= budget['max_total_generated_tokens'], 'Wrong output-token accounting')
@@ -184,7 +186,12 @@ def assess(root):
                 'base_passed':b['passed'],'candidate_passed':row['passed'],
                 'outcome':'improved' if row['passed'] and not b['passed'] else 'regressed' if b['passed'] and not row['passed'] else 'both_passed' if row['passed'] else 'both_failed',
                 'base_calls':b['calls'],'candidate_calls':row['calls'], 'base_output_tokens':b['generated_tokens'],
-                'candidate_output_tokens':row['generated_tokens'],'base_seconds':b['seconds'],'candidate_seconds':row['seconds']})
+                'candidate_output_tokens':row['generated_tokens'],'base_seconds':b['seconds'],'candidate_seconds':row['seconds'],
+                **{label+'_'+key:value for label,r in [('base',b),('candidate',row)] for key,value in {
+                    'exit_status':r['exit_status'], 'grade_reason':r.get('reason'), 'grade_returncode':r.get('returncode'),
+                    'first_edit_call':next((s['call_index'] for s in r['source_progress'] if s['changed_editable_files']),None),
+                    'final_changed_files':len(r['modified_source_files']),
+                    'invalid_format_calls':sum(not g['action_format_valid'] for g in r['generations'])}.items()}})
     samples = []
     for file in sorted(root.glob('telemetry-attempt-*.csv')):
         with file.open() as stream:
@@ -209,6 +216,8 @@ def render(root):
     root = Path(root); summary = assess(root)
     write_json(root/'summary.json', summary)
     write_json(root/'release-decision.json', summary['release_decision'])
+    write_json(root/'changed-pair-behavior.json',{'scope':'Observed behavior of all changed pairs; not a causal explanation or a rerun',
+        'cases':[r for r in summary['pairs'] if r['outcome'] in {'improved','regressed'}]})
     with (root/'paired-outcomes.csv').open('w',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(summary['pairs'][0]));writer.writeheader();writer.writerows(summary['pairs'])
     import matplotlib
@@ -278,6 +287,8 @@ Every update uses a different example. These curves show training diagnostics, n
 {costlines}
 
 Budgets are equal upper limits: 12 calls, 512 generated tokens/call, 6,144 generated tokens/task, 8,192 input tokens, and 900 seconds/task. Same native tool round trip, parser, full history and edit-progress policy. Actual usage differs and is retained. Candidate inference uses an unmerged adapter; sequential shared-host timings include that overhead and do not establish a production throughput comparison. [All paired outcomes](paired-outcomes.csv) retain regressions. Passing means the final independent grader accepts source changes in a fresh workspace, not simply an edit, an agent claim or a normal exit.
+
+[Every improved and regressed pair](changed-pair-behavior.json) records the first observed edit, final changed-file count, format errors, call-limit/submit status and independent grader exit. A nonzero test exit labeled `runtime_error` is not automatically a GPU or controller failure. Conversely, a last-call repair can pass independent tests even when the agent then reaches its call limit. These are observed behavior differences, not a proven explanation of why training changed a result. There is one greedy rollout per task and arm; run-to-run and training-seed variability are not estimated.
 
 Actual UTC: {timing['started_utc']} to {timing['finished_utc']}; {timing['wall_seconds']/3600:.3f} pipeline hours. Original 12-hour budget respected: {timing['within_original_budget']}. {hardware['samples']} hardware samples, max gap {hardware['max_gap_seconds']:.2f}s, sampled peak {hardware['temperature_c']['max']:.0f}C / {hardware['power_w']['max']:.1f}W. GPU energy estimate {hardware['sampled_gpu_energy_kwh']:.3f}kWh uses trapezoids between samples; it excludes CPU/system power and can miss transients. Allocator memory peaks are separate from sampled board memory.
 
