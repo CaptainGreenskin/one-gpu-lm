@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "stage": "before_model_rollouts",
+  "failure": "New pytest-asyncio autoload triggered an unset fixture-loop-scope warning treated as error by historicalItsDangerous.",
+  "correction": "Restore exact prior mounted test dependencies as default; isolated extra test site is mounted only forBlinker. No task, test, model, budget or reminder-rule changes.",
+  "original_admission_sha256": "581b8279c0477b23a8d7ff3670b36b7a4dde7d59f9c40557445c03567c5e688c",
+  "model_rollouts_before_correction": 0
+}

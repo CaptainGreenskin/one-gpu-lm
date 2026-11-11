@@ -1,0 +1,903 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T01:46:10.064420+00:00",
+  "task_spec_sha256": "a53cc8ab8664a473e3d94ac9feff2738dcdcf1c5ad131bc0c33c50b63a502e04",
+  "clean": [
+    {
+      "repository": "jmespath/jmespath.py",
+      "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.3221999679808505,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.11864708596840501,
+      "reason": "ok"
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "passed": false,
+      "returncode": 3,
+      "seconds": 0.31908064102753997,
+      "reason": "runtime_error"
+    },
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.5705034740385599,
+      "reason": "ok"
+    },
+    {
+      "repository": "pallets-eco/blinker",
+      "revision": "c3364059663df1ddce32799d6b1922af89a345f6",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.9207717020181008,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-map",
+      "revision": "d61b6a33cc1d5533ad5711b435959f3f78c3d2fe",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.786938274046406,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "source_files": [
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/visitor.py": "7e64d29fe91fefb20e82660b34c37607ea2a8e885bfc721e92d56f45eb7789cb"
+      },
+      "reference_sha256": {
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.726949631003663,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.3235973700066097,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "source_files": [
+        "jmespath/parser.py"
+      ],
+      "broken_sha256": {
+        "jmespath/parser.py": "fcb10342d0c1ddb2cb34a033ecb4829634db722a65afc6607a6d5b922879f84b"
+      },
+      "reference_sha256": {
+        "jmespath/parser.py": "5630d0379ca349ee467f973d227700e84e18c55473621254697059ada0ec5137"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.9751841339748353,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.373863168992102,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "source_files": [
+        "jmespath/functions.py"
+      ],
+      "broken_sha256": {
+        "jmespath/functions.py": "8d45977f36271654fcc520363d0d81a0c69c37098f8a069c592abc407cb92de9"
+      },
+      "reference_sha256": {
+        "jmespath/functions.py": "73d29131314d9ba2a457a23d42f82386264673bb3120bb3e2f79afc47055fe4c"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.5241299319895916,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.322939361038152,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "source_files": [
+        "jmespath/lexer.py"
+      ],
+      "broken_sha256": {
+        "jmespath/lexer.py": "96e1c3e57a239632163617eb1fc9a88b664cd81c27ad70bba3835e4f7abbe288"
+      },
+      "reference_sha256": {
+        "jmespath/lexer.py": "2c4dfe74cef99f2f51311f265e65a528a453225cfc9e3bd6cfe33edb2e2de560"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 3.175457292003557,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.323485183995217,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "source_files": [
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/visitor.py": "5d3ade9498fe2fbf61e5fe7795987c9516e9495e82837b8f36ddd9ffbc6e0b6d"
+      },
+      "reference_sha256": {
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 4.378592560009565,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.3738784710294567,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "source_files": [
+        "jmespath/functions.py",
+        "jmespath/visitor.py"
+      ],
+      "broken_sha256": {
+        "jmespath/functions.py": "bc11b82dba4d6aa9496ab944bf703eba8930676e8220353ddc93ae9308187913",
+        "jmespath/visitor.py": "ee107fc6c1a5605abb520247a8b6a296a412f10649db937ad010f7d80d02d814"
+      },
+      "reference_sha256": {
+        "jmespath/functions.py": "73d29131314d9ba2a457a23d42f82386264673bb3120bb3e2f79afc47055fe4c",
+        "jmespath/visitor.py": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 2.7748458979767747,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 2.324569866003003,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "bbc683931fb212f30a6e965d893484c68dd2d8f9d20ec82937cb6bda15cdadad"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.16879324498586357,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11865168600343168,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "deda811377eb51908fac5dc525cff54f574c922909cb86003a7aed7970714664"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11863481701584533,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11875517701264471,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "46fbc9d9cd5a87fabb4eb5320862a8b563a370ce325fd4fe95a05ed9cafb7d3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11865482700522989,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11876820999896154,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "56119f81bf94a0bbfdbd24031ba638ef0dd3f74f6c61b69a37e18a66c9e260e3"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11854168999707326,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11898796301102266,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "d50c898a435343a9ff215df5b2f879a3ad0695a9fe99964c5dac6c0236136e3a"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.11803532805060968,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11868177104042843,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "c97c713f8a5cc58c02eff1ef4126b56643b60d892b6da56cecb25563e9fa0081"
+      },
+      "reference_sha256": {
+        "index.js": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.16881288099102676,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.11891975300386548,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-decode",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "55b1a0f911d23552677f625d43ed3e8b4676b1e9197772c5e6e92a5140779ee3"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.570477649976965,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5713550610234961,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-sparse",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "31acf03db19b46eb40b58740ad0620815b21a5ccb1ae0ed164666a791fe6e895"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5708222000394017,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5703831950086169,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-null",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "3de0687ab57c6bee258d6721a4fe2cdbe5553086969ba9fe9e98e0dc38aabd5c"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.5706337510491721,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5704330439912155,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-combine",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "c7a6169accc72c252a1f19a5bddb37bb108b505208611c57c751f43d78d654a9"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.6216822499991395,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5708087459788658,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-plain-objects",
+      "source_files": [
+        "lib/utils.js"
+      ],
+      "broken_sha256": {
+        "lib/utils.js": "a08b04c2ef970f48851c343a8d536281424a38410c86a1007a0d226689dcee57"
+      },
+      "reference_sha256": {
+        "lib/utils.js": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.520778161007911,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5708629889995791,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-sort",
+      "source_files": [
+        "lib/stringify.js"
+      ],
+      "broken_sha256": {
+        "lib/stringify.js": "c33e16e9e49b08ac4288c87a16d14959cf6de9c06594a1c050db9da272a541d1"
+      },
+      "reference_sha256": {
+        "lib/stringify.js": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.57040612999117,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.5709161999984644,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-decorator",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-decorator",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "b98d40e9719a6609208eae28df25b12cb56b957f4229080e417adcf1d79733c0"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.9705199630116113,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9207732189679518,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-temporary",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-temporary",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "3e48413dd059c8484ce0322625863bbd92c44a4a1010e803ed31ce3e02aca665"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.0209183290135115,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9209317580098286,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-muted",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-muted",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "cb98d83ea160ae5283258f16fb74d4f3a397bbcc2a11d5488cd45948ace5ae0d"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.9706242870306596,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9208689750521444,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-presence",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-presence",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "e9aca0afd113c0e1b087a6cb166d13832eb6d613f407e23bb183ebd75ddc11b8"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.971182661014609,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9206970210070722,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-iteration",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-iteration",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "b3bd0530dcea317f8fb89fbd88de355ece795b2f187f96023904f567b5827911"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 1.1210811029886827,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9207045719958842,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-signal-namespace",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-namespace",
+      "source_files": [
+        "src/blinker/base.py"
+      ],
+      "broken_sha256": {
+        "src/blinker/base.py": "fa77d731632ef6c4f25282b559e8107769c44e8424d2f9b21b6e2e7598721ab3"
+      },
+      "reference_sha256": {
+        "src/blinker/base.py": "4290eebd75dcc09178f65501707e418924f8e91cfdc121bb556fe9ecdff4dbb3"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 0.9705606420175172,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.9209184200153686,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-limit",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-limit",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "f5d511fc1a256cefb6b9139499e2bdf61d7c888ab1b7910d6837baba5247c398"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 5.932547038013581,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 8.637927640986163,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-settled",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-settled",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "fcf22b7a42130394b6e9b82d2d7555f91d49657d6642b2023e0847466a4bfbfa"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.937954498978797,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 8.939125279022846,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-enumerable",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-enumerable",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "ffa0614fbc937a611a3793c1940420a6da1b3e5899497f34e5dfcb099c989651"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.838254999020137,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 8.687580882047769,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-prototype",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-prototype",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "22938668f7ffbc3bf45aa82ee69b665baefaafe26004bf8a1ed73ce987009922"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.788697134004906,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.089303862012457,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-iterator",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-iterator",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "f05daf52e68d347adad65634d63980b4df2eaa1f7ea1534ad107bf11a185167f"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.888825283036567,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 8.93811267404817,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fresh017-map-skip",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-skip",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "c6ce3d1b6530e381e2fd6d77eacc57f7f7f533a274d1797965ab5cc1f509e7b1"
+      },
+      "reference_sha256": {
+        "index.js": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 46.32076054200297,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 8.888793457008433,
+        "reason": "ok"
+      },
+      "admitted": true
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-11T01:49:38.312181+00:00",
+  "admitted": 30
+}
