@@ -10,6 +10,8 @@ The fixed sequence is 24 historical task pairs, then 12 new task pairs from Blin
 
 Fresh tasks are constructed defects with visible upstream tests on previously unused repositories. They are not real historical issues, secret tests or a broad benchmark. Authors may overlap earlier repositories, and base pretraining exposure is unknown. Original source and task contents remain private; [source/rights ledger](sources.json) identifies pinned MIT snapshots. No weights are trained or published.
 
+**Dependency exposure found after launch, before fresh scoring:** AVA includes a mounted copy of p-map 7.1.1 whose `index.js` is byte-identical to the unmutated target. [Discovery receipt](dependency-exposure-discovery.json) records the timing and hashes. Neither the running inputs nor the frozen denominator/gate will be changed. Keep all 72 results, review possible reference access after completion, report Blinker separately, and treat p-map as reference-exposed rather than clean generalization evidence. A lack of explicit dependency-path commands cannot establish lack of access.
+
 ```bash
 python -m unittest tests.test_edit_progress tests.test_tool_history tests.test_agent_interface
 python experiments/017-edit-progress/run.py --root /your/prepared/root --out runs/edit-progress

@@ -1,0 +1,17 @@
+{
+  "discovered_utc": "2026-11-11T02:18:11.095331+00:00",
+  "completed_model_runs_at_review": 16,
+  "fresh_scoring_started": false,
+  "outcome_scores_read": false,
+  "reference_sha256": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4",
+  "target_sha256": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4",
+  "identical_source": true,
+  "lock_sha256": "50eccd3f3cf98a92e85836c7ce555fdf723e09ee105a4ef89809f1433438e8ac",
+  "repository": "sindresorhus/p-map",
+  "dependency_chain": [
+    "ava@6.4.1",
+    "p-map@7.1.1"
+  ],
+  "inputs_or_scoring_changed": false,
+  "decision": "Preserve both arms and all preregistered scores. Report reference exposure as a validation limitation, show Blinker separately, and review commands after all runs finish. Text indicators cannot prove absence of access."
+}

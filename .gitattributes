@@ -9,3 +9,6 @@ experiments/015-agent-interface/results/**/*.svg -whitespace
 
 experiments/016-tool-roundtrip/results/**/*.csv -text whitespace=cr-at-eol
 experiments/016-tool-roundtrip/results/**/*.svg -whitespace
+
+experiments/017-edit-progress/results/**/*.csv -text whitespace=cr-at-eol
+experiments/017-edit-progress/results/**/*.svg -whitespace
