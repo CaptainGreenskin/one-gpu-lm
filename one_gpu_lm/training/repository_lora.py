@@ -131,10 +131,12 @@ def main():
         runtime.model = model.eval()
         # This is an integrity probe on a training context, not a heldout quality score.
         probe = rows[0]['messages']
-        before = runtime.generate({'messages':probe,'max_new_tokens':16})['ids']
+        probe_request = {'messages':probe,'max_new_tokens':16,
+            'agent_policy':{'format':training.get('dialogue_format','legacy'),'context':'full'}}
+        before = runtime.generate(probe_request)['ids']
         base = model.unload()
         runtime.model = PeftModel.from_pretrained(base,adapter,is_trainable=False).eval()
-        after = runtime.generate({'messages':probe,'max_new_tokens':16})['ids']
+        after = runtime.generate(probe_request)['ids']
         result['saved_reload_greedy_ids_equal'] = before == after
         result['reload_probe_ids_sha256'] = hashlib.sha256(json.dumps(after).encode()).hexdigest()
         if before != after:

@@ -8,6 +8,27 @@ from one_gpu_lm.common.receipts import sha256, write_json
 
 
 class BalancedSelection(unittest.TestCase):
+    def test_native_metadata_timings_cannot_disguise_duplicate_model_inputs(self):
+        from tests.test_training_encoding import RecordingTokenizer, TrainingEncodingContracts
+        import copy
+        fixture=TrainingEncodingContracts();fixture.setUp()
+        profile=fixture.profile
+        profile['training'].update(dialogue_format='native_roundtrip',max_sequence_length=10000)
+        profile['generation']={'max_new_tokens':512}
+        first=copy.deepcopy(fixture.row);second=copy.deepcopy(fixture.row)
+        first.update(id='one',provenance={'task_id':'a','kind':'verified-reference-repair'})
+        second.update(id='two',provenance={'task_id':'a','kind':'verified-reference-repair'})
+        first['messages'][-1]['extra']['tool']['seconds']=0.5
+        second['messages'][-1]['extra']['tool']['seconds']=1.5
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);paths={'data':root/'raw','data_receipt':root/'receipt'}
+            paths['data'].write_text('private');write_json(paths['data_receipt'],{'records':2})
+            with patch('one_gpu_lm.data.balanced.read_training_data',return_value=([first,second],{'a'})):
+                audit=prepare(paths,profile,RecordingTokenizer(),512,root/'selected',up_to=True)
+            self.assertEqual(audit['selected_records'],1)
+            self.assertEqual(audit['excluded'][0]['reason'],'duplicate_context_and_target')
+            self.assertEqual(audit['deduplication'],'model-visible-token-ids')
+
     @staticmethod
     def records(counts):
         return [{'id':f'{task}:{i}','task_id':task,'source_index':i}

@@ -42,6 +42,7 @@
 | 016 · 工具结果回传对照 | 保持预算不变，原生工具对话格式能否减少重复调用并修复历史退步？ | [冻结协议与诊断流程](experiments/016-tool-roundtrip/) · [9/24 → 11/24 与三个退步任务](experiments/016-tool-roundtrip/results/2026-11-11/) · [可复用接入契约](docs/tool-conversation-contract.md) |
 | 017 · 从阅读到修改代码 | 同样 12 次调用下，进度提醒能否减少不改代码，并真正提高修复成功率？ | [规则与实现](experiments/017-edit-progress/) · [主对照、曲线与失败分析](experiments/017-edit-progress/results/2026-11-11/) · [单独的新仓库补测](experiments/017-edit-progress/supplement/) |
 | 018 · 从修改到正确修复 | 修改后提醒检查当前代码、根据失败继续修复，能否在同样预算下提高新仓库成功率？ | [冻结规则与诊断](experiments/018-repair-verification/) · [全部配对、曲线与复盘](experiments/018-repair-verification/results/2026-11-11/) · [验证证据契约](docs/tool-conversation-contract.md#修改后的验证证据) |
+| 019 · 27B 参数发布候选 | 真实工具修复 SFT 能否带来独立仓库收益，并通过回归、授权与导出检查？ | [已锁定规则、预算与条件发布流程](experiments/019-coding-release/)；数据准入和运行准备中，尚无发布候选 |
 
 015 已完成 96 次配对运行：格式组和组合组的新仓库任务从基线 2/12 提高到 5/12，格式错误率约从 20.2% 降至 2.8%；两组都退步了 1 个历史任务，未通过冻结的晋级门槛。上下文管理消除了本轮少量超限请求，没有额外提高成功率。任务控制器耗时分别增加约 29% 和 31%。这是同一 27B 底座的接口评测，未更新权重；小样本构造任务结果不代表通用编码能力认证。
 

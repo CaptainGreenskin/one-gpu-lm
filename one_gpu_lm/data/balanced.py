@@ -39,7 +39,7 @@ def choose_balanced(records, budget, required_tasks):
     return ordered,quotas
 
 
-def prepare(paths, profile, tokenizer, budget, out):
+def prepare(paths, profile, tokenizer, budget, out, *, up_to=False):
     out=Path(out)
     if out.exists():raise ValueError('Preserve existing prepared datasets')
     rows,approved=read_training_data({'paths':paths})
@@ -47,12 +47,16 @@ def prepare(paths, profile, tokenizer, budget, out):
     target_budget=profile['generation']['max_new_tokens']
     by_id={r['id']:r for r in rows}
     for index,row in enumerate(rows):
+        encoded=encode_training_example(row,tokenizer,profile)
         fingerprint=hashlib.sha256(json.dumps({'messages':row['messages'],'target':row['target']},
             ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+        if encoded['dialogue_format']=='native_roundtrip':
+            # Executor timings are provenance, not model inputs. They must not
+            # turn duplicated model-visible examples into supposedly new data.
+            fingerprint=hashlib.sha256(json.dumps(encoded['ids'],separators=(',',':')).encode()).hexdigest()
         reason=None
         if fingerprint in seen:reason='duplicate_context_and_target'
         seen.add(fingerprint)
-        encoded=encode_training_example(row,tokenizer,profile)
         if len(encoded['ids'])>profile['training']['max_sequence_length']:reason='context_limit'
         elif encoded['supervised_tokens']>target_budget:reason='target_exceeds_action_generation_budget'
         record={'id':row['id'],'task_id':row['provenance']['task_id'],'source_index':index,
@@ -60,6 +64,8 @@ def prepare(paths, profile, tokenizer, budget, out):
             'record_sha256':fingerprint}
         if reason:excluded.append({**record,'reason':reason})
         else:eligible.append(record)
+    requested_budget=budget
+    if up_to:budget=min(budget,len(eligible))
     selected,quotas=choose_balanced(eligible,budget,approved)
     out.mkdir(parents=True,mode=0o700)
     data=out/'train.jsonl'
@@ -71,6 +77,8 @@ def prepare(paths, profile, tokenizer, budget, out):
         kinds=dict(Counter(r['kind'] for r in selected)),task_ids=sorted(quotas))
     write_json(out/'receipt.json',source_receipt)
     audit={'schema_version':1,'policy':source_receipt['selection_policy'],'budget':budget,
+        'requested_budget':requested_budget,'up_to_budget':up_to,
+        'deduplication':'model-visible-token-ids' if profile['training'].get('dialogue_format')=='native_roundtrip' else 'exact-messages-and-target',
         'input_records':len(rows),'eligible_records':len(eligible),'selected_records':len(selected),
         'required_tasks':len(approved),'covered_tasks':len(quotas),'per_task':quotas,
         'kinds':dict(Counter(r['kind'] for r in selected)),
@@ -90,6 +98,7 @@ def main():
     for name in ['data','data-receipt','admission','licenses','model','profile','out']:
         p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--budget',type=int,required=True)
+    p.add_argument('--up-to',action='store_true',help='Use all eligible unique examples up to the budget; never pad')
     args=p.parse_args()
     from transformers import AutoTokenizer
     profile=json.loads(args.profile.read_text())
@@ -98,7 +107,7 @@ def main():
         raise ValueError('Tokenizer model identity differs from profile')
     tokenizer=AutoTokenizer.from_pretrained(args.model,local_files_only=True,trust_remote_code=False)
     paths={k:getattr(args,k) for k in ['data','data_receipt','admission','licenses']}
-    audit=prepare(paths,profile,tokenizer,args.budget,args.out)
+    audit=prepare(paths,profile,tokenizer,args.budget,args.out,up_to=args.up_to)
     print(json.dumps({k:audit[k] for k in ['selected_records','covered_tasks','kinds','supervised_tokens']}))
 
 
