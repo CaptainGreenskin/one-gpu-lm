@@ -1,5 +1,6 @@
 """Profile-controlled Hugging Face loading and local generation."""
 import json
+import hashlib
 import time
 from one_gpu_lm.common.receipts import write_json
 from one_gpu_lm.common.agent_policy import BASH_TOOLS, prepare_context, validate_policy
@@ -52,9 +53,10 @@ class Runtime:
         packing_started = time.monotonic()
         tokens, context = prepare_context(messages, encode, limit, policy["context"])
         packing_seconds = time.monotonic() - packing_started
+        input_tokens_sha256 = hashlib.sha256(json.dumps(tokens, separators=(',', ':')).encode()).hexdigest()
         if len(tokens) > limit:
             return {"error": "context_limit", "input_tokens": len(tokens), "context": context,
-                    "packing_seconds": packing_seconds, "dialogue": dialogue}
+                    "packing_seconds": packing_seconds, "dialogue": dialogue, "input_tokens_sha256": input_tokens_sha256}
         new = min(int(value.get("max_new_tokens", 512)), 512)
         if new < 1:
             return {"error": "generation_budget_exhausted"}
@@ -68,7 +70,7 @@ class Runtime:
         torch.cuda.synchronize()
         suffix = ids[0, len(tokens):].tolist()
         return {"text": self.tokenizer.decode(suffix, skip_special_tokens=True), "ids": suffix,
-                "input_tokens": len(tokens), "generated_tokens": len(suffix),
+                "input_tokens": len(tokens), "input_tokens_sha256": input_tokens_sha256, "generated_tokens": len(suffix),
                 "seconds": time.monotonic() - started, "hit_generation_limit": len(suffix) >= new,
                 "agent_policy": policy, "context": context, "dialogue": dialogue, "packing_seconds": packing_seconds,
                 "peak_allocated_bytes": torch.cuda.max_memory_allocated(), "adapter": self.adapter}

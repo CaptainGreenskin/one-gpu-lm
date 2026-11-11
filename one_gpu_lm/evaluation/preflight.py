@@ -6,7 +6,7 @@ from pathlib import Path
 import shutil
 
 from one_gpu_lm.common.receipts import sha256, write_json
-from .environment import RepositoryEnvironment
+from .environment import RepositoryEnvironment, repository_python_site
 from .tasks import prepare
 
 
@@ -36,7 +36,7 @@ def main():
     def run(work, task, label):
         slug = task["repository"].replace("/", "--")
         deps = root / "node-deps" / slug / "node_modules"
-        env = RepositoryEnvironment(work, python_site=root / ".venv-agent/lib/python3.10/site-packages",
+        env = RepositoryEnvironment(work, python_site=repository_python_site(root, runtime, task['repository']),
             node_root=runtime["node_root"], node_modules=deps if deps.exists() else None, output_chars=100000)
         result = env.execute({"command": task["regression_command"]})
         (private / (label + ".log")).write_text(result["output"])

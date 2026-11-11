@@ -5,6 +5,19 @@ import time
 from one_gpu_lm.evaluation.sandbox import Sandbox
 
 
+def repository_python_site(root, runtime, repository):
+    """Optional isolated test dependencies; the historical default is unchanged."""
+    root = Path(root).resolve()
+    override = runtime.get('python_site_overrides', {}).get(repository)
+    if override is None:
+        return root / '.venv-agent/lib/python3.10/site-packages'
+    relative = Path(override)
+    site = root / relative
+    if relative.is_absolute() or '..' in relative.parts or not site.resolve().is_relative_to(root) or not site.is_dir():
+        raise ValueError('Repository dependency override must be an existing local directory')
+    return site
+
+
 class RepositoryEnvironment:
     def __init__(self, workspace, *, python_site, node_root, node_modules=None, timeout=60, output_chars=2400):
         self.workspace = Path(workspace).resolve()

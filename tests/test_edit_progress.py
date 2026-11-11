@@ -72,5 +72,14 @@ class EditProgressContracts(unittest.TestCase):
         restart=EditableProgress(self.root,self.monitor.original,list(self.monitor.original))
         _,after=restart.prepare_request(ms,4,12,True);self.assertEqual(before,after)
 
+    def test_repository_dependency_isolation_retains_historical_default(self):
+        from one_gpu_lm.evaluation.environment import repository_python_site
+        extra=self.root/'extra-site';extra.mkdir()
+        runtime={'python_site_overrides':{'new/repo':'extra-site'}}
+        self.assertEqual(repository_python_site(self.root,runtime,'new/repo'),extra.resolve())
+        self.assertEqual(repository_python_site(self.root,runtime,'old/repo'),self.root.resolve()/'.venv-agent/lib/python3.10/site-packages')
+        for bad in ['/tmp','../escape','missing-site']:
+            with self.assertRaises(ValueError):repository_python_site(self.root,{'python_site_overrides':{'new/repo':bad}},'new/repo')
+
 
 if __name__=='__main__':unittest.main()

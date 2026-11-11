@@ -10,7 +10,7 @@ from one_gpu_lm.common.actions import SYSTEM, INSTANCE, parse_action
 from one_gpu_lm.common.agent_policy import validate_policy, system_prompt, format_feedback
 from one_gpu_lm.common.edit_progress import EditableProgress
 from one_gpu_lm.serving.client import request, BackendError
-from .environment import RepositoryEnvironment
+from .environment import RepositoryEnvironment, repository_python_site
 from .grading import generated_files, grade
 from .tasks import file_manifest, prepare
 
@@ -122,7 +122,7 @@ def main():
     workspace = out / "workspace"
 
     def make_env(work, output_chars=budget["max_tool_output_chars"]):
-        return RepositoryEnvironment(work, python_site=root / ".venv-agent/lib/python3.10/site-packages",
+        return RepositoryEnvironment(work, python_site=repository_python_site(root, runtime, task['repository']),
             node_root=runtime["node_root"], node_modules=deps if deps.exists() else None,
             timeout=budget["max_tool_seconds"], output_chars=output_chars)
 
