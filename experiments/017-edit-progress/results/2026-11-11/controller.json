@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T02:00:20.468724+00:00",
+  "started_epoch": 1794362420.4687464,
+  "deadline_epoch": 1794373220.4687467,
+  "complete": true,
+  "protocol_sha256": "de65ada3474292c2926d946a14f000d06c03539ddc2e2a2bea9a1e3dae60fd6a",
+  "completed_runs": 72,
+  "schedule": [
+    {
+      "id": "new-jmes-filter",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "progress"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "progress"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-decorator",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-decorator",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-temporary",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-temporary",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-muted",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-muted",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-presence",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-presence",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-iteration",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-signal-iteration",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-namespace",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-signal-namespace",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-limit",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-limit",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-settled",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-settled",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-enumerable",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-enumerable",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-prototype",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-prototype",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-iterator",
+      "variant": "control"
+    },
+    {
+      "id": "fresh017-map-iterator",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-skip",
+      "variant": "progress"
+    },
+    {
+      "id": "fresh017-map-skip",
+      "variant": "control"
+    }
+  ],
+  "stages": [
+    {
+      "name": "loaded-controls",
+      "seconds": 14.544162405014504
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "control",
+      "seconds": 60.645804330008104
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "progress",
+      "seconds": 64.25420849001966
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "progress",
+      "seconds": 90.51072531699901
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "control",
+      "seconds": 70.41741659503896
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "control",
+      "seconds": 69.91681783297099
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "progress",
+      "seconds": 65.45621677202871
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "progress",
+      "seconds": 65.30484093603445
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "control",
+      "seconds": 60.59422499802895
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "control",
+      "seconds": 64.15390605799621
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "progress",
+      "seconds": 67.56167446298059
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "progress",
+      "seconds": 82.89678999397438
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "control",
+      "seconds": 62.500445217010565
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "control",
+      "seconds": 41.955298554035835
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "progress",
+      "seconds": 40.6025341359782
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "progress",
+      "seconds": 43.560539839963894
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "control",
+      "seconds": 43.35798352595884
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "control",
+      "seconds": 74.32191487797536
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "progress",
+      "seconds": 98.67624828300904
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "progress",
+      "seconds": 36.34322969499044
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "control",
+      "seconds": 35.590400843997486
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "control",
+      "seconds": 84.69253307097824
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "progress",
+      "seconds": 41.90546043700306
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "progress",
+      "seconds": 39.04592462599976
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "control",
+      "seconds": 39.94584954000311
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "control",
+      "seconds": 36.53303595300531
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "progress",
+      "seconds": 36.59086918301182
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "progress",
+      "seconds": 59.69347228400875
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "control",
+      "seconds": 59.99416137102526
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "control",
+      "seconds": 82.72626622597454
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "progress",
+      "seconds": 78.67404614697443
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "progress",
+      "seconds": 83.72556937905028
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "control",
+      "seconds": 63.1412348219892
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "control",
+      "seconds": 77.27353401604341
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "progress",
+      "seconds": 79.82706211099867
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "progress",
+      "seconds": 40.040134662995115
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "control",
+      "seconds": 39.74226599000394
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "control",
+      "seconds": 63.38809569203295
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "progress",
+      "seconds": 61.695600003993604
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "progress",
+      "seconds": 49.820397453033365
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "control",
+      "seconds": 50.62262281199219
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "control",
+      "seconds": 87.59398647997295
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "progress",
+      "seconds": 74.4516639780486
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "progress",
+      "seconds": 53.61528059100965
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "control",
+      "seconds": 55.06908157101134
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "control",
+      "seconds": 40.193658424017485
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "progress",
+      "seconds": 35.18526113498956
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "progress",
+      "seconds": 68.16120165301254
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "control",
+      "seconds": 48.41926243394846
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-decorator",
+      "variant": "control",
+      "seconds": 54.080585486022756
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-decorator",
+      "variant": "progress",
+      "seconds": 57.48914468794828
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-temporary",
+      "variant": "progress",
+      "seconds": 70.36560619599186
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-temporary",
+      "variant": "control",
+      "seconds": 55.23281202302314
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-muted",
+      "variant": "control",
+      "seconds": 30.931176821002737
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-muted",
+      "variant": "progress",
+      "seconds": 31.633014680992346
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-presence",
+      "variant": "progress",
+      "seconds": 43.152572610008065
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-presence",
+      "variant": "control",
+      "seconds": 37.08691593102412
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-iteration",
+      "variant": "control",
+      "seconds": 56.32530745503027
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-iteration",
+      "variant": "progress",
+      "seconds": 104.99068411201006
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-namespace",
+      "variant": "progress",
+      "seconds": 66.5071036000154
+    },
+    {
+      "name": "task",
+      "id": "fresh017-signal-namespace",
+      "variant": "control",
+      "seconds": 62.297525461006444
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-limit",
+      "variant": "control",
+      "seconds": 99.97895884601166
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-limit",
+      "variant": "progress",
+      "seconds": 78.38382867898326
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-settled",
+      "variant": "progress",
+      "seconds": 50.324195009015966
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-settled",
+      "variant": "control",
+      "seconds": 50.1734053879627
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-enumerable",
+      "variant": "control",
+      "seconds": 80.98254582699155
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-enumerable",
+      "variant": "progress",
+      "seconds": 63.150776290975045
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-prototype",
+      "variant": "progress",
+      "seconds": 53.078823830990586
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-prototype",
+      "variant": "control",
+      "seconds": 84.09476714901393
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-iterator",
+      "variant": "control",
+      "seconds": 69.91406614898006
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-iterator",
+      "variant": "progress",
+      "seconds": 57.087114788009785
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-skip",
+      "variant": "progress",
+      "seconds": 132.6540420569945
+    },
+    {
+      "name": "task",
+      "id": "fresh017-map-skip",
+      "variant": "control",
+      "seconds": 138.51153470401186
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-11T03:16:06.138791+00:00",
+  "current_id": "fresh017-map-skip",
+  "current_variant": "control",
+  "finished_utc": "2026-11-11T03:16:06.138777+00:00",
+  "finished_epoch": 1794366966.1387887,
+  "telemetry": {
+    "samples": 902,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

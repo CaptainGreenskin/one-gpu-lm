@@ -1,0 +1,3008 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T03:17:37.703494+00:00",
+  "complete": true,
+  "identity": {
+    "tasks_sha256": "c7f22cb87b6cb91112b717182119fde959d565f6d802bd134f72f8a2baa0acb5",
+    "admission_sha256": "06ea638febc96d633edcdfd4ae4272c0223621891162e06733c7f4d61241a199",
+    "protocol_sha256": "7dd7e2471a26a3a17f61dfdfa66c3b7ae907f62921023e3bcc196ea52baccd33",
+    "ids": [
+      "supp017-humanize-ordinal",
+      "supp017-humanize-intcomma",
+      "supp017-humanize-intword",
+      "supp017-humanize-fractional",
+      "supp017-humanize-scientific",
+      "supp017-humanize-naturalsize"
+    ],
+    "variant": "control",
+    "policy": {
+      "format": "native_roundtrip",
+      "context": "full"
+    },
+    "source_files": {
+      "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+      "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+      "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+      "one_gpu_lm/common/agent_policy.py": "c095815526e31dcda4fa98e125a7bdc5a3081d25d767730071a4e8405e0ca29d",
+      "one_gpu_lm/common/edit_progress.py": "00fa4814c7498b39b60f50cfa87d7786370cd11191f96af3e121c4dfc0019216",
+      "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+      "one_gpu_lm/common/source.py": "10e98d39f983213e3b76395ee0319c758d3aab0728269a323832cc7ac06da9ae",
+      "one_gpu_lm/common/tool_history.py": "2dd0a40d8607de752c896cf3dd77a276ef60aba9817ea448b7bd4af84611c378",
+      "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+      "one_gpu_lm/evaluation/agent.py": "dc595904bd1640deb5b38940ece07ba41761e7a90ea7b551f937c42dff5e47d1",
+      "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+      "one_gpu_lm/evaluation/campaign.py": "cd05407cb2dd38592bbf6d21aa7059bb0b6cc277c22d9ca5c22529e30546e041",
+      "one_gpu_lm/evaluation/environment.py": "f8900f969cfe29db34afa6ce59c8b1f238de75d66debcead2c21fa2aadbd80af",
+      "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+      "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+      "one_gpu_lm/evaluation/tasks.py": "cb298493399728008b5b51eeabe5177bd07618bb4fc307aaafc55782f3b90542",
+      "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+      "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+      "one_gpu_lm/models/hf_runtime.py": "f4eb7f1f4175b5028aa47831beb26ca79e9829fe041966a386573f0b368ed179",
+      "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+      "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+      "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-ordinal",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:ordinal",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 63.83607316017151,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "e19fccb32102de49ef650e311709012a8336b2772c085f1ad5ec045ca4a927d5"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 685,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "e464d00254088875a70c6580f6c0b4642f7dce2206099de7b8000014989093b9",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "e464d00254088875a70c6580f6c0b4642f7dce2206099de7b8000014989093b9",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "e464d00254088875a70c6580f6c0b4642f7dce2206099de7b8000014989093b9",
+          "call_index": 9
+        }
+      ],
+      "tool_calls": 9,
+      "tool_seconds": 2.465353694104124,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 559,
+          "input_tokens_sha256": "e1c56441ffe68c65fa2aad0fe6a9aa9009d6defb8a925cf1a5e7479e1cea679c",
+          "generated_tokens": 42,
+          "seconds": 5.320729169994593,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 559,
+            "packed_input_tokens": 559,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0724788469960913,
+          "peak_allocated_bytes": 55066477568,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1367,
+          "input_tokens_sha256": "c273aed34496256acc8261b40e7d0c5557f9769f318042cebed50d59cb186ea6",
+          "generated_tokens": 40,
+          "seconds": 3.367246581008658,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1367,
+            "packed_input_tokens": 1367,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.004251726029906422,
+          "peak_allocated_bytes": 55274395648,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1462,
+          "input_tokens_sha256": "040ffab17ad3bc49d452c5b33d7ab31c27feecfb141fcbb100fb63643951cb5b",
+          "generated_tokens": 38,
+          "seconds": 3.228220989985857,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1462,
+            "packed_input_tokens": 1462,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0038738830480724573,
+          "peak_allocated_bytes": 55294522880,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1784,
+          "input_tokens_sha256": "1431ef9aa3598fcc0d09f92a392792c34370b1002ae0867e4ec58299b579af70",
+          "generated_tokens": 62,
+          "seconds": 5.16595061699627,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1784,
+            "packed_input_tokens": 1784,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.0040958409663289785,
+          "peak_allocated_bytes": 55395255296,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2017,
+          "input_tokens_sha256": "b3ce93086fc64696b17785833180d956e46e1ae926f08b69ef83bc86204d0ae0",
+          "generated_tokens": 42,
+          "seconds": 3.6145475399680436,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2017,
+            "packed_input_tokens": 2017,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.00488288002088666,
+          "peak_allocated_bytes": 55464404480,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2247,
+          "input_tokens_sha256": "8d77dab6aa40aeb8898fe4d4f7aae38c93af9a762a87e6648a32aa4e449b8db2",
+          "generated_tokens": 42,
+          "seconds": 3.657105180027429,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2247,
+            "packed_input_tokens": 2247,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.004763674980495125,
+          "peak_allocated_bytes": 55508914176,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2334,
+          "input_tokens_sha256": "87879513580d192ff5841a381ee4069f1720935f2e497103ebc351ab61df8b24",
+          "generated_tokens": 271,
+          "seconds": 21.824492961983196,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2334,
+            "packed_input_tokens": 2334,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.004896219994407147,
+          "peak_allocated_bytes": 55533461504,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4560,
+          "input_tokens_sha256": "f06c15ed9789266730b92083cfe628c8df48cfe5010d1237d90fa9742b808d8d",
+          "generated_tokens": 52,
+          "seconds": 4.947936170035973,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4560,
+            "packed_input_tokens": 4560,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.012431777024175972,
+          "peak_allocated_bytes": 56126469632,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "e464d00254088875a70c6580f6c0b4642f7dce2206099de7b8000014989093b9",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5806,
+          "input_tokens_sha256": "9a94ee1650c2927e21aab030e2eb767ab511766f8df124021ed5166f93ba87ce",
+          "generated_tokens": 96,
+          "seconds": 8.685933013039175,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5806,
+            "packed_input_tokens": 5806,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.014612358005251735,
+          "peak_allocated_bytes": 56463373312,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "e464d00254088875a70c6580f6c0b4642f7dce2206099de7b8000014989093b9",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-intcomma",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:intcomma",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 70.91465711593628,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/humanize/number.py": "7f24fbd631677af179515e64a367030ebdc74edb3f0b6a0b707fcd4401f09571"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 741,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 11
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 12
+        }
+      ],
+      "tool_calls": 12,
+      "tool_seconds": 0.4623370969784446,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 561,
+          "input_tokens_sha256": "72e53fe748a73141169375a86bcbf97d92fd920d83574c1bde27df6a30328b8f",
+          "generated_tokens": 42,
+          "seconds": 3.4362302270019427,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 561,
+            "packed_input_tokens": 561,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0030724279931746423,
+          "peak_allocated_bytes": 55066730496,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1351,
+          "input_tokens_sha256": "2d98c378aaa8ff86cb13c037f166588ec32885c0011213d8cddfec9f9778d673",
+          "generated_tokens": 83,
+          "seconds": 6.860147961007897,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1351,
+            "packed_input_tokens": 1351,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0032382759964093566,
+          "peak_allocated_bytes": 55266804736,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2119,
+          "input_tokens_sha256": "820b613e38b329d0f26b0ff387f63533d81f8db1e57aef896c84f545264a278c",
+          "generated_tokens": 70,
+          "seconds": 5.96912413102109,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2119,
+            "packed_input_tokens": 2119,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.004036450001876801,
+          "peak_allocated_bytes": 55476706304,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2423,
+          "input_tokens_sha256": "85351699309f785563760a578ac2ff6218eb5773af4aa99b0f06b0f6279b603b",
+          "generated_tokens": 69,
+          "seconds": 5.926464288961142,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2423,
+            "packed_input_tokens": 2423,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.0045240820036269724,
+          "peak_allocated_bytes": 55555852288,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2782,
+          "input_tokens_sha256": "a4a566e448a39756b78e232ee8ccdf3171e828f308852a3774452aa067eac85e",
+          "generated_tokens": 41,
+          "seconds": 3.734390671015717,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2782,
+            "packed_input_tokens": 2782,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.00511168799130246,
+          "peak_allocated_bytes": 55651000832,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3660,
+          "input_tokens_sha256": "65baedf6bac38aa3df48bab9ee9e19e74c2b69f666b51d66ce57300686de9dd1",
+          "generated_tokens": 40,
+          "seconds": 3.8493264059652574,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3660,
+            "packed_input_tokens": 3660,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.006107522000093013,
+          "peak_allocated_bytes": 55884240384,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4208,
+          "input_tokens_sha256": "d4862f12675fa87ffe7603ec378d3030d5b75ab4e3f657e43a5db50175c4ed90",
+          "generated_tokens": 56,
+          "seconds": 5.244379510986619,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4208,
+            "packed_input_tokens": 4208,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.006793672975618392,
+          "peak_allocated_bytes": 56033614336,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5205,
+          "input_tokens_sha256": "da3ac0295f44ddbd017878661096a265c9ef872a45f0f95fca63d86e8e7f5974",
+          "generated_tokens": 89,
+          "seconds": 8.12936522095697,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5205,
+            "packed_input_tokens": 5205,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.008590771991293877,
+          "peak_allocated_bytes": 56303731200,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6145,
+          "input_tokens_sha256": "ac4859871136c85d6ea065a52b280a0a9c2e12afdb46d3471400b097a7ae5361",
+          "generated_tokens": 45,
+          "seconds": 4.831546461035032,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6145,
+            "packed_input_tokens": 6145,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.01009544701082632,
+          "peak_allocated_bytes": 56562099200,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6422,
+          "input_tokens_sha256": "cc8275d953527face694e34f33dacf6e8abddc3c3b82bbf158bb0af47a4ada32",
+          "generated_tokens": 81,
+          "seconds": 7.805383286031429,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6422,
+            "packed_input_tokens": 6422,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.010453312017489225,
+          "peak_allocated_bytes": 56627767808,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6815,
+          "input_tokens_sha256": "d033f1aa3fc1e5c55ad2ec4d7b703dc584d64811c4e07b4a8cd324fc5db5f1c6",
+          "generated_tokens": 45,
+          "seconds": 5.033111414988525,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6815,
+            "packed_input_tokens": 6815,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "packing_seconds": 0.010739304998423904,
+          "peak_allocated_bytes": 56732974080,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7312,
+          "input_tokens_sha256": "7e429acef923fb359a6aa9478683c603706b56f140142e42ee864546d1746b49",
+          "generated_tokens": 80,
+          "seconds": 7.93375018396182,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7312,
+            "packed_input_tokens": 7312,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "dialogue": {
+            "structured_tool_calls": 11,
+            "tool_results": 11
+          },
+          "packing_seconds": 0.011651584005448967,
+          "peak_allocated_bytes": 56864061440,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": false,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-intword",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:intword",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 57.23867464065552,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/humanize/number.py": "54ffdb980d65f309068524e20747df014378f02384bd18837616f2d41b2310f9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 593,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 11
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 12
+        }
+      ],
+      "tool_calls": 12,
+      "tool_seconds": 0.4464503881172277,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 563,
+          "input_tokens_sha256": "32cddb1aee05eb859237d8a2f8dce207b05068f75b450ce1942f6adacc688f41",
+          "generated_tokens": 54,
+          "seconds": 4.350304858002346,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 563,
+            "packed_input_tokens": 563,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.003329676983412355,
+          "peak_allocated_bytes": 55066810368,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1365,
+          "input_tokens_sha256": "883fa8d962163d9395e4b2238100824993164b833f9074b1b0cfcaf8cd25a0e3",
+          "generated_tokens": 58,
+          "seconds": 4.7754106360371225,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1365,
+            "packed_input_tokens": 1365,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0032226209877990186,
+          "peak_allocated_bytes": 55269476864,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1647,
+          "input_tokens_sha256": "f1b1f8368d2ace456d82277e8fcc00f6053583b95a84a6363dc1f51f1e4523c0",
+          "generated_tokens": 44,
+          "seconds": 3.712536862003617,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1647,
+            "packed_input_tokens": 1647,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0036271889694035053,
+          "peak_allocated_bytes": 55355118080,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2480,
+          "input_tokens_sha256": "9080593aafe76ff5c56622139c8502e6f92e6867f96663eeb94324228c97802d",
+          "generated_tokens": 68,
+          "seconds": 5.800134797987994,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2480,
+            "packed_input_tokens": 2480,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.004972776980139315,
+          "peak_allocated_bytes": 55573907456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3112,
+          "input_tokens_sha256": "2804970a317cb4324123838e50e2ede1ebd5e9ba891b89e5ec7f89f62e7a90fd",
+          "generated_tokens": 40,
+          "seconds": 3.7041335999965668,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3112,
+            "packed_input_tokens": 3112,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.00586053601000458,
+          "peak_allocated_bytes": 55740710400,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4459,
+          "input_tokens_sha256": "5bd4d1dc0980e116341f11554eea3109488936dffbd77392d36acbef5c5de51f",
+          "generated_tokens": 41,
+          "seconds": 4.072982954967301,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4459,
+            "packed_input_tokens": 4459,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.00734887202270329,
+          "peak_allocated_bytes": 56097091072,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4704,
+          "input_tokens_sha256": "f46166143bc53b458edd8a920299dfe696028243728cb79e0f961dcda51e3d20",
+          "generated_tokens": 41,
+          "seconds": 4.127553592028562,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4704,
+            "packed_input_tokens": 4704,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.007969386992044747,
+          "peak_allocated_bytes": 56164873728,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4822,
+          "input_tokens_sha256": "01d95128a1b5c4ec8e868022cf807005a33edaeabd429af7dc43cf1aa1211e61",
+          "generated_tokens": 41,
+          "seconds": 4.158058546017855,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4822,
+            "packed_input_tokens": 4822,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.008141514961607754,
+          "peak_allocated_bytes": 56199859200,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5104,
+          "input_tokens_sha256": "9e30e6e373c7ee667790535fff61b9a41533254c1042911b879553b5462c1863",
+          "generated_tokens": 57,
+          "seconds": 5.498173155006953,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5104,
+            "packed_input_tokens": 5104,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.008690367976669222,
+          "peak_allocated_bytes": 56281165312,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5218,
+          "input_tokens_sha256": "5a5d62340f49ded0c1b83c04c5bf270631460a92cbeced58c56b2a977b32c43c",
+          "generated_tokens": 41,
+          "seconds": 4.2530951199587435,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5218,
+            "packed_input_tokens": 5218,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.00881502398988232,
+          "peak_allocated_bytes": 56308185600,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5281,
+          "input_tokens_sha256": "99815b929d11c9cbf67995e3edb1d65172c19b41fa3e35aa32d1cfc6e40daea7",
+          "generated_tokens": 54,
+          "seconds": 5.3067814240348525,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5281,
+            "packed_input_tokens": 5281,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "packing_seconds": 0.008952278993092477,
+          "peak_allocated_bytes": 56321415168,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5708,
+          "input_tokens_sha256": "58f31b3efea759c4a63d52b8b3edeb1a99d09d4601e716cde1ebdba5c24ced09",
+          "generated_tokens": 54,
+          "seconds": 5.397160870023072,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5708,
+            "packed_input_tokens": 5708,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "dialogue": {
+            "structured_tool_calls": 11,
+            "tool_results": 11
+          },
+          "packing_seconds": 0.009871539019513875,
+          "peak_allocated_bytes": 56434011648,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": false,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-fractional",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:fractional",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 62.53358793258667,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "b67ba9d55186d7169639922b43e9734337ca1170df27667ba19f302e11a66025"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 662,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "08f4d5f3ef5b54bbcb7a8ad705faafc31e66c24462f86dcc32fbfafa9b9a376d",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "08f4d5f3ef5b54bbcb7a8ad705faafc31e66c24462f86dcc32fbfafa9b9a376d",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "08f4d5f3ef5b54bbcb7a8ad705faafc31e66c24462f86dcc32fbfafa9b9a376d",
+          "call_index": 9
+        }
+      ],
+      "tool_calls": 9,
+      "tool_seconds": 2.510372362972703,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 557,
+          "input_tokens_sha256": "977a2ab6819e69c088eca8395a4b398020b10a9c876204609d79d97161be53f9",
+          "generated_tokens": 42,
+          "seconds": 3.408083453949075,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 557,
+            "packed_input_tokens": 557,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0018028159975074232,
+          "peak_allocated_bytes": 55065859072,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1347,
+          "input_tokens_sha256": "bd263767cf00b8b617500a2e730977bcf7d5ad95ae88aed4156979b9ffb6ec37",
+          "generated_tokens": 83,
+          "seconds": 6.836825210950337,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1347,
+            "packed_input_tokens": 1347,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0031148719717748463,
+          "peak_allocated_bytes": 55267031552,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2174,
+          "input_tokens_sha256": "175a31319bf3e9f3d9767a815ac5cf4ea72b12919f26f9be00b6fc4b40d841ce",
+          "generated_tokens": 45,
+          "seconds": 3.995134536002297,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2174,
+            "packed_input_tokens": 2174,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.004450918000657111,
+          "peak_allocated_bytes": 55486901760,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2999,
+          "input_tokens_sha256": "f1d3fe6cb4d94cbcba09baac345e528a500e84971a8a55626894ead65dd5adcf",
+          "generated_tokens": 36,
+          "seconds": 3.3851754419738427,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2999,
+            "packed_input_tokens": 2999,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.006027833966072649,
+          "peak_allocated_bytes": 55705421312,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3096,
+          "input_tokens_sha256": "6768d8dfdf6c892165de2710f5eafe113887335eec409aaffadfb39d000de1e2",
+          "generated_tokens": 42,
+          "seconds": 3.901289628993254,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3096,
+            "packed_input_tokens": 3096,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.005943669006228447,
+          "peak_allocated_bytes": 55738067456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3474,
+          "input_tokens_sha256": "f20253b9a721ac526c6f43ed21ce35c00eef66f1d8a8282e7adaa1b862ce6404",
+          "generated_tokens": 42,
+          "seconds": 3.9751816340140067,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3474,
+            "packed_input_tokens": 3474,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.0065399540471844375,
+          "peak_allocated_bytes": 55844705280,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3760,
+          "input_tokens_sha256": "89074350aefa16ffb44266df920a2978d8e14e4840aa2f4c1cf15f7cad0410b8",
+          "generated_tokens": 287,
+          "seconds": 23.626936452987138,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3760,
+            "packed_input_tokens": 3760,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.006962571991607547,
+          "peak_allocated_bytes": 55910809600,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6002,
+          "input_tokens_sha256": "8c3078a9dbcd8587efd01d6487c9985c8aef9a8508625dc2a0900f3f1bab9cf0",
+          "generated_tokens": 52,
+          "seconds": 5.331506862014066,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6002,
+            "packed_input_tokens": 6002,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.015458806010428816,
+          "peak_allocated_bytes": 56511528448,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "08f4d5f3ef5b54bbcb7a8ad705faafc31e66c24462f86dcc32fbfafa9b9a376d",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7248,
+          "input_tokens_sha256": "1a98f6a9f6dba186735bc74b09bd104bf54fb752127592b63ede4710dc2eb885",
+          "generated_tokens": 33,
+          "seconds": 4.115329905005638,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7248,
+            "packed_input_tokens": 7248,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.011210007010959089,
+          "peak_allocated_bytes": 56848392704,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "08f4d5f3ef5b54bbcb7a8ad705faafc31e66c24462f86dcc32fbfafa9b9a376d",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-scientific",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [
+        {
+          "error": "context_limit",
+          "input_tokens": 8882,
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 8882,
+            "packed_input_tokens": 8882,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.021233214007224888,
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "input_tokens_sha256": "343addf69bede24fb50b396900f8bb9b8977eeb51ce986baea9409db55b6c074",
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1aec98848bbcd1f70517d0880cfcda5675bec078a1274c60f241d965170e574e",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          }
+        }
+      ],
+      "split": "test",
+      "family": "python-humanize/humanize:scientific",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 72.49992990493774,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "dd7f332a452e48ddcc391d8eb8b093391bc51c066eba47e29f9139d30087978c"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 793,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f71076e5bb81df90fe3e10bb340757a75401a87587513e155115baab3ef5d554",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f71076e5bb81df90fe3e10bb340757a75401a87587513e155115baab3ef5d554",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1aec98848bbcd1f70517d0880cfcda5675bec078a1274c60f241d965170e574e",
+          "call_index": 8
+        }
+      ],
+      "tool_calls": 8,
+      "tool_seconds": 3.545213357952889,
+      "exit_status": "RuntimeError",
+      "generations": [
+        {
+          "input_tokens": 556,
+          "input_tokens_sha256": "5e6cfb5ae9511dbfd59703fbd3c7b8fba35c3660ffb24aa64deb95c270ea8ea8",
+          "generated_tokens": 42,
+          "seconds": 3.383993125986308,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 556,
+            "packed_input_tokens": 556,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0027573839761316776,
+          "peak_allocated_bytes": 55065823232,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1346,
+          "input_tokens_sha256": "c009e713af2da28fce324198630637ff3c8d1ecd52bb118f39e5e4b1a99fd16b",
+          "generated_tokens": 40,
+          "seconds": 3.338070177996997,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1346,
+            "packed_input_tokens": 1346,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0031055290019139647,
+          "peak_allocated_bytes": 55266875904,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1800,
+          "input_tokens_sha256": "5803b1fb984effb1b89deff6f2cdd8b30d26e91d744684a6527ed3c2a01f0ef8",
+          "generated_tokens": 64,
+          "seconds": 5.326407131040469,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1800,
+            "packed_input_tokens": 1800,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.003795878030359745,
+          "peak_allocated_bytes": 55397555712,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2803,
+          "input_tokens_sha256": "a0194270448d0112874bb7511b8ca44ef519a7ba3a134ebcd82f3b22229e0d39",
+          "generated_tokens": 41,
+          "seconds": 3.6925977239734493,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2803,
+            "packed_input_tokens": 2803,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.005477797007188201,
+          "peak_allocated_bytes": 55654998528,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3339,
+          "input_tokens_sha256": "7a66c29478bc2a3f05712dddd2b1d343b330d61dc946a5f19053af7901b5c0e2",
+          "generated_tokens": 41,
+          "seconds": 3.826858737040311,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3339,
+            "packed_input_tokens": 3339,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.006427607033401728,
+          "peak_allocated_bytes": 55814608896,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3857,
+          "input_tokens_sha256": "fd6afe851346f3b998eabae615bea693a325a36865d2bb8f10b032b0be095d41",
+          "generated_tokens": 314,
+          "seconds": 25.516482856997754,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3857,
+            "packed_input_tokens": 3857,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.006640565989073366,
+          "peak_allocated_bytes": 55940409344,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6126,
+          "input_tokens_sha256": "45437fd1f9a227ddb929b0defd8c728d03c7dc6514b82706d315db1ad0701266",
+          "generated_tokens": 65,
+          "seconds": 6.355886864010245,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6126,
+            "packed_input_tokens": 6126,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.015986661019269377,
+          "peak_allocated_bytes": 56543464960,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f71076e5bb81df90fe3e10bb340757a75401a87587513e155115baab3ef5d554",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6741,
+          "input_tokens_sha256": "06886bb95da73dd6ec82a29ed7b007fbdaae1b3e75a14fea8d61a120fe657c85",
+          "generated_tokens": 186,
+          "seconds": 16.05715640197741,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6741,
+            "packed_input_tokens": 6741,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.016607265977654606,
+          "peak_allocated_bytes": 56720607744,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f71076e5bb81df90fe3e10bb340757a75401a87587513e155115baab3ef5d554",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-naturalsize",
+      "repository": "python-humanize/humanize",
+      "variant": "control",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:naturalsize",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 159.55666542053223,
+      "modified_source_files": [
+        "src/humanize/filesize.py"
+      ],
+      "source_sha256": {
+        "src/humanize/filesize.py": "7a46aa462670f8b5cb9bfe813627f1069a0acd843d4fdba6de441f9ed7c8df00"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1751,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "24cf81836a1b7a093e0dc245bc8f37d3bacb2a04e4e2a552f352a76299cc18d7",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "24cf81836a1b7a093e0dc245bc8f37d3bacb2a04e4e2a552f352a76299cc18d7",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "e32fbfe006b0285fd4d1e4993d77deac92e6b41383fe1ca91dcc4f9f9506db48",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "a92c85a160d3eead023e8211933fec268f522186b643ebbdadf9fe5cc9bad753",
+          "call_index": 11
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "c061edb08036df1d5c6f3ebc4aad53c1b3b7957be1a5ff33cc1a9bafc402b325",
+          "call_index": 12
+        }
+      ],
+      "tool_calls": 12,
+      "tool_seconds": 7.0673064778675325,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 559,
+          "input_tokens_sha256": "9dbeff8eb16a06ab280bd7f1287e517a792a6a1fd55b7641c7dd49c02e998a4f",
+          "generated_tokens": 49,
+          "seconds": 3.9158143589738756,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 559,
+            "packed_input_tokens": 559,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.001866394013632089,
+          "peak_allocated_bytes": 55065930752,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": false,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1498,
+          "input_tokens_sha256": "3320086c43fa74b7655ae6c3052c8f9c99a3571346b4f3064ba973e401da8361",
+          "generated_tokens": 42,
+          "seconds": 3.5359288370236754,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1498,
+            "packed_input_tokens": 1498,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.003231698996387422,
+          "peak_allocated_bytes": 55306387456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": false,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1562,
+          "input_tokens_sha256": "5b62c4f452de9862e802705aaed75303ff5a6ca70cce955766f7c1f7b1bb45e9",
+          "generated_tokens": 50,
+          "seconds": 4.184998894983437,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1562,
+            "packed_input_tokens": 1562,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0034091959823854268,
+          "peak_allocated_bytes": 55324882432,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": false,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2903,
+          "input_tokens_sha256": "0c5595e2535c8cd16a8b6876b93d3f4aa5ed8eb941a745e5d869acb45526cf49",
+          "generated_tokens": 40,
+          "seconds": 3.6420882999664173,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2903,
+            "packed_input_tokens": 2903,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.005406574986409396,
+          "peak_allocated_bytes": 55685642240,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": false,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3031,
+          "input_tokens_sha256": "d5c4912bdeb4bec6b683783c8d08701e0bc2b14548ffd7d5917342c01fd2c59d",
+          "generated_tokens": 312,
+          "seconds": 25.161118937016,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3031,
+            "packed_input_tokens": 3031,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.005669736012350768,
+          "peak_allocated_bytes": 55715185664,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": false,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5298,
+          "input_tokens_sha256": "d29db4573c47a065cac78c239eda4fc0bd47e2296b23920729503d0fa91826e6",
+          "generated_tokens": 61,
+          "seconds": 5.870280966046266,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5298,
+            "packed_input_tokens": 5298,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.012635210005100816,
+          "peak_allocated_bytes": 56325252096,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+            "enabled": false,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5921,
+          "input_tokens_sha256": "c932105bb4b7b779141922c20d6cf3cb801eb4af1679a0dae44bb1d170f50e04",
+          "generated_tokens": 42,
+          "seconds": 4.459888187004253,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5921,
+            "packed_input_tokens": 5921,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.009217004990205169,
+          "peak_allocated_bytes": 56489813504,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+            "enabled": false,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6129,
+          "input_tokens_sha256": "9dca508d8011bfa6de92894fd0fb522a35defb7bb44b54810492cf5d9310a450",
+          "generated_tokens": 359,
+          "seconds": 29.580702285980806,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6129,
+            "packed_input_tokens": 6129,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.009297818003688008,
+          "peak_allocated_bytes": 56544014848,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "2d4d2008c81e97020f1888652aea759b0631ba3da2969215803fa3034026c20d",
+            "enabled": false,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6760,
+          "input_tokens_sha256": "dfaa64b43610b1ade6bb19020a6eadd1d5812e4857c578fef7f341b0240056e2",
+          "generated_tokens": 43,
+          "seconds": 4.8879370669601485,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6760,
+            "packed_input_tokens": 6760,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.016587404999881983,
+          "peak_allocated_bytes": 56724335616,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "24cf81836a1b7a093e0dc245bc8f37d3bacb2a04e4e2a552f352a76299cc18d7",
+            "enabled": false,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7102,
+          "input_tokens_sha256": "f30c8c2e00b74a6e0bb5e3b6a9e72f9f51c9a717633c663064ae2df821d16831",
+          "generated_tokens": 133,
+          "seconds": 12.270184194028843,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7102,
+            "packed_input_tokens": 7102,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.011301025981083512,
+          "peak_allocated_bytes": 56808823808,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "24cf81836a1b7a093e0dc245bc8f37d3bacb2a04e4e2a552f352a76299cc18d7",
+            "enabled": false,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7407,
+          "input_tokens_sha256": "88675fae3cd05511be7f6e67976b22bad528b7f37aafae2a15e1af1eb27be1b7",
+          "generated_tokens": 177,
+          "seconds": 15.905958560993895,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7407,
+            "packed_input_tokens": 7407,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "packing_seconds": 0.01822922902647406,
+          "peak_allocated_bytes": 56891457024,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "e32fbfe006b0285fd4d1e4993d77deac92e6b41383fe1ca91dcc4f9f9506db48",
+            "enabled": false,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7756,
+          "input_tokens_sha256": "c60cab7b219b3f97e1cf5f5aebb61347460dbe017eec78164712f9ddacc5b08f",
+          "generated_tokens": 443,
+          "seconds": 37.30286109598819,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7756,
+            "packed_input_tokens": 7756,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "dialogue": {
+            "structured_tool_calls": 11,
+            "tool_results": 11
+          },
+          "packing_seconds": 0.018988347030244768,
+          "peak_allocated_bytes": 56987643392,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "a92c85a160d3eead023e8211933fec268f522186b643ebbdadf9fe5cc9bad753",
+            "enabled": false,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    }
+  ],
+  "finished_utc": "2026-11-11T03:36:07.493353+00:00"
+}

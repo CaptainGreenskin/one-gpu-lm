@@ -1,0 +1,7 @@
+id,repository,split,family,outcome,control_passed,control_calls,control_seconds,control_generated_tokens,control_exit_status,control_first_edit_call,control_final_changed_files,progress_passed,progress_calls,progress_seconds,progress_generated_tokens,progress_exit_status,progress_first_edit_call,progress_final_changed_files
+supp017-humanize-ordinal,python-humanize/humanize,test,python-humanize/humanize:ordinal,both_passed,True,9,63.83607316017151,685,Submitted,7,1,True,10,82.43743658065796,907,Submitted,7,1
+supp017-humanize-intcomma,python-humanize/humanize,test,python-humanize/humanize:intcomma,both_failed,False,12,70.91465711593628,741,LimitsExceeded,,0,False,12,119.24976420402527,1319,LimitsExceeded,9,1
+supp017-humanize-intword,python-humanize/humanize,test,python-humanize/humanize:intword,both_failed,False,12,57.23867464065552,593,LimitsExceeded,,0,False,12,55.948394536972046,569,LimitsExceeded,,0
+supp017-humanize-fractional,python-humanize/humanize,test,python-humanize/humanize:fractional,both_passed,True,9,62.53358793258667,662,Submitted,7,1,True,8,61.51411962509155,668,Submitted,6,1
+supp017-humanize-scientific,python-humanize/humanize,test,python-humanize/humanize:scientific,both_passed,True,9,72.49992990493774,793,RuntimeError,6,1,True,9,72.33670353889465,789,RuntimeError,6,1
+supp017-humanize-naturalsize,python-humanize/humanize,test,python-humanize/humanize:naturalsize,both_failed,False,12,159.55666542053223,1751,LimitsExceeded,5,1,False,12,199.0994005203247,2286,RuntimeError,5,1

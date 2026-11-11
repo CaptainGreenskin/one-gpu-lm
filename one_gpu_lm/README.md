@@ -44,7 +44,7 @@
 
 [016](../experiments/016-tool-roundtrip/)增加显式 `native_roundtrip` 格式策略：将已执行且核对一致的命令序列化为 `assistant.tool_calls`，结果按 `role=tool` 回传。原始审计消息保留；格式错误反馈不转换，不修补或重执行命令。该策略仍需独立任务验收，默认入口保持不变。
 
-[017](../experiments/017-edit-progress/)增加显式 `progress: edit_checkpoint_v1` 策略，搭配 `native_roundtrip` 和完整历史使用。执行器在两组都观察允许修改文件的字节状态；候选在尚无修改且已用四次调用，或连续两次命令相同时，向下一请求的系统消息临时附加预算提醒。没有额外调用、强制编辑或答案提示。每次实际输入记录 token 哈希，结束后可用固定 tokenizer 重放核对。`source_progress` 记录首次及后续源码变化；任务是否通过仍由独立判分决定，不能用“已修改文件”替代。
+[017](../experiments/017-edit-progress/)增加显式 `progress: edit_checkpoint_v1` 策略，搭配 `native_roundtrip` 和完整历史使用。执行器在两组都观察允许修改文件的字节状态；候选只有在尚无有效源码改动，且满足“已用四次调用”或“最近两次已执行命令完全相同”之一时，向下一请求的系统消息临时附加预算提醒。没有额外调用、强制编辑或答案提示。每次实际输入记录 token 哈希，结束后可用固定 tokenizer 重放核对。`source_progress` 记录首次及后续源码变化；任务是否通过仍由独立判分决定，不能用“已修改文件”替代。
 
 测试依赖可以按仓库隔离。在受控运行根目录的 `runtime.json` 中设置 `python_site_overrides`，例如 `{"example/project": ".venv-project/lib/python3.10/site-packages"}`。覆盖项必须是该根目录内现有目录；未指定的仓库沿用原默认环境。目录内容须可在只读挂载后独立导入，不能依赖指向宿主机其他目录的绝对 `.pth` 文件。先冻结包版本并重跑原版、缺陷版、恢复版检查，防止新测试插件改变历史任务的执行环境。
 

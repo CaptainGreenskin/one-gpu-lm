@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "source_experiment": "016",
+  "source_public_commit": "b04b282e2554a78080bc01e753032e4d24cdab86",
+  "analysis": "Manual review of all three regressed task trajectories under both016arms; no command execution or model sampling",
+  "private_trace_bundle_sha256": "90ba05b180fd3548cb80ef2ae1e26a2dc89e4b66955b36a5d17874aab09db324",
+  "findings": [
+    {
+      "id": "new-json-nonfinite",
+      "control_first_edit_call": 6,
+      "roundtrip_calls": 12,
+      "roundtrip_edit_attempts": 0,
+      "pattern": "One working reproduction command executed9consecutive times; same observations, no edit attempted."
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "control_first_edit_call": 9,
+      "roundtrip_calls": 12,
+      "roundtrip_edit_attempts": 0,
+      "pattern": "Read source, tests and related serializer methods throughout; no write attempted. Control made repair after7reads and1format rejection."
+    },
+    {
+      "id": "fresh-query-sort",
+      "control_first_edit_call": 12,
+      "roundtrip_calls": 12,
+      "roundtrip_edit_attempts": 0,
+      "pattern": "Read source and search tests throughout; no write attempted. Control used its lastcall for edit+test."
+    }
+  ],
+  "conclusion": "Observed missing transition from inspection to editing; not failed patches or context overflow on these candidate traces. Does not establish a unique causal explanation.",
+  "hypothesis": "Generic observed-progress reminder may help reserve budget for a justified edit and validation; no forced edit, extra calls or reference hints."
+}

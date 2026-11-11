@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T03:17:37.703432+00:00",
+  "started_epoch": 1794367057.7034488,
+  "deadline_epoch": 1794370657.703449,
+  "complete": true,
+  "protocol_sha256": "7dd7e2471a26a3a17f61dfdfa66c3b7ae907f62921023e3bcc196ea52baccd33",
+  "completed_runs": 12,
+  "schedule": [
+    {
+      "id": "supp017-humanize-ordinal",
+      "variant": "control"
+    },
+    {
+      "id": "supp017-humanize-ordinal",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-intcomma",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-intcomma",
+      "variant": "control"
+    },
+    {
+      "id": "supp017-humanize-intword",
+      "variant": "control"
+    },
+    {
+      "id": "supp017-humanize-intword",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-fractional",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-fractional",
+      "variant": "control"
+    },
+    {
+      "id": "supp017-humanize-scientific",
+      "variant": "control"
+    },
+    {
+      "id": "supp017-humanize-scientific",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-naturalsize",
+      "variant": "progress"
+    },
+    {
+      "id": "supp017-humanize-naturalsize",
+      "variant": "control"
+    }
+  ],
+  "stages": [
+    {
+      "name": "loaded-controls",
+      "seconds": 1.2170645269798115
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-ordinal",
+      "variant": "control",
+      "seconds": 64.10467958298977
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-ordinal",
+      "variant": "progress",
+      "seconds": 82.69802564400015
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-intcomma",
+      "variant": "progress",
+      "seconds": 119.52745674102334
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-intcomma",
+      "variant": "control",
+      "seconds": 71.16985113197006
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-intword",
+      "variant": "control",
+      "seconds": 57.489644921035506
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-intword",
+      "variant": "progress",
+      "seconds": 56.23741223104298
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-fractional",
+      "variant": "progress",
+      "seconds": 61.800985591020435
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-fractional",
+      "variant": "control",
+      "seconds": 62.802617061010096
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-scientific",
+      "variant": "control",
+      "seconds": 72.77423265896505
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-scientific",
+      "variant": "progress",
+      "seconds": 72.62150438403478
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-naturalsize",
+      "variant": "progress",
+      "seconds": 199.34960751602193
+    },
+    {
+      "name": "task",
+      "id": "supp017-humanize-naturalsize",
+      "variant": "control",
+      "seconds": 159.81559982401086
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-11T03:36:07.513047+00:00",
+  "current_id": "supp017-humanize-naturalsize",
+  "current_variant": "control",
+  "finished_utc": "2026-11-11T03:36:07.513032+00:00",
+  "finished_epoch": 1794368167.5130455,
+  "telemetry": {
+    "samples": 221,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

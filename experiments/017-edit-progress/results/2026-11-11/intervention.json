@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "edit_checkpoint_v1",
+  "locked_before_new_repository_source_review_utc": "2026-11-11T01:36:30.682996+00:00",
+  "basis": "016 three historical regressions only; no017 model calls or fresh task/source inspection",
+  "trigger": "No current editable-file byte change AND (at least4completed model calls OR at least2consecutive identical accepted commands).",
+  "action": "Append deterministic temporary system reminder before next request; unchanged audit history and tool results. No model-generated summary or action repair.",
+  "reminder": "[Execution progress] {used} of {limit} model calls used; {remaining} calls remain including this request. No allowed source file currently differs from its starting defective version. {repeat}Use the evidence already collected to make a minimal justified repair, then run the declared regression command and submit. If one detail is still missing, use one focused probe; reserve calls for editing and testing. Do not change unrelated code merely to satisfy this reminder.",
+  "repeat_clause": "The last {streak} executed commands were identical. Do not repeat that same probe without a specific reason. ",
+  "limits": "Same12calls,512tokens/call,6144totalgenerated,8192input,900s/task. Reminder tokens count toward8192input; no history truncation or extra calls.",
+  "candidate": "native_roundtrip + progress reminder",
+  "control": "native_roundtrip without reminder",
+  "fresh_validation": "Two previously unused repositories with6tasks each; construct/freeze before scoring, never tune policy from fresh outcomes.",
+  "sequence": "All24historicalpairedtasks then12freshpairedtasks under one frozen policy, including fresh validation even if historical gate fails."
+}

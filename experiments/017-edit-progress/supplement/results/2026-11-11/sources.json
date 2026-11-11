@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repository": "python-humanize/humanize",
+      "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+      "tag": "4.12.3",
+      "role": "fresh_reference_screened_supplement",
+      "license_spdx": "MIT",
+      "license_path": "LICENCE",
+      "license_sha256": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380",
+      "license_url": "https://github.com/python-humanize/humanize/blob/2968d44280a68f775db73ddeb2f2fc6c05edac84/LICENCE",
+      "rights_review": {
+        "status": "Pinned MIT license and selected source headers reviewed",
+        "obligations": [
+          "Retain upstream copyright and permission notice with redistributed copies or substantial portions"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "src/humanize/filesize.py",
+          "sha256": "9ee01027cf001fb4259d7b36afcb95e8d8a14d3d1a7d15f5819b67bcfc28e87e"
+        },
+        {
+          "path": "src/humanize/number.py",
+          "sha256": "d0b61a7d271265257a8c5894d2f97b16d8c17d2257319ed93f490bd62519910c"
+        }
+      ],
+      "prepared_overlay": [
+        {
+          "path": "src/humanize/_version.py",
+          "sha256": "2ed2494fe3760b8c1f865cad6bdaf91a9ae11f5d21d4bfb50629bac7d1413fd1",
+          "purpose": "Version-only file normally produced by upstream build hook; no target implementation, test or behavior change"
+        }
+      ],
+      "test_scope": "All upstream number and filesize tests; other modules and benchmarks are outside this fixed task family"
+    }
+  ]
+}

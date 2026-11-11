@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "model_scores_observed": false,
+  "review": "The slowest negative control reached about45s but contains21failed tests and concrete wrong-result assertions; admission is not based on a timeout alone.",
+  "id": "fresh017-map-skip",
+  "negative_log_sha256": "6d987c7829ff11945f320ac2cbdd3e4352d816b0f4870999360b468987240ee6",
+  "failed_tests": 21,
+  "wrong_result_assertions_observed": true,
+  "raw_log_public": false
+}

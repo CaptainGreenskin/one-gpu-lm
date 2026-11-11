@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "totals": {
+    "control": {
+      "passed": {
+        "historical": 0,
+        "fresh": 3
+      },
+      "tasks": {
+        "historical": 0,
+        "fresh": 6
+      },
+      "calls": 63,
+      "generation_calls": 62,
+      "generated_tokens": 5225,
+      "generation_seconds": 460.512386231916,
+      "task_seconds": 486.57958817481995,
+      "tool_seconds": 16.49703337799292,
+      "format_invalid_calls": 0,
+      "generation_limit_hits": 0,
+      "backend_errors": {
+        "context_limit": 1
+      },
+      "context_limit_requests": 1,
+      "reminder_requests": 0,
+      "failed_without_final_source_change": 2,
+      "failed_without_any_observed_edit": 2,
+      "exit_status": {
+        "Submitted": 2,
+        "LimitsExceeded": 3,
+        "RuntimeError": 1
+      },
+      "call_limit_without_any_edit": 2,
+      "by_split": {
+        "historical": {
+          "calls": 0,
+          "failed_without_any_observed_edit": 0,
+          "call_limit_without_any_edit": 0
+        },
+        "fresh": {
+          "calls": 63,
+          "failed_without_any_observed_edit": 2,
+          "call_limit_without_any_edit": 2
+        }
+      },
+      "controller_seconds": 488.15662517998135,
+      "consecutive_repeated_commands": 0
+    },
+    "progress": {
+      "passed": {
+        "historical": 0,
+        "fresh": 3
+      },
+      "tasks": {
+        "historical": 0,
+        "fresh": 6
+      },
+      "calls": 63,
+      "generation_calls": 61,
+      "generated_tokens": 6538,
+      "generation_seconds": 560.1223107750993,
+      "task_seconds": 590.5858190059662,
+      "tool_seconds": 20.79805133701302,
+      "format_invalid_calls": 1,
+      "generation_limit_hits": 1,
+      "backend_errors": {
+        "context_limit": 2
+      },
+      "context_limit_requests": 2,
+      "reminder_requests": 21,
+      "failed_without_final_source_change": 1,
+      "failed_without_any_observed_edit": 1,
+      "exit_status": {
+        "Submitted": 2,
+        "LimitsExceeded": 2,
+        "RuntimeError": 2
+      },
+      "call_limit_without_any_edit": 1,
+      "by_split": {
+        "historical": {
+          "calls": 0,
+          "failed_without_any_observed_edit": 0,
+          "call_limit_without_any_edit": 0
+        },
+        "fresh": {
+          "calls": 63,
+          "failed_without_any_observed_edit": 1,
+          "call_limit_without_any_edit": 1
+        }
+      },
+      "controller_seconds": 592.2349921071436,
+      "consecutive_repeated_commands": 0
+    }
+  },
+  "contrasts": {
+    "historical": {
+      "improved": [],
+      "regressed": []
+    },
+    "fresh": {
+      "improved": [],
+      "regressed": []
+    }
+  },
+  "paired": [
+    {
+      "id": "supp017-humanize-ordinal",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:ordinal",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 9,
+      "control_seconds": 63.83607316017151,
+      "control_generated_tokens": 685,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 7,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 10,
+      "progress_seconds": 82.43743658065796,
+      "progress_generated_tokens": 907,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 7,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "supp017-humanize-intcomma",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:intcomma",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 70.91465711593628,
+      "control_generated_tokens": 741,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 119.24976420402527,
+      "progress_generated_tokens": 1319,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 9,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "supp017-humanize-intword",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:intword",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 57.23867464065552,
+      "control_generated_tokens": 593,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 55.948394536972046,
+      "progress_generated_tokens": 569,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "supp017-humanize-fractional",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:fractional",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 9,
+      "control_seconds": 62.53358793258667,
+      "control_generated_tokens": 662,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 7,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 8,
+      "progress_seconds": 61.51411962509155,
+      "progress_generated_tokens": 668,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "supp017-humanize-scientific",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:scientific",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 9,
+      "control_seconds": 72.49992990493774,
+      "control_generated_tokens": 793,
+      "control_exit_status": "RuntimeError",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 9,
+      "progress_seconds": 72.33670353889465,
+      "progress_generated_tokens": 789,
+      "progress_exit_status": "RuntimeError",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "supp017-humanize-naturalsize",
+      "repository": "python-humanize/humanize",
+      "split": "test",
+      "family": "python-humanize/humanize:naturalsize",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 159.55666542053223,
+      "control_generated_tokens": 1751,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": 5,
+      "control_final_changed_files": 1,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 199.0994005203247,
+      "progress_generated_tokens": 2286,
+      "progress_exit_status": "RuntimeError",
+      "progress_first_edit_call": 5,
+      "progress_final_changed_files": 1
+    }
+  ],
+  "targets": {},
+  "gate_checks": {},
+  "candidate_for_replication": false,
+  "deployment_allowed": false,
+  "weight_updates": 0,
+  "per_repository": {
+    "python-humanize/humanize": {
+      "split": "test",
+      "tasks": 6,
+      "passed": {
+        "control": 3,
+        "progress": 3
+      }
+    }
+  },
+  "same_input_output_comparison": [
+    {
+      "id": "supp017-humanize-ordinal",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "supp017-humanize-intcomma",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "supp017-humanize-intword",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "supp017-humanize-fractional",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "supp017-humanize-scientific",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "supp017-humanize-naturalsize",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    }
+  ],
+  "study": "Separate reference-screened humanize replication; descriptive only, no replacement of primary gate",
+  "time": {
+    "started_utc": "2026-11-11T03:17:37.703432+00:00",
+    "finished_utc": "2026-11-11T03:36:07.513032+00:00",
+    "wall_seconds": 1109.8095967769623
+  },
+  "task_controller_time_ratio": 1.2132069126149605,
+  "hardware": {
+    "samples": 221,
+    "collection_errors": 0,
+    "max_gap_seconds": 5.063899993896484,
+    "sampled_gpu_energy_kwh": 0.08940592442499533,
+    "temperature_c": {
+      "min": 24.0,
+      "median": 51.0,
+      "max": 63.0
+    },
+    "memory_used_mib": {
+      "min": 219.0,
+      "median": 59099.0,
+      "max": 59915.0
+    },
+    "power_w": {
+      "min": 16.38,
+      "median": 279.47,
+      "max": 551.7
+    },
+    "utilization_percent": {
+      "min": 0.0,
+      "median": 52.0,
+      "max": 100.0
+    }
+  }
+}

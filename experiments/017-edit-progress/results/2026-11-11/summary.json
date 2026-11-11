@@ -1,0 +1,1196 @@
+{
+  "schema_version": 1,
+  "totals": {
+    "control": {
+      "passed": {
+        "historical": 11,
+        "fresh": 7
+      },
+      "tasks": {
+        "historical": 24,
+        "fresh": 12
+      },
+      "calls": 365,
+      "generation_calls": 364,
+      "generated_tokens": 22448,
+      "generation_seconds": 1977.0561655762722,
+      "task_seconds": 2223.2617955207825,
+      "tool_seconds": 102.28337872453267,
+      "format_invalid_calls": 6,
+      "generation_limit_hits": 0,
+      "backend_errors": {
+        "context_limit": 1
+      },
+      "context_limit_requests": 1,
+      "reminder_requests": 0,
+      "failed_without_final_source_change": 17,
+      "failed_without_any_observed_edit": 17,
+      "exit_status": {
+        "LimitsExceeded": 19,
+        "Submitted": 16,
+        "RuntimeError": 1
+      },
+      "call_limit_without_any_edit": 17,
+      "by_split": {
+        "historical": {
+          "calls": 247,
+          "failed_without_any_observed_edit": 13,
+          "call_limit_without_any_edit": 13
+        },
+        "fresh": {
+          "calls": 118,
+          "failed_without_any_observed_edit": 4,
+          "call_limit_without_any_edit": 4
+        }
+      },
+      "controller_seconds": 2232.399402475101,
+      "consecutive_repeated_commands": 8
+    },
+    "progress": {
+      "passed": {
+        "historical": 12,
+        "fresh": 9
+      },
+      "tasks": {
+        "historical": 24,
+        "fresh": 12
+      },
+      "calls": 362,
+      "generation_calls": 361,
+      "generated_tokens": 23451,
+      "generation_seconds": 2051.9411663540523,
+      "task_seconds": 2257.1158006191254,
+      "tool_seconds": 96.75201853807084,
+      "format_invalid_calls": 6,
+      "generation_limit_hits": 0,
+      "backend_errors": {
+        "context_limit": 1
+      },
+      "context_limit_requests": 1,
+      "reminder_requests": 182,
+      "failed_without_final_source_change": 12,
+      "failed_without_any_observed_edit": 12,
+      "exit_status": {
+        "LimitsExceeded": 18,
+        "Submitted": 17,
+        "RuntimeError": 1
+      },
+      "call_limit_without_any_edit": 11,
+      "by_split": {
+        "historical": {
+          "calls": 242,
+          "failed_without_any_observed_edit": 9,
+          "call_limit_without_any_edit": 9
+        },
+        "fresh": {
+          "calls": 120,
+          "failed_without_any_observed_edit": 3,
+          "call_limit_without_any_edit": 2
+        }
+      },
+      "controller_seconds": 2266.4158581120428,
+      "consecutive_repeated_commands": 5
+    }
+  },
+  "contrasts": {
+    "historical": {
+      "improved": [
+        "new-jmes-pipe-map",
+        "new-json-nonfinite",
+        "fresh-query-sort"
+      ],
+      "regressed": [
+        "new-json-undefined",
+        "fresh-signed-serialize"
+      ]
+    },
+    "fresh": {
+      "improved": [
+        "fresh017-signal-iteration",
+        "fresh017-signal-namespace",
+        "fresh017-map-skip"
+      ],
+      "regressed": [
+        "fresh017-map-iterator"
+      ]
+    }
+  },
+  "paired": [
+    {
+      "id": "new-jmes-filter",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-filter-projection",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 60.36557865142822,
+      "control_generated_tokens": 613,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 64.01176691055298,
+      "progress_generated_tokens": 675,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-object-syntax",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 70.16225290298462,
+      "control_generated_tokens": 766,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 90.25290393829346,
+      "progress_generated_tokens": 978,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 12,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-expression-sort",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 69.6662232875824,
+      "control_generated_tokens": 750,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 65.16815948486328,
+      "progress_generated_tokens": 696,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-raw-string-lexer",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 60.32182550430298,
+      "control_generated_tokens": 630,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 65.02294063568115,
+      "progress_generated_tokens": 701,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-index-slice",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 63.94247651100159,
+      "control_generated_tokens": 673,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 67.27784895896912,
+      "progress_generated_tokens": 712,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "repository": "jmespath/jmespath.py",
+      "split": "dev",
+      "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 62.222346782684326,
+      "control_generated_tokens": 630,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 82.65283703804016,
+      "progress_generated_tokens": 869,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 12,
+      "progress_final_changed_files": 2
+    },
+    {
+      "id": "new-json-key-order",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 7,
+      "control_seconds": 41.709394454956055,
+      "control_generated_tokens": 497,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 7,
+      "progress_seconds": 40.372098207473755,
+      "progress_generated_tokens": 481,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-json-comparator",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 8,
+      "control_seconds": 43.11632537841797,
+      "control_generated_tokens": 513,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 7,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 8,
+      "progress_seconds": 43.30583715438843,
+      "progress_generated_tokens": 514,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 7,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-json-undefined",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+      "outcome": "regressed",
+      "control_passed": true,
+      "control_calls": 12,
+      "control_seconds": 74.05470943450928,
+      "control_generated_tokens": 855,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": 11,
+      "control_final_changed_files": 1,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 98.42965745925903,
+      "progress_generated_tokens": 1160,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 7,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-json-to-json",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 7,
+      "control_seconds": 35.33584403991699,
+      "control_generated_tokens": 425,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 7,
+      "progress_seconds": 36.08292603492737,
+      "progress_generated_tokens": 432,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-json-nonfinite",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 84.41898560523987,
+      "control_generated_tokens": 1004,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 7,
+      "progress_seconds": 41.63254404067993,
+      "progress_generated_tokens": 497,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 5,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "split": "dev",
+      "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 4,
+      "control_seconds": 39.721086740493774,
+      "control_generated_tokens": 473,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 3,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 4,
+      "progress_seconds": 38.79148507118225,
+      "progress_generated_tokens": 473,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 3,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-signed-base64",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-base64",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 5,
+      "control_seconds": 36.27211856842041,
+      "control_generated_tokens": 406,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 4,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 5,
+      "progress_seconds": 36.322818994522095,
+      "progress_generated_tokens": 406,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 4,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-key-derivation",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 59.762680530548096,
+      "control_generated_tokens": 603,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 59.41887640953064,
+      "progress_generated_tokens": 604,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-fallbacks",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 12,
+      "control_seconds": 82.47798085212708,
+      "control_generated_tokens": 904,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 11,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 78.41760063171387,
+      "progress_generated_tokens": 850,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 12,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-serialize",
+      "outcome": "regressed",
+      "control_passed": true,
+      "control_calls": 10,
+      "control_seconds": 62.867658615112305,
+      "control_generated_tokens": 663,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 9,
+      "control_final_changed_files": 1,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 83.44685816764832,
+      "progress_generated_tokens": 836,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 8,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-url-compression",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 76.99520301818848,
+      "control_generated_tokens": 831,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 79.56148838996887,
+      "progress_generated_tokens": 872,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "repository": "pallets/itsdangerous",
+      "split": "dev",
+      "family": "pallets/itsdangerous:signed-timestamp",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 6,
+      "control_seconds": 39.48051166534424,
+      "control_generated_tokens": 424,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 5,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 6,
+      "progress_seconds": 39.807703256607056,
+      "progress_generated_tokens": 432,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 5,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-query-decode",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-decode",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 63.132230281829834,
+      "control_generated_tokens": 650,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 61.40065932273865,
+      "progress_generated_tokens": 645,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh-query-sparse",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-sparse",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 50.38664650917053,
+      "control_generated_tokens": 529,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 49.5687153339386,
+      "progress_generated_tokens": 517,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh-query-null",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-null",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 12,
+      "control_seconds": 87.30443525314331,
+      "control_generated_tokens": 950,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": 12,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 11,
+      "progress_seconds": 74.17893719673157,
+      "progress_generated_tokens": 820,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 9,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-query-combine",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-combine",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 54.81465125083923,
+      "control_generated_tokens": 541,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 53.355403423309326,
+      "progress_generated_tokens": 523,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-plain-objects",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 8,
+      "control_seconds": 39.93751406669617,
+      "control_generated_tokens": 449,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 7,
+      "progress_seconds": 34.922738552093506,
+      "progress_generated_tokens": 394,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh-query-sort",
+      "repository": "ljharb/qs",
+      "split": "dev",
+      "family": "ljharb/qs:query-sort",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 48.127493381500244,
+      "control_generated_tokens": 489,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 67.86315321922302,
+      "progress_generated_tokens": 733,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 12,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-decorator",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-decorator",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 10,
+      "control_seconds": 53.853588342666626,
+      "control_generated_tokens": 576,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 7,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 10,
+      "progress_seconds": 57.257638692855835,
+      "progress_generated_tokens": 620,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 7,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-temporary",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-temporary",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 9,
+      "control_seconds": 54.994654417037964,
+      "control_generated_tokens": 603,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 10,
+      "progress_seconds": 70.09645414352417,
+      "progress_generated_tokens": 765,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-muted",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-muted",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 6,
+      "control_seconds": 30.68198251724243,
+      "control_generated_tokens": 339,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 5,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 6,
+      "progress_seconds": 31.3918936252594,
+      "progress_generated_tokens": 347,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 5,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-presence",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-presence",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 7,
+      "control_seconds": 36.846988677978516,
+      "control_generated_tokens": 402,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 6,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 7,
+      "progress_seconds": 42.905282735824585,
+      "progress_generated_tokens": 477,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 6,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-iteration",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-iteration",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 56.06067371368408,
+      "control_generated_tokens": 572,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 104.72142696380615,
+      "progress_generated_tokens": 1169,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": 11,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-signal-namespace",
+      "repository": "pallets-eco/blinker",
+      "split": "test",
+      "family": "pallets-eco/blinker:signal-namespace",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 62.05232381820679,
+      "control_generated_tokens": 700,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 66.26810216903687,
+      "progress_generated_tokens": 743,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 11,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-map-limit",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-limit",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 12,
+      "control_seconds": 99.73995900154114,
+      "control_generated_tokens": 900,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 10,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 11,
+      "progress_seconds": 78.158944606781,
+      "progress_generated_tokens": 644,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 9,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-map-settled",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-settled",
+      "outcome": "both_passed",
+      "control_passed": true,
+      "control_calls": 5,
+      "control_seconds": 49.945993185043335,
+      "control_generated_tokens": 275,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 3,
+      "control_final_changed_files": 1,
+      "progress_passed": true,
+      "progress_calls": 5,
+      "progress_seconds": 50.07365012168884,
+      "progress_generated_tokens": 275,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 3,
+      "progress_final_changed_files": 1
+    },
+    {
+      "id": "fresh017-map-enumerable",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-enumerable",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 80.71112871170044,
+      "control_generated_tokens": 686,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": 12,
+      "control_final_changed_files": 1,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 62.926218032836914,
+      "progress_generated_tokens": 560,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh017-map-prototype",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-prototype",
+      "outcome": "both_failed",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 83.83376717567444,
+      "control_generated_tokens": 601,
+      "control_exit_status": "RuntimeError",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": false,
+      "progress_calls": 11,
+      "progress_seconds": 52.81743288040161,
+      "progress_generated_tokens": 446,
+      "progress_exit_status": "RuntimeError",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh017-map-iterator",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-iterator",
+      "outcome": "regressed",
+      "control_passed": true,
+      "control_calls": 9,
+      "control_seconds": 69.67007851600647,
+      "control_generated_tokens": 488,
+      "control_exit_status": "Submitted",
+      "control_first_edit_call": 7,
+      "control_final_changed_files": 1,
+      "progress_passed": false,
+      "progress_calls": 12,
+      "progress_seconds": 56.82303500175476,
+      "progress_generated_tokens": 499,
+      "progress_exit_status": "LimitsExceeded",
+      "progress_first_edit_call": null,
+      "progress_final_changed_files": 0
+    },
+    {
+      "id": "fresh017-map-skip",
+      "repository": "sindresorhus/p-map",
+      "split": "test",
+      "family": "sindresorhus/p-map:map-skip",
+      "outcome": "improved",
+      "control_passed": false,
+      "control_calls": 12,
+      "control_seconds": 138.27448415756226,
+      "control_generated_tokens": 1038,
+      "control_exit_status": "LimitsExceeded",
+      "control_first_edit_call": null,
+      "control_final_changed_files": 0,
+      "progress_passed": true,
+      "progress_calls": 12,
+      "progress_seconds": 132.4097638130188,
+      "progress_generated_tokens": 1086,
+      "progress_exit_status": "Submitted",
+      "progress_first_edit_call": 9,
+      "progress_final_changed_files": 1
+    }
+  ],
+  "targets": {
+    "new-json-nonfinite": {
+      "control": false,
+      "progress": true
+    },
+    "fresh-signed-url-compression": {
+      "control": false,
+      "progress": false
+    },
+    "fresh-query-sort": {
+      "control": false,
+      "progress": true
+    }
+  },
+  "gate_checks": {
+    "fresh_net_gain": true,
+    "no_fresh_regressions": false,
+    "no_historical_regressions": false,
+    "all_three_targets_pass": false
+  },
+  "candidate_for_replication": false,
+  "deployment_allowed": false,
+  "weight_updates": 0,
+  "per_repository": {
+    "epoberezkin/fast-json-stable-stringify": {
+      "split": "dev",
+      "tasks": 6,
+      "passed": {
+        "control": 5,
+        "progress": 5
+      }
+    },
+    "jmespath/jmespath.py": {
+      "split": "dev",
+      "tasks": 6,
+      "passed": {
+        "control": 0,
+        "progress": 1
+      }
+    },
+    "ljharb/qs": {
+      "split": "dev",
+      "tasks": 6,
+      "passed": {
+        "control": 2,
+        "progress": 3
+      }
+    },
+    "pallets-eco/blinker": {
+      "split": "test",
+      "tasks": 6,
+      "passed": {
+        "control": 4,
+        "progress": 6
+      }
+    },
+    "pallets/itsdangerous": {
+      "split": "dev",
+      "tasks": 6,
+      "passed": {
+        "control": 4,
+        "progress": 3
+      }
+    },
+    "sindresorhus/p-map": {
+      "split": "test",
+      "tasks": 6,
+      "passed": {
+        "control": 3,
+        "progress": 3
+      }
+    }
+  },
+  "same_input_output_comparison": [
+    {
+      "id": "new-jmes-filter",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-key-order",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-comparator",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-undefined",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-to-json",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-nonfinite",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-base64",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-decode",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-sparse",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-null",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-combine",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh-query-sort",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-decorator",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-temporary",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-muted",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-presence",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-iteration",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-signal-namespace",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-limit",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-settled",
+      "identical_input_calls": 3,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-enumerable",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-prototype",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-iterator",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    },
+    {
+      "id": "fresh017-map-skip",
+      "identical_input_calls": 4,
+      "different_output_calls": []
+    }
+  ],
+  "reference_exposure": {
+    "repository": "sindresorhus/p-map",
+    "dependency_chain": [
+      "ava@6.4.1",
+      "p-map@7.1.1"
+    ],
+    "clean_reference_free_validation": false,
+    "explicit_dependency_path_commands": {
+      "control": 0,
+      "progress": 0
+    },
+    "bare_package_import_commands": {
+      "control": 0,
+      "progress": 0
+    },
+    "reference_read_access_instrumented": false,
+    "blinker_system_copies": [
+      {
+        "mounted_path": "/usr/lib/python3/dist-packages/blinker",
+        "base_sha256": "309fea9f895a75418c014d8cd64d8e20f7e0522fc83616ea7cbaef8ddb261d53"
+      }
+    ],
+    "blinker_commands_naming_system_path": {
+      "control": 0,
+      "progress": 0
+    }
+  },
+  "supports_reference_free_fresh_generalization": false,
+  "control_vs016": {
+    "improved": [],
+    "regressed": []
+  },
+  "time": {
+    "started_utc": "2026-11-11T02:00:20.468724+00:00",
+    "finished_utc": "2026-11-11T03:16:06.138777+00:00",
+    "wall_seconds": 4545.670042276382
+  },
+  "task_controller_time_ratio": 1.0152376208304066,
+  "hardware": {
+    "samples": 902,
+    "collection_errors": 0,
+    "span_seconds": 4544.176175117493,
+    "max_gap_seconds": 5.0636749267578125,
+    "sampled_gpu_energy_kwh": 0.3610527825906554,
+    "temperature_c": {
+      "min": 17.0,
+      "median": 51.0,
+      "max": 64.0
+    },
+    "memory_used_mib": {
+      "min": 219.0,
+      "median": 61135.0,
+      "max": 63775.0
+    },
+    "power_w": {
+      "min": 17.25,
+      "median": 278.68,
+      "max": 561.64
+    },
+    "utilization_percent": {
+      "min": 0.0,
+      "median": 51.0,
+      "max": 100.0
+    }
+  }
+}

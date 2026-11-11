@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "Post-run descriptive review; no task or score changes",
+  "private_review_bundle_sha256": "e5d2cec6600f2c9e92b3814c604b5ca34376d01209b13e3869e2b8b22cf36a65",
+  "campaign_sha256": {
+    "control": "7beebfc4c17291d551d52c3a9a5bbfa30618e5e7bb8fe921d6edca188b183887",
+    "progress": "6d193e9dbbbe55bcd3f6c2e3fd2fd9c0e975ae61c2ba555504ca6be9531626b8"
+  },
+  "raw_commands_or_test_contents_public": false,
+  "cases": [
+    {
+      "id": "new-json-nonfinite",
+      "outcome": "improved",
+      "first_edit_call": {
+        "control": null,
+        "progress": 5
+      },
+      "passed": {
+        "control": false,
+        "progress": true
+      },
+      "trajectory_sha256": {
+        "control": "7d2b8847298bba72561b7175e8e103afb2fc096a663fdac15c1645189f8a8d2d",
+        "progress": "cbf1da3752b05b36ca226226c7c947176f30bdae390560ab06c0886d1fda3c58"
+      },
+      "observation": "The candidate makes its first edit on call 5 after the first reminder, passes the fresh grader, and submits on call 7. The control reaches12 calls without an edit."
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "outcome": "both_failed",
+      "first_edit_call": {
+        "control": null,
+        "progress": null
+      },
+      "passed": {
+        "control": false,
+        "progress": false
+      },
+      "trajectory_sha256": {
+        "control": "8a47ea360de47c8642c62a0b96006aaafcddac2661cfdf841c1a2b60d082471d",
+        "progress": "bfa041394d196c1755ca711dbf0ccaeba7627d799dbeb2090a0833e14f4f88dc"
+      },
+      "observation": "The candidate receives reminders on calls 5 through 12 but continues inspecting/probing without a source edit. The admitted missing implementation remains and the grader fails."
+    },
+    {
+      "id": "fresh-query-sort",
+      "outcome": "improved",
+      "first_edit_call": {
+        "control": null,
+        "progress": 12
+      },
+      "passed": {
+        "control": false,
+        "progress": true
+      },
+      "trajectory_sha256": {
+        "control": "41469e8e17840b765e971b404055614c765727d7a3c102c8af504db42236b9b2",
+        "progress": "554e10b832537408eb79ab8cee630a7a4502a128c997527413f512d3ffd5f8bb"
+      },
+      "observation": "The candidate first edits on its last permitted call 12. The independent grader passes, despite the agent ending at its call limit. This is a repair, not an early-edit improvement."
+    },
+    {
+      "id": "new-json-undefined",
+      "outcome": "regressed",
+      "first_edit_call": {
+        "control": 11,
+        "progress": 7
+      },
+      "passed": {
+        "control": true,
+        "progress": false
+      },
+      "trajectory_sha256": {
+        "control": "264a06de8f2d12c1834bc0de7eb9912e62d65f5a629b80a4ae3c516aac4421f1",
+        "progress": "8a5232aca182d73ac52720567d7df9b8169448808eaf7decfd5a0a0fb58e14a0"
+      },
+      "observation": "The candidate first edits on call 7 versus control 11, then makes further edits and runs probes/tests. The final grader still rejects undefined-value handling in arrays. Earlier editing did not produce a correct repair."
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "outcome": "regressed",
+      "first_edit_call": {
+        "control": 9,
+        "progress": 8
+      },
+      "passed": {
+        "control": true,
+        "progress": false
+      },
+      "trajectory_sha256": {
+        "control": "992cbc77eea01de109d472dd73e31ed23a8fd242f8f97664bc22f2d428c63019",
+        "progress": "7f3483cb4a46d65b57060aeca8e868c7ebf5cb16623dd43399db60bb9a9ef823"
+      },
+      "observation": "The candidate first edits on call 8 versus control 9, but the grader reports signing/round-trip assertion failures. Earlier editing did not produce a correct repair."
+    }
+  ],
+  "interpretation": "Progress reminders help some transitions from inspection to editing, but do not enforce action or ensure repair quality. Historical success rises by one net task, with two regressions; the frozen promotion gate fails."
+}

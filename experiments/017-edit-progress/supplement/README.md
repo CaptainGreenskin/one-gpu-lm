@@ -1,5 +1,7 @@
 # 017 supplement · Reference-screened repository replication
 
+**Completed:** both arms pass the same **3/6** tasks, with no improved or regressed pair. Call-limit/no-edit cases fall **2 → 1**, while task-controller time rises **21.3%** in this run. [Results and curves](results/2026-11-11/) retain all 12 outcomes. No accuracy gain was observed on this separate repository; the primary gate remains failed and the default policy stays unchanged. Passing means the final source passes the external grader, not necessarily a normal agent exit.
+
 The original 017 study discovered readable reference implementations for both fresh repositories after launch but before fresh scoring: AVA includes an identical p-map implementation, and the system has an older Blinker package. The original 72 outcomes, denominator, gate and deadline remain intact.
 
 This separate supplement uses six constructed defects in **python-humanize/humanize**, a repository not previously used in this project. Its [plan](plan.json) was declared before source inspection; task selection and admission did not consult any primary model outcomes. The model, progress reminder, tools, native tool-history format, complete context and per-task budgets are exactly those of 017. There are 12 model runs, one per task and arm, in alternating order, after the original run releases the GPU. The separate pipeline limit is one hour, including loading and checks. No scored task is repeated to choose a better result.

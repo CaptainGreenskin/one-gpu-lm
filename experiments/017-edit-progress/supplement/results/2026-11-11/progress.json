@@ -1,0 +1,3058 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T03:17:37.706156+00:00",
+  "complete": true,
+  "identity": {
+    "tasks_sha256": "c7f22cb87b6cb91112b717182119fde959d565f6d802bd134f72f8a2baa0acb5",
+    "admission_sha256": "06ea638febc96d633edcdfd4ae4272c0223621891162e06733c7f4d61241a199",
+    "protocol_sha256": "7dd7e2471a26a3a17f61dfdfa66c3b7ae907f62921023e3bcc196ea52baccd33",
+    "ids": [
+      "supp017-humanize-ordinal",
+      "supp017-humanize-intcomma",
+      "supp017-humanize-intword",
+      "supp017-humanize-fractional",
+      "supp017-humanize-scientific",
+      "supp017-humanize-naturalsize"
+    ],
+    "variant": "progress",
+    "policy": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1"
+    },
+    "source_files": {
+      "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+      "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+      "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+      "one_gpu_lm/common/agent_policy.py": "c095815526e31dcda4fa98e125a7bdc5a3081d25d767730071a4e8405e0ca29d",
+      "one_gpu_lm/common/edit_progress.py": "00fa4814c7498b39b60f50cfa87d7786370cd11191f96af3e121c4dfc0019216",
+      "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+      "one_gpu_lm/common/source.py": "10e98d39f983213e3b76395ee0319c758d3aab0728269a323832cc7ac06da9ae",
+      "one_gpu_lm/common/tool_history.py": "2dd0a40d8607de752c896cf3dd77a276ef60aba9817ea448b7bd4af84611c378",
+      "one_gpu_lm/evaluation/__init__.py": "5a0a46852b86cb6b75293981a606ac0cc5401c081b2ba984bc4090b052c5d332",
+      "one_gpu_lm/evaluation/agent.py": "dc595904bd1640deb5b38940ece07ba41761e7a90ea7b551f937c42dff5e47d1",
+      "one_gpu_lm/evaluation/ava.config.mjs": "d6317dfeda8d112cda16cff72b9b8168c5a4ae44a8fc4c64b131f13b1a68bf13",
+      "one_gpu_lm/evaluation/campaign.py": "cd05407cb2dd38592bbf6d21aa7059bb0b6cc277c22d9ca5c22529e30546e041",
+      "one_gpu_lm/evaluation/environment.py": "f8900f969cfe29db34afa6ce59c8b1f238de75d66debcead2c21fa2aadbd80af",
+      "one_gpu_lm/evaluation/grading.py": "70a4164ea64fed33497f6fe6df496f84b18a5be7cbd4e4ae234e0ddedff7663f",
+      "one_gpu_lm/evaluation/sandbox.py": "b81b9a8544297a27ea5faa792161b031bfa76f22f78d3758fc31a00623fe3c11",
+      "one_gpu_lm/evaluation/tasks.py": "cb298493399728008b5b51eeabe5177bd07618bb4fc307aaafc55782f3b90542",
+      "one_gpu_lm/evaluation/underscore_tests.mjs": "104681baf35eb78294b765267946417e8de4fe01b1320cc0ba98d1e8619ce4d9",
+      "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+      "one_gpu_lm/models/hf_runtime.py": "f4eb7f1f4175b5028aa47831beb26ca79e9829fe041966a386573f0b368ed179",
+      "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+      "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+      "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a"
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-ordinal",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:ordinal",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 82.43743658065796,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "4e6b98f43505e8bfbc3c683d931ef141a234ff8d454af2ea21923ceca3a2d54e"
+      },
+      "ignored_new_files": [],
+      "calls": 10,
+      "generated_tokens": 907,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9c965161df092a57a33c2fbfc4679e05949004cb2c970dfbbbf855495b6ec3b9",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9c965161df092a57a33c2fbfc4679e05949004cb2c970dfbbbf855495b6ec3b9",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "37c8026bf9fc1f378878ca6a0aa3cee934087e13f07153b024a72ca58a271205",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "37c8026bf9fc1f378878ca6a0aa3cee934087e13f07153b024a72ca58a271205",
+          "call_index": 10
+        }
+      ],
+      "tool_calls": 10,
+      "tool_seconds": 3.687475609127432,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 559,
+          "input_tokens_sha256": "e1c56441ffe68c65fa2aad0fe6a9aa9009d6defb8a925cf1a5e7479e1cea679c",
+          "generated_tokens": 42,
+          "seconds": 3.42958009702852,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 559,
+            "packed_input_tokens": 559,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.003028340986929834,
+          "peak_allocated_bytes": 55065930752,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1367,
+          "input_tokens_sha256": "c273aed34496256acc8261b40e7d0c5557f9769f318042cebed50d59cb186ea6",
+          "generated_tokens": 40,
+          "seconds": 3.4339814739651047,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1367,
+            "packed_input_tokens": 1367,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0029177769902162254,
+          "peak_allocated_bytes": 55277754368,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1462,
+          "input_tokens_sha256": "040ffab17ad3bc49d452c5b33d7ab31c27feecfb141fcbb100fb63643951cb5b",
+          "generated_tokens": 38,
+          "seconds": 3.2066101689706556,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1462,
+            "packed_input_tokens": 1462,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0047019130433909595,
+          "peak_allocated_bytes": 55294522880,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1784,
+          "input_tokens_sha256": "1431ef9aa3598fcc0d09f92a392792c34370b1002ae0867e4ec58299b579af70",
+          "generated_tokens": 62,
+          "seconds": 5.194041857030243,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1784,
+            "packed_input_tokens": 1784,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.0036417540395632386,
+          "peak_allocated_bytes": 55395255296,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2103,
+          "input_tokens_sha256": "a72c76c0d3941a9f151eee74363b9aa21992fa4032484fdc9de2544936f5e779",
+          "generated_tokens": 42,
+          "seconds": 3.652720539015718,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2103,
+            "packed_input_tokens": 2103,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.004440672986675054,
+          "peak_allocated_bytes": 55470550528,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2420,
+          "input_tokens_sha256": "c358102f4ef6c6d0b558aee7359f96837729ee931f5459ad108d1404e074cfb6",
+          "generated_tokens": 42,
+          "seconds": 3.714884485991206,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2420,
+            "packed_input_tokens": 2420,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.004824800998903811,
+          "peak_allocated_bytes": 55555534336,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2588,
+          "input_tokens_sha256": "aa09174e987fb11c3b51ae1ad65e57c3b9232d389ce8674812929c0ea48e0efc",
+          "generated_tokens": 225,
+          "seconds": 18.342965101997834,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2588,
+            "packed_input_tokens": 2588,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.005100023990962654,
+          "peak_allocated_bytes": 55600444416,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "1316044bb599ad0b9bd9f52266ab2ee9b2ac0673e676041d10c5c10bf60a2182",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4682,
+          "input_tokens_sha256": "b554cc4a2b5b1a8467b582646aaf1bb41201ffece41f3242ee579c9967338ba1",
+          "generated_tokens": 65,
+          "seconds": 6.027349299984053,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4682,
+            "packed_input_tokens": 4682,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.011716945969965309,
+          "peak_allocated_bytes": 56160475136,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9c965161df092a57a33c2fbfc4679e05949004cb2c970dfbbbf855495b6ec3b9",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4869,
+          "input_tokens_sha256": "d2fbac1aa68322258c0467eabc8e01f4019ca649e08b5db0584c6833d9bbc467",
+          "generated_tokens": 252,
+          "seconds": 21.01285524299601,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4869,
+            "packed_input_tokens": 4869,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.012373756035231054,
+          "peak_allocated_bytes": 56217503744,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9c965161df092a57a33c2fbfc4679e05949004cb2c970dfbbbf855495b6ec3b9",
+            "enabled": true,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6315,
+          "input_tokens_sha256": "67833edcaadcdd14be8095d16bd17404feb93527ece9ba137f63cd4d03a84ed3",
+          "generated_tokens": 99,
+          "seconds": 9.143327719997615,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6315,
+            "packed_input_tokens": 6315,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.015943937993142754,
+          "peak_allocated_bytes": 56598298112,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "37c8026bf9fc1f378878ca6a0aa3cee934087e13f07153b024a72ca58a271205",
+            "enabled": true,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-intcomma",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:intcomma",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 119.24976420402527,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "d3402f9beb4679f7ae42ef40864b9d0ca523a93321341dcef5e2e9067a2411f0"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 1319,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+          "call_index": 11
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "47b56f3ae4eb50289a63963ab0fa484f42e96b0b64a73c461bfd743d1f361295",
+          "call_index": 12
+        }
+      ],
+      "tool_calls": 12,
+      "tool_seconds": 3.767439332907088,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 561,
+          "input_tokens_sha256": "72e53fe748a73141169375a86bcbf97d92fd920d83574c1bde27df6a30328b8f",
+          "generated_tokens": 42,
+          "seconds": 3.4804824480088428,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 561,
+            "packed_input_tokens": 561,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.002769900020211935,
+          "peak_allocated_bytes": 55066730496,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1351,
+          "input_tokens_sha256": "2d98c378aaa8ff86cb13c037f166588ec32885c0011213d8cddfec9f9778d673",
+          "generated_tokens": 83,
+          "seconds": 6.982040297996718,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1351,
+            "packed_input_tokens": 1351,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0036487599718384445,
+          "peak_allocated_bytes": 55266804736,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2119,
+          "input_tokens_sha256": "820b613e38b329d0f26b0ff387f63533d81f8db1e57aef896c84f545264a278c",
+          "generated_tokens": 70,
+          "seconds": 5.868097258033231,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2119,
+            "packed_input_tokens": 2119,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0047976329806260765,
+          "peak_allocated_bytes": 55476706304,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2423,
+          "input_tokens_sha256": "85351699309f785563760a578ac2ff6218eb5773af4aa99b0f06b0f6279b603b",
+          "generated_tokens": 69,
+          "seconds": 5.8348495499813,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2423,
+            "packed_input_tokens": 2423,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.004746429971419275,
+          "peak_allocated_bytes": 55555852288,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2868,
+          "input_tokens_sha256": "c978f8b1f3826186271bceff0866cb620a1ed3cfbe291d8be8d2be903357caa3",
+          "generated_tokens": 41,
+          "seconds": 3.7185471729608253,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2868,
+            "packed_input_tokens": 2868,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.005743585992604494,
+          "peak_allocated_bytes": 55679232000,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3746,
+          "input_tokens_sha256": "83708f9307f4d1b015df3464a6395204bc74c2c1927facabd9692d5a2b041ed8",
+          "generated_tokens": 40,
+          "seconds": 3.8300355519750156,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3746,
+            "packed_input_tokens": 3746,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.006489730963949114,
+          "peak_allocated_bytes": 55908474880,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4294,
+          "input_tokens_sha256": "e0745ee31a93014c8ad8f39d55a4655a896a166a4cea9479085d8e1789a03ae1",
+          "generated_tokens": 57,
+          "seconds": 5.299101173004601,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4294,
+            "packed_input_tokens": 4294,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.007089007005561143,
+          "peak_allocated_bytes": 56058259456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4488,
+          "input_tokens_sha256": "1bdeac508808dac31316227deee74612e2f2011c90e0e391f9db744828836df9",
+          "generated_tokens": 45,
+          "seconds": 4.405966215010267,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4488,
+            "packed_input_tokens": 4488,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.007486475980840623,
+          "peak_allocated_bytes": 56105056768,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4555,
+          "input_tokens_sha256": "52f5515a55ab190eeef43abcec7cd61e28f53a59a949a37de0b3d82986bb35b4",
+          "generated_tokens": 385,
+          "seconds": 31.26571031502681,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4555,
+            "packed_input_tokens": 4555,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.007653531967662275,
+          "peak_allocated_bytes": 56124480000,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "796f2edcdb4452bb9ff821e61d9e3221847f1d1118c6610bbf7e598b88923440",
+            "enabled": true,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6809,
+          "input_tokens_sha256": "62804d4a66c50dc7b13c981b6579e3eaef90e674ae6c6f7816cc115b8fe62a6f",
+          "generated_tokens": 64,
+          "seconds": 6.437422154995147,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6809,
+            "packed_input_tokens": 6809,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.010764139995444566,
+          "peak_allocated_bytes": 56731914752,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+            "enabled": true,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7513,
+          "input_tokens_sha256": "424ebf176975894605c06a8b0a26cf89261774b7a52635642e371fbd40ea5099",
+          "generated_tokens": 45,
+          "seconds": 5.095071590971202,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7513,
+            "packed_input_tokens": 7513,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "packing_seconds": 0.018459569022525102,
+          "peak_allocated_bytes": 56915026944,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+            "enabled": true,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7846,
+          "input_tokens_sha256": "a401cf991d624442135055f579607c3726bb181bab7a9a73c320cf5cd37d117d",
+          "generated_tokens": 378,
+          "seconds": 31.600328088970855,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7846,
+            "packed_input_tokens": 7846,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "dialogue": {
+            "structured_tool_calls": 11,
+            "tool_results": 11
+          },
+          "packing_seconds": 0.012047055992297828,
+          "peak_allocated_bytes": 57005731840,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "dc3c743eb4745f528b9dc528f55a72e9202b62ab872fae9e8550fe1a83981a84",
+            "enabled": true,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-intword",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:intword",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 55.948394536972046,
+      "modified_source_files": [],
+      "source_sha256": {
+        "src/humanize/number.py": "54ffdb980d65f309068524e20747df014378f02384bd18837616f2d41b2310f9"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 569,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 11
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+          "call_index": 12
+        }
+      ],
+      "tool_calls": 12,
+      "tool_seconds": 0.46366826887242496,
+      "exit_status": "LimitsExceeded",
+      "generations": [
+        {
+          "input_tokens": 563,
+          "input_tokens_sha256": "32cddb1aee05eb859237d8a2f8dce207b05068f75b450ce1942f6adacc688f41",
+          "generated_tokens": 54,
+          "seconds": 4.38937176897889,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 563,
+            "packed_input_tokens": 563,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0026155129889957607,
+          "peak_allocated_bytes": 55066810368,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1365,
+          "input_tokens_sha256": "883fa8d962163d9395e4b2238100824993164b833f9074b1b0cfcaf8cd25a0e3",
+          "generated_tokens": 58,
+          "seconds": 4.820364771003369,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1365,
+            "packed_input_tokens": 1365,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.003032911045011133,
+          "peak_allocated_bytes": 55269476864,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1647,
+          "input_tokens_sha256": "f1b1f8368d2ace456d82277e8fcc00f6053583b95a84a6363dc1f51f1e4523c0",
+          "generated_tokens": 44,
+          "seconds": 3.745274519023951,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1647,
+            "packed_input_tokens": 1647,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0034201480448246002,
+          "peak_allocated_bytes": 55355118080,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2480,
+          "input_tokens_sha256": "9080593aafe76ff5c56622139c8502e6f92e6867f96663eeb94324228c97802d",
+          "generated_tokens": 68,
+          "seconds": 5.858126494043972,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2480,
+            "packed_input_tokens": 2480,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.005719346983823925,
+          "peak_allocated_bytes": 55573907456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3198,
+          "input_tokens_sha256": "7205b8d9dfa69ef799dc0aa8d3cc143fe0b6df4cdf108a77dcd323335912f9ef",
+          "generated_tokens": 40,
+          "seconds": 3.708048317988869,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3198,
+            "packed_input_tokens": 3198,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.0059952380252070725,
+          "peak_allocated_bytes": 55763942912,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4545,
+          "input_tokens_sha256": "0ee45b72ea7456d6290a345ed23f07caf12bdcab04cc3439150ea1d558c081cc",
+          "generated_tokens": 41,
+          "seconds": 4.113205702975392,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4545,
+            "packed_input_tokens": 4545,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.007814066018909216,
+          "peak_allocated_bytes": 56122330624,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4725,
+          "input_tokens_sha256": "f7d69caa6ff1488a5a543de1b9214227024e730d490f20c31be31e5577dd5d4b",
+          "generated_tokens": 41,
+          "seconds": 4.153671275998931,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4725,
+            "packed_input_tokens": 4725,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.0079679120099172,
+          "peak_allocated_bytes": 56171921920,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 4843,
+          "input_tokens_sha256": "3a745d822177c2b6691fa48de0f57143ade54bddde9f9160940ca71eb38b12b5",
+          "generated_tokens": 41,
+          "seconds": 4.188872831990011,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 4843,
+            "packed_input_tokens": 4843,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.008082057000137866,
+          "peak_allocated_bytes": 56204661248,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5125,
+          "input_tokens_sha256": "c899dffe3e586abb64ccbf9139716ee298318c9f09ae8f552c3f6ef7db0bcb10",
+          "generated_tokens": 45,
+          "seconds": 4.585865787987132,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5125,
+            "packed_input_tokens": 5125,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.008485464029945433,
+          "peak_allocated_bytes": 56287246336,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5192,
+          "input_tokens_sha256": "112ca7554120051185fa224bef7006fc40692809713cba7d5d0d6aedac4e00ff",
+          "generated_tokens": 39,
+          "seconds": 4.1263282299623825,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5192,
+            "packed_input_tokens": 5192,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.008657832047902048,
+          "peak_allocated_bytes": 56301956096,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5456,
+          "input_tokens_sha256": "bde98f2701585fbd685ef9a3b25a09cc584e0eba74b911a09665775c905453a7",
+          "generated_tokens": 54,
+          "seconds": 5.363359351002146,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5456,
+            "packed_input_tokens": 5456,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "packing_seconds": 0.00904696702491492,
+          "peak_allocated_bytes": 56369261056,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 444
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6099,
+          "input_tokens_sha256": "540cfd70f8c6a6e408c4cfca10b2b67871fa9b5a0233ca72a558056517268164",
+          "generated_tokens": 44,
+          "seconds": 4.728015752043575,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6099,
+            "packed_input_tokens": 6099,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "dialogue": {
+            "structured_tool_calls": 11,
+            "tool_results": 11
+          },
+          "packing_seconds": 0.010229557985439897,
+          "peak_allocated_bytes": 56536926720,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "9a50a756e67c6c6f4dd1e7e3afe4d6c5b0308383da1cb7fb0261971cc9a988e0",
+            "enabled": true,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 444
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-fractional",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [],
+      "split": "test",
+      "family": "python-humanize/humanize:fractional",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 61.51411962509155,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "d5c7bab6c042cf199e629fe33422c32ebcc948c12e9a57da8b8f7f4c4ac7db68"
+      },
+      "ignored_new_files": [],
+      "calls": 8,
+      "generated_tokens": 668,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "34b025387d9944bef715855454a18a1636537254ac3e10fc4e0d6fdc89f53b43",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "34b025387d9944bef715855454a18a1636537254ac3e10fc4e0d6fdc89f53b43",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "34b025387d9944bef715855454a18a1636537254ac3e10fc4e0d6fdc89f53b43",
+          "call_index": 8
+        }
+      ],
+      "tool_calls": 8,
+      "tool_seconds": 2.427365828072652,
+      "exit_status": "Submitted",
+      "generations": [
+        {
+          "input_tokens": 557,
+          "input_tokens_sha256": "977a2ab6819e69c088eca8395a4b398020b10a9c876204609d79d97161be53f9",
+          "generated_tokens": 42,
+          "seconds": 3.4087664870312437,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 557,
+            "packed_input_tokens": 557,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0033790439483709633,
+          "peak_allocated_bytes": 55065859072,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1347,
+          "input_tokens_sha256": "bd263767cf00b8b617500a2e730977bcf7d5ad95ae88aed4156979b9ffb6ec37",
+          "generated_tokens": 83,
+          "seconds": 6.7352661800105125,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1347,
+            "packed_input_tokens": 1347,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.0035164100117981434,
+          "peak_allocated_bytes": 55267031552,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2174,
+          "input_tokens_sha256": "175a31319bf3e9f3d9767a815ac5cf4ea72b12919f26f9be00b6fc4b40d841ce",
+          "generated_tokens": 45,
+          "seconds": 3.9033065710100345,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2174,
+            "packed_input_tokens": 2174,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.004864386981353164,
+          "peak_allocated_bytes": 55486901760,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2999,
+          "input_tokens_sha256": "f1d3fe6cb4d94cbcba09baac345e528a500e84971a8a55626894ead65dd5adcf",
+          "generated_tokens": 36,
+          "seconds": 3.350614434981253,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2999,
+            "packed_input_tokens": 2999,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.006217924994416535,
+          "peak_allocated_bytes": 55705421312,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3182,
+          "input_tokens_sha256": "6a0591e17d9b3ac6b047f3f49c1cd43e9fab67b6d5c87df1ea19e458cebebfef",
+          "generated_tokens": 42,
+          "seconds": 3.858682916034013,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3182,
+            "packed_input_tokens": 3182,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.0063293990097008646,
+          "peak_allocated_bytes": 55758969344,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3560,
+          "input_tokens_sha256": "8c23884f40760636feddd6b11a6434fc6e59233434c7fbe742c1da1f929545c1",
+          "generated_tokens": 279,
+          "seconds": 22.67422476602951,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3560,
+            "packed_input_tokens": 3560,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.006904434005264193,
+          "peak_allocated_bytes": 55866988544,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "fe759733784f9ec6d8bd609718932315e741cd1e4ff89d413ad31d63293634db",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5708,
+          "input_tokens_sha256": "6614514cc4e5a2159b41d8cad6de1fcea6b8382330b839efe0143565685b834a",
+          "generated_tokens": 52,
+          "seconds": 5.234509913017973,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5708,
+            "packed_input_tokens": 5708,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.014914711005985737,
+          "peak_allocated_bytes": 56434011648,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "34b025387d9944bef715855454a18a1636537254ac3e10fc4e0d6fdc89f53b43",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6954,
+          "input_tokens_sha256": "9d2406795368df0fd83b7c7cd5f611424bfdffd5c0e0cf52607968d4749bfabf",
+          "generated_tokens": 89,
+          "seconds": 8.458850505005103,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6954,
+            "packed_input_tokens": 6954,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.016929825011175126,
+          "peak_allocated_bytes": 56772657664,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "34b025387d9944bef715855454a18a1636537254ac3e10fc4e0d6fdc89f53b43",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-scientific",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [
+        {
+          "error": "context_limit",
+          "input_tokens": 8878,
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 8878,
+            "packed_input_tokens": 8878,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "packing_seconds": 0.020231073955073953,
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "input_tokens_sha256": "4f460dbc5d02922d66afe79f62c9ddfe4018b5f1e6f22c55194404ff4f6d58f4",
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "6099214172cfcba88b2ee260c34253f32595a7c8d5e3797ebe6885e009fa9c46",
+            "enabled": true,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          }
+        }
+      ],
+      "split": "test",
+      "family": "python-humanize/humanize:scientific",
+      "passed": true,
+      "reason": "ok",
+      "returncode": 0,
+      "seconds": 72.33670353889465,
+      "modified_source_files": [
+        "src/humanize/number.py"
+      ],
+      "source_sha256": {
+        "src/humanize/number.py": "9c248d4d8be994c82ec9162fda8b62c57b7b601446693b7cea40f8038492cc54"
+      },
+      "ignored_new_files": [],
+      "calls": 9,
+      "generated_tokens": 789,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "04f6258cd4ceef15fd3f521ce61c886e74ce7f4936e39497b3a1029a1f64f80d",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "04f6258cd4ceef15fd3f521ce61c886e74ce7f4936e39497b3a1029a1f64f80d",
+          "call_index": 7
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "6099214172cfcba88b2ee260c34253f32595a7c8d5e3797ebe6885e009fa9c46",
+          "call_index": 8
+        }
+      ],
+      "tool_calls": 8,
+      "tool_seconds": 3.5618689290131442,
+      "exit_status": "RuntimeError",
+      "generations": [
+        {
+          "input_tokens": 556,
+          "input_tokens_sha256": "5e6cfb5ae9511dbfd59703fbd3c7b8fba35c3660ffb24aa64deb95c270ea8ea8",
+          "generated_tokens": 42,
+          "seconds": 3.398687972978223,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 556,
+            "packed_input_tokens": 556,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.003159329993650317,
+          "peak_allocated_bytes": 55065823232,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1346,
+          "input_tokens_sha256": "c009e713af2da28fce324198630637ff3c8d1ecd52bb118f39e5e4b1a99fd16b",
+          "generated_tokens": 40,
+          "seconds": 3.338376338011585,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1346,
+            "packed_input_tokens": 1346,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.003127348027192056,
+          "peak_allocated_bytes": 55266875904,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1800,
+          "input_tokens_sha256": "5803b1fb984effb1b89deff6f2cdd8b30d26e91d744684a6527ed3c2a01f0ef8",
+          "generated_tokens": 64,
+          "seconds": 5.3281135790166445,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1800,
+            "packed_input_tokens": 1800,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.004639421007595956,
+          "peak_allocated_bytes": 55397555712,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2803,
+          "input_tokens_sha256": "a0194270448d0112874bb7511b8ca44ef519a7ba3a134ebcd82f3b22229e0d39",
+          "generated_tokens": 41,
+          "seconds": 3.689547908026725,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2803,
+            "packed_input_tokens": 2803,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.005290827015414834,
+          "peak_allocated_bytes": 55654998528,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3425,
+          "input_tokens_sha256": "d8360aa4ea72ca4e919e48b819d9cc96932662512182148d421250b79f568519",
+          "generated_tokens": 41,
+          "seconds": 3.8322296050027944,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3425,
+            "packed_input_tokens": 3425,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.006439603981561959,
+          "peak_allocated_bytes": 55833985536,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3943,
+          "input_tokens_sha256": "51e713dde9fc26d4141071cb018eed1e550f776285aa359cbf3313c2ab4b6307",
+          "generated_tokens": 322,
+          "seconds": 26.145597675989848,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3943,
+            "packed_input_tokens": 3943,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.006884223024826497,
+          "peak_allocated_bytes": 55961373696,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "f24e0efdcb23109b6f9576333a442eb155c57cfc986de5e382e7b506c99a91de",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6134,
+          "input_tokens_sha256": "243e8874fab08a35a5132eaae2af2d0a7f039ecdc5cf4a03528df2ae0c419b29",
+          "generated_tokens": 65,
+          "seconds": 6.359927937970497,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6134,
+            "packed_input_tokens": 6134,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.015297474979888648,
+          "peak_allocated_bytes": 56547767296,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "04f6258cd4ceef15fd3f521ce61c886e74ce7f4936e39497b3a1029a1f64f80d",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 6749,
+          "input_tokens_sha256": "30e8f3489b9084f8d1980b5f131c83a6610d0494079c7809b5e200094e22ba17",
+          "generated_tokens": 174,
+          "seconds": 15.112986600026488,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6749,
+            "packed_input_tokens": 6749,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.016964112990535796,
+          "peak_allocated_bytes": 56721743360,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "04f6258cd4ceef15fd3f521ce61c886e74ce7f4936e39497b3a1029a1f64f80d",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    },
+    {
+      "schema_version": 1,
+      "id": "supp017-humanize-naturalsize",
+      "repository": "python-humanize/humanize",
+      "variant": "progress",
+      "agent_policy": {
+        "format": "native_roundtrip",
+        "context": "full",
+        "progress": "edit_checkpoint_v1"
+      },
+      "backend_errors": [
+        {
+          "error": "context_limit",
+          "input_tokens": 8474,
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 8474,
+            "packed_input_tokens": 8474,
+            "dropped_rounds": 0,
+            "original_messages": 24,
+            "packed_messages": 24
+          },
+          "packing_seconds": 0.02121100400108844,
+          "dialogue": {
+            "structured_tool_calls": 10,
+            "tool_results": 10
+          },
+          "input_tokens_sha256": "1124ebaed393ce062039ca21b68d89ff4778ea68e88b8953579d8f10f0a935b5",
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "adb185d9206a44a9294952f22149b678318df1bf6391ef3e87e755386cc679f9",
+            "enabled": true,
+            "completed_calls": 11,
+            "remaining_calls": 1,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          }
+        }
+      ],
+      "split": "test",
+      "family": "python-humanize/humanize:naturalsize",
+      "passed": false,
+      "reason": "runtime_error",
+      "returncode": 1,
+      "seconds": 199.0994005203247,
+      "modified_source_files": [
+        "src/humanize/filesize.py"
+      ],
+      "source_sha256": {
+        "src/humanize/filesize.py": "ca0f6d1f8db3f35f9ed8678adb3bbf642b6f43147eb7b4db65874c08b84b501e"
+      },
+      "ignored_new_files": [],
+      "calls": 12,
+      "generated_tokens": 2286,
+      "source_progress": [
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 1
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 2
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 3
+        },
+        {
+          "changed_editable_files": 0,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+          "call_index": 4
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "b60cd8997fc874d2e9ced6e2de3c742ce7b3cdcaf8c7ac0f819eef047cb5cd0c",
+          "call_index": 5
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "b60cd8997fc874d2e9ced6e2de3c742ce7b3cdcaf8c7ac0f819eef047cb5cd0c",
+          "call_index": 6
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "04edf64510227822c7f3f770b822e8b0093c544412e8482cbbaea5ebe5cdb627",
+          "call_index": 8
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "eb40ee0655d7364de83703b771855bdf2cd77bf1b231762a1bf723bd30e6a9b0",
+          "call_index": 9
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "56293d6c8fd4effb885683c070e01841dc5f1f1db9a9913819a53491f0fbd3d1",
+          "call_index": 10
+        },
+        {
+          "changed_editable_files": 1,
+          "invalid_editable_files": 0,
+          "editable_state_sha256": "adb185d9206a44a9294952f22149b678318df1bf6391ef3e87e755386cc679f9",
+          "call_index": 11
+        }
+      ],
+      "tool_calls": 10,
+      "tool_seconds": 6.8902333690202795,
+      "exit_status": "RuntimeError",
+      "generations": [
+        {
+          "input_tokens": 559,
+          "input_tokens_sha256": "9dbeff8eb16a06ab280bd7f1287e517a792a6a1fd55b7641c7dd49c02e998a4f",
+          "generated_tokens": 49,
+          "seconds": 3.9504522070055827,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 559,
+            "packed_input_tokens": 559,
+            "dropped_rounds": 0,
+            "original_messages": 2,
+            "packed_messages": 2
+          },
+          "dialogue": {
+            "structured_tool_calls": 0,
+            "tool_results": 0
+          },
+          "packing_seconds": 0.0032250809599645436,
+          "peak_allocated_bytes": 55065930752,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": true,
+            "completed_calls": 0,
+            "remaining_calls": 12,
+            "identical_command_streak": 0,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1498,
+          "input_tokens_sha256": "3320086c43fa74b7655ae6c3052c8f9c99a3571346b4f3064ba973e401da8361",
+          "generated_tokens": 42,
+          "seconds": 3.5370973749668337,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1498,
+            "packed_input_tokens": 1498,
+            "dropped_rounds": 0,
+            "original_messages": 4,
+            "packed_messages": 4
+          },
+          "dialogue": {
+            "structured_tool_calls": 1,
+            "tool_results": 1
+          },
+          "packing_seconds": 0.00344208994647488,
+          "peak_allocated_bytes": 55306387456,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": true,
+            "completed_calls": 1,
+            "remaining_calls": 11,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 1562,
+          "input_tokens_sha256": "5b62c4f452de9862e802705aaed75303ff5a6ca70cce955766f7c1f7b1bb45e9",
+          "generated_tokens": 50,
+          "seconds": 4.176405225007329,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 1562,
+            "packed_input_tokens": 1562,
+            "dropped_rounds": 0,
+            "original_messages": 6,
+            "packed_messages": 6
+          },
+          "dialogue": {
+            "structured_tool_calls": 2,
+            "tool_results": 2
+          },
+          "packing_seconds": 0.0033760570222511888,
+          "peak_allocated_bytes": 55324882432,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": true,
+            "completed_calls": 2,
+            "remaining_calls": 10,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 2903,
+          "input_tokens_sha256": "0c5595e2535c8cd16a8b6876b93d3f4aa5ed8eb941a745e5d869acb45526cf49",
+          "generated_tokens": 40,
+          "seconds": 3.6492166760144755,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 2903,
+            "packed_input_tokens": 2903,
+            "dropped_rounds": 0,
+            "original_messages": 8,
+            "packed_messages": 8
+          },
+          "dialogue": {
+            "structured_tool_calls": 3,
+            "tool_results": 3
+          },
+          "packing_seconds": 0.005386619013734162,
+          "peak_allocated_bytes": 55685642240,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": true,
+            "completed_calls": 3,
+            "remaining_calls": 9,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 3117,
+          "input_tokens_sha256": "0d65b92a938150908be0a8de871a769eac63567fb9c8080cc89fd2ff0dea4cdc",
+          "generated_tokens": 334,
+          "seconds": 26.878041204996407,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 3117,
+            "packed_input_tokens": 3117,
+            "dropped_rounds": 0,
+            "original_messages": 10,
+            "packed_messages": 10
+          },
+          "dialogue": {
+            "structured_tool_calls": 4,
+            "tool_results": 4
+          },
+          "packing_seconds": 0.005657798959873617,
+          "peak_allocated_bytes": 55741537280,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 0,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "4bf2064cb9e9c47ab595b92633038986e0cf6ae36bace9d87bfecb1c34e59017",
+            "enabled": true,
+            "completed_calls": 4,
+            "remaining_calls": 8,
+            "identical_command_streak": 1,
+            "reminder": true,
+            "reminder_chars": 443
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5320,
+          "input_tokens_sha256": "97aad7a7152b467c25e26e3ec3e2addcbb20679161556e57817f91cfe1b95d66",
+          "generated_tokens": 61,
+          "seconds": 5.869690413004719,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5320,
+            "packed_input_tokens": 5320,
+            "dropped_rounds": 0,
+            "original_messages": 12,
+            "packed_messages": 12
+          },
+          "dialogue": {
+            "structured_tool_calls": 5,
+            "tool_results": 5
+          },
+          "packing_seconds": 0.01283623999916017,
+          "peak_allocated_bytes": 56331630592,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "b60cd8997fc874d2e9ced6e2de3c742ce7b3cdcaf8c7ac0f819eef047cb5cd0c",
+            "enabled": true,
+            "completed_calls": 5,
+            "remaining_calls": 7,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 5972,
+          "input_tokens_sha256": "0e25fbe182bcee173f3e181f2e47b6deb2973dfb7ae9bf142c82ac6e34ccbbe6",
+          "generated_tokens": 512,
+          "seconds": 41.61115009500645,
+          "hit_generation_limit": true,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 5972,
+            "packed_input_tokens": 5972,
+            "dropped_rounds": 0,
+            "original_messages": 14,
+            "packed_messages": 14
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.009015354968141764,
+          "peak_allocated_bytes": 56505931264,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "b60cd8997fc874d2e9ced6e2de3c742ce7b3cdcaf8c7ac0f819eef047cb5cd0c",
+            "enabled": true,
+            "completed_calls": 6,
+            "remaining_calls": 6,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": false
+        },
+        {
+          "input_tokens": 6558,
+          "input_tokens_sha256": "29811c3467159559afe2ed981ea88d83fff917632a43d51ec6e8fc22697f3632",
+          "generated_tokens": 299,
+          "seconds": 25.00822945398977,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 6558,
+            "packed_input_tokens": 6558,
+            "dropped_rounds": 0,
+            "original_messages": 16,
+            "packed_messages": 16
+          },
+          "dialogue": {
+            "structured_tool_calls": 6,
+            "tool_results": 6
+          },
+          "packing_seconds": 0.009829315007664263,
+          "peak_allocated_bytes": 56666283008,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "b60cd8997fc874d2e9ced6e2de3c742ce7b3cdcaf8c7ac0f819eef047cb5cd0c",
+            "enabled": true,
+            "completed_calls": 7,
+            "remaining_calls": 5,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7058,
+          "input_tokens_sha256": "13a1034051548f6d2caa6556a5641dfd49022c13c92d0df45437707478ef18f6",
+          "generated_tokens": 427,
+          "seconds": 35.3478376789717,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7058,
+            "packed_input_tokens": 7058,
+            "dropped_rounds": 0,
+            "original_messages": 18,
+            "packed_messages": 18
+          },
+          "dialogue": {
+            "structured_tool_calls": 7,
+            "tool_results": 7
+          },
+          "packing_seconds": 0.017529233009554446,
+          "peak_allocated_bytes": 56796729344,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "04edf64510227822c7f3f770b822e8b0093c544412e8482cbbaea5ebe5cdb627",
+            "enabled": true,
+            "completed_calls": 8,
+            "remaining_calls": 4,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 7651,
+          "input_tokens_sha256": "4da12fa2128c8048a38e1fbfaa9e39f82815aab7a988cf92a866b0237f372be3",
+          "generated_tokens": 293,
+          "seconds": 24.674519384047017,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 7651,
+            "packed_input_tokens": 7651,
+            "dropped_rounds": 0,
+            "original_messages": 20,
+            "packed_messages": 20
+          },
+          "dialogue": {
+            "structured_tool_calls": 8,
+            "tool_results": 8
+          },
+          "packing_seconds": 0.011803561996202916,
+          "peak_allocated_bytes": 56955181568,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "eb40ee0655d7364de83703b771855bdf2cd77bf1b231762a1bf723bd30e6a9b0",
+            "enabled": true,
+            "completed_calls": 9,
+            "remaining_calls": 3,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        },
+        {
+          "input_tokens": 8134,
+          "input_tokens_sha256": "020f0521db03fdd77667c088c31ce24977b2b440cfbd4ad0e046a343d4c68248",
+          "generated_tokens": 179,
+          "seconds": 15.833509065036196,
+          "hit_generation_limit": false,
+          "agent_policy": {
+            "format": "native_roundtrip",
+            "context": "full",
+            "progress": "edit_checkpoint_v1"
+          },
+          "context": {
+            "policy": "full",
+            "raw_input_tokens": 8134,
+            "packed_input_tokens": 8134,
+            "dropped_rounds": 0,
+            "original_messages": 22,
+            "packed_messages": 22
+          },
+          "dialogue": {
+            "structured_tool_calls": 9,
+            "tool_results": 9
+          },
+          "packing_seconds": 0.012329031946137547,
+          "peak_allocated_bytes": 57082801152,
+          "adapter": false,
+          "progress": {
+            "changed_editable_files": 1,
+            "invalid_editable_files": 0,
+            "editable_state_sha256": "56293d6c8fd4effb885683c070e01841dc5f1f1db9a9913819a53491f0fbd3d1",
+            "enabled": true,
+            "completed_calls": 10,
+            "remaining_calls": 2,
+            "identical_command_streak": 1,
+            "reminder": false,
+            "reminder_chars": 0
+          },
+          "action_format_valid": true
+        }
+      ],
+      "recovered": false
+    }
+  ],
+  "finished_utc": "2026-11-11T03:36:07.503210+00:00"
+}

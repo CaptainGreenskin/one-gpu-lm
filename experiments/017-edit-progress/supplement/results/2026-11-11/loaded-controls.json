@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T03:18:05.793156+00:00",
+  "task_spec_sha256": "c7f22cb87b6cb91112b717182119fde959d565f6d802bd134f72f8a2baa0acb5",
+  "clean": [
+    {
+      "repository": "python-humanize/humanize",
+      "revision": "2968d44280a68f775db73ddeb2f2fc6c05edac84",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.1199911650037393,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [],
+  "complete": true,
+  "finished_utc": "2026-11-11T03:18:06.929278+00:00",
+  "admitted": 0
+}

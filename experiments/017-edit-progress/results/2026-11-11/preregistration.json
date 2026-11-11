@@ -1,0 +1,19 @@
+{
+  "commit": "9a92ed11ac4f4c629a627c22db2f2a09ebe4f4d1",
+  "anonymous": true,
+  "method": "Unauthenticated GitHub commit archive; exact byte equality of package,017,CI and new tests",
+  "verified_utc": "2026-11-11T02:00:19.400872+00:00",
+  "files_verified": 74,
+  "archive_sha256": "88eb95536f0a2a6b49574f6e7c28fcad2bf6bafa7b3fbc304f1f611f87bc90ad",
+  "protocol_sha256": "de65ada3474292c2926d946a14f000d06c03539ddc2e2a2bea9a1e3dae60fd6a",
+  "protocol_url": "https://github.com/CaptainGreenskin/one-gpu-lm/blob/9a92ed11ac4f4c629a627c22db2f2a09ebe4f4d1/experiments/017-edit-progress/protocol.json",
+  "model_rollout_started": false,
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42942706989,
+    "headSha": "9a92ed11ac4f4c629a627c22db2f2a09ebe4f4d1",
+    "status": "completed",
+    "url": "https://github.com/CaptainGreenskin/one-gpu-lm/actions/runs/42942706989",
+    "workflowName": "Training data and evaluation contracts"
+  }
+}

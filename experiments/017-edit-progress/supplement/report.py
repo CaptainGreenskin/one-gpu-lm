@@ -70,6 +70,8 @@ def render(root):
 | --- | --- | --- | --- | --- |
 {table}
 
+Passing means the independent grader accepts the final source, not necessarily that the agent exits normally. Context-limit requests: control {s['totals']['control']['context_limit_requests']}, progress {s['totals']['progress']['context_limit_requests']}; these are retained even when the final code passes. Invalid action formats: control {s['totals']['control']['format_invalid_calls']}, progress {s['totals']['progress']['format_invalid_calls']}.
+
 ![Success and first edit curves](comparison.png)
 
 Paired outcomes: {s['contrasts']['fresh']}. Task-controller time ratio: {s['task_controller_time_ratio']:.3f}×. These interleaved times include tools and grading, not just generation. Curves retain all six tasks in each denominator and count temporary byte changes; they are secondary observations, never a substitute for passing the independent grader. [Paired data](paired-outcomes.csv), [curve data](first-edit-curves.csv), [full summary](summary.json).

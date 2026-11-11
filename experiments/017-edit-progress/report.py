@@ -67,6 +67,13 @@ def render(root):
   if audit['campaign_sha256'][arm]!=sha256(root/(arm+'.json')) or audit['parser_sha256']!=i['source_files']['one_gpu_lm/common/actions.py'] or [v['id'] for v in a]!=[t['id'] for t in inventory] or not all(v['progress_and_native_turns_verified'] and v['final_source_verified'] for v in a) or sum(v['input_token_hashes_verified'] for v in a)!=sum(v['calls'] for v in campaign['results']):raise ValueError('Missing independent input/progress audit')
  s=assess(campaigns,p,inventory)
  s['same_input_output_comparison']=audit['same_input_output_comparison']
+ case_review=''
+ if (root/'postrun-review.json').exists():
+  review=read('postrun-review.json');paired_by_id={r['id']:r for r in s['paired']};audited={a:{r['id']:r for r in audit['variants'][a]} for a in ARMS}
+  if any(review['campaign_sha256'][a]!=sha256(root/(a+'.json')) for a in ARMS):raise ValueError('Case review refers to different outcomes')
+  for item in review['cases']:
+   if item['outcome']!=paired_by_id[item['id']]['outcome'] or any(item['passed'][a]!=paired_by_id[item['id']][a+'_passed'] or item['first_edit_call'][a]!=paired_by_id[item['id']][a+'_first_edit_call'] or item['trajectory_sha256'][a]!=audited[a][item['id']]['trajectory_sha256'] for a in ARMS):raise ValueError('Case review identity/outcome mismatch')
+  case_review='[Post-run case review](postrun-review.json): '+review['interpretation']+'\n\n'+'\n\n'.join('`'+item['id']+'`: '+item['observation'] for item in review['cases'])
  dependency=read('dependency-review.json')
  if dependency['review_source_sha256']!=sha256(exp/'dependency_review.py') or dependency['lock_sha256']!=sha256(exp/'preflight/node-package-lock.json') or dependency['scoring_or_inputs_changed'] or not dependency['accessible_to_both_arms']:raise ValueError('Missing dependency exposure review')
  for arm in ARMS:
@@ -99,7 +106,7 @@ def render(root):
  matplotlib.rcParams.update({'svg.hashsalt':'one-gpu-lm-017','font.family':'DejaVu Sans'});colors=['#64748b','#0d9488'];gate='met' if s['candidate_for_replication'] else 'failed'
  fig,axes=plt.subplots(1,2,figsize=(10,4),layout='constrained');fig.suptitle('017 final task success; frozen gate '+gate)
  for ax,name,limit in zip(axes,['historical','fresh'],[p['evaluation_task_counts']['dev'],p['evaluation_task_counts']['test']]):
-  vals=[s['totals'][a]['passed'][name] for a in ARMS];ax.bar(ARMS,vals,color=colors);ax.set(title=name,ylabel='Passed tasks',ylim=(0,limit));ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True)
+  vals=[s['totals'][a]['passed'][name] for a in ARMS];ax.bar(ARMS,vals,color=colors);ax.set(title=('historical (24 tasks)' if name=='historical' else 'fresh (12; reference-exposed)'),ylabel='Passed tasks',ylim=(0,limit));ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True)
   for x,v in enumerate(vals):ax.text(x,v+.1,str(v),ha='center')
  for ext in ['png','svg']:fig.savefig(root/('comparison.'+ext),dpi=160,metadata={'Date':None} if ext=='svg' else {})
  plt.close(fig);fig,axes=plt.subplots(1,2,figsize=(10,4),layout='constrained');fig.suptitle('Observed first source change, not task success')
@@ -109,12 +116,16 @@ def render(root):
   for arm,color in zip(ARMS,colors):
    ys=[sum(r[arm+'_first_edit_call'] is not None and r[arm+'_first_edit_call']<=n for r in selected)/len(selected) for n in range(1,13)]
    ax.step(range(1,13),ys,where='post',label=arm,color=color);progress_curves += [{'split':split,'variant':arm,'call':i,'ever_changed_fraction':y,'tasks':len(selected)} for i,y in enumerate(ys,1)]
-  ax.set(title=label,xlabel='Completed model calls',ylabel='Fraction with observed source change',ylim=(0,1));ax.grid(alpha=.2);ax.legend()
+  ax.set(title=(label if split=='dev' else 'fresh (reference-exposed)'),xlabel='Completed model calls',ylabel='Fraction with observed source change',ylim=(0,1));ax.grid(alpha=.2);ax.legend()
  for ext in ['png','svg']:fig.savefig(root/('first-edit-curves.'+ext),dpi=160,metadata={'Date':None} if ext=='svg' else {})
  plt.close(fig);csvout('first-edit-curves.csv',progress_curves)
  write_json(root/'report-environment.json',{'python':platform.python_version(),'matplotlib':matplotlib.__version__,'report_sha256':sha256(Path(__file__))})
  table='\n'.join(f"| {a} | {v['passed']['historical']}/24 | {v['passed']['fresh']}/12 | {v['failed_without_any_observed_edit']} | {v['reminder_requests']} | {v['controller_seconds']/60:.1f} |" for a,v in s['totals'].items())
  repos='\n'.join(f"| {k} | {v['split']} | {v['tasks']} | {v['passed']['control']} | {v['passed']['progress']} |" for k,v in s['per_repository'].items())
+ paired_by_id={r['id']:r for r in s['paired']}
+ target_table='\n'.join(f"| `{i}` | {'pass' if v['control'] else 'fail'} | {'pass' if v['progress'] else 'fail'} | {paired_by_id[i]['progress_first_edit_call'] or 'none'} |" for i,v in s['targets'].items())
+ changes='\n'.join(f"| {name} | {len(v['improved'])} | {len(v['regressed'])} | {len(v['improved'])-len(v['regressed'])} |" for name,v in s['contrasts'].items())
+ gates='\n'.join(f"| {name.replace('_',' ')} | {'met' if passed else 'failed'} |" for name,passed in s['gate_checks'].items())
  (root/'README.md').write_text(f'''# 017 · Edit progress results
 
 **Frozen numerical gate {gate}. No default policy change or deployment approval follows.** The same unchanged 27B BF16 base was used, with no weight updates. All 72 runs are retained: 24 historical and 12 fresh task pairs, with no tuning between stages. Both original fresh repositories have reference exposure, limiting the validation claim regardless of the gate result. See the [separate screened supplement](../../supplement/) for additional validation.
@@ -123,9 +134,25 @@ def render(root):
 | --- | --- | --- | --- | --- | --- |
 {table}
 
+Passing means the independent grader accepts the final source. An agent can stop at a call or context limit and still leave passing code; its exit status and backend failures are retained separately. This is not a count of normal end-to-end agent completions.
+
 ![Final success](comparison.png)
 
-Historical paired changes: {s['contrasts']['historical']}. Fresh paired changes: {s['contrasts']['fresh']}. Three prior regressions: {s['targets']}. Gate checks: {s['gate_checks']}. Overall task-controller time ratio {s['task_controller_time_ratio']:.3f}×; this interleaved total includes tools and grading, not just generation. Tasks reaching the 12-call limit without any observed edit: control {s['totals']['control']['call_limit_without_any_edit']}, progress {s['totals']['progress']['call_limit_without_any_edit']}.
+| Exposure split | Improved pairs | Regressed pairs | Net gain |
+| --- | --- | --- | --- |
+{changes}
+
+| Original target | control | progress | Candidate first edit call |
+| --- | --- | --- | --- |
+{target_table}
+
+| Frozen requirement | Result |
+| --- | --- |
+{gates}
+
+Overall task-controller time ratio {s['task_controller_time_ratio']:.3f}×; this interleaved total includes tools and grading, not just generation. Tasks reaching the 12-call limit without any observed edit: control {s['totals']['control']['call_limit_without_any_edit']}, progress {s['totals']['progress']['call_limit_without_any_edit']}. Within the historical split specifically, those counts are {s['totals']['control']['by_split']['historical']['call_limit_without_any_edit']} and {s['totals']['progress']['by_split']['historical']['call_limit_without_any_edit']}. All pair identities and outcomes are in [paired data](paired-outcomes.csv).
+
+{case_review}
 
 | Repository | Exposure split | Tasks | control | progress |
 | --- | --- | --- | --- | --- |
@@ -139,7 +166,7 @@ These curves show the fraction ever observed with a valid editable-file byte dif
 
 Same task inputs, model, strict parser, tool round trips, full history, 12 calls, 512 output tokens/call, 6,144 total output tokens, 8,192 input tokens and 900 seconds/task. Only the progress arm receives a generic temporary system reminder using current editable state and completed-call history. Reminder tokens count toward the input limit; there is no extra call, truncation, automatic patch or answer hint. Source-state observation runs in both arms. The reminder rule was locked before inspecting the new source repositories. [Frozen protocol](protocol.json), [intervention](intervention.json), [initial diagnosis](diagnosis.json), [pre-rollout public verification](preregistration.json).
 
-The unchanged control versus 016 differed as follows: {s['control_vs016']}. This repeat-variation check is descriptive; no better run was selected. Across arms there were {sum(len(r['different_output_calls']) for r in s['same_input_output_comparison'])} different outputs at matched call indices with identical actual input-token hashes. Greedy decoding is not a guarantee of identical outcomes; one pair per task cannot isolate all execution variation. [Audit](failure-audit.json) re-encodes every actual request with the pinned tokenizer, checks its token hash, reminder trigger, native tool pairing, strict parser decisions and final source state without rerunning commands or changing scores. Intermediate file states are recorded by the frozen executor; the final workspace and initial state are checked independently.
+The unchanged control versus 016 had {len(s['control_vs016']['improved'])} outcome improvements and {len(s['control_vs016']['regressed'])} regressions. This repeat-variation check is descriptive; no better run was selected. Across arms, {sum(r['identical_input_calls'] for r in s['same_input_output_comparison'])} matched calls had identical actual input-token hashes; {sum(len(r['different_output_calls']) for r in s['same_input_output_comparison'])} produced different output text hashes. Greedy decoding is not a guarantee of identical outcomes; one pair per task cannot isolate all execution variation. [Audit](failure-audit.json) re-encodes every actual request with the pinned tokenizer, checks its token hash, reminder trigger, native tool pairing, strict parser decisions and final source state without rerunning commands or changing scores. Intermediate file states are recorded by the frozen executor; the final workspace and initial state are checked independently.
 
 ## Hardware and failures
 

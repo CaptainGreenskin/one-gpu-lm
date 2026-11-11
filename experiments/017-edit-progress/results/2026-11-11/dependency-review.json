@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "review_source_sha256": "7e4d861a778340b2f1a998fc8bb8531f5d6c4801a7f2be25bba572319f5dfa82",
+  "posthoc": true,
+  "scoring_or_inputs_changed": false,
+  "repository": "sindresorhus/p-map",
+  "dependency_chain": [
+    "ava@6.4.1",
+    "p-map@7.1.1"
+  ],
+  "lock_sha256": "50eccd3f3cf98a92e85836c7ce555fdf723e09ee105a4ef89809f1433438e8ac",
+  "installed_reference_sha256": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4",
+  "target_source_sha256": "cc7f3717cef13b84dd673c6eea25346b6fbb047840b77ff835e718ed87adc3a4",
+  "installed_reference_identical_to_target": true,
+  "accessible_to_both_arms": true,
+  "reference_read_access_instrumented": false,
+  "clean_reference_free_validation": false,
+  "interpretation": "AVA imports its own p-map dependency, readable by the agent. A separate system Blinker package is also visible through /usr. Text indicators cannot prove absence of indirect access, and test execution is not itself evidence that reference source was returned to the model. Keep all frozen scores; neither original fresh repository establishes reference-free generalization.",
+  "variants": {
+    "control": [
+      {
+        "id": "fresh017-map-limit",
+        "trajectory_sha256": "edfb19ea7d2866e9b6a6eccc4a3b1373fc6fb008b4a3c92c2a107ad3ed54a382",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 1
+      },
+      {
+        "id": "fresh017-map-settled",
+        "trajectory_sha256": "739dd1e3678bf56f2d61ee4b8e49bdb74b9276629762c7d01d01c84a4aa89024",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 5,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 2
+      },
+      {
+        "id": "fresh017-map-enumerable",
+        "trajectory_sha256": "845319e976ad278d9a0025b027eef95bce05afbcf509246c49d9959bf8a1c144",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 1
+      },
+      {
+        "id": "fresh017-map-prototype",
+        "trajectory_sha256": "29f5f32ee27fe677001684b9f7be75384e6c5374e4311c60162ee62066c98d06",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 11,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 2
+      },
+      {
+        "id": "fresh017-map-iterator",
+        "trajectory_sha256": "645ab19763781c3bfe5526de049d5db21460183d7595dd95d7b4d4cc7ab95b74",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 9,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 2
+      },
+      {
+        "id": "fresh017-map-skip",
+        "trajectory_sha256": "f9b4c5ed503c3cc50070e7b8fe786dd8be14cb4376aefbc545276de29f0181ec",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 0
+      }
+    ],
+    "progress": [
+      {
+        "id": "fresh017-map-limit",
+        "trajectory_sha256": "c467d590dc15f4bbfebbcb6a4f9c0faa79c929567f1a5c15e53755f6596a041f",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 11,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 1
+      },
+      {
+        "id": "fresh017-map-settled",
+        "trajectory_sha256": "e8b6a0601dc6f41ef73210afa31b0f2be23bd93b729d99aa1fb59eae818e6b1d",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 5,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 2
+      },
+      {
+        "id": "fresh017-map-enumerable",
+        "trajectory_sha256": "564d938bfbcab6fcb4ff6299cbf18e1b3b514ec817f16e4e1c8fc2eeca213232",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 0
+      },
+      {
+        "id": "fresh017-map-prototype",
+        "trajectory_sha256": "0b37f671b3e37dba5c18ecfadc67d22f956462f3e2d1729846ae9245c66ea520",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 10,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 0
+      },
+      {
+        "id": "fresh017-map-iterator",
+        "trajectory_sha256": "86a35bbb3caa1a1c23a981af4534dc5ccae3c53290c94f936cd09ad99bec352e",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 0
+      },
+      {
+        "id": "fresh017-map-skip",
+        "trajectory_sha256": "a021fae9ae38569405173a0859351fd9f6a29b9ad3bbb190dfe6e371640ed832",
+        "unmutated_replace_fragments_present_in_reference": [
+          true
+        ],
+        "accepted_commands": 12,
+        "explicit_dependency_path_commands": 0,
+        "bare_package_import_commands": 0,
+        "commands_mentioning_node_modules": 3
+      }
+    ]
+  },
+  "blinker_system_copies": [
+    {
+      "mounted_path": "/usr/lib/python3/dist-packages/blinker",
+      "base_sha256": "309fea9f895a75418c014d8cd64d8e20f7e0522fc83616ea7cbaef8ddb261d53"
+    }
+  ],
+  "blinker_command_indicators": {
+    "control": [
+      {
+        "id": "fresh017-signal-decorator",
+        "trajectory_sha256": "e0f5d7e2b1fe4000ac44c667f6247fe1c3d7b7b1b5edc844684e2e96de36e036",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-temporary",
+        "trajectory_sha256": "e524c687ca7b5a0e26f34e11286c90b342893ddd9963b39d8e3e12cb16509a22",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-muted",
+        "trajectory_sha256": "029d4d922b0f404229a8332f7e4f83f55273fc716b9569982637602cadebe96d",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-presence",
+        "trajectory_sha256": "5d6998376a3690fc31b6185c1f8bb68b4f44c1bcfa90827ff1e2ac85192d3ec9",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-iteration",
+        "trajectory_sha256": "e6038ecec29ab1dd83f2d0d6ca4a60979b9ec873115742205bcb0094214b83fa",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-namespace",
+        "trajectory_sha256": "a3204c5029a558468b86a74e60e924da275f0f939fd501f15f1fa4b4e4e0f397",
+        "commands_naming_system_blinker_path": 0
+      }
+    ],
+    "progress": [
+      {
+        "id": "fresh017-signal-decorator",
+        "trajectory_sha256": "043262c8f5aa7731ac10d4a091f06f16c3b08f7cc09304a889f33954dec19333",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-temporary",
+        "trajectory_sha256": "c8b15aca841a9188d90261b8c5c3ee2946b0694bc6e3f2018b10f83d1185456f",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-muted",
+        "trajectory_sha256": "efb295fb56ceb93774bbffb9f444f4628dab28b8a053fb7629f18ceda7f94b25",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-presence",
+        "trajectory_sha256": "777a6ac41d7d7f1f90698c0268b961fdb2fe503c49255e4a771f8bc4934fa383",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-iteration",
+        "trajectory_sha256": "2d0a1f8efc9ed599aae6b8c44d0ced98763f0db3f0e95a2bf1bd50df71dd5387",
+        "commands_naming_system_blinker_path": 0
+      },
+      {
+        "id": "fresh017-signal-namespace",
+        "trajectory_sha256": "ff493f8d84a59839d88af2a64ad633c622e09d2bf5deb669540f2fac3c75943c",
+        "commands_naming_system_blinker_path": 0
+      }
+    ]
+  }
+}
