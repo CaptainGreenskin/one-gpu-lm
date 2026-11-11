@@ -13,6 +13,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from one_gpu_lm.common.checkpoints import load_checkpoint
 from one_gpu_lm.common.receipts import sha256, write_json
+from one_gpu_lm.common.runstate import identity_digest
 from one_gpu_lm.evaluation.tasks import file_manifest
 from one_gpu_lm.models.verify import verify_model
 
@@ -84,6 +85,9 @@ def check(root, run, out):
         'dependency_contents_unchanged': True, 'framework_contents_unchanged': True,
         'base_model_verification': verification, 'training_input_audit_sha256': sha256(root/'training-input-audit.json'),
         'adapter_tensor_audits': tensor_audits,
+        'public_task_inventory_identity_sha256': identity_digest([
+            {k:t[k] for k in ['id','repository','revision','family','split','evaluation_role'] if k in t}
+            for t in read(root/'private/tasks.json')['tasks']]),
         'rights_and_secret_scan_pass': True,
         'rights_scope': 'Exact reviewed source notices, fixed Apache-2.0 base LICENSE and known-pattern/private-identifier input screen; no teacher API. Not exhaustive secret detection or a legal warranty.',
         'export': {'required': selection['selected'] is not None, 'created': False},

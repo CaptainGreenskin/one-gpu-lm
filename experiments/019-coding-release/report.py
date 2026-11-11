@@ -16,6 +16,7 @@ EXP = Path(__file__).resolve().parent
 sys.path.insert(0, str(EXP.parents[1]))
 sys.path.insert(0, str(EXP))
 from one_gpu_lm.common.receipts import sha256, write_json
+from one_gpu_lm.common.runstate import identity_digest
 from decision import paired, select, release_gate
 
 
@@ -93,12 +94,16 @@ def assess(root):
     cohorts['fresh'] = [t['id'] for t in inventory if t['split'] == 'test' and t['id'] not in cohorts['historical']]
     require(tuple(map(len, cohorts.values())) == (15,24,24), 'Changed cohort counts')
     audit = read('execution-audit.json'); integrity = read('postrun-integrity.json')
+    require(identity_digest(inventory) == integrity['public_task_inventory_identity_sha256'],
+            'Public historical/fresh labels differ from the frozen private task manifest')
     require(audit['audit_source_sha256'] == frozen['experiments/019-coding-release/audit.py']
             and audit['selection_recomputed_without_test_scores'], 'Missing exact execution audit')
     require(integrity['protocol_sha256'] == protocol_hash and all(integrity.get(k) is True for k in
         ['all_frozen_file_hashes_match','source_snapshot_contents_unchanged','dependency_contents_unchanged','framework_contents_unchanged']),
         'Post-run content integrity failed')
     require(integrity['base_model_verification']['content_verified']
+            and integrity['base_model_verification']['manifest_sha256'] == frozen['experiments/011-coding-model-selection/weights-manifest.json']
+            and all(integrity['base_model_verification'][k] == protocol[k] for k in ['model_id','revision'])
             and integrity['training_input_audit_sha256'] == frozen['training-input-audit.json']
             and sha256(root/'training-input-audit.json') == frozen['training-input-audit.json'],
             'Model or training-input rights audit identity changed')
@@ -107,7 +112,7 @@ def assess(root):
     schedule = [{'example_sha256': hashlib.sha256(r['id'].encode()).hexdigest(), 'tokens': r['tokens'],
                  'supervised_tokens': r['supervised_tokens']} for r in expected_order]
     for name in ['low', 'high']:
-        folder = root/('training-'+name); result = read('training-'+name+'/result.json')
+        result = read('training-'+name+'/result.json')
         identity = read('training-'+name+'/identity.json'); chosen = read('training-'+name+'/selection.json')
         metrics = read('training-'+name+'/metrics.json')
         require(result['status'] == 'completed' and result['steps'] == len(metrics) == protocol['training_records'], 'Training is incomplete')
@@ -182,7 +187,8 @@ def assess(root):
                 'candidate_output_tokens':row['generated_tokens'],'base_seconds':b['seconds'],'candidate_seconds':row['seconds']})
     samples = []
     for file in sorted(root.glob('telemetry-attempt-*.csv')):
-        samples.extend(csv.DictReader(file.open()))
+        with file.open() as stream:
+            samples.extend(csv.DictReader(stream))
     epochs = [datetime.fromisoformat(r['utc']).timestamp() for r in samples]
     require(len(samples) >= 2 and all(b>a for a,b in zip(epochs,epochs[1:])), 'Invalid hardware coverage')
     hardware = {'samples':len(samples),'last_attempt_collection_errors':controller['telemetry']['errors'],
