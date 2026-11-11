@@ -11,6 +11,18 @@ ACTION_SPANS = re.compile(
 )
 
 
+def native_action_message(content):
+    """Serialize one accepted action; callers establish execution/provenance separately."""
+    action = parse_action(content)
+    spans = list(ACTION_SPANS.finditer(content))
+    if len(spans) != 1:
+        raise ValueError('Cannot identify the single accepted action span')
+    span = spans[0]
+    prose = (content[:span.start()] + content[span.end():]).strip()
+    return {'role': 'assistant', 'content': prose, 'tool_calls': [
+        {'type': 'function', 'function': {'name': 'bash', 'arguments': dict(action)}}]}
+
+
 def render_history(messages, native_roundtrip=False):
     """Only an observation carrying executor metadata can become a tool response.
 
@@ -30,13 +42,7 @@ def render_history(messages, native_roundtrip=False):
             action = parse_action(previous['content'])
             if previous.get('extra', {}).get('actions') != [action]:
                 raise ValueError('Recorded execution and parsed action disagree')
-            spans = list(ACTION_SPANS.finditer(previous['content']))
-            if len(spans) != 1:
-                raise ValueError('Cannot identify the single accepted action span')
-            span = spans[0]
-            prose = (previous['content'][:span.start()] + previous['content'][span.end():]).strip()
-            rendered[-1] = {'role': 'assistant', 'content': prose, 'tool_calls': [
-                {'type': 'function', 'function': {'name': 'bash', 'arguments': dict(action)}}]}
+            rendered[-1] = native_action_message(previous['content'])
             rendered.append({'role': 'tool', 'name': 'bash', 'content': content})
         else:
             rendered.append({'role': role, 'content': content})

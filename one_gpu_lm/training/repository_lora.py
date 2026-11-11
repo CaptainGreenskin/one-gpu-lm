@@ -11,6 +11,7 @@ import time
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.models.hf_runtime import Runtime
+from one_gpu_lm.common.training_encoding import encode_training_example
 
 
 def select_examples(rows, tokenizer, profile, approved_ids, max_examples=96):
@@ -20,17 +21,14 @@ def select_examples(rows, tokenizer, profile, approved_ids, max_examples=96):
             raise ValueError('Non-training or unadmitted supervision')
         if not row['target'].strip() or not row['messages'] or row['messages'][-1]['role'] != 'user':
             raise ValueError('Invalid next-assistant training record')
-        prefix = tokenizer.apply_chat_template(row['messages'], tokenize=True, return_dict=False,
-            add_generation_prompt=True, **profile['chat_template_kwargs'])
-        suffix = tokenizer.encode(row['target']+tokenizer.eos_token, add_special_tokens=False)
-        if len(prefix)+len(suffix) > profile['training']['max_sequence_length']:
-            excluded.append({'id':row['id'],'reason':'context_limit','tokens':len(prefix)+len(suffix)})
+        encoded = encode_training_example(row, tokenizer, profile)
+        if len(encoded['ids']) > profile['training']['max_sequence_length']:
+            excluded.append({'id':row['id'],'reason':'context_limit','tokens':len(encoded['ids'])})
             continue
         if len(selected) >= max_examples:
-            excluded.append({'id':row['id'],'reason':'example_budget','tokens':len(prefix)+len(suffix)})
+            excluded.append({'id':row['id'],'reason':'example_budget','tokens':len(encoded['ids'])})
             continue
-        selected.append({'id':row['id'], 'ids':prefix+suffix, 'labels':[-100]*len(prefix)+suffix,
-                         'provenance':row['provenance'], 'supervised_tokens':len(suffix)})
+        selected.append({'id':row['id'], 'provenance':row['provenance'], **encoded})
     if not selected:
         raise ValueError('No valid training examples')
     return selected, excluded

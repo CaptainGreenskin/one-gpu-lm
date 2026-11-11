@@ -41,6 +41,8 @@ def load_config(path):
     if not paths['model_dir'].is_dir() or any(not p.is_file() for key,p in paths.items() if key!='model_dir'):
         raise ValueError('A configured model directory or input file is missing')
     profile = json.loads(paths['profile'].read_text())
+    if profile['training'].get('dialogue_format', 'legacy') not in {'legacy', 'native_roundtrip'}:
+        raise ValueError('Unsupported training dialogue format')
     if profile['dtype'] != 'bfloat16' or profile['training']['epochs'] != 1 or not profile['training']['gradient_checkpointing']:
         raise ValueError('Infrastructure v1 supports BF16, one data pass, and gradient checkpointing')
     if profile['training']['max_sequence_length'] > 4096 or profile['lora']['r'] > 8:

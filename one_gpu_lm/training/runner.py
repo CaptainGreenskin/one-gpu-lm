@@ -191,10 +191,12 @@ def _locked(config,out,resume,stop_after_step):
         status('saved_adapter_probe',step=len(history))
         optimizer.zero_grad(set_to_none=True);del optimizer
         model.gradient_checkpointing_disable();runtime.model=model.eval()
-        before=runtime.generate({'messages':rows[0]['messages'],'max_new_tokens':16})['ids']
+        probe={'messages':rows[0]['messages'],'max_new_tokens':16,
+               'agent_policy':{'format':settings.get('dialogue_format','legacy'),'context':'full'}}
+        before=runtime.generate(probe)['ids']
         backbone=model.unload()
         runtime.model=PeftModel.from_pretrained(backbone,checkpoint/'adapter',is_trainable=False).eval()
-        after=runtime.generate({'messages':rows[0]['messages'],'max_new_tokens':16})['ids']
+        after=runtime.generate(probe)['ids']
         if before!=after:raise ValueError('Saved adapter changed greedy probe output')
         adapter_files={name.removeprefix('adapter/'):digest for name,digest in manifest['files'].items() if name.startswith('adapter/') and name.endswith(('.safetensors','.json'))}
         result={'schema_version':1,'status':'completed','finished_utc':utc(),'steps':len(history),

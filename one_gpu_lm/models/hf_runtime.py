@@ -3,8 +3,8 @@ import json
 import hashlib
 import time
 from one_gpu_lm.common.receipts import write_json
-from one_gpu_lm.common.agent_policy import BASH_TOOLS, prepare_context, validate_policy
-from one_gpu_lm.common.tool_history import render_history
+from one_gpu_lm.common.agent_policy import prepare_context, validate_policy
+from one_gpu_lm.common.tokenization import encode_prefix
 
 
 class Runtime:
@@ -39,16 +39,12 @@ class Runtime:
         if any(m["role"] not in {"system", "user", "assistant"} for m in messages):
             raise ValueError("Unexpected message role")
         policy = validate_policy(value.get("agent_policy"))
-        kwargs = dict(self.profile["chat_template_kwargs"])
-        if policy["format"] != "legacy":
-            kwargs["tools"] = BASH_TOOLS
         dialogue = {}
         def encode(items):
-            rendered = render_history(items, policy["format"] == "native_roundtrip")
-            dialogue.update(structured_tool_calls=sum(len(m.get('tool_calls', [])) for m in rendered),
-                            tool_results=sum(m['role'] == 'tool' for m in rendered))
-            return self.tokenizer.apply_chat_template(rendered, tokenize=True, return_dict=False,
-                add_generation_prompt=True, **kwargs)
+            tokens, receipt = encode_prefix(self.tokenizer, items,
+                self.profile['chat_template_kwargs'], policy['format'])
+            dialogue.update(receipt)
+            return tokens
         limit = min(int(value.get("max_input_tokens", 8192)), 8192)
         packing_started = time.monotonic()
         tokens, context = prepare_context(messages, encode, limit, policy["context"])

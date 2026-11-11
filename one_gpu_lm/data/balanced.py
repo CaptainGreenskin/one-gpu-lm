@@ -7,6 +7,7 @@ from pathlib import Path
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.training_data import read_training_data
+from one_gpu_lm.common.training_encoding import encode_training_example
 
 
 def choose_balanced(records, budget, required_tasks):
@@ -51,13 +52,11 @@ def prepare(paths, profile, tokenizer, budget, out):
         reason=None
         if fingerprint in seen:reason='duplicate_context_and_target'
         seen.add(fingerprint)
-        prefix=tokenizer.apply_chat_template(row['messages'],tokenize=True,return_dict=False,
-            add_generation_prompt=True,**profile['chat_template_kwargs'])
-        target=tokenizer.encode(row['target']+tokenizer.eos_token,add_special_tokens=False)
-        if len(prefix)+len(target)>profile['training']['max_sequence_length']:reason='context_limit'
-        elif len(target)>target_budget:reason='target_exceeds_action_generation_budget'
+        encoded=encode_training_example(row,tokenizer,profile)
+        if len(encoded['ids'])>profile['training']['max_sequence_length']:reason='context_limit'
+        elif encoded['supervised_tokens']>target_budget:reason='target_exceeds_action_generation_budget'
         record={'id':row['id'],'task_id':row['provenance']['task_id'],'source_index':index,
-            'kind':row['provenance']['kind'],'tokens':len(prefix)+len(target),'supervised_tokens':len(target),
+            'kind':row['provenance']['kind'],'tokens':len(encoded['ids']),'supervised_tokens':encoded['supervised_tokens'],
             'record_sha256':fingerprint}
         if reason:excluded.append({**record,'reason':reason})
         else:eligible.append(record)
