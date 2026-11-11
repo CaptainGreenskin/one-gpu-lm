@@ -13,6 +13,7 @@ import one_gpu_lm.common.actions as actions
 def audit(root,run):
  c=json.loads((run/'controller.json').read_text());assert c['complete'] and c['telemetry']['thread_stopped']
  tasks={t['id']:t for t in json.loads((root/'private/tasks.json').read_text())['tasks']}
+ admitted={t['id']:t for t in json.loads((root/'runs/admission/admission.json').read_text())['tasks']}
  runtime=json.loads((root/'runtime.json').read_text());profile=json.loads((root/'experiments/017-edit-progress/model-profile.json').read_text())
  from transformers import AutoTokenizer
  tokenizer=AutoTokenizer.from_pretrained(runtime['model'],local_files_only=True,trust_remote_code=False)
@@ -22,6 +23,7 @@ def audit(root,run):
   path=run/(arm+'.json');campaign=json.loads(path.read_text());assert campaign['complete'];value['campaign_sha256'][arm]=sha256(path);out=[]
   for r in campaign['results']:
    private=run/'private'/arm/r['id'];t=json.loads((private/'trajectory.json').read_text());original=json.loads((private/'original.json').read_text());editable=tasks[r['id']]['editable_files']
+   assert all(original[name]==admitted[r['id']]['broken_sha256'][name] for name in editable),'Initial source differs from admitted defective input'
    hashes=sorted((name,original[name]) for name in editable)
    state={'changed_editable_files':0,'invalid_editable_files':0,'editable_state_sha256':hashlib.sha256(json.dumps(hashes,separators=(',',':')).encode()).hexdigest()}
    messages=[m for m in t['messages'] if m['role'] in ['system','user','assistant']];steps=r['source_progress'];assert steps==t['local_model']['source_progress']
@@ -48,8 +50,18 @@ def audit(root,run):
    assert used==r['calls'] and step==len(steps)
    final=EditableProgress(private/'workspace',original,editable).snapshot();assert final==state
    if not final['invalid_editable_files']:assert final['changed_editable_files']==len(r['modified_source_files'])
+   if r.get('source_sha256'):assert all(sha256(private/'workspace'/name)==digest for name,digest in r['source_sha256'].items()),'Graded source differs from final workspace'
    out.append({'id':r['id'],'split':r['split'],'passed':r['passed'],'input_token_hashes_verified':used,'progress_and_native_turns_verified':True,'final_source_verified':True,'format_categories':dict(categories),'consecutive_repeated_commands':sum(a==b for a,b in zip(commands,commands[1:])),'first_edit_call':next((s['call_index'] for s in steps if s['changed_editable_files']),None),'trajectory_sha256':sha256(private/'trajectory.json'),'grader_log_sha256':sha256(private/'grader.log') if (private/'grader.log').exists() else None})
+   out[-1]['generation_output_sha256']=[hashlib.sha256(m['content'].encode()).hexdigest() for m in messages if m['role']=='assistant']
+   out[-1]['generation_input_sha256']=[g['input_tokens_sha256'] for g in r['generations']]
   value['variants'][arm]=out
+ control={r['id']:r for r in value['variants']['control']}
+ comparisons=[]
+ for progress in value['variants']['progress']:
+  prior=control[progress['id']]
+  matched=[{'call':i+1,'different_output':ao!=bo} for i,(ai,bi,ao,bo) in enumerate(zip(prior['generation_input_sha256'],progress['generation_input_sha256'],prior['generation_output_sha256'],progress['generation_output_sha256'])) if ai==bi]
+  comparisons.append({'id':progress['id'],'identical_input_calls':len(matched),'different_output_calls':[r['call'] for r in matched if r['different_output']]})
+ value['same_input_output_comparison']=comparisons
  return value
 
 if __name__=='__main__':

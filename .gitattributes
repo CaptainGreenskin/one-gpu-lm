@@ -12,3 +12,6 @@ experiments/016-tool-roundtrip/results/**/*.svg -whitespace
 
 experiments/017-edit-progress/results/**/*.csv -text whitespace=cr-at-eol
 experiments/017-edit-progress/results/**/*.svg -whitespace
+
+experiments/017-edit-progress/supplement/results/**/*.csv -text whitespace=cr-at-eol
+experiments/017-edit-progress/supplement/results/**/*.svg -whitespace

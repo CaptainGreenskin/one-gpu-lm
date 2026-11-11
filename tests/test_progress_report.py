@@ -71,6 +71,7 @@ class ProgressReportContracts(unittest.TestCase):
    for arm in REPORT.ARMS:
     private=run/'private'/arm/'sample';workspace=private/'workspace';workspace.mkdir(parents=True);(workspace/'code.py').write_text('original')
     original={'code.py':sha256(workspace/'code.py')};write_json(private/'original.json',original);tracker=EditableProgress(workspace,original,['code.py'])
+    (root/'runs/admission').mkdir(parents=True,exist_ok=True);write_json(root/'runs/admission/admission.json',{'tasks':[{'id':'sample','broken_sha256':original}]})
     ms=[{'role':'system','content':'rules'},{'role':'user','content':'task'}];packed,pr=tracker.prepare_request(ms,0,12,arm=='progress');tokens=Tokenizer().apply_chat_template(render_history(packed,True))
     g={'progress':pr,'input_tokens':len(tokens),'input_tokens_sha256':hashlib.sha256(json.dumps(tokens,separators=(',',':')).encode()).hexdigest(),'dialogue':{'structured_tool_calls':0,'tool_results':0},'action_format_valid':True}
     ms += [{'role':'assistant','content':'```bash\necho PRIVATE_COMMAND\n```','extra':{'actions':[{'command':'echo PRIVATE_COMMAND'}],'generation':g}},{'role':'user','content':'PRIVATE_RESULT','extra':{'tool':{'returncode':0}}}]
@@ -78,6 +79,9 @@ class ProgressReportContracts(unittest.TestCase):
     r={'id':'sample','split':'dev','passed':False,'calls':1,'tool_calls':1,'generations':[g],'backend_errors':[],'source_progress':steps,'modified_source_files':[]}
     write_json(run/(arm+'.json'),{'complete':True,'results':[r]})
    value=audit.audit(root,run);self.assertNotIn('PRIVATE_',json.dumps(value));self.assertEqual(value['variants']['progress'][0]['input_token_hashes_verified'],1)
+   self.assertEqual(value['same_input_output_comparison'],[{'id':'sample','identical_input_calls':1,'different_output_calls':[]}])
+   tp=run/'private/progress/sample/trajectory.json';t=json.loads(tp.read_text());t['messages'][2]['content']='```bash\necho DIFFERENT_PRIVATE_COMMAND\n```';t['messages'][2]['extra']['actions']=[{'command':'echo DIFFERENT_PRIVATE_COMMAND'}];write_json(tp,t)
+   self.assertEqual(audit.audit(root,run)['same_input_output_comparison'][0]['different_output_calls'],[1])
    path=run/'progress.json';v=json.loads(path.read_text());v['results'][0]['generations'][0]['input_tokens_sha256']='0'*64;write_json(path,v)
    tp=run/'private/progress/sample/trajectory.json';t=json.loads(tp.read_text());t['messages'][2]['extra']['generation']['input_tokens_sha256']='0'*64;write_json(tp,t)
    with self.assertRaises(AssertionError):audit.audit(root,run)

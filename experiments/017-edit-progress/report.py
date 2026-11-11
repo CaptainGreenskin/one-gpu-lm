@@ -66,6 +66,7 @@ def render(root):
   a=audit['variants'][arm]
   if audit['campaign_sha256'][arm]!=sha256(root/(arm+'.json')) or audit['parser_sha256']!=i['source_files']['one_gpu_lm/common/actions.py'] or [v['id'] for v in a]!=[t['id'] for t in inventory] or not all(v['progress_and_native_turns_verified'] and v['final_source_verified'] for v in a) or sum(v['input_token_hashes_verified'] for v in a)!=sum(v['calls'] for v in campaign['results']):raise ValueError('Missing independent input/progress audit')
  s=assess(campaigns,p,inventory)
+ s['same_input_output_comparison']=audit['same_input_output_comparison']
  dependency=read('dependency-review.json')
  if dependency['review_source_sha256']!=sha256(exp/'dependency_review.py') or dependency['lock_sha256']!=sha256(exp/'preflight/node-package-lock.json') or dependency['scoring_or_inputs_changed'] or not dependency['accessible_to_both_arms']:raise ValueError('Missing dependency exposure review')
  for arm in ARMS:
@@ -138,7 +139,7 @@ These curves show the fraction ever observed with a valid editable-file byte dif
 
 Same task inputs, model, strict parser, tool round trips, full history, 12 calls, 512 output tokens/call, 6,144 total output tokens, 8,192 input tokens and 900 seconds/task. Only the progress arm receives a generic temporary system reminder using current editable state and completed-call history. Reminder tokens count toward the input limit; there is no extra call, truncation, automatic patch or answer hint. Source-state observation runs in both arms. The reminder rule was locked before inspecting the new source repositories. [Frozen protocol](protocol.json), [intervention](intervention.json), [initial diagnosis](diagnosis.json), [pre-rollout public verification](preregistration.json).
 
-The unchanged control versus 016 differed as follows: {s['control_vs016']}. This repeat-variation check is descriptive; no better run was selected. Greedy decoding is not a guarantee of identical outcomes. [Audit](failure-audit.json) re-encodes every actual request with the pinned tokenizer, checks its token hash, reminder trigger, native tool pairing, strict parser decisions and final source state without rerunning commands or changing scores. Intermediate file states are recorded by the frozen executor; the final workspace and initial state are checked independently.
+The unchanged control versus 016 differed as follows: {s['control_vs016']}. This repeat-variation check is descriptive; no better run was selected. Across arms there were {sum(len(r['different_output_calls']) for r in s['same_input_output_comparison'])} different outputs at matched call indices with identical actual input-token hashes. Greedy decoding is not a guarantee of identical outcomes; one pair per task cannot isolate all execution variation. [Audit](failure-audit.json) re-encodes every actual request with the pinned tokenizer, checks its token hash, reminder trigger, native tool pairing, strict parser decisions and final source state without rerunning commands or changing scores. Intermediate file states are recorded by the frozen executor; the final workspace and initial state are checked independently.
 
 ## Hardware and failures
 
