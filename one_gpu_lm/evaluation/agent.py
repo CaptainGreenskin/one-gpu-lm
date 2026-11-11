@@ -9,6 +9,7 @@ from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.actions import SYSTEM, INSTANCE, parse_action
 from one_gpu_lm.common.agent_policy import validate_policy, system_prompt, format_feedback
 from one_gpu_lm.common.edit_progress import EditableProgress
+from one_gpu_lm.common.repair_verification import prepare_verification
 from one_gpu_lm.serving.client import request, BackendError
 from .environment import RepositoryEnvironment, repository_python_site
 from .grading import generated_files, grade
@@ -39,6 +40,7 @@ class LocalModel:
         self.responses = []
         self.backend_errors = []
         self.progress = None
+        self.regression_command = None
         self.source_progress = []
         self.timeout = 180
 
@@ -51,6 +53,11 @@ class LocalModel:
         if self.progress is not None:
             messages, progress = self.progress.prepare_request(messages, len(self.responses)+len(self.backend_errors),
                 self.config['max_model_calls'], self.policy.get('progress') == 'edit_checkpoint_v1')
+        verification = None
+        if self.regression_command is not None and progress is not None:
+            messages, verification = prepare_verification(messages, self.source_progress, progress,
+                len(self.responses)+len(self.backend_errors), self.config['max_model_calls'],
+                self.regression_command, self.policy.get('verification') == 'repair_check_v1')
         try:
             value = request(self.socket, {"operation": "generate", "messages": messages,
                 "max_new_tokens": min(remaining, self.config["max_generated_tokens_per_call"]),
@@ -58,12 +65,16 @@ class LocalModel:
         except BackendError as error:
             if progress is not None:
                 error.result['progress'] = progress
+            if verification is not None:
+                error.result['verification'] = verification
             self.backend_errors.append(error.result)
             raise RuntimeError(str(error)) from error
         self.generated_tokens += value["generated_tokens"]
         self.responses.append({k: v for k, v in value.items() if k not in {"text", "ids"}})
         if progress is not None:
             self.responses[-1]['progress'] = progress
+        if verification is not None:
+            self.responses[-1]['verification'] = verification
         message = self.format_message(role="assistant", content=value["text"], extra={"generation": self.responses[-1], "cost": 0.0})
         try:
             message["extra"]["actions"] = [parse_action(value["text"])]
@@ -147,6 +158,7 @@ def main():
         state = None
 
     model.progress = EditableProgress(workspace, original, task['editable_files'])
+    model.regression_command = task['regression_command']
 
     class CheckpointAgent(DefaultAgent):
         def step(self):

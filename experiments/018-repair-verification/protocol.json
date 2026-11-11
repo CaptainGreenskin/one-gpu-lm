@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "weight_updates": 0,
+  "adapter": false,
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "unexpected_context_overflow": "record failure; no hidden changes to truncation or budget",
+    "accepted_action_formats": [
+      "one fenced bash/sh block",
+      "one Qwen XML bash/command tool call"
+    ],
+    "shared_uid_process_thread_limit": 512
+  },
+  "publication": {
+    "original_code_license": "MIT",
+    "source_licenses_separate": true,
+    "raw_tasks_trajectories_source_snapshots": "private",
+    "weights": "private",
+    "metrics_curves_protocol_code": "GitHub"
+  },
+  "source_workspace_exclusions": {
+    "ljharb/qs": "Omit dist bundle, an unmodified duplicate of target source, from agent/grader snapshots"
+  },
+  "failure_policy": "Preserve controller failures. Recovery only at completed-step boundaries with unchanged artifacts and original deadline. Never rerun a scored task or tune after scoring.",
+  "experiment": "018-repair-verification",
+  "status": "draft_before_admission",
+  "variants": {
+    "control": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1"
+    },
+    "verify": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1",
+      "verification": "repair_check_v1"
+    }
+  },
+  "primary": "Paired fresh-repository final-source test success. All24historicaltasks and two017regressions are safety checks; edits and observed validations are secondary.",
+  "ordering": "All24historical then12fresh; alternate first arm per task; one unchanged model/backend, no cross-request cache.",
+  "exposure": {
+    "historical": "All24observed in016/017; two017regressions inspected for rule design.",
+    "fresh": "Two previously unused repositories, six constructed defects each, selected after rule lock. Tests visible, pretraining exposure unknown. Screen the agent-visible dependencies before scoring.",
+    "no_model_scores_before_freeze": true
+  },
+  "promotion": {
+    "minimum_net_fresh_gain": 2,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "target_tasks": [
+      "new-json-undefined",
+      "fresh-signed-serialize"
+    ],
+    "all_targets_pass": true,
+    "minimum_completed_runs": 72,
+    "meaning": "Candidate for independent replication only; not deployment approval."
+  },
+  "execution": {
+    "max_pipeline_seconds": 10800,
+    "max_task_seconds": 1000,
+    "max_backend_start_seconds": 300,
+    "gpu_count": 1,
+    "expected_tasks_per_variant": 36,
+    "expected_model_task_runs": 72
+  },
+  "repository_count": 6,
+  "evaluation_task_counts": {
+    "dev": 24,
+    "test": 12
+  },
+  "prior_public_commit": "bf746c54bf4d78df9022d89f06000994f8a5d261"
+}

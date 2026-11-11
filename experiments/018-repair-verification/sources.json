@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "historical_sources": "../016-tool-roundtrip/sources.json",
+  "sources": [
+    {
+      "repository": "dgilland/pydash",
+      "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+      "role": "fresh_repository_018",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE.rst",
+      "license_sha256": "1bba57c33cce44a00d2edf0794e14bd0c6dc1569a4e78d834c8f4103b8e9623f",
+      "license_url": "https://github.com/dgilland/pydash/blob/b6bd031de47134b8e3c3977fbe65bf13cc51a205/LICENSE.rst",
+      "rights_review": {
+        "status": "Pinned MIT license and selected source headers reviewed",
+        "obligations": [
+          "Retain copyright and permission notices with redistributed copies or substantial portions"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "src/pydash/arrays.py",
+          "sha256": "006101f67679844ef28c00b18b8831ec68cea1642fa7547dde27b8fa1a37ceb7"
+        }
+      ],
+      "test_scope": "Unchanged upstream test module for selected source family; pytest display options shortened, coverage-only options disabled for pydash, no tests edited.",
+      "reference_screen_package": "pydash",
+      "reference_screen_canonical": "/work/src/pydash"
+    },
+    {
+      "repository": "python-hyper/hyperlink",
+      "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+      "role": "fresh_repository_018",
+      "license_spdx": "MIT",
+      "license_classifier": "NOASSERTION",
+      "license_path": "LICENSE",
+      "license_sha256": "7468ded55310f64fbf085b8e892df81d1bcc49263bf535d3c2c58b014cfae214",
+      "license_url": "https://github.com/python-hyper/hyperlink/blob/978f2e645578aad856fe5e03e2e2c017c8c0f7ca/LICENSE",
+      "rights_review": {
+        "status": "Actual pinned license text reviewed: MIT permission/notice/disclaimer; GitHub classifier NOASSERTION not substituted for reading. Selected test headers refer to this LICENSE.",
+        "obligations": [
+          "Retain upstream copyrights and exact permission notice for redistributed copies or substantial portions"
+        ],
+        "raw_source_public": false,
+        "source_provenance_limit": "Adjacent helper/comments acknowledge Boltons ancestry; a different repository does not guarantee independent authorship or unseen pretraining."
+      },
+      "selected_files": [
+        {
+          "path": "src/hyperlink/_url.py",
+          "sha256": "903fcb8ef12ec238fd7e099bf8aeb07410af484f5fd3f231b6cada8346e3d5a9"
+        }
+      ],
+      "test_scope": "Unchanged upstream URL, decoded URL and parse test modules; unrelated hypothesis strategies and socket helpers are outside selected family.",
+      "reference_screen_package": "hyperlink",
+      "reference_screen_canonical": "/work/src/hyperlink"
+    }
+  ]
+}

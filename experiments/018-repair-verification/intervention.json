@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "repair_check_v1",
+  "locked_before_fresh_source_review_utc": "2026-11-11T05:55:10.161303+00:00",
+  "basis": "Only the two new historical regressions in017; no018 model calls or fresh source inspection",
+  "control": "Unchanged017 progress policy (native_roundtrip + full history + edit_checkpoint_v1)",
+  "candidate": "Same017 progress policy plus temporary verification reminder after a valid editable source change",
+  "trigger": "At least one allowed file currently differs and no allowed file is invalid. Determine whether the standalone declared regression command ran on current stable source bytes.",
+  "recognized_command": "Exact declared regression command after outer whitespace removal, optionally prefixed by literal cd /work && . Compound edits, pipes, redirects, status wrappers and equivalent commands remain unverified; no shell parsing or success guessing.",
+  "evidence": "Recorded executed action, returncode and editable source hash before/after it. Both arms observe this evidence. No final grader feedback, extra tools or oracle tests are given to the agent.",
+  "reminders": {
+    "prefix": "[Repair verification] {used} of {limit} model calls used; {remaining} remain including this request. Source bytes have changed, which does not establish correctness. {status} ",
+    "unchecked": "Run the declared regression command as a standalone command (optionally preceded by cd /work &&): {command} . Do not pipe it to tail/grep or append a successful command: that can hide a failing exit status. Read the actual failures, not just whether the shell command completed.",
+    "failed": "Use the smallest failing assertion to identify the violated behavior. Check the surrounding callers and existing helpers; preserve adjacent cases instead of replacing one failure with another. If output is truncated, use one focused test or a small source range. Make a minimal evidence-based correction, then rerun the declared regression command without a pipe. Reserve remaining calls for the correction and verification; do not spend them only rereading or repeating an unchanged failing suite.",
+    "passed": "The declared regression command exited zero on these source bytes. This is tool evidence, not the independent final grader. If the task requirements are satisfied, submit; avoid unrelated changes. Any further edit requires a new check."
+  },
+  "status_cases": [
+    "not_run",
+    "stale",
+    "changed_during_check",
+    "failed",
+    "passed"
+  ],
+  "limits": "Same12calls,512output/call,6144totaloutput,8192input,2400tool-output characters,900s/task. Reminder tokens count against8192; no truncation, extra calls, forced tests, auto-patches or weight changes.",
+  "interpretation": "A recorded exit-zero test is not independent success. Final success still requires the unchanged isolated grader; source edit or verification is only a secondary metric.",
+  "execution_sequence": "All24historicalpairs then12freshpairs from2unusedrepositories; alternating arm order. Freeze all inputs and run both stages regardless of historical outcomes; no tuning after any018score."
+}

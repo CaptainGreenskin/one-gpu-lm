@@ -1,0 +1,24 @@
+{
+  "rejected_before_fetch": [
+    {
+      "repository": "more-itertools/more-itertools",
+      "reason": "Already used in012; excluded before any018source download or model score."
+    }
+  ],
+  "fresh_repository_selection": "Unused, permissively licensed pure Python repositories compatible with the unchanged Python3.10 test environment. No scoring used for source/task choice.",
+  "new_dependencies": false,
+  "historical_tasks_preserved": 24,
+  "fresh_tasks": 12,
+  "quality_scores_observed": false,
+  "rejected_before_model_scores": [
+    {
+      "repository": "rspeer/ordered-set",
+      "reason": "Unchanged agent test environment contains readable setuptools/_vendor/ordered_set.py. Excluded all six draft tasks before018admission or scoring; preserve dependency environment and use a different repository.",
+      "reference_location": "/opt/python-site/setuptools/_vendor/ordered_set.py"
+    }
+  ],
+  "selected_fresh_repositories": [
+    "python-hyper/hyperlink",
+    "dgilland/pydash"
+  ]
+}

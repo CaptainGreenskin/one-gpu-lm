@@ -18,10 +18,12 @@ NATIVE_SYSTEM = SYSTEM.replace(
 
 def validate_policy(policy=None):
     policy = dict(LEGACY_POLICY if policy is None else policy)
-    if set(policy) not in ({"format", "context"}, {"format", "context", "progress"}) or policy["format"] not in {"legacy", "native_schema", "native_roundtrip"} or policy["context"] not in {"full", "bounded_history_v1"}:
+    if set(policy) not in ({"format", "context"}, {"format", "context", "progress"}, {"format", "context", "progress", "verification"}) or policy["format"] not in {"legacy", "native_schema", "native_roundtrip"} or policy["context"] not in {"full", "bounded_history_v1"}:
         raise ValueError("Unknown agent policy")
     if 'progress' in policy and (policy['progress'] != 'edit_checkpoint_v1' or policy['format'] != 'native_roundtrip' or policy['context'] != 'full'):
         raise ValueError('Unknown progress policy')
+    if 'verification' in policy and policy['verification'] != 'repair_check_v1':
+        raise ValueError('Unknown verification policy')
     return policy
 
 
