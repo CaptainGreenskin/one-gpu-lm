@@ -67,6 +67,9 @@ def validate_campaign(campaign, ids, protocol, protocol_hash, adapter):
 
 def assess(root):
     root = Path(root); read = lambda name: json.loads((root/name).read_text())
+    collection = read('collection.json')
+    require(all(sha256(root/name) == digest for name,digest in collection['files'].items()),
+            'Collected numeric evidence changed after transfer')
     protocol = read('protocol.json'); plan = read('preparation-plan.json'); controller = read('controller.json')
     protocol_hash = sha256(root/'protocol.json'); frozen = protocol['frozen_files']
     require(controller['complete'] and controller['stage'] == 'completed' and not controller.get('error_type'), 'Incomplete controller')
@@ -95,6 +98,10 @@ def assess(root):
     require(integrity['protocol_sha256'] == protocol_hash and all(integrity.get(k) is True for k in
         ['all_frozen_file_hashes_match','source_snapshot_contents_unchanged','dependency_contents_unchanged','framework_contents_unchanged']),
         'Post-run content integrity failed')
+    require(integrity['base_model_verification']['content_verified']
+            and integrity['training_input_audit_sha256'] == frozen['training-input-audit.json']
+            and sha256(root/'training-input-audit.json') == frozen['training-input-audit.json'],
+            'Model or training-input rights audit identity changed')
     training = {}
     expected_order = list(data['selected']); random.Random(plan['shared_recipe']['seed']).shuffle(expected_order)
     schedule = [{'example_sha256': hashlib.sha256(r['id'].encode()).hexdigest(), 'tokens': r['tokens'],
@@ -114,6 +121,9 @@ def assess(root):
         require(all(frozen.get(k) == v for k,v in identity['source_files'].items()), 'Training code changed')
         require(all(result.get(k) is True for k in ['frozen_sample_unchanged','frozen_gradients_absent','adapter_changed','saved_reload_greedy_ids_equal']), 'Training update or reload check failed')
         require(audit['training'][name]['adapter_files'] == result['adapter_files'] and audit['training'][name]['checkpoint_verified'], 'Checkpoint audit mismatch')
+        tensor_check = integrity['adapter_tensor_audits'][name]
+        require(tensor_check['parameters'] == result['trainable_parameters'] and tensor_check['dtypes'] == ['F32']
+                and tensor_check['file_sha256'] == result['adapter_files']['adapter_model.safetensors'], 'Adapter tensor audit differs from actual trained file')
         training[name] = result
     require(training['low']['order_sha256'] == training['high']['order_sha256'], 'Candidates saw different sample order')
     arms = ['dev-base','dev-low','dev-high'] + (['final-base','final-selected'] if selection['selected'] else [])
@@ -192,6 +202,7 @@ def assess(root):
 def render(root):
     root = Path(root); summary = assess(root)
     write_json(root/'summary.json', summary)
+    write_json(root/'release-decision.json', summary['release_decision'])
     with (root/'paired-outcomes.csv').open('w',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(summary['pairs'][0]));writer.writeheader();writer.writerows(summary['pairs'])
     import matplotlib
