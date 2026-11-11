@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "cohort_counts": {
+    "train": 55,
+    "development": 15,
+    "historical": 24,
+    "fresh": 24
+  },
+  "training": {
+    "records": 330,
+    "covered_training_tasks": 55,
+    "repair_targets_cover_all_tasks": true,
+    "input_tokens": 475778,
+    "supervised_tokens": 21760,
+    "model_visible_duplicates": 0
+  },
+  "identities": {
+    "tasks": "4a9899f1a32ebb91ae4d05cd1911276cd4c0280c124a705808f65a655fb9bf71",
+    "admission": "7d8c186dc55b49e04ea73f66b0d7e513f5f17df3d351b7860d06c98b987ae166",
+    "selection": "08f42072a33030a2374dc40c1017bc199c81eb0b7ffb4eb81d58b52a20c6c159",
+    "data": "3efd2029afe78352b99b6f7f7ff271e180e02441e4258a39b920a4ec618eeb82",
+    "data_receipt": "8a66a591ea2dbf8782b6e4b2d96052bc04f96290796bb322d715f7d19f8f301e",
+    "licenses": "153e5b89c1be82cd3ecd4105146716460e64411719a7fe496cdd78fba002eaa8"
+  },
+  "scope": "Actual task controls, retained repair supervision, fixed tokenizer counts and independent reference grades. Does not assert model quality or replace rights review/reference-exposure screens."
+}
