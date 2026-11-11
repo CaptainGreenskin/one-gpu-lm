@@ -4,6 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+import tempfile
 
 from one_gpu_lm.common.actions import parse_action
 from one_gpu_lm.common.agent_policy import NATIVE_EXAMPLE
@@ -36,6 +37,27 @@ def cohort_fixture():
 
 
 class ReleasePreparationTests(unittest.TestCase):
+    def test_admitted_source_must_match_reviewed_revision_and_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'notices').mkdir()
+            notice=root/'notices'/'repo--name-LICENSE.txt';notice.write_bytes(b'Original notice\r\n')
+            tasks=[{'id':'t','repository':'repo/name','revision':'pinned','split':'train','editable_files':['f.py']}]
+            admission={'tasks':[{'id':'t','reference_sha256':{'f.py':'a'*64}}]}
+            source={'repository':'repo/name','revision':'pinned','split':'train',
+                'rights_review':{'selected_file_review_complete':True},
+                'license_sha256':hashlib.sha256(notice.read_bytes()).hexdigest(),
+                'selected_files':[{'path':'f.py','sha256':'a'*64,'notice_review':'Actual pinned header reviewed'}]}
+            preparation.validate_source_reviews(tasks,admission,{'sources':[source]},root)
+            changed=copy.deepcopy(source);changed['revision']='different'
+            with self.assertRaisesRegex(ValueError,'exact revision'):
+                preparation.validate_source_reviews(tasks,admission,{'sources':[changed]},root)
+            changed=copy.deepcopy(source);changed['selected_files'][0]['sha256']='b'*64
+            with self.assertRaisesRegex(ValueError,'reviewed file'):
+                preparation.validate_source_reviews(tasks,admission,{'sources':[changed]},root)
+            notice.write_bytes(b'Original notice\n')
+            with self.assertRaisesRegex(ValueError,'reviewed original'):
+                preparation.validate_source_reviews(tasks,admission,{'sources':[source]},root)
+
     def test_actual_collection_failure_blocks_an_admitted_task(self):
         tasks,admission=cohort_fixture()
         self.assertEqual(len(preparation.validate_cohorts(tasks,admission,PLAN)['fresh']),24)

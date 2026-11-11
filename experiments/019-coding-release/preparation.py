@@ -58,6 +58,30 @@ def validate_cohorts(tasks,admission,plan):
     return {k:[t['id'] for t in values] for k,values in groups.items()}
 
 
+def validate_source_reviews(tasks,admission,ledger,experiment):
+    """Bind admitted repair sources to the exact files whose notices were reviewed."""
+    sources={}
+    for source in ledger['sources']:
+        key=(source['repository'],source['revision'])
+        if key in sources:raise ValueError('Duplicated source review identity')
+        sources[key]=source
+    controls={r['id']:r for r in admission['tasks']}
+    for task in tasks:
+        if task['split']!='train':continue
+        source=sources.get((task['repository'],task['revision']))
+        if source is None or source['split']!='train' or source['rights_review'].get('selected_file_review_complete') is not True:
+            raise ValueError('Training source lacks its exact revision/file-notice review')
+        entries=source.get('selected_files',[])
+        reviewed={r['path']:r for r in entries}
+        if len(entries)!=len(reviewed):raise ValueError('Duplicated reviewed file identity')
+        for name in task['editable_files']:
+            if name not in reviewed or not reviewed[name].get('notice_review') or reviewed[name]['sha256']!=controls[task['id']]['reference_sha256'][name]:
+                raise ValueError('Admitted reference source differs from the reviewed file')
+        notice=Path(experiment)/'notices'/(task['repository'].replace('/','--')+'-LICENSE.txt')
+        if sha256(notice)!=source['license_sha256']:
+            raise ValueError('Published training-source notice differs from reviewed original')
+
+
 def validate_examples(rows,selection,approved,tokenizer,profile,plan):
     if profile['training'].get('dialogue_format')!='native_roundtrip':
         raise ValueError('019 requires native tool roundtrip training')
@@ -125,6 +149,7 @@ def verify(root,out):
     admission=json.loads(paths['admission'].read_text())
     if admission['task_spec_sha256']!=sha256(tasks_path):raise ValueError('Admission/task content mismatch')
     cohorts=validate_cohorts(tasks,admission,plan)
+    validate_source_reviews(tasks,admission,json.loads(paths['licenses'].read_text()),exp)
     profiles={name:json.loads((exp/f'profile-{name}.json').read_text()) for name in ['low','high']}
     copies=[]
     for candidate in plan['candidates']:
