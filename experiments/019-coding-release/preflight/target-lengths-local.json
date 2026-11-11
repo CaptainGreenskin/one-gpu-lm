@@ -1,0 +1,804 @@
+{
+  "scope": "Proposed training action lengths with the fixed tokenizer; commands not executed, actual history/context eligibility and final grades not yet checked.",
+  "model_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "training_tasks": 56,
+  "all_targets_fit_tasks": 56,
+  "supervised_tokens_if_all_six_actions_retained": 22259,
+  "over_budget": [],
+  "by_repository": {
+    "jashkenas/underscore": {
+      "tasks": 11,
+      "fitting_tasks": 11
+    },
+    "jpvanhal/inflection": {
+      "tasks": 12,
+      "fitting_tasks": 12
+    },
+    "mahmoud/boltons": {
+      "tasks": 10,
+      "fitting_tasks": 10
+    },
+    "python-semver/python-semver": {
+      "tasks": 23,
+      "fitting_tasks": 23
+    }
+  },
+  "records": [
+    {
+      "id": "boltons-slugify",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 53,
+        "repair": 139,
+        "review": 45,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-pluralize",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 53,
+        "repair": 256,
+        "review": 45,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-bytes2human",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 53,
+        "repair": 262,
+        "review": 45,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-asciify",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 53,
+        "repair": 170,
+        "review": 45,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 44,
+        "reproduce": 53,
+        "repair": 208,
+        "review": 44,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 44,
+        "reproduce": 53,
+        "repair": 216,
+        "review": 44,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 44,
+        "reproduce": 53,
+        "repair": 183,
+        "review": 44,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-multi-dict",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 53,
+        "repair": 128,
+        "review": 45,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-research",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 47,
+        "reproduce": 53,
+        "repair": 216,
+        "review": 47,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "repository": "mahmoud/boltons",
+      "counts": {
+        "inspect": 66,
+        "reproduce": 53,
+        "repair": 280,
+        "review": 66,
+        "verify": 53,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-index-nan",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 43,
+        "reproduce": 38,
+        "repair": 101,
+        "review": 43,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-defaults",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 42,
+        "reproduce": 38,
+        "repair": 115,
+        "review": 42,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 42,
+        "reproduce": 38,
+        "repair": 93,
+        "review": 42,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 41,
+        "reproduce": 38,
+        "repair": 91,
+        "review": 41,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-intersection",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 41,
+        "reproduce": 38,
+        "repair": 95,
+        "review": 41,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-difference",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 40,
+        "reproduce": 38,
+        "repair": 86,
+        "review": 40,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-stable-sort",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 42,
+        "reproduce": 38,
+        "repair": 89,
+        "review": 42,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-range-step",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 40,
+        "reproduce": 38,
+        "repair": 109,
+        "review": 40,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-object-pairs",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 39,
+        "reproduce": 38,
+        "repair": 95,
+        "review": 39,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-map-object",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 40,
+        "reproduce": 38,
+        "repair": 105,
+        "review": 40,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "underscore-group-partition",
+      "repository": "jashkenas/underscore",
+      "counts": {
+        "inspect": 53,
+        "reproduce": 38,
+        "repair": 167,
+        "review": 53,
+        "verify": 38,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-camelize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 143,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 92,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-humanize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 169,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 176,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 96,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 232,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 151,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-singularize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 168,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-tableize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 94,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-titleize",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 131,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 118,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-inflection-underscore",
+      "repository": "jpvanhal/inflection",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 37,
+        "repair": 160,
+        "review": 45,
+        "verify": 37,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__init",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 239,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 160,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 312,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 105,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 133,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 91,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 161,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 104,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 108,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 112,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 263,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 291,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 359,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 293,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 132,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 155,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 94,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 107,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 382,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 367,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 204,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 112,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "repository": "python-semver/python-semver",
+      "counts": {
+        "inspect": 45,
+        "reproduce": 68,
+        "repair": 209,
+        "review": 45,
+        "verify": 68,
+        "submit": 34
+      },
+      "all_targets_fit": true
+    }
+  ],
+  "tokenizer_metadata": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "metadata_only": true,
+    "files": [
+      {
+        "name": "LICENSE",
+        "size": 11544,
+        "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+      },
+      {
+        "name": "chat_template.jinja",
+        "size": 9004,
+        "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+      },
+      {
+        "name": "config.json",
+        "size": 4312,
+        "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+      },
+      {
+        "name": "merges.txt",
+        "size": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 12809320,
+        "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 9984,
+        "sha256": "207c03c41a06a9c3b0cc527d8a56115159c1eac6b59a4ffae85b646e773d074e"
+      },
+      {
+        "name": "vocab.json",
+        "size": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "task_manifest_sha256": "5a0de9fc6ed15e5c12af9b2f60766813c840b26c1182c61509d7482337badc0f",
+  "probe_script_sha256": "05fd6b97bb3c7832ab84214081bd225b694147c9b478ce18ee8881502c826d25",
+  "execution_admission_passed": false,
+  "full_history_contexts_checked": false,
+  "gpu_training_started": false,
+  "environment_note": "Local macOS CPU tokenizer-only check; transformers5.19.0, tokenizers0.23.3, huggingface-hub1.31.0, jinja2 3.1.6, markupsafe3.0.3. Model weights not downloaded or loaded."
+}

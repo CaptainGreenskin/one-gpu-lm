@@ -143,6 +143,8 @@ def _execute_locked(root,out,resume=False):
     with single_writer(root/'private/release019.lock'):
         remaining();monitor.start()
         try:
+            run('preparation-verify',[gpu,str(exp/'preparation.py'),'--root',str(root),
+                '--out',str(out/'private'/f'preparation-attempt-{state["attempt"]}.json')],600)
             # No dev or final model generations occur before both candidates' updates are fixed.
             for name in ['low','high']:
                 path=out/('train-'+name)
