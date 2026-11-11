@@ -18,3 +18,6 @@ experiments/017-edit-progress/supplement/results/**/*.svg -whitespace
 
 experiments/018-repair-verification/results/**/*.csv -text whitespace=cr-at-eol
 experiments/018-repair-verification/results/**/*.svg -whitespace
+
+# Third-party license receipts refer to their original bytes.
+experiments/019-coding-release/notices/*.txt -text whitespace=cr-at-eol
