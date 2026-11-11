@@ -8,6 +8,7 @@ import time
 from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.actions import SYSTEM, INSTANCE, parse_action
 from one_gpu_lm.common.agent_policy import validate_policy, system_prompt, format_feedback
+from one_gpu_lm.common.edit_progress import EditableProgress
 from one_gpu_lm.serving.client import request, BackendError
 from .environment import RepositoryEnvironment
 from .grading import generated_files, grade
@@ -37,6 +38,8 @@ class LocalModel:
         self.generated_tokens = 0
         self.responses = []
         self.backend_errors = []
+        self.progress = None
+        self.source_progress = []
         self.timeout = 180
 
     def query(self, messages):
@@ -44,15 +47,23 @@ class LocalModel:
         remaining = self.config["max_total_generated_tokens"] - self.generated_tokens
         if remaining <= 0:
             raise LimitsExceeded(self.format_message(role="exit", content="TokenLimit", extra={"exit_status": "TokenLimit"}))
+        progress = None
+        if self.progress is not None:
+            messages, progress = self.progress.prepare_request(messages, len(self.responses)+len(self.backend_errors),
+                self.config['max_model_calls'], self.policy.get('progress') == 'edit_checkpoint_v1')
         try:
             value = request(self.socket, {"operation": "generate", "messages": messages,
                 "max_new_tokens": min(remaining, self.config["max_generated_tokens_per_call"]),
                 "max_input_tokens": self.config["max_input_tokens"], "agent_policy": self.policy}, timeout=self.timeout)
         except BackendError as error:
+            if progress is not None:
+                error.result['progress'] = progress
             self.backend_errors.append(error.result)
             raise RuntimeError(str(error)) from error
         self.generated_tokens += value["generated_tokens"]
         self.responses.append({k: v for k, v in value.items() if k not in {"text", "ids"}})
+        if progress is not None:
+            self.responses[-1]['progress'] = progress
         message = self.format_message(role="assistant", content=value["text"], extra={"generation": self.responses[-1], "cost": 0.0})
         try:
             message["extra"]["actions"] = [parse_action(value["text"])]
@@ -68,6 +79,8 @@ class LocalModel:
     def format_observation_messages(self, message, outputs, template_vars=None):
         from minisweagent.exceptions import Submitted
         output = outputs[0]
+        if self.progress is not None:
+            self.source_progress.append(dict(self.progress.snapshot(), call_index=len(self.responses)))
         observation = self.format_message(role="user", content=f"Exit code: {output['returncode']}\n{output['output']}",
                                           extra={"tool": {k: v for k, v in output.items() if k != "output"}})
         if output["returncode"] == 0 and message["extra"]["actions"][0]["command"] == "echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT":
@@ -79,7 +92,8 @@ class LocalModel:
 
     def serialize(self):
         return {"local_model": {"config": self.config, "policy": self.policy,
-            "generated_tokens": self.generated_tokens, "responses": self.responses, "backend_errors": self.backend_errors}}
+            "generated_tokens": self.generated_tokens, "responses": self.responses, "backend_errors": self.backend_errors,
+            "source_progress": self.source_progress}}
 
 
 def main():
@@ -132,6 +146,8 @@ def main():
         write_json(out / "original.json", original)
         state = None
 
+    model.progress = EditableProgress(workspace, original, task['editable_files'])
+
     class CheckpointAgent(DefaultAgent):
         def step(self):
             left = budget["wall_time_limit_seconds"] - (time.time() - self._start_time)
@@ -177,6 +193,7 @@ def main():
             model.generated_tokens = state["trajectory"]["local_model"]["generated_tokens"]
             model.responses = state["trajectory"]["local_model"]["responses"]
             model.backend_errors = state["trajectory"]["local_model"].get("backend_errors", [])
+            model.source_progress = state['trajectory']['local_model'].get('source_progress', [])
             agent.env.calls = state["trajectory"]["environment"]["tool_calls"]
             agent.env.seconds = state["trajectory"]["environment"]["tool_seconds"]
             return agent.messages
@@ -194,6 +211,7 @@ def main():
         "variant": args.variant, "agent_policy": policy, "backend_errors": model.backend_errors,
         "split": task["split"], "family": task["family"], **score, "calls": agent.n_calls,
         "generated_tokens": model.generated_tokens, "seconds": time.time() - agent._start_time,
+        "source_progress": model.source_progress,
         "tool_calls": agent.env.calls, "tool_seconds": agent.env.seconds,
         "exit_status": agent.messages[-1].get("extra", {}).get("exit_status", "Unknown") if agent.messages else "Unknown",
         "generations": model.responses, "recovered": bool(args.resume)})

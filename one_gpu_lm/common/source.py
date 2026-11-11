@@ -6,7 +6,7 @@ from .receipts import sha256
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 CAMPAIGN_FILES = (
-    'common/actions.py', 'common/agent_policy.py', 'common/tool_history.py', 'common/receipts.py', 'common/source.py',
+    'common/actions.py', 'common/agent_policy.py', 'common/tool_history.py', 'common/edit_progress.py', 'common/receipts.py', 'common/source.py',
     'models/hf_runtime.py', 'serving/client.py', 'serving/local_backend.py',
     'evaluation/campaign.py', 'evaluation/agent.py', 'evaluation/environment.py',
     'evaluation/grading.py', 'evaluation/tasks.py', 'evaluation/sandbox.py',
