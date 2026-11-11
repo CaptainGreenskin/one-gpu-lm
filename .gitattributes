@@ -21,3 +21,6 @@ experiments/018-repair-verification/results/**/*.svg -whitespace
 
 # Third-party license receipts refer to their original bytes.
 experiments/019-coding-release/notices/*.txt -text whitespace=cr-at-eol
+
+experiments/019-coding-release/results/**/*.csv -text whitespace=cr-at-eol
+experiments/019-coding-release/results/**/*.svg -whitespace
