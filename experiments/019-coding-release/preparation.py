@@ -49,7 +49,12 @@ def validate_cohorts(tasks,admission,plan):
         task=specs[record['id']]
         if any(record[k]!=task[k] for k in ['repository','split','family']):
             raise ValueError('Admission task metadata changed')
-        if record['admitted'] is not True or record['broken']['returncode']!=1 or record['restored']['returncode']!=0 or record['restored']['passed'] is not True:
+        broken=record['broken']
+        actual_test_failure=broken['returncode']==1
+        if 'node_modules/mocha/bin/mocha' in task.get('regression_command',''):
+            count=broken.get('failed_tests',0)
+            actual_test_failure=broken.get('test_runner')=='mocha' and count>0 and broken['returncode']==min(count,255)
+        if record['admitted'] is not True or not actual_test_failure or record['restored']['returncode']!=0 or record['restored']['passed'] is not True:
             raise ValueError('Require actual failing tests, not collection/environment failures')
         if set(record['broken_sha256'])!=set(task['editable_files']) or set(record['reference_sha256'])!=set(task['editable_files']):
             raise ValueError('Control source coverage differs from editable files')

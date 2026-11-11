@@ -10,7 +10,7 @@
       "license_sha256": "30a8352c318ce1b645acde0299697342d4380ed2637d7ca18a8ad25661e3b41b",
       "homepage": "https://github.com/dbader/schedule",
       "rights_review": {
-        "status": "source-license-reviewed; per-task file notices required before admission",
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
         "public_raw_corpus": false,
         "obligations": [
           "retain exact copyright and license notices",
@@ -18,7 +18,14 @@
           "do not imply upstream endorsement"
         ],
         "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
-      }
+      },
+      "selected_files": [
+        {
+          "path": "schedule/__init__.py",
+          "sha256": "b0c93f8ee84cbb8dbb98bcb8284864f4ea04012fdbc216de13f8ad2141d09efa",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
     },
     {
       "repository": "epoberezkin/fast-deep-equal",
@@ -234,7 +241,7 @@
       "license_sha256": "2a6b4d5f884d4d7a1bf04ea7df1944cf12b32e35a79a86d0a075a2d3f40fb9ac",
       "homepage": "https://github.com/litl/backoff",
       "rights_review": {
-        "status": "source-license-reviewed; per-task file notices required before admission",
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
         "public_raw_corpus": false,
         "obligations": [
           "retain exact copyright and license notices",
@@ -242,7 +249,19 @@
           "do not imply upstream endorsement"
         ],
         "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
-      }
+      },
+      "selected_files": [
+        {
+          "path": "backoff/_jitter.py",
+          "sha256": "2e32528698ebca4f6c5810968b3fb7517d43242c7aade6cd27905fde73cc9584",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        },
+        {
+          "path": "backoff/_wait_gen.py",
+          "sha256": "84e6c53de5c35ddcdcbcc864927c9ade7952298a0200c4f92c5a2da36e5e9ae2",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
     },
     {
       "repository": "ljharb/qs",
@@ -330,7 +349,7 @@
       "license_sha256": "ca488d33c512d0b226142090af90e89ae266a901a293f89fd642dfec931e22c1",
       "homepage": "https://github.com/mewwts/addict",
       "rights_review": {
-        "status": "source-license-reviewed; per-task file notices required before admission",
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
         "public_raw_corpus": false,
         "obligations": [
           "retain exact copyright and license notices",
@@ -338,7 +357,14 @@
           "do not imply upstream endorsement"
         ],
         "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
-      }
+      },
+      "selected_files": [
+        {
+          "path": "addict/addict.py",
+          "sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
     },
     {
       "repository": "more-itertools/more-itertools",
@@ -462,15 +488,23 @@
       "license_sha256": "5c8da9f744e0afba81a48c9b5dbe73048f798b3287d6f1af8a05ee08ebb10892",
       "homepage": "https://github.com/scrapy/cssselect",
       "rights_review": {
-        "status": "source-license-reviewed; per-task file notices required before admission",
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
         "public_raw_corpus": false,
         "obligations": [
           "retain exact copyright and license notices",
           "record source revision and constructed modifications",
           "do not imply upstream endorsement"
         ],
-        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
-      }
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs.",
+        "authors_sha256": "d313a3dc7f22208e8cfca5a6a0361046ecd3ad8acb3db27c2b6915480a10e734"
+      },
+      "selected_files": [
+        {
+          "path": "cssselect/xpath.py",
+          "sha256": "4435364a059f9cab7fe3e7f2f0e737517d60f99976a03e1e8e9980403e0266ce",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
     },
     {
       "repository": "sindresorhus/p-limit",

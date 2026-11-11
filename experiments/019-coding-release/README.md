@@ -6,6 +6,7 @@
 
 - [预先锁定的规则与预算](preparation-plan.json)
 - [低学习率候选](profile-low.json) / [高学习率候选](profile-high.json)
+- [冻结前的数据验收修正](preparation-notes.md)
 - 目标发布账号：[ModelScope CaptainGreenskin](https://www.modelscope.ai/profile/CaptainGreenskin)
 
 训练数据只来自来源和授权经过核对的训练仓库，保留实际工具执行结果、独立修复测试及来源哈希。原生工具调用采用与推理共同的前缀编码；训练只监督下一段 assistant 输出，工具结果不作为目标。真实 tokenizer 还需在冻结后的全部训练记录上检查边界和长度。

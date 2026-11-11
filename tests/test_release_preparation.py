@@ -11,6 +11,7 @@ from one_gpu_lm.common.agent_policy import NATIVE_EXAMPLE
 from one_gpu_lm.common.edit_progress import EditableProgress
 from one_gpu_lm.common.training_encoding import encode_training_example
 from tests.test_training_encoding import RecordingTokenizer
+from one_gpu_lm.evaluation.preflight import failure_evidence
 
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('release_preparation',ROOT/'experiments/019-coding-release/preparation.py')
@@ -37,6 +38,19 @@ def cohort_fixture():
 
 
 class ReleasePreparationTests(unittest.TestCase):
+    def test_mocha_failure_count_requires_matching_executed_summary(self):
+        tasks,admission=cohort_fixture()
+        tasks[0]['regression_command']='node node_modules/mocha/bin/mocha spec/index.spec.js'
+        broken=admission['tasks'][0]['broken'];broken['returncode']=180
+        with self.assertRaisesRegex(ValueError,'collection/environment'):
+            preparation.validate_cohorts(tasks,admission,PLAN)
+        broken.update(failure_evidence(tasks[0]['regression_command'],'  23 passing (20ms)\n  180 failing\n'))
+        preparation.validate_cohorts(tasks,admission,PLAN)
+        broken['returncode']=2
+        with self.assertRaisesRegex(ValueError,'collection/environment'):
+            preparation.validate_cohorts(tasks,admission,PLAN)
+        self.assertEqual(failure_evidence('python3 -m pytest','  180 failing\n'),{})
+
     def test_admitted_source_must_match_reviewed_revision_and_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'notices').mkdir()

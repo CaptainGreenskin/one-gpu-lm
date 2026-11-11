@@ -2,12 +2,22 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import re
 from pathlib import Path
 import shutil
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from .environment import RepositoryEnvironment, repository_python_site
 from .tasks import prepare
+
+
+def failure_evidence(command, output):
+    """Mocha's exit code is the number of failed tests, capped at 255."""
+    if 'node_modules/mocha/bin/mocha' not in command:
+        return {}
+    plain = re.sub(r'\x1b\[[0-9;]*m', '', output)
+    counts = re.findall(r'^\s*(\d+) failing\s*$', plain, re.MULTILINE)
+    return {'test_runner': 'mocha', 'failed_tests': int(counts[-1]) if counts else 0}
 
 
 def main():
@@ -41,7 +51,8 @@ def main():
         result = env.execute({"command": task["regression_command"]})
         (private / (label + ".log")).write_text(result["output"])
         return {"passed": result["returncode"] == 0, "returncode": result["returncode"],
-                "seconds": result["seconds"], "reason": result["reason"]}
+                "seconds": result["seconds"], "reason": result["reason"],
+                **failure_evidence(task["regression_command"], result["output"])}
 
     grouped = {}
     for task in tasks:
