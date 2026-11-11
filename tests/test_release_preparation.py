@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import unittest
 import tempfile
+import subprocess
+import sys
 
 from one_gpu_lm.common.actions import parse_action
 from one_gpu_lm.common.agent_policy import NATIVE_EXAMPLE
@@ -38,6 +40,24 @@ def cohort_fixture():
 
 
 class ReleasePreparationTests(unittest.TestCase):
+    def test_controller_does_not_start_without_verified_public_protocol(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);exp=root/'experiments/019-coding-release';exp.mkdir(parents=True)
+            (root/'private').mkdir()
+            (exp/'protocol.json').write_text(json.dumps({'status':'frozen_before_model_rollouts','frozen_files':{}}))
+            (exp/'preparation-plan.json').write_text(json.dumps(PLAN))
+            command=[sys.executable,str(ROOT/'experiments/019-coding-release/run.py'),'--root',str(root),'--out',str(root/'run')]
+            missing=subprocess.run(command,capture_output=True,text=True,timeout=10)
+            self.assertNotEqual(missing.returncode,0)
+            self.assertIn('public-preregistration.json',missing.stderr)
+            self.assertFalse((root/'run').exists())
+            (root/'private/public-preregistration.json').write_text(json.dumps({'commit':'a'*40,
+                'anonymous_files_verified':True,'ci_conclusion':'success','protocol_sha256':'wrong'}))
+            stale=subprocess.run(command,capture_output=True,text=True,timeout=10)
+            self.assertNotEqual(stale.returncode,0)
+            self.assertIn('exact frozen protocol',stale.stderr)
+            self.assertFalse((root/'run').exists())
+
     def test_mocha_failure_count_requires_matching_executed_summary(self):
         tasks,admission=cohort_fixture()
         tasks[0]['regression_command']='node node_modules/mocha/bin/mocha spec/index.spec.js'

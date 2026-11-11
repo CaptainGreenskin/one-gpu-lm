@@ -30,6 +30,16 @@ def terminate(process):
             os.killpg(process.pid,signal.SIGKILL);process.wait(timeout=10)
 
 
+def require_public_preregistration(root,exp):
+    receipt=json.loads((root/'private/public-preregistration.json').read_text())
+    commit=receipt.get('commit','')
+    if (len(commit)!=40 or any(c not in '0123456789abcdef' for c in commit)
+            or receipt.get('anonymous_files_verified') is not True
+            or receipt.get('ci_conclusion')!='success'
+            or receipt.get('protocol_sha256')!=sha256(exp/'protocol.json')):
+        raise ValueError('Require public byte verification and passing CI for this exact frozen protocol')
+
+
 def execute(root,out,resume=False):
     # Lock before reading/updating attempt counters, not just before model work.
     with single_writer(Path(root).resolve()/'private/controller-state019.lock'):
@@ -44,6 +54,7 @@ def _execute_locked(root,out,resume=False):
     if protocol['status']!='frozen_before_model_rollouts':raise ValueError('Freeze protocol first')
     for name,digest in protocol['frozen_files'].items():
         if sha256(root/name)!=digest:raise ValueError('Frozen artifact changed: '+name)
+    require_public_preregistration(root,exp)
     runtime=json.loads((root/'runtime.json').read_text());inputs=json.loads((root/'private/inputs.json').read_text())
     if sha256(Path(inputs['ONE_GPU_TRAIN_DATA']))!=protocol['prepared_data_sha256']:
         raise ValueError('Prepared training data differs from frozen artifact')
