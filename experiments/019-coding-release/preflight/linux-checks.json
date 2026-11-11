@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "suites": [
+    "training_lab.test_contracts",
+    "repo_lab.test_contracts",
+    "repo_lab.test_recovery_linux",
+    "tests.test_modules",
+    "tests.test_training_infrastructure",
+    "tests.test_balanced_data",
+    "tests.test_quality_screen",
+    "tests.test_agent_interface",
+    "tests.test_interface_report",
+    "tests.test_tool_history",
+    "tests.test_roundtrip_report",
+    "tests.test_edit_progress",
+    "tests.test_progress_report",
+    "tests.test_repair_verification",
+    "tests.test_repair_reference_screen",
+    "tests.test_task_stubs",
+    "tests.test_repair_report",
+    "tests.test_training_encoding",
+    "tests.test_reference_episodes",
+    "tests.test_release_decision",
+    "tests.test_release_preparation"
+  ],
+  "log_sha256": "c6f84d047cadc2a234d4ac6592f623de3cb2990caf1abdd710aca6344c444057"
+}

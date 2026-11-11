@@ -1,0 +1,202 @@
+{
+  "complete": true,
+  "screens": [
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "schedule",
+      "canonical_source": "/work/schedule",
+      "files_seen": 218389,
+      "directories_seen": 23068,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [],
+      "nonpackage_substring_name_matches": [
+        "/opt/python-site/xdist/scheduler",
+        "/usr/lib/modules/6.8.0-138-generic/build/drivers/gpu/drm/scheduler",
+        "/usr/lib/modules/6.8.0-138-generic/build/include/drm/gpu_scheduler.h",
+        "/usr/lib/modules/6.8.0-138-generic/kernel/drivers/gpu/drm/scheduler",
+        "/usr/lib/modules/6.8.0-40-generic/build/drivers/gpu/drm/scheduler",
+        "/usr/lib/modules/6.8.0-40-generic/build/include/drm/gpu_scheduler.h",
+        "/usr/lib/modules/6.8.0-40-generic/kernel/drivers/gpu/drm/scheduler",
+        "/usr/lib/python3/dist-packages/duplicity/__pycache__/asyncscheduler.cpython-310.pyc",
+        "/usr/lib/python3/dist-packages/duplicity/asyncscheduler.py",
+        "/usr/lib/x86_64-linux-gnu/gnome-todo/plugins/unscheduled-panel",
+        "/usr/lib/x86_64-linux-gnu/gnome-todo/plugins/unscheduled-panel/unscheduled-panel",
+        "/usr/lib/x86_64-linux-gnu/gnome-todo/plugins/unscheduled-panel/unscheduled-panel.plugin",
+        "/usr/share/doc/dpkg/README.feature-removal-schedule.gz",
+        "/usr/share/doc/util-linux/release-schedule.txt",
+        "/usr/share/icons/Humanity/apps/22/xfce-schedule.svg",
+        "/usr/share/icons/Humanity/apps/24/xfce-schedule.svg",
+        "/usr/share/icons/Humanity/apps/32/xfce-schedule.svg",
+        "/usr/share/icons/Humanity/apps/48/xfce-schedule.svg",
+        "/usr/share/icons/Yaru/scalable/actions/view-tasks-unscheduled-symbolic.svg",
+        "/usr/share/libreoffice/help/en-US/text/sbasic/shared/03/lib_schedule.html",
+        "/usr/share/libreoffice/help/zh-CN/text/sbasic/shared/03/lib_schedule.html",
+        "/usr/share/man/man2/sched_getscheduler.2.gz",
+        "/usr/share/man/man2/sched_setscheduler.2.gz",
+        "/usr/share/perl/5.34.0/TAP/Parser/Scheduler",
+        "/usr/share/perl/5.34.0/TAP/Parser/Scheduler.pm",
+        "/usr/share/system-config-printer/troubleshoot/SchedulerNotRunning.py",
+        "/usr/share/system-config-printer/troubleshoot/__pycache__/SchedulerNotRunning.cpython-310.pyc",
+        "/work/docs/multiple-schedulers.rst",
+        "/work/test_schedule.py"
+      ],
+      "nonpackage_substring_archive_matches": [],
+      "screen_passed": true,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known Python package/module/metadata path components, exact selected .py/.pyi source hashes, and zip/wheel Python-package path components in agent-visible roots. Other substring matches (e.g. logos/office hyperlinks) retained separately, not called Python references. Not all semantic or renamed copies, embedded source in other formats, or pretraining exposure.",
+      "repository": "dbader/schedule",
+      "scanner_sha256": "199083f77e49692b1ee40a51f9069d1204cc0239bc1c70804683800c72f244a7",
+      "utc": "2026-11-11T13:32:27.830958+00:00"
+    },
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "backoff",
+      "canonical_source": "/work/backoff",
+      "files_seen": 218385,
+      "directories_seen": 23066,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [],
+      "nonpackage_substring_name_matches": [
+        "/opt/node/lib/node_modules/npm/node_modules/exponential-backoff",
+        "/opt/node/lib/node_modules/npm/node_modules/exponential-backoff/dist/backoff.js",
+        "/usr/lib/modules/6.8.0-138-generic/build/arch/sparc/include/asm/backoff.h",
+        "/usr/lib/modules/6.8.0-40-generic/build/arch/sparc/include/asm/backoff.h",
+        "/work/tests/test_backoff.py",
+        "/work/tests/test_backoff_async.py"
+      ],
+      "nonpackage_substring_archive_matches": [],
+      "screen_passed": true,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known Python package/module/metadata path components, exact selected .py/.pyi source hashes, and zip/wheel Python-package path components in agent-visible roots. Other substring matches (e.g. logos/office hyperlinks) retained separately, not called Python references. Not all semantic or renamed copies, embedded source in other formats, or pretraining exposure.",
+      "repository": "litl/backoff",
+      "scanner_sha256": "199083f77e49692b1ee40a51f9069d1204cc0239bc1c70804683800c72f244a7",
+      "utc": "2026-11-11T13:32:32.268486+00:00"
+    },
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "addict",
+      "canonical_source": "/work/addict",
+      "files_seen": 218367,
+      "directories_seen": 23065,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [],
+      "nonpackage_substring_name_matches": [
+        "/work/test_addict.py"
+      ],
+      "nonpackage_substring_archive_matches": [],
+      "screen_passed": true,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known Python package/module/metadata path components, exact selected .py/.pyi source hashes, and zip/wheel Python-package path components in agent-visible roots. Other substring matches (e.g. logos/office hyperlinks) retained separately, not called Python references. Not all semantic or renamed copies, embedded source in other formats, or pretraining exposure.",
+      "repository": "mewwts/addict",
+      "scanner_sha256": "199083f77e49692b1ee40a51f9069d1204cc0239bc1c70804683800c72f244a7",
+      "utc": "2026-11-11T13:32:36.753909+00:00"
+    },
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "cssselect",
+      "canonical_source": "/work/cssselect",
+      "files_seen": 218706,
+      "directories_seen": 23099,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [],
+      "nonpackage_substring_name_matches": [
+        "/work/tests/test_cssselect.py"
+      ],
+      "nonpackage_substring_archive_matches": [],
+      "screen_passed": true,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known Python package/module/metadata path components, exact selected .py/.pyi source hashes, and zip/wheel Python-package path components in agent-visible roots. Other substring matches (e.g. logos/office hyperlinks) retained separately, not called Python references. Not all semantic or renamed copies, embedded source in other formats, or pretraining exposure.",
+      "repository": "scrapy/cssselect",
+      "scanner_sha256": "199083f77e49692b1ee40a51f9069d1204cc0239bc1c70804683800c72f244a7",
+      "utc": "2026-11-11T13:32:41.142699+00:00"
+    }
+  ]
+}

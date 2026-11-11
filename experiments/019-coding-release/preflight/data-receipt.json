@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "raw_data_public": false,
+  "records": 330,
+  "sha256": "3efd2029afe78352b99b6f7f7ff271e180e02441e4258a39b920a4ec618eeb82",
+  "task_spec_sha256": "4a9899f1a32ebb91ae4d05cd1911276cd4c0280c124a705808f65a655fb9bf71",
+  "license_record_sha256": "153e5b89c1be82cd3ecd4105146716460e64411719a7fe496cdd78fba002eaa8",
+  "admission_sha256": "7d8c186dc55b49e04ea73f66b0d7e513f5f17df3d351b7860d06c98b987ae166",
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "repositories": [
+    "jashkenas/underscore",
+    "jpvanhal/inflection",
+    "mahmoud/boltons",
+    "python-semver/python-semver"
+  ],
+  "task_ids": [
+    "019-inflection-camelize",
+    "019-inflection-dasherize",
+    "019-inflection-humanize",
+    "019-inflection-ordinal",
+    "019-inflection-ordinalize",
+    "019-inflection-parameterize",
+    "019-inflection-pluralize",
+    "019-inflection-singularize",
+    "019-inflection-tableize",
+    "019-inflection-titleize",
+    "019-inflection-transliterate",
+    "019-inflection-underscore",
+    "019-python-semver-Version-__getitem",
+    "019-python-semver-Version-__hash",
+    "019-python-semver-Version-__iter",
+    "019-python-semver-Version-__repr",
+    "019-python-semver-Version-__str",
+    "019-python-semver-Version-_increment_prerelease",
+    "019-python-semver-Version-_nat_cmp",
+    "019-python-semver-Version-_validate_identifiers",
+    "019-python-semver-Version-bump_build",
+    "019-python-semver-Version-bump_major",
+    "019-python-semver-Version-bump_minor",
+    "019-python-semver-Version-bump_patch",
+    "019-python-semver-Version-bump_prerelease",
+    "019-python-semver-Version-compare",
+    "019-python-semver-Version-finalize_version",
+    "019-python-semver-Version-is_compatible",
+    "019-python-semver-Version-is_valid",
+    "019-python-semver-Version-match",
+    "019-python-semver-Version-parse",
+    "019-python-semver-Version-replace",
+    "019-python-semver-Version-to_dict",
+    "019-python-semver-Version-to_tuple",
+    "boltons-LRI-__setitem__",
+    "boltons-LRU-__getitem__",
+    "boltons-asciify",
+    "boltons-bytes2human",
+    "boltons-cache-and-frozen",
+    "boltons-make_cache_key",
+    "boltons-multi-dict",
+    "boltons-pluralize",
+    "boltons-research",
+    "boltons-slugify",
+    "underscore-defaults",
+    "underscore-difference",
+    "underscore-group-partition",
+    "underscore-index-nan",
+    "underscore-intersection",
+    "underscore-map-object",
+    "underscore-object-pairs",
+    "underscore-range-step",
+    "underscore-reduce-initial",
+    "underscore-stable-sort",
+    "underscore-uniq-iteratee"
+  ],
+  "reference_controls": [
+    {
+      "id": "boltons-slugify",
+      "passed": true,
+      "trajectory_sha256": "e35abacdeacae74dccd2606398960e1336b87822f06244f0d12c313ac3dc6e8a",
+      "records": 6
+    },
+    {
+      "id": "boltons-pluralize",
+      "passed": true,
+      "trajectory_sha256": "7aee8794d4344e2e4e6880f5c892c000cca96b7d662cb0806831bc30596877dd",
+      "records": 6
+    },
+    {
+      "id": "boltons-bytes2human",
+      "passed": true,
+      "trajectory_sha256": "268d68457cce87c307f07f8d827f6b3d5dd3ccd58749733c8d3bbbdceaf9ff2b",
+      "records": 6
+    },
+    {
+      "id": "boltons-asciify",
+      "passed": true,
+      "trajectory_sha256": "91a4ce20a71dc31218559000d8b76d84e97197840e2ec5f20fb1b30807c1f2ea",
+      "records": 6
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "passed": true,
+      "trajectory_sha256": "d32e9851f807c32d2d290bee44f41d17ae6fa81fa45a254366bdb3529636d970",
+      "records": 6
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "passed": true,
+      "trajectory_sha256": "f9905d3ae40b2522b611da9fa1ced7975b9523731be3b17181b0f33aaae7d454",
+      "records": 6
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "passed": true,
+      "trajectory_sha256": "9e80dafb62fd5b3e7d3cefd4c1c4349dd1334236606362eec114e8fbdbef8182",
+      "records": 6
+    },
+    {
+      "id": "boltons-multi-dict",
+      "passed": true,
+      "trajectory_sha256": "83f54b333838b9f0e6bb557897480c90386354e2f05b4430421c252c4dcbc6af",
+      "records": 6
+    },
+    {
+      "id": "boltons-research",
+      "passed": true,
+      "trajectory_sha256": "83be4f1f0bb8318439bab303baa24b6b19bedae173edbb87e09c2d76c4aaa370",
+      "records": 6
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "passed": true,
+      "trajectory_sha256": "b8f272ab850e1cda2ad0f9bde882920423d7f44d0937ee451a981c4cfcbaa0fc",
+      "records": 6
+    },
+    {
+      "id": "underscore-index-nan",
+      "passed": true,
+      "trajectory_sha256": "1009c8553b15b73b1962c3e8bc6bb667b0874a6f23ef0236edd2db41c2240ca1",
+      "records": 6
+    },
+    {
+      "id": "underscore-defaults",
+      "passed": true,
+      "trajectory_sha256": "0ca35752adf01e127109f88b3d1497d4bf1249b8dbfa0c221244d76539e28a69",
+      "records": 6
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "passed": true,
+      "trajectory_sha256": "05c565dbb7899a6d9d3cdce0ab29b50ef830c7077055f5d0cffb417f308e923b",
+      "records": 6
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "passed": true,
+      "trajectory_sha256": "7d261ed836916c44e3cb6d3ea8c8d5a684a9da9c47058bd38846430f3a5759b3",
+      "records": 6
+    },
+    {
+      "id": "underscore-intersection",
+      "passed": true,
+      "trajectory_sha256": "d16b9a477caaeea3f161ec1898a02620eceeb74503fe8d6aa85584ab34ae0bf5",
+      "records": 6
+    },
+    {
+      "id": "underscore-difference",
+      "passed": true,
+      "trajectory_sha256": "c7c18462838d51ca097dd5b1cccf6101ce1fd675e4b5847db7c15508f92170fa",
+      "records": 6
+    },
+    {
+      "id": "underscore-stable-sort",
+      "passed": true,
+      "trajectory_sha256": "f90326361060e6e9fcf99a74ef6e013a701d680d2b2021a743f37b9601a45147",
+      "records": 6
+    },
+    {
+      "id": "underscore-range-step",
+      "passed": true,
+      "trajectory_sha256": "7417f368d67ebf7c8eac9ac201270818d6126c7729c69c7e761ae9bfb2ab56f7",
+      "records": 6
+    },
+    {
+      "id": "underscore-object-pairs",
+      "passed": true,
+      "trajectory_sha256": "530c2c57a8a8375c7f60033d198bc9f92795425f034efd48465282ffd6cede6c",
+      "records": 6
+    },
+    {
+      "id": "underscore-map-object",
+      "passed": true,
+      "trajectory_sha256": "4c50c3d62b2cd3bc8a502ee0b3fd61a9fd99af142f39c8043c0f41796f5edfc9",
+      "records": 6
+    },
+    {
+      "id": "underscore-group-partition",
+      "passed": true,
+      "trajectory_sha256": "5645ddd2119688e7a8984e18800d0a66fb0f490c8f956b1cd0b1b9a9d53a697c",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-camelize",
+      "passed": true,
+      "trajectory_sha256": "5e2de03148fe670dfb172a03006647e8f4adbfe9df011097cf3d89893a720b12",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "passed": true,
+      "trajectory_sha256": "d3ebca4df054d7e7ae7ab1d9e909abbc11998845b615edf4a32e856cdf39782c",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-humanize",
+      "passed": true,
+      "trajectory_sha256": "48162d12ed3313ca0c7ab367d2a724b5bfd10fad002d3f4a9b08ecc99046de0e",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "passed": true,
+      "trajectory_sha256": "9ef4e72d43a640549f88c4cba8fd0e2d81c9f5ccd787499e062e2d5032f22ef4",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "passed": true,
+      "trajectory_sha256": "35c12eadc96822c5d957ff47e829291d016399b7e5e3577655a629c1ccaecc00",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "passed": true,
+      "trajectory_sha256": "b14e0bd5f7934da2169cce4c2de0178be4647235d18273d9cede0d188a41f5ba",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "passed": true,
+      "trajectory_sha256": "e20ba6892c5356b4f66f53662715a1d8d43b66840fed8d46fa4030a8a7d3a8ad",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-singularize",
+      "passed": true,
+      "trajectory_sha256": "b7dcf94e322a9ccdf346c2155d6f4e4517ccab83c3832201a161cae502447a45",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-tableize",
+      "passed": true,
+      "trajectory_sha256": "17b58f9d8829306318afe837cf0f75135ef0b977f932609a1caa852b68f04900",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-titleize",
+      "passed": true,
+      "trajectory_sha256": "ad0eb6b8001a37e90888cf1dacd56ce4396e30491eac87538e20e2e7eed16cb1",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "passed": true,
+      "trajectory_sha256": "a6db06f28bf66f2f24be9a7b90898999d21e682246547bc7c97b058bb0d4237f",
+      "records": 6
+    },
+    {
+      "id": "019-inflection-underscore",
+      "passed": true,
+      "trajectory_sha256": "2ec984645bc2974cad1617d55d1c5784e94472c1955d5e41e1468f22bb0aee0b",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "passed": true,
+      "trajectory_sha256": "c55d05fa445c0cf50a9b32327be13c0b2a72ec67464f76af3348f122d519a9ed",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "passed": true,
+      "trajectory_sha256": "dd72c3b77f2fe197c675159b502f90e8f42cbd96ef8c5e39497dc443f9f5552b",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "passed": true,
+      "trajectory_sha256": "a03d216f78c3c94750d48d5399f3b032b1699880173c78ed861ffe9f3318b769",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "passed": true,
+      "trajectory_sha256": "c880287b17849df7b370f3ac6ed0bafa4742e948517d43812a66448bc52c7571",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "passed": true,
+      "trajectory_sha256": "ab35c191386de5107783eaa44fbc9ea2deb6fc9cd6c8dc6261df73aee4ad0d51",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "passed": true,
+      "trajectory_sha256": "7a03736373ad28e8969ecded807d97ce84ce7dccd6524db495603fb05e4da4dc",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "passed": true,
+      "trajectory_sha256": "3b62052982403ecc31005b7e88501df55ad3f228d19f1bdf4a883142084f7218",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "passed": true,
+      "trajectory_sha256": "306b9ec72e257f69d7907adbc08fcbd8e5575a05edf5491f1e3e263a4d5e69e9",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "passed": true,
+      "trajectory_sha256": "2c4b220d72a01e4d21086474921eb4a8b2a5334bdbadb2cd1e13aa2e2ca559f6",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "passed": true,
+      "trajectory_sha256": "31d8f597b2408253df08aac364c3c8c94d7241661bd1ffa5eb1a8046947c10d3",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "passed": true,
+      "trajectory_sha256": "c9d47dfef450b2af63f3adec5da209d8bc6b91fe77e28c6fd6cdfab8e8e90507",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "passed": true,
+      "trajectory_sha256": "5e2631310d3e3e7bdeecee8343b2b4284af8b4500e59f64771862743e0a93e02",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "passed": true,
+      "trajectory_sha256": "c6f39595d069e9d2b32a999c80db0afc485a090f88fdc382c52c86070b366bf4",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "passed": true,
+      "trajectory_sha256": "4b6e4cd4afa7aebc0b05e887b0a9933370c79dc10c64bc2eb5e3ac949a4c0213",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "passed": true,
+      "trajectory_sha256": "f76e4bb44d7cb656519356af536f7001f4e3d0833ee126092bd71f78f1b27b2f",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "passed": true,
+      "trajectory_sha256": "7a5af3d7a9269833d467fdeaf0c3a2b957bc43db2dfabef403dd713ebed9fbe2",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "passed": true,
+      "trajectory_sha256": "d5b1e0d7fa4fe474f242620c64f28cd6dc723006524299577939c4547a4031a2",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "passed": true,
+      "trajectory_sha256": "830e879648ccf9150c744061dd58b2959a90182dc100450ced8c949ea52b0faa",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "passed": true,
+      "trajectory_sha256": "dec15206ad7b94cf72b781d37d072f2f01ec0bd102d44ff383228f84dddab6f5",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "passed": true,
+      "trajectory_sha256": "1e0bc6edd4f46a3c4190e41ba20297712676afbf7462796484394d32db9a3605",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "passed": true,
+      "trajectory_sha256": "4dfe946a9dc6a03db4d63f25216692c4ac49ad8f0479b190644dbe3e18e8f24c",
+      "records": 6
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "passed": true,
+      "trajectory_sha256": "a69fc792a0046dee783c315e497241c3d3af0f6bb2a0a63591d744640b798d1a",
+      "records": 6
+    }
+  ],
+  "teacher_api_used": false,
+  "executed_tool_metadata_preserved": true,
+  "parent_data_sha256": "4e0d15ac6f4325f8a7387d2edea7d5ca436ddfbd96f6adda5264b36081c5402e",
+  "parent_receipt_sha256": "ff765acfb29a766988bbc8cc7223de35ee243a5e88feddf322b4fd1752154c36",
+  "selection_policy": "task-round-robin-quota-uniform-trajectory-v1"
+}

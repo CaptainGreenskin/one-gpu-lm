@@ -20,6 +20,9 @@ def freeze(root,source_commit):
     from preparation import verify
     actual=verify(root,root/'runs/preparation019/freeze-verified.json')
     plan=json.loads((exp/'preparation-plan.json').read_text())
+    input_audit=json.loads((root/'training-input-audit.json').read_text())
+    if input_audit.get('passed') is not True or input_audit['data_sha256']!=sha256(root/'runs/prepared-data/train.jsonl'):
+        raise ValueError('Training input audit must cover this exact prepared data')
     framework=json.loads((root/'framework-verification.json').read_text())
     if (framework.get('all_package_python_files_match_pinned_archive') is not True
             or framework['revision']!='04d809ceab9df28f9adaed044884180159172930'):
@@ -44,7 +47,7 @@ def freeze(root,source_commit):
     write_json(root/'dependency-snapshots.json',dependency_files)
     chosen=json.loads((root/'runs/prepared-data/selection.json').read_text())
     budget=plan['budget']
-    paths=['runtime.json','source-snapshots.json','dependency-snapshots.json','framework-verification.json','private/tasks.json','private/inputs.json','private/legacy-functions.jsonl',
+    paths=['runtime.json','source-snapshots.json','dependency-snapshots.json','framework-verification.json','training-input-audit.json','private/audit-training-inputs.py','private/tasks.json','private/inputs.json','private/legacy-functions.jsonl',
            'private/tokenizer-probe.json','private/prepare019.py','private/screen019-final.py','private/task-preparation-changes.json',
            'runs/preparation019/verified.json','runs/preparation019/freeze-verified.json','runs/preparation019/linux-checks.json','runs/preparation019/exclusions.json',
            'runs/reference-screen-final/screens.json','runs/admission/admission.json','runs/reference-data/train.jsonl','runs/reference-data/receipt.json',

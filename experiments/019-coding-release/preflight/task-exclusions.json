@@ -1,0 +1,13 @@
+{
+  "before_model_scoring": true,
+  "excluded": [
+    {
+      "id": "019-python-semver-Version-__init",
+      "repository": "python-semver/python-semver",
+      "reason": "control did not produce a valid test failure",
+      "broken_returncode": 2,
+      "restored_returncode": 0
+    }
+  ],
+  "original_task_sha256": "14aa8d321a296ff81cc2e29ee0457daa7f5b9dd7ba205db27ce845d8580db63f"
+}
