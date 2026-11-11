@@ -24,3 +24,7 @@ experiments/019-coding-release/notices/*.txt -text whitespace=cr-at-eol
 
 experiments/019-coding-release/results/**/*.csv -text whitespace=cr-at-eol
 experiments/019-coding-release/results/**/*.svg -whitespace
+
+experiments/020-repair-curriculum/notices/*.txt -text whitespace=cr-at-eol
+experiments/020-repair-curriculum/results/**/*.csv -text whitespace=cr-at-eol
+experiments/020-repair-curriculum/results/**/*.svg -whitespace

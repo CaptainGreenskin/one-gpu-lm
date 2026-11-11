@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "parent_commit": "2fbbf69d815cf7846410dc3246f15b19c3ccec23",
+  "development_trajectories_verified": 45,
+  "private_evidence_sha256": "f71ee46d927203a65edcc190615c5e1b841cd9ff262afe5ad572c1f8a79c9d01",
+  "regressed_pairs": [
+    {
+      "arm": "dev-low",
+      "task_id": "more-itertools-spy",
+      "trajectory_sha256": "6c325a7270e74aeecbfdf02e0f55b39161e2f31826e947723abcb29c8833d95b",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "duplicate_commands_beyond_first": 1
+      }
+    },
+    {
+      "arm": "dev-low",
+      "task_id": "fast-deep-equal-nan",
+      "trajectory_sha256": "8df7e8e16cbd0f7f8e53b430615cf2ccdc4a3cb55a6264e30cd23c3602936def",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "duplicate_commands_beyond_first": 3
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "more-itertools-spy",
+      "trajectory_sha256": "d05577e8e15a65282adb4f5ac179795e53c76dda3f2cd164f908f2f8b1896716",
+      "exit_status": "Submitted",
+      "observed": {
+        "patch_returned_zero_without_source_change": 1,
+        "duplicate_commands_beyond_first": 0
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "fast-deep-equal-nan",
+      "trajectory_sha256": "9bbaa37fb54f21fc80ea6a8a797aef4b3af2fa7c6324d8df6d9ff303949d2e09",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "empty_source_reads": 5,
+        "failed_patch_commands": 3,
+        "duplicate_commands_beyond_first": 9
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "fast-deep-equal-regexp-flags",
+      "trajectory_sha256": "a5da0fea198f4e5082fbe7c952af2def6a215ca5d7c902b23cfadf6853749019",
+      "exit_status": "Submitted",
+      "observed": {
+        "empty_source_reads": 2,
+        "failed_patch_commands": 1,
+        "duplicate_commands_beyond_first": 0
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "attrs-to-bool",
+      "trajectory_sha256": "74b46041325dc3d98cd361290e9476437daf1bbb166c9214987eb0cfbff2ec27",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "empty_source_reads": 6,
+        "failed_patch_commands": 1,
+        "duplicate_commands_beyond_first": 9
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "attrs-optional-validator",
+      "trajectory_sha256": "305b21030205d388a0fbd7972f81e171551ed6942e7687e634777925929a8f56",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "failed_patch_commands": 4,
+        "duplicate_commands_beyond_first": 9
+      }
+    },
+    {
+      "arm": "dev-high",
+      "task_id": "p-limit-map-index",
+      "trajectory_sha256": "11ebc0ef9aefbcf0fcdd45b279e30fc154631ab2e5285bcac87da8f09dff4bea",
+      "exit_status": "LimitsExceeded",
+      "observed": {
+        "empty_source_reads": 6,
+        "duplicate_commands_beyond_first": 10
+      }
+    }
+  ],
+  "low_candidate_review": {
+    "more-itertools-spy": "Low candidate made an incorrect repair involving a mutable returned buffer; an independent assertion failed. Two later replacements left the observed source state unchanged.",
+    "fast-deep-equal-nan": "Low candidate used unescaped ampersands in sed replacement text. Actual source changes expanded the matched text repeatedly and produced invalid JavaScript; later attempts did not repair the syntax."
+  },
+  "scope": "Observed execution-level failure mechanisms; not a causal identification of why SFT changed model behavior. Counts use actual tool results and observed source states.",
+  "raw_commands_or_source_patches_public": false,
+  "development_examples_added_to_training": false,
+  "final_test_read": false
+}

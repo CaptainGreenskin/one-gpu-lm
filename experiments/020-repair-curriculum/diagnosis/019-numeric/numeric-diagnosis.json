@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "parent_commit": "2fbbf69d815cf7846410dc3246f15b19c3ccec23",
+  "parent_protocol_sha256": "b153623dee11150326fdd15829248813b52704a8265a0d3a60fc7c94286a9cdf",
+  "parent_collection_sha256": "9b46b84b5727d65cbb6e80d740061df0af86dcafa40de02222d0a1f3c3538a3e",
+  "source": "Validated public numeric evidence; no new model calls and no final-test reads",
+  "supervision_by_stage": {
+    "inspect": {
+      "updates": 55,
+      "supervised_tokens": 2463,
+      "input_tokens": 34199
+    },
+    "reproduce": {
+      "updates": 55,
+      "supervised_tokens": 2888,
+      "input_tokens": 43498
+    },
+    "repair": {
+      "updates": 55,
+      "supervised_tokens": 9188,
+      "input_tokens": 86673
+    },
+    "review": {
+      "updates": 55,
+      "supervised_tokens": 2463,
+      "input_tokens": 90838
+    },
+    "verify": {
+      "updates": 55,
+      "supervised_tokens": 2888,
+      "input_tokens": 103601
+    },
+    "submit": {
+      "updates": 55,
+      "supervised_tokens": 1870,
+      "input_tokens": 116969
+    }
+  },
+  "repair_update_fraction": 0.16666666666666666,
+  "repair_supervised_token_fraction": 0.42224264705882353,
+  "failure_recovery_target_stages": [],
+  "recipe_coverage_observation": "The verified 019 recipe repairs at call 3, before the call-5 no-edit reminder; later supervised actions already see repaired source. This is a recipe-level coverage deduction, not evidence that the gap caused the regressions.",
+  "arms": {
+    "dev-base": {
+      "tasks": 15,
+      "passed": 6,
+      "failure_categories": {
+        "after_edit": 3,
+        "without_observed_edit": 6
+      },
+      "submitted_but_failed_without_edit": 0,
+      "format_invalid_calls": 4,
+      "progress_reminder_calls": 62,
+      "consecutive_repeated_commands": 1,
+      "observations": [
+        {
+          "id": "more-itertools-windowed",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        },
+        {
+          "id": "more-itertools-spy",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 1,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "more-itertools-split_at",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        },
+        {
+          "id": "more-itertools-consume-and-window",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "fast-deep-equal-nan",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 4
+        },
+        {
+          "id": "fast-deep-equal-array-members",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "fast-deep-equal-map-values",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "fast-deep-equal-regexp-flags",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        },
+        {
+          "id": "attrs-asdict",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "attrs-to-bool",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "attrs-optional-validator",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "attrs-filters-and-tuples",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-arguments",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-pending-count",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 3,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-map-index",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        }
+      ]
+    },
+    "dev-low": {
+      "tasks": 15,
+      "passed": 7,
+      "failure_categories": {
+        "without_observed_edit": 5,
+        "after_edit": 3
+      },
+      "submitted_but_failed_without_edit": 0,
+      "format_invalid_calls": 2,
+      "progress_reminder_calls": 60,
+      "consecutive_repeated_commands": 13,
+      "observations": [
+        {
+          "id": "more-itertools-windowed",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "more-itertools-spy",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 4
+        },
+        {
+          "id": "more-itertools-split_at",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "more-itertools-consume-and-window",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "fast-deep-equal-nan",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 1,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "fast-deep-equal-array-members",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "fast-deep-equal-map-values",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "fast-deep-equal-regexp-flags",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "attrs-asdict",
+          "passed": false,
+          "observed_allowed_source_edit": true,
+          "failure_category": "after_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 1,
+          "progress_reminder_calls": 3
+        },
+        {
+          "id": "attrs-to-bool",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        },
+        {
+          "id": "attrs-optional-validator",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 3
+        },
+        {
+          "id": "attrs-filters-and-tuples",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-arguments",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-pending-count",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "p-limit-map-index",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 1
+        }
+      ]
+    },
+    "dev-high": {
+      "tasks": 15,
+      "passed": 1,
+      "failure_categories": {
+        "without_observed_edit": 14
+      },
+      "submitted_but_failed_without_edit": 6,
+      "format_invalid_calls": 5,
+      "progress_reminder_calls": 81,
+      "consecutive_repeated_commands": 16,
+      "observations": [
+        {
+          "id": "more-itertools-windowed",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "more-itertools-spy",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 0
+        },
+        {
+          "id": "more-itertools-split_at",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "more-itertools-consume-and-window",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "fast-deep-equal-nan",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "fast-deep-equal-array-members",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 3
+        },
+        {
+          "id": "fast-deep-equal-map-values",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 3
+        },
+        {
+          "id": "fast-deep-equal-regexp-flags",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "attrs-asdict",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 5,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "attrs-to-bool",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "attrs-optional-validator",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        },
+        {
+          "id": "attrs-filters-and-tuples",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": true,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 2
+        },
+        {
+          "id": "p-limit-arguments",
+          "passed": true,
+          "observed_allowed_source_edit": true,
+          "failure_category": null,
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 3
+        },
+        {
+          "id": "p-limit-pending-count",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 10
+        },
+        {
+          "id": "p-limit-map-index",
+          "passed": false,
+          "observed_allowed_source_edit": false,
+          "failure_category": "without_observed_edit",
+          "submitted_but_failed_without_edit": false,
+          "format_invalid_calls": 0,
+          "progress_reminder_calls": 8
+        }
+      ]
+    }
+  },
+  "regressed_pairs": [
+    {
+      "comparison": "dev-low",
+      "id": "more-itertools-spy",
+      "repository": "more-itertools/more-itertools",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 9,
+      "candidate_calls": 12,
+      "base_output_tokens": 771,
+      "candidate_output_tokens": 647,
+      "base_seconds": 163.47387290000916,
+      "candidate_seconds": 166.8609209060669,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 6,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 1,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": 8,
+      "candidate_final_changed_files": 1,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-low",
+      "id": "fast-deep-equal-nan",
+      "repository": "epoberezkin/fast-deep-equal",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 10,
+      "candidate_calls": 12,
+      "base_output_tokens": 610,
+      "candidate_output_tokens": 1301,
+      "base_seconds": 53.47071075439453,
+      "candidate_seconds": 210.07929372787476,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 8,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": 4,
+      "candidate_final_changed_files": 1,
+      "candidate_invalid_format_calls": 1
+    },
+    {
+      "comparison": "dev-high",
+      "id": "more-itertools-spy",
+      "repository": "more-itertools/more-itertools",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 9,
+      "candidate_calls": 4,
+      "base_output_tokens": 771,
+      "candidate_output_tokens": 360,
+      "base_seconds": 163.47387290000916,
+      "candidate_seconds": 123.14563155174255,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 6,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 1,
+      "candidate_exit_status": "Submitted",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-high",
+      "id": "fast-deep-equal-nan",
+      "repository": "epoberezkin/fast-deep-equal",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 10,
+      "candidate_calls": 12,
+      "base_output_tokens": 610,
+      "candidate_output_tokens": 858,
+      "base_seconds": 53.47071075439453,
+      "candidate_seconds": 144.84594821929932,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 8,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 180,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-high",
+      "id": "fast-deep-equal-regexp-flags",
+      "repository": "epoberezkin/fast-deep-equal",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 7,
+      "candidate_calls": 6,
+      "base_output_tokens": 390,
+      "candidate_output_tokens": 284,
+      "base_seconds": 33.74512577056885,
+      "candidate_seconds": 44.97834014892578,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 5,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "Submitted",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 8,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-high",
+      "id": "attrs-to-bool",
+      "repository": "python-attrs/attrs",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 9,
+      "candidate_calls": 12,
+      "base_output_tokens": 761,
+      "candidate_output_tokens": 781,
+      "base_seconds": 86.06317925453186,
+      "candidate_seconds": 166.03386807441711,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 6,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-high",
+      "id": "attrs-optional-validator",
+      "repository": "python-attrs/attrs",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 3,
+      "candidate_calls": 12,
+      "base_output_tokens": 323,
+      "candidate_output_tokens": 1124,
+      "base_seconds": 42.482659339904785,
+      "candidate_seconds": 215.77242636680603,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 2,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    },
+    {
+      "comparison": "dev-high",
+      "id": "p-limit-map-index",
+      "repository": "sindresorhus/p-limit",
+      "cohort": "development",
+      "base_passed": true,
+      "candidate_passed": false,
+      "outcome": "regressed",
+      "base_calls": 6,
+      "candidate_calls": 12,
+      "base_output_tokens": 309,
+      "candidate_output_tokens": 618,
+      "base_seconds": 45.045125246047974,
+      "candidate_seconds": 166.26007533073425,
+      "base_exit_status": "Submitted",
+      "base_grade_reason": "ok",
+      "base_grade_returncode": 0,
+      "base_first_edit_call": 5,
+      "base_final_changed_files": 1,
+      "base_invalid_format_calls": 0,
+      "candidate_exit_status": "LimitsExceeded",
+      "candidate_grade_reason": "runtime_error",
+      "candidate_grade_returncode": 1,
+      "candidate_first_edit_call": null,
+      "candidate_final_changed_files": 0,
+      "candidate_invalid_format_calls": 0
+    }
+  ],
+  "high_regressions_with_format_errors": 0,
+  "private_command_level_diagnosis_complete": false,
+  "causal_claims_supported": false,
+  "development_trajectories_used_as_training_data": false,
+  "limitations": [
+    "No edit observed can include an attempted edit that failed; raw command review is pending.",
+    "Repair actions account for one sixth of updates but more than one sixth of label tokens.",
+    "Single seed and single greedy rollout; learning-rate variants do not isolate data-coverage causes.",
+    "The development set is repeatedly observed; only the unopened final cohorts can provide the later independent check."
+  ]
+}

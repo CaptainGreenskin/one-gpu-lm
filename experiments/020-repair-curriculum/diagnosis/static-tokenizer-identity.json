@@ -1,0 +1,44 @@
+{
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "metadata_only": true,
+  "files": [
+    {
+      "name": "LICENSE",
+      "size": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    {
+      "name": "chat_template.jinja",
+      "size": 9004,
+      "sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375"
+    },
+    {
+      "name": "config.json",
+      "size": 4312,
+      "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+    },
+    {
+      "name": "merges.txt",
+      "size": 3353259,
+      "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 12809320,
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 9984,
+      "sha256": "207c03c41a06a9c3b0cc527d8a56115159c1eac6b59a4ffae85b646e773d074e"
+    },
+    {
+      "name": "vocab.json",
+      "size": 6722759,
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    }
+  ],
+  "scope": "Locally verified tokenizer metadata for static target counts only; no model or Linux execution.",
+  "models_loaded": false
+}

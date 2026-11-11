@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "profile": "profile-recovery.json",
+  "weights_manifest": "../011-coding-model-selection/weights-manifest.json",
+  "environment_lock": "../../environments/pro6000-cu130.json",
+  "inputs": {
+    "model_dir": "${ONE_GPU_MODEL}",
+    "data": "../../runs/prepared-data020/recovery/train.jsonl",
+    "data_receipt": "../../runs/prepared-data020/recovery/receipt.json",
+    "admission": "../../runs/admission/admission.json",
+    "licenses": "sources.json"
+  },
+  "run": {
+    "max_steps": 330,
+    "max_examples": 330,
+    "checkpoint_every": 64,
+    "minimum_free_gpu_gib": 92,
+    "minimum_free_disk_gib": 16,
+    "max_attempt_seconds": 5400,
+    "telemetry_interval_seconds": 5
+  }
+}
