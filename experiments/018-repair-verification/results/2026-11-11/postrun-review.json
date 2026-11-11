@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-11T07:43:31.964728+00:00",
+  "campaign_sha256": {
+    "control": "37ab01eadff75a40dc34d332985063f4d7851f934fd0a50bdd4d7cc7a97846a5",
+    "verify": "db1ca3da6f08c9bbba367f344036be30291dfeda4f53e1709773b964869f22be"
+  },
+  "private_bundle_sha256": "ab5271068ac6605e5af5919af6fe9b11f758e526ae9737a4af4c0d0f481a5ea0",
+  "raw_traces_public": false,
+  "cases": [
+    {
+      "id": "new-json-undefined",
+      "outcome": "improved",
+      "passed": {
+        "control": false,
+        "verify": true
+      },
+      "first_edit_call": {
+        "control": 7,
+        "verify": 7
+      },
+      "trajectory_sha256": {
+        "control": "2913f8f1f67ee0ebad9263eddeaef584d5019c36b4a492d60de0e909c1e25f61",
+        "verify": "f5e99e1ea58a6069560ee720eb0ec6299bb316a2afdee02589c02a88937bdc0a"
+      },
+      "final_observed_check_status": {
+        "control": "not_run",
+        "verify": "not_run"
+      },
+      "observation": "Both arms first edit on call 7. Control alternates global/object handling and leaves the array case wrong (15/16 assertions pass). Verify receives five post-edit notices, removes status-masking pipelines from later compound edit/test commands, and on call 11 scopes the correction to array elements while preserving object omission; the final grader passes 16/16. It still does not issue a recognized standalone declared check: final observed status is not_run, despite successful tests inside a compound command. This improvement does not establish compliance with the standalone-check instruction."
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "outcome": "both_failed",
+      "passed": {
+        "control": false,
+        "verify": false
+      },
+      "first_edit_call": {
+        "control": 8,
+        "verify": 8
+      },
+      "trajectory_sha256": {
+        "control": "84c828560da58fe41ead60f8910392a6925175627d4ab356a2315fa43e2cfa4e",
+        "verify": "8504184c1936bdf76e2d6ae2f2b2fe5779a1c3cbefa5d7776e099cbbb3e41e85"
+      },
+      "final_observed_check_status": {
+        "control": "not_run",
+        "verify": "not_run"
+      },
+      "observation": "Both arms first edit on call 8, manually constructing a signer instead of using the existing configuration-preserving helper. The compound edit/test command fails. Verify receives four notices on calls 9–12 but spends all four reading signing code without another edit or a recognized standalone check. Both arms finish with byte-identical incorrect source and fail independent signing/round-trip checks. Generic verification reminders did not resolve this original regression."
+    },
+    {
+      "id": "fresh018-pydash-drop-while",
+      "outcome": "improved",
+      "passed": {
+        "control": false,
+        "verify": true
+      },
+      "first_edit_call": {
+        "control": 8,
+        "verify": 8
+      },
+      "trajectory_sha256": {
+        "control": "1bc67802dfbf1c1d9ede8aca9f14d8cedf79a7c71777cef3302e23de9b7a3ee9",
+        "verify": "2b896de72c8351b51f127fac000d48178f7aebecddb2bc62b42198dc4137ffcd"
+      },
+      "final_observed_check_status": {
+        "control": "failed",
+        "verify": "stale"
+      },
+      "observation": "Both arms first edit on call 8. After a failed standalone check on call 10, control uses call 11 for a no-op check and reads code on call 12; it leaves mutation of the list being iterated, causing skipped items and adjacent drop failures (9 failed, 526 passed). Verify receives four notices, replaces mutation during iteration with a counter and final slice on call 11, and runs the suite in the same compound command (535 passed); it submits on call 12 and the independent final grader also passes 535 tests. Its recognized-check status remains stale after that compound correction, so final repair success and strict verification recognition diverge."
+    }
+  ],
+  "interpretation": "Two improvements, no regressions, and one original target still failing. First-edit curves are identical. Across 336 matched actual input-token hashes, no output-text hashes differ, but this is still one greedy pair per task. The combined reminder is not decomposed into independently causal components. Both improved tasks finish without a fresh recognized standalone check: compound edit/test commands can provide useful evidence while remaining unknown/stale to the deliberately narrow recognizer. The frozen gate fails because fresh net gain is only one (required two) and the signing target still fails; no default policy or weight change follows."
+}

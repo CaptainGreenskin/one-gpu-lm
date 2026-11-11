@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-11T06:20:40.200161+00:00",
+  "started_epoch": 1794378040.2001774,
+  "deadline_epoch": 1794388840.2001774,
+  "complete": true,
+  "protocol_sha256": "b39961b8b93f644bc1bbee4ba5dd9bf4b34ce161f8943a35fbc1b55da701fdf5",
+  "completed_runs": 72,
+  "schedule": [
+    {
+      "id": "new-jmes-filter",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-filter",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "control"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "verify"
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-key-order",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-comparator",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-undefined",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-to-json",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "control"
+    },
+    {
+      "id": "new-json-nonfinite",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "verify"
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-base64",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-decode",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-null",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-combine",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "control"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh-query-sort",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-child",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-child",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-sibling",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-sibling",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-add",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-add",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-set",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-set",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-get",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-hyperlink-get",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-remove",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-hyperlink-remove",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-chunk",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-chunk",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-drop-while",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-drop-while",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-find-last-index",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-find-last-index",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-flatten-depth",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-flatten-depth",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-intersection",
+      "variant": "control"
+    },
+    {
+      "id": "fresh018-pydash-intersection",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-sorted-uniq-by",
+      "variant": "verify"
+    },
+    {
+      "id": "fresh018-pydash-sorted-uniq-by",
+      "variant": "control"
+    }
+  ],
+  "stages": [
+    {
+      "name": "loaded-controls",
+      "seconds": 7.680787455989048
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "control",
+      "seconds": 66.35963036998874
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-filter",
+      "variant": "verify",
+      "seconds": 64.55109568400076
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "verify",
+      "seconds": 90.25646313402103
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-multiselect",
+      "variant": "control",
+      "seconds": 90.4086443670094
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "control",
+      "seconds": 64.70022890897235
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-sort-expression",
+      "variant": "verify",
+      "seconds": 64.80163605796406
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "verify",
+      "seconds": 65.45146653195843
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-raw-string",
+      "variant": "control",
+      "seconds": 65.85703410796123
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "control",
+      "seconds": 67.46210024395259
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-index-slice",
+      "variant": "verify",
+      "seconds": 67.55866118398262
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "verify",
+      "seconds": 83.59496372297872
+    },
+    {
+      "name": "task",
+      "id": "new-jmes-pipe-map",
+      "variant": "control",
+      "seconds": 83.09309545200085
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "control",
+      "seconds": 40.75382684299257
+    },
+    {
+      "name": "task",
+      "id": "new-json-key-order",
+      "variant": "verify",
+      "seconds": 39.34975791798206
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "verify",
+      "seconds": 44.109101006994024
+    },
+    {
+      "name": "task",
+      "id": "new-json-comparator",
+      "variant": "control",
+      "seconds": 43.55952851299662
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "control",
+      "seconds": 99.13007021002704
+    },
+    {
+      "name": "task",
+      "id": "new-json-undefined",
+      "variant": "verify",
+      "seconds": 108.70010513899615
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "verify",
+      "seconds": 40.45373795100022
+    },
+    {
+      "name": "task",
+      "id": "new-json-to-json",
+      "variant": "control",
+      "seconds": 36.645057452027686
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "control",
+      "seconds": 42.456278306024615
+    },
+    {
+      "name": "task",
+      "id": "new-json-nonfinite",
+      "variant": "verify",
+      "seconds": 42.457751245005056
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "verify",
+      "seconds": 36.29471053101588
+    },
+    {
+      "name": "task",
+      "id": "new-json-cycle-reuse",
+      "variant": "control",
+      "seconds": 39.100469934986904
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "control",
+      "seconds": 36.74330708401976
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-base64",
+      "variant": "verify",
+      "seconds": 41.45662845601328
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "verify",
+      "seconds": 59.644007785012946
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-key-derivation",
+      "variant": "control",
+      "seconds": 60.19150078797247
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "control",
+      "seconds": 78.32577782601584
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-fallbacks",
+      "variant": "verify",
+      "seconds": 78.38321699702647
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "verify",
+      "seconds": 83.99536758399336
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-serialize",
+      "variant": "control",
+      "seconds": 83.99372973799473
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "control",
+      "seconds": 80.58732658502413
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-url-compression",
+      "variant": "verify",
+      "seconds": 80.23648657597369
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "verify",
+      "seconds": 44.96037297399016
+    },
+    {
+      "name": "task",
+      "id": "fresh-signed-timestamp",
+      "variant": "control",
+      "seconds": 40.050952651014086
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "control",
+      "seconds": 62.44941838894738
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-decode",
+      "variant": "verify",
+      "seconds": 62.74960188299883
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "verify",
+      "seconds": 50.2231284470181
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sparse",
+      "variant": "control",
+      "seconds": 50.07368822401622
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "control",
+      "seconds": 75.67726515996037
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-null",
+      "variant": "verify",
+      "seconds": 86.40361888997722
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "verify",
+      "seconds": 54.331984032003675
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-combine",
+      "variant": "control",
+      "seconds": 54.13270417001331
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "control",
+      "seconds": 35.49592282704543
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-plain-objects",
+      "variant": "verify",
+      "seconds": 40.00298126100097
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "verify",
+      "seconds": 69.12448499299353
+    },
+    {
+      "name": "task",
+      "id": "fresh-query-sort",
+      "variant": "control",
+      "seconds": 68.77352436701767
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-child",
+      "variant": "control",
+      "seconds": 56.800342453003395
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-child",
+      "variant": "verify",
+      "seconds": 56.53794857097091
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-sibling",
+      "variant": "verify",
+      "seconds": 61.747165643959306
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-sibling",
+      "variant": "control",
+      "seconds": 62.600371489010286
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-add",
+      "variant": "control",
+      "seconds": 59.395321935007814
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-add",
+      "variant": "verify",
+      "seconds": 58.69073234696407
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-set",
+      "variant": "verify",
+      "seconds": 61.54666446900228
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-set",
+      "variant": "control",
+      "seconds": 61.49356912996154
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-get",
+      "variant": "control",
+      "seconds": 71.21333038801095
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-get",
+      "variant": "verify",
+      "seconds": 69.8659262440051
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-remove",
+      "variant": "verify",
+      "seconds": 60.897335965011735
+    },
+    {
+      "name": "task",
+      "id": "fresh018-hyperlink-remove",
+      "variant": "control",
+      "seconds": 60.943022838036995
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-chunk",
+      "variant": "control",
+      "seconds": 41.600335163995624
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-chunk",
+      "variant": "verify",
+      "seconds": 42.006351097952574
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-drop-while",
+      "variant": "verify",
+      "seconds": 130.70440657401923
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-drop-while",
+      "variant": "control",
+      "seconds": 110.35308123199502
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-find-last-index",
+      "variant": "control",
+      "seconds": 65.75632074597524
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-find-last-index",
+      "variant": "verify",
+      "seconds": 65.30982188996859
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-flatten-depth",
+      "variant": "verify",
+      "seconds": 70.1192697599763
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-flatten-depth",
+      "variant": "control",
+      "seconds": 73.3263779199915
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-intersection",
+      "variant": "control",
+      "seconds": 79.73818832897814
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-intersection",
+      "variant": "verify",
+      "seconds": 80.99382384301862
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-sorted-uniq-by",
+      "variant": "verify",
+      "seconds": 64.70942994003417
+    },
+    {
+      "name": "task",
+      "id": "fresh018-pydash-sorted-uniq-by",
+      "variant": "control",
+      "seconds": 64.66210472903913
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-11T07:38:03.803509+00:00",
+  "current_id": "fresh018-pydash-sorted-uniq-by",
+  "current_variant": "control",
+  "finished_utc": "2026-11-11T07:38:03.803498+00:00",
+  "finished_epoch": 1794382683.8035083,
+  "telemetry": {
+    "samples": 921,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

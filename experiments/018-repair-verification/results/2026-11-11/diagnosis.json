@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source_experiment": "017-edit-progress",
+  "source_commit": "bf746c54bf4d78df9022d89f06000994f8a5d261",
+  "reviewed_utc": "2026-11-11T05:55:10.161303+00:00",
+  "private_bundle_sha256": "e5d2cec6600f2c9e92b3814c604b5ca34376d01209b13e3869e2b8b22cf36a65",
+  "cases": [
+    {
+      "id": "new-json-undefined",
+      "outcome": "regressed",
+      "first_edit_call": {
+        "control": 11,
+        "progress": 7
+      },
+      "passed": {
+        "control": true,
+        "progress": false
+      },
+      "trajectory_sha256": {
+        "control": "264a06de8f2d12c1834bc0de7eb9912e62d65f5a629b80a4ae3c516aac4421f1",
+        "progress": "8a5232aca182d73ac52720567d7df9b8169448808eaf7decfd5a0a0fb58e14a0"
+      },
+      "observation": "The candidate first edits on call 7 versus control 11, then makes further edits and runs probes/tests. The final grader still rejects undefined-value handling in arrays. Earlier editing did not produce a correct repair.",
+      "diagnosis": "Changes alternated between object and array undefined behavior, leaving one failing assertion. Test pipelines ended in tail/grep and returned zero despite failed assertions. All remaining calls were spent in the edit/probe loop; final source still failed."
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "outcome": "regressed",
+      "first_edit_call": {
+        "control": 9,
+        "progress": 8
+      },
+      "passed": {
+        "control": true,
+        "progress": false
+      },
+      "trajectory_sha256": {
+        "control": "992cbc77eea01de109d472dd73e31ed23a8fd242f8f97664bc22f2d428c63019",
+        "progress": "7f3483cb4a46d65b57060aeca8e868c7ebf5cb16623dd43399db60bb9a9ef823"
+      },
+      "observation": "The candidate first edits on call 8 versus control 9, but the grader reports signing/round-trip assertion failures. Earlier editing did not produce a correct repair.",
+      "diagnosis": "The edit manually constructs a signer instead of using the existing configuration-preserving helper. The test command fails, then four remaining calls read signing code without a second edit or successful verification."
+    }
+  ],
+  "causal_limits": "Descriptive trajectories motivate a generic rule; they do not prove that reminders or shell-status masking caused the regressions. Model output still explicitly showed failed assertions.",
+  "raw_traces_public": false
+}

@@ -91,6 +91,15 @@ def render(root):
    evidence=audited[arm][row['id']]
    row[arm+'_first_observed_check_pass_call']=next((s['call'] for s in evidence['verification_events'] if s['changed_files'] and s['check_status']=='passed'),None)
    row[arm+'_final_observed_check_status']=evidence['final_observed_check_status']
+ case_review=''
+ if (root/'postrun-review.json').exists():
+  review=read('postrun-review.json');by_id={r['id']:r for r in summary['paired']}
+  expected=set(summary['targets'])|{r['id'] for r in summary['paired'] if r['outcome'] in {'improved','regressed'}}
+  if len(review['cases'])!=len(expected) or {r['id'] for r in review['cases']}!=expected or any(review['campaign_sha256'][a]!=sha256(root/(a+'.json')) for a in ARMS):raise ValueError('Case review scope or campaign changed')
+  for item in review['cases']:
+   row=by_id[item['id']]
+   if item['outcome']!=row['outcome'] or any(item['passed'][a]!=row[a+'_passed'] or item['first_edit_call'][a]!=row[a+'_first_edit_call'] or item['trajectory_sha256'][a]!=audited[a][item['id']]['trajectory_sha256'] for a in ARMS):raise ValueError('Case review identity/outcome mismatch')
+  case_review='[Post-run case review](postrun-review.json): '+review['interpretation']+'\n\n'+'\n\n'.join('`'+item['id']+'`: '+item['observation'] for item in review['cases'])
  for arm in ARMS:
   total=summary['totals'][arm]
   total['controller_seconds']=sum(s['seconds'] for s in controller['stages'] if s['name']=='task' and s['variant']==arm)
@@ -144,11 +153,11 @@ def render(root):
  curves=[]
  for column,(split,label) in enumerate(SPLITS.items()):
   selected=[r for r in summary['paired'] if r['split']==split]
-  for row,metric,title in [(0,'first_edit_call','First observed edit'),(1,'first_observed_check_pass_call','First observed standalone test exit zero after edit')]:
+  for row,metric,title in [(0,'first_edit_call','First observed edit'),(1,'first_observed_check_pass_call','Standalone test exit 0 after edit')]:
    ax=axes[row,column]
    for arm,color in zip(ARMS,colors):
     values=[sum(t[arm+'_'+metric] is not None and t[arm+'_'+metric]<=call for t in selected)/len(selected) for call in range(1,13)]
-    ax.step(range(1,13),values,where='post',color=color,label=arm)
+    ax.step(range(1,13),values,where='post',color=color,label=arm,linestyle='--' if arm=='control' else '-',zorder=3 if arm=='control' else 2)
     curves += [{'split':split,'variant':arm,'metric':metric,'call':call,'fraction':value,'tasks':len(selected)} for call,value in enumerate(values,1)]
    ax.set(title=label+': '+title,xlabel='Completed model calls',ylabel='Fraction of all tasks',ylim=(0,1));ax.grid(alpha=.2);ax.legend()
  for extension in ['png','svg']:fig.savefig(root/('verification-curves.'+extension),dpi=160,metadata={'Date':None} if extension=='svg' else {})
@@ -185,6 +194,8 @@ Passing means the independent grader accepts the final source, not necessarily t
 | Frozen requirement | Result |
 | --- | --- |
 {gates}
+
+{case_review}
 
 | Repository | Exposure split | Tasks | control | verify |
 | --- | --- | --- | --- | --- |
@@ -224,4 +235,3 @@ Fresh means repositories unused in this project's previous evaluations, not unse
 if __name__=='__main__':
  parser=argparse.ArgumentParser();parser.add_argument('--run',required=True,type=Path)
  render(parser.parse_args().run)
-
