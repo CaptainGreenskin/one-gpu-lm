@@ -15,3 +15,6 @@ experiments/017-edit-progress/results/**/*.svg -whitespace
 
 experiments/017-edit-progress/supplement/results/**/*.csv -text whitespace=cr-at-eol
 experiments/017-edit-progress/supplement/results/**/*.svg -whitespace
+
+experiments/018-repair-verification/results/**/*.csv -text whitespace=cr-at-eol
+experiments/018-repair-verification/results/**/*.svg -whitespace
