@@ -1,0 +1,2190 @@
+{
+  "schema_version": 1,
+  "model_generation_performed": false,
+  "prior_campaign_sha256": "6d193e9dbbbe55bcd3f6c2e3fd2fd9c0e975ae61c2ba555504ca6be9531626b8",
+  "template_sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375",
+  "control_actual_token_hashes_match017": true,
+  "private_history_and_observations_unchanged": true,
+  "candidate_state": "Counterfactual notices using actual017source observations; not018quality evidence",
+  "prefix_count": 242,
+  "prefixes": [
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 0,
+      "control_tokens": 569,
+      "counterfactual_verify_tokens": 569,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 1,
+      "control_tokens": 1288,
+      "counterfactual_verify_tokens": 1288,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 2,
+      "control_tokens": 1704,
+      "counterfactual_verify_tokens": 1704,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 3,
+      "control_tokens": 2307,
+      "counterfactual_verify_tokens": 2307,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 4,
+      "control_tokens": 2830,
+      "counterfactual_verify_tokens": 2830,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 5,
+      "control_tokens": 2935,
+      "counterfactual_verify_tokens": 2935,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 6,
+      "control_tokens": 3084,
+      "counterfactual_verify_tokens": 3084,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 7,
+      "control_tokens": 3703,
+      "counterfactual_verify_tokens": 3703,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 8,
+      "control_tokens": 3789,
+      "counterfactual_verify_tokens": 3789,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 9,
+      "control_tokens": 3998,
+      "counterfactual_verify_tokens": 3998,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 10,
+      "control_tokens": 4409,
+      "counterfactual_verify_tokens": 4409,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-filter",
+      "completed_calls": 11,
+      "control_tokens": 4488,
+      "counterfactual_verify_tokens": 4488,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 0,
+      "control_tokens": 563,
+      "counterfactual_verify_tokens": 563,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 1,
+      "control_tokens": 718,
+      "counterfactual_verify_tokens": 718,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 2,
+      "control_tokens": 1318,
+      "counterfactual_verify_tokens": 1318,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 3,
+      "control_tokens": 1526,
+      "counterfactual_verify_tokens": 1526,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 4,
+      "control_tokens": 2293,
+      "counterfactual_verify_tokens": 2293,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 5,
+      "control_tokens": 2545,
+      "counterfactual_verify_tokens": 2545,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 6,
+      "control_tokens": 2642,
+      "counterfactual_verify_tokens": 2642,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 7,
+      "control_tokens": 3376,
+      "counterfactual_verify_tokens": 3376,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 8,
+      "control_tokens": 3567,
+      "counterfactual_verify_tokens": 3567,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 9,
+      "control_tokens": 4207,
+      "counterfactual_verify_tokens": 4207,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 10,
+      "control_tokens": 4533,
+      "counterfactual_verify_tokens": 4533,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "completed_calls": 11,
+      "control_tokens": 4680,
+      "counterfactual_verify_tokens": 4680,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 0,
+      "control_tokens": 566,
+      "counterfactual_verify_tokens": 566,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 1,
+      "control_tokens": 729,
+      "counterfactual_verify_tokens": 729,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 2,
+      "control_tokens": 1275,
+      "counterfactual_verify_tokens": 1275,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 3,
+      "control_tokens": 1925,
+      "counterfactual_verify_tokens": 1925,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 4,
+      "control_tokens": 2126,
+      "counterfactual_verify_tokens": 2126,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 5,
+      "control_tokens": 2549,
+      "counterfactual_verify_tokens": 2549,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 6,
+      "control_tokens": 3548,
+      "counterfactual_verify_tokens": 3548,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 7,
+      "control_tokens": 3767,
+      "counterfactual_verify_tokens": 3767,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 8,
+      "control_tokens": 3991,
+      "counterfactual_verify_tokens": 3991,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 9,
+      "control_tokens": 4472,
+      "counterfactual_verify_tokens": 4472,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 10,
+      "control_tokens": 4974,
+      "counterfactual_verify_tokens": 4974,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "completed_calls": 11,
+      "control_tokens": 5455,
+      "counterfactual_verify_tokens": 5455,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 0,
+      "control_tokens": 562,
+      "counterfactual_verify_tokens": 562,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 1,
+      "control_tokens": 1217,
+      "counterfactual_verify_tokens": 1217,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 2,
+      "control_tokens": 1815,
+      "counterfactual_verify_tokens": 1815,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 3,
+      "control_tokens": 2011,
+      "counterfactual_verify_tokens": 2011,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 4,
+      "control_tokens": 2336,
+      "counterfactual_verify_tokens": 2336,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 5,
+      "control_tokens": 2420,
+      "counterfactual_verify_tokens": 2420,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 6,
+      "control_tokens": 3057,
+      "counterfactual_verify_tokens": 3057,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 7,
+      "control_tokens": 3424,
+      "counterfactual_verify_tokens": 3424,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 8,
+      "control_tokens": 3558,
+      "counterfactual_verify_tokens": 3558,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 9,
+      "control_tokens": 3999,
+      "counterfactual_verify_tokens": 3999,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 10,
+      "control_tokens": 4313,
+      "counterfactual_verify_tokens": 4313,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "completed_calls": 11,
+      "control_tokens": 4646,
+      "counterfactual_verify_tokens": 4646,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 0,
+      "control_tokens": 569,
+      "counterfactual_verify_tokens": 569,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 1,
+      "control_tokens": 1269,
+      "counterfactual_verify_tokens": 1269,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 2,
+      "control_tokens": 1738,
+      "counterfactual_verify_tokens": 1738,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 3,
+      "control_tokens": 2087,
+      "counterfactual_verify_tokens": 2087,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 4,
+      "control_tokens": 2267,
+      "counterfactual_verify_tokens": 2267,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 5,
+      "control_tokens": 2371,
+      "counterfactual_verify_tokens": 2371,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 6,
+      "control_tokens": 2600,
+      "counterfactual_verify_tokens": 2600,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 7,
+      "control_tokens": 2749,
+      "counterfactual_verify_tokens": 2749,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 8,
+      "control_tokens": 3507,
+      "counterfactual_verify_tokens": 3507,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 9,
+      "control_tokens": 4529,
+      "counterfactual_verify_tokens": 4529,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 10,
+      "control_tokens": 4706,
+      "counterfactual_verify_tokens": 4706,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "completed_calls": 11,
+      "control_tokens": 5070,
+      "counterfactual_verify_tokens": 5070,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 0,
+      "control_tokens": 576,
+      "counterfactual_verify_tokens": 576,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 1,
+      "control_tokens": 719,
+      "counterfactual_verify_tokens": 719,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 2,
+      "control_tokens": 1394,
+      "counterfactual_verify_tokens": 1394,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 3,
+      "control_tokens": 1532,
+      "counterfactual_verify_tokens": 1532,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 4,
+      "control_tokens": 2307,
+      "counterfactual_verify_tokens": 2307,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 5,
+      "control_tokens": 2884,
+      "counterfactual_verify_tokens": 2884,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 6,
+      "control_tokens": 3522,
+      "counterfactual_verify_tokens": 3522,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 7,
+      "control_tokens": 4015,
+      "counterfactual_verify_tokens": 4015,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 8,
+      "control_tokens": 4084,
+      "counterfactual_verify_tokens": 4084,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 9,
+      "control_tokens": 4230,
+      "counterfactual_verify_tokens": 4230,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 10,
+      "control_tokens": 4515,
+      "counterfactual_verify_tokens": 4515,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-jmes-pipe-map",
+      "completed_calls": 11,
+      "control_tokens": 4729,
+      "counterfactual_verify_tokens": 4729,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 0,
+      "control_tokens": 551,
+      "counterfactual_verify_tokens": 551,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 1,
+      "control_tokens": 688,
+      "counterfactual_verify_tokens": 688,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 2,
+      "control_tokens": 1554,
+      "counterfactual_verify_tokens": 1554,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 3,
+      "control_tokens": 1853,
+      "counterfactual_verify_tokens": 1853,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 4,
+      "control_tokens": 2031,
+      "counterfactual_verify_tokens": 2031,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 5,
+      "control_tokens": 2654,
+      "counterfactual_verify_tokens": 2654,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-key-order",
+      "completed_calls": 6,
+      "control_tokens": 2980,
+      "counterfactual_verify_tokens": 3088,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 0,
+      "control_tokens": 551,
+      "counterfactual_verify_tokens": 551,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 1,
+      "control_tokens": 717,
+      "counterfactual_verify_tokens": 717,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 2,
+      "control_tokens": 1237,
+      "counterfactual_verify_tokens": 1237,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 3,
+      "control_tokens": 1790,
+      "counterfactual_verify_tokens": 1790,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 4,
+      "control_tokens": 1939,
+      "counterfactual_verify_tokens": 1939,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 5,
+      "control_tokens": 2126,
+      "counterfactual_verify_tokens": 2126,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 6,
+      "control_tokens": 2316,
+      "counterfactual_verify_tokens": 2316,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-comparator",
+      "completed_calls": 7,
+      "control_tokens": 2649,
+      "counterfactual_verify_tokens": 2757,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 0,
+      "control_tokens": 547,
+      "counterfactual_verify_tokens": 547,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 1,
+      "control_tokens": 698,
+      "counterfactual_verify_tokens": 698,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 2,
+      "control_tokens": 1178,
+      "counterfactual_verify_tokens": 1178,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 3,
+      "control_tokens": 1730,
+      "counterfactual_verify_tokens": 1730,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 4,
+      "control_tokens": 1983,
+      "counterfactual_verify_tokens": 1983,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 5,
+      "control_tokens": 2459,
+      "counterfactual_verify_tokens": 2459,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 6,
+      "control_tokens": 2671,
+      "counterfactual_verify_tokens": 2671,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 7,
+      "control_tokens": 3000,
+      "counterfactual_verify_tokens": 3108,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 8,
+      "control_tokens": 3189,
+      "counterfactual_verify_tokens": 3297,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 9,
+      "control_tokens": 3355,
+      "counterfactual_verify_tokens": 3463,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 10,
+      "control_tokens": 3514,
+      "counterfactual_verify_tokens": 3623,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-undefined",
+      "completed_calls": 11,
+      "control_tokens": 3765,
+      "counterfactual_verify_tokens": 3874,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 0,
+      "control_tokens": 549,
+      "counterfactual_verify_tokens": 549,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 1,
+      "control_tokens": 702,
+      "counterfactual_verify_tokens": 702,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 2,
+      "control_tokens": 813,
+      "counterfactual_verify_tokens": 813,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 3,
+      "control_tokens": 1373,
+      "counterfactual_verify_tokens": 1373,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 4,
+      "control_tokens": 1694,
+      "counterfactual_verify_tokens": 1694,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 5,
+      "control_tokens": 1963,
+      "counterfactual_verify_tokens": 1963,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-to-json",
+      "completed_calls": 6,
+      "control_tokens": 2082,
+      "counterfactual_verify_tokens": 2190,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 0,
+      "control_tokens": 553,
+      "counterfactual_verify_tokens": 553,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 1,
+      "control_tokens": 1116,
+      "counterfactual_verify_tokens": 1116,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 2,
+      "control_tokens": 1244,
+      "counterfactual_verify_tokens": 1244,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 3,
+      "control_tokens": 1720,
+      "counterfactual_verify_tokens": 1720,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 4,
+      "control_tokens": 1976,
+      "counterfactual_verify_tokens": 1976,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 5,
+      "control_tokens": 2157,
+      "counterfactual_verify_tokens": 2265,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-nonfinite",
+      "completed_calls": 6,
+      "control_tokens": 2457,
+      "counterfactual_verify_tokens": 2535,
+      "verification_reminder": true,
+      "check_status": "passed",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "completed_calls": 0,
+      "control_tokens": 554,
+      "counterfactual_verify_tokens": 554,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "completed_calls": 1,
+      "control_tokens": 1123,
+      "counterfactual_verify_tokens": 1123,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "completed_calls": 2,
+      "control_tokens": 1746,
+      "counterfactual_verify_tokens": 1746,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "new-json-cycle-reuse",
+      "completed_calls": 3,
+      "control_tokens": 2334,
+      "counterfactual_verify_tokens": 2442,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-base64",
+      "completed_calls": 0,
+      "control_tokens": 554,
+      "counterfactual_verify_tokens": 554,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-base64",
+      "completed_calls": 1,
+      "control_tokens": 978,
+      "counterfactual_verify_tokens": 978,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-base64",
+      "completed_calls": 2,
+      "control_tokens": 1171,
+      "counterfactual_verify_tokens": 1171,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-base64",
+      "completed_calls": 3,
+      "control_tokens": 1522,
+      "counterfactual_verify_tokens": 1522,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-base64",
+      "completed_calls": 4,
+      "control_tokens": 1848,
+      "counterfactual_verify_tokens": 1953,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 0,
+      "control_tokens": 553,
+      "counterfactual_verify_tokens": 553,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 1,
+      "control_tokens": 1209,
+      "counterfactual_verify_tokens": 1209,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 2,
+      "control_tokens": 1887,
+      "counterfactual_verify_tokens": 1887,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 3,
+      "control_tokens": 2542,
+      "counterfactual_verify_tokens": 2542,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 4,
+      "control_tokens": 2906,
+      "counterfactual_verify_tokens": 2906,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 5,
+      "control_tokens": 3290,
+      "counterfactual_verify_tokens": 3290,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 6,
+      "control_tokens": 3381,
+      "counterfactual_verify_tokens": 3381,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 7,
+      "control_tokens": 3475,
+      "counterfactual_verify_tokens": 3475,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 8,
+      "control_tokens": 4134,
+      "counterfactual_verify_tokens": 4134,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 9,
+      "control_tokens": 4208,
+      "counterfactual_verify_tokens": 4208,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 10,
+      "control_tokens": 4311,
+      "counterfactual_verify_tokens": 4311,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "completed_calls": 11,
+      "control_tokens": 4448,
+      "counterfactual_verify_tokens": 4448,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 0,
+      "control_tokens": 551,
+      "counterfactual_verify_tokens": 551,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 1,
+      "control_tokens": 661,
+      "counterfactual_verify_tokens": 661,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 2,
+      "control_tokens": 1330,
+      "counterfactual_verify_tokens": 1330,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 3,
+      "control_tokens": 1770,
+      "counterfactual_verify_tokens": 1770,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 4,
+      "control_tokens": 2621,
+      "counterfactual_verify_tokens": 2621,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 5,
+      "control_tokens": 3303,
+      "counterfactual_verify_tokens": 3303,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 6,
+      "control_tokens": 3632,
+      "counterfactual_verify_tokens": 3632,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 7,
+      "control_tokens": 3721,
+      "counterfactual_verify_tokens": 3721,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 8,
+      "control_tokens": 3984,
+      "counterfactual_verify_tokens": 3984,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 9,
+      "control_tokens": 4641,
+      "counterfactual_verify_tokens": 4641,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 10,
+      "control_tokens": 4877,
+      "counterfactual_verify_tokens": 4877,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-fallbacks",
+      "completed_calls": 11,
+      "control_tokens": 5452,
+      "counterfactual_verify_tokens": 5452,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 0,
+      "control_tokens": 548,
+      "counterfactual_verify_tokens": 548,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 1,
+      "control_tokens": 1206,
+      "counterfactual_verify_tokens": 1206,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 2,
+      "control_tokens": 1876,
+      "counterfactual_verify_tokens": 1876,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 3,
+      "control_tokens": 2640,
+      "counterfactual_verify_tokens": 2640,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 4,
+      "control_tokens": 3358,
+      "counterfactual_verify_tokens": 3358,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 5,
+      "control_tokens": 4046,
+      "counterfactual_verify_tokens": 4046,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 6,
+      "control_tokens": 4313,
+      "counterfactual_verify_tokens": 4313,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 7,
+      "control_tokens": 4758,
+      "counterfactual_verify_tokens": 4758,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 8,
+      "control_tokens": 5634,
+      "counterfactual_verify_tokens": 5833,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 9,
+      "control_tokens": 5950,
+      "counterfactual_verify_tokens": 6055,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 10,
+      "control_tokens": 6598,
+      "counterfactual_verify_tokens": 6704,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-serialize",
+      "completed_calls": 11,
+      "control_tokens": 6709,
+      "counterfactual_verify_tokens": 6815,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 0,
+      "control_tokens": 553,
+      "counterfactual_verify_tokens": 553,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 1,
+      "control_tokens": 996,
+      "counterfactual_verify_tokens": 996,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 2,
+      "control_tokens": 1502,
+      "counterfactual_verify_tokens": 1502,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 3,
+      "control_tokens": 2151,
+      "counterfactual_verify_tokens": 2151,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 4,
+      "control_tokens": 2491,
+      "counterfactual_verify_tokens": 2491,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 5,
+      "control_tokens": 3152,
+      "counterfactual_verify_tokens": 3152,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 6,
+      "control_tokens": 3903,
+      "counterfactual_verify_tokens": 3903,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 7,
+      "control_tokens": 4382,
+      "counterfactual_verify_tokens": 4382,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 8,
+      "control_tokens": 4827,
+      "counterfactual_verify_tokens": 4827,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 9,
+      "control_tokens": 5283,
+      "counterfactual_verify_tokens": 5283,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 10,
+      "control_tokens": 6057,
+      "counterfactual_verify_tokens": 6057,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-url-compression",
+      "completed_calls": 11,
+      "control_tokens": 6541,
+      "counterfactual_verify_tokens": 6541,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 0,
+      "control_tokens": 550,
+      "counterfactual_verify_tokens": 550,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 1,
+      "control_tokens": 1203,
+      "counterfactual_verify_tokens": 1203,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 2,
+      "control_tokens": 1853,
+      "counterfactual_verify_tokens": 1853,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 3,
+      "control_tokens": 2278,
+      "counterfactual_verify_tokens": 2278,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 4,
+      "control_tokens": 2676,
+      "counterfactual_verify_tokens": 2676,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-signed-timestamp",
+      "completed_calls": 5,
+      "control_tokens": 2884,
+      "counterfactual_verify_tokens": 2989,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 0,
+      "control_tokens": 555,
+      "counterfactual_verify_tokens": 555,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 1,
+      "control_tokens": 1251,
+      "counterfactual_verify_tokens": 1251,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 2,
+      "control_tokens": 1495,
+      "counterfactual_verify_tokens": 1495,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 3,
+      "control_tokens": 2212,
+      "counterfactual_verify_tokens": 2212,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 4,
+      "control_tokens": 3160,
+      "counterfactual_verify_tokens": 3160,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 5,
+      "control_tokens": 4067,
+      "counterfactual_verify_tokens": 4067,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 6,
+      "control_tokens": 4515,
+      "counterfactual_verify_tokens": 4515,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 7,
+      "control_tokens": 5162,
+      "counterfactual_verify_tokens": 5162,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 8,
+      "control_tokens": 5255,
+      "counterfactual_verify_tokens": 5255,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 9,
+      "control_tokens": 5716,
+      "counterfactual_verify_tokens": 5716,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 10,
+      "control_tokens": 6331,
+      "counterfactual_verify_tokens": 6331,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-decode",
+      "completed_calls": 11,
+      "control_tokens": 6666,
+      "counterfactual_verify_tokens": 6666,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 0,
+      "control_tokens": 551,
+      "counterfactual_verify_tokens": 551,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 1,
+      "control_tokens": 1244,
+      "counterfactual_verify_tokens": 1244,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 2,
+      "control_tokens": 1738,
+      "counterfactual_verify_tokens": 1738,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 3,
+      "control_tokens": 2241,
+      "counterfactual_verify_tokens": 2241,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 4,
+      "control_tokens": 2939,
+      "counterfactual_verify_tokens": 2939,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 5,
+      "control_tokens": 3619,
+      "counterfactual_verify_tokens": 3619,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 6,
+      "control_tokens": 3704,
+      "counterfactual_verify_tokens": 3704,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 7,
+      "control_tokens": 3815,
+      "counterfactual_verify_tokens": 3815,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 8,
+      "control_tokens": 4072,
+      "counterfactual_verify_tokens": 4072,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 9,
+      "control_tokens": 4514,
+      "counterfactual_verify_tokens": 4514,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 10,
+      "control_tokens": 5075,
+      "counterfactual_verify_tokens": 5075,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sparse",
+      "completed_calls": 11,
+      "control_tokens": 5799,
+      "counterfactual_verify_tokens": 5799,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 0,
+      "control_tokens": 556,
+      "counterfactual_verify_tokens": 556,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 1,
+      "control_tokens": 716,
+      "counterfactual_verify_tokens": 716,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 2,
+      "control_tokens": 1471,
+      "counterfactual_verify_tokens": 1471,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 3,
+      "control_tokens": 2169,
+      "counterfactual_verify_tokens": 2169,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 4,
+      "control_tokens": 2941,
+      "counterfactual_verify_tokens": 2941,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 5,
+      "control_tokens": 3504,
+      "counterfactual_verify_tokens": 3504,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 6,
+      "control_tokens": 4021,
+      "counterfactual_verify_tokens": 4021,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 7,
+      "control_tokens": 4924,
+      "counterfactual_verify_tokens": 4924,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 8,
+      "control_tokens": 5480,
+      "counterfactual_verify_tokens": 5480,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 9,
+      "control_tokens": 5798,
+      "counterfactual_verify_tokens": 5906,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-null",
+      "completed_calls": 10,
+      "control_tokens": 6033,
+      "counterfactual_verify_tokens": 6142,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 0,
+      "control_tokens": 554,
+      "counterfactual_verify_tokens": 554,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 1,
+      "control_tokens": 1244,
+      "counterfactual_verify_tokens": 1244,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 2,
+      "control_tokens": 1676,
+      "counterfactual_verify_tokens": 1676,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 3,
+      "control_tokens": 2280,
+      "counterfactual_verify_tokens": 2280,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 4,
+      "control_tokens": 3075,
+      "counterfactual_verify_tokens": 3075,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 5,
+      "control_tokens": 3729,
+      "counterfactual_verify_tokens": 3729,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 6,
+      "control_tokens": 4317,
+      "counterfactual_verify_tokens": 4317,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 7,
+      "control_tokens": 5223,
+      "counterfactual_verify_tokens": 5223,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 8,
+      "control_tokens": 5922,
+      "counterfactual_verify_tokens": 5922,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 9,
+      "control_tokens": 6526,
+      "counterfactual_verify_tokens": 6526,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 10,
+      "control_tokens": 7054,
+      "counterfactual_verify_tokens": 7054,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-combine",
+      "completed_calls": 11,
+      "control_tokens": 7284,
+      "counterfactual_verify_tokens": 7284,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 0,
+      "control_tokens": 552,
+      "counterfactual_verify_tokens": 552,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 1,
+      "control_tokens": 1243,
+      "counterfactual_verify_tokens": 1243,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 2,
+      "control_tokens": 1540,
+      "counterfactual_verify_tokens": 1540,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 3,
+      "control_tokens": 1829,
+      "counterfactual_verify_tokens": 1829,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 4,
+      "control_tokens": 2382,
+      "counterfactual_verify_tokens": 2382,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 5,
+      "control_tokens": 2797,
+      "counterfactual_verify_tokens": 2797,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "completed_calls": 6,
+      "control_tokens": 2904,
+      "counterfactual_verify_tokens": 3012,
+      "verification_reminder": true,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 0,
+      "control_tokens": 553,
+      "counterfactual_verify_tokens": 553,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 1,
+      "control_tokens": 1275,
+      "counterfactual_verify_tokens": 1275,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 2,
+      "control_tokens": 1439,
+      "counterfactual_verify_tokens": 1439,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 3,
+      "control_tokens": 2096,
+      "counterfactual_verify_tokens": 2096,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 4,
+      "control_tokens": 2673,
+      "counterfactual_verify_tokens": 2673,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 5,
+      "control_tokens": 3055,
+      "counterfactual_verify_tokens": 3055,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 6,
+      "control_tokens": 3789,
+      "counterfactual_verify_tokens": 3789,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 7,
+      "control_tokens": 4593,
+      "counterfactual_verify_tokens": 4593,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 8,
+      "control_tokens": 5250,
+      "counterfactual_verify_tokens": 5250,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 9,
+      "control_tokens": 5587,
+      "counterfactual_verify_tokens": 5587,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 10,
+      "control_tokens": 5838,
+      "counterfactual_verify_tokens": 5838,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    },
+    {
+      "id": "fresh-query-sort",
+      "completed_calls": 11,
+      "control_tokens": 6019,
+      "counterfactual_verify_tokens": 6019,
+      "verification_reminder": false,
+      "check_status": "not_run",
+      "would_exceed_limit": false
+    }
+  ]
+}

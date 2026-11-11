@@ -1,0 +1,141 @@
+{
+  "screens": [
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "pydash",
+      "canonical_source": "/work/src/pydash",
+      "files_seen": 218433,
+      "directories_seen": 23072,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [],
+      "screen_passed": true,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known package names, exact selected .py/.pyi source hashes, and zip/wheel member names in agent-visible roots; not all semantic copies or pretraining exposure.",
+      "repository": "dgilland/pydash",
+      "utc": "2026-11-11T06:04:49.525456+00:00",
+      "scanner_sha256": "52ef7ea6bda7fbfeff8b9a7739f9a7cccd40c7e5ae51fd130aa57a9d6400d035"
+    },
+    {
+      "schema_version": 1,
+      "roots": [
+        "/usr",
+        "/opt/python-site",
+        "/opt/node",
+        "/opt/repo-harness",
+        "/work"
+      ],
+      "package": "hyperlink",
+      "canonical_source": "/work/src/hyperlink",
+      "files_seen": 218395,
+      "directories_seen": 23069,
+      "unreadable_entries": 2,
+      "unreadable_details": [
+        {
+          "path_sha256": "2b9c0afa025bac17e258060454c50c95478ed64d99eeb0aa7cd8bfc6cd8ed319",
+          "error_type": "PermissionError",
+          "errno": 13
+        },
+        {
+          "path_sha256": "dbf28a7976bd38423ebfc830cf528e274701e9f0a4dba92bb7a7742d1dce0c19",
+          "error_type": "FileNotFoundError",
+          "errno": 2
+        }
+      ],
+      "blocking_scan_errors": 0,
+      "other_package_name_matches": [
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkdialog.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkdocpage.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkinternetpage.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkmailpage.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinkmarkdialog.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/cui/ui/hyperlinknewdocpage.ui",
+        "/usr/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/hyperlinkfield.ui",
+        "/usr/lib/libreoffice/share/tipoftheday/remove_hyperlink.png",
+        "/usr/share/libreoffice/help/en-US/text/shared/guide/hyperlink_edit.html",
+        "/usr/share/libreoffice/help/en-US/text/shared/guide/hyperlink_insert.html",
+        "/usr/share/libreoffice/help/en-US/text/shared/guide/hyperlink_rel_abs.html",
+        "/usr/share/libreoffice/help/en-US/text/swriter/guide/hyperlinks.html",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/32/inserthyperlink.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/32/inserthyperlinkcontrol.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/32/removehyperlink.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/lc_inserthyperlink.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/lc_inserthyperlinkcontrol.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/lc_removehyperlink.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/sc_inserthyperlink.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/sc_inserthyperlinkcontrol.svg",
+        "/usr/share/libreoffice/help/media/icon-themes/cmd/sc_removehyperlink.svg",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkdocpage",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkdocpage/HyperlinkDocPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkdocpage/zh-CN/HyperlinkDocPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkinternetpage",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkinternetpage/HyperlinkInternetPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkinternetpage/zh-CN/HyperlinkInternetPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkmailpage",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkmailpage/HyperlinkMailPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinkmailpage/zh-CN/HyperlinkMailPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinknewdocpage",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinknewdocpage/HyperlinkNewDocPage.png",
+        "/usr/share/libreoffice/help/media/screenshots/cui/ui/hyperlinknewdocpage/zh-CN/HyperlinkNewDocPage.png",
+        "/usr/share/libreoffice/help/zh-CN/text/shared/guide/hyperlink_edit.html",
+        "/usr/share/libreoffice/help/zh-CN/text/shared/guide/hyperlink_insert.html",
+        "/usr/share/libreoffice/help/zh-CN/text/shared/guide/hyperlink_rel_abs.html",
+        "/usr/share/libreoffice/help/zh-CN/text/swriter/guide/hyperlinks.html",
+        "/work/docs/hyperlink_logo_proto.png",
+        "/work/docs/hyperlink_logo_v1.png"
+      ],
+      "duplicate_selected_source_files": [],
+      "archives_containing_package_name": [
+        "/usr/lib/libreoffice/share/config/images_breeze.zip",
+        "/usr/lib/libreoffice/share/config/images_breeze_dark.zip",
+        "/usr/lib/libreoffice/share/config/images_breeze_dark_svg.zip",
+        "/usr/lib/libreoffice/share/config/images_breeze_svg.zip",
+        "/usr/lib/libreoffice/share/config/images_colibre.zip",
+        "/usr/lib/libreoffice/share/config/images_elementary.zip",
+        "/usr/lib/libreoffice/share/config/images_elementary_svg.zip",
+        "/usr/lib/libreoffice/share/config/images_yaru.zip",
+        "/usr/lib/libreoffice/share/config/images_yaru_mate.zip",
+        "/usr/lib/libreoffice/share/config/images_yaru_mate_svg.zip",
+        "/usr/lib/libreoffice/share/config/images_yaru_svg.zip",
+        "/usr/share/libreoffice/share/config/images_breeze.zip",
+        "/usr/share/libreoffice/share/config/images_breeze_dark.zip",
+        "/usr/share/libreoffice/share/config/images_breeze_dark_svg.zip",
+        "/usr/share/libreoffice/share/config/images_breeze_svg.zip",
+        "/usr/share/libreoffice/share/config/images_colibre.zip",
+        "/usr/share/libreoffice/share/config/images_elementary.zip",
+        "/usr/share/libreoffice/share/config/images_elementary_svg.zip",
+        "/usr/share/libreoffice/share/config/images_yaru.zip",
+        "/usr/share/libreoffice/share/config/images_yaru_mate.zip",
+        "/usr/share/libreoffice/share/config/images_yaru_mate_svg.zip",
+        "/usr/share/libreoffice/share/config/images_yaru_svg.zip"
+      ],
+      "screen_passed": false,
+      "readability_limits": "ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.",
+      "scope": "Known package names, exact selected .py/.pyi source hashes, and zip/wheel member names in agent-visible roots; not all semantic copies or pretraining exposure.",
+      "repository": "python-hyper/hyperlink",
+      "utc": "2026-11-11T06:04:53.514261+00:00",
+      "scanner_sha256": "52ef7ea6bda7fbfeff8b9a7739f9a7cccd40c7e5ae51fd130aa57a9d6400d035"
+    }
+  ]
+}

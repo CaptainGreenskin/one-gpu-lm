@@ -1,0 +1,290 @@
+[
+  {
+    "id": "new-jmes-filter",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-filter-projection",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-jmes-multiselect",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-object-syntax",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-jmes-sort-expression",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-expression-sort",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-jmes-raw-string",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-raw-string-lexer",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-jmes-index-slice",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-index-slice",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-jmes-pipe-map",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "split": "dev",
+    "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-key-order",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-comparator",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-undefined",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-to-json",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-nonfinite",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "new-json-cycle-reuse",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "split": "dev",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-base64",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-base64",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-key-derivation",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-key-derivation",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-fallbacks",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-fallbacks",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-serialize",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-serialize",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-url-compression",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-url-compression",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-signed-timestamp",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "split": "dev",
+    "family": "pallets/itsdangerous:signed-timestamp",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-decode",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-decode",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-sparse",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-sparse",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-null",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-null",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-combine",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-combine",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-plain-objects",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-plain-objects",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh-query-sort",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "split": "dev",
+    "family": "ljharb/qs:query-sort",
+    "evaluation_role": "historical_regression_observed_in_015"
+  },
+  {
+    "id": "fresh018-hyperlink-child",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.child",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-hyperlink-sibling",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.sibling",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-hyperlink-add",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.add",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-hyperlink-set",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.set",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-hyperlink-get",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.get",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-hyperlink-remove",
+    "repository": "python-hyper/hyperlink",
+    "revision": "978f2e645578aad856fe5e03e2e2c017c8c0f7ca",
+    "split": "test",
+    "family": "python-hyper/hyperlink:URL.remove",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-chunk",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:chunk",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-drop-while",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:drop_while",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-find-last-index",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:find_last_index",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-flatten-depth",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:flatten_depth",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-intersection",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:intersection",
+    "evaluation_role": "fresh_repository_018"
+  },
+  {
+    "id": "fresh018-pydash-sorted-uniq-by",
+    "repository": "dgilland/pydash",
+    "revision": "b6bd031de47134b8e3c3977fbe65bf13cc51a205",
+    "split": "test",
+    "family": "dgilland/pydash:sorted_uniq_by",
+    "evaluation_role": "fresh_repository_018"
+  }
+]
