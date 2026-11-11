@@ -19,6 +19,14 @@ def apply_mutation(text, change):
             if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
                 name = prefix + node.name
                 if name == change["symbol"]:
+                    # A typing overload is a declaration, not the implementation.
+                    # Its inline ellipsis may share the closing signature line.
+                    if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and any(
+                        (isinstance(d, ast.Name) and d.id == 'overload') or
+                        (isinstance(d, ast.Attribute) and d.attr == 'overload')
+                        for d in node.decorator_list
+                    ):
+                        continue
                     return node
                 found = find(node.body, name + ".")
                 if found:
@@ -34,7 +42,12 @@ def apply_mutation(text, change):
         raise ValueError("Function has no implementation")
     lines = text.splitlines(keepends=True)
     lines[body[0].lineno - 1:body[-1].end_lineno] = [" " * body[0].col_offset + 'raise NotImplementedError("implementation missing")\n']
-    return "".join(lines)
+    mutated = "".join(lines)
+    try:
+        ast.parse(mutated)
+    except SyntaxError as error:
+        raise ValueError('Stub mutation must preserve valid Python syntax') from error
+    return mutated
 
 
 def copy_snapshot(snapshot, destination, repository):

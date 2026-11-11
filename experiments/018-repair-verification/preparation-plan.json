@@ -27,5 +27,16 @@
     "no_actual_reference_exception_added": true,
     "model_scores_observed": false,
     "validation": "Synthetic check retains detection of module, metadata, renamed identical source and embedded wheel package; distinguishes icons."
+  },
+  "stub_builder_recovery_before_scores": {
+    "affected_tasks": [
+      "fresh018-pydash-drop-while",
+      "fresh018-pydash-find-last-index"
+    ],
+    "finding": "First admission accepted nonzero collection exits caused by stubbing a typing overload declaration. A stricter pre-freeze test-exit check blocked it.",
+    "fix": "Skip typing overload declarations to find concrete implementation; parse mutated Python and reject syntax errors. Same task functions, original tests, descriptions, policies and budgets.",
+    "retained_receipt": "preflight/admission-before-overload-fix.json",
+    "historical_broken_inputs_must_match017": true,
+    "model_generation_before_fix": false
   }
 }
