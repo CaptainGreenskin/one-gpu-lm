@@ -20,5 +20,12 @@
   "selected_fresh_repositories": [
     "python-hyper/hyperlink",
     "dgilland/pydash"
-  ]
+  ],
+  "screening_refinement_before_admission": {
+    "initial_block": "Broad substring matching treated LibreOffice hyperlink icons/dialogs and repository logo files as Python package references.",
+    "change": "Keep those matches in the receipt, but block Python module/package/metadata components and exact selected source duplicates. Zip/wheel members use the same component rule.",
+    "no_actual_reference_exception_added": true,
+    "model_scores_observed": false,
+    "validation": "Synthetic check retains detection of module, metadata, renamed identical source and embedded wheel package; distinguishes icons."
+  }
 }

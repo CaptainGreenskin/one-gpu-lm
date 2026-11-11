@@ -11,6 +11,16 @@ from pathlib import Path
 import zipfile
 
 
+def package_component(name, package):
+    """Identify Python package/module/metadata names, not e.g. hyperlink.png."""
+    name, package = name.lower(), package.lower()
+    if name == package:
+        return True
+    if name.startswith(package+'.') and Path(name).suffix in {'.py', '.pyi', '.pyc', '.pyo', '.so', '.pyd'}:
+        return True
+    return (name.startswith(package+'-') or name.startswith(package+'.')) and name.endswith(('.dist-info', '.egg-info', '.egg'))
+
+
 def scan(roots, package, canonical, target_hashes):
     canonical = Path(canonical).resolve()
     if not canonical.is_dir() or not roots or any(not Path(root).is_dir() for root in roots):
@@ -20,6 +30,8 @@ def scan(roots, package, canonical, target_hashes):
     named = set()
     duplicates = set()
     archives = set()
+    nonpackage_name_matches = set()
+    nonpackage_archive_matches = set()
     unreadable = 0
     unreadable_details = []
     files = 0
@@ -47,21 +59,24 @@ def scan(roots, package, canonical, target_hashes):
             seen_directories.add(key)
             inside = path.resolve().is_relative_to(canonical)
             if not inside and package.lower() in path.name.lower():
-                named.add(path.as_posix())
+                (named if package_component(path.name, package) else nonpackage_name_matches).add(path.as_posix())
             for name in names:
                 item = path / name
                 files += 1
                 if inside:
                     continue
                 if package.lower() in name.lower():
-                    named.add(item.as_posix())
+                    (named if package_component(name, package) else nonpackage_name_matches).add(item.as_posix())
                 try:
                     if item.suffix in {'.py', '.pyi'} and hashlib.sha256(item.read_bytes()).hexdigest() in target_hashes:
                         duplicates.add(item.as_posix())
                     if item.suffix in {'.zip', '.whl'} and zipfile.is_zipfile(item):
                         with zipfile.ZipFile(item) as archive:
-                            if any(package.lower() in member.lower() for member in archive.namelist()):
+                            members = archive.namelist()
+                            if any(any(package_component(part, package) for part in Path(member).parts) for member in members):
                                 archives.add(item.as_posix())
+                            elif any(package.lower() in member.lower() for member in members):
+                                nonpackage_archive_matches.add(item.as_posix())
                 except (OSError, zipfile.BadZipFile) as error:
                     unreadable += 1
                     unreadable_details.append({'path': item.as_posix(), 'error_type': type(error).__name__, 'errno': getattr(error, 'errno', None)})
@@ -79,9 +94,11 @@ def scan(roots, package, canonical, target_hashes):
             'other_package_name_matches': sorted(named),
             'duplicate_selected_source_files': sorted(duplicates),
             'archives_containing_package_name': sorted(archives),
+            'nonpackage_substring_name_matches': sorted(nonpackage_name_matches),
+            'nonpackage_substring_archive_matches': sorted(nonpackage_archive_matches),
             'screen_passed': not (named or duplicates or archives or blocking_errors),
             'readability_limits': 'ENOENT/EACCES entries cannot be read by this same sandbox UID through the read-only mounts; recorded separately rather than called scanned. Other scan errors block admission.',
-            'scope': 'Known package names, exact selected .py/.pyi source hashes, and zip/wheel member names in agent-visible roots; not all semantic copies or pretraining exposure.'}
+            'scope': 'Known Python package/module/metadata path components, exact selected .py/.pyi source hashes, and zip/wheel Python-package path components in agent-visible roots. Other substring matches (e.g. logos/office hyperlinks) retained separately, not called Python references. Not all semantic or renamed copies, embedded source in other formats, or pretraining exposure.'}
 
 
 if __name__ == '__main__':
