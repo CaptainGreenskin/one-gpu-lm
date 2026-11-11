@@ -51,7 +51,10 @@ def freeze(root,source_commit):
            'runs/prepared-data/train.jsonl','runs/prepared-data/receipt.json','runs/prepared-data/selection.json',
            'experiments/011-coding-model-selection/weights-manifest.json','experiments/018-repair-verification/reference_screen.py','environments/pro6000-cu130.json']
     paths += [str(p.relative_to(root)) for p in (root/'one_gpu_lm').rglob('*') if p.suffix in {'.py','.mjs'}]
-    paths += [str(p.relative_to(root)) for p in exp.iterdir() if p.suffix in {'.py','.json','.md'}]
+    paths += [str(p.relative_to(root)) for p in exp.iterdir() if p.suffix in {'.py','.json'}]
+    # Keep the actual preregistration addendum immutable; README status/results
+    # may be updated without changing the experiment's executable identity.
+    paths.append(str((exp/'preparation-notes.md').relative_to(root)))
     paths += [str(p.relative_to(root)) for p in (exp/'notices').iterdir() if p.is_file()]
     protocol={'schema_version':1,'experiment':'019-coding-release','status':'frozen_before_model_rollouts',
         'frozen_utc':datetime.now(timezone.utc).isoformat(),'source_commit':source_commit,**plan['base'],
