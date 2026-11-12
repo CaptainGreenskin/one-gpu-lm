@@ -211,6 +211,14 @@ def assess(root):
             value = read('legacy-'+arm+'.json'); rows = value['results']
             require(value['complete'] and value['task_sha256'] == frozen['private/legacy-functions.jsonl']
                     and len(rows) == len({r['id'] for r in rows}) == 9 and all(r['adapter'] is expected_adapter for r in rows), 'Legacy checks incomplete or unpaired')
+            legacy_audit = integrity.get('legacy_input_audits', {}).get(arm, {})
+            require(legacy_audit.get('result_sha256') == sha256(root/('legacy-'+arm+'.json'))
+                    and legacy_audit.get('task_sha256') == value['task_sha256']
+                    and legacy_audit.get('adapter') is expected_adapter
+                    and [r['id'] for r in legacy_audit.get('results', [])] == [r['id'] for r in rows]
+                    and all(a['input_verified'] is True and a['input_tokens_sha256'] == r['input_tokens_sha256']
+                            for a, r in zip(legacy_audit['results'], rows)),
+                    'Legacy result is not bound to the actual-input audit')
             legacy[arm] = {'passed':sum(r['passed'] for r in rows),'tasks':len(rows),'ids':[r['id'] for r in rows]}
         require(legacy['final-base']['ids'] == legacy['final-selected']['ids'], 'Legacy membership differs')
         export = integrity['export']
@@ -290,7 +298,7 @@ def render(root):
             values=[summary['evaluation_cost'][a]['passed'] for a in arms];labels=['base','repair','recovery'];total=15
         else:
             v=summary['comparisons'][label.lower()];values=[v['base_passed'],v['candidate_passed']];labels=['base',selection['selected']];total=v['pairs']
-        ax.bar(labels,values,color=['#64748b','#197d83','#b45309'][:len(values)])
+        ax.bar(labels,values,color=[{'base':'#64748b',**colors}[name] for name in labels])
         ax.set(title=label,xlabel='Model variant',ylabel='Independently graded passes',ylim=(0,total+1))
         for x,y in enumerate(values):ax.text(x,y+.1,f'{y}/{total}',ha='center')
     for ext in ['png','svg']:fig.savefig(root/('success-comparison.'+ext),dpi=160,metadata={'Date':None} if ext=='svg' else {})
@@ -325,7 +333,7 @@ Selected using development only: **{selection['selected'] or 'none'}**. Selectio
 | --- | --- | --- | --- | --- | --- | --- |
 {trainlines}
 
-Both candidates start from the identical pinned base and use the same 330 semantic task/slot IDs in seed-101 order. The 275 common records have identical model-visible token hashes; only 55 late-repair contexts differ. Three repair targets per task cover ordinary, stalled and late repair. Actual input and supervised token totals differ as reported above: this is not equal-token or equal-FLOP training. The base is frozen BF16; rank-8 adapters use FP32 and learning rate 2e-6 in both groups. Incorrect attempts are observed history only, never supervised targets. Both changed adapter weights, had no frozen-parameter gradients, passed a sampled frozen-weight integrity check, and matched greedy token IDs before/after adapter reload. This is not a full-backbone equality proof. The save/reload probe checks serialization, not task quality.
+Both candidates start from the identical pinned base and use the same 330 semantic task/slot IDs in seed-101 order. The 275 common records have identical model-visible token hashes; only 55 late-repair records differ. Three repair targets per task cover ordinary, stalled and late repair. Actual input and supervised token totals differ as reported above: this is not equal-token or equal-FLOP training. The base is frozen BF16; rank-8 adapters use FP32 and learning rate 2e-6 in both groups. Incorrect attempts are observed history only, never supervised targets. Both changed adapter weights, had no frozen-parameter gradients, passed a sampled frozen-weight integrity check, and matched greedy token IDs before/after adapter reload. This is not a full-backbone equality proof. The save/reload probe checks serialization, not task quality.
 
 ![Training diagnostics](training-curves.png)
 
@@ -344,6 +352,8 @@ Edit categories use the source snapshots after executed tools, not the model's c
 Budgets are equal upper limits: 12 calls, 512 generated tokens/call, 6,144 generated tokens/task, 8,192 input tokens, and 900 seconds/task. Same native tool round trip, parser, full history and edit-progress policy. Actual usage differs and is retained. Candidate inference uses an unmerged adapter; sequential shared-host timings include that overhead and do not establish a production throughput comparison. [All paired outcomes](paired-outcomes.csv) retain regressions. Passing means the final independent grader accepts source changes in a fresh workspace, not simply an edit, an agent claim or a normal exit.
 
 [Every improved and regressed pair](changed-pair-behavior.json) records the first observed edit, final changed-file count, format errors, call-limit/submit status and independent grader exit. A nonzero test exit labeled `runtime_error` is not automatically a GPU or controller failure. Conversely, a last-call repair can pass independent tests even when the agent then reaches its call limit. These are observed behavior differences, not a proven explanation of why training changed a result. There is one greedy rollout per task and arm; run-to-run and training-seed variability are not estimated.
+
+For each executed legacy function check, [post-run integrity](postrun-integrity.json) binds the exact prompt-token hash, task order, model flag and private generated-text file hash to the public numeric result. This read-only audit was added during the run; it neither regenerates answers nor replays grading. Frozen training/evaluation inputs, selection rules and quality thresholds are unchanged. Audit/report source hashes identify the postprocessing version.
 
 Actual UTC: {timing['started_utc']} to {timing['finished_utc']}; {timing['wall_seconds']/3600:.3f} pipeline hours. Original 12-hour budget respected: {timing['within_original_budget']}. {hardware['samples']} hardware samples, max gap {hardware['max_gap_seconds']:.2f}s, sampled peak {hardware['temperature_c']['max']:.0f}C / {hardware['power_w']['max']:.1f}W. GPU energy estimate {hardware['sampled_gpu_energy_kwh']:.3f}kWh uses trapezoids between samples; it excludes CPU/system power and can miss transients. Allocator memory peaks are separate from sampled board memory.
 

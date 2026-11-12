@@ -5,6 +5,7 @@ until the independently recomputed release decision accepts it.
 """
 import argparse
 from datetime import datetime, timezone
+import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -16,6 +17,56 @@ from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.runstate import identity_digest
 from one_gpu_lm.evaluation.tasks import file_manifest
 from one_gpu_lm.models.verify import verify_model
+
+
+def check_legacy_inputs(run, tasks, task_sha256, tokenizer, template_kwargs):
+    """Hash-check recorded function inputs/outputs without generating or grading."""
+    from one_gpu_lm.common.tokenization import encode_prefix
+    from one_gpu_lm.common.agent_policy import LEGACY_POLICY
+    ids = [task['id'] for task in tasks]
+    if len(ids) != 9 or len(set(ids)) != 9:
+        raise ValueError('Legacy audit requires the exact nine unique tasks')
+    fields = {'id', 'language', 'passed', 'passed_cases', 'cases', 'reason',
+              'input_tokens', 'input_tokens_sha256', 'generated_tokens', 'seconds',
+              'hit_generation_limit', 'agent_policy', 'context', 'dialogue',
+              'packing_seconds', 'peak_allocated_bytes', 'adapter'}
+    audits = {}
+    for arm, adapter in [('final-base', False), ('final-selected', True)]:
+        folder = Path(run)/('legacy-'+arm)
+        result_file = folder/'result.json'
+        value = json.loads(result_file.read_text())
+        if (set(value) != {'schema_version', 'task_sha256', 'complete', 'results', 'passed'}
+                or value['complete'] is not True or value['task_sha256'] != task_sha256
+                or [r['id'] for r in value['results']] != ids
+                or value['passed'] != sum(r['passed'] for r in value['results'])):
+            raise ValueError('Legacy result identity or membership differs')
+        rows = []
+        for task, row in zip(tasks, value['results']):
+            tokens, dialogue = encode_prefix(tokenizer,
+                [{'role': 'user', 'content': task['prompt']}], template_kwargs, 'legacy')
+            token_hash = hashlib.sha256(json.dumps(tokens, separators=(',', ':')).encode()).hexdigest()
+            context = {'policy': 'full', 'raw_input_tokens': len(tokens),
+                       'packed_input_tokens': len(tokens), 'dropped_rounds': 0,
+                       'original_messages': 1, 'packed_messages': 1}
+            if (set(row) != fields or row['adapter'] is not adapter
+                    or row['language'] != task['language'] or row['cases'] != len(task['cases'])
+                    or row['input_tokens'] != len(tokens) or row['input_tokens_sha256'] != token_hash
+                    or row['agent_policy'] != LEGACY_POLICY or row['context'] != context
+                    or row['dialogue'] != dialogue or not 0 < len(tokens) <= 8192
+                    or not 0 < row['generated_tokens'] <= 512
+                    or row['hit_generation_limit'] is not (row['generated_tokens'] >= 512)
+                    or not 0 <= row['passed_cases'] <= row['cases']
+                    or row['passed'] is not (row['passed_cases'] == row['cases'])):
+                raise ValueError('Legacy recorded input, budget, metadata or score count differs')
+            output = folder/'private'/(task['id']+'.txt')
+            if output.is_symlink() or not output.is_file():
+                raise ValueError('Missing regular private legacy output')
+            rows.append({'id': task['id'], 'input_tokens_sha256': token_hash,
+                         'generation_text_sha256': sha256(output), 'input_verified': True})
+        audits[arm] = {'result_sha256': sha256(result_file), 'task_sha256': task_sha256,
+                       'adapter': adapter, 'results': rows,
+                       'scope': 'Stored inputs and output-file hashes only; no regeneration or score replay.'}
+    return audits
 
 
 def check_unselected_final_artifacts(run, selected):
@@ -110,6 +161,13 @@ def check(root, run, out):
         'export': {'required': selection['selected'] is not None, 'created': False},
         'weights_public': False, 'publication_authorized_by_this_receipt': False}
     if selection['selected'] is not None:
+        from transformers import AutoTokenizer
+        from one_gpu_lm.data.function_records import load_split
+        result['legacy_input_audits'] = check_legacy_inputs(
+            run, load_split(root/'private/legacy-functions.jsonl', 'test'),
+            protocol['frozen_files']['private/legacy-functions.jsonl'],
+            AutoTokenizer.from_pretrained(model, local_files_only=True, trust_remote_code=False),
+            read(exp/'profile-repair.json')['chat_template_kwargs'])
         name = selection['selected']
         candidate = run/('train-'+name)
         checkpoint, _, manifest = load_checkpoint(candidate, read(candidate/'identity.json'))
