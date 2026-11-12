@@ -37,3 +37,7 @@ experiments/021-observed-recovery/results/**/*.svg -whitespace
 experiments/022-action-repair/notices/* -text whitespace=cr-at-eol
 experiments/022-action-repair/results/**/*.csv -text whitespace=cr-at-eol
 experiments/022-action-repair/results/**/*.svg -whitespace
+
+experiments/023-evaluation-stability/notices/* -text whitespace=cr-at-eol
+experiments/023-evaluation-stability/results/**/*.csv -text whitespace=cr-at-eol
+experiments/023-evaluation-stability/results/**/*.svg -whitespace

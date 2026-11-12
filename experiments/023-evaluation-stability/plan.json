@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "experiment": "023-evaluation-stability",
+  "status": "rule_locked_before_new_model_runs",
+  "objective": "Separate output metadata variability from identical-input generation variability with frozen base,020 and022; no training, model selection or final tests.",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "model_license": "Apache-2.0"
+  },
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "shared_uid_process_thread_limit": 512
+  },
+  "policy": {
+    "format": "native_roundtrip",
+    "context": "full",
+    "progress": "edit_checkpoint_v1"
+  },
+  "models": {
+    "base": {
+      "adapter": null
+    },
+    "reference020": {
+      "experiment": "020",
+      "candidate": "recovery",
+      "commit": "5f92aa16d35b62e9655f1e20aa72a3236b38a553",
+      "adapter_model_sha256": "ea7c324af0c9d702491acc0af514568dd1f9a01b43f94e02ec270f8da376bf22",
+      "role": "frozen development comparator, not an eligible release candidate"
+    },
+    "action022": {
+      "adapter_model_sha256": "b5aeeb49cc92e42c46300b0607baa5240fabc7edaf7fd896d87213f4ed848d4a",
+      "experiment": "022",
+      "candidate": "action"
+    }
+  },
+  "conditions": [
+    "raw",
+    "canonical"
+  ],
+  "repeats": 3,
+  "development_tasks": 15,
+  "planned_task_runs": 270,
+  "schedule": "Latin rotation of model order across three repeats; fresh backend per model/repeat. Pair raw/canonical adjacently for every task, alternate first condition by task index + repeat + model index. Same original task order. No score-dependent scheduling.",
+  "normalization": {
+    "version": "metadata_v1",
+    "ls_date": "Only complete anchored POSIX ls metadata rows; replace month/day/time-or-year with Jan 01 00:00. Preserve modes, owners, groups, sizes, names and symlink destinations.",
+    "js_summary_time": "Only complete anchored NUMBER passing/failing (DURATIONms/s) summary rows; replace duration with 0ms. Preserve counts and status.",
+    "scope": "Output text only after historical 2400-character raw prefix cap. Cap again if replacement expands it. Do not reveal new source text, rewrite commands, source dates, filenames, assertions, exit codes, or grading output. Log raw and delivered text privately and publish hashes/counts.",
+    "uncovered": "Other timestamps, arbitrary source/log dates, traceback addresses, filenames, process IDs and unrecognized timing lines remain untouched. Unmatched variability is reported, not claimed eliminated."
+  },
+  "probes": {
+    "task_ids": [
+      "fast-deep-equal-map-values",
+      "fast-deep-equal-regexp-flags"
+    ],
+    "input": "Exact initial request from recorded022 development history; encoded hashes checked before freeze. No command execution.",
+    "repetitions_per_backend_per_input": 2,
+    "backend_instances": 9,
+    "planned_calls": 36,
+    "max_new_tokens_per_call": 512,
+    "role": "Within-load and across-load identical-input checks, excluded from task budgets/scores; fixed before all task runs."
+  },
+  "budget": {
+    "max_pipeline_wall_seconds": 57600,
+    "max_backend_start_seconds": 300,
+    "max_probe_calls": 36,
+    "max_task_runs": 270,
+    "max_task_model_calls": 3240,
+    "max_task_generated_tokens": 1658880
+  },
+  "analysis": {
+    "primary": "For each model and condition, across3 repeats report pass counts/range, tasks with mixed pass/fail, and pairwise outcome disagreements /45 (15tasks x3repeat-pairs). No model selection.",
+    "secondary": "First-edit and no-edit failures, exact input/output/observation fingerprints, within-condition270 trace comparisons and matched raw/canonical135 comparisons, time/tokens/normalization coverage/hardware.",
+    "attribution": "At first trace divergence: identical input but different generated output is observed generation variability; identical preceding actions/state but different feedback is observed tool variability, subdivided by whether allowed metadata normalization makes feedback identical. Later consequences not assigned a unique cause. Different grades with identical trajectories separately flagged.",
+    "paired_effect": "Paired raw/canonical outcome changes are effects of this complete output intervention in this small run; cannot isolate ls dates versus test durations, generalize to all metadata, or infer larger model quality.",
+    "incomplete": "Exclude incomplete pairs from paired rates, explicitly report all missing/error attempts. No choosing favorable repeats; no rerunning completed tasks.",
+    "statistics": "Descriptive counts and exact denominators only; three repeats and reused task clusters are too small for broad statistical or causal claims."
+  },
+  "final_test_opened": false,
+  "training_updates": 0,
+  "weights_public": false,
+  "failure_policy": "One16-hour clock includes all model loads,36fixed probes,270task runs and loaded controls. Resume only completed-step checkpoints within original deadline. Keep failed attempts; no duplicate scores, extra probes, relaxed budgets or extension.",
+  "publication": {
+    "repository": "CaptainGreenskin/one-gpu-lm",
+    "publish": [
+      "original code",
+      "frozen plan",
+      "numeric receipts",
+      "plots",
+      "failure analysis"
+    ],
+    "exclude": [
+      "credentials",
+      "host identifiers",
+      "raw tasks",
+      "raw tool/model traces",
+      "weights",
+      "optimizer states"
+    ]
+  },
+  "limitations": [
+    "Three repeats,15 reused development tasks and four repository clusters. No unopened final tasks or broad coding certification.",
+    "Greedy decoding is held fixed; deterministic CUDA settings are recorded but not changed. Canonicalizing two field types may leave other nondeterministic inputs.",
+    "Same per-task ceilings are not equal actual tokens,FLOPs or runtime. Sequential model blocks share one GPU. No training or release decision."
+  ]
+}
