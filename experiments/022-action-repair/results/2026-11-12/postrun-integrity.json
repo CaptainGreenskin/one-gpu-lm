@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-11-12T14:51:39.556855+00:00",
+  "script_sha256": "5bcf356ae3c955f108726cafc5dd359694bf76cd0f0ccc9dbb1ca11290cf9c7f",
+  "protocol_sha256": "9ddf583f54d7b75e977a13b11c1bb87481449118f57387d8c0b410bc9abd74a4",
+  "all_frozen_file_hashes_match": true,
+  "source_snapshot_contents_unchanged": true,
+  "dependency_contents_unchanged": true,
+  "framework_contents_unchanged": true,
+  "unselected_final_test_artifacts_absent": true,
+  "base_model_verification": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "manifest_sha256": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "weight_files": 18,
+    "metadata_files": 12,
+    "verified_bytes": 55586105207,
+    "verification_seconds": 43.033132094016764,
+    "content_verified": true
+  },
+  "training_input_audit_sha256": "aece917cc0ac8a6207b6cd99be3be31e66be8290c564b65dbaaf3ee240614f59",
+  "adapter_tensor_audits": {
+    "action": {
+      "parameters": 58363904,
+      "tensor_count": 992,
+      "dtypes": [
+        "F32"
+      ],
+      "file_sha256": "b5aeeb49cc92e42c46300b0607baa5240fabc7edaf7fd896d87213f4ed848d4a"
+    }
+  },
+  "training_data_audit_sha256": "c35b6a0aa6e3eccbe25dbf6a2c42e711e67dbf09b10aaf16ab520ce1f335c365",
+  "public_task_inventory_identity_sha256": "4134d645f27071ff763d5d80e1893cef94da8b1ffe111be41ab3c5a485d3739c",
+  "rights_and_secret_scan_pass": true,
+  "rights_scope": "Exact reviewed source notices, fixed Apache-2.0 base LICENSE and known-pattern/private-identifier input screen; no teacher API. Not exhaustive secret detection or a legal warranty.",
+  "export": {
+    "required": false,
+    "created": false
+  },
+  "weights_public": false,
+  "publication_authorized_by_this_receipt": false
+}

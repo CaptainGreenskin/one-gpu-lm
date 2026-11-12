@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-11-12T12:29:31.080000+00:00",
+  "finished_utc": "2026-11-12T12:40:34.591822+00:00",
+  "builder_seconds": 663.5118222236633,
+  "method": "Linux process start tick plus kernel boot epoch to completed status file mtime; approximately one-second boot-epoch uncertainty",
+  "completed_status_sha256": "c9f55dc265f5abc14f80d751a75197a532f902b576ef80d2100aaed628989464",
+  "cpu_only": true,
+  "model_pipeline_started": false,
+  "excludes": "CPU post-build audits, publishing and model pipeline"
+}

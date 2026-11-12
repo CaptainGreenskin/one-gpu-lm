@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T12:46:35.454969+00:00",
+  "started_epoch": 1794487595.454967,
+  "deadline_epoch": 1794530795.454967,
+  "protocol_sha256": "9ddf583f54d7b75e977a13b11c1bb87481449118f57387d8c0b410bc9abd74a4",
+  "complete": true,
+  "attempt": 1,
+  "stages": [
+    {
+      "name": "preparation-verify",
+      "seconds": 2.118541400996037,
+      "attempt": 1
+    },
+    {
+      "name": "loaded-controls",
+      "seconds": 74.02812539198203,
+      "attempt": 1
+    },
+    {
+      "name": "train-action",
+      "seconds": 728.5177859649993,
+      "attempt": 1
+    },
+    {
+      "name": "dev-base",
+      "seconds": 1570.82555884897,
+      "attempt": 1
+    },
+    {
+      "name": "dev-reference020",
+      "seconds": 2322.6405699719908,
+      "attempt": 1
+    },
+    {
+      "name": "dev-action",
+      "seconds": 2582.6555357659818,
+      "attempt": 1
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-12T14:50:38.044195+00:00",
+  "finished_utc": "2026-11-12T14:50:38.044176+00:00",
+  "finished_epoch": 1794495038.0441928,
+  "telemetry": {
+    "samples": 1476,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

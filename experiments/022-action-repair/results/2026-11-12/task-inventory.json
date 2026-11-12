@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "boltons-slugify",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:text-slugify",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-pluralize",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:text-pluralize",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-bytes2human",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:text-bytes2human",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-asciify",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:text-asciify",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-make_cache_key",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:cache-make_cache_key",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-LRI-__setitem__",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:cache-LRI.__setitem__",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-LRU-__getitem__",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:cache-LRU.__getitem__",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-multi-dict",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:multi-dict",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-research",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:tree-search",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "boltons-cache-and-frozen",
+    "repository": "mahmoud/boltons",
+    "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "family": "mahmoud/boltons:cache-frozen-integration",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-index-nan",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:index-search",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-defaults",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:object-defaults",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-reduce-initial",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:reductions",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-uniq-iteratee",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:unique-projection",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-intersection",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:intersection",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-difference",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:difference",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-stable-sort",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:stable-sorting",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-range-step",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:arithmetic-range",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-object-pairs",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:pair-to-object",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-map-object",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:object-mapping",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "underscore-group-partition",
+    "repository": "jashkenas/underscore",
+    "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+    "family": "jashkenas/underscore:group-partition-integration",
+    "split": "train",
+    "evaluation_role": "training_diagnostic"
+  },
+  {
+    "id": "019-inflection-camelize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:camelize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-dasherize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:dasherize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-humanize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:humanize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-ordinal",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:ordinal",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-ordinalize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:ordinalize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-parameterize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:parameterize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-pluralize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:pluralize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-singularize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:singularize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-tableize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:tableize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-titleize",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:titleize",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-transliterate",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:transliterate",
+    "split": "train"
+  },
+  {
+    "id": "019-inflection-underscore",
+    "repository": "jpvanhal/inflection",
+    "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+    "family": "jpvanhal/inflection:underscore",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-_validate_identifiers",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version._validate_identifiers",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-_nat_cmp",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version._nat_cmp",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-to_tuple",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.to_tuple",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-to_dict",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.to_dict",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-__iter",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.__iter__",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-_increment_prerelease",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version._increment_prerelease",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-bump_major",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.bump_major",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-bump_minor",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.bump_minor",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-bump_patch",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.bump_patch",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-bump_prerelease",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.bump_prerelease",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-bump_build",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.bump_build",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-compare",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.compare",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-__getitem",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.__getitem__",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-__repr",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.__repr__",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-__str",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.__str__",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-__hash",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.__hash__",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-finalize_version",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.finalize_version",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-match",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.match",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-parse",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.parse",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-replace",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.replace",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-is_valid",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.is_valid",
+    "split": "train"
+  },
+  {
+    "id": "019-python-semver-Version-is_compatible",
+    "repository": "python-semver/python-semver",
+    "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+    "family": "python-semver/python-semver:Version.is_compatible",
+    "split": "train"
+  },
+  {
+    "id": "more-itertools-windowed",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "family": "more-itertools/more-itertools:iterator-windowed",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-spy",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "family": "more-itertools/more-itertools:iterator-spy",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-split_at",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "family": "more-itertools/more-itertools:iterator-split_at",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "more-itertools-consume-and-window",
+    "repository": "more-itertools/more-itertools",
+    "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+    "family": "more-itertools/more-itertools:iterator-recipes-integration",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-nan",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "family": "epoberezkin/fast-deep-equal:nan-equality",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-array-members",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "family": "epoberezkin/fast-deep-equal:array-equality",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-map-values",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "family": "epoberezkin/fast-deep-equal:map-equality",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "fast-deep-equal-regexp-flags",
+    "repository": "epoberezkin/fast-deep-equal",
+    "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+    "family": "epoberezkin/fast-deep-equal:regexp-equality",
+    "split": "dev",
+    "evaluation_role": "development_regression"
+  },
+  {
+    "id": "attrs-asdict",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "family": "python-attrs/attrs:class-serialization",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-to-bool",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "family": "python-attrs/attrs:class-converters",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-optional-validator",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "family": "python-attrs/attrs:class-validators",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "attrs-filters-and-tuples",
+    "repository": "python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "family": "python-attrs/attrs:class-filters-serialization",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-arguments",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "family": "sindresorhus/p-limit:async-arguments",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-pending-count",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "family": "sindresorhus/p-limit:async-observability",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "p-limit-map-index",
+    "repository": "sindresorhus/p-limit",
+    "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+    "family": "sindresorhus/p-limit:async-mapping",
+    "split": "dev",
+    "evaluation_role": "legacy_holdout_regression"
+  },
+  {
+    "id": "new-jmes-filter",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-filter-projection",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-jmes-multiselect",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-object-syntax",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-jmes-sort-expression",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-expression-sort",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-jmes-raw-string",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-raw-string-lexer",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-jmes-index-slice",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-index-slice",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-jmes-pipe-map",
+    "repository": "jmespath/jmespath.py",
+    "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "family": "jmespath/jmespath.py:query-pipeline-function-integration",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-key-order",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-key-order",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-comparator",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-comparator",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-undefined",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-omissions",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-to-json",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-custom-conversion",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-nonfinite",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-number-domain",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "new-json-cycle-reuse",
+    "repository": "epoberezkin/fast-json-stable-stringify",
+    "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+    "family": "epoberezkin/fast-json-stable-stringify:canonical-json-recursion-identity",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-base64",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-base64",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-key-derivation",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-key-derivation",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-fallbacks",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-fallbacks",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-serialize",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-serialize",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-url-compression",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-url-compression",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-signed-timestamp",
+    "repository": "pallets/itsdangerous",
+    "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "family": "pallets/itsdangerous:signed-timestamp",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-decode",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-decode",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-sparse",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-sparse",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-null",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-null",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-combine",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-combine",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-plain-objects",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-plain-objects",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "fresh-query-sort",
+    "repository": "ljharb/qs",
+    "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+    "family": "ljharb/qs:query-sort",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-expo",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:expo",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-decay",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:decay",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-fibo",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:fibo",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-constant",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:constant",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-runtime",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:runtime",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-backoff-full_jitter",
+    "repository": "litl/backoff",
+    "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+    "family": "litl/backoff:full_jitter",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Scheduler-run_pending",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Scheduler.run_pending",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Scheduler-get_jobs",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Scheduler.get_jobs",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Scheduler-clear",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Scheduler.clear",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Scheduler-cancel_job",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Scheduler.cancel_job",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Job-tag",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Job.tag",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-schedule-Job-_schedule_next_run",
+    "repository": "dbader/schedule",
+    "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+    "family": "dbader/schedule:Job._schedule_next_run",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-__setitem",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict.__setitem__",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-_hook",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict._hook",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-to_dict",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict.to_dict",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-update",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict.update",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-setdefault",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict.setdefault",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-addict-Dict-freeze",
+    "repository": "mewwts/addict",
+    "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+    "family": "mewwts/addict:Dict.freeze",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_literal",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_literal",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_class",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_class",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_attrib_includes",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_attrib_includes",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_attrib_dashmatch",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_attrib_dashmatch",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_attrib_prefixmatch",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_attrib_prefixmatch",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "019-cssselect-GenericTranslator-xpath_attrib_suffixmatch",
+    "repository": "scrapy/cssselect",
+    "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+    "family": "scrapy/cssselect:GenericTranslator.xpath_attrib_suffixmatch",
+    "split": "test",
+    "evaluation_role": "historical_final_regression_not_selection"
+  },
+  {
+    "id": "021-toolz-update_in",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:update_in",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-toolz-merge_with",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:merge_with",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-toolz-get_in",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:get_in",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-toolz-groupby",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:groupby",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-toolz-interleave",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:interleave",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-toolz-reduceby",
+    "repository": "pytoolz/toolz",
+    "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+    "family": "pytoolz/toolz:reduceby",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-Cache-__setitem",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:Cache.__setitem__",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-Cache-pop",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:Cache.pop",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-LRUCache-popitem",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:LRUCache.popitem",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-TTLCache-__contains",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:TTLCache.__contains__",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-TTLCache-expire",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:TTLCache.expire",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-cachetools-typedkey",
+    "repository": "tkem/cachetools",
+    "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+    "family": "tkem/cachetools:typedkey",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-escape",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:escape",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-escape_url",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:escape_url",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-HTMLRenderer-safe_url",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:HTMLRenderer.safe_url",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-HTMLRenderer-block_code",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:HTMLRenderer.block_code",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-Parser-compile_sc",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:Parser.compile_sc",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-mistune-InlineState-copy",
+    "repository": "lepture/mistune",
+    "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+    "family": "lepture/mistune:InlineState.copy",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-set_value",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:set_value",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-from_iso_datetime",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:from_iso_datetime",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-Range-__call",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:Range.__call__",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-Length-__call",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:Length.__call__",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-OneOf-__call",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:OneOf.__call__",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  },
+  {
+    "id": "021-marshmallow-merge_errors",
+    "repository": "marshmallow-code/marshmallow",
+    "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+    "family": "marshmallow-code/marshmallow:merge_errors",
+    "split": "test",
+    "evaluation_role": "fresh_final_not_selection"
+  }
+]

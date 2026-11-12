@@ -34,4 +34,6 @@ experiments/021-observed-recovery/results/**/*.csv -text whitespace=cr-at-eol
 experiments/021-observed-recovery/results/**/*.svg -whitespace
 
 # Preserve exact reviewed upstream notice bytes for experiment 022.
-experiments/022-action-repair/notices/* -text
+experiments/022-action-repair/notices/* -text whitespace=cr-at-eol
+experiments/022-action-repair/results/**/*.csv -text whitespace=cr-at-eol
+experiments/022-action-repair/results/**/*.svg -whitespace

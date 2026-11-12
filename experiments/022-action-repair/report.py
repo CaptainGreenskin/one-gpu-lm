@@ -166,7 +166,56 @@ def assess(root):
     hardware['sampler_errors_by_attempt']={str(v['attempt']):v['telemetry']['errors'] for v in previous+[controller]}
     cpu=read('cpu-preparation-timing.json')
     require(protocol['frozen_files']['cpu-preparation-timing.json']==sha256(root/'cpu-preparation-timing.json'), 'CPU timing evidence differs')
-    return {'schema_version':1,'cpu_preparation':cpu,'data':data,'selection':selection,'training':training,'evaluation_cost':costs,
+    # These are descriptive reruns of fixed comparators, never selection inputs.
+    prior_hashes={'dev-base': '0ea48a5ef7294ab290dde711220d8a497fd8bd6534eb37770400b59ce688b188', 'dev-reference020': '3bb20b188069b30f36daaeefe0e3ebf550993b40e8f87398010e90fff194afd0'}
+    prior_audit_file=EXP.parent/'021-observed-recovery/results/2026-11-12/execution-audit.json'
+    require(sha256(prior_audit_file)=='eea9d99b4db06ac331b6e778b8cc475b20bce12ad650cb6ab16c3e86779ddd44', 'Pinned prior execution audit changed')
+    prior_audit=json.loads(prior_audit_file.read_text())
+    def first_difference(a,b):
+        return next((i+1 for i in range(max(len(a),len(b)))
+                     if (a[i] if i<len(a) else None)!=(b[i] if i<len(b) else None)),None)
+    repeated={}
+    for arm,digest in prior_hashes.items():
+        previous_file=EXP.parent/'021-observed-recovery/results/2026-11-12/campaigns'/(arm+'.json')
+        require(sha256(previous_file)==digest, 'Pinned prior comparator evidence changed')
+        old=json.loads(previous_file.read_text())
+        paired=decision.paired(old,campaigns[arm],cohorts['dev'])
+        repeated[arm]={'prior_campaign_sha256':digest,'current_campaign_sha256':sha256(root/'campaigns'/(arm+'.json')),
+            'prior_passed':paired['base_passed'],'current_passed':paired['candidate_passed'],
+            'gained':paired['gained'],'regressed':paired['regressed'],
+            'selection_input':False,'scope':'Descriptive same-comparator rerun; do not replace current scores or infer a specific cause.'}
+        old_rows={r['id']:r for r in prior_audit['variants'][arm]}
+        new_rows={r['id']:r for r in audit['variants'][arm]}
+        repeated[arm]['changed_task_trace_hashes']=[]
+        for ident in paired['gained']+paired['regressed']:
+            a,b=old_rows[ident],new_rows[ident]
+            repeated[arm]['changed_task_trace_hashes'].append({'id':ident,
+                'first_different_input_call':first_difference(a['generation_input_sha256'],b['generation_input_sha256']),
+                'first_different_output_call':first_difference(a['generation_output_sha256'],b['generation_output_sha256']),
+                'initial_input_equal':a['generation_input_sha256'][0]==b['generation_input_sha256'][0],
+                'initial_output_equal':a['generation_output_sha256'][0]==b['generation_output_sha256'][0]})
+    feedback=read('rerun-variation-audit.json')
+    require(feedback['passed'] and feedback['audit_source_sha256']==sha256(EXP/'audit_reruns.py')
+            and feedback['prior_execution_audit_sha256']==sha256(prior_audit_file)
+            and feedback['current_execution_audit_sha256']==sha256(root/'execution-audit.json')
+            and feedback['model_calls_added']==0 and feedback['inputs_changed'] is False and feedback['causal_effect_tested'] is False,
+            'Read-only comparator-feedback inspection identity differs')
+    require([r['id'] for r in feedback['observations']]==['fast-deep-equal-map-values','fast-deep-equal-regexp-flags'], 'Changed feedback inspection scope')
+    for row in feedback['observations']:
+        a=next(r for r in prior_audit['variants']['dev-reference020'] if r['id']==row['id'])
+        b=next(r for r in audit['variants']['dev-reference020'] if r['id']==row['id'])
+        require(row['old_trajectory_sha256']==a['trajectory_sha256'] and row['current_trajectory_sha256']==b['trajectory_sha256']
+                and row['initial_model_input_equal'] is True and row['initial_model_output_equal'] is True
+                and row['first_tool_content_equal'] is False and row['first_tool_content_equal_after_timestamp_normalization'] is True,
+                'Comparator feedback evidence differs from audited trajectories')
+    focus=[]
+    for ident in ['fast-deep-equal-map-values','fast-deep-equal-regexp-flags']:
+        for arm in ['dev-base','dev-reference020','dev-action']:
+            row=next(r for r in campaigns[arm]['results'] if r['id']==ident)
+            focus.append({'id':ident,'arm':arm,'passed':row['passed'],'calls':row['calls'],
+                          'first_edit_call':next((v['call_index'] for v in row['source_progress'] if v['changed_editable_files']),None),
+                          'final_modified_files':len(row['modified_source_files'])})
+    return {'schema_version':1,'comparator_feedback_inspection':feedback,'comparator_reruns':repeated,'diagnosed_development_tasks':focus,'cpu_preparation':cpu,'data':data,'selection':selection,'training':training,'evaluation_cost':costs,
             'comparisons':comparisons,'pairs':pairs,'legacy':legacy,'release_decision':release,'hardware':hardware,
             'time':{'started_utc':controller['started_utc'],'finished_utc':controller['finished_utc'],
                     'wall_seconds':controller['finished_epoch']-controller['started_epoch'],'within_original_budget':within},
@@ -192,6 +241,12 @@ def render(root):
         for r in regressions:
             review.append('| '+' | '.join('未编辑' if r[k] is None and k=='candidate_first_edit_call' else str(r[k]) for k in ['comparison','id','candidate_first_edit_call',
                 'candidate_final_modified_files','candidate_calls','candidate_exit_status','candidate_grade_reason'])+' |')
+        review+=['', '021 中两道退步任务在本轮同预算下的结果（已用于诊断的开发题，不是独立最终测试）：', '',
+                 '| 任务 | 对照 | 通过 | 首次编辑调用 | 最终修改文件数 | 总调用 |',
+                 '| --- | --- | --- | --- | --- | --- |']
+        for row in value['diagnosed_development_tasks']:
+            review.append('| '+' | '.join('未编辑' if row[k] is None else str(row[k]) for k in
+                ['id','arm','passed','first_edit_call','final_modified_files','calls'])+' |')
         if not regressions:review+=['本轮已完成配对没有新增退步；这不等于其他任务不存在退步。']
         audits=json.loads((root/'execution-audit.json').read_text())['variants']['dev-action']
         limited=[(r['id'],r['format_categories'].get('invalid_at_output_limit',0)) for r in audits
@@ -201,8 +256,16 @@ def render(root):
                      '、'.join(f'{ident}（{count} 次）' for ident,count in limited)+'。这是从已保存输出和解析结果核对出的共现，未增加生成预算验证因果；不能据此推断放宽预算就会修复成功。']
         if regressions and all(r['candidate_first_edit_call'] is None for r in regressions):
             review+=['',f"新增退步共 {len({r['id'] for r in regressions})} 道不同任务，均未发生源码编辑；同一任务可能在两组对照中重复列出。上述格式失败与这些退步任务应分开分析，不能合并成同一个原因。"]
+        review+=['','固定对照相较 021 的重新运行（只描述波动，不参与选候选）：','',
+                 '| 固定对照 | 021 通过数 | 本轮通过数 | 本轮改善 | 本轮退步 |',
+                 '| --- | --- | --- | --- | --- |']
+        for arm,paired in value['comparator_reruns'].items():
+            review.append(f"| {arm} | {paired['prior_passed']}/15 | {paired['current_passed']}/15 | {', '.join(paired['gained']) or '无'} | {', '.join(paired['regressed']) or '无'} |")
+        review+=['','这些跨轮差异不归因给新训练。相同权重与调用上限不保证整条工具轨迹逐字一致；本轮选择只使用本轮完整三组，不能择优使用历史对照。']
+        review+=['', '对固定 020 的两道变化题进一步只读检查：首个模型输入和输出均与 021 完全相同；首条工具反馈则不同，但只归一化其中的时间字段后，反馈全文相同。新旧轨迹各含 17 处匹配的日期/时间字段。后续实际模型输入已发生差异；这说明整条工具观察不是逐字固定的。',
+                 '这个检查没有改写真实输入、没有补跑模型，也没有隔离时间字段对最终分数的因果影响。不能据此声称时间戳是退步的唯一原因。见 [输入反馈检查回执](rerun-variation-audit.json) 与 [只读检查实现](../../audit_reruns.py)。']
         review+=['','所有配对（包括改善、不变和退步）见 [paired-outcomes.csv](paired-outcomes.csv)。',
-                 f"本轮 {value['data']['replaced_records']} 条提前行动替换中，两种训练情境分布为 {value['data']['accepted_modes']}。保留了全部原有错误编辑后纠错样本；这是组合课程，不能单独归因到某一项改动。",
+                 f"本轮 {value['data']['replaced_records']} 条提前行动替换中，两种训练情境分布为 {value['data']['accepted_modes']}。保留了全部原有失败恢复样本（28 条锚点失败、27 条错误编辑）；这是组合课程，不能单独归因到某一项改动。",
                  '训练损失来自不同训练样本，不能替代独立任务通过率；开发分区已重复使用，模型发布仍取决于事先固定的最终门槛。']
         (root/'behavior-review.md').write_text('\n'.join(review)+'\n')
     import matplotlib
@@ -266,7 +329,7 @@ def render(root):
         f"Verified early-action replacements: {data['replaced_records']}/55 across {data['replaced_records']}/55 training tasks. The other 275 examples are unchanged; unmatched slots retain the exact 020 examples. Full input and target limits are enforced without truncation. Only executed, independently verified corrections are supervised; reference-run failing diagnostics are masked history.",'',
         '![Actual replacement coverage](action-coverage.png)','','![Pipeline hardware samples](hardware-timeline.png)','',
         '| Evaluation arm | Passes | Calls | Failed without edit | Failed after edit |','| --- | --- | --- | --- | --- |',table,'',
-        '| Final cohort | Base | Candidate | Improved | Regressed |','| --- | --- | --- | --- | --- |',final or 'Final cohorts were not opened.','','![Final paired success](final-comparison.png)' if value['comparisons'] else '','',
+        *((['| Final cohort | Base | Candidate | Improved | Regressed |','| --- | --- | --- | --- | --- |',final,'','![Final paired success](final-comparison.png)']) if value['comparisons'] else ['Final cohorts were not opened.']),'',
         'The new candidate must gain at least one development task against each of the base and fixed 020 recovery, with at most one regression against each. Final release requires at least three fresh gains, zero fresh or historical regressions, all nine legacy checks and all engineering/source audits. Test scores never choose a candidate.','',
         '![Training diagnostics](training-curves.png)' if value['training'] else 'No training evidence available.',
         '![Development comparison](development-comparison.png)' if value['training'] else '',
@@ -274,11 +337,32 @@ def render(root):
         '', 'Training loss is a sequence of different examples, not heldout loss. Equal update/call/token ceilings do not imply equal token exposure or FLOPs. Adapter inference is unmerged, and sequential shared-host timing is not a production throughput comparison.','',
         f"Actual UTC: {value['time']['started_utc']} to {value['time']['finished_utc']}; {value['time']['wall_seconds']/3600:.3f} hours. Original deadline respected: {value['time']['within_original_budget']}. Hardware samples: {value['hardware']['samples']}; maximum gap {value['hardware']['max_gap_seconds']:.2f}s. Observed intervals cover {value['hardware']['interval_coverage_fraction']:.1%} of the first-to-last sample span. Board-energy integration excludes gaps longer than 15s and all attempt boundaries; it is not total pipeline/system energy.",'',
         f"CPU reference construction took approximately {value['cpu_preparation']['builder_seconds']/60:.2f} minutes before the model pipeline (kernel start tick and completed-status timestamp; roughly one-second boot-epoch uncertainty). CPU audits and publication wait are separate from that construction time.",'',
+        'Terminology correction: the 55 preserved late-repair examples comprise 28 failed-anchor recoveries and 27 incorrect-edit recoveries. The frozen overview called them all wrong-edit examples; no data or rule changed. See [the terminology correction](../../ERRATA.md).', '',
         'Limitations: one training seed, constructed defects, reused development, four small Python fresh-repository clusters, historical Python/JavaScript tasks and unknown pretraining overlap. These results do not certify general multilingual coding, long tasks or daily-use readiness. Read-only audits and reporting do not rerun models or change selection gates.','',
         'Public numerical evidence supports recomputing comparisons and plots. Exact end-to-end model replay requires the private task/trajectory inputs; the public repository alone is insufficient. To use your own authorized tasks, create a new admission and experiment freeze using the shared one_gpu_lm modules. Do not substitute inputs inside this frozen run.','',
         '[Complete evidence and decision](summary.json) · [Frozen protocol](protocol.json) · [Source provenance](sources.json)',
         '[Paired behavioral observations](behavior-review.md)' if value['pairs'] else '']
     (root/'README.md').write_text('\n'.join(lines)+'\n')
+    protocol=json.loads((root/'protocol.json').read_text())
+    card=['# 022 编码修复候选说明','',
+        '本候选通过固定实验门槛；参数是否已上传应以单独的发布回执为准。' if value['release_decision']['accepted'] else
+        '本候选未通过固定发布门槛，未上传 ModelScope；继续保留底座。','',
+        '| 项目 | 实际记录 |','| --- | --- |',
+        f"| 基模 | {protocol['model_id']} |",f"| 固定版本 | `{protocol['revision']}` |",
+        f"| 训练产物 | 未合并 LoRA，{value['training']['trainable_parameters']:,} 个可训练参数 |",
+        '| 数据 | 55 道训练任务，4 个仓库，330 条完整示范；275 条原记录、55 条提前编辑并测试的替换 |',
+        '| 原失败恢复样本 | 28 条锚点失败 + 27 条错误编辑，全部保留；见[冻结概述的措辞更正](../../ERRATA.md) |',
+        f"| 实际监督 | {value['training']['supervised_tokens']:,} token；330 次更新 |",
+        '| 推理范围 | 每题 12 次调用，单次 8192 输入 / 512 输出 token，总输出 6144 token |','',
+        '| 开发对照 | 独立判分通过 |','| --- | --- |']
+    for arm in ['dev-base','dev-reference020','dev-action']:
+        cost=value['evaluation_cost'][arm];card.append(f"| {arm} | {cost['passed']}/{cost['tasks']} |")
+    card+=['','最终测试已按开发门槛开启，分组结果见 [完整结论](summary.json)。' if value['comparisons'] else
+           '开发门槛未通过，本轮最终测试保持封存。','',
+           '适用范围：这是单种子、构造缺陷与重复使用开发集上的工具修复 SFT 实验。不能据此认证先进通用编码、多语言长任务或日常生产可用性。未合并适配器的顺序计时也不代表优化后的部署吞吐。','',
+           '来源：固定基模按其 Apache-2.0 许可记录；原创实现使用仓库 MIT 许可；训练来源保留各自原始许可与通知。没有使用第三方教师 API。原始任务、工具轨迹、语料与优化器状态保持私有。','',
+           '[固定规则](protocol.json) · [逐题配对](paired-outcomes.csv) · [失败与对照波动](behavior-review.md) · [发布决策](release-decision.json)']
+    (root/'MODEL_CARD.md').write_text('\n'.join(card)+'\n')
     return value
 
 

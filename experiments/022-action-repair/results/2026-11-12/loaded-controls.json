@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T12:47:04.672045+00:00",
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "clean": [
+    {
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.3706620879820548,
+      "reason": "ok"
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 5.730382018024102,
+      "reason": "ok"
+    },
+    {
+      "repository": "jpvanhal/inflection",
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.2210086000268348,
+      "reason": "ok"
+    },
+    {
+      "repository": "python-semver/python-semver",
+      "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.0728736169985496,
+      "reason": "ok"
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 31.93497495597694,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.31869176705367863,
+      "reason": "ok",
+      "test_runner": "mocha",
+      "failed_tests": 0
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 7.986535237985663,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 9.03820321598323,
+      "reason": "ok"
+    },
+    {
+      "repository": "jmespath/jmespath.py",
+      "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.2739105310174637,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.11895635101245716,
+      "reason": "ok"
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.5712065389961936,
+      "reason": "ok"
+    },
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.5706906170235015,
+      "reason": "ok"
+    },
+    {
+      "repository": "litl/backoff",
+      "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.8702630450134166,
+      "reason": "ok"
+    },
+    {
+      "repository": "dbader/schedule",
+      "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.2213859210023656,
+      "reason": "ok"
+    },
+    {
+      "repository": "mewwts/addict",
+      "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.9204679589602165,
+      "reason": "ok"
+    },
+    {
+      "repository": "scrapy/cssselect",
+      "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.1709341729874723,
+      "reason": "ok"
+    },
+    {
+      "repository": "pytoolz/toolz",
+      "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.1712231840356253,
+      "reason": "ok"
+    },
+    {
+      "repository": "tkem/cachetools",
+      "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.9205431140144356,
+      "reason": "ok"
+    },
+    {
+      "repository": "lepture/mistune",
+      "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.7722451469744556,
+      "reason": "ok"
+    },
+    {
+      "repository": "marshmallow-code/marshmallow",
+      "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 1.2707551119965501,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [],
+  "complete": true,
+  "finished_utc": "2026-11-12T12:48:18.600249+00:00",
+  "admitted": 0
+}

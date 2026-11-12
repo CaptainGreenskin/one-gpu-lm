@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "audit_source_sha256": "9ff6957c7452edcb691dd4bbc627927336a1755246d7b8f2af6af77cc404e285",
+  "prior_execution_audit_sha256": "eea9d99b4db06ac331b6e778b8cc475b20bce12ad650cb6ab16c3e86779ddd44",
+  "current_execution_audit_sha256": "51145e2daa2519fdfb02722e3d50d83732268acd445a61bb07df9d40577fe9b4",
+  "scope": "Only the first tool feedback of these two fixed-020 tasks across 021 and 022.",
+  "normalization_pattern": "\\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s+\\d{1,2}\\s+(?:\\d{1,2}:\\d{2}|\\d{4})\\b",
+  "observations": [
+    {
+      "id": "fast-deep-equal-map-values",
+      "old_trajectory_sha256": "bb7095be3ff2fc385b0b7bd04517665f841e8a7d0a2641c0f7aeeab68619063d",
+      "current_trajectory_sha256": "055723f8d9366cf63928af11a848a7913d843eab319a792d0fd5638b3240e191",
+      "initial_model_input_equal": true,
+      "initial_model_output_equal": true,
+      "second_input_differs": true,
+      "first_tool_returncodes": [
+        0,
+        0
+      ],
+      "first_tool_content_sha256": [
+        "b2f6a86b85312b512333682df603ce438940717fec3a591613b1d1b23c1f0903",
+        "666d723e30ec12f9473537882f22f52e12b75109ae263d9a9086e6f9c77e4443"
+      ],
+      "first_tool_content_equal": false,
+      "first_tool_content_equal_after_timestamp_normalization": true,
+      "timestamp_matches": [
+        17,
+        17
+      ],
+      "content_characters": [
+        2462,
+        2462
+      ],
+      "normalized_content_sha256": "c25fee40265bda3af8a0690480d4710e94853d85e1baa1c287628ca8ee48feef"
+    },
+    {
+      "id": "fast-deep-equal-regexp-flags",
+      "old_trajectory_sha256": "d163545e03b68918b0c90f1407c0f85a49fa44fee36edb8bbd74120e15520811",
+      "current_trajectory_sha256": "084c239cbd8b25c8da58ad363971838875aafbd8be29afed79bf620d4c9fe008",
+      "initial_model_input_equal": true,
+      "initial_model_output_equal": true,
+      "second_input_differs": true,
+      "first_tool_returncodes": [
+        0,
+        0
+      ],
+      "first_tool_content_sha256": [
+        "390199070e71b26d465418c560a12fa814d1863d61aaf7973d76f3a727236226",
+        "7b73f8d4ff113e621b007cb46dd46d09c8cd288c483ab75687ea7c9df000c292"
+      ],
+      "first_tool_content_equal": false,
+      "first_tool_content_equal_after_timestamp_normalization": true,
+      "timestamp_matches": [
+        17,
+        17
+      ],
+      "content_characters": [
+        2462,
+        2462
+      ],
+      "normalized_content_sha256": "d8ea392e90220f88bcc22293d8971f71b43515ca510a83dc49b11456fd88bab3"
+    }
+  ],
+  "model_calls_added": 0,
+  "inputs_changed": false,
+  "raw_feedback_public": false,
+  "causal_effect_tested": false,
+  "limitation": "Timestamp text accounts for the observed first feedback difference; no intervention/replay isolates its effect on later actions or final grades."
+}

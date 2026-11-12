@@ -1,0 +1,61 @@
+{
+  "selected": null,
+  "comparisons": {
+    "base": {
+      "pairs": 15,
+      "base_passed": 7,
+      "candidate_passed": 7,
+      "gained": [
+        "p-limit-arguments"
+      ],
+      "regressed": [
+        "fast-deep-equal-regexp-flags"
+      ],
+      "net_gain": 0,
+      "base_format": {
+        "failures": 4,
+        "calls": 149,
+        "rate": 0.026845637583892617
+      },
+      "candidate_format": {
+        "failures": 1,
+        "calls": 149,
+        "rate": 0.006711409395973154
+      },
+      "candidate_generated_tokens": 11914
+    },
+    "reference020": {
+      "pairs": 15,
+      "base_passed": 6,
+      "candidate_passed": 7,
+      "gained": [
+        "more-itertools-split_at",
+        "p-limit-arguments"
+      ],
+      "regressed": [
+        "fast-deep-equal-array-members"
+      ],
+      "net_gain": 1,
+      "base_format": {
+        "failures": 0,
+        "calls": 150,
+        "rate": 0.0
+      },
+      "candidate_format": {
+        "failures": 1,
+        "calls": 149,
+        "rate": 0.006711409395973154
+      },
+      "candidate_generated_tokens": 11914
+    }
+  },
+  "gates": {
+    "base_gain": false,
+    "base_regressions": true,
+    "reference_gain": true,
+    "reference_regressions": true
+  },
+  "final_test_opened": false,
+  "selection_uses_development_only": true,
+  "reason": "development_gate_failed"
+}
