@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "cohort_counts": {
+    "train": 55,
+    "development": 15,
+    "historical": 24,
+    "fresh": 24
+  },
+  "training": {
+    "repair": {
+      "records": 330,
+      "covered_training_tasks": 55,
+      "repair_targets_cover_all_tasks": true,
+      "input_tokens": 653649,
+      "supervised_tokens": 41649,
+      "model_visible_duplicates": 0
+    },
+    "recovery": {
+      "records": 330,
+      "covered_training_tasks": 55,
+      "repair_targets_cover_all_tasks": true,
+      "input_tokens": 653046,
+      "supervised_tokens": 41542,
+      "model_visible_duplicates": 0
+    }
+  },
+  "shared_identical_records": 275,
+  "contrasting_records": 55,
+  "verified_execution_branches": 220,
+  "supervised_incorrect_actions": 0,
+  "recovery_modes": {
+    "failed_anchor": 28,
+    "incorrect_edit": 27
+  },
+  "identities": {
+    "tasks": "4a9899f1a32ebb91ae4d05cd1911276cd4c0280c124a705808f65a655fb9bf71",
+    "admission": "7d8c186dc55b49e04ea73f66b0d7e513f5f17df3d351b7860d06c98b987ae166",
+    "failure_plan": "5f3ffc26069b2c2af831b1b88704865cca8cb1a1ce37885a4f18c397489813ce",
+    "licenses": "153e5b89c1be82cd3ecd4105146716460e64411719a7fe496cdd78fba002eaa8"
+  },
+  "semantic_order_sha256": "a3badbd38dcb1444c95e02bb2e44aea18354da34f3033e0704de4cc8ed60acb8",
+  "scope": "Actual executed source-state transitions, independent failed/successful controls and tokenizer eligibility. No model-quality claim; final model scores unopened."
+}

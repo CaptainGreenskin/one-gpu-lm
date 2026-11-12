@@ -1,0 +1,670 @@
+{
+  "scope": "Static target lengths with pinned tokenizer; not actual trajectory/context eligibility or Linux test admission.",
+  "commands_executed": false,
+  "model_generated": false,
+  "tasks": 55,
+  "results": [
+    {
+      "id": "boltons-slugify",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 176,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 176
+      }
+    },
+    {
+      "id": "boltons-pluralize",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 286,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 281
+      }
+    },
+    {
+      "id": "boltons-bytes2human",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 293,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 293
+      }
+    },
+    {
+      "id": "boltons-asciify",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 205,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 200
+      }
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 57,
+        "repair": 241,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 136,
+        "recovery_target": 241
+      }
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 57,
+        "repair": 245,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 131,
+        "recovery_target": 240
+      }
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 57,
+        "repair": 213,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 136,
+        "recovery_target": 213
+      }
+    },
+    {
+      "id": "boltons-multi-dict",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 165,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 160
+      }
+    },
+    {
+      "id": "boltons-research",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 241,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 241
+      }
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 91,
+        "repair": 287,
+        "verify": 53,
+        "submit": 34,
+        "incorrect_context_action": 131,
+        "recovery_target": 282
+      }
+    },
+    {
+      "id": "underscore-index-nan",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 45,
+        "repair": 147,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 155,
+        "recovery_target": 147
+      }
+    },
+    {
+      "id": "underscore-defaults",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 45,
+        "repair": 163,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 161,
+        "recovery_target": 161
+      }
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 43,
+        "repair": 140,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 145,
+        "recovery_target": 140
+      }
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 41,
+        "repair": 139,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 139,
+        "recovery_target": 139
+      }
+    },
+    {
+      "id": "underscore-intersection",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 41,
+        "repair": 143,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 151,
+        "recovery_target": 143
+      }
+    },
+    {
+      "id": "underscore-difference",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 41,
+        "repair": 134,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 134,
+        "recovery_target": 135
+      }
+    },
+    {
+      "id": "underscore-stable-sort",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 43,
+        "repair": 136,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 144,
+        "recovery_target": 136
+      }
+    },
+    {
+      "id": "underscore-range-step",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 41,
+        "repair": 157,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 161,
+        "recovery_target": 161
+      }
+    },
+    {
+      "id": "underscore-object-pairs",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 39,
+        "repair": 146,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 152,
+        "recovery_target": 146
+      }
+    },
+    {
+      "id": "underscore-map-object",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 41,
+        "repair": 153,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 153,
+        "recovery_target": 153
+      }
+    },
+    {
+      "id": "underscore-group-partition",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 57,
+        "repair": 206,
+        "verify": 38,
+        "submit": 34,
+        "incorrect_context_action": 171,
+        "recovery_target": 206
+      }
+    },
+    {
+      "id": "019-inflection-camelize",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 182,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 182
+      }
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 136,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 131
+      }
+    },
+    {
+      "id": "019-inflection-humanize",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 211,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 211
+      }
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 214,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 209
+      }
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 140,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 140
+      }
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 266,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 261
+      }
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 186,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 186
+      }
+    },
+    {
+      "id": "019-inflection-singularize",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 204,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 199
+      }
+    },
+    {
+      "id": "019-inflection-tableize",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 138,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 138
+      }
+    },
+    {
+      "id": "019-inflection-titleize",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 173,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 168
+      }
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 159,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 159
+      }
+    },
+    {
+      "id": "019-inflection-underscore",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 204,
+        "verify": 37,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 199
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 198,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 198
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 339,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 334
+      }
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 150,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 150
+      }
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 171,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 166
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 136,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 136
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 198,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 193
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 146,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 146
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 150,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 145
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 154,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 154
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 289,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 284
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 319,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 319
+      }
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 374,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 369
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 319,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 319
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 175,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 170
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 193,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 193
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 140,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 135
+      }
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 149,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 149
+      }
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 411,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 406
+      }
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 392,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 392
+      }
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 238,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 233
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "recovery_mode": "failed_anchor",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 151,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 137,
+        "recovery_target": 151
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "recovery_mode": "incorrect_edit",
+      "target_tokens": {
+        "inspect": 59,
+        "repair": 243,
+        "verify": 68,
+        "submit": 34,
+        "incorrect_context_action": 132,
+        "recovery_target": 238
+      }
+    }
+  ],
+  "all_targets_fit": true,
+  "maximum_target_tokens": 411
+}

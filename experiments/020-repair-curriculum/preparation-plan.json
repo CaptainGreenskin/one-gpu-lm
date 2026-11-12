@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "experiment": "020-repair-curriculum",
-  "status": "draft_before_linux_data_admission",
+  "status": "rule_locked_after_data_admission_before_model_rollouts",
   "objective": "Test grounded literal repair and stalled-state supervision, then isolate added executed failure-recovery context; final test remains sealed until development selection passes.",
   "base": {
     "model_id": "Qwen/Qwen3.8-27B",
