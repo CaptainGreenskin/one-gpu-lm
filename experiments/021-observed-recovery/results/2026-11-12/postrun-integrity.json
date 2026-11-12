@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-11-12T11:17:46.039079+00:00",
+  "script_sha256": "979c2321f9daffdcbe5cec6067752e43a9a6f257a02916753d89dba854a8f7e1",
+  "protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "all_frozen_file_hashes_match": true,
+  "source_snapshot_contents_unchanged": true,
+  "dependency_contents_unchanged": true,
+  "framework_contents_unchanged": true,
+  "unselected_final_test_artifacts_absent": true,
+  "no_training_or_evaluation_artifacts": null,
+  "base_model_verification": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "manifest_sha256": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "weight_files": 18,
+    "metadata_files": 12,
+    "verified_bytes": 55586105207,
+    "verification_seconds": 41.509286274027545,
+    "content_verified": true
+  },
+  "training_input_audit_sha256": "96ad284d3b74ddd5586d7a2e955250d3747bc25ebb1ece4c1d70ba08bce3512d",
+  "adapter_tensor_audits": {
+    "observed": {
+      "parameters": 58363904,
+      "tensor_count": 992,
+      "dtypes": [
+        "F32"
+      ],
+      "file_sha256": "b0f0d67dcc1a93f5030648387a591f82c92e88fa96dc37ed4962dcad43d6a1d6"
+    }
+  },
+  "derivation_recovery": {
+    "passed": true,
+    "audit_source_sha256": "5587557ef45b3d799d445175b79cc0044d4782ffb62a11240c303a9a65154082",
+    "recovery_receipt_sha256": "0fa0235244ef121ba5b1c4ae213bcfdf9913e3e3da828471709a9dd93d583796",
+    "builder_sha256": "01e82339499cfdcf6b8fbbbdd2d275c9c2c0967095906de8d339ffe65dfba1a1",
+    "original_frozen_files_unchanged": true,
+    "only_checked_prefix_ownership_changed": true,
+    "failed_archive_files_verified": 321,
+    "collection_rerun": false,
+    "original_start_and_deadline_preserved": true,
+    "publication_commit": "ae78fda45c0c1babfd5cd04f8b82b4ea512d20ad"
+  },
+  "public_task_inventory_identity_sha256": "4134d645f27071ff763d5d80e1893cef94da8b1ffe111be41ab3c5a485d3739c",
+  "rights_and_secret_scan_pass": true,
+  "rights_scope": "Exact reviewed source notices, fixed Apache-2.0 base LICENSE and known-pattern/private-identifier input screen; no teacher API. Not exhaustive secret detection or a legal warranty.",
+  "export": {
+    "required": false,
+    "created": false
+  },
+  "weights_public": false,
+  "publication_authorized_by_this_receipt": false
+}

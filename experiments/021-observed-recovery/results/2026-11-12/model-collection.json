@@ -1,0 +1,1009 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "started_utc": "2026-11-12T07:45:07.426753+00:00",
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "model": "base",
+  "tasks": [
+    {
+      "id": "019-inflection-camelize",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 35.944337469001766,
+      "states": {
+        "call-01.json": "8456351deb2a3079c6e87988ced4a50c8449be3f30ee1a35a9eac8ba6d1a2fe7",
+        "call-02.json": "eb8758869f851a383c00c99b203a0409dea2020a3e21ba1532297b73d4b7d9fd",
+        "call-03.json": "1cc3a302774099f50f2695049c4d6b9b6cb0003a7ee3925a58b6bd9db9f5e07c",
+        "call-04.json": "28715af4e2735025432634f65c789f3d6b52170ce8bba6c24623411f443f6009",
+        "call-05.json": "2f4dc281dd65c4251474284d0220acd15d8909f153f0865184c98fa8a1ab5c24"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 18.90603595302673,
+      "states": {
+        "call-01.json": "f139c5087d2c0e3834016b1baf4d461f5d2d6b2943b6a7de07ea5ded6a0efdd3",
+        "call-02.json": "83eeaa46d7375f4e8e61b11668b6420ae134540bdb923e0b8172b965dd33ec42",
+        "call-03.json": "078a36551b96fa7cc99bb6d88280e5b7b1bcaad0a52d68640a4809f855bc368d",
+        "call-04.json": "ef022effd54f5fbcc4381e6cc127e4ccaf85423adabebf195e8a79cea0045f8d"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-inflection-humanize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 47.671114385011606,
+      "states": {
+        "call-01.json": "77bd0be817d6fb677545b9bf00e643bb069606d99293f69dff3e44bd66dbcf67",
+        "call-02.json": "99d11cd3adeb4e68c9bdf7ce50ceaa53879e638c5110a296855c2b840e7cdda0",
+        "call-03.json": "42b737c5fc6a143cd67b93ee9a02e75f28918203aad5c2508dedc0238438198e",
+        "call-04.json": "66456f331414ca0adc02a123b5c3e714fb61c4e25041f45c6d3526f0d2dc58c0",
+        "call-05.json": "92fb9579406a10937340459201462ff08b1be7f542dafdacf3c29f6e41e5ed17",
+        "call-06.json": "ec08ea36cb8fb2012afcef6be62294224d51f892dbefb5b9fbaa0bd381448ff1",
+        "call-07.json": "1251ff63b841ce29ab0fbc1b8a413f7dae1a9731cfdbfa3bff521c7abbc10780",
+        "call-08.json": "169b96362e866f79560dcec5511e48355f424dddc800afc9a5baafb6fbe993ce"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 62.45340459299041,
+      "states": {
+        "call-01.json": "18d6ed2afa6f7125746ae23fad8b495c309f21c948cd553e0131e8191b75d076",
+        "call-02.json": "cb695f9dad858a58dae5fc3960e9275c5edf54556fc2459ddafc217344ceaa32",
+        "call-03.json": "fbcac7e5e466d3e74d7cd8646497671b876f33a83657f09685e70a25926de2dc",
+        "call-04.json": "9ac11374fe1dada1b6bb82cd7d9d3449b0c42b36f9f4669979e52fff3d815e17",
+        "call-05.json": "f531d5bfaef6eb9ca4a5c953dbb44679bd7db7dbb18689967a12f81b1fb289b4",
+        "call-06.json": "59f04c520510a28f28399e062f044a742abc31699787c006369fbfbe60de9e73"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 38.20010066701798,
+      "states": {
+        "call-01.json": "21ebf6541a7e48ff43a02deb6766ff66653d7544f35dc9f036e8642d69dcc00d",
+        "call-02.json": "f01f8b4a94e4979120fd2fb92d503369df90bfe6f85ad4d4f074adc326f8f951",
+        "call-03.json": "45306b576fb95bffd160a0ece1a187502d52076303508e6783980462fa63d22a",
+        "call-04.json": "32e087921beb40d85a022ba4de60b696ad49ceb4831fac498a3886689d0d7d40",
+        "call-05.json": "c9a9140ac9034fa7411243a50eb273ce4cbd4b7bd114a11fdf32d598d940d8fa",
+        "call-06.json": "f3435a38d53eb69b5a720b44b918639ef77a3a675d9a3f0ce8b0c1321269122f"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 44.2639753689873,
+      "states": {
+        "call-01.json": "b7a8242ac7921425481f18912307507f021cfd9b56db5441582479ef53de67e7",
+        "call-02.json": "bc980c48b18c9f6033dfd2dbba362cc395cccc11cd1c44ca0a0b7b0577afbceb",
+        "call-03.json": "41e7c8df944907e8c979201c38efba2327841d608f87030beb78f90f9bb30a21",
+        "call-04.json": "59d974f94423c8ff7b7ed8b60075a1347ea59bd360de854d7e9e166430c83f11",
+        "call-05.json": "9cb527f5e16e21ce517a01cb5c6f79d0f2c7099bee53cdc950bcfa0e2b0dd3c3",
+        "call-06.json": "a97df3575967be90782c3b2ac7711563a1aa43b14f6320ec7c5172db783def61",
+        "call-07.json": "dd8bf1dad4cc9db042d9f6ba5bfcc20f79d2d11e6590178e6bbf695f646d134a",
+        "call-08.json": "4587a86951840657b2d5d052d9a6bb8ab57b5549307cc19c556c228d0c137bd3"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 34.78186031902442,
+      "states": {
+        "call-01.json": "d286bc8efa077eea4eb6badb8fa0127b63c91e1b66b17421f40b538f6e3b8bec",
+        "call-02.json": "288938254096de03eb4af515f595c29f56817ab92eb26ef5d83f10a19f3c0c04",
+        "call-03.json": "ed89f0dd9bb3a10560e11f80f6f7ad060a49e55821909b88de3605dfb4bba7c0",
+        "call-04.json": "387bdfc07159f73a21588a59acc2fb9981d295c20381ca222d1d96ce0f92670d",
+        "call-05.json": "a01a92189d54a6f2a159dd491b44814f4b6818c074c472700b315e7532b74846",
+        "call-06.json": "a28a9d0cd3da21422db715f7501baca7c0e61ba993e591bcba78d78325fb24a7",
+        "call-07.json": "06fc4867b9d5c6043f5b1a695ab3b5cc2d1cc3af4e1d9ead556141e42019152f",
+        "call-08.json": "11220eb6d3de5f82313bfe14f870afb2f76bb20de352ff9cfc2848769422fbee"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-singularize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 39.00119917304255,
+      "states": {
+        "call-01.json": "42bda4b67381feb5e1623ffd94864ed87aa853074441fd8f01e296c9c0099bb7",
+        "call-02.json": "bf934d4e38b26e9e7406988be0b355474de74f413cc08e96bae2f682af6669f2",
+        "call-03.json": "b11c7ebe75b1e4fc8011eb56e3238c29aa6c5dbb913f4e77178c2b75e61fa062",
+        "call-04.json": "15c73b762c7e798371d7387c31ed67dec76ea1b8911dd2bc3c4cdcc2b4d11ed0",
+        "call-05.json": "b57c4702a1ae0b6fa5ba43489138b3b6f1d1b40858191878971b749c47869be7",
+        "call-06.json": "bc3797749d932e3ddb1bff6c1a620b781fb236ba61cd15e38132bef139e63135",
+        "call-07.json": "5320922f4f09c2c0ea5b7aa170804894c4f1c511ad21d39d34858e2365f03035",
+        "call-08.json": "e30a32d809acf92e3417aec04c3fd8ceabde41746167d6ef749c1a8e3c7be359"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-tableize",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 42.660722366010305,
+      "states": {
+        "call-01.json": "abeb7cf6d509b692a3ed8da108bdad94f595c515417a0b6e583a775bb93a56e6",
+        "call-02.json": "d9698602493ce492078443dfc81fcd63976a0d993da26d6359441b9a3af60e4f",
+        "call-03.json": "55a7fd8e054b79bd2edaa030ac5067a6b2e2c48976b8c69050294bf116e268d4",
+        "call-04.json": "acf623d627e1bcd9c41c9dc0caa1929372aeba0c9fb191488999cc46076e00f3",
+        "call-05.json": "dc735460138da092dc30794ded3687f47b703dbc8659ad5539492c431da369f8",
+        "call-06.json": "7600be4496c8239f61d73a542b65692a132a3f5d86bc568747588e5bd7a1de9e",
+        "call-07.json": "1fc3f57a8c58292f82c05a3bed1077cf23600bdbc836ef19bbaa8ab8ce223cef"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-inflection-titleize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 182.72640014899662,
+      "states": {
+        "call-01.json": "94745722648445a2d4f92485f9debd8b54cd6cb011e9b4106b06e4ed62e4f8cb",
+        "call-02.json": "a6446259cd1eba9b6675d2e9e3f5d6f8061b7cabce140b4e34e26ff780632c0e",
+        "call-03.json": "3c9fc5f47ca99f96bc3501dfc6e18ae3b2b4c134f6f5d8f848fe036b22fc8593",
+        "call-04.json": "a9975f985ac57f6c972be923f7655550019ee977ecdac29be2d092f2f0281528",
+        "call-05.json": "7b72bf70fa5520731efeff983569f05a6c9896820129562df7bc73818a232b88",
+        "call-06.json": "3c71b12d979e386f7c03ba9db27ff48b35abb3823ed95a8ce63f49323aac6b8e",
+        "call-07.json": "2f380db236d3e59a4964f813f31683721c294503b728a2754461176de8205917",
+        "call-08.json": "e1ad12f6295d4018b3bdb80491bdfd3663de02ebc420180549e92c3fa821d2e5"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 61.18325239804108,
+      "states": {
+        "call-01.json": "569d2ddc9af6bf497c813ff89adfcd794f25bbcdcd622033005c6f02ececf57e",
+        "call-02.json": "79bdbac7e66dbe77981a525c466f168dfd3a61275cb6d7f8989647c2fa062f39",
+        "call-03.json": "7b3b97616e3e3adfbef7461069cc73d2ad158e94110c50734bfa1c8ca495c136",
+        "call-04.json": "6e1a89cbc99d87d928541ccd9040e6114e24ef853082f93f241b5e06884c458b",
+        "call-05.json": "5426b411378be19c7b4eb601ee23e6428cd88e43eec862bb88bc1b5b63031add",
+        "call-06.json": "e201605ab324748d3f8d2bfcb55975861369e705ff68858a7b08b6a3eb461fc8",
+        "call-07.json": "24d713d70b99cf67734ae44cb9da3fb22803717dbe0cf659a3af1f5339881287",
+        "call-08.json": "3f4f7bff8a76485b5c4ab4fdecb01ba413b23ced580242e66668f255580b0e3e"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-inflection-underscore",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 56.6388712899643,
+      "states": {
+        "call-01.json": "4fe9d80eadf8807b52e4e0e39991894fdb8758c2be1ce1edd5d88e786eec3fcb",
+        "call-02.json": "c131d6a88e6e1de632210e34f8a0c10969f9fae4870334d18428488c51457e42",
+        "call-03.json": "71bc833701bf12640bb120014878b571dc5805dbc7b73fd17940109ea85bda07",
+        "call-04.json": "ce6a60c41c7be9b9f54caa804010a3b4e1e532718ad5f337b806390df292d5e5",
+        "call-05.json": "b141467055836e74289d4d3e894ef62c953155921ae78ce5bcb0ac39c6a5a8b7",
+        "call-06.json": "0c94c956e69dbff9db0cfc0fcc4292dcf28dd877ea5f509e2968b9f9f2a32925",
+        "call-07.json": "f7a498ccff8bf46fe4c607c286e4055823e8dd39aa78cfea759122e13e73e4cf",
+        "call-08.json": "572c9bfcaaa312fd3707535ff9eca6fe70ac403c5d7c54f7c61023a45336c350"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 44.66275090002455,
+      "states": {
+        "call-01.json": "81035eff3555606d6791302ad74b8af7229ba745804b089cb5b227bfab9ca4d4",
+        "call-02.json": "bef3379afd1e850dd6a4601a1dbf504c61c1f6813558a536184b2d6e9b6db6ec",
+        "call-03.json": "58e5543314ebacbbdbee9d43cdccb02575ac59452151dbedfcef97141ffbb3f7",
+        "call-04.json": "f63d3901292f013453f43e01f069fc0add35e59e7417515b304f948c9c16291e",
+        "call-05.json": "49934a639a4605dffb6f74fc92c3a7036c8e06840987b5b6cd1568792f04cd96",
+        "call-06.json": "10f0f1563b65588e3ffded6bc3797a98317835730ac0c76bc5d144fe1364e33e",
+        "call-07.json": "4e40d2c77253e64e5702f405c27549a8258139cca55a8506f9ce3819a93d172f",
+        "call-08.json": "98a9475a84f327f24d12f5c1fe04658d989ada5ed5f4c130f032b7f871eb404c"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 53.883961824001744,
+      "states": {
+        "call-01.json": "cc517d0d8aedbeec1225e31dbbf3b1713433ee019be6e200bf88dd0b9af22bb3",
+        "call-02.json": "fe1df40d9ceb748fe7436115108339ef10fe0ad5bbb990fd98958c95950926e4",
+        "call-03.json": "e54d4e17193866e402d4f5fb5f5d44eb18d8e4f40bf7ded98a1b6411081ff42c",
+        "call-04.json": "e4d8c6c01feda4caa64fd65d75916e8fe753186b4518c0178d452d387012234c",
+        "call-05.json": "1893bfa16b3b164977f86a48417ef4f42d29d2b35674f34045b80fd7a733f4f0",
+        "call-06.json": "683cd1dc72a5f4c6ef78a616053df9a60dcf2eb9903843c69cf1a0e7816aa723",
+        "call-07.json": "3786f051bd00b8fde380734c3d1fe0ba5e65b2b7b5d44e9c26536a9530332a1e",
+        "call-08.json": "82c4a5ecff9ff7b0d9160d1da3b2fb35d7daefb7c913a9c658159026f8658dac"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 48.22240421298193,
+      "states": {
+        "call-01.json": "410a2ef9e8cf216d0863a76846cc15a7636b539f0059f0f878f30f89006c3385",
+        "call-02.json": "7290aacd6ec129db87519464d6bd0f990581d97edb690e25cac2198081bd78a8",
+        "call-03.json": "63a58a04912df60fe7d8f412483765813fb25692d7a744949d31395b23afa5fb",
+        "call-04.json": "bd7bfc2bb4b04591ec53f905718e4185f12c6b313b3eb51f6d3931aaa34d315c",
+        "call-05.json": "a1c0bf1cb68ed25d5cea797f3d02080469f3d6251ef7eca19ae41ed94e0f5363",
+        "call-06.json": "6684dfe782d4e3bf16250afdfecff12e0e40c0e3a75b3f613b695d2627e08081"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 50.22389807802392,
+      "states": {
+        "call-01.json": "97df0d24507f2449b235537c9236de5848e2082a2fa47093b17d1cd40f480de3",
+        "call-02.json": "79f647f5b2f3d51858ff6586b079f850ceb50bfd8452bd43e1643b78a93b9f5b",
+        "call-03.json": "99d6ea6480c88471d8df3aff349d90421c705020a421ae93efb0d354e341ad12",
+        "call-04.json": "992770cab836c91807c150b3f29fd704078a78a1d53eb7bcc5bfd568edcdac57",
+        "call-05.json": "e5544f9993c33945bccd84f4f0ac0391a37da9c2af16aa8d02289b838e8b6d41",
+        "call-06.json": "1135bb44d51d9952814682d58fc273134f81258745f28d0d14dfb26e5083f94f",
+        "call-07.json": "6a6f641489bc0aeca61fbf19a2a824e67fe4799b200dba3f3f2a2c4258a24fc6"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 45.66441145003773,
+      "states": {
+        "call-01.json": "bd9f874a860f23b8e3ccd292268504bdf1dba2b40620c0286159530243717c49",
+        "call-02.json": "efd751b9b38397049b49ae5f1ade41062f611f19f07cb68f34f952b67c35a687",
+        "call-03.json": "144b527a60dc8faf8d9c3bceabc25674bc9c22a397f12ebe033dd652ca6c0bc4",
+        "call-04.json": "efcc76ff7fd2b9357c41bb829401abfe16d1edc4ac7ca2b750821ae8a93f082c",
+        "call-05.json": "8943a8eb42c17444238a710dfc8c1fb13fb4ec11518a5beb65db71b1d909e039",
+        "call-06.json": "9e803b12b11ae48304e6ff074059702106639a20ba64e38a2bf3672e14f4cc14",
+        "call-07.json": "2bc081e593d70afe2552eef3df7a353212527bd5383f1baf0b99ac02ebf97704",
+        "call-08.json": "f2372f699f703ce7ab3a62261d1b6a86eccf9132ec1714e4068c78173a80d428"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 43.06123784801457,
+      "states": {
+        "call-01.json": "20312d95d7979facafe63e79a17d6e3478db6da74acd2b4fc9025991a83fdb3e",
+        "call-02.json": "b328c0dbece3a3c4903b20fb472a6eec08e287191917d8a1e1cdbb4e1856d1a9",
+        "call-03.json": "be8a527c71bc7fb5f9cfa03d25748cd3aab2d76773bc8b39eb425deb4cc33397",
+        "call-04.json": "8954288c1d5773ea2722cbdad82b4b72a23907c54e17bd78a9676046a4e4d435",
+        "call-05.json": "165f3814e01f5297ae4c4568d71efe72f188145021742c08327d0f071b77d68e",
+        "call-06.json": "f3e19b4ad58fbcbb63c8b2baf155fa4d402b3d4576b7dd86eccb46e168db4edf",
+        "call-07.json": "085e171568e0bb4a2e93ea723e87d8dccdab139d54f39c548e11abe9f1864016",
+        "call-08.json": "2539b01831cdbe759fb5b4dc65638c2602928545081698dc36ef8a8891ee6daa"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 44.86471057496965,
+      "states": {
+        "call-01.json": "9a87fef816e8bc61254ddfc8c6a0b12a55981d8e89f7898394546669268366fa",
+        "call-02.json": "c6314d8d92c498c4cbe43ca7ee3b00aa2f3155ed269ee057cba08dde761662ea",
+        "call-03.json": "fa35b66dc09c31ec0a2478cdb7c0d6e4d0e9549fa8044db53e5ccc7b2b0341a3",
+        "call-04.json": "55efb0051984fc887adc08038ad01651165a20d85e45c16c54a7b9bae6907c8d",
+        "call-05.json": "e92d38ada097c822d61ed3a8fa4a48f879fa58c1d11065c9311131d91b6e277b",
+        "call-06.json": "18a6bf07ef934944b397d1927dc086f7d50826e9771cf2b9f97d9cab7d994497",
+        "call-07.json": "426db5d44e831f72fcf3680ec278db47503d2afb40c6487f900c62ee5050dacb",
+        "call-08.json": "0abf113dea30a763892ba76a7694ca5c6b926daa4c511ea783ee992f3ca8d54c"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 44.46229756396497,
+      "states": {
+        "call-01.json": "970b082bba1727724f10bd9659b06ed3a860f9a52695aed8983bd1e60dda27f1",
+        "call-02.json": "b0ba0dd5e28f166e663d8589c8b86885960fe049d1322bf4d97e84af22c140a1",
+        "call-03.json": "c91ccc4feb4b3b7de4c51a02e5df49323656a36a8dd82b488c2e2cbee3396e7c",
+        "call-04.json": "aaf81bae402e70d2604e49a441f200b26fb7e7a7fc799fd5724c35698f90ac58",
+        "call-05.json": "3192b6cb081b66cc7f0c3bc5687d3554e520ed5ac85006a21a3fef27af030934",
+        "call-06.json": "11c4df2af804108137d9691cf67941a39f38edbf7fb55664c7ffb51f6bddeb12",
+        "call-07.json": "1965194ea078d655ee210f8a35d1ac669ec96b9751c78ce1255d14e625fc8d83",
+        "call-08.json": "836b448ad6aa6f1303fa79e1f01a1151e8941cf4751180af5298b356f4cd5b6e"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 43.561654879013076,
+      "states": {
+        "call-01.json": "fb854ad796b8e0cc670fdf8b755e9d2147b3b0ee8247653be0407cc4a51141e7",
+        "call-02.json": "1a100d71b170a7ccd8db1918688eacacce18da5aed7737d6d4a653f1e9a49a3b",
+        "call-03.json": "555c4dcbc8b54910da85cedb776da893d1545e0e000931fd69e5e05b165140db",
+        "call-04.json": "6bd7a845cbddd15506d14471d84f00bcdbb6759f7aed5735e4367e30ee7f5e82",
+        "call-05.json": "4139c3d4e79c62ee4b87294ad3893e68c6c1f31d2d5df26e380c0a7ff6891345",
+        "call-06.json": "3857c7fbe5d7e964a849fad84face5dd2df4fa8dc30bd9b31953b99817d403a5",
+        "call-07.json": "1009ddab7f99634fc7b05859f51a76e74651c22c301e77f925f8dd7da3cd8a95",
+        "call-08.json": "6fdc9f68de35a06ae8bbd61e00d0689726cbd33593164444611edd5e54c4844a"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 62.25243893300649,
+      "states": {
+        "call-01.json": "6ec1d22b02e38f72db55369f4048845b6da338c18296f2b9645b9e0fcc3cf5f2",
+        "call-02.json": "b0ace8c0f3cd9a9c3d852c19ea28abf8d8c1dd69c7bd0e910e1933e110dd4967",
+        "call-03.json": "21e13937c13b706c7ff1f61143deed49e3fd850d43e6e9257772964882e25357",
+        "call-04.json": "d2eeb2d73454d1867e75f3e8d8a53dda1fed7b5a213d50dd7b1700dc0f2f07c6",
+        "call-05.json": "f955a1880f7ca14b209e6e22120c90f049fbde424a293b8a3b72fefed85e4fca",
+        "call-06.json": "d500ddea37cc865e37dc5641dcfdbf00bf30218b432194b29e975d85783042f0",
+        "call-07.json": "95d791756a7b8185586c90168e027944a9a4eddf7cb3054e5ad0e0003b70122e",
+        "call-08.json": "453f027ff999a71a5dca8f6bd4e33fe138c71a6fe2c7f18fb3614e42c2447418"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 55.63766003702767,
+      "states": {
+        "call-01.json": "22071f1f2593c2b5063931956ac8c5d5a93040cc29c4282d7bc687b0ab9bda47",
+        "call-02.json": "67372b4d69908cb2e46be79fabb63b693643506875d2498eb33520a6cc9a6690",
+        "call-03.json": "57eefdc0be4c8ec65f5f586446bb6656b22833c53c78d94a22239a29ef1f4c8f",
+        "call-04.json": "338a49946cefcfc0abf6b0adaf1e9d7cea7a236ab90d894997f4c9ab45ad0c7e",
+        "call-05.json": "8262786d51ee72ed0ef9245410751bd846f98d3988156b120de77ca22cc1563f",
+        "call-06.json": "27c84fcdb1b912a1e1d2d7e402aada7aa34157feb0c071d452ec0e55ff141903",
+        "call-07.json": "1c5af937f0a1d87b6b5855db83c59825de8e292efaebea12c58707be37ebf39f"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 55.287730904005,
+      "states": {
+        "call-01.json": "b5d3b637891f8100411127aeb824020c1ba806a0f84802c0b62bf9d503981757",
+        "call-02.json": "5680d269d5ba8d90c4e305d29b30972b7f4e7e62b8f0aaec5cd45e8190f86e92",
+        "call-03.json": "d842350de35499fb6bdceffc4ef19ac9a9bb68bcd1e452050794aef9e81f20a4",
+        "call-04.json": "6f9babcb4b0039d7332d14200bd2799d3c8b166bab45a08992a4221cf6da03d6",
+        "call-05.json": "8423e8e6a4fda391f86750263287529b14d86b2a060b882ea796b560b23ddf5d",
+        "call-06.json": "28b659c5bb085e5a191e574a12c17532aa5bd9a858998fea51921203fd7c8b6e",
+        "call-07.json": "4eacdb11a88debc013c8245cbc9229909de689906eeb9d9fc36f30d52e7f4a33"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 39.8033311899635,
+      "states": {
+        "call-01.json": "08b1e0f81f0b5440585cdf44ef390464c1d1343988268ad5826f5c15980bfc81",
+        "call-02.json": "b2062761c3a7a915e86fb927376ad66bf8830e9a3ba734a6f59431f0ade9880e",
+        "call-03.json": "56afaae432e16e40472610a5b3581ba50f2cb25a72fb0420e999d5acad656d11",
+        "call-04.json": "dbd94986fe277c48293fe9b048cdb6363a56beb224b1475f4663000437ffca80",
+        "call-05.json": "6a94b4a92d9627fa14eadfedd44a1b05ac8922cc28da0df69ec9abf2cbb6e095",
+        "call-06.json": "ac42710c26695987a0cdd108197bebb0e69d76c2f37688bbf5111ebafdf48331",
+        "call-07.json": "ec2d5534bc78dac16cb1c00b56bea40f412f4db0b911c5d2e36f6a2bf2575519",
+        "call-08.json": "0deb430a153381b25febd1ede924642b5582d9680f5499edd61193da23aef174"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 39.201918122998904,
+      "states": {
+        "call-01.json": "b2111086ce41e0f1ad11947879a8069bc6521797e31dc33620b7cd6b6f213c9e",
+        "call-02.json": "71c83cc41e1cafee37ee1d3cacc46b11ce6012a2b4a5b50f49b4c2ae017152f3",
+        "call-03.json": "ca5ad591266d0f5081ccbd516ec86f7a3c640234fd6abde7fe7e5e6f90d1ca3a",
+        "call-04.json": "46315fcdbdd1232f959b7a83744b0fcc3a0a1590d82d00985d730c3d363fdfb0",
+        "call-05.json": "9b55381f91923884ca0b208b08c559bba473e0bc99450e6de72f12833e209427",
+        "call-06.json": "02a4dda6bcf68ab0bdfa4bf1a8f408f3cd8c1210f0a6816ce2728f61e717d24f",
+        "call-07.json": "d1c51fadc7e06472866d44b5bf550924e2f4ba30bf4df5dc9fdee99a7cab0a5a",
+        "call-08.json": "c44797837179faedcfae033ddc33e2d8891df4ee5f1e787c5e41e153cffb078a"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 55.287287904007826,
+      "states": {
+        "call-01.json": "34b74f3a1913041baa191f9dd6901c59819e0e2e3806a546651dd73619451075",
+        "call-02.json": "f81adf3b25c025a8d34580e08b57762cf0ca38e4e1756a61aa489fff464433ca",
+        "call-03.json": "97466b6718c1b0275c37f729fb22b6458f110f9b0e81ba21b343f33ef1cea70f",
+        "call-04.json": "886870be1e224dccf6b3a1508e99a8fa47c51293807daf104030091f5d2111b8",
+        "call-05.json": "9a3eb803f544ca39e5b7123fed618d69e5687242c293b720f5f47b92f859d7a2",
+        "call-06.json": "a089fb4de4180341370c6cf8fb4df39eba4535a67b1f38cd22e9ef5acd0c9081",
+        "call-07.json": "9aadaf1b0121fcee77c550b0100707003970592c9239a6f76846f43c12c60cf3",
+        "call-08.json": "d92efd972d7bacf80b34638359ad76705155e2f6daee107df8a7298c79751b71"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 49.52120228798594,
+      "states": {
+        "call-01.json": "dcdf5629c18043fc8c97a1e8076761201619d1a3dc56a93139e5b888ebb0ff69",
+        "call-02.json": "04d069d213e6138d29c3300b25471c1409c09a63d8eaa15e036a9b930036b228",
+        "call-03.json": "2cf834c4f3159d727e56f1ca152edcda89473ad1b0d4712c8440efc54a559a6e",
+        "call-04.json": "3271dbc315159950e3b0d782dfaa23e0ac68f5c03ac77499e42269b9d3d065e7",
+        "call-05.json": "04791c10b729daeb37d804ccb14dc9660b680f1f701a55827c400fdb1ab4540a",
+        "call-06.json": "5f616f2f558134f217cec3eb47bc782783857cb49926aee6363a9847341c94dc",
+        "call-07.json": "1bb2e995e3313c3c7789f0a748ae276857868c44ceda5718c0412b44167d10c5",
+        "call-08.json": "0ea4c7894bf54db647984014c1b711e5595a11b31245f88b4077ae18c88fca6c"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 42.00667515600799,
+      "states": {
+        "call-01.json": "00be0fd2561d23633e742f510bc4d36d3194d4979b34a0433eb81279d8184bc0",
+        "call-02.json": "097a5e79b26a6f394a37a31ae4c5ac49d698fd017eb10ac9315101e17fa35ece",
+        "call-03.json": "1d26893cae0996f62c61b0ec6b875b285d2d3bfb670ae526a421b5ce9081f265",
+        "call-04.json": "13a4830a943fec2efe34cbba98e84eabee5613b07634b3387f5f8cadee5e20af",
+        "call-05.json": "e98d97f02be256daa19eef2d2214f09909e9732f891a41dc89ea7ccd6b703a47",
+        "call-06.json": "b25273ab63a377f4a52b2899f2d027ce709f7c951beb8ebc64ddcc4d95f350c3",
+        "call-07.json": "73e24cb24249e178ec08a2785be3522e18997cf880ffc97271ecdf408933ab68",
+        "call-08.json": "6ac64cd243fecc2913f780227ef7e4024e69b8660957f932d43d74e615b4708b"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 37.34614087699447,
+      "states": {
+        "call-01.json": "935c636bcfb93e0e79f961c5db38804e1da816282ec6b036d0278b2a9e558b2a",
+        "call-02.json": "7abdf08132577497a3b1b8eb344a6038bf605dc5f80a93ccb3eebe5bbc59c666",
+        "call-03.json": "5dd9bcee067a776e8e0583a6031a828d23f1378b41a320862cb561038ebe9b54",
+        "call-04.json": "2069dd74ba9a3feddd53e0f447b3b01b1625679de69bffaa7fd8670a90c84f83",
+        "call-05.json": "758769eb13b69dd6f0feb3d96df405befd1cacf76d943dd3cfa9699e969c3116",
+        "call-06.json": "f6e5246be3f0009c65f40105a0d7d9f8db45db0e21e81b183d23aaf336319f7f",
+        "call-07.json": "7dd9560b8c9a9a9151f907ea25fa7cb777cbd747f4ec60ab0dd6bd0f9c09b79c",
+        "call-08.json": "519922d582ba3b53274f676a620d19899176adc23d46e17e5f6cb29731c70847"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 41.60661168204388,
+      "states": {
+        "call-01.json": "21bc976b91b55037feb2c94c8023f69b209f3f0138151ad11af41a91328ce2eb",
+        "call-02.json": "5396b26cba99a413f72625b551583dc32568e621bfd598e29d1c67658b89a74e",
+        "call-03.json": "ee8b9ba99f97906846a643e9aac89d31c7789e5ff7fa3c4bd40ba28748e6e410",
+        "call-04.json": "423783aa7c86e01c088787969a07ab7013db4ce7cda541f4720c5b91a9d8311a",
+        "call-05.json": "70c674b9d8dce68de7b2d3863c6d53983cf2ef0d9aae99b6077580b3eadad6f6",
+        "call-06.json": "8fc84071e9799d724ce60520b7ba123b8de2cd1feefea3fc43e9a77cbd89d986",
+        "call-07.json": "bc8251682e4fa71f005ced595e0eefc70b989c15f3fbfbe86d1c6b6fbd22d375",
+        "call-08.json": "a82a232c1e65743bac68a95fd5a9b3c2e5ef3f18f347cdee42133662d7e04575"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 49.120816179027315,
+      "states": {
+        "call-01.json": "c2571bc99be298c1813cd963a15fceebf83fe4ac6f0597ada3e59dd7c2d7c4f4",
+        "call-02.json": "69eeef2374f3e9046817cf53a7e62c71f9165026257e47477ee45347b295172a",
+        "call-03.json": "6c217aed4fffe2ad69faf91104d57a9ec31f01560d06032742d8bf34ba5a7a2a",
+        "call-04.json": "053a78f76632ae8b100466345dbf966d51d82c54a236cec19044675efc1df8f6",
+        "call-05.json": "bc8d5c34b48afe56d86ae82d4501501f0bd743d831ac7cdbc042d508ab2b685c",
+        "call-06.json": "8a2c1b168ea3b53a2f6d253d4336abf721e7dce526da42dae1b63a130fb190e5",
+        "call-07.json": "49a86810a0e69c6c6d4f66d7a80c2e6dad645d6b7ac572281ccb3a54a5b7764e",
+        "call-08.json": "4891617995ad41445fa7a468911af523d1244b06468c2adb45578582096c4e5e"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 58.344626962032635,
+      "states": {
+        "call-01.json": "09d7b19e582a6627819e60a549f9e5ee4eb7e0300fc0bae863e5d0987a4a9f97",
+        "call-02.json": "eb7acd342d7d0a8574d75d302590c34bcd9af078f9855f006eaab4e5262bb2e9",
+        "call-03.json": "b819070b9cb7ed7aec76cd90d22456a8d281173593a95cbdcc01a29fc185a1d6",
+        "call-04.json": "91ece05fa03789280cb2b72854469c9544c55cf1747ea65ad0a54426e699fd99",
+        "call-05.json": "ca0fc2727f942892e0457f494d23e4ce355abab47bc168d0bd12712d82d0873d",
+        "call-06.json": "f8ba06364b6eda25081a6506e99e9a4ce39f37fa85427179481721847057502e",
+        "call-07.json": "4ad1ee900f9d839f7a336698ba46f672eebcce24f1d835660b8c615f048ed82f"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 45.01156167295994,
+      "states": {
+        "call-01.json": "b436bf61595c03f5f9618075499587b661f8ff9d030478351c7974ce10a87fbf",
+        "call-02.json": "1ed93534d7cdfea965d88c1460d952c0555ca10be41098ff8fb44fe62d38bb5b",
+        "call-03.json": "325a974a6cdf12cd711a16eb18173cc60fcbb72bb0629225522a8a54af681c0d",
+        "call-04.json": "a5a816582ee1b8e8820fd03536ad63bb6f5dd6566ddd4038769349cbca686574",
+        "call-05.json": "1bc73112f4cce04173d4d32f3346afe54bc92bcb615aa1c723481390842d1a79",
+        "call-06.json": "fc05a97dc5a0be16bcaba5b1dd1d87060d825691141a969eb0380ae324a1d4c7",
+        "call-07.json": "e117fc2c4f91673c6ce1cea6b9aece6f1d34e5c85cfda088deb6a80e6d4e7897"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 37.49759671103675,
+      "states": {
+        "call-01.json": "24d75b38fab552c2bdf3bcade92fa8bb719eddeca693f4573cbeba08d3f0e8ac",
+        "call-02.json": "c6efd1e732e4fa04d1e460408fac6b929b2cc7e16541c5a5a1f09528e0825967",
+        "call-03.json": "f43c3570116549fc41089eeabc58783fe1955ad1a3a4d3bc71c5bb819d8a4130",
+        "call-04.json": "1a7088d97f19a33cfbf401d60e11805d59bf82e9d84509cd066a5943e5ac8bdc",
+        "call-05.json": "8c32039aed1f4670379a4a8bb46e784f441710bde4b9e702adfcf13647ccca09",
+        "call-06.json": "4cc408f5772532121b14976308e86e4c66e99670078fe1a02632190acf6f04bb",
+        "call-07.json": "49f716c9460c2cbcba65890aa72f1acd2761dabd74e17bf1940cf7b2a687ff6a",
+        "call-08.json": "ec61545b32ab41d952145e5463cd444cdca384855c4de2eb99ba7be0071cffe4"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 37.34729443100514,
+      "states": {
+        "call-01.json": "d5e4cf0ed4468765e78f06646e00e77f0feed7738ecc99386ff3637dadc5f01c",
+        "call-02.json": "b28b142821114eeb7d31905968d0584fc432ab4fe4646f0e836b001265fecf14",
+        "call-03.json": "8505ee99fcd8ddb3262411184718fcefb522aacc07b6564bae30ecbe2a5c6e59",
+        "call-04.json": "0f156b2b5216e950884476eb1f1db7c4f0d813de2ec6f23e81cd8b3e2bb83b04",
+        "call-05.json": "628f8c987a2255381803e973c144bb7e6762bd32fe2608f6c3e6c30a6e7fdcb0",
+        "call-06.json": "69af31d6b2f578e8d81713c97bead5886d421aaed27729dcd1befdf5ffb548e2",
+        "call-07.json": "c5fba6e943b9ea2cd7713382a354f7152596568a46d4ea3fc6dd8d062f15996d",
+        "call-08.json": "bf1a7688f4e7735a1e456983c9f20a3f30871bf2edf9a67e4a783ca1ceda4194"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-asciify",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 61.699289016018156,
+      "states": {
+        "call-01.json": "ad63ea02237882e117478fd3660630fd2d5bc0dfc45ac0bacdcfcf7cba385cb1",
+        "call-02.json": "79c7bf4215b06df83841ed12eca22134c09fc4c3f6013670313e9f9acfd8429a",
+        "call-03.json": "b47ea583224105db6f5100ea281267a6ac3a9ea120282739025c3c37f8b9bd1a",
+        "call-04.json": "3dd438de895a0c239fa87c0d2700ac446b42dda7e041f172381ca1e35f4f68d6",
+        "call-05.json": "c8e585662a71fdecae5d9a7042d61d4fc38333182c009248658d59dbd8f0fef7",
+        "call-06.json": "552df865df11f35ee9fcab9494bd9d7fa2e95deb8bf06acfb88189330e68f93b",
+        "call-07.json": "6d1f1276b3a537fea1b3f7ab79d158b2fb573eefc250a31baaed80ef5c4b729b"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "boltons-bytes2human",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 73.02432593598496,
+      "states": {
+        "call-01.json": "7f12bfe5a0895f73368888de9e299fd9f9e7c96efaadc678a0404ddcc3495b46",
+        "call-02.json": "917b43e3b7c7bda228d625381857d65598933765790f6e016e2bb751b64712ed",
+        "call-03.json": "2cb800a1d34e7337e4ead2edec55966942ec0c8775596a97bed4a92d781594c8",
+        "call-04.json": "597835f26f1a29521d462c8a45881e2ccd8d16d38c9d56eadf7685c6e2256bbb",
+        "call-05.json": "31ebcc1fc1557d97668d8d480e5238beb64e403e1dc522631c050a1eee5cea32",
+        "call-06.json": "40d15519974938bba1c79f282c8b42b06de821c78d74f0823f00c395b41a5b29"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 50.12457920599263,
+      "states": {
+        "call-01.json": "b12e08d1aa2ab335043c4a8c925c3af55fb8bd0f1cc048869d2eaa897d9fb106",
+        "call-02.json": "c087010e525ed923f709fdbbce8c4121bd3cd405071013b8d4b78c43b85badf7",
+        "call-03.json": "4a5e43e471cb1a5df5e27e093247723f49a8bcfd4f3846baa212d0c85f9ebf19",
+        "call-04.json": "7eac691e32e15e66fd75266fbfd6f180073eb42e8db9663ee12db72b86c585e3",
+        "call-05.json": "8adc7935af8edecf50b818f66795fc29a79e74b57e5c16e68d21a33dc7faad7c",
+        "call-06.json": "f928b9646506be464a106997e3ef084c11a1977ea4228f8fe77199f02317e7cb",
+        "call-07.json": "eae5a797aa2baf94a0eca6ffb89482d3a1f311a367105236f8d1cb1159bac891",
+        "call-08.json": "464368e4b82ddac89007bfb7729ea183bafa74b476667a99076704e0c7fccd35"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 41.40635138499783,
+      "states": {
+        "call-01.json": "a3eb0bbc5b80eb4bf91530113e670d4dd464795be8c87f3a5be216407c01fef2",
+        "call-02.json": "f0accc29aa1148227febcf6045bd50e5a79b50633836ed33c1acec2fdc91e644",
+        "call-03.json": "12991d6ae19439945fc4c3d195897a8d14578b83d4b3eac07dbf6e519af6fbda",
+        "call-04.json": "5b17f8902e6020431729dac09a0efdfda2a83b5bd4f26099469f759aafe43ecb",
+        "call-05.json": "40f66b49b391fb88826af924689fcef5f443f1458878ce13d6fa00bfce86ea29",
+        "call-06.json": "2bb641aa992192b4d5be25d56011de994f68ff60ce2a0fa38d8ed5b58da56302",
+        "call-07.json": "c6d61e9a2408934ddba46008b64cdcca91c28820eb50e5d022b4a9677bdf669e",
+        "call-08.json": "5195d6529f50600787ee9e35b4b5588929cc88f61b538f3f9a417be3593bfada"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-multi-dict",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 37.347818646987434,
+      "states": {
+        "call-01.json": "1968ba1d34a443dc2c0d6c716cf92f737cf1314c3ded68e733c99219aa7ff071",
+        "call-02.json": "f6d16e2e8530b30e9980745525940e9018b42dcd29a8652e28243d5f116e2f86",
+        "call-03.json": "8d1ab854b3cbd02715856c29a29889e650bf636b6b02cdbb37e36c499d6c3e3b",
+        "call-04.json": "9eab66ced92c594686e7557c1ee4a9c69c6c48879b071f6e834d48ce262162bd",
+        "call-05.json": "27d260dc3e4380485d2b7b8e93a608665bdee0790a27fd22e56c9e34e5c3c57b",
+        "call-06.json": "f9b3397bb73a4f0bab5369ce9db26c1d370659d1ed9bc1be8b9e62608daa13ec",
+        "call-07.json": "9a26f98bd7a84e3563873cbdeb112eba7d67c36701b9d07ddb190ace98ffbffc",
+        "call-08.json": "1111f1b484b4fe8422d87c282219aceab9bef6e799b5a14a286f17a321ee6dae"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-pluralize",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 46.11778209800832,
+      "states": {
+        "call-01.json": "04d03ef7c57ade3ca954c1851ccaccbea71dd57a9a29f6d4dca65e4c26158d12",
+        "call-02.json": "00f835c72ae44eed3393ee89bc65428de82fc02e849b65441f0d35bc6ec78b6d",
+        "call-03.json": "cc22b81df435cabd568d82350353de16c9fe16658284fefc4a9e54a8bf1b7361",
+        "call-04.json": "9fcd434db6474e7e3931fb41e341b5866c5d0d8e0db0504a044a9933d0b7bb1e",
+        "call-05.json": "1003d6f479851b42fb97c6a3f83de44a39c72c707fcf38962624955ac8f0ac85",
+        "call-06.json": "3b0f3d29ce56c6f98c1bb2133aa6b58dd1464da1f2cacd1e079d8913bae38f9a",
+        "call-07.json": "f79f3d2e5768744f18004f20a35aa6ccfe7ef007a579faf2f70baa87ba4ea0d3",
+        "call-08.json": "ad13518189246cfbfc512313912dcaa21dbad6970928851deff641870b50b661"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-research",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 41.65698347601574,
+      "states": {
+        "call-01.json": "5d16e7178b4a27ab3ce3577aa6f44595da1e8da9d03f71f8e9e78e9c56f1d0f1",
+        "call-02.json": "6d2772bfe8697f10fab703f1fe887cd9a515d9abff26c756e7a358cd74ad4222",
+        "call-03.json": "c2de3e3b70f0eda3aad51c36f2a71235220ff51175f038eb220615388823c84b",
+        "call-04.json": "741e7cb206648e157ed6fb7b9fa6a851f7b508e3d0b43612d7abf8f25d5b64de",
+        "call-05.json": "9bab75b726ea4902591c3dd95f8aeec55ae5df53923f624f74cf3931c43ce63a",
+        "call-06.json": "4d9fae87c21dc64cd31c24e7f6b9b4668b928971a351b58b0c9e22cd1720c228",
+        "call-07.json": "4761428fac6dbebcd5bce7d0fb962fd56f042a7a13af714c984c6449338e18f5",
+        "call-08.json": "cb53b00346582787f6f97cb113dc669909837ac579f9c2f977664c2bdab6987e"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "boltons-slugify",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 36.54456264799228,
+      "states": {
+        "call-01.json": "47a440738ec6f602d36e67b1ce7c13d9fd37d6c13333c137864d308bbe07c651",
+        "call-02.json": "9bfeb942812b1de0bdc14a0846f1335b3d634c538c94d6fdc9092dbc1f9c2bcd",
+        "call-03.json": "1d33e42cc96b4b19e8ad47ff5479ca59c9838ef6918d8166eb36aaf1b6bc6183",
+        "call-04.json": "c8000696bb7eb9c7ab8ba7b6a30437e36262eefdec3c55da2133e8e2481f5dc9",
+        "call-05.json": "16b973aec3d1f1dd66bf1892007370c387c27d3472a9d003eb34afc22fd7bd3c",
+        "call-06.json": "04cce7ff5ab2b706500138cf314904c9e418034e8628d970a6616856e6148d24"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-defaults",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 39.55281073000515,
+      "states": {
+        "call-01.json": "914203496e68fc9b516f10c1bbea32dea25f15cbf14f414037c970c33d565795",
+        "call-02.json": "78839570e116319a4b372f645e554a9d781134d860bb97966ef4191b0720df2d",
+        "call-03.json": "d7b60a8ca2796a68f416b810a3f1c927e81a8e7106cab9fba608fce3d4a446e8",
+        "call-04.json": "5b319d09172248e2c3c4f5e697f32670510b02b7b4679290a7f9b77270c94df1",
+        "call-05.json": "7fc4d2be89e9db75d9ca50358bcc91fd692c41b1f032f35a482f6ec9dff1fa4d",
+        "call-06.json": "21157b62498382aa01e29035567a3a2223b9e85f5c8c085d24c236adf79940fb",
+        "call-07.json": "f55f5e3f0fd22b14d25b0048cae20322b4304bad507f11413c82ea57f3e33037",
+        "call-08.json": "771e1f78f7c70daa79ea156fb4663ae5f805c0e83d4de13a25f2a92eece646ae"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "underscore-difference",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 25.671099200029857,
+      "states": {
+        "call-01.json": "1a7484a932d8d3960d27181b8eea16df3573ba6d0705c1ffd379d5d865e0ffc7",
+        "call-02.json": "11f65f86a0c03c9c974b567ba348f27e01876a9f7523b9d92fcbb8685426f31f",
+        "call-03.json": "e6188fd4928e1bf8461227177f177ae824ba3c18f49e6fba00897af70d2bb0ef"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-group-partition",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 35.943543966975994,
+      "states": {
+        "call-01.json": "b03cd2cf8fd8f5567f278130fae81910ee304bdfe6f4c1042ed3bc5e2323c3d3",
+        "call-02.json": "7d42fbc5edef2e70fb6a0b72ee687216be40062c54bf13328964622802e61e2e",
+        "call-03.json": "483c7fcacd391510192935184cf1dc6d28b899208a1f2b735efba2151672a1f9",
+        "call-04.json": "7d1880faae7eadc2fce7ed655b734aeb241be6c3620501beaeebb3746c506acc",
+        "call-05.json": "6803174dee51c554a2feb1a57cd8fa1491ec7b96501bb5e8a86884bba8dc6f3e"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-index-nan",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 38.24849210999673,
+      "states": {
+        "call-01.json": "9c4a7a24490dd1fe3540659cd47dc75d1978c321c075a8fad452a97caf894cbd",
+        "call-02.json": "9be609b2c225e24171784fdf171b8d0c471cae088e6831e39d40e6ecd33baaef",
+        "call-03.json": "85530cc2bd4aea1d179dd97c2f38072c3094272bd7c314d3c553a17da270d73a",
+        "call-04.json": "06544044512315f9ec36b09e8cb716274ab9e1d219854337aa2bd79cd0de56e5",
+        "call-05.json": "83ea1f0d256a029d72b31285eb7c682d3d6d5d7e23eccc8d0d3560c254a056e1",
+        "call-06.json": "02046fe0f4283bdc861ae9e0182a20928e033496db6f0bce1002f8fa22e40bc3",
+        "call-07.json": "92fd0e814c7c72510e7e924fef612f01d56f660a96f510bf0e79e6212adca202",
+        "call-08.json": "a4f9d68ded7c29196b13c8ac82234db946b4fa400d01a083f0adc541a19881c3"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "underscore-intersection",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 27.274110626021866,
+      "states": {
+        "call-01.json": "8ae8d4ce07a32123e420d8442e222bfe7efe0bd78f92e3578e10a79896bfa1a3",
+        "call-02.json": "05cd52c8cfc5d10658dfa6e971713a46f3f96a14296d6812ef842007b980b1c7",
+        "call-03.json": "d6e224dc10c925dd67344e357e95077b01c363c0a780f89aceee2afa680a41b7"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-map-object",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 42.20533136400627,
+      "states": {
+        "call-01.json": "e97b9cd1731cf717b34c9ce7715a57d686869de4ccb47a7b86795b3353a4b3a0",
+        "call-02.json": "18e452f65c1dbfc3eefad0eacc0474d7377837d259a0e536ca219e11ec254d86",
+        "call-03.json": "9f76202066238bacbc1daeedecd33046e46f1862be6d5a9dfc1217abd804fd36",
+        "call-04.json": "b652bf181d7375e08d2d0e80cbf2c508f7629337ad484468f09e52727dc43def",
+        "call-05.json": "8144ca560afaa1843a71d9bcbc4d35361b1138870615cb9a8c4c5d4243bd5d10",
+        "call-06.json": "a0a9e4521020387167fe47b7a1a890230cd3d8b019223ca9a5f3bae5c6b467cd"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-object-pairs",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 27.92542424000567,
+      "states": {
+        "call-01.json": "b3f31e00adf76adf59ffede68be39e43ad6f64e357628d0d2d4fb9269a01e0a4",
+        "call-02.json": "123cc4de415ce364a0ba4cd2a931ea45eb04e81576fb490412b2635256db97c9",
+        "call-03.json": "cbebcb9e7f1eff7e9a59fc8e22ec6b987bd6c3587ba5dadb131f31ac6115fe30"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-range-step",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 57.99148750002496,
+      "states": {
+        "call-01.json": "0c47743ad1d4c7813882e07f72dec87331dbda1367bb1fafa3cc570fea7e237d",
+        "call-02.json": "8970c3b6a5276ee290ae6b6adc356c7d4c7e447b1efad8be678ed365abddf372",
+        "call-03.json": "d3fe755448be60c8deee1180c6eac4102d8245bd5c4a0ce472642c98b66c0b17",
+        "call-04.json": "9beaae6dd6c16f7a124ecd09613f28c0a8c8b0e628e89cedaf789ca06c50dc1e",
+        "call-05.json": "24c8de96f508aba7dbe3609160e22f095e88052df87c6a08a1d0ef90604274fe",
+        "call-06.json": "42e3efcae6415deb9488f7ddcb358acb6ab80ce100b825358cc7ebf7b6ecc285",
+        "call-07.json": "9b830c5199168bf75966a1f7cf2e561ad31b522ed8a6ad20e1bfdc8fc25a6a5e",
+        "call-08.json": "dd4eb8515fbbeaee4fa8e683d77dac390ab03fdf20ac177f241e0a6cd745f755"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 34.782031176029705,
+      "states": {
+        "call-01.json": "60e8edaac85226efeece82189ef6d660c3f925619f0b7066abdaaf32678eaf06",
+        "call-02.json": "2870bcb36e3d7e8d86cea93fe4205268a505cd3fe6ee757b81672f8e3b3bd042",
+        "call-03.json": "81db23561e573b0ef18dbc524b2b2dbf4d671bad17c202b368a2d0c4c2c7d8a5",
+        "call-04.json": "4cb6aaa30ac0e0e2a8f6f4a945e9902e2d6d4dde6242db6233a68077875f907f",
+        "call-05.json": "d75ef6e0adf2bfca7aa3f62a069ab9102cc26ee43cfaa72a7b61f61e9f201140",
+        "call-06.json": "912a9420e69d5b5f0fbbd642a7ea567206d622d1f100bf8264ba2a0616ef5ce6",
+        "call-07.json": "d8c21e3821602786d5dae428b1e5413f2f1beba62ef9405bb9538d7228894406",
+        "call-08.json": "588c4e745aae83f8ca5a0099b758a3b595a155a9b34ae3b78077c22ccf6cfc68"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    },
+    {
+      "id": "underscore-stable-sort",
+      "split": "train",
+      "returncode": 0,
+      "timed_out": false,
+      "seconds": 28.672742294962518,
+      "states": {
+        "call-01.json": "3cb0841efb91dd37fc64b635e6d77a41fd1aeb92521dfe70ce3bdf9e8e0e7aa2",
+        "call-02.json": "45b0d3af83793e6e9c75336177f1a822d914a4a59ffa7d40bcce5f6a5db592ce",
+        "call-03.json": "f8e1646a0bce14eaf63a5c780fa1c4cdc42a55ff426c64683408a039a7be8757",
+        "call-04.json": "9aa2f2a88116f1f908bd9f901a4a65cdc2e7555a64231284feedb9823a4d1839"
+      },
+      "expected_call_boundary": false,
+      "finished_naturally": true
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "split": "train",
+      "returncode": 75,
+      "timed_out": false,
+      "seconds": 34.542153279995546,
+      "states": {
+        "call-01.json": "241c92c684f59b5316774f43a7e9bdeafad409e0f7e9a28b0f4159d0811c322c",
+        "call-02.json": "6fe39098cf028e50910dd2d421da51a48c41f1d37abc9cf526a9dd860d8390d9",
+        "call-03.json": "40d6b93560304dcffc8adb82a0f504d1439a20056ecdfefa373363f9191793cc",
+        "call-04.json": "0fdff13d185a3f6fd3f0d12a96248e125152133d721e230be46cd08516340f44",
+        "call-05.json": "779557e5c9916cbe74cf0fc20adf4e4282ce0d21942466e9427f395d34536acc",
+        "call-06.json": "58acbc43935fce98ee7272393f4c486a0f370f8dd68e7f5396ce722258b080e4",
+        "call-07.json": "ab2c68ec1169b44a3619b39161e76cbbbd7202da166151689dd34ddb4a0e576f",
+        "call-08.json": "962bfa827aaf9c40cc03734ddd60d4d8fa4a6bbdd0fb8398988f09cab2ecc55d"
+      },
+      "expected_call_boundary": true,
+      "finished_naturally": false
+    }
+  ],
+  "raw_states_public": false,
+  "finished_utc": "2026-11-12T08:27:56.624617+00:00"
+}

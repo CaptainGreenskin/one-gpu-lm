@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "records": 330,
+  "sha256": "2b40a162246093de53fd0e0ab89671b3208693414b84e2e4ce2bf2ea2fe27473",
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "admission_sha256": "4e84e62c1bfff76cb9a171f186e86bd8a6afc84993175aaccc86df4f5fbaf347",
+  "license_record_sha256": "c30ef41511e9f8f071a713d4cfe200dfb0cee4a8ebf30926e4d6ba0671c736d3",
+  "parent_data_sha256": "7557287cd72d30180108ef0b4f98a2a1179f89176ca92519b6cf0f4849186034",
+  "collection_sha256": "7304ee9a28eecd350bea1851ee4fab1e6d19ea0f26687b5f73633c7c94f62665",
+  "raw_data_public": false,
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "replaced_records": 84,
+  "replaced_tasks": 46,
+  "categories": {
+    "tool_error": 6,
+    "wrong_edit": 3,
+    "read_only": 75
+  },
+  "fallback_reasons": {
+    "no_eligible_observed_state": 16,
+    "no_verified_bounded_correction": 10
+  },
+  "coverage_passed": true,
+  "evaluation_traces_used": false,
+  "teacher_api_used": false,
+  "incorrect_actions_supervised": false,
+  "shared_first_four_records": 220,
+  "prepared_data_sha256": "fe3b0099204838d083b2252b1a922ccc74f419b23010d765f7d274b8a52aaf9a",
+  "prepared_receipt_sha256": "71905227cc755dc5aa2e4c8667d19e36c55daa853845597b7abb6b1c1666c6d3",
+  "selection_sha256": "1a27059b0bc24ce8a7404aee934d2801d75c6bfec382e768222f0f1d65db0793",
+  "input_tokens": 721376,
+  "supervised_tokens": 41753,
+  "semantic_order_sha256": "a3badbd38dcb1444c95e02bb2e44aea18354da34f3033e0704de4cc8ed60acb8"
+}

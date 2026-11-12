@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T07:43:21.944745+00:00",
+  "started_epoch": 1794469401.944735,
+  "deadline_epoch": 1794512601.944735,
+  "protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "complete": false,
+  "attempt": 1,
+  "stages": [
+    {
+      "name": "preparation-verify",
+      "seconds": 2.068606630025897,
+      "attempt": 1
+    },
+    {
+      "name": "loaded-controls",
+      "seconds": 74.32374941097805,
+      "attempt": 1
+    },
+    {
+      "name": "collect-base",
+      "seconds": 2569.25713857502,
+      "attempt": 1
+    }
+  ],
+  "stage": "failed",
+  "updated_utc": "2026-11-12T08:28:22.187127+00:00",
+  "error_type": "RuntimeError",
+  "finished_utc": "2026-11-12T08:28:22.187097+00:00",
+  "finished_epoch": 1794472102.1871226,
+  "telemetry": {
+    "samples": 536,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

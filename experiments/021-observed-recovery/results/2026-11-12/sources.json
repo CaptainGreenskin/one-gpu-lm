@@ -1,0 +1,680 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repository": "dbader/schedule",
+      "revision": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+      "split": "evaluation",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE.txt",
+      "license_sha256": "30a8352c318ce1b645acde0299697342d4380ed2637d7ca18a8ad25661e3b41b",
+      "homepage": "https://github.com/dbader/schedule",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
+      },
+      "selected_files": [
+        {
+          "path": "schedule/__init__.py",
+          "sha256": "b0c93f8ee84cbb8dbb98bcb8284864f4ea04012fdbc216de13f8ad2141d09efa",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "evaluation",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+      "homepage": "https://github.com/epoberezkin/fast-deep-equal",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ]
+      }
+    },
+    {
+      "repository": "epoberezkin/fast-json-stable-stringify",
+      "revision": "49e230da2c84247b29ad4de02c9395793caefd15",
+      "role": "fresh_holdout_only",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "a833d366242c298cf1b10263516572fb8dcbe68eb5072cdcac2b4546e2b4eb36",
+      "license_url": "https://github.com/epoberezkin/fast-json-stable-stringify/blob/49e230da2c84247b29ad4de02c9395793caefd15/LICENSE",
+      "rights_review": {
+        "status": "actual pinned license and selected source file headers reviewed",
+        "obligations": [
+          "retain original copyright and MIT notices with private snapshots or any future redistribution",
+          "record modified source revision",
+          "do not imply upstream endorsement"
+        ],
+        "github_classifier_is_not_authority": true,
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "index.js",
+          "sha256": "8bf5495e16a363606a21f4903f0213f175dbadfab73eb98382befc7a88f1395b",
+          "notice_review": "No conflicting license found in selected source headers; pinned root MIT license retained."
+        }
+      ],
+      "split": "evaluation"
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "split": "train",
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "92905fb54f5d168a27e6d5dc7c2197020add11842be4c70689d084bae3bfe37a",
+      "homepage": "https://github.com/jashkenas/underscore",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "selected_file_review_complete": true,
+        "scope": "Selected editable files only; actual tool-output and dependency notices must also be audited before parameter release.",
+        "ancestor_license_files": [
+          "LICENSE"
+        ],
+        "publication_notice": "notices/jashkenas--underscore-LICENSE.txt"
+      },
+      "selected_files": [
+        {
+          "path": "modules/_createAssigner.js",
+          "sha256": "728247543f2c01aa503e9ca0995cc1cdea0269b8c88e8b4acef489241c5966c6",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/_createIndexFinder.js",
+          "sha256": "6c280755c03f6b2783522ec522b4bbaec633e567b4641588fc8ade9708a6e575",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/_createReduce.js",
+          "sha256": "761effc6ffd6129128dbc87b6a3d0fb822106f98e4455dcac05f74e4a6f3b619",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/difference.js",
+          "sha256": "2d9be0911858a6157c10be7ba3971b1f6ef4028da6750cd3dfdb77700666e1b8",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/groupBy.js",
+          "sha256": "9ece5108c9f6757f3dc0c5ff0f70bc48049a946fc84c04c5349bd666c34ae633",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/intersection.js",
+          "sha256": "061258a7306a9b12b35d408c797fb48351b1b873c2aa6b43eab55c75a2e36723",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/mapObject.js",
+          "sha256": "cb18fb48039cd0f7e6730f1b4c1f71a5595560d2cbb5849a333b231deed0b43f",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/object.js",
+          "sha256": "3c2b6d2100f432a6f00c216be915b04fe44ba207e3c40356ba9e2cca7f5cc115",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/partition.js",
+          "sha256": "c46d1f8f0127c66a7e45510e72d6824aee711be2534f627c5db25463558824b6",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/range.js",
+          "sha256": "02c800f074e227eef2c9b59546440ddb866f6d615cc6563e26580bcc328e346d",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/sortBy.js",
+          "sha256": "5b686208341485708e976f37282a97c5eae763e77c94f8e86bcd5c0026839f79",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        },
+        {
+          "path": "modules/uniq.js",
+          "sha256": "62adc926561bd9f8d884ec557f7eeb41f5349f6ac69efcecd11e82683e76c2ee",
+          "notice_review": "Selected file headers and all notice keyword matches inspected; no file-level conflicting notice found. Root MIT notice retained."
+        }
+      ]
+    },
+    {
+      "repository": "jmespath/jmespath.py",
+      "revision": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "role": "fresh_holdout_only",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "6eefacfa4d71b82d08408c751470ac8d9854538da2142cb27be0287fb13d0ab9",
+      "license_url": "https://github.com/jmespath/jmespath.py/blob/2812594e69d43098ef60f81f4efc404c071b0418/LICENSE",
+      "rights_review": {
+        "status": "actual pinned license and selected source file headers reviewed",
+        "obligations": [
+          "retain original copyright and MIT notices with private snapshots or any future redistribution",
+          "record modified source revision",
+          "do not imply upstream endorsement"
+        ],
+        "github_classifier_is_not_authority": true,
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "jmespath/functions.py",
+          "sha256": "73d29131314d9ba2a457a23d42f82386264673bb3120bb3e2f79afc47055fe4c",
+          "notice_review": "No conflicting license found in selected source headers; pinned root MIT license retained."
+        },
+        {
+          "path": "jmespath/lexer.py",
+          "sha256": "2c4dfe74cef99f2f51311f265e65a528a453225cfc9e3bd6cfe33edb2e2de560",
+          "notice_review": "No conflicting license found in selected source headers; pinned root MIT license retained."
+        },
+        {
+          "path": "jmespath/parser.py",
+          "sha256": "5630d0379ca349ee467f973d227700e84e18c55473621254697059ada0ec5137",
+          "notice_review": "No conflicting license found in selected source headers; pinned root MIT license retained."
+        },
+        {
+          "path": "jmespath/visitor.py",
+          "sha256": "c38a44cfad82ee5f50b37d003f736638c12be799ee256555fa46fe4211182912",
+          "notice_review": "No conflicting license found in selected source headers; pinned root MIT license retained."
+        }
+      ],
+      "split": "evaluation"
+    },
+    {
+      "repository": "jpvanhal/inflection",
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "split": "train",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133",
+      "homepage": "https://github.com/jpvanhal/inflection",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs.",
+        "selected_file_review_complete": true,
+        "scope": "Selected editable files only; actual tool-output and dependency notices must also be audited before parameter release.",
+        "ancestor_license_files": [
+          "LICENSE"
+        ],
+        "publication_notice": "notices/jpvanhal--inflection-LICENSE.txt"
+      },
+      "selected_files": [
+        {
+          "path": "inflection/__init__.py",
+          "sha256": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e",
+          "notice_review": "Selected file explicitly identifies MIT and Janne Vanhala copyright; original header and root MIT notice retained."
+        }
+      ]
+    },
+    {
+      "repository": "litl/backoff",
+      "revision": "d82b23c42d7a7e2402903e71e7a7f03014a00076",
+      "split": "evaluation",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "2a6b4d5f884d4d7a1bf04ea7df1944cf12b32e35a79a86d0a075a2d3f40fb9ac",
+      "homepage": "https://github.com/litl/backoff",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
+      },
+      "selected_files": [
+        {
+          "path": "backoff/_jitter.py",
+          "sha256": "2e32528698ebca4f6c5810968b3fb7517d43242c7aade6cd27905fde73cc9584",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        },
+        {
+          "path": "backoff/_wait_gen.py",
+          "sha256": "84e6c53de5c35ddcdcbcc864927c9ade7952298a0200c4f92c5a2da36e5e9ae2",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
+    },
+    {
+      "repository": "ljharb/qs",
+      "revision": "43baea4655cb9b543fb1c5cc0db95cde42852140",
+      "role": "historical_regression_observed_in_015",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.md",
+      "license_sha256": "e7dc37bf662d7f786efcb46c545615e70c1daf458a38385521c63cf6607cdfe1",
+      "license_url": "https://github.com/ljharb/qs/blob/43baea4655cb9b543fb1c5cc0db95cde42852140/LICENSE.md",
+      "rights_review": {
+        "status": "actual pinned license and selected file headers reviewed",
+        "obligations": [
+          "retain original copyright, conditions and disclaimers with redistributed source/binaries",
+          "do not imply upstream endorsement"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "lib/stringify.js",
+          "sha256": "62eea028e526c792fa22d3ac1778cceae84f46f908f70205be4ae94f84779f45",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "lib/utils.js",
+          "sha256": "ace1c643b256be181aba29f01612283fc48d50f076a681bf3931316bf712756a",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        }
+      ],
+      "split": "evaluation"
+    },
+    {
+      "repository": "mahmoud/boltons",
+      "split": "train",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "license_spdx": "NOASSERTION",
+      "license_path": "LICENSE",
+      "license_sha256": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3",
+      "homepage": "https://github.com/mahmoud/boltons",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "note": "GitHub classifier returned NOASSERTION. The actual pinned LICENSE was read: BSD-style three redistribution conditions, including contributor non-endorsement. Preserve its exact text and review selected file headers; do not substitute a blanket MIT label.",
+        "selected_file_review_complete": true,
+        "scope": "Selected editable files only; actual tool-output and dependency notices must also be audited before parameter release.",
+        "ancestor_license_files": [
+          "LICENSE"
+        ],
+        "publication_notice": "notices/mahmoud--boltons-LICENSE.txt"
+      },
+      "selected_files": [
+        {
+          "path": "boltons/cacheutils.py",
+          "sha256": "21724c8e4536f90831d0e6fb876319d72ffdc5a3f54f94709d45c94b24c37e80",
+          "notice_review": "Each selected file contains the same BSD-style three-condition copyright/license header as the pinned root license. Exact original root notice retained; NOASSERTION classifier not treated as authority."
+        },
+        {
+          "path": "boltons/dictutils.py",
+          "sha256": "68d9a7a55dd50b577d470d0df4f537e57f056da6e4749014d408c153bc8b1e7f",
+          "notice_review": "Each selected file contains the same BSD-style three-condition copyright/license header as the pinned root license. Exact original root notice retained; NOASSERTION classifier not treated as authority."
+        },
+        {
+          "path": "boltons/iterutils.py",
+          "sha256": "8f62bb690159f7d88eb3bbf38caa15df7d0495b4022ba175fc716629c1495241",
+          "notice_review": "Each selected file contains the same BSD-style three-condition copyright/license header as the pinned root license. Exact original root notice retained; NOASSERTION classifier not treated as authority."
+        },
+        {
+          "path": "boltons/strutils.py",
+          "sha256": "0ec4e98a5fa6368199915d0f488b129e4e5cb8d330b6663d76a79992beb15dd3",
+          "notice_review": "Each selected file contains the same BSD-style three-condition copyright/license header as the pinned root license. Exact original root notice retained; NOASSERTION classifier not treated as authority."
+        }
+      ]
+    },
+    {
+      "repository": "mewwts/addict",
+      "revision": "75284f9593dfb929cadd900aff9e35e7c7aec54b",
+      "split": "evaluation",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "ca488d33c512d0b226142090af90e89ae266a901a293f89fd642dfec931e22c1",
+      "homepage": "https://github.com/mewwts/addict",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs."
+      },
+      "selected_files": [
+        {
+          "path": "addict/addict.py",
+          "sha256": "49c39f72568033bba0c99a17396d871cbf60097b7f5cf7be8b96d32e263cb9f5",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "split": "evaluation",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "homepage": "https://github.com/more-itertools/more-itertools",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ]
+      }
+    },
+    {
+      "repository": "pallets/itsdangerous",
+      "revision": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "role": "historical_regression_observed_in_015",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "license_sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7",
+      "license_url": "https://github.com/pallets/itsdangerous/blob/672971d66a2ef9f85151e53283113f33d642dabd/LICENSE.txt",
+      "rights_review": {
+        "status": "actual pinned license and selected file headers reviewed",
+        "obligations": [
+          "retain original copyright, conditions and disclaimers with redistributed source/binaries",
+          "do not imply upstream endorsement"
+        ],
+        "raw_source_public": false
+      },
+      "selected_files": [
+        {
+          "path": "src/itsdangerous/encoding.py",
+          "sha256": "c304f3e6aff7ccb71a01dba793afef4a84adc06a9859edf4ed997f53ceda4453",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/serializer.py",
+          "sha256": "6d6f1687897c7e3ac6eeff5bfd6794df90e299feedcc6aae3faa0e53ffe925e8",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/signer.py",
+          "sha256": "60ed0257b341bc703a8f9e3d4441c91548d4a23c36a47ab0714a509d4ef23584",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/timed.py",
+          "sha256": "3afbf6050e8b73605931d1e516f374835456979e4319c098bfe5f284f120c6c5",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        },
+        {
+          "path": "src/itsdangerous/url_safe.py",
+          "sha256": "6b3e1ee5f5e2fefb3e61b5a3f186709f8c2254a7de0fef8610a453e547aee0fe",
+          "notice_review": "No conflicting license in selected headers; root BSD-3-Clause retained."
+        }
+      ],
+      "split": "evaluation"
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "split": "evaluation",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+      "homepage": "https://github.com/python-attrs/attrs",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ]
+      }
+    },
+    {
+      "repository": "python-semver/python-semver",
+      "revision": "b6e83e3e40d3a7570386e8d694ae8011477a55c1",
+      "split": "train",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "license_sha256": "cc10179de9ced8655d7765bd3a8ac46438a61e663de7cf1c48d502d2baf9f3d5",
+      "homepage": "https://github.com/python-semver/python-semver",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs.",
+        "selected_file_review_complete": true,
+        "scope": "Selected editable files only; actual tool-output and dependency notices must also be audited before parameter release.",
+        "ancestor_license_files": [
+          "LICENSE.txt"
+        ],
+        "publication_notice": "notices/python-semver--python-semver-LICENSE.txt"
+      },
+      "selected_files": [
+        {
+          "path": "src/semver/version.py",
+          "sha256": "a885e6eeb467e4770bc17d80c93da5210806aa33d340033b4ed197a27d028500",
+          "notice_review": "Selected file header and all notice keyword matches inspected; no conflicting notice found. Root BSD-3-Clause notice retained."
+        }
+      ]
+    },
+    {
+      "repository": "scrapy/cssselect",
+      "revision": "ddd9784977fca6e7da4439d837e4f510f1f10638",
+      "split": "evaluation",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE",
+      "license_sha256": "5c8da9f744e0afba81a48c9b5dbe73048f798b3287d6f1af8a05ee08ebb10892",
+      "homepage": "https://github.com/scrapy/cssselect",
+      "rights_review": {
+        "status": "pinned root license and selected editable-file notices reviewed; evaluation only",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain exact copyright and license notices",
+          "record source revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "basis": "Read pinned repository license; MIT or BSD-3-Clause terms. No teacher API outputs.",
+        "authors_sha256": "d313a3dc7f22208e8cfca5a6a0361046ecd3ad8acb3db27c2b6915480a10e734"
+      },
+      "selected_files": [
+        {
+          "path": "cssselect/xpath.py",
+          "sha256": "4435364a059f9cab7fe3e7f2f0e737517d60f99976a03e1e8e9980403e0266ce",
+          "notice_review": "Pinned root license and selected file header/notice matches inspected; root terms retained in private snapshot. Evaluation source only."
+        }
+      ]
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "split": "evaluation",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "license_spdx": "MIT",
+      "license_path": "license",
+      "license_sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "homepage": "https://github.com/sindresorhus/p-limit",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ]
+      }
+    },
+    {
+      "repository": "pytoolz/toolz",
+      "revision": "451af60dec590a6010e2babdbf391ea8f815122f",
+      "source_url": "https://github.com/pytoolz/toolz/commit/451af60dec590a6010e2babdbf391ea8f815122f",
+      "split": "evaluation",
+      "role": "021_fresh_final_not_selection",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "license_sha256": "053664057b295b2f0c1332291a77102f01a099d87926e449e08a117eea9660bf",
+      "license_url": "https://github.com/pytoolz/toolz/blob/451af60dec590a6010e2babdbf391ea8f815122f/LICENSE.txt",
+      "rights_review": {
+        "status": "actual pinned root license, selected file headers and notice keyword matches reviewed",
+        "raw_source_public": false,
+        "obligations": [
+          "retain exact copyright, license and applicable notices",
+          "record pinned revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/pytoolz--toolz-LICENSE.txt.txt"
+      },
+      "selected_files": [
+        {
+          "path": "toolz/dicttoolz.py",
+          "sha256": "b04f3094634b7b385d9a446a07681073149bc1b3baf9cfb84956d8fb2163ba81",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "toolz/itertoolz.py",
+          "sha256": "93e4d79bc7c6d68250657846454303ba95c0694c9ef165cb7a8e0bdf150711c6",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        }
+      ]
+    },
+    {
+      "repository": "tkem/cachetools",
+      "tag": "v5.5.2",
+      "revision": "c403f9f4185e58090b904c1915345b9ba46d5a08",
+      "source_url": "https://github.com/tkem/cachetools/commit/c403f9f4185e58090b904c1915345b9ba46d5a08",
+      "split": "evaluation",
+      "role": "021_fresh_final_not_selection",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "23c4eff7a1c027a977a0b79c4497e17582c334c5f17ef6ac8ca0b52d1e7d8417",
+      "license_url": "https://github.com/tkem/cachetools/blob/c403f9f4185e58090b904c1915345b9ba46d5a08/LICENSE",
+      "rights_review": {
+        "status": "actual pinned root license, selected file headers and notice keyword matches reviewed",
+        "raw_source_public": false,
+        "obligations": [
+          "retain exact copyright, license and applicable notices",
+          "record pinned revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/tkem--cachetools-LICENSE.txt"
+      },
+      "selected_files": [
+        {
+          "path": "src/cachetools/__init__.py",
+          "sha256": "72eb5453a7c1d5b20c8a1d2ba3f4d508f2894cfc0cfaa3f87d2fcfc8d7d0956b",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "src/cachetools/keys.py",
+          "sha256": "00e81fa22fa88a804e9c4124d75e7ff6ab341ca212ad89db715e05d21c99d729",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        }
+      ]
+    },
+    {
+      "repository": "lepture/mistune",
+      "tag": "v3.1.3",
+      "revision": "45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+      "source_url": "https://github.com/lepture/mistune/commit/45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2",
+      "split": "evaluation",
+      "role": "021_fresh_final_not_selection",
+      "license_spdx": "BSD-3-Clause",
+      "license_path": "LICENSE",
+      "license_sha256": "539013fd8e19f744f8bf0e27a532bbff54cd689ecef7a800f56ae5dc824be870",
+      "license_url": "https://github.com/lepture/mistune/blob/45e4de61b8897fe5b0458d5ebe3d3cc7bde408d2/LICENSE",
+      "rights_review": {
+        "status": "actual pinned root license, selected file headers and notice keyword matches reviewed",
+        "raw_source_public": false,
+        "obligations": [
+          "retain exact copyright, license and applicable notices",
+          "record pinned revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/lepture--mistune-LICENSE.txt",
+        "source_note": "Selected util.py also identifies a function copied from Python html.unescape. No raw evaluation source or evaluation trajectories are training/released."
+      },
+      "selected_files": [
+        {
+          "path": "src/mistune/core.py",
+          "sha256": "4e3a995b29bb4e2e7811c5f10f55d101fe235db033666ced6199268d92e97034",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "src/mistune/renderers/html.py",
+          "sha256": "5d0a1a3803906ca3b3ed61fb3a867747e006320737cf1d399c3560fe8db730c8",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "src/mistune/util.py",
+          "sha256": "cd08174b2dd594d7768b3ab732ce18193cbcbb04434b316874f78ff2088e01c1",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        }
+      ]
+    },
+    {
+      "repository": "marshmallow-code/marshmallow",
+      "tag": "3.26.1",
+      "revision": "7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+      "source_url": "https://github.com/marshmallow-code/marshmallow/commit/7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8",
+      "split": "evaluation",
+      "role": "021_fresh_final_not_selection",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "906b5d9051e426144cb173ad911667b8ebd05a9c584c2c26c135b32a3ed12001",
+      "license_url": "https://github.com/marshmallow-code/marshmallow/blob/7a71dfcb7a57fd415c2adb9de8e123d2d5d2fda8/LICENSE",
+      "rights_review": {
+        "status": "actual pinned root license, selected file headers and notice keyword matches reviewed",
+        "raw_source_public": false,
+        "obligations": [
+          "retain exact copyright, license and applicable notices",
+          "record pinned revision and constructed modifications",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/marshmallow-code--marshmallow-LICENSE.txt",
+        "additional_notice": {
+          "path": "NOTICE",
+          "sha256": "136504a775edb2c343eec9cc09b8380d8ef042d0ac6808bfa8e17dfcdd7e531b",
+          "publication_notice": "notices/marshmallow-code--marshmallow-NOTICE.txt",
+          "note": "Django-derived code notice retained in addition to root MIT notice."
+        }
+      },
+      "selected_files": [
+        {
+          "path": "src/marshmallow/error_store.py",
+          "sha256": "8823d2770f27246892e1f8d6b88018d5a488fc785c91c768de5fe0fbba6368cc",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "src/marshmallow/utils.py",
+          "sha256": "b4bceef450cbdcf879d6a2aca2a588c8f4b083c759f2bce37975c62d49dd1c51",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        },
+        {
+          "path": "src/marshmallow/validate.py",
+          "sha256": "171dc5f05db47411a0f96aeff380a1c7949879d5fd134979f76851e0cc52d244",
+          "notice_review": "Root license and selected file headers reviewed; no overriding file-level license found. Evaluation only, not training."
+        }
+      ]
+    }
+  ]
+}

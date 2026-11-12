@@ -191,13 +191,28 @@ def render(root):
         regressions=[r for r in value['pairs'] if r['outcome']=='regressed']
         review=['# 021 配对行为观察','',
                 '以下只描述已经执行并独立评分的配对结果，不重新运行任务，也不把相关性当作退步的唯一成因。首次编辑来自每次工具执行后的实际源码哈希；曾编辑与最终留下修改分开记录。', '',
+                '| 开发对照 | 通过 | 未编辑失败 | 编辑后失败 | 无效动作 / 调用 |',
+                '| --- | --- | --- | --- | --- |']
+        for arm in ['dev-base','dev-reference020','dev-observed']:
+            cost=value['evaluation_cost'][arm]
+            review.append(f"| {arm} | {cost['passed']}/{cost['tasks']} | {cost['failed_without_any_edit']} | {cost['failed_after_edit']} | {cost['format_invalid_calls']}/{cost['calls']} |")
+        review+=['',
                 '| 对照 | 任务 | 新候选首次编辑调用 | 最终修改文件数 | 调用数 | 退出状态 | 判分原因 |',
                 '| --- | --- | --- | --- | --- | --- | --- |']
         for r in regressions:
-            review.append('| '+' | '.join(str(r[k]) for k in ['comparison','id','candidate_first_edit_call',
+            review.append('| '+' | '.join('未编辑' if r[k] is None and k=='candidate_first_edit_call' else str(r[k]) for k in ['comparison','id','candidate_first_edit_call',
                 'candidate_final_modified_files','candidate_calls','candidate_exit_status','candidate_grade_reason'])+' |')
         if not regressions:review+=['本轮已完成配对没有新增退步；这不等于其他任务不存在退步。']
+        audits=json.loads((root/'execution-audit.json').read_text())['variants']['dev-observed']
+        limited=[(r['id'],r['format_categories'].get('invalid_at_output_limit',0)) for r in audits
+                 if r['format_categories'].get('invalid_at_output_limit',0)]
+        if limited:
+            review+=['', '达到单次生成长度上限且动作解析失败的记录：'+
+                     '、'.join(f'{ident}（{count} 次）' for ident,count in limited)+'。这是从已保存输出和解析结果核对出的共现，未增加生成预算验证因果；不能据此推断放宽预算就会修复成功。']
+        if regressions and all(r['candidate_first_edit_call'] is None for r in regressions):
+            review+=['',f"新增退步共 {len({r['id'] for r in regressions})} 道不同任务，均未发生源码编辑；同一任务可能在两组对照中重复列出。上述格式失败与这些退步任务应分开分析，不能合并成同一个原因。"]
         review+=['','所有配对（包括改善、不变和退步）见 [paired-outcomes.csv](paired-outcomes.csv)。',
+                 f"本轮 {value['data']['replaced_records']} 条实际状态替换中，类别分布为 {value['data']['categories']}。数据覆盖主要来自尚未编辑的历史；不能把这次小样本单种子结果外推为真实轨迹训练普遍无效。",
                  '训练损失来自不同训练样本，不能替代独立任务通过率；开发分区已重复使用，模型发布仍取决于事先固定的最终门槛。']
         (root/'behavior-review.md').write_text('\n'.join(review)+'\n')
     import matplotlib
@@ -236,6 +251,8 @@ def render(root):
         save(fig,'training-curves')
         fig,ax=plt.subplots(figsize=(7,4),layout='constrained');arms=['dev-base','dev-reference020','dev-observed']
         ax.bar(['base','020 recovery','021 observed'],[value['evaluation_cost'][a]['passed'] for a in arms],color=['#64748b','#b45309','#167c80'])
+        for i,arm in enumerate(arms):
+            cost=value['evaluation_cost'][arm];ax.text(i,cost['passed']+.2,f"{cost['passed']}/{cost['tasks']}",ha='center')
         ax.set(title='Reused development cohort; 15 paired tasks',ylabel='Independent grader passes',ylim=(0,16));save(fig,'development-comparison')
     table='\n'.join('| '+name+' | '+str(v['passed'])+'/'+str(v['tasks'])+' | '+str(v['calls'])+' | '+str(v['failed_without_any_edit'])+' | '+str(v['failed_after_edit'])+' |' for name,v in value['evaluation_cost'].items())
     final='\n'.join('| '+name+' | '+str(v['base_passed'])+'/'+str(v['pairs'])+' | '+str(v['candidate_passed'])+'/'+str(v['pairs'])+' | '+str(len(v['gained']))+' | '+str(len(v['regressed']))+' |' for name,v in value['comparisons'].items())

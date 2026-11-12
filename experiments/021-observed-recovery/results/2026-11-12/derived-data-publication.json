@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "commit": "b19dd4204b2b3921cc758b164e83259fbde9cb51",
+  "anonymous_files_verified": true,
+  "ci_conclusion": "success",
+  "derived_data_sha256": "49f3ace6c0b8fff8e3aa7a9d67a132e74011fc4ab47d01c7c8d6cbdb47dc85ae",
+  "verified_utc": "2026-11-12T09:12:28.295511+00:00",
+  "files": {
+    "experiments/021-observed-recovery/derived/2026-11-12/derivation-recovery.json": "0fa0235244ef121ba5b1c4ae213bcfdf9913e3e3da828471709a9dd93d583796",
+    "experiments/021-observed-recovery/derived/2026-11-12/derived-data.json": "49f3ace6c0b8fff8e3aa7a9d67a132e74011fc4ab47d01c7c8d6cbdb47dc85ae",
+    "experiments/021-observed-recovery/derived/2026-11-12/README.md": "fcdccfb8403dce226c568af08ed32ad8972e830349b6e67e728a068a2dc96076",
+    "experiments/021-observed-recovery/derived/2026-11-12/command-provenance-review.json": "f7137fd8672c184125f6f78af7d98189310e217faa1943d439c24e51f8a81a20",
+    "experiments/021-observed-recovery/derived/2026-11-12/selection.json": "1a27059b0bc24ce8a7404aee934d2801d75c6bfec382e768222f0f1d65db0793",
+    "experiments/021-observed-recovery/derived/2026-11-12/observed-input-audit.json": "8c201e6bd687b68878c77319c377ab325ef675ccb33e2e738284b44c01d3b1a7",
+    "experiments/021-observed-recovery/derived/2026-11-12/training-input-audit.json": "96ad284d3b74ddd5586d7a2e955250d3747bc25ebb1ece4c1d70ba08bce3512d",
+    "experiments/021-observed-recovery/derived/2026-11-12/receipt.json": "71905227cc755dc5aa2e4c8667d19e36c55daa853845597b7abb6b1c1666c6d3",
+    "experiments/021-observed-recovery/audit_observed.py": "ba5f5c08f039650707c85bc7861c08660cc59b15cde218d3e33015ec99a69a2b",
+    "experiments/021-observed-recovery/audit_inputs.py": "66557fb57bd2c9a0d5868e03123024ca4a43f8f8e7838c0d12862ad8c3a4ec1c",
+    "experiments/021-observed-recovery/audit_recovery.py": "5587557ef45b3d799d445175b79cc0044d4782ffb62a11240c303a9a65154082",
+    "experiments/021-observed-recovery/build_data_recovery.py": "01e82339499cfdcf6b8fbbbdd2d275c9c2c0967095906de8d339ffe65dfba1a1",
+    "experiments/021-observed-recovery/derivation-recovery.json": "e5cc339559f045739cf47bc9be9a2c3bc0ee9f35da220ab48d36e67237ea00b8",
+    "experiments/021-observed-recovery/derivation-recovery.md": "fc2f94400808e2c887e33a30263e86c6060e3633b3468d3a4fbe0ddb3f696ba9"
+  },
+  "ci": [
+    {
+      "conclusion": "success",
+      "headSha": "b19dd4204b2b3921cc758b164e83259fbde9cb51",
+      "name": "Training data and evaluation contracts",
+      "status": "completed",
+      "url": "https://github.com/CaptainGreenskin/one-gpu-lm/actions/runs/43189228127"
+    }
+  ],
+  "command_provenance_review_sha256": "f7137fd8672c184125f6f78af7d98189310e217faa1943d439c24e51f8a81a20"
+}

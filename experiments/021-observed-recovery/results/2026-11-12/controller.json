@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T07:43:21.944745+00:00",
+  "started_epoch": 1794469401.944735,
+  "deadline_epoch": 1794512601.944735,
+  "protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "complete": true,
+  "attempt": 2,
+  "stages": [
+    {
+      "name": "preparation-verify",
+      "seconds": 2.068606630025897,
+      "attempt": 1
+    },
+    {
+      "name": "loaded-controls",
+      "seconds": 74.32374941097805,
+      "attempt": 1
+    },
+    {
+      "name": "collect-base",
+      "seconds": 2569.25713857502,
+      "attempt": 1
+    },
+    {
+      "name": "preparation-verify",
+      "seconds": 2.0684619769454002,
+      "attempt": 2
+    },
+    {
+      "name": "train-observed",
+      "seconds": 869.679926649027,
+      "attempt": 2
+    },
+    {
+      "name": "dev-base",
+      "seconds": 1765.8539871660178,
+      "attempt": 2
+    },
+    {
+      "name": "dev-reference020",
+      "seconds": 2207.736480631982,
+      "attempt": 2
+    },
+    {
+      "name": "dev-observed",
+      "seconds": 2484.4316197249573,
+      "attempt": 2
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-12T11:16:35.325757+00:00",
+  "telemetry": {
+    "samples": 1540,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "recovery_history": [
+    {
+      "cause": "mutable_prefix_alias_before_updates",
+      "failed_state_sha256": "642310d00d1c29a422f2160cf82ef11ec87ff20b42b0caf72f49a38d2e110532",
+      "recovery_receipt_sha256": "0fa0235244ef121ba5b1c4ae213bcfdf9913e3e3da828471709a9dd93d583796",
+      "recovered_utc": "2026-11-12T09:07:08.039564+00:00"
+    }
+  ],
+  "finished_utc": "2026-11-12T11:16:35.325739+00:00",
+  "finished_epoch": 1794482195.3257546
+}
