@@ -17,7 +17,14 @@ spec.loader.exec_module(report)
 class PublishedReportContracts(unittest.TestCase):
     def test_complete_evidence_recomputes_rejection_without_final_scores(self):
         result = report.assess(RESULTS)
-        self.assertEqual(result, json.loads((RESULTS / 'summary.json').read_text()))
+        expected = json.loads((RESULTS / 'summary.json').read_text())
+        # Floating-point summation can differ at the last bit across Python
+        # versions. Only measured board-energy integration has a tolerance;
+        # every count, hash, selection gate and other field stays exact.
+        energy = 'sampled_gpu_energy_kwh'
+        self.assertAlmostEqual(result['hardware'].pop(energy),
+                               expected['hardware'].pop(energy), delta=1e-12)
+        self.assertEqual(result, expected)
         self.assertFalse(result['release_decision']['accepted'])
         self.assertFalse(result['release_decision']['final_test_opened'])
         self.assertEqual(result['comparisons'], {})
