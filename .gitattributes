@@ -28,3 +28,7 @@ experiments/019-coding-release/results/**/*.svg -whitespace
 experiments/020-repair-curriculum/notices/*.txt -text whitespace=cr-at-eol
 experiments/020-repair-curriculum/results/**/*.csv -text whitespace=cr-at-eol
 experiments/020-repair-curriculum/results/**/*.svg -whitespace
+
+experiments/021-observed-recovery/notices/*.txt -text whitespace=cr-at-eol
+experiments/021-observed-recovery/results/**/*.csv -text whitespace=cr-at-eol
+experiments/021-observed-recovery/results/**/*.svg -whitespace
