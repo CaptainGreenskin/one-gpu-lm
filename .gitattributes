@@ -32,3 +32,6 @@ experiments/020-repair-curriculum/results/**/*.svg -whitespace
 experiments/021-observed-recovery/notices/*.txt -text whitespace=cr-at-eol
 experiments/021-observed-recovery/results/**/*.csv -text whitespace=cr-at-eol
 experiments/021-observed-recovery/results/**/*.svg -whitespace
+
+# Preserve exact reviewed upstream notice bytes for experiment 022.
+experiments/022-action-repair/notices/* -text
