@@ -17,7 +17,9 @@ def check(root,out):
   def scripted(sock,value,**kwargs):
    nonlocal count
    if value['operation']=='health':return {'cpu_scripted_fixture':True}
-   requests.append(value);command=commands[count];count+=1
+   # Match the socket's serialization boundary; later agent appends must not
+   # mutate an already-recorded request used by this CPU-only verifier.
+   requests.append(json.loads(json.dumps(value)));command=commands[count];count+=1
    return {'text':'<tool_call>\n<function=bash>\n<parameter=command>\n'+command+'\n</parameter>\n</function>\n</tool_call>',
     'generated_tokens':32,'seconds':0,'input_tokens':1,'input_tokens_sha256':'scripted-not-model-tokens',
     'hit_generation_limit':False,'dialogue':{'structured_tool_calls':count-1,'tool_results':count-1}}
