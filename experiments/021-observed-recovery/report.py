@@ -162,7 +162,13 @@ def assess(root):
                     'base_passed':b['passed'],'candidate_passed':r['passed'],
                     'outcome':'improved' if r['passed'] and not b['passed'] else 'regressed' if b['passed'] and not r['passed'] else 'both_passed' if r['passed'] else 'both_failed',
                     'base_calls':b['calls'],'candidate_calls':r['calls'],'base_tokens':b['generated_tokens'],'candidate_tokens':r['generated_tokens'],
-                    'base_seconds':b['seconds'],'candidate_seconds':r['seconds']})
+                    'base_seconds':b['seconds'],'candidate_seconds':r['seconds'],
+                    'base_first_edit_call':next((s['call_index'] for s in b['source_progress'] if s['changed_editable_files']),None),
+                    'candidate_first_edit_call':next((s['call_index'] for s in r['source_progress'] if s['changed_editable_files']),None),
+                    'base_final_modified_files':len(b['modified_source_files']),
+                    'candidate_final_modified_files':len(r['modified_source_files']),
+                    'base_exit_status':b['exit_status'],'candidate_exit_status':r['exit_status'],
+                    'base_grade_reason':b.get('reason'),'candidate_grade_reason':r.get('reason')})
     samples=[]
     for p in sorted(root.glob('telemetry-attempt-*.csv')):
         with p.open() as f:samples.extend(csv.DictReader(f))
@@ -182,6 +188,18 @@ def render(root):
     if value['pairs']:
         with (root/'paired-outcomes.csv').open('w',newline='') as f:
             w=csv.DictWriter(f,fieldnames=list(value['pairs'][0]));w.writeheader();w.writerows(value['pairs'])
+        regressions=[r for r in value['pairs'] if r['outcome']=='regressed']
+        review=['# 021 配对行为观察','',
+                '以下只描述已经执行并独立评分的配对结果，不重新运行任务，也不把相关性当作退步的唯一成因。首次编辑来自每次工具执行后的实际源码哈希；曾编辑与最终留下修改分开记录。', '',
+                '| 对照 | 任务 | 新候选首次编辑调用 | 最终修改文件数 | 调用数 | 退出状态 | 判分原因 |',
+                '| --- | --- | --- | --- | --- | --- | --- |']
+        for r in regressions:
+            review.append('| '+' | '.join(str(r[k]) for k in ['comparison','id','candidate_first_edit_call',
+                'candidate_final_modified_files','candidate_calls','candidate_exit_status','candidate_grade_reason'])+' |')
+        if not regressions:review+=['本轮已完成配对没有新增退步；这不等于其他任务不存在退步。']
+        review+=['','所有配对（包括改善、不变和退步）见 [paired-outcomes.csv](paired-outcomes.csv)。',
+                 '训练损失来自不同训练样本，不能替代独立任务通过率；开发分区已重复使用，模型发布仍取决于事先固定的最终门槛。']
+        (root/'behavior-review.md').write_text('\n'.join(review)+'\n')
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -236,7 +254,8 @@ def render(root):
         'Recovery disclosure: the first CPU data builder failed before any update because a checked history list was later mutated. The corrected separate builder only deep-copies that prefix. Original sources, failed evidence, collection and deadline were preserved; no model collection or candidate was rerun. See derivation-recovery.json and the experiment recovery amendment.','',
         'Limitations: one training seed, one greedy collection rollout per training task, constructed defects, reused development, four small Python fresh-repository clusters, historical Python/JavaScript tasks and unknown pretraining overlap. These results do not certify general multilingual coding, long tasks or daily-use readiness. Read-only audits and reporting do not rerun models or change selection gates.','',
         'Public numerical evidence supports recomputing comparisons and plots. Exact end-to-end model replay requires the private task/trajectory inputs; the public repository alone is insufficient. To use your own authorized tasks, create a new admission and experiment freeze using the shared one_gpu_lm modules. Do not substitute inputs inside this frozen run.','',
-        '[Complete evidence and decision](summary.json) · [Frozen protocol](protocol.json) · [Source provenance](sources.json)']
+        '[Complete evidence and decision](summary.json) · [Frozen protocol](protocol.json) · [Source provenance](sources.json)',
+        '[Paired behavioral observations](behavior-review.md)' if value['pairs'] else '']
     (root/'README.md').write_text('\n'.join(lines)+'\n')
     return value
 

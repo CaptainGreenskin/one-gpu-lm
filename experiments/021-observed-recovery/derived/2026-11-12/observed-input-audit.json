@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "audit_source_sha256": "ba5f5c08f039650707c85bc7861c08660cc59b15cde218d3e33015ec99a69a2b",
+  "collection_sha256": "7304ee9a28eecd350bea1851ee4fab1e6d19ea0f26687b5f73633c7c94f62665",
+  "derived_data_sha256": "49f3ace6c0b8fff8e3aa7a9d67a132e74011fc4ab47d01c7c8d6cbdb47dc85ae",
+  "prepared_data_sha256": "fe3b0099204838d083b2252b1a922ccc74f419b23010d765f7d274b8a52aaf9a",
+  "training_tasks": 55,
+  "completed_request_prefixes_verified": 392,
+  "records_checked": 330,
+  "common_identical_records": 220,
+  "observed_replacements": 84,
+  "fallback_records": 26,
+  "categories": {
+    "tool_error": 6,
+    "read_only": 75,
+    "wrong_edit": 3
+  },
+  "whole_context_and_masking_verified": true,
+  "supervised_tokens": 41753,
+  "input_tokens": 721376,
+  "actual_tool_commands_reexecuted_by_audit": false,
+  "scope": "All saved completed training-state prefixes and derived examples; an interrupted in-flight request is not claimed as captured.",
+  "collection_status_counts": {
+    "0": 21,
+    "75": 34
+  },
+  "raw_traces_public": false,
+  "derivation_recovery": {
+    "passed": true,
+    "audit_source_sha256": "5587557ef45b3d799d445175b79cc0044d4782ffb62a11240c303a9a65154082",
+    "recovery_receipt_sha256": "0fa0235244ef121ba5b1c4ae213bcfdf9913e3e3da828471709a9dd93d583796",
+    "builder_sha256": "01e82339499cfdcf6b8fbbbdd2d275c9c2c0967095906de8d339ffe65dfba1a1",
+    "original_frozen_files_unchanged": true,
+    "only_checked_prefix_ownership_changed": true,
+    "failed_archive_files_verified": 321,
+    "collection_rerun": false,
+    "original_start_and_deadline_preserved": true,
+    "publication_commit": "ae78fda45c0c1babfd5cd04f8b82b4ea512d20ad"
+  }
+}

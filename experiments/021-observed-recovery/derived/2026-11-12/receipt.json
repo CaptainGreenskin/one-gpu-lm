@@ -1,0 +1,2017 @@
+{
+  "schema_version": 1,
+  "records": 330,
+  "sha256": "fe3b0099204838d083b2252b1a922ccc74f419b23010d765f7d274b8a52aaf9a",
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "admission_sha256": "4e84e62c1bfff76cb9a171f186e86bd8a6afc84993175aaccc86df4f5fbaf347",
+  "license_record_sha256": "c30ef41511e9f8f071a713d4cfe200dfb0cee4a8ebf30926e4d6ba0671c736d3",
+  "parent_data_sha256": "2b40a162246093de53fd0e0ab89671b3208693414b84e2e4ce2bf2ea2fe27473",
+  "collection_sha256": "7304ee9a28eecd350bea1851ee4fab1e6d19ea0f26687b5f73633c7c94f62665",
+  "raw_data_public": false,
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "task_ids": [
+    "019-inflection-camelize",
+    "019-inflection-dasherize",
+    "019-inflection-humanize",
+    "019-inflection-ordinal",
+    "019-inflection-ordinalize",
+    "019-inflection-parameterize",
+    "019-inflection-pluralize",
+    "019-inflection-singularize",
+    "019-inflection-tableize",
+    "019-inflection-titleize",
+    "019-inflection-transliterate",
+    "019-inflection-underscore",
+    "019-python-semver-Version-__getitem",
+    "019-python-semver-Version-__hash",
+    "019-python-semver-Version-__iter",
+    "019-python-semver-Version-__repr",
+    "019-python-semver-Version-__str",
+    "019-python-semver-Version-_increment_prerelease",
+    "019-python-semver-Version-_nat_cmp",
+    "019-python-semver-Version-_validate_identifiers",
+    "019-python-semver-Version-bump_build",
+    "019-python-semver-Version-bump_major",
+    "019-python-semver-Version-bump_minor",
+    "019-python-semver-Version-bump_patch",
+    "019-python-semver-Version-bump_prerelease",
+    "019-python-semver-Version-compare",
+    "019-python-semver-Version-finalize_version",
+    "019-python-semver-Version-is_compatible",
+    "019-python-semver-Version-is_valid",
+    "019-python-semver-Version-match",
+    "019-python-semver-Version-parse",
+    "019-python-semver-Version-replace",
+    "019-python-semver-Version-to_dict",
+    "019-python-semver-Version-to_tuple",
+    "boltons-LRI-__setitem__",
+    "boltons-LRU-__getitem__",
+    "boltons-asciify",
+    "boltons-bytes2human",
+    "boltons-cache-and-frozen",
+    "boltons-make_cache_key",
+    "boltons-multi-dict",
+    "boltons-pluralize",
+    "boltons-research",
+    "boltons-slugify",
+    "underscore-defaults",
+    "underscore-difference",
+    "underscore-group-partition",
+    "underscore-index-nan",
+    "underscore-intersection",
+    "underscore-map-object",
+    "underscore-object-pairs",
+    "underscore-range-step",
+    "underscore-reduce-initial",
+    "underscore-stable-sort",
+    "underscore-uniq-iteratee"
+  ],
+  "replaced_records": 84,
+  "replaced_tasks": 46,
+  "categories": {
+    "tool_error": 6,
+    "wrong_edit": 3,
+    "read_only": 75
+  },
+  "fallback_reasons": {
+    "no_eligible_observed_state": 16,
+    "no_verified_bounded_correction": 10
+  },
+  "coverage_passed": true,
+  "checks": [
+    {
+      "id": "019-inflection-camelize",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-camelize",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "bf43b3962c5ed4ab72b84c3829c675d5483b0ff7c7718e53050e7e737cb3ea8a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "7508c7621f7611e3c2daed1a7d0e46e843314a324a99c4e60dfc2dd1ec43b61d",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 7,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "137634bf4ad31ce8f3f8521da37f0bdd56d8d6b1f7c7421c8586ecb6a9142e51",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "wrong_edit",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "1851ab5d0650885ec8ca865247f3a5d5aa19d9b357f99b7aa4560d71f97c340f",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "973b7b4183102c8a39e9170d650cb010dbb7991d994e72d1cfcfea7f56f03ac9",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "1bd7fd84fa496509c6683a2a17c51626b8c435270029e249eea830581ec11048",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "6d75be60e029fa585126d735e1f65a90e513b287823c031ad0e4a991af3a1fd5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "e500f793cdf1134d0b8bd6acf96850e1fb7428bfb98cf4510728fc1950df33aa",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "0e3f6620699640a558a5ebe6e10c41259bd638515472b1bad4a94fe5a2160faa",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "2bd15846fa8c0a19c92c1a281f3326d1add39d622a8b54ac33004be7c7203945",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "568726964c4ee5b06975f447dfcc56d29aa84e06cb144afe8f52f5745e0428cb",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "79651929da4cdad849f5cbb74732ada93fde042dffb1c0ed24bc07b6263523eb",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "8a0d8f1019fb5c0945c906e1454291951f479409ee09be165dda894773c07e56",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "580231b6b44f0cc1f3e86408a7fbbd435eee9bf67cdadfbc0c3ffa0fc5edd701",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "83bf9f82682b19cddea98b73d37dd85bb75d37b679b078d7c2d158ea16319e05",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "572e0330b410078d1b5cde3a277fa6d3d69226d083920f6c9406990b47e025fe",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 7,
+      "category": "wrong_edit",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {
+        "complete_context_or_target_limit": 1
+      }
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "749656fa89635f7580ebd72f6ae6559ee741da777536b48289c4557fec753c70",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "683ca317f138739caf3900de126141aa745458d86f52e234c5b62f0aaeb101c5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1,
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "2d185165ba81cd3c5c4041606c9f58756efe578bb0af56289c63784c28edd246",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "1a5662a833db29aa09838218c0aa7038bc54cc5810ed92feadd8ad1259d7e524",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "78def940b27213e14649e8effbf87ba62f79fd0191e67980be8359d422af9fee",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "db7d6cda1e058a7eb140d139cf5572621831fe5ef1d7206f59728c7730f5869e",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "5761700513a4c25f2cc9dd1e93a098eb46f18a2b6cab02d8319f9114623f795a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "64224b1525118450234c7eae56eed5619c61b0d6a97834e7e3a8553a4978e870",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "ff7acc81ebdfbd353746dba5fd95cf417abaec255bb5bb42004147e094c2fd12",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "823a5f1b343568ce8c3b621646ba712775430249e5777466883708e0a0a4cfdb",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "329518a7cd49535489c8c208327cd639663aa6de875aa6c3304a7d05cef9b630",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "c029d9852d0d4fa295bb3af1920fee7e0e6505ddc662bc09bd86422c4395ffe3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "8277ba079d43c2ed8a75fe042b98cebc2e030e8862eeb12641669c3073adbbec",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "8",
+      "passed": true,
+      "trajectory_sha256": "827d19796bebad3736e637c9551cff99484a32aca2dc232f589abe34e0dcdc21",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 8,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "08683339d80006d3cf991e460aa4dc54b6b06cd75f5830f39668492e52cc675a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "49c210d23c7a6cb3788a19969c889ac796c54f3ac7fef5cde4f5195e654e3f1e",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 1
+      }
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "c72d786a3102fe178bfc16191c338622deb2ed3094ea453dd11ce3f94aece959",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "624aa32cf369fe2ce3f414e63428dc724ac4bb0fb0d17dd2e1696455727ae686",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "c0785aede46ad9a92b1c70e25148a0bdd0f8af681a56db540fad347eeac9d4bb",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 1
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "a3dee087511a5fa67841ad3126ab36193594e165b129934384c5367289c5f419",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1,
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "3f125920d342577d7112b7ee3f2a9dcbc29dd94bbef02a4af30b4253e5f42df3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "6460fd5fd326650fe9530213452f660e70c7caf7dbc4ec38b1ca04c45c62e62d",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "cb441d0314833b6f647a66d7be3d4b539c127930b769e1f759530854505afb25",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "bbff37e2f80910afe830449ca24db3d0c27f305cffd300521baf33efa254ebe2",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "bf25d25a76e473dfc9d0080abf7951cba7eb14cf802b9a86ec5d520cf165f02b",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "392c54e34436d13c5a59d5929f0e9ba9debafe4cc892760ba1725bac8af89d64",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "9678c99eba1ef7c69f0019b9b87fb2981f81ed8afcf712a8cff2cee09e322fb3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "7171a33ef9d4655c66f3058d4d356dd655504abab52af9fe072d7e6f731ad2ce",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "077432f10b4a989a0de063047137225f4cde9b4f0eb55d3a6d180bf111ec15f3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "12d45a48a1847c1306b8426cd7b674715a6ed46dda48cbba78e0778f4e64d485",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "c8408c7356626228bc3e0f476f6aece76da734d48f94f0c024a2f7042c02fd72",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "98eecc4bda2b1ffae65ddb7144a040aecb15fbd635c38d8e5e0507576c4612c1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "936b0b444718c0b79131f1f949caa69731dd22dbd53d6bac6a6cac6bd0d87413",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 1
+      }
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "6c594023274d8c2cb9df7bbd7666a4ccbf5eb0f8a5b159ca9835138ef41a8fd2",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "fc7986cdc2f148c6a83dcb64e8fb208b2e1be058ec0fd9749ffbce43cca419e7",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "b0668569bccedb41c4382353ee25db19411e0e9753422f5dc30e7741d51ceb6b",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "f2cfab46a40bdd976d800c036e3f876f29ebef2c3e53c0bea152b8bde79ac576",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "caeaed2f0026cddaddcd79f85067554cf609f4d9b2956a801cb0ef7a5c61a6e4",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "0c7a248ba8e5ea20bbae4a8245ea695d84d38a1c41cc6200d586097871d85004",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "e32b25571bca72d42cf8909b1dd84f279514ba813f60e3c7c8f7b182380db8d0",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "9079aa0665ed356b7bcd0e4322a34d04e692d51617882d78af0cf078d49f15ab",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "330fbe731e7494395ed3062e75ba635d0697782842c656231545614516b6b45a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "e8eb250cea6d722ca8e928bce31e4fb5c54e41d2c05f123dc10316cd4f54abad",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "4b20d3feea3361d64afda4758aea1bdfa8d1370af8ba491856311da364344e59",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "a513338257ce057587f963f1b09ca246ebcbc169d572d7337f86d0830054d403",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "654b54b7cdb75f980004820494002cff0e94b90fc1b4793c14f132d3528c014a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "boltons-asciify",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "boltons-asciify",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "c4cfe017e1e2a5aadc82b99802e952244ef5df7407ec22b80f2be5e752d8dfe4",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "wrong_edit",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 2
+      }
+    },
+    {
+      "id": "boltons-bytes2human",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "boltons-bytes2human",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "state_not_independently_failed_test": 2
+      }
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "7",
+      "passed": true,
+      "trajectory_sha256": "3d80e0d3b0f8ca49d5820b57c078fbd8ea402b4f98fd6198d846ca66a13af939",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 7,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 1
+      }
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "e2555ebf6af89d07567687f0e150905be6fca4ada9d28dee2b52d7ef9a59c725",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "6916826c18e51d26ee2ddeb2fdd52913c837f2fddd83202e8f2859cc528b1f70",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 6,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "7d654cca9773b8221659c4f4bb78c358ebcafcfa0a18e5b8a998dec69496ae06",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "tool_error",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "28c20e6bcaf75311e01bebb675b541a0526d65d8a51e7b5f8ce500b49d8b2f23",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "b804e90f657e958ca695097c00aa62e90992ae12e46bf995a2cec4c84b06430f",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-pluralize",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "b41ee551bb8e46e0a5f40252372ed8ad94d7249ce3ed034012483f3d24048bfa",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-pluralize",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "complete_context_or_target_limit": 5
+      }
+    },
+    {
+      "id": "boltons-research",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "7f90c40fae128fd5f0663685ca92ca67e553c5daa8c40e8d9cc92e4d193d468d",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "boltons-research",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "305d129aa3376d77be3e729020e9c6bef6dbdad3cc001cc0730c0a958912883f",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "boltons-slugify",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "a20668822ab5bd2570327f2a0945297b916ad1487c782eb9b00da33631a200bd",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 7,
+      "rejected_states": {}
+    },
+    {
+      "id": "boltons-slugify",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "8ce258654a49dd7ad43db3b4e852718bc1361d56759b3c627aa2bb9a69298864",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "8",
+      "passed": true,
+      "trajectory_sha256": "9916b17899197d54466a11e440fe1011d0c63fa58a37e300617f8ac86949b465",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 8,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "53ce47ad50a7dc6bf52db58559ecb4a326c89a78e2ca7f9fa2ef5422ac20337c",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    },
+    {
+      "id": "underscore-difference",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-difference",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-group-partition",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-group-partition",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "state_not_independently_failed_test": 1
+      }
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "697e838757d01e6e7d1c06d03b5ee97b2ebff575eae4e3e52903b92d345ab609",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "4",
+      "passed": true,
+      "trajectory_sha256": "45e03f609ab3778b5340c206a78cf391f764a0aba50519504684da9f01c55ea1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 4,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {
+        "complete_context_or_target_limit": 4
+      }
+    },
+    {
+      "id": "underscore-intersection",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-intersection",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-map-object",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-map-object",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_verified_bounded_correction",
+      "rejected_states": {
+        "state_not_independently_failed_test": 2
+      }
+    },
+    {
+      "id": "underscore-object-pairs",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-object-pairs",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "15888b286b4743b93c9fe5707356227a1adf26641826ddc31df0a4874f91402b",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 8,
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "132ba797f0a36329854ad1b40bccb9d898af71cb03fcd00df508880ab3a2153a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "state_not_independently_failed_test": 2
+      }
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "8",
+      "passed": true,
+      "trajectory_sha256": "76c8d86e88f47025773ed78cce5ea1ddd72bb2bbf420a93ab0e3681c9c9e2563",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 8,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "5",
+      "passed": true,
+      "trajectory_sha256": "eaa2744cbe904500e213ac67d8da68d3d31c9715815d64df592ff49ea5d2afc5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 5,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 9,
+      "rejected_states": {
+        "complete_context_or_target_limit": 3
+      }
+    },
+    {
+      "id": "underscore-stable-sort",
+      "slot": "stall_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-stable-sort",
+      "slot": "late_repair",
+      "fallback": true,
+      "reason": "no_eligible_observed_state",
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "8",
+      "passed": true,
+      "trajectory_sha256": "5f30af68aee84f6ccf42c3388dca619e0488efb0f062dcd1fe39c2ae4d0c4e9b",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "stall_repair",
+      "observed_calls": 8,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 11,
+      "rejected_states": {}
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "6",
+      "passed": true,
+      "trajectory_sha256": "b159baa7a38a62501eb39c4bc3abc9ec2c2c0d8d6d1fb95a7a2baa5890ccd0b6",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": null,
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1,
+      "slot": "late_repair",
+      "observed_calls": 6,
+      "category": "read_only",
+      "whole_context_preserved": true,
+      "total_calls": 10,
+      "rejected_states": {
+        "complete_context_or_target_limit": 2
+      }
+    }
+  ],
+  "evaluation_traces_used": false,
+  "teacher_api_used": false,
+  "incorrect_actions_supervised": false,
+  "shared_first_four_records": 220,
+  "parent_receipt_sha256": "f88ba7eb25f6a4c6058b46891e23c4918cb8a344c43c612d84b8f341d68f4ba3",
+  "selection_policy": "task-round-robin-quota-uniform-trajectory-v1"
+}

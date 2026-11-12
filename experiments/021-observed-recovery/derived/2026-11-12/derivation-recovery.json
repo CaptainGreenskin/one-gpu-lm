@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "started_utc": "2026-11-12T08:37:44.696220+00:00",
+  "original_started_epoch": 1794469401.944735,
+  "original_deadline_epoch": 1794512601.944735,
+  "original_controller_sha256": "642310d00d1c29a422f2160cf82ef11ec87ff20b42b0caf72f49a38d2e110532",
+  "failed_archive_manifest_sha256": "65f971b0bf4d98c41504f4e0bac22d1f495e40f4f61d2e02442f764ee6ef8dd3",
+  "failed_archive_files": 321,
+  "original_protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "builder_sha256": "01e82339499cfdcf6b8fbbbdd2d275c9c2c0967095906de8d339ffe65dfba1a1",
+  "amendment_sha256": "e5cc339559f045739cf47bc9be9a2c3bc0ee9f35da220ab48d36e67237ea00b8",
+  "collection_sha256": "7304ee9a28eecd350bea1851ee4fab1e6d19ea0f26687b5f73633c7c94f62665",
+  "publication_commit": "ae78fda45c0c1babfd5cd04f8b82b4ea512d20ad",
+  "model_collection_rerun": false,
+  "optimizer_updates_before_recovery": 0,
+  "model_evaluations_before_recovery": 0,
+  "frozen_original_files_preserved": true,
+  "deadline_extended": false,
+  "finished_utc": "2026-11-12T09:07:08.037114+00:00",
+  "derived_data_sha256": "49f3ace6c0b8fff8e3aa7a9d67a132e74011fc4ab47d01c7c8d6cbdb47dc85ae"
+}

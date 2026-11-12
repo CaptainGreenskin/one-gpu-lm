@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checked_utc": "2026-11-12T09:10:57.027266+00:00",
+  "prepared_data_sha256": "fe3b0099204838d083b2252b1a922ccc74f419b23010d765f7d274b8a52aaf9a",
+  "catalog_sha256": "79eafe7a139ff7495a1144bd581c2babcfefa1d5186d99beb1de4b5552da0ead",
+  "new_command_catalog_sha256": "5f39100d395d01c2d6ed003173169f8b36374ee845adcafb610f62d372d21c1c",
+  "unique_history_commands": 358,
+  "commands_shared_with_exact_parent_data": 153,
+  "new_unique_commands_reviewed": 205,
+  "inline_python_commands_inspected": 6,
+  "external_fetch_or_package_install_commands_found": 0,
+  "private_probe_receipt_sha256": "aad17b4ae7bfe9f90af2e39f36f419c1c897e5773a075a1425f9457188a97c4a",
+  "dependency_reference_probe_returned_source": false,
+  "git_reference_probe_returned_source": false,
+  "declared_test_harness_inspection_present": true,
+  "network_disabled_in_executed_sandbox": true,
+  "raw_commands_public": false,
+  "scope": "Static review of stored history commands, six new inline Python probes/edits, and recorded reference-seeking outputs. Remaining new commands read the working repository or declared test harness. No commands reexecuted, no evaluation traces read, and no new candidate or data selection. This does not establish absence of pretraining overlap or exhaustive legal/security assurance."
+}
