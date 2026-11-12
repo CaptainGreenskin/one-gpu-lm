@@ -19,6 +19,7 @@ def module(name):
 
 builder = module('build_data')
 decision = module('decision')
+recovery_builder = module('build_data_recovery')
 
 
 class CaptureContracts(unittest.TestCase):
@@ -120,8 +121,37 @@ class SelectionGates(unittest.TestCase):
         value=self.campaign({0});value['results'][-1]=value['results'][0]
         with self.assertRaises(ValueError):decision.paired(self.campaign({0}),value,map(str,range(5)))
 
+    def test_old_24_task_history_cannot_satisfy_021_release(self):
+        plan=json.loads(path.with_name('preparation-plan.json').read_text())
+        def campaign(count,passed):
+            return {'complete':True,'results':[{'id':str(i),'passed':i in passed,'generated_tokens':12,
+                'generations':[{'action_format_valid':True}]} for i in range(count)]}
+        fresh=decision.paired(campaign(24,set()),campaign(24,{0,1,2}),map(str,range(24)))
+        history=decision.paired(campaign(48,{0}),campaign(48,{0}),map(str,range(48)))
+        checks={'legacy_passes':9,'save_reload_greedy_match':True,'rights_and_secret_scan_pass':True,
+                'all_execution_audits_pass':True,'single_training_seed_and_repository_cluster_limits_disclosed':True}
+        self.assertTrue(decision.release_gate(fresh,history,checks,plan)['accepted'])
+        history=decision.paired(campaign(24,{0}),campaign(24,{0}),map(str,range(24)))
+        result=decision.release_gate(fresh,history,checks,plan)
+        self.assertFalse(result['accepted']);self.assertIn('historical_pairs',result['failed_gates'])
+
 
 class CompleteEncodingContracts(unittest.TestCase):
+    def test_wrong_edit_checked_prefix_does_not_grow_with_later_actions(self):
+        from types import SimpleNamespace
+        from one_gpu_lm.common.edit_progress import EditableProgress
+        tracker=object.__new__(EditableProgress)
+        tracker.snapshot=lambda:{'changed_editable_files':1,'invalid_editable_files':0,'editable_state_sha256':'a'*64}
+        messages=[{'role':'system','content':'rules'},{'role':'user','content':'observed failed test'}]
+        episode=SimpleNamespace(progress=tracker,messages=messages,steps=[{}]*5)
+        checked,progress=recovery_builder.snapshot_prefix(episode)
+        target_record=copy.deepcopy(messages)
+        episode.messages.extend([{'role':'assistant','content':'repair'}, {'role':'user','content':'passed'}])
+        self.assertEqual(checked,target_record)
+        self.assertNotEqual(checked,episode.messages)
+        self.assertEqual(progress['completed_calls'],5)
+        self.assertFalse(progress['reminder'])
+
     def test_failed_history_masked_and_limits_never_truncate(self):
         from tests.test_training_encoding import RecordingTokenizer
         from one_gpu_lm.common.agent_policy import NATIVE_EXAMPLE
