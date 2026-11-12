@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "experiment": "021-observed-recovery",
+  "status": "rule_locked_after_cpu_admission_before_model_collection",
+  "objective": "Replace scripted late-state supervision with independently verified corrections from actual base-model training-task states; no evaluation traces enter training.",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "model_license": "Apache-2.0"
+  },
+  "budget": {
+    "max_gpu_pipeline_wall_seconds": 43200,
+    "max_candidates": 1,
+    "max_optimizer_updates_per_candidate": 330,
+    "maximum_sequence_tokens": 4096,
+    "max_training_seconds_per_candidate": 5400,
+    "max_backend_start_seconds": 300,
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 900,
+    "max_collection_seconds": 10800
+  },
+  "candidates": [
+    {
+      "name": "observed",
+      "learning_rate": 2e-06,
+      "data_variant": "observed"
+    }
+  ],
+  "shared_recipe": {
+    "epochs": 1,
+    "seed": 101,
+    "rank": 8,
+    "alpha": 16,
+    "lora_dropout": 0,
+    "backbone_dtype": "bfloat16",
+    "adapter_dtype": "float32",
+    "assistant_output_only": true,
+    "dialogue_format": "native_roundtrip",
+    "inference_policy": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1"
+    },
+    "target_must_fit_generation_limit": true,
+    "no_teacher_api": true,
+    "candidate_initialization": "The single observed candidate starts from the identical pinned base; frozen 020 recovery is a development comparator only."
+  },
+  "data": {
+    "minimum_admitted_train_tasks": 55,
+    "minimum_training_repositories": 4,
+    "minimum_unique_records": 330,
+    "minimum_supervised_tokens": 16384,
+    "maximum_records": 330,
+    "construction": "Keep the original four inspect/repair/verify/submit records for each task (220 common records). Replace only stall_repair and late_repair (up to 110 slots) using frozen eligibility and ordering; missing eligible states retain the corresponding exact 020 recovery record. All 330 semantic IDs and one-pass seeded order remain fixed.",
+    "training_repositories": [
+      "mahmoud/boltons",
+      "jashkenas/underscore",
+      "python-semver/python-semver",
+      "jpvanhal/inflection"
+    ],
+    "prior_eval_repositories_never_training": true,
+    "no_dev_or_test_answers_or_trajectories": true,
+    "sample_selection": "All 330 unique complete records. Never truncate history/targets, drop a training task, pad examples or use evaluation feedback as supervision.",
+    "repair_edit_operator": "Python exact literal replacements with unique-anchor assertions checked before any file write; preserve ampersands/backslashes literally.",
+    "training_token_accounting": "Equal update and upper-bound budgets; actual input and supervised token counts may differ and must be reported. No equal-token or same-FLOP claim.",
+    "minimum_replaced_records": 40,
+    "minimum_tasks_with_replacements": 20,
+    "state_rules": {
+      "eligible": "Same admitted training task; completed calls 4..8; no exit/backend error or invalid source; no protected-file violation in the prefix; actual independently graded incorrect allowed-source state.",
+      "stall_repair": "Newest eligible state with no observed allowed-source edit in its prefix. Correct its current source and independently verify the repair.",
+      "late_repair": "Prioritize states with actual current wrong edits, then unchanged states with observed nonzero tool returns, then other unresolved read-only states; newest eligible within category. Append one executed standalone declared failing test, then supervise the correct repair. Test input and failure observation must be real, not invented.",
+      "length": "Try states in the declared order, accepting the first whose whole native input is <=4096 tokens and target <=512 tokens. No clipped context or target.",
+      "fallback": "If no state satisfies all checks, retain the exact corresponding 020 recovery record and record the reason.",
+      "coverage": "Require at least 40 replaced slots across at least 20 training tasks before any new weight update; report observed wrong-edit, tool-error and read-only contributions separately.",
+      "continuation": "After <=8 sampled calls, diagnostic+repair+verification+submission must fit the original 12-call limit.",
+      "masking": "All base actions and failing diagnostics are history only; only successfully executed corrective commands are targets."
+    }
+  },
+  "partitions": {
+    "development": "Same 15 observed development tasks as 019, rerun unmodified base, frozen 020 recovery and the single new candidate once under identical inference ceilings. Reused development is not independent validation.",
+    "historical": "All 48 previously observed 020 final tasks, never training or selection",
+    "fresh": "24 new constructed defects, six each from four independent repository identities not used in prior training/development/evaluation; no model scores before development gate passes",
+    "legacy": "9 original function checks",
+    "fresh_repository_replacements": "Only rights, runtime compatibility, actual clean/broken/restored test controls or reference exposure before any model rollout; retain exclusions. No score-based replacement."
+  },
+  "selection": {
+    "criterion": "One new candidate only. Rerun base, frozen 020 recovery and new candidate once on the same 15 development tasks under identical inference ceilings.",
+    "must_improve_development_net_tasks": 1,
+    "maximum_development_regressions": 1,
+    "must_improve_reference_net_tasks": 1,
+    "maximum_reference_regressions": 1,
+    "if_no_eligible_candidate": "Keep final cohorts unopened; record rejection and do not upload candidate weights."
+  },
+  "release_gate": {
+    "minimum_net_fresh_gain": 3,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "legacy_passes_required": 9,
+    "native_format_failure_rate_not_higher": true,
+    "save_reload_greedy_match": true,
+    "rights_and_secret_scan_pass": true,
+    "all_execution_audits_pass": true,
+    "single_training_seed_and_repository_cluster_limits_disclosed": true,
+    "weights_release_scope": "experimental LoRA adapter plus exact base revision; full merged model only after a separate verified export, never label adapter as complete 27B weights",
+    "all_72_final_task_pairs_complete": true,
+    "historical_tasks": 48,
+    "fresh_tasks": 24
+  },
+  "publication": {
+    "code_results": "CaptainGreenskin/one-gpu-lm",
+    "modelscope_namespace": "CaptainGreenskin",
+    "modelscope_profile": "https://www.modelscope.ai/profile/CaptainGreenskin",
+    "modelscope_repository_proposed": "one-gpu-lm-27b-coding-021",
+    "upload_only_if_release_gate_passes": true,
+    "never_publish": [
+      "credentials",
+      "remote machine identifiers",
+      "raw task traces",
+      "private corpora",
+      "optimizer states"
+    ],
+    "license_policy": "Original code MIT; base and training-source licenses separately preserved. No third-party teacher API outputs."
+  },
+  "failure_policy": "One 12-hour clock starts before training-task base generation and includes collection, derived-data verification/publication, training and evaluation. Freeze source/recipe/selector and heldout tasks before collection; freeze exact derived data before updates. No score reruns, extra candidate, relaxed gate or deadline extension. Infrastructure repair must preserve original evidence, exact model inputs and remaining budget.",
+  "limitations": [
+    "One greedy collection rollout per training task and one training seed; this is not iterative on-policy RL.",
+    "Corrective commands come from licensed training reference snapshots, not external teacher APIs or hidden reasoning.",
+    "Some wrong or stalled states may be unavailable or exceed complete-input limits; fixed fallbacks and measured coverage must be reported.",
+    "Constructed defects, unknown pretraining contamination, repeatedly observed development tasks.",
+    "Fresh candidate repositories are Python; historical Python/JavaScript and the legacy checks retain their original scope. Repository disjointness does not imply disjoint programming concepts.",
+    "Small pilot; no broad coding, long-task, production throughput or daily-use claim."
+  ],
+  "reference_adapter": {
+    "experiment": "020",
+    "candidate": "recovery",
+    "commit": "5f92aa16d35b62e9655f1e20aa72a3236b38a553",
+    "adapter_model_sha256": "ea7c324af0c9d702491acc0af514568dd1f9a01b43f94e02ec270f8da376bf22",
+    "role": "frozen development comparator, not an eligible release candidate"
+  },
+  "collection": {
+    "model": "unchanged pinned base, no adapter",
+    "tasks": "all 55 admitted training tasks, sorted task ID, one rollout each",
+    "stop_after_completed_calls": 8,
+    "advertised_agent_call_limit": 12,
+    "task_wall_seconds": 450,
+    "max_stage_seconds": 10800,
+    "snapshot": "Private exact allowed-source bytes, completed history and model-input identity after each call; preserve early natural exits and errors.",
+    "selection": "No model score selects tasks. State choice rules and fallbacks are fixed before the first rollout.",
+    "sampling_seed": 101,
+    "temperature": 0,
+    "retry_for_scores": false
+  }
+}
