@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "records_checked": {
+    "repair": 330,
+    "recovery": 330
+  },
+  "data_sha256": {
+    "repair": "aadad6489ff024b31a99c5317f3d559c7b354db6b69526b57e65b85229eb0a6e",
+    "recovery": "c7f4aa0c29b35efa9997c6482265d4b52d76cdf2e6209f819ca94bcc76efdfa2"
+  },
+  "known_secret_pattern_findings": [],
+  "exact_training_source_notices": {
+    "jashkenas/underscore": "92905fb54f5d168a27e6d5dc7c2197020add11842be4c70689d084bae3bfe37a",
+    "jpvanhal/inflection": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133",
+    "mahmoud/boltons": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3",
+    "python-semver/python-semver": "cc10179de9ced8655d7765bd3a8ac46438a61e663de7cf1c48d502d2baf9f3d5"
+  },
+  "teacher_api_used": false,
+  "development_examples_used": false,
+  "scope": "Actual paired training JSONL, known credential patterns and supplied private identifiers; exact upstream notices. Not exhaustive secret detection or a legal warranty."
+}

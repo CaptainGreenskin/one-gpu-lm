@@ -1,0 +1,51 @@
+{
+  "selected": "recovery",
+  "comparisons": {
+    "repair": {
+      "pairs": 15,
+      "base_passed": 6,
+      "candidate_passed": 7,
+      "gained": [
+        "fast-deep-equal-array-members"
+      ],
+      "regressed": [],
+      "net_gain": 1,
+      "base_format": {
+        "failures": 4,
+        "calls": 152,
+        "rate": 0.02631578947368421
+      },
+      "candidate_format": {
+        "failures": 0,
+        "calls": 148,
+        "rate": 0.0
+      },
+      "candidate_generated_tokens": 10162
+    },
+    "recovery": {
+      "pairs": 15,
+      "base_passed": 6,
+      "candidate_passed": 8,
+      "gained": [
+        "fast-deep-equal-array-members",
+        "fast-deep-equal-map-values"
+      ],
+      "regressed": [],
+      "net_gain": 2,
+      "base_format": {
+        "failures": 4,
+        "calls": 152,
+        "rate": 0.02631578947368421
+      },
+      "candidate_format": {
+        "failures": 0,
+        "calls": 144,
+        "rate": 0.0
+      },
+      "candidate_generated_tokens": 9932
+    }
+  },
+  "final_test_opened": true,
+  "selection_uses_development_only": true,
+  "reason": "eligible development winner"
+}

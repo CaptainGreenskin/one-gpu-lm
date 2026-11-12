@@ -1,0 +1,22 @@
+{
+  "accepted": false,
+  "gates": {
+    "fresh_pairs": true,
+    "historical_pairs": true,
+    "fresh_gain": true,
+    "fresh_regressions": false,
+    "historical_regressions": false,
+    "format_failure_rate": true,
+    "legacy": true,
+    "save_reload_greedy_match": true,
+    "rights_and_secret_scan_pass": true,
+    "all_execution_audits_pass": true,
+    "single_training_seed_and_repository_cluster_limits_disclosed": true
+  },
+  "failed_gates": [
+    "fresh_regressions",
+    "historical_regressions"
+  ],
+  "release_scope": "experimental LoRA adapter plus exact base revision; full merged model only after a separate verified export, never label adapter as complete 27B weights",
+  "advanced_coding_or_daily_use_certified": false
+}

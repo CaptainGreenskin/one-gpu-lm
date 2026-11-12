@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "experiment": "020-repair-curriculum",
+  "status": "rule_locked_after_data_admission_before_model_rollouts",
+  "objective": "Test grounded literal repair and stalled-state supervision, then isolate added executed failure-recovery context; final test remains sealed until development selection passes.",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "model_license": "Apache-2.0"
+  },
+  "budget": {
+    "max_gpu_pipeline_wall_seconds": 43200,
+    "max_candidates": 2,
+    "max_optimizer_updates_per_candidate": 330,
+    "maximum_sequence_tokens": 4096,
+    "max_training_seconds_per_candidate": 5400,
+    "max_backend_start_seconds": 300,
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 900
+  },
+  "candidates": [
+    {
+      "name": "repair",
+      "learning_rate": 2e-06,
+      "data_variant": "repair"
+    },
+    {
+      "name": "recovery",
+      "learning_rate": 2e-06,
+      "data_variant": "recovery"
+    }
+  ],
+  "shared_recipe": {
+    "epochs": 1,
+    "seed": 101,
+    "rank": 8,
+    "alpha": 16,
+    "lora_dropout": 0,
+    "backbone_dtype": "bfloat16",
+    "adapter_dtype": "float32",
+    "assistant_output_only": true,
+    "dialogue_format": "native_roundtrip",
+    "inference_policy": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1"
+    },
+    "target_must_fit_generation_limit": true,
+    "no_teacher_api": true,
+    "candidate_initialization": "Each starts from the identical pinned base, never from a 019 adapter."
+  },
+  "data": {
+    "minimum_admitted_train_tasks": 55,
+    "minimum_training_repositories": 4,
+    "minimum_unique_records": 330,
+    "minimum_supervised_tokens": 16384,
+    "maximum_records": 330,
+    "construction": "Six targets per original admitted training task: inspect, repair, verify, submit, repair after a real read-only stall, late repair. Five targets per task are identical across candidates. Only the late slot changes: observed read-only context versus an executed failed-anchor attempt or an incorrect edit followed by failing tests. Wrong actions remain masked history, never supervised targets.",
+    "training_repositories": [
+      "mahmoud/boltons",
+      "jashkenas/underscore",
+      "python-semver/python-semver",
+      "jpvanhal/inflection"
+    ],
+    "prior_eval_repositories_never_training": true,
+    "no_dev_or_test_answers_or_trajectories": true,
+    "sample_selection": "All 330 unique complete records per variant; same task/slot IDs and seed101 one-pass order; no dropping tasks, padding duplicates, or substituting evaluation examples.",
+    "repair_edit_operator": "Python exact literal replacements with unique-anchor assertions checked before any file write; preserve ampersands/backslashes literally.",
+    "grounding": "Search declared Python source for actual missing-implementation markers with line numbers; read declared short JavaScript modules. Never begin with an oracle line-number window.",
+    "recovery_modes": {
+      "failed_anchor": 28,
+      "incorrect_edit": 27
+    },
+    "training_token_accounting": "Equal update and upper-bound budgets; actual input and supervised token counts may differ and must be reported. No equal-token or same-FLOP claim."
+  },
+  "partitions": {
+    "development": "Same 15 observed development tasks as 019, rerun the unmodified base and both candidates once under identical inference ceilings. Reused development set is not independent validation.",
+    "historical": "24 observed 018 historical tasks, excluded from training and candidate selection",
+    "fresh": "The same still-unopened 24 tasks across backoff, schedule, cssselect, addict; no replacement or inspection of model scores before selection.",
+    "legacy": "9 original function checks",
+    "fresh_repository_replacements": "Only for rights, dependencies, clean/broken/restored controls or reference exposure, before any model score. Preserve exclusions. No replacement based on model difficulty/performance."
+  },
+  "selection": {
+    "criterion": "highest development success; tie uses fewer total generated tokens; next tie lower learning rate",
+    "must_improve_development_net_tasks": 1,
+    "maximum_development_regressions": 1,
+    "if_no_eligible_candidate": "Do not open fresh-test scores; record no selected candidate and no release.",
+    "final_tie_break": "Declared candidate order: repair before recovery; learning rates are identical."
+  },
+  "release_gate": {
+    "minimum_net_fresh_gain": 3,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "legacy_passes_required": 9,
+    "all_48_final_task_pairs_complete": true,
+    "native_format_failure_rate_not_higher": true,
+    "save_reload_greedy_match": true,
+    "rights_and_secret_scan_pass": true,
+    "all_execution_audits_pass": true,
+    "single_training_seed_and_repository_cluster_limits_disclosed": true,
+    "weights_release_scope": "experimental LoRA adapter plus exact base revision; full merged model only after a separate verified export, never label adapter as complete 27B weights"
+  },
+  "publication": {
+    "code_results": "CaptainGreenskin/one-gpu-lm",
+    "modelscope_namespace": "CaptainGreenskin",
+    "modelscope_profile": "https://www.modelscope.ai/profile/CaptainGreenskin",
+    "modelscope_repository_proposed": "one-gpu-lm-27b-coding-020",
+    "upload_only_if_release_gate_passes": true,
+    "never_publish": [
+      "credentials",
+      "remote machine identifiers",
+      "raw task traces",
+      "private corpora",
+      "optimizer states"
+    ],
+    "license_policy": "Original code MIT; base and training-source licenses separately preserved. No third-party teacher API outputs."
+  },
+  "failure_policy": "Fix infrastructure before scoring, preserve failed attempts. After freeze no recipe/data/budget edits. Resume only identical inputs and remaining original 12h deadline; incomplete results are failures, no score-based retry.",
+  "limitations": [
+    "Constructed repository defects, not historical issue benchmark results.",
+    "Public pretraining contamination unknown.",
+    "One training seed, 24 fresh tasks clustered in four repositories.",
+    "Python/JavaScript scope; no advanced multilingual or long-context certification.",
+    "Small supervised pilot; quality improvement is a measured outcome, not promised.",
+    "Training failure controls are deliberately constructed from training snapshots, not sampled model mistakes or distilled hidden reasoning."
+  ]
+}

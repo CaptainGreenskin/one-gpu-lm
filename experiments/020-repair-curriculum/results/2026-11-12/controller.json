@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T02:14:22.605896+00:00",
+  "started_epoch": 1794449662.6058886,
+  "deadline_epoch": 1794492862.6058886,
+  "protocol_sha256": "1a244957a35b802ee2f0697458bb591800b76e4a3f5f1b5baa067b8cbeef71bf",
+  "complete": true,
+  "attempt": 1,
+  "stages": [
+    {
+      "name": "preparation-verify",
+      "seconds": 12.1897094459855,
+      "attempt": 1
+    },
+    {
+      "name": "train-repair",
+      "seconds": 783.7978130989941,
+      "attempt": 1
+    },
+    {
+      "name": "train-recovery",
+      "seconds": 796.5386000009603,
+      "attempt": 1
+    },
+    {
+      "name": "loaded-controls",
+      "seconds": 69.66464948403882,
+      "attempt": 1
+    },
+    {
+      "name": "dev-base",
+      "seconds": 1756.6614113209653,
+      "attempt": 1
+    },
+    {
+      "name": "dev-repair",
+      "seconds": 2504.9372903979965,
+      "attempt": 1
+    },
+    {
+      "name": "dev-recovery",
+      "seconds": 2232.261198811,
+      "attempt": 1
+    },
+    {
+      "name": "final-base",
+      "seconds": 2920.452205769019,
+      "attempt": 1
+    },
+    {
+      "name": "legacy-final-base",
+      "seconds": 110.75681612896733,
+      "attempt": 1
+    },
+    {
+      "name": "final-selected",
+      "seconds": 4568.30197674199,
+      "attempt": 1
+    },
+    {
+      "name": "legacy-final-selected",
+      "seconds": 195.99068996898131,
+      "attempt": 1
+    }
+  ],
+  "stage": "completed",
+  "updated_utc": "2026-11-12T06:43:19.335764+00:00",
+  "finished_utc": "2026-11-12T06:43:19.335741+00:00",
+  "finished_epoch": 1794465799.3357615,
+  "telemetry": {
+    "samples": 3200,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}

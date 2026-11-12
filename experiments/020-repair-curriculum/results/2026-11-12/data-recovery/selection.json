@@ -1,0 +1,2724 @@
+{
+  "schema_version": 1,
+  "policy": "task-round-robin-quota-uniform-trajectory-v1",
+  "budget": 330,
+  "requested_budget": 330,
+  "up_to_budget": false,
+  "deduplication": "model-visible-token-ids",
+  "input_records": 330,
+  "eligible_records": 330,
+  "selected_records": 330,
+  "required_tasks": 55,
+  "covered_tasks": 55,
+  "per_task": {
+    "019-inflection-camelize": 6,
+    "019-inflection-dasherize": 6,
+    "019-inflection-humanize": 6,
+    "019-inflection-ordinal": 6,
+    "019-inflection-ordinalize": 6,
+    "019-inflection-parameterize": 6,
+    "019-inflection-pluralize": 6,
+    "019-inflection-singularize": 6,
+    "019-inflection-tableize": 6,
+    "019-inflection-titleize": 6,
+    "019-inflection-transliterate": 6,
+    "019-inflection-underscore": 6,
+    "019-python-semver-Version-__getitem": 6,
+    "019-python-semver-Version-__hash": 6,
+    "019-python-semver-Version-__iter": 6,
+    "019-python-semver-Version-__repr": 6,
+    "019-python-semver-Version-__str": 6,
+    "019-python-semver-Version-_increment_prerelease": 6,
+    "019-python-semver-Version-_nat_cmp": 6,
+    "019-python-semver-Version-_validate_identifiers": 6,
+    "019-python-semver-Version-bump_build": 6,
+    "019-python-semver-Version-bump_major": 6,
+    "019-python-semver-Version-bump_minor": 6,
+    "019-python-semver-Version-bump_patch": 6,
+    "019-python-semver-Version-bump_prerelease": 6,
+    "019-python-semver-Version-compare": 6,
+    "019-python-semver-Version-finalize_version": 6,
+    "019-python-semver-Version-is_compatible": 6,
+    "019-python-semver-Version-is_valid": 6,
+    "019-python-semver-Version-match": 6,
+    "019-python-semver-Version-parse": 6,
+    "019-python-semver-Version-replace": 6,
+    "019-python-semver-Version-to_dict": 6,
+    "019-python-semver-Version-to_tuple": 6,
+    "boltons-LRI-__setitem__": 6,
+    "boltons-LRU-__getitem__": 6,
+    "boltons-asciify": 6,
+    "boltons-bytes2human": 6,
+    "boltons-cache-and-frozen": 6,
+    "boltons-make_cache_key": 6,
+    "boltons-multi-dict": 6,
+    "boltons-pluralize": 6,
+    "boltons-research": 6,
+    "boltons-slugify": 6,
+    "underscore-defaults": 6,
+    "underscore-difference": 6,
+    "underscore-group-partition": 6,
+    "underscore-index-nan": 6,
+    "underscore-intersection": 6,
+    "underscore-map-object": 6,
+    "underscore-object-pairs": 6,
+    "underscore-range-step": 6,
+    "underscore-reduce-initial": 6,
+    "underscore-stable-sort": 6,
+    "underscore-uniq-iteratee": 6
+  },
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "input_tokens": 653046,
+  "supervised_tokens": 41542,
+  "max_input_tokens": 3436,
+  "max_target_tokens": 411,
+  "selected": [
+    {
+      "id": "019-inflection-camelize:curriculum-inspect",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "cddf124220e5aa61f3cc492652229436aeefdd1ead0c23dea699d666266c0f1e"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-inspect",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 623,
+      "supervised_tokens": 59,
+      "record_sha256": "b520181d01f3061711eb57bced1fd01b1e61b2465659fa1c4892c7b7f9e61397"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-inspect",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "6927a957f6fa6293cc5ac9ade12a5fa3dd53b881ef921253e186bf4d0f37c15d"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-inspect",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 621,
+      "supervised_tokens": 59,
+      "record_sha256": "57cea71d118830cb83ef9c10e88e06097cfac8f20913cbfd4fa6e607799f24c5"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-inspect",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "0328260d5faf48f696df523af6d90fdb79292c085148e6ef6bf03dc03c86de47"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-inspect",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "c2231218aa4dd20df53fdd07a94e5a845c481076627ba285c3bad4172976251e"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-inspect",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "1bf6514f16ef0a1c9e73c973ca5b2fb0f97a98c187e72a0ae7c07bfd092deb36"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-inspect",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "7df7c21741c24174abd52ea86b2f548015d96417c77f0cb923acf30c8040789f"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-inspect",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "a48736544ddffa90d24cc128be60c1996def0d24bfe58a1e50d154d240120c14"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-inspect",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "5f1bb3453df82c6d370a5959ba6861d355bc8c17a09c4fb77e54b74e9c212672"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-inspect",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 622,
+      "supervised_tokens": 59,
+      "record_sha256": "bbc1f62b9906fb322eba28f1464957a42862f616f685995e2f31a5254c657e98"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-inspect",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 621,
+      "supervised_tokens": 59,
+      "record_sha256": "129d505165f81772a748bd58910c5087b8b58cab190c3f74d72ab06173a545d4"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-inspect",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "26b6e146c18fe84aee46177e0ac4cd2120cbd5288e05116c113bb295b330a089"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-inspect",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "3b0e0c3e11528fa20082e80f45ec0f6b95e382ded74dc7d1164e2c2d5a8d9100"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-inspect",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "0f9da9b4c73333328ec372f9408419b05f7f05f35878353c5c2d3b07086c0214"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-inspect",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "df71f2d249284af8962b0c57da7728774dcda92ec49d4c48ac5fd76c4aacd6ad"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-inspect",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "9c400f4958be8e879bb788400d04b66b99b0a0b70b06787c6b509b79280eef22"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-inspect",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 657,
+      "supervised_tokens": 59,
+      "record_sha256": "120c594e804b4fb40d8c1fab0d3e177a5cd7353b71295572d1641347ce8a44ec"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-inspect",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "38a37a71a8659fd99ad9b417886b7709bafd39ea7a45206e3c7f0f6bea5a7707"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-inspect",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 656,
+      "supervised_tokens": 59,
+      "record_sha256": "d3a250bedb4025b479ef99b6a4cc5323985aa990514818f3ad9e25de068f3fb2"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-inspect",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "c2431065103a3d4043e34f8c3cbb9f713b894d72e174e63612e86e72102e9d16"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-inspect",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "10468ed22a6fc7c7896434bc8b75a9bc2d748bdc403cf9d7c5a014e4607ec044"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-inspect",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "d0399800c46d27e27ce87c511cefe542572f9a62401c23e87818d6ec3f203d7f"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-inspect",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "417f96f57def5a14ce63516fa51c1276b1d5c452a3aaea42eb9b08f2cf9997ce"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-inspect",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 657,
+      "supervised_tokens": 59,
+      "record_sha256": "c41a4ee634767e960f340b50dc5f0ed28cf86d6e8315e4a4d89a934a71f09e3d"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-inspect",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 653,
+      "supervised_tokens": 59,
+      "record_sha256": "af0043854b426ba49de37c5c42b97e86f711b9769b9f90464fe7c3a9e310d474"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-inspect",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "2b75239ff10ea3b1c1e17c684501cd1283aca807fdc8f9692d5904f2de45520a"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-inspect",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 655,
+      "supervised_tokens": 59,
+      "record_sha256": "353f52ad0400755b4e7aa6c9a6ec8c1582f36c7bef8eedd73c4c528f82b23a7e"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-inspect",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 654,
+      "supervised_tokens": 59,
+      "record_sha256": "e0eeb36933351c9b3fb25bda1d5928cfee29d2da55b33a1e9cd4db53e3acbde8"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-inspect",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 653,
+      "supervised_tokens": 59,
+      "record_sha256": "89190b88622cda00f6994fe115b0d8056c0f85e9933ad3f845262b97d152f811"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-inspect",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 653,
+      "supervised_tokens": 59,
+      "record_sha256": "7c2c8e2aea08a592b486fc23ff97942fe3a6429fb1a78fed5729bc444f17e867"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-inspect",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 653,
+      "supervised_tokens": 59,
+      "record_sha256": "d8a0602b075b66d5293b231b4eeca1afaecdedd229fd1e5bb468a62deace3271"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-inspect",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 654,
+      "supervised_tokens": 59,
+      "record_sha256": "cd9c22b8084b8bf0607c23cbf5d6970f07f83e20bd63875eda38c10682e9d68d"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-inspect",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 654,
+      "supervised_tokens": 59,
+      "record_sha256": "f9f40dc230d298b21d1bedfe76e533d74739bfbdadf2b813cf82213b0c66786b"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-inspect",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 631,
+      "supervised_tokens": 57,
+      "record_sha256": "02815ad97b71c8647921a2635ea6519b4982f3b7b87edeb6d6ab04edcb846332"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-inspect",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 630,
+      "supervised_tokens": 57,
+      "record_sha256": "7c629f8c024e36986c63a6d0fc55a45face489535b404b3adbb27e472ab49ae5"
+    },
+    {
+      "id": "boltons-asciify:curriculum-inspect",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 631,
+      "supervised_tokens": 59,
+      "record_sha256": "c6f3577059b2cbb01c7da19266464b88f0555e6fa69f432b07b0a307cee76910"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-inspect",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 631,
+      "supervised_tokens": 59,
+      "record_sha256": "d7875b7ae86e7194e9d918f3c362aece594d81defe957c43d6bec908e829d6e8"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-inspect",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 668,
+      "supervised_tokens": 91,
+      "record_sha256": "1a6804d52fa825af33185c38c86d17e25bbbd902289ac8a5acca48d60aa6cf5c"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-inspect",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 629,
+      "supervised_tokens": 57,
+      "record_sha256": "bf2a2dfb5abeca2a13ed0eace76519e7c4e6ec636947af3ab5eda574fc5f7e60"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-inspect",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 628,
+      "supervised_tokens": 59,
+      "record_sha256": "4534686b8bd8df3b885417692d033b18544d4f7546d591c61d642ec084880fd6"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-inspect",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 631,
+      "supervised_tokens": 59,
+      "record_sha256": "db16e75c94c0c94f1b8c2786851e03b62046912eb96f3ac9ed7da6347a53fe42"
+    },
+    {
+      "id": "boltons-research:curriculum-inspect",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 628,
+      "supervised_tokens": 59,
+      "record_sha256": "62d9d6c0b69f2b748c7e3874d6315536031e04dca84a1a2f0e9d341337093b6f"
+    },
+    {
+      "id": "boltons-slugify:curriculum-inspect",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 630,
+      "supervised_tokens": 59,
+      "record_sha256": "5805d5301277c94b021c5b28746e11a0e260ff3057b2695861d80537e2acbd47"
+    },
+    {
+      "id": "underscore-defaults:curriculum-inspect",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 603,
+      "supervised_tokens": 45,
+      "record_sha256": "d1f881ae48da334500652c707d05f2a0978aa965c670184788272c9abc8c2c4f"
+    },
+    {
+      "id": "underscore-difference:curriculum-inspect",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 597,
+      "supervised_tokens": 41,
+      "record_sha256": "3de606751067839b0b48780e9385f9f3dded212e149e36c7bb3219cc5fbf67eb"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-inspect",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 632,
+      "supervised_tokens": 57,
+      "record_sha256": "3d73761ee5a4aa0d0aeab65b7365f7ab9e2d6aa0d1740ca519c65d7cae8fc527"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-inspect",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 602,
+      "supervised_tokens": 45,
+      "record_sha256": "d7f4b4dd019847cebea0bb552458869b648ed29d50e9643bfed7e589f98e146f"
+    },
+    {
+      "id": "underscore-intersection:curriculum-inspect",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 599,
+      "supervised_tokens": 41,
+      "record_sha256": "4e9c4749727f0fc3e6ab1ce7bf5768f73d8ee8fb6f43a7d3f4f6b0d62ae1dee0"
+    },
+    {
+      "id": "underscore-map-object:curriculum-inspect",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 597,
+      "supervised_tokens": 41,
+      "record_sha256": "70099a72b218e84bfabebcb38699112e44f4d55046a5db7fc3a2fa2fe1169d84"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-inspect",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 597,
+      "supervised_tokens": 39,
+      "record_sha256": "b7ec42d66bbdcbd80491c6d510065241dcba15bf7d937ebdb1e57a314225d46b"
+    },
+    {
+      "id": "underscore-range-step:curriculum-inspect",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 601,
+      "supervised_tokens": 41,
+      "record_sha256": "fdd77d96d8de6368b7903208faf7a9a67614dda01984e56ff75d9fde132806fc"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-inspect",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 602,
+      "supervised_tokens": 43,
+      "record_sha256": "709edd4f021c7a43a1ccaec0540166429e721c8be37ac9a7e8154ddc66335928"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-inspect",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 601,
+      "supervised_tokens": 43,
+      "record_sha256": "1064edbb4890e6f8aead26fc2c7f96882035074a9ed89348eacd11ea9a30c59b"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-inspect",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 600,
+      "supervised_tokens": 41,
+      "record_sha256": "d64b7adcc3067cb47c093ed673da9b13042a189dac034b103d1ebb982a22cffa"
+    },
+    {
+      "id": "019-inflection-camelize:curriculum-repair",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1551,
+      "supervised_tokens": 182,
+      "record_sha256": "031dd0947d09caf7e835b0909854bffefa0d6c5f174869d70605f9eaaf33f1fa"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-repair",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1488,
+      "supervised_tokens": 136,
+      "record_sha256": "bbfc913c8b4d6f76e9de34dea587be6e8629f40d2d88245e75a55bb56c1900c3"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-repair",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1611,
+      "supervised_tokens": 211,
+      "record_sha256": "93970b9a8722a22b6f66fbae2928d73729f0a0ff16247e372223f431fce90f9a"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-repair",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1612,
+      "supervised_tokens": 214,
+      "record_sha256": "1dcb4b054bc54e4ea8115cfae51bf6861bec60b7420861cf7697191743ec2236"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-repair",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1558,
+      "supervised_tokens": 140,
+      "record_sha256": "485a2f66eaa4e023003bad89cc2a1118803a1b7b5e9805b32079c58e9b179449"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-repair",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1634,
+      "supervised_tokens": 266,
+      "record_sha256": "a208c3d87acf9ee64137b0835491f2372efa2f14384fbbf58f2688485ba91499"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-repair",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1559,
+      "supervised_tokens": 186,
+      "record_sha256": "4752c3c37fb625df8fd57f69b8fa29ac35172a6203212ce9901a27f2d9a1c542"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-repair",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1589,
+      "supervised_tokens": 204,
+      "record_sha256": "5618ec3d814366bddba276c637bc5ca4088f96497a768d1e61fec4f51aa82c17"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-repair",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1511,
+      "supervised_tokens": 138,
+      "record_sha256": "5d0eb910184821d883b2d188153ad5fd371dc1d330ae299f5fccba4326a2fefd"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-repair",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1558,
+      "supervised_tokens": 173,
+      "record_sha256": "2e429bc5fe20e4605d9e1a7c3acc7430d7ff3f6a7e9c6a06511359df4d0134d9"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-repair",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1532,
+      "supervised_tokens": 159,
+      "record_sha256": "98efb5a289ac3f5892bfd7b820a48373967644c29c5f2bcf408f3611a4c44f62"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-repair",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1595,
+      "supervised_tokens": 204,
+      "record_sha256": "6cc50ed8a295525bd5e54e6108acd08ad45ad513ad7473ac0e76f4e56fec5569"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-repair",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 1958,
+      "supervised_tokens": 319,
+      "record_sha256": "c7dbc08bbaed45c2e6fb317cc47766b2c141cfd5f7f8e2fb7bc57d23b83de025"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-repair",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 1625,
+      "supervised_tokens": 140,
+      "record_sha256": "970b2fa1339db0c2773de4dfc6978e7f05be4d4f86e803673f9b45e625dd50b1"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-repair",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1387,
+      "supervised_tokens": 136,
+      "record_sha256": "58af78256d843e0a7052b95c57d6df2f1bd5fa595d6d9e5db0bd908ebb76ca28"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-repair",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 1713,
+      "supervised_tokens": 175,
+      "record_sha256": "57e4edca8f86055f44edccb823e078df4d04702add1a4b99213930ce8bfbfb16"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-repair",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 1788,
+      "supervised_tokens": 193,
+      "record_sha256": "9ac8e2d82e2a89cc557760697257da22a8c6f29e67caeb2d1099836302cee6dd"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-repair",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1766,
+      "supervised_tokens": 198,
+      "record_sha256": "cc851682127a05337700e44900c69f2c36cc3090fa45e7ec87f2965adc094fa0"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-repair",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 1951,
+      "supervised_tokens": 339,
+      "record_sha256": "1dfc60deddc7f1943995090464f5df5a1c24ee64fd12efbb083a6e265ca2bbdb"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-repair",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 1732,
+      "supervised_tokens": 198,
+      "record_sha256": "f0569fca6731b7e6a5003520024908149e3bfa6912e33702f9046a4f3397e7ba"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-repair",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 1869,
+      "supervised_tokens": 319,
+      "record_sha256": "70229f7991c01a45fadd490b6eeba7ceee69bb2030587e78c41afaadff5b59c7"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-repair",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 1675,
+      "supervised_tokens": 146,
+      "record_sha256": "3f944024d1d00f3802f526f0fca7dfabe4fa08034c39567433e919922a122b1d"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-repair",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 1671,
+      "supervised_tokens": 150,
+      "record_sha256": "0354b41c4f0f03d8e289eccf1c3c094134faf86915aa71d80468544db80f0dc4"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-repair",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 1689,
+      "supervised_tokens": 154,
+      "record_sha256": "d76599c1861594cbec257cc67596a222820dee0d4a85965d1146114de81dc906"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-repair",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 1803,
+      "supervised_tokens": 289,
+      "record_sha256": "b34e3c2d293c783eefd040e830531dfaae77a09c591f21f77326e31005f7f156"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-repair",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 1966,
+      "supervised_tokens": 374,
+      "record_sha256": "a3d3f5ea308b0e29f19e8592c4355e59c51e7fe5afc1fe91ae931613d742b873"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-repair",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 1743,
+      "supervised_tokens": 149,
+      "record_sha256": "e716defc8496898c74faeced4ac5b5ea49098f1bb306ac46a54ed75861f77d66"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-repair",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 1784,
+      "supervised_tokens": 243,
+      "record_sha256": "e206d366e05e81513528fc11dca2b35ac79f730f45a619b00de322bdf42027a8"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-repair",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 1842,
+      "supervised_tokens": 151,
+      "record_sha256": "c7633b82c47b84a13793c66530f6fd12eecdac52011d33afa829bbf9b182a403"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-repair",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2011,
+      "supervised_tokens": 411,
+      "record_sha256": "25ffe391d2d85de3269223b5ea27e98ed2ba040a35206483623913388d8d4985"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-repair",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 1903,
+      "supervised_tokens": 392,
+      "record_sha256": "69382f204115f2c931e08c9e9c805195b49bd1649748dda9196d6b36c9a4e1b2"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-repair",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 1851,
+      "supervised_tokens": 238,
+      "record_sha256": "5c4c8e8283cafe14a0ed8f8187beaf6128e9d87845f1e55255d17ca39b849580"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-repair",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1838,
+      "supervised_tokens": 171,
+      "record_sha256": "a94c25e157507142730b7263957b3e80885794393b4ffa8f44ee46668ba09299"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-repair",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 1734,
+      "supervised_tokens": 150,
+      "record_sha256": "d57658dd797c89c7f121dd99ddb5247461ef470c3fe11b675d6e6e8b7d408a0a"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-repair",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1764,
+      "supervised_tokens": 245,
+      "record_sha256": "f6faa4d2a99d36f28d5d24c543ca03d199fd4837a6ade83333589831bcb5cfd1"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-repair",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 1755,
+      "supervised_tokens": 213,
+      "record_sha256": "cb960187067b0dd916b8c87709e08e039aa229f9ed06b9eee2dc5df54202f7d3"
+    },
+    {
+      "id": "boltons-asciify:curriculum-repair",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1409,
+      "supervised_tokens": 205,
+      "record_sha256": "c7e079c2ece3b8b38d42f7e84937f2f0e4f1ed51c21602e67da045e46e26c15b"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-repair",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1568,
+      "supervised_tokens": 293,
+      "record_sha256": "6104ce7351ebdebf2f2854879de37e07d96922a32fedd566e4f0ed95aff4148c"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-repair",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 1950,
+      "supervised_tokens": 287,
+      "record_sha256": "20f764f7c6a112df1fb7c0e024f63fdefa2c6a0e2b59acc48389fa70256d800d"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-repair",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 1718,
+      "supervised_tokens": 241,
+      "record_sha256": "bb7ecc4a63ab640a1316fbf86efbbb316ffc72676ed3a52ab63dcbd98d6b2d66"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-repair",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 1750,
+      "supervised_tokens": 165,
+      "record_sha256": "620a0ad9b3ab0f9ef8aabb1ede70b4d9454b5fd88c7ac2921e565477cf32c1d7"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-repair",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1679,
+      "supervised_tokens": 286,
+      "record_sha256": "8cb436897665b66043fe39849dfcf57e09feccee525ca566e8ee015fc65e9a35"
+    },
+    {
+      "id": "boltons-research:curriculum-repair",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 1727,
+      "supervised_tokens": 241,
+      "record_sha256": "80561c74f4cdaf87265594befc1853b94d2039da775ace36c6bbcdd21afbfb0c"
+    },
+    {
+      "id": "boltons-slugify:curriculum-repair",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1392,
+      "supervised_tokens": 176,
+      "record_sha256": "82241a3362107548cac9116df5786dd810a618ecff0c1fe2d2e32d339020f066"
+    },
+    {
+      "id": "underscore-defaults:curriculum-repair",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1711,
+      "supervised_tokens": 163,
+      "record_sha256": "8b48bcbe86eb128d9e018bbf396dcde65d024b80236180574828ae69f8498eb6"
+    },
+    {
+      "id": "underscore-difference:curriculum-repair",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1550,
+      "supervised_tokens": 134,
+      "record_sha256": "ea464555e718dfa34ac8786e26bdcb62505920636e96030ec0a435b7f7de299c"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-repair",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 1892,
+      "supervised_tokens": 206,
+      "record_sha256": "18724c8f33312699f190deee2c807adc6e31d35b2feefd3b8c2e2d9ada8bcc49"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-repair",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1275,
+      "supervised_tokens": 147,
+      "record_sha256": "0700f22e5d7146ed595c07ad6b636a841be75e6107fb476a7ac3c5dd70c9fbe6"
+    },
+    {
+      "id": "underscore-intersection:curriculum-repair",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1348,
+      "supervised_tokens": 143,
+      "record_sha256": "449acf3effd00d36cb9d2656ba44b85c54ef4235a85d08b0c8bb33dcae5b8d12"
+    },
+    {
+      "id": "underscore-map-object:curriculum-repair",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1548,
+      "supervised_tokens": 153,
+      "record_sha256": "4a6a922ba2dcc16cb03ecc48eed7d295d5fa65d362b16d367bb78fa76f390850"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-repair",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1177,
+      "supervised_tokens": 146,
+      "record_sha256": "0f91ca67805b7cb43b844385e91cfeb8de4bcc4619e08c36272eca23778254d9"
+    },
+    {
+      "id": "underscore-range-step:curriculum-repair",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1331,
+      "supervised_tokens": 157,
+      "record_sha256": "c7660acac7c61b028b2b416c560dd88b9fedad259ccca6469b532007791393dc"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-repair",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 1887,
+      "supervised_tokens": 140,
+      "record_sha256": "2c75a7ef5fd8bdf94ebb8be90d5a2e370e280c6b76311fa170ebc312f1d27a78"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-repair",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 1988,
+      "supervised_tokens": 136,
+      "record_sha256": "962783cc13d8bacf5c2d69d42dbc231617fe8ff64762cf7a42be3a525cbcdb2b"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-repair",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1704,
+      "supervised_tokens": 139,
+      "record_sha256": "204b201f661edced6b996372245b54fd6609b1b8977c07ac13e039fd24a87c4b"
+    },
+    {
+      "id": "019-inflection-camelize:curriculum-verify",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1815,
+      "supervised_tokens": 37,
+      "record_sha256": "47c2a361c3b243abae4f72f9e63a3288641fd98a5fb4d4c8e62fc9fcee3bb37c"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-verify",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1675,
+      "supervised_tokens": 37,
+      "record_sha256": "9d572bcf0a48e555eea8920d8fd6eaf46d5332571374d0f598f56fe72a28ff4a"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-verify",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 1874,
+      "supervised_tokens": 37,
+      "record_sha256": "e8393c34cc41cea4fd0b0957ea9a8b8589c1416b23a6e3c65fd21c4227bd5f22"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-verify",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 1878,
+      "supervised_tokens": 37,
+      "record_sha256": "908590ecd1edb80888509284680b278173f5e38170b9c9b07ff7682bd1089108"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-verify",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1769,
+      "supervised_tokens": 37,
+      "record_sha256": "b4b6bbea0fe4336c0acbb1447db129192b80568e48fb6d70c489ce2c05af623e"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-verify",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 1945,
+      "supervised_tokens": 37,
+      "record_sha256": "e5f9337a43c12491386b47bfa65b0c07e7d27a9338468629ef877cf441ebc405"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-verify",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1811,
+      "supervised_tokens": 37,
+      "record_sha256": "dd91cc3221d881ae92677719c462dbe280d952a2a4a48d45f24cd09120ca4a7c"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-verify",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1853,
+      "supervised_tokens": 37,
+      "record_sha256": "f6170f834902910b58abfb56cd188b31d82b904a3131e4b4c52fa01723feb3a4"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-verify",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1721,
+      "supervised_tokens": 37,
+      "record_sha256": "4519c201c68d894c2c6e441e35d6da6959a34d75b84af7fbfa132af696567f28"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-verify",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1799,
+      "supervised_tokens": 37,
+      "record_sha256": "ba8849361b50d82239af414dfab4c5c62382c8726944aec602c1d3ed418f5d55"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-verify",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1755,
+      "supervised_tokens": 37,
+      "record_sha256": "f3da065982cbdaa07e3e33db8305a9396964a6fa5e9ec915d8a5c896c3522571"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-verify",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1855,
+      "supervised_tokens": 37,
+      "record_sha256": "910ec7668256de404c8ac6a09050006826344c71becbf4508dbbd7488f2a5539"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-verify",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 2413,
+      "supervised_tokens": 68,
+      "record_sha256": "0ebb01c44c736a8d161effc8a6162dace36e7dc80363dc495d043a046e7d2522"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-verify",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 1863,
+      "supervised_tokens": 68,
+      "record_sha256": "179034bb6e9712015ab60e183314c5d9483e9f380714c8faeb8f518f5df6c544"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-verify",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 1628,
+      "supervised_tokens": 68,
+      "record_sha256": "1b3f6916c56a5a23df0d624fb2f12b9871988dcfaa65637a19664b52f69a90bd"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-verify",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 2006,
+      "supervised_tokens": 68,
+      "record_sha256": "2516e35d2357f37b290d86b4a9967bd66bc509481d381d464404b9fc9b8533d2"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-verify",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 2109,
+      "supervised_tokens": 68,
+      "record_sha256": "233958cc54c15592908413c62b01e3e2f6e8aea995065b21a0678b2846bc8622"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-verify",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2080,
+      "supervised_tokens": 68,
+      "record_sha256": "8db6240e1e16c08bb0eef4cd968cd2d51ddf8e12f4bffd5854b86ceb72d956ad"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-verify",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 2390,
+      "supervised_tokens": 68,
+      "record_sha256": "bf4d16a472fd4a9a7b192a5235e3ea27a7942d4fe47e61fc921dcf8b04cf51eb"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-verify",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2070,
+      "supervised_tokens": 68,
+      "record_sha256": "225e00f35adbe4c68a5aaccb85e2f5ae0df3b099763ca24e0193cc82f3a5926f"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-verify",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 2318,
+      "supervised_tokens": 68,
+      "record_sha256": "8f53cd9f28182adb337636fa4bd33279772611d1d56c417a50af9da34f00a145"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-verify",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 1945,
+      "supervised_tokens": 68,
+      "record_sha256": "fd8f6b9f184277c26dba127c4e16d8284259ded730d0098a3622a3dd22ea0a06"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-verify",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 1945,
+      "supervised_tokens": 68,
+      "record_sha256": "76eb552def4761e6c5ad4fbebaaa8e3c4c490288021e4a3e2e1f7fccbf652489"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-verify",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 1967,
+      "supervised_tokens": 68,
+      "record_sha256": "750d0033b26977a8933776f86c37394e960bb803ab34c30fc6340072fa74855e"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-verify",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2218,
+      "supervised_tokens": 68,
+      "record_sha256": "5fc9c80c5296c63a470c73e71ece6a43c27eb98cf77ddeb47454f7267aab511b"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-verify",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 2453,
+      "supervised_tokens": 68,
+      "record_sha256": "c7ec915667a55011978e426438135fc1661e5299b6f252ce2ba460f5e8ad33e7"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-verify",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 1993,
+      "supervised_tokens": 68,
+      "record_sha256": "08a8f85d4023f2ddada7791b7183f55a2b051ee4cc5c4ac9047d70b586ea44dd"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-verify",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2126,
+      "supervised_tokens": 68,
+      "record_sha256": "8aacf4f5bd752babf5ea3b13fa3543c4535691ab5943955b3faba7fc3f989b3a"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-verify",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 2111,
+      "supervised_tokens": 68,
+      "record_sha256": "4c652847c403c7594eeb3b885dfce4176f983452eecaadc6a40b94df785a8ba8"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-verify",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2520,
+      "supervised_tokens": 68,
+      "record_sha256": "29ea98a3f8e9b49c118406b715cd41c829eb221f8af1a0b77292c99ed05e9512"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-verify",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 2427,
+      "supervised_tokens": 68,
+      "record_sha256": "22e22cb2ab1f6518685e8d35ebc406bd4ae0162ccecc3bd2558fe51bb0165dde"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-verify",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2220,
+      "supervised_tokens": 68,
+      "record_sha256": "3c76b5498b9c94c33057def0d07889f526c5b6bcaf0052ad6f8effce997a1d32"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-verify",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2150,
+      "supervised_tokens": 68,
+      "record_sha256": "b67ec26897daf5895e7bd5cb1c5cf58f1a6125b54305de72cf7d48f7d29cf13f"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-verify",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 1982,
+      "supervised_tokens": 68,
+      "record_sha256": "57663d26ec0dae2db3a673e28225ea659de3703a03ee9a6c7fdfd9f7a32585ad"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-verify",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2110,
+      "supervised_tokens": 53,
+      "record_sha256": "ef0c0191f99af28fb55d8538269093156b124460e456e8e4bf390bd6b8cd35b8"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-verify",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2055,
+      "supervised_tokens": 53,
+      "record_sha256": "c237d84030d787a57f797ed0e8e0580b9794ac6294e6fca69667f4a204a66606"
+    },
+    {
+      "id": "boltons-asciify:curriculum-verify",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1714,
+      "supervised_tokens": 53,
+      "record_sha256": "3bdef7c3d1b0eac8f8e666a630bdd46ea0c39e8d574782eee6c7fc5831874027"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-verify",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 1954,
+      "supervised_tokens": 53,
+      "record_sha256": "b9d69ba708883e183fa66ba12e778ece6cd08a82892a4cd153bc6ad0559a218e"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-verify",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 2411,
+      "supervised_tokens": 53,
+      "record_sha256": "52334caa5dfc0b097b140a2d9a2b639a4874b29f917499775aaf0094a7f60128"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-verify",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 2033,
+      "supervised_tokens": 53,
+      "record_sha256": "02e0b1ff2d537e046804f0b465fc217557b38fb21270539ef700c523eef44b74"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-verify",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2033,
+      "supervised_tokens": 53,
+      "record_sha256": "e8c606c09df92ac98313febf3d5d842db05dd5640ef3bb217680b93d172b8428"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-verify",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2032,
+      "supervised_tokens": 53,
+      "record_sha256": "72b4c0ed7ea6a78ea640022312575c913e31f61d30e4c65ad979f9c41730610c"
+    },
+    {
+      "id": "boltons-research:curriculum-verify",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 2071,
+      "supervised_tokens": 53,
+      "record_sha256": "648a6872ead58140d67f40f3c8e9a2e6c07ecf3a9d2fe01fa2136668aad57432"
+    },
+    {
+      "id": "boltons-slugify:curriculum-verify",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1656,
+      "supervised_tokens": 53,
+      "record_sha256": "19c9613263204eac872c5abfd6ea7b675c934054e846c825c4c05999534b057c"
+    },
+    {
+      "id": "underscore-defaults:curriculum-verify",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 1935,
+      "supervised_tokens": 38,
+      "record_sha256": "f7af41e319a5acb89411286a130db5400d9b208be7f494c889c6715bc0a55624"
+    },
+    {
+      "id": "underscore-difference:curriculum-verify",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1744,
+      "supervised_tokens": 38,
+      "record_sha256": "4089bfad46d92fdc2175fdbdb0586fd9cf37c6ab760ee148834cd6abec458fe0"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-verify",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 2183,
+      "supervised_tokens": 38,
+      "record_sha256": "dcf966eccfdc35e407463979e29264cd8377b728896ac605cae35ddd239832e3"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-verify",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1536,
+      "supervised_tokens": 38,
+      "record_sha256": "d331efcfd058ed3fe8d97162539aac400f4afb71d11513c90e0b12b75e0cd6a8"
+    },
+    {
+      "id": "underscore-intersection:curriculum-verify",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1548,
+      "supervised_tokens": 38,
+      "record_sha256": "dc124ab262d5c68a13ec9ce344cb2f592096f83a53bb9bdb6dc89efe620966cd"
+    },
+    {
+      "id": "underscore-map-object:curriculum-verify",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1756,
+      "supervised_tokens": 38,
+      "record_sha256": "6a3ce1bf60391122069c67046672f70fe1547367b494b50a2156fecb1153abb5"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-verify",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1384,
+      "supervised_tokens": 38,
+      "record_sha256": "cb2e0fe45f6e77989c6215e6b799ca46ac05ef451f725fb8fc2bae1e761d5b2e"
+    },
+    {
+      "id": "underscore-range-step:curriculum-verify",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1545,
+      "supervised_tokens": 38,
+      "record_sha256": "b46fe801e738feb694ef5867ede396c9815cb1da2330a8965ea866d8c3a16b7e"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-verify",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 2088,
+      "supervised_tokens": 38,
+      "record_sha256": "510db2e815af78c2325c858a0b53faf7ea9e8585ca6711884e45163c5c49b6b1"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-verify",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 2191,
+      "supervised_tokens": 38,
+      "record_sha256": "5323287b36d21a2ab5a01536458e4c4af9ea7eaf87b49c86e419be9dcea79acb"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-verify",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 1938,
+      "supervised_tokens": 38,
+      "record_sha256": "1a6d697032a076a3caf6197c6cc41fa6918a16695165e3b2770128f69407c8fa"
+    },
+    {
+      "id": "019-inflection-camelize:curriculum-submit",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 1946,
+      "supervised_tokens": 34,
+      "record_sha256": "77e0c5b5a17cec0d870896940f5790c0bab6a38a1a88d81422c8506bb80da934"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-submit",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 1806,
+      "supervised_tokens": 34,
+      "record_sha256": "e99fe368aadcd92ea2fc822bcebc41b4590dbf1b292b071d92d3420b9a561bc6"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-submit",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 2005,
+      "supervised_tokens": 34,
+      "record_sha256": "aa7dff803cfb7597d7f7f25c338e4653e368322aa655a89ef22a04344344cb5f"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-submit",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 2009,
+      "supervised_tokens": 34,
+      "record_sha256": "34cb171814fff25be1c28285905d8f59a0b7b707bb85871eeafaad676c05cf43"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-submit",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 1900,
+      "supervised_tokens": 34,
+      "record_sha256": "7fb52212b13d22f56ccc0e5f6a5531518c805be0ae09c499dac2b2cb3ebfccab"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-submit",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 2076,
+      "supervised_tokens": 34,
+      "record_sha256": "08fb4fcd0f24d5316c99a4327768d54f5e9a076c360c3cb118e118de37b17b4c"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-submit",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 1942,
+      "supervised_tokens": 34,
+      "record_sha256": "a288600c42d652ead1a24fa2ddfd531947f0d75933fb74849d70b4cea432ba9a"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-submit",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 1984,
+      "supervised_tokens": 34,
+      "record_sha256": "7fa0f2873b06829fd268780c772a22ec981f18e1d30a4e9f803efba1be7eb5aa"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-submit",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 1852,
+      "supervised_tokens": 34,
+      "record_sha256": "dd4adecf2e601a5c63a157ea56a643ddf69786994f98bcb5f55c0307e20921d0"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-submit",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 1930,
+      "supervised_tokens": 34,
+      "record_sha256": "7138d6855351ddbc7de5229e0b0b24941a25f07769719a92380910111b27b0fe"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-submit",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 1886,
+      "supervised_tokens": 34,
+      "record_sha256": "5644d369f6ea8bf093b8feee5de4109a8ffc80bf4b8c5021a57d7131e1fc4e5a"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-submit",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 1986,
+      "supervised_tokens": 34,
+      "record_sha256": "ed86936e2bbf7659db35a2711282c8d3d8ce451342996928b06332719de20051"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-submit",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 2864,
+      "supervised_tokens": 34,
+      "record_sha256": "b5eb27294c081516f11ddd7d7808030b75ab41c9443ff2d1594bf31598984120"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-submit",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 2314,
+      "supervised_tokens": 34,
+      "record_sha256": "b975ecad41031cfb66b720d08a19fdbb08bddaa25b524b4276696d5d9ea91d10"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-submit",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 2079,
+      "supervised_tokens": 34,
+      "record_sha256": "786bd14154e68e610eb4c0f81b6c257b7643e7a8389135b9f921bbc18dc100c3"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-submit",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 2457,
+      "supervised_tokens": 34,
+      "record_sha256": "e74c7eb15e2980cfda1f1e45ff20e2e20b0583725f2fc83d81e1e6ea08d2ae66"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-submit",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 2560,
+      "supervised_tokens": 34,
+      "record_sha256": "549cf81c7e092c73874298bf8217ff581b527257b06937637250eba2cd3913cc"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-submit",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2531,
+      "supervised_tokens": 34,
+      "record_sha256": "bb35c31889a802486898cbcc3dfec9ab61f8ed952eb62697a0be95f31ff60fdf"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-submit",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 2841,
+      "supervised_tokens": 34,
+      "record_sha256": "e61e9d3d6b0ec4599d9f4d1d483876738315489b2c28e4e47549e33335fee32d"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-submit",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2521,
+      "supervised_tokens": 34,
+      "record_sha256": "4279f51da75e25dee9e494103cc94a9761e2c2f1d53c6fdd04c3db64479ba8f3"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-submit",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 2769,
+      "supervised_tokens": 34,
+      "record_sha256": "6e989c9daae45d924abe7026093ac7b3d3ac07efa50a18eb9ecab0e9b6599ea4"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-submit",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 2396,
+      "supervised_tokens": 34,
+      "record_sha256": "6542958bc35b9453beb3ef4fabd7824e544299163d960aa132b86205cd400cc3"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-submit",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 2396,
+      "supervised_tokens": 34,
+      "record_sha256": "e630db2b3bd8d714b98a534507e6208bfcdbf2a21bc9a7dcff316474e67dcdda"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-submit",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 2418,
+      "supervised_tokens": 34,
+      "record_sha256": "18dfe6a7b8948a9acf15e9609f331c722b29f65ff8ca383f0e4641174710d7e3"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-submit",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2669,
+      "supervised_tokens": 34,
+      "record_sha256": "14b3bd84196121688a84e06fed585a193237fc76f0c5e2be260f34e401ee9b7a"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-submit",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 2904,
+      "supervised_tokens": 34,
+      "record_sha256": "3e3acbaba863bfba50748197f6920541376b7d577050b94def90e3e0bcf64cc6"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-submit",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 2444,
+      "supervised_tokens": 34,
+      "record_sha256": "739fb1e0f1271fcac3743206255f1fad7c497d4211c339f812a58a8844c63d0a"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-submit",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2577,
+      "supervised_tokens": 34,
+      "record_sha256": "a9c6db2d2ce1182b6f6db87ee58025245b0162f03c8de9290429764623bed455"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-submit",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 2562,
+      "supervised_tokens": 34,
+      "record_sha256": "17f8e1fd3c8f23b51140f02499c431b6ab4ebb8cd69d0b53bebc4e3cf7f8caa9"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-submit",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 2971,
+      "supervised_tokens": 34,
+      "record_sha256": "f009ff988606a6731546018a1c4893ff52d300074abc32f459da1aca63b04d28"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-submit",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 2878,
+      "supervised_tokens": 34,
+      "record_sha256": "2318ee89bb3ec578765c342cd7815d07bf9d35679991374bd9e0e227bc043d39"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-submit",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2671,
+      "supervised_tokens": 34,
+      "record_sha256": "d6618d158992751288d36d6c2f4dbe769ec7cb2e6bd48c8468befc46c117a15a"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-submit",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2601,
+      "supervised_tokens": 34,
+      "record_sha256": "104341dea88f83cb7a19b22a2c298b6713ec673713cc2ccc80710ea84a5b193f"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-submit",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 2433,
+      "supervised_tokens": 34,
+      "record_sha256": "9b86f9b5a0b4cca0dc33f04d16ad311bcf68418347236ad519a7a59dac21c44b"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-submit",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2205,
+      "supervised_tokens": 34,
+      "record_sha256": "da972a70ec6d5e8abc6543488d7caeac70dd09eaafecac0c3e4f08fa8e9adc5e"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-submit",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2150,
+      "supervised_tokens": 34,
+      "record_sha256": "09632d06a3f85e6c762929daed60d58400b690d5d7e8d4345a6b8fb8090581c7"
+    },
+    {
+      "id": "boltons-asciify:curriculum-submit",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1809,
+      "supervised_tokens": 34,
+      "record_sha256": "4605bf8ba73b7ee3c936402e9bc8a091c1b368ba77f5e83fb3bc5e2e06f21941"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-submit",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 2049,
+      "supervised_tokens": 34,
+      "record_sha256": "063608925c496ddc4e8ee98f35ffaf923ba60bc0f2b43e71888011800b3f6b1c"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-submit",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 2506,
+      "supervised_tokens": 34,
+      "record_sha256": "56a690aee0f3c4d559b854d1e7e0e674a15af6cf8a8af4620268b631086b92ff"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-submit",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 2128,
+      "supervised_tokens": 34,
+      "record_sha256": "c6e563d9746dbddcd5cd9763b3f04606e0cdf8779a3cb7de0d10704f04371402"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-submit",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2128,
+      "supervised_tokens": 34,
+      "record_sha256": "9ec8fcdd2344a9055c58baf9b09a5900841f32a84058af19690f4bdf3ec2f1e3"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-submit",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2127,
+      "supervised_tokens": 34,
+      "record_sha256": "bd5536e5937968e2feac3d5a86e5914ce78662599a30327c54539b90925738a3"
+    },
+    {
+      "id": "boltons-research:curriculum-submit",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 2166,
+      "supervised_tokens": 34,
+      "record_sha256": "210164351028e73751059c033e118e091d2e2bc490da6ef516ab13d61b2329f3"
+    },
+    {
+      "id": "boltons-slugify:curriculum-submit",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 1751,
+      "supervised_tokens": 34,
+      "record_sha256": "ca6833e710bd9809ae7c21e3d21ef2b022ac5a3e8c22f418b3926b84290809fc"
+    },
+    {
+      "id": "underscore-defaults:curriculum-submit",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 2019,
+      "supervised_tokens": 34,
+      "record_sha256": "e50d3d8782cbe9a923be618ead7cda9e689d70c80bbe64705c0c6c9f58573f1d"
+    },
+    {
+      "id": "underscore-difference:curriculum-submit",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 1828,
+      "supervised_tokens": 34,
+      "record_sha256": "d9ce241e0f30d3b9f9deadad96522dbbdf048536c76c4fc22da3f334f542b672"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-submit",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 2267,
+      "supervised_tokens": 34,
+      "record_sha256": "55051cf8c80088bf1a7e560e21b815442fbf961f468e70fa5c517ebf801a16ae"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-submit",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1620,
+      "supervised_tokens": 34,
+      "record_sha256": "8bad2520df66cf4b1bcbec13dcb107dfa81d1f302faf2ca5f1895ad1189cce2d"
+    },
+    {
+      "id": "underscore-intersection:curriculum-submit",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 1632,
+      "supervised_tokens": 34,
+      "record_sha256": "ca1879eba7b3e8b2a4f3cf1083f768a679adfcb2bba6c61a4c2351a3e5211961"
+    },
+    {
+      "id": "underscore-map-object:curriculum-submit",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 1840,
+      "supervised_tokens": 34,
+      "record_sha256": "17ee09da1d6178f5ee86d73feab8006dc1cbc7fee277863939163e292db82d1f"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-submit",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1468,
+      "supervised_tokens": 34,
+      "record_sha256": "776fc323194766e10bf5e32ab154adc88c06591b2f47198901385d55bc2fd436"
+    },
+    {
+      "id": "underscore-range-step:curriculum-submit",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 1629,
+      "supervised_tokens": 34,
+      "record_sha256": "6e77c5c171927945bc85c960d844c1d0872024c230564d6561f8129b3eb439a7"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-submit",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 2172,
+      "supervised_tokens": 34,
+      "record_sha256": "eadc62dc59f25b0a0cae260bf37bc3d7ae4b6275ee33511ff45aefe845eef448"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-submit",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 2275,
+      "supervised_tokens": 34,
+      "record_sha256": "c3c2e9c3a7c43c9115b5e49f880f12e5df3b237c7244659129ca189794e38289"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-submit",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 2022,
+      "supervised_tokens": 34,
+      "record_sha256": "075047955e419ed2d39badf92dd15c12b7a5238c58e3515fcf79029348b2a7d5"
+    },
+    {
+      "id": "019-inflection-camelize:curriculum-stall_repair",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 2443,
+      "supervised_tokens": 182,
+      "record_sha256": "f5b1b23068cb520cd5724f7166633ee5dabaa8a9ca9f9212dfa9a91d7de858c1"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-stall_repair",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 2362,
+      "supervised_tokens": 136,
+      "record_sha256": "266166affed1da0745a0ef93b5e72cd635e36e5d89ac68e61fa7ccf648fe62aa"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-stall_repair",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 2534,
+      "supervised_tokens": 211,
+      "record_sha256": "e7c5e378867e6d4e49cb4a81bb9b11c2eb1d127cb363953a46119d4209ae2564"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-stall_repair",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 2534,
+      "supervised_tokens": 214,
+      "record_sha256": "2296fde0ad281c292c245dfb6fdfdb808bc64994db8fd0b764bce19ca5935bc4"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-stall_repair",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 2499,
+      "supervised_tokens": 140,
+      "record_sha256": "90077350231af9f253f2e414e9a02763b054aa2292488ed266f662118b1ac645"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-stall_repair",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 2525,
+      "supervised_tokens": 266,
+      "record_sha256": "4350b0cc22a60649be0d820280bd726fec7899749021c7b9f0d332936a3ba70f"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-stall_repair",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2455,
+      "supervised_tokens": 186,
+      "record_sha256": "4bb8cb150e3133a131c0d12ebb9b2c68f59a57ae9e131e5120c5cefd9f03727b"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-stall_repair",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 2497,
+      "supervised_tokens": 204,
+      "record_sha256": "e6866cbb4bd1989edbf69e277913db3c2244b130b28898a99f2e0515fe995a64"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-stall_repair",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 2407,
+      "supervised_tokens": 138,
+      "record_sha256": "696a73e5810cbd2095f530f31505e07706de0d1c7e50285f0edddde86c92bac9"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-stall_repair",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 2466,
+      "supervised_tokens": 173,
+      "record_sha256": "5c21302b8c567cab71efb25941ba20a0ccdb16601378b57d07d6916559329f58"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-stall_repair",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 2428,
+      "supervised_tokens": 159,
+      "record_sha256": "b53dc923c16ec8cb7763b57aaf46abeaea11cff6efda3c21ed7c509fb5bbd4bb"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-stall_repair",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 2510,
+      "supervised_tokens": 204,
+      "record_sha256": "b6b65f030449f3741e918307f1508f155d8d762321c6627c54901c2ec8c87adf"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 3087,
+      "supervised_tokens": 319,
+      "record_sha256": "3f2200430a8ed6fca4659182e31c81d07ea7d3852aac0868680fd1244627c831"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 2600,
+      "supervised_tokens": 140,
+      "record_sha256": "1991a4f908c4ecd869651190dcc4bc2209901ad5ff41892540ff9883790529fd"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 2128,
+      "supervised_tokens": 136,
+      "record_sha256": "30e9e6563559d98ae650963b1447b8c7a15108403cd88d1721a761a6a61dac21"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 2743,
+      "supervised_tokens": 175,
+      "record_sha256": "be6d928d474ffe3bd37a12133167db721cfcf8be9674d8ce0ab9a9022b8df683"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 2873,
+      "supervised_tokens": 193,
+      "record_sha256": "de84d0d8bb32d9c58ef7a80d08c93036da5b665b178b5628fd7e538182aafd70"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2822,
+      "supervised_tokens": 198,
+      "record_sha256": "ee7436022c20be47ffe6829f4e1608df76fcc96686f9e0b2a3507ebd96132342"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 3053,
+      "supervised_tokens": 339,
+      "record_sha256": "07723612f1f70a3dedc222807fc01c1290134d62435e840c216205971eac735c"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2755,
+      "supervised_tokens": 198,
+      "record_sha256": "a156738a88f89aeb4ec0cdcd688e0b2836aae1508296cba915f5ab142ec6a1c4"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 2909,
+      "supervised_tokens": 319,
+      "record_sha256": "14fe37c6250a1e4f71a104af6efb18b9487b123f72d58f857c29c4ae97d1c896"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 2694,
+      "supervised_tokens": 146,
+      "record_sha256": "e537a11ba82ddb660945bc6f7067845157cd45966ebcd2d4133259f22398206f"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 2682,
+      "supervised_tokens": 150,
+      "record_sha256": "92161edf1b6f1923827854124adc62ae8b1be51ca014b7b280bb6114e23af2bf"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 2714,
+      "supervised_tokens": 154,
+      "record_sha256": "59451b611aadb971b60febd9b37580c724bbb11e4be56524092541a714c1cba7"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2805,
+      "supervised_tokens": 289,
+      "record_sha256": "fb44c647c1154ba3a173182c494b0bffeee2e3526a59cebf5c975f3919cc23f2"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 3050,
+      "supervised_tokens": 374,
+      "record_sha256": "0b0b7a1a966bca6bb50024356368dc84f0a0a95adaabc07f2696bb85c795ae03"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 2829,
+      "supervised_tokens": 149,
+      "record_sha256": "6468e221897107cc0c9d6f370c1cf5df448030aa22b498d71fd0930a307a70ff"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2815,
+      "supervised_tokens": 243,
+      "record_sha256": "f16256b9892aab2b134f228099835d3e494b490928cadaba35be1592bc32e23e"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 3023,
+      "supervised_tokens": 151,
+      "record_sha256": "72fdccae5030d272ca3d3e464724f1ab13a72cb7d354566eeff55fdf2a9cc185"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 3102,
+      "supervised_tokens": 411,
+      "record_sha256": "e8527f96abc85f75852944a21ae3361277ca970311005729c71f0ba970348ff2"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 2906,
+      "supervised_tokens": 392,
+      "record_sha256": "aff7b13cdf298fe216f09f20e6e14bdbcca85e7aa9df009c60fd35afa9c94425"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2956,
+      "supervised_tokens": 238,
+      "record_sha256": "76e71164d679e71658043baa56343237705f840212753f3897f968487af89de4"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2996,
+      "supervised_tokens": 171,
+      "record_sha256": "8284dbec0bbd5bcc1288af5671e27b7f526fbcdf2d19d1d30e3d3d390f684c85"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-stall_repair",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 2809,
+      "supervised_tokens": 150,
+      "record_sha256": "94b1c84634b2bb9bcfe91878ff5bc91d9a8faa286b4a3359f86625ee1b82d5bc"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-stall_repair",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2795,
+      "supervised_tokens": 245,
+      "record_sha256": "a9a19cb10c3faa82f3423b1389b93ffe32d4b3aa0d2707bf27332e8a92175229"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-stall_repair",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2810,
+      "supervised_tokens": 213,
+      "record_sha256": "dc68b87e76f79b757ecdac29e8dd6764b406b41ab9d100b0b144ef1a0e4fdc68"
+    },
+    {
+      "id": "boltons-asciify:curriculum-stall_repair",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 2127,
+      "supervised_tokens": 205,
+      "record_sha256": "60f39e37c021564a55b58232e886c5d10299a04843101894f07db8340f8113b0"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-stall_repair",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 2357,
+      "supervised_tokens": 293,
+      "record_sha256": "974f97e5317d604b88953105de96e51d9971adab661b003fcdfc2973509273b2"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-stall_repair",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 3123,
+      "supervised_tokens": 287,
+      "record_sha256": "e15d575a232640acfff2bb19d75674b02c21d92d9670ce064e47997f22185925"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-stall_repair",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 2708,
+      "supervised_tokens": 241,
+      "record_sha256": "83c837723978306d48730947a3c35dac979ba839beaf9892312926f1c60d54c7"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-stall_repair",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2852,
+      "supervised_tokens": 165,
+      "record_sha256": "8d698d84ab3c7dc6cfbc915d4b6b890b8429ddbd3e8bc0a72da51ee13742c7e6"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-stall_repair",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2586,
+      "supervised_tokens": 286,
+      "record_sha256": "11b970624e99164f5aab9ed80ce79112ccf4162dde3ee32f872e88aba74c62bb"
+    },
+    {
+      "id": "boltons-research:curriculum-stall_repair",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 2728,
+      "supervised_tokens": 241,
+      "record_sha256": "4f5ccf069bc5035ce91c81b94f10868bb8b11c29ca401aa1cde79f4b3e9de732"
+    },
+    {
+      "id": "boltons-slugify:curriculum-stall_repair",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 2123,
+      "supervised_tokens": 176,
+      "record_sha256": "c54003a960ab4d874229c77749e18fbd34cdef37b956dfd8bfe0cc9c3135cd23"
+    },
+    {
+      "id": "underscore-defaults:curriculum-stall_repair",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 2787,
+      "supervised_tokens": 163,
+      "record_sha256": "603f098e4d407df80ecfb9319f4b2f98afddf78e92c40d0977f3ccb6fa15e6f9"
+    },
+    {
+      "id": "underscore-difference:curriculum-stall_repair",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 2496,
+      "supervised_tokens": 134,
+      "record_sha256": "2fbd4fa00c44cbfc7cd01bf678466e8ad5a3c073621f4b3e4a20e67dba67ae78"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-stall_repair",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 3089,
+      "supervised_tokens": 206,
+      "record_sha256": "5befe4611e5779c00db6bf121c5f7ac15e2d8975db1bb303dcf246f093264856"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-stall_repair",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1932,
+      "supervised_tokens": 147,
+      "record_sha256": "4d1fb32bb1c1ea2c78e635668ded5eaf310b3958ef5e5e8f285028af074b3e98"
+    },
+    {
+      "id": "underscore-intersection:curriculum-stall_repair",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 2081,
+      "supervised_tokens": 143,
+      "record_sha256": "5ec3cb36504b262e3749eb081e70735c49835219204720abdcde245f84bc961e"
+    },
+    {
+      "id": "underscore-map-object:curriculum-stall_repair",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 2473,
+      "supervised_tokens": 153,
+      "record_sha256": "956f4bc795f9724f2c31b474f007645cec45124f53c00f26d1a983aab66466d4"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-stall_repair",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1736,
+      "supervised_tokens": 146,
+      "record_sha256": "45d2334cef8218c459b9371b4f825f335394cebe0d1af9de287e47d85a5c5523"
+    },
+    {
+      "id": "underscore-range-step:curriculum-stall_repair",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 2031,
+      "supervised_tokens": 157,
+      "record_sha256": "a0e050568736d75fe48de9a10869f0f5bf49c1e48760c143eda4d9feeda9dd66"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-stall_repair",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 3161,
+      "supervised_tokens": 140,
+      "record_sha256": "1e372266f8b62b6e2b9a22073c614f66e32231e6c12a1ae18ea99c1878228a0a"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-stall_repair",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 3368,
+      "supervised_tokens": 136,
+      "record_sha256": "03c102dbf17bf8e6f7c9d6d03974f6bb0c6799e7ae4d1a0501b801e0cf2c767c"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-stall_repair",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 2796,
+      "supervised_tokens": 139,
+      "record_sha256": "e9793c8b872800499148dd10a6a2b6a4003ef9b49ac211e991da9828a54aadf4"
+    },
+    {
+      "id": "019-inflection-camelize:curriculum-late_repair",
+      "task_id": "019-inflection-camelize",
+      "kind": "verified-reference-repair",
+      "tokens": 2590,
+      "supervised_tokens": 182,
+      "record_sha256": "7456d9370a6cb9f663e14e834530f2e3405eacc74d1a709c091316561c7f19ce"
+    },
+    {
+      "id": "019-inflection-dasherize:curriculum-late_repair",
+      "task_id": "019-inflection-dasherize",
+      "kind": "verified-reference-repair",
+      "tokens": 2417,
+      "supervised_tokens": 131,
+      "record_sha256": "f187de56473129249cbb701d0997d1249b25f008cfb18fda680d0253d5732679"
+    },
+    {
+      "id": "019-inflection-humanize:curriculum-late_repair",
+      "task_id": "019-inflection-humanize",
+      "kind": "verified-reference-repair",
+      "tokens": 2689,
+      "supervised_tokens": 211,
+      "record_sha256": "d39c9e806692b1fc3756fdbd0bc0bc231d99fb39d9ad79bd43ccf75820cf44b4"
+    },
+    {
+      "id": "019-inflection-ordinal:curriculum-late_repair",
+      "task_id": "019-inflection-ordinal",
+      "kind": "verified-reference-repair",
+      "tokens": 2484,
+      "supervised_tokens": 209,
+      "record_sha256": "3a92ba3a1eb74c47bff30a8a0d1bc35776c57308845e4e202dd717f8900445c1"
+    },
+    {
+      "id": "019-inflection-ordinalize:curriculum-late_repair",
+      "task_id": "019-inflection-ordinalize",
+      "kind": "verified-reference-repair",
+      "tokens": 2656,
+      "supervised_tokens": 140,
+      "record_sha256": "289d0092abd6a7ea9f6627ac365d566393329fd0c6ed8fc12dfbb6275fe443af"
+    },
+    {
+      "id": "019-inflection-parameterize:curriculum-late_repair",
+      "task_id": "019-inflection-parameterize",
+      "kind": "verified-reference-repair",
+      "tokens": 2525,
+      "supervised_tokens": 261,
+      "record_sha256": "f6ddd0fba3da82647305825594dc9f10689b572239a9af41b2fb68ab7869df8f"
+    },
+    {
+      "id": "019-inflection-pluralize:curriculum-late_repair",
+      "task_id": "019-inflection-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2613,
+      "supervised_tokens": 186,
+      "record_sha256": "87486e5c47735c3d9f1a30e57390984144c7ab5f23028c1782a564672493e566"
+    },
+    {
+      "id": "019-inflection-singularize:curriculum-late_repair",
+      "task_id": "019-inflection-singularize",
+      "kind": "verified-reference-repair",
+      "tokens": 2510,
+      "supervised_tokens": 199,
+      "record_sha256": "a6c84972c275b701a7ce7826e0dbadb445c4b10fe5497c1bf2e926a34ef5794f"
+    },
+    {
+      "id": "019-inflection-tableize:curriculum-late_repair",
+      "task_id": "019-inflection-tableize",
+      "kind": "verified-reference-repair",
+      "tokens": 2562,
+      "supervised_tokens": 138,
+      "record_sha256": "39a3fc6d6c6ea22157e220532c82e7b0b82ef7898037a01bcba34b80460c7354"
+    },
+    {
+      "id": "019-inflection-titleize:curriculum-late_repair",
+      "task_id": "019-inflection-titleize",
+      "kind": "verified-reference-repair",
+      "tokens": 2489,
+      "supervised_tokens": 168,
+      "record_sha256": "29f07ad6584f7ebaa8baeafd0e9dbb2173f1b46fbd33d9ce9702c533fa26ebb3"
+    },
+    {
+      "id": "019-inflection-transliterate:curriculum-late_repair",
+      "task_id": "019-inflection-transliterate",
+      "kind": "verified-reference-repair",
+      "tokens": 2583,
+      "supervised_tokens": 159,
+      "record_sha256": "a0040cbe4d37ccf2f15877677cdee37d5c92b7bb49be090346fe67f8aa96f4bc"
+    },
+    {
+      "id": "019-inflection-underscore:curriculum-late_repair",
+      "task_id": "019-inflection-underscore",
+      "kind": "verified-reference-repair",
+      "tokens": 2539,
+      "supervised_tokens": 199,
+      "record_sha256": "48e7df7d0c765d8696326a1a80350d3ff22d146e9b701b171e3d4700c7730db4"
+    },
+    {
+      "id": "019-python-semver-Version-__getitem:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-__getitem",
+      "kind": "verified-reference-repair",
+      "tokens": 3240,
+      "supervised_tokens": 319,
+      "record_sha256": "5bd3ff09d15b1c02220d6e414614424576178f06a597310e9d1711ca1dd2ebc9"
+    },
+    {
+      "id": "019-python-semver-Version-__hash:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-__hash",
+      "kind": "verified-reference-repair",
+      "tokens": 2409,
+      "supervised_tokens": 135,
+      "record_sha256": "b82948f11900624fb7dbe629f1a311476a4976d8cd90fe9f13f02ad8f5f4b754"
+    },
+    {
+      "id": "019-python-semver-Version-__iter:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-__iter",
+      "kind": "verified-reference-repair",
+      "tokens": 2285,
+      "supervised_tokens": 136,
+      "record_sha256": "050b122ccfa527b0426efa123657ee6b75ba2e0b565311ce670c5140fe560feb"
+    },
+    {
+      "id": "019-python-semver-Version-__repr:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-__repr",
+      "kind": "verified-reference-repair",
+      "tokens": 2738,
+      "supervised_tokens": 170,
+      "record_sha256": "6d7d843e4c9a2544fbeafa6cf829c60e63aed9dbd4d5cf6bd2a444449f54e959"
+    },
+    {
+      "id": "019-python-semver-Version-__str:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-__str",
+      "kind": "verified-reference-repair",
+      "tokens": 3019,
+      "supervised_tokens": 193,
+      "record_sha256": "ad1bce8846055c97df7c21db679a8f66d1417561fe0cb9ec63a779eb9b786b85"
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-_increment_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2744,
+      "supervised_tokens": 193,
+      "record_sha256": "2bc5966bcb300084a5aab563175371879ae3708e39adfe285c4c78c8639b88ad"
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-_nat_cmp",
+      "kind": "verified-reference-repair",
+      "tokens": 3004,
+      "supervised_tokens": 334,
+      "record_sha256": "ea9bc60a256fe9964af30b4692f85482c88f7614bcc1539bd35c1d3c8f372284"
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-_validate_identifiers",
+      "kind": "verified-reference-repair",
+      "tokens": 2917,
+      "supervised_tokens": 198,
+      "record_sha256": "a537282e2265c8f0be57e6490021ef4733e8c4141013b9877812dc80971d1707"
+    },
+    {
+      "id": "019-python-semver-Version-bump_build:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-bump_build",
+      "kind": "verified-reference-repair",
+      "tokens": 3054,
+      "supervised_tokens": 319,
+      "record_sha256": "3833ab57c0b2ab1c20941627eb5c9dd8217596d3c0a1af3d22191a678b30cfd2"
+    },
+    {
+      "id": "019-python-semver-Version-bump_major:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-bump_major",
+      "kind": "verified-reference-repair",
+      "tokens": 2851,
+      "supervised_tokens": 146,
+      "record_sha256": "dd19f460f3c628b7b9b5048faf8957d142de64cd71cc6f7bbaec794e851a1ff5"
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-bump_minor",
+      "kind": "verified-reference-repair",
+      "tokens": 2675,
+      "supervised_tokens": 145,
+      "record_sha256": "f6e829863d13d0087bfa14d90a25c65229f09cc8f642410bf07180d702a368b0"
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-bump_patch",
+      "kind": "verified-reference-repair",
+      "tokens": 2873,
+      "supervised_tokens": 154,
+      "record_sha256": "346c24164e1699b5030df114d469f3ea5eb1d63c327581f3bd94924c2950b39b"
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-bump_prerelease",
+      "kind": "verified-reference-repair",
+      "tokens": 2839,
+      "supervised_tokens": 284,
+      "record_sha256": "8c2ddefcb55126a90a661927c75fa41af549437ab00ce314af50b3f3a6e268a9"
+    },
+    {
+      "id": "019-python-semver-Version-compare:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-compare",
+      "kind": "verified-reference-repair",
+      "tokens": 2991,
+      "supervised_tokens": 369,
+      "record_sha256": "fbef145548468fb01b88c15803e1a29a5d1e889336138e7a024525b164e9a657"
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-finalize_version",
+      "kind": "verified-reference-repair",
+      "tokens": 2974,
+      "supervised_tokens": 149,
+      "record_sha256": "0b29106ff6cfc353537b10bc7f6a7ed643e88bd609255f57cabc7014a7165da9"
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-is_compatible",
+      "kind": "verified-reference-repair",
+      "tokens": 2882,
+      "supervised_tokens": 238,
+      "record_sha256": "58c75d80c608cdbd72f01138ee3d79f6a77b293af847a745274c5086ee1b800d"
+    },
+    {
+      "id": "019-python-semver-Version-is_valid:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-is_valid",
+      "kind": "verified-reference-repair",
+      "tokens": 3171,
+      "supervised_tokens": 151,
+      "record_sha256": "e90a3a633a19fd9ea102711b299d0528be4285c2cda67991beef28b846b16c64"
+    },
+    {
+      "id": "019-python-semver-Version-match:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-match",
+      "kind": "verified-reference-repair",
+      "tokens": 3057,
+      "supervised_tokens": 406,
+      "record_sha256": "c93da3dc17c3c56b0469e840e47f87265afb4b5b92a8a6bb65a3ef86dd1161ae"
+    },
+    {
+      "id": "019-python-semver-Version-parse:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-parse",
+      "kind": "verified-reference-repair",
+      "tokens": 3071,
+      "supervised_tokens": 392,
+      "record_sha256": "9c970b4f9cd8fcaa786ecf1237040a576c6864ea860b5340793a226311c5a895"
+    },
+    {
+      "id": "019-python-semver-Version-replace:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-replace",
+      "kind": "verified-reference-repair",
+      "tokens": 2938,
+      "supervised_tokens": 233,
+      "record_sha256": "1c14561eaddadba0569eafa049b5dde3f56c024dbe960c8a0ea11177a25af3bb"
+    },
+    {
+      "id": "019-python-semver-Version-to_dict:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-to_dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2972,
+      "supervised_tokens": 166,
+      "record_sha256": "6f534f703fb585e6f36bc329f62ad44d8d893047b295aa119d4340aca6376bcc"
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple:curriculum-late_repair",
+      "task_id": "019-python-semver-Version-to_tuple",
+      "kind": "verified-reference-repair",
+      "tokens": 2954,
+      "supervised_tokens": 150,
+      "record_sha256": "b01825901542bd868c0eeccee627f8afaa4ab7dbe891ac519de120470ae75b74"
+    },
+    {
+      "id": "boltons-LRI-__setitem__:curriculum-late_repair",
+      "task_id": "boltons-LRI-__setitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2792,
+      "supervised_tokens": 240,
+      "record_sha256": "19cb91c4875333c2050b8946e2902160d375bde0f6a407ad90a93674c51ae850"
+    },
+    {
+      "id": "boltons-LRU-__getitem__:curriculum-late_repair",
+      "task_id": "boltons-LRU-__getitem__",
+      "kind": "verified-reference-repair",
+      "tokens": 2959,
+      "supervised_tokens": 213,
+      "record_sha256": "9c6eee3922884ff0a11acee88be4ffcce02d0a3e2c30fcedf58ff1fae72ea635"
+    },
+    {
+      "id": "boltons-asciify:curriculum-late_repair",
+      "task_id": "boltons-asciify",
+      "kind": "verified-reference-repair",
+      "tokens": 1954,
+      "supervised_tokens": 200,
+      "record_sha256": "fb6290c51b6ec23d4ca249e24948d006b6e5404893c488766df1197d5f22842c"
+    },
+    {
+      "id": "boltons-bytes2human:curriculum-late_repair",
+      "task_id": "boltons-bytes2human",
+      "kind": "verified-reference-repair",
+      "tokens": 2515,
+      "supervised_tokens": 293,
+      "record_sha256": "7631a98fbf3ae8b06745fedee9a8fa99cd1fef4adeaf8b29f3894f359e62eecc"
+    },
+    {
+      "id": "boltons-cache-and-frozen:curriculum-late_repair",
+      "task_id": "boltons-cache-and-frozen",
+      "kind": "verified-reference-repair",
+      "tokens": 3012,
+      "supervised_tokens": 282,
+      "record_sha256": "57cf7357ab87058e38c765d25aa987fc5c8683cc695ffc98385ceeb5f8066f84"
+    },
+    {
+      "id": "boltons-make_cache_key:curriculum-late_repair",
+      "task_id": "boltons-make_cache_key",
+      "kind": "verified-reference-repair",
+      "tokens": 2843,
+      "supervised_tokens": 241,
+      "record_sha256": "ca692d4770f0491265a5e5b2518f5e4edcbacc95a027c39bc457da91bc5b14c6"
+    },
+    {
+      "id": "boltons-multi-dict:curriculum-late_repair",
+      "task_id": "boltons-multi-dict",
+      "kind": "verified-reference-repair",
+      "tokens": 2793,
+      "supervised_tokens": 160,
+      "record_sha256": "863fae586f38433e3eebdeee55717811a5b70c11532e9dc16bb3220e5e197416"
+    },
+    {
+      "id": "boltons-pluralize:curriculum-late_repair",
+      "task_id": "boltons-pluralize",
+      "kind": "verified-reference-repair",
+      "tokens": 2429,
+      "supervised_tokens": 281,
+      "record_sha256": "2bf9e7ce78acab52c4beaba20c96326db817c9d6a1d6589245e38b2c67660bd0"
+    },
+    {
+      "id": "boltons-research:curriculum-late_repair",
+      "task_id": "boltons-research",
+      "kind": "verified-reference-repair",
+      "tokens": 2868,
+      "supervised_tokens": 241,
+      "record_sha256": "5d34f4b1329d1325f3059f404a4d69491d8949170f96628b83d89ca35fcfb939"
+    },
+    {
+      "id": "boltons-slugify:curriculum-late_repair",
+      "task_id": "boltons-slugify",
+      "kind": "verified-reference-repair",
+      "tokens": 2287,
+      "supervised_tokens": 176,
+      "record_sha256": "a5b8b5e65505c23f4ea636a0e1785f01f370ecc6448323ebdae28411a29d7486"
+    },
+    {
+      "id": "underscore-defaults:curriculum-late_repair",
+      "task_id": "underscore-defaults",
+      "kind": "verified-reference-repair",
+      "tokens": 2832,
+      "supervised_tokens": 161,
+      "record_sha256": "872bfbf8f3128501d045ad7a119355dfca8c445a81db95977b83b9d5576db28b"
+    },
+    {
+      "id": "underscore-difference:curriculum-late_repair",
+      "task_id": "underscore-difference",
+      "kind": "verified-reference-repair",
+      "tokens": 2459,
+      "supervised_tokens": 135,
+      "record_sha256": "eb902f7e87624c06f076511c9045825142f5720001c0ae285f8e3001b004c762"
+    },
+    {
+      "id": "underscore-group-partition:curriculum-late_repair",
+      "task_id": "underscore-group-partition",
+      "kind": "verified-reference-repair",
+      "tokens": 3307,
+      "supervised_tokens": 206,
+      "record_sha256": "6ab361c7f52290ea458f24453e3ac86ad75c6362a1fd4e35f5b573a23c6be911"
+    },
+    {
+      "id": "underscore-index-nan:curriculum-late_repair",
+      "task_id": "underscore-index-nan",
+      "kind": "verified-reference-repair",
+      "tokens": 1972,
+      "supervised_tokens": 147,
+      "record_sha256": "076420ae0ff2db0889d8107dd7827327a48f13ebc5fe3a75a636c7e74d965c3b"
+    },
+    {
+      "id": "underscore-intersection:curriculum-late_repair",
+      "task_id": "underscore-intersection",
+      "kind": "verified-reference-repair",
+      "tokens": 2204,
+      "supervised_tokens": 143,
+      "record_sha256": "38899a94dabd13e5dc96f66c026c2d716fadc11f2d344582515f84e139b458a1"
+    },
+    {
+      "id": "underscore-map-object:curriculum-late_repair",
+      "task_id": "underscore-map-object",
+      "kind": "verified-reference-repair",
+      "tokens": 2025,
+      "supervised_tokens": 153,
+      "record_sha256": "a171d72e3512a9c469bea5069bca6e7bc1790684f88643bffe707a003a900718"
+    },
+    {
+      "id": "underscore-object-pairs:curriculum-late_repair",
+      "task_id": "underscore-object-pairs",
+      "kind": "verified-reference-repair",
+      "tokens": 1876,
+      "supervised_tokens": 146,
+      "record_sha256": "403b95ad82e95603ca03f59971d1dd76606ef6f9279a78a5dc0ee0fa3865a75e"
+    },
+    {
+      "id": "underscore-range-step:curriculum-late_repair",
+      "task_id": "underscore-range-step",
+      "kind": "verified-reference-repair",
+      "tokens": 2534,
+      "supervised_tokens": 161,
+      "record_sha256": "1271613d976a60d0643f2007ff43494daf468fcae3f59704d1aacf7408fabc2b"
+    },
+    {
+      "id": "underscore-reduce-initial:curriculum-late_repair",
+      "task_id": "underscore-reduce-initial",
+      "kind": "verified-reference-repair",
+      "tokens": 3144,
+      "supervised_tokens": 140,
+      "record_sha256": "1be262d62e9df59eaf39fd673bc25532918e3a217c8374c7ed3a08305d92484b"
+    },
+    {
+      "id": "underscore-stable-sort:curriculum-late_repair",
+      "task_id": "underscore-stable-sort",
+      "kind": "verified-reference-repair",
+      "tokens": 3436,
+      "supervised_tokens": 136,
+      "record_sha256": "e8e15eb13be3202ad1701de62443c3bf1c8fc2a12a00f60470170b326d9807bc"
+    },
+    {
+      "id": "underscore-uniq-iteratee:curriculum-late_repair",
+      "task_id": "underscore-uniq-iteratee",
+      "kind": "verified-reference-repair",
+      "tokens": 2695,
+      "supervised_tokens": 139,
+      "record_sha256": "326d1a02c54501cce89dbe03d708fc4e42a6fdd6488fd8abd1708dab77b46bf3"
+    }
+  ],
+  "excluded": [],
+  "raw_data_public": false,
+  "evaluation_traces_used": false,
+  "data_sha256": "c7f4aa0c29b35efa9997c6482265d4b52d76cdf2e6209f819ca94bcc76efdfa2",
+  "receipt_sha256": "0dc2075be898bc889bf3beff7c44cca6fb19d29e471b504654d746c3275a904b"
+}

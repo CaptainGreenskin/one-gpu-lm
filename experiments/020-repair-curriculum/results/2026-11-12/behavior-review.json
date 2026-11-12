@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-12T06:56:13.952744+00:00",
+  "posthoc_descriptive_only": true,
+  "used_for_selection_training_or_release_thresholds": false,
+  "private_evidence_sha256": "b6098e18190d461fb032edfe255d352307cb70f97da68a7090f9045ae461aa0e",
+  "execution_audit_sha256": "d5b30820714c68c6ad394e3a83be36516c6342233e273cf83d9af0799bffda97",
+  "execution_behavior_summary_sha256": "dd4fcf124d3f4c7b4641896208c340e9cee8823bc69c0605ea328a819ae321fb",
+  "coverage": {
+    "machine_checked_trajectories": 141,
+    "manually_reviewed_selected_final_failures": 19,
+    "manually_compared_passing_base_regressions": 4,
+    "selected_failed_no_edit": 16,
+    "selected_read_search_only_failures": 15,
+    "selected_failed_edit_attempt_before_write": 1,
+    "selected_failed_after_edit": 3
+  },
+  "transition_matrix": [
+    {
+      "base": "passed",
+      "selected": "passed",
+      "tasks": 21
+    },
+    {
+      "base": "passed",
+      "selected": "failed_no_edit",
+      "tasks": 4
+    },
+    {
+      "base": "passed",
+      "selected": "failed_after_edit",
+      "tasks": 0
+    },
+    {
+      "base": "failed_no_edit",
+      "selected": "passed",
+      "tasks": 4
+    },
+    {
+      "base": "failed_no_edit",
+      "selected": "failed_no_edit",
+      "tasks": 10
+    },
+    {
+      "base": "failed_no_edit",
+      "selected": "failed_after_edit",
+      "tasks": 2
+    },
+    {
+      "base": "failed_after_edit",
+      "selected": "passed",
+      "tasks": 4
+    },
+    {
+      "base": "failed_after_edit",
+      "selected": "failed_no_edit",
+      "tasks": 2
+    },
+    {
+      "base": "failed_after_edit",
+      "selected": "failed_after_edit",
+      "tasks": 1
+    }
+  ],
+  "cases": [
+    {
+      "id": "fresh-query-null",
+      "new_regression": true,
+      "category": "last_call_patch_precondition_failed",
+      "base": {
+        "trajectory_sha256": "d168245482443aa56992b2b4dba8a8e189608df74041d144ff33cba755a7c756",
+        "cohort": "historical",
+        "passed": true,
+        "calls": 11,
+        "exit_status": "Submitted",
+        "first_observed_allowed_edit_call": 9,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 0
+      },
+      "selected": {
+        "trajectory_sha256": "8d23fd439769d23b54984844fd8758a91e8bb0ec9c10425fd17efbc5d49b4ef5",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "base_observation": "底座第 9 次写入后看到变量作用域错误，第 10 次纠正并通过；第 11 次提交。",
+      "selected_observation": "候选前 11 次读取/搜索；第 12 次才尝试替换，唯一匹配断言在写入前失败。组合命令外层返回 0，但输出含断言失败及 7 个测试失败；没有剩余调用可纠正。"
+    },
+    {
+      "id": "fresh-query-plain-objects",
+      "new_regression": true,
+      "category": "read_search_only",
+      "base": {
+        "trajectory_sha256": "1f238fde6b7a1d58ad0a1b856d97622aa017312ae5cb9f5629fd3898e8ab3fb6",
+        "cohort": "historical",
+        "passed": true,
+        "calls": 7,
+        "exit_status": "Submitted",
+        "first_observed_allowed_edit_call": 6,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 0
+      },
+      "selected": {
+        "trajectory_sha256": "dc8a15e8284e6689bd3c79493ba307929fdf0cef67ff192133e40556a76d8c22",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "base_observation": "底座第 6 次修改并测试，第 7 次提交，独立判分通过。",
+      "selected_observation": "候选第 5 次已读取相关初始化逻辑，之后继续查测试和辅助实现，12 次调用全部为读取/搜索，没有写入尝试。"
+    },
+    {
+      "id": "fresh-query-sort",
+      "new_regression": true,
+      "category": "read_search_only",
+      "base": {
+        "trajectory_sha256": "67a820b0924997da7ede8756ba49f9759c61e3a9645d19a26801dae18ca57904",
+        "cohort": "historical",
+        "passed": true,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": 12,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 0
+      },
+      "selected": {
+        "trajectory_sha256": "062b2aa533acefa29dc30aed915f39efb157402e67e7ba4b81629db9e6e531b4",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "base_observation": "底座第 12 次才修改并测试；虽以调用耗尽结束，最终独立判分仍通过。",
+      "selected_observation": "候选第 2 次输出已包含被禁用的排序标记；第 9–12 次继续做相近的、排除相关测试文件的搜索，无匹配且无修改。"
+    },
+    {
+      "id": "019-backoff-constant",
+      "new_regression": true,
+      "category": "read_search_only",
+      "base": {
+        "trajectory_sha256": "499fa6406ea8651c8738a73fae3303eab023dce822f5f6b23da9495b9ee8f8af",
+        "cohort": "fresh",
+        "passed": true,
+        "calls": 5,
+        "exit_status": "Submitted",
+        "first_observed_allowed_edit_call": 4,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 0
+      },
+      "selected": {
+        "trajectory_sha256": "5fc7189765e0d53ea74cabe693e46ef3109f73376bec2ddd6174135bc9238e11",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "base_observation": "底座第 4 次修改并测试，第 5 次提交，独立判分通过。",
+      "selected_observation": "候选第 3 次读取缺失实现、第 4 次读取测试，后续转向辅助实现与调用者；第 8、10–12 次在另一辅助文件中找目标，无匹配；全程未尝试写入。"
+    },
+    {
+      "id": "new-jmes-filter",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "5374f7c46913147c9900f1623eea9f4494ca9e4cdeffefa5124fccb8ad2b4211",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取目标与邻近访问器后，持续查过滤表达式及测试；12 次均为读取/搜索。"
+    },
+    {
+      "id": "new-jmes-multiselect",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "a0c3a499c1d1b1307c684e889a45911b6e44d7eb5a03fa6558e890da28d05715",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取解析器后持续查 AST 名称和相关测试；一次名称查找无匹配，未进入编辑。"
+    },
+    {
+      "id": "new-jmes-sort-expression",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "d9966ff541c875d473b27a68c2e6b4a0443159a9e7cccc6062ea281d031dba34",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取目标与排序用例后继续搜索其它测试文件；未尝试实现。"
+    },
+    {
+      "id": "new-jmes-raw-string",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "e2b65c8dafc36918dd27481740dcca76c0f7eaab919b3ca398b298be697b0d68",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取词法器后反复搜索原始字符串名称与用例；未尝试编辑。"
+    },
+    {
+      "id": "new-jmes-index-slice",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "afb019afc6b71e3e8fb37abb0a8dc8acf934edbab2d604dc5b34e82c27b4fbe2",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取访问器、解析器和 AST 后继续查索引/切片测试；未尝试编辑。"
+    },
+    {
+      "id": "fresh-signed-key-derivation",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "735245d6dd9dc366d3b42f62717c572e299140b5d9e45dd041b7b1eb444fd073",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取签名逻辑与测试，后段多次缩小或重复读取同一测试区域；未尝试编辑。"
+    },
+    {
+      "id": "fresh-query-decode",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "82e6570a9b00bcd08e45e92b339816e6694ab1b68107ec65ed2b8af1e674c434",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取解码实现后持续查字符集和边界测试；最后使用沙箱内不存在的工具而返回 127；在此之前也没有编辑。"
+    },
+    {
+      "id": "fresh-query-combine",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "c13f3bafd250bb76c51d734f0a2f95de515535fd9a83a4d6f1c9fd15c64807a6",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "多次缩小读取工具函数范围，最后两次继续查合并测试；未尝试编辑。"
+    },
+    {
+      "id": "019-addict-Dict-__setitem",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "e190dc858739beb64f76e713e8dd083237f122aae813eae35a9f4dda812bb266",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取类实现后持续查看测试，末段反复缩小相邻测试范围；未尝试编辑。"
+    },
+    {
+      "id": "019-cssselect-GenericTranslator-xpath_literal",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "eae18ddc2fb7ad6c5e9d149195f55e9022b30fe9c1df6571ecdf1ea1e773924a",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取目标后搜索测试、文档及字符串处理辅助逻辑；若干搜索无匹配；未尝试编辑。"
+    },
+    {
+      "id": "019-cssselect-GenericTranslator-xpath_attrib_includes",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "86af4c73eda0795af5db16414bab40fb03ee5d75e3b8cfcbc4cfa8b48b241ad8",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取目标、测试与调用者后，第 7–12 次执行完全相同的调用者搜索；未尝试编辑。"
+    },
+    {
+      "id": "019-cssselect-GenericTranslator-xpath_attrib_dashmatch",
+      "new_regression": false,
+      "category": "read_search_only",
+      "selected": {
+        "trajectory_sha256": "90a3ea7297ca21570377503a10719cf7e03f69ed8cc5628b61ef0417c801829f",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": null,
+        "any_observed_allowed_edit": false,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "读取目标后持续做同名测试搜索；第 6–12 次为完全相同的搜索；未尝试编辑。"
+    },
+    {
+      "id": "fresh-query-sparse",
+      "new_regression": false,
+      "category": "failed_after_edit",
+      "selected": {
+        "trajectory_sha256": "5421edeaa3b89f3257df3467668a51360d9e34f114d6946a4e64d50b44688c26",
+        "cohort": "historical",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": 12,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "第 12 次才修改；只判断数组位置是否存在，仍保留了测试要求移除的 undefined 元素。组合测试输出含 1 个失败，独立判分也失败；没有余量再纠正。"
+    },
+    {
+      "id": "019-backoff-runtime",
+      "new_regression": false,
+      "category": "failed_after_edit",
+      "selected": {
+        "trajectory_sha256": "d644d18ffb83f824481b63a36c820f8adc047d64c542aa1eb6dde710c2569ea0",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": 5,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "第 5 次开始修改；遇到未定义变量与语法失败后，第 7 次形成可执行但生成器收发语义错误的实现。第 8–12 次只反复增删类型注释并重复测试，未改变运行语义；独立测试仍收到不期望的空值。"
+    },
+    {
+      "id": "019-schedule-Job-_schedule_next_run",
+      "new_regression": false,
+      "category": "failed_after_edit",
+      "selected": {
+        "trajectory_sha256": "aedbe65c103c60612266dd0d712d2ef13a40ff64fcc0f8539130f0f48d8a7489",
+        "cohort": "fresh",
+        "passed": false,
+        "calls": 12,
+        "exit_status": "LimitsExceeded",
+        "first_observed_allowed_edit_call": 8,
+        "any_observed_allowed_edit": true,
+        "independent_grade_returncode": 1
+      },
+      "selected_observation": "第 8 次实现调用不存在的辅助方法；第 9 次测试显示大量失败。第 10 次格式无效，第 11 次补齐辅助方法后仍有时间/时区等失败，第 12 次仅查看失败列表；独立判分未通过。"
+    }
+  ],
+  "raw_commands_patches_and_grader_logs_public": false,
+  "limits": [
+    "Observed execution mechanisms, not a causal explanation of learned weights.",
+    "All 19 selected final failures and four passing base sides of regressions were manually reviewed; not all 141 trajectories were manually inspected.",
+    "Some original tool/grader output was truncated; no missing text is reconstructed and no task is rerun.",
+    "These final tasks are now observed; future selection needs new heldout tasks. No final task content entered this training run."
+  ]
+}

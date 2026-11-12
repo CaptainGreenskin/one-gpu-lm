@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "task_sha256": "65874d057d1b9dd19b07adc95f2b3062c37be9ab13acf0c5fdfe01e3632d8d2b",
+  "complete": true,
+  "results": [
+    {
+      "id": "python-merge-intervals",
+      "language": "python",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 83,
+      "input_tokens_sha256": "5ae4d20dc2cc169e28d3ea6214ba42dfc9d140fb110f2963b45722a1b9b2b462",
+      "generated_tokens": 118,
+      "seconds": 17.315773028007243,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 83,
+        "packed_input_tokens": 83,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0009537640144117177,
+      "peak_allocated_bytes": 55163805184,
+      "adapter": true
+    },
+    {
+      "id": "python-topological-order",
+      "language": "python",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 94,
+      "input_tokens_sha256": "200b799eea82198ac4286af99c40721dd443c396c9accee45edf433a36bdbc02",
+      "generated_tokens": 236,
+      "seconds": 34.573237027041614,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 94,
+        "packed_input_tokens": 94,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0008700120379216969,
+      "peak_allocated_bytes": 55169034752,
+      "adapter": true
+    },
+    {
+      "id": "python-run-length",
+      "language": "python",
+      "passed": true,
+      "passed_cases": 3,
+      "cases": 3,
+      "reason": "ok",
+      "input_tokens": 61,
+      "input_tokens_sha256": "1451249f90e965981badd1c32058a75c755cbcbb760771ba384457bf6e40c529",
+      "generated_tokens": 110,
+      "seconds": 16.168870007037185,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 61,
+        "packed_input_tokens": 61,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0007848390378057957,
+      "peak_allocated_bytes": 55158779904,
+      "adapter": true
+    },
+    {
+      "id": "javascript-frequency-order",
+      "language": "javascript",
+      "passed": true,
+      "passed_cases": 3,
+      "cases": 3,
+      "reason": "ok",
+      "input_tokens": 67,
+      "input_tokens_sha256": "39fea3628c8021751fd5ffb9d3af4982ffb0ffafc32ecf8a832f496fa443507d",
+      "generated_tokens": 193,
+      "seconds": 28.376491259026807,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 67,
+        "packed_input_tokens": 67,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0006901160231791437,
+      "peak_allocated_bytes": 55159909376,
+      "adapter": true
+    },
+    {
+      "id": "javascript-first-repeat",
+      "language": "javascript",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 74,
+      "input_tokens_sha256": "f332d0118ddb59a5bc149ba5dbbbc4ffafb6ff07082688f3442e9039cead8214",
+      "generated_tokens": 62,
+      "seconds": 9.174054628994782,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 74,
+        "packed_input_tokens": 74,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0008791729924269021,
+      "peak_allocated_bytes": 55161054208,
+      "adapter": true
+    },
+    {
+      "id": "javascript-deep-merge",
+      "language": "javascript",
+      "passed": true,
+      "passed_cases": 3,
+      "cases": 3,
+      "reason": "ok",
+      "input_tokens": 96,
+      "input_tokens_sha256": "bf2951c050b261ef1d20bf516490c9487d454d7db21e7e8ae0fc96ef0b06fe6d",
+      "generated_tokens": 177,
+      "seconds": 26.039040955947712,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 96,
+        "packed_input_tokens": 96,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0010941909858956933,
+      "peak_allocated_bytes": 55169612288,
+      "adapter": true
+    },
+    {
+      "id": "cpp-nonadjacent-sum",
+      "language": "cpp",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 77,
+      "input_tokens_sha256": "57b8d9b0f28758bf46522619f5efc9be2f588b9a8dbdc59a7b1196593b7d3671",
+      "generated_tokens": 121,
+      "seconds": 17.969634303997736,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 77,
+        "packed_input_tokens": 77,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0010520899668335915,
+      "peak_allocated_bytes": 55161911296,
+      "adapter": true
+    },
+    {
+      "id": "cpp-zero-sum-subarrays",
+      "language": "cpp",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 67,
+      "input_tokens_sha256": "f3dfd7fd661c689398e492b7c8f1fecba3452463571ae36b8d7a9f1db5c9a36e",
+      "generated_tokens": 143,
+      "seconds": 21.443459135014564,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 67,
+        "packed_input_tokens": 67,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0009581759804859757,
+      "peak_allocated_bytes": 55159909376,
+      "adapter": true
+    },
+    {
+      "id": "cpp-strict-lis",
+      "language": "cpp",
+      "passed": true,
+      "passed_cases": 4,
+      "cases": 4,
+      "reason": "ok",
+      "input_tokens": 68,
+      "input_tokens_sha256": "9cd5b80755b80a50bd1626e31824ceb7362ccaeaa6690ac0b6b0f6aa3494927e",
+      "generated_tokens": 129,
+      "seconds": 19.468500391987618,
+      "hit_generation_limit": false,
+      "agent_policy": {
+        "format": "legacy",
+        "context": "full"
+      },
+      "context": {
+        "policy": "full",
+        "raw_input_tokens": 68,
+        "packed_input_tokens": 68,
+        "dropped_rounds": 0,
+        "original_messages": 1,
+        "packed_messages": 1
+      },
+      "dialogue": {
+        "structured_tool_calls": 0,
+        "tool_results": 0
+      },
+      "packing_seconds": 0.0010529500432312489,
+      "peak_allocated_bytes": 55160085504,
+      "adapter": true
+    }
+  ],
+  "passed": 9
+}

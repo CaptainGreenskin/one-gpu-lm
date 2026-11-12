@@ -1,0 +1,3119 @@
+{
+  "schema_version": 1,
+  "records": 330,
+  "sha256": "aadad6489ff024b31a99c5317f3d559c7b354db6b69526b57e65b85229eb0a6e",
+  "raw_data_public": false,
+  "task_spec_sha256": "4a9899f1a32ebb91ae4d05cd1911276cd4c0280c124a705808f65a655fb9bf71",
+  "license_record_sha256": "153e5b89c1be82cd3ecd4105146716460e64411719a7fe496cdd78fba002eaa8",
+  "admission_sha256": "7d8c186dc55b49e04ea73f66b0d7e513f5f17df3d351b7860d06c98b987ae166",
+  "failure_plan_sha256": "5f3ffc26069b2c2af831b1b88704865cca8cb1a1ce37885a4f18c397489813ce",
+  "variant": "repair",
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "stages": {
+    "inspect": 55,
+    "repair": 55,
+    "verify": 55,
+    "submit": 55,
+    "stall_repair": 55,
+    "late_repair": 55
+  },
+  "repositories": [
+    "jashkenas/underscore",
+    "jpvanhal/inflection",
+    "mahmoud/boltons",
+    "python-semver/python-semver"
+  ],
+  "task_ids": [
+    "019-inflection-camelize",
+    "019-inflection-dasherize",
+    "019-inflection-humanize",
+    "019-inflection-ordinal",
+    "019-inflection-ordinalize",
+    "019-inflection-parameterize",
+    "019-inflection-pluralize",
+    "019-inflection-singularize",
+    "019-inflection-tableize",
+    "019-inflection-titleize",
+    "019-inflection-transliterate",
+    "019-inflection-underscore",
+    "019-python-semver-Version-__getitem",
+    "019-python-semver-Version-__hash",
+    "019-python-semver-Version-__iter",
+    "019-python-semver-Version-__repr",
+    "019-python-semver-Version-__str",
+    "019-python-semver-Version-_increment_prerelease",
+    "019-python-semver-Version-_nat_cmp",
+    "019-python-semver-Version-_validate_identifiers",
+    "019-python-semver-Version-bump_build",
+    "019-python-semver-Version-bump_major",
+    "019-python-semver-Version-bump_minor",
+    "019-python-semver-Version-bump_patch",
+    "019-python-semver-Version-bump_prerelease",
+    "019-python-semver-Version-compare",
+    "019-python-semver-Version-finalize_version",
+    "019-python-semver-Version-is_compatible",
+    "019-python-semver-Version-is_valid",
+    "019-python-semver-Version-match",
+    "019-python-semver-Version-parse",
+    "019-python-semver-Version-replace",
+    "019-python-semver-Version-to_dict",
+    "019-python-semver-Version-to_tuple",
+    "boltons-LRI-__setitem__",
+    "boltons-LRU-__getitem__",
+    "boltons-asciify",
+    "boltons-bytes2human",
+    "boltons-cache-and-frozen",
+    "boltons-make_cache_key",
+    "boltons-multi-dict",
+    "boltons-pluralize",
+    "boltons-research",
+    "boltons-slugify",
+    "underscore-defaults",
+    "underscore-difference",
+    "underscore-group-partition",
+    "underscore-index-nan",
+    "underscore-intersection",
+    "underscore-map-object",
+    "underscore-object-pairs",
+    "underscore-range-step",
+    "underscore-reduce-initial",
+    "underscore-stable-sort",
+    "underscore-uniq-iteratee"
+  ],
+  "reference_controls": [
+    {
+      "id": "boltons-slugify",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "4266ad693e70d630f29f3863f9df4fcc3e4b4f1b2ce68658cf4eb607ec677956",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-slugify",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "6680934da6cd1562e5d374894217b10f46d46c848b0d2507683fde2e8d14d206",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-slugify",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "e708bbcb5710e571a1871b3ecb7ba9421ee8a9a15c7c640f42c4247e75ce52aa",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-slugify",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "f43994faae4d18009c9be8f459068b2b8da088d1994a413ed4c9c13c3a754ccd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-pluralize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "c6f43db9d53782879979e2b3f8f940750103da391db92575355ec95731dbb374",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-pluralize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "ecbb2db5815c3eb0229b1d7afe4bc7b57541dd9407ad84b01b6caa75d41da14f",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-pluralize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "5a24e5ac8dd3d7ec125e6796839893dcc87b39d0ea658348e4b9b921eef473bd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-pluralize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "e8a617b853f1ddc99efafd786f19b10e9db2d4911e4c5e97c8ca72edb174f761",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-bytes2human",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "5d06a266c80d4245a88658f1b78d9d5b0a133a3a759be4e52b1f2d51e95627f1",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-bytes2human",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "d5657a1bab347b0965792ad27d1b3e84bbe66c85eb92efa9d9d91ad966cb38a9",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-bytes2human",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "c1eef3c65b4e7b4e9e4c7b3fa45b2d143602e905699daaed621d6fd15dc3421b",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-bytes2human",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "cf975635c6ffa081ed46d76217480c52d53c1fba916dff92054ea60ece290d29",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-asciify",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "597cc1894fe155a3abef91f12e27f1684c2ebb273c8bf50a8c23f24967ea3d63",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-asciify",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "025c5fbba180c8a6ae72182ca2c9ab892107cff8b9c242fb433526e1bc16478e",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-asciify",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "70c2e6619dd18253bbb66253ddab11e3a0870626dc42eab34e5a2af7de37ce2c",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-asciify",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "ba767fb24cf54c42b75e14ae313d4b1d09a922fb31e0203f8f26511d4299aeaa",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "6cb60188d9e3a2b178153307f44824b4141f6c40618d0bf8e1adeda2a2a72279",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "55827ce0c7c0bea8daa767281ce8dd2a506d14f9e7f7dd33369c78106ad1437c",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "b83badf17f97b8bd3c9d3d73659c16d51ed61335f339a75a2d9caeb2c5ec4e57",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "5db32a1689bf43756723df98697347a7a23f115a934c910bbe1e5eb9fcde8c7b",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "bd007346ab9169152a7c3bd1bae48cc5782c53c75caefc2107a2db5d43a01002",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "35245552f4991507f9a9769ee117641adaeaf6de096636b724c34a3975a67a02",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "96641cc503cbe30540a0a16ff809c5f3ca6911a370334b11827889bf07e5aae4",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "05b39a1372365bb4f692c4dd048d8e79608e673f6e08508bf1ae5ecbcdfff833",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "55556b35a9fdfce8177dfc6a94559c97cab003b15c82981f3f4d6950865c5051",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "e23900368d40b5ed6f72d33dddb5f943c3c1e47e902278d3b24bce76f2530b96",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "5e9042eb9879b73923b460bd7e9c22e5e82d5f15345fea1a153c9c0b83b23679",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "5ba5d208bc4bfbf41cb4470a45d11ff341ab6f784e992f4af0d75933b7f03617",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "03a789176f2fd6a72130f95b2d0c9ea13fe0c1d88640ba8dd4d263db4dd6315d",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "29a1bda26a439aad6e1c0136ba8fafc208e415d4597fc5e0c060538ee97ceb5b",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "18af2d3719d131a2c6240265b64fe4ecbd6706be29a08ca6f8e0a03b8012a177",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-multi-dict",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "251f1b898982abcb564fbdebc45e09d57495b8cda379d299b318ac66d14fffe1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-research",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "76f46c6d8c6c1f259356baf27a23984aed35ea282b0fecd7c3362888b8a52ea9",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-research",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "07429dc899b38ab80d253eb5876d362a396f2889ed4e5919a285e28c5d51bc00",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-research",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "79e0a3f71a81e6a074569530595e852d0827e96f984ee9e3dd9f3414e07d9138",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-research",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "ea2d39fe092d0ab0a86d01c079a6453d7486b38c538390cde3d627f5c4a3dce8",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "7caa67019d91dbd4e3e830e601fc266f0c1563ac94ff098741c83e298a32ee46",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "dbf30e0eea3919d56241e826b993b838ab6db09fc3556e1deeef9ae8962ae2a1",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "8def26c729579f72f3b26f84220dc001cf058a3fcda0aea9c530d1658102d8d6",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "2e48985a1848da2c3e7b58f987bb7b7b8d2072328ce29b9b6b85398e18f384e1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "211f217477c91a0623a9fd593f310ea7b318313e0fa076bce47523cb3f7f3a5c",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "668e735dfc075b903f4e65dcc2c38d43729e03802a136f6c0ab1965625acadf3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "569c3fa656de1152a75f0447649cc21f35257aadd00efecc7f53e269d0ecb5dd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-index-nan",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "79c13b471b261ae1bd5277757246afd0ee4e4ddf51377c90b97df78c87605315",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "179813731cd5a1f7124912ea60fe9fda2376b6eda4891d36d70cca25f0c5bf6f",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "bf90f3aca3606dc2dcbca30271dd380b62f886fbbf83cb6ce9d028c2eca03f96",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "d072e4d2abb72d3f890589de6c9c807e39fc2255b5440f34e6abe17a180c5e2a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-defaults",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "a8ce635d761b48e3b7d6c7bc6e266d7d2679adaac1132dcb9f8d94bede89445e",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "8c587d275190908735d9113fa1cd087e2e93981b8cb29c3562e8ad00c364ffdb",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "4c4dd54be41d5a404fb72e54a886db85e7239d3f48040ae81c17bf17ab63ccc4",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "7851c4a255e1a79e888098bdc91151ed1a68f3cb107b0a56d5bafcdaaec77949",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "a66f22bcacc8234435892f3cdc5df540c131facca47bbb14e66ee2eaae585150",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "2b9dec3f33e8def02cdb4af10b61404b9b837f124852a3d4bcc0ea6962937bc5",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "3b8a6e9ecbc0ebfe0642fd16890ffbba4e06de9f9c8630dea079553b6de68279",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "04ad0cf12c98e91e51afb91b1c52fe7bc066fdead89aa12acad16d8a5c37e658",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "8afe2bf0efe22253f6cec92e8970c62e978e48c7eb190fcf79491bb5b21c2619",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-intersection",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "e15ebf46d55156d88a741f79ba1bcedbf63c4cf2acd1eac63392bf5e33d6efeb",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-intersection",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "d31d24cbc831fa02fa5cfe428af5a4d528f2e78a8389aa01d1a5de85413a629a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-intersection",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "c1823156a1155c80530e7e4597baa7f75648dc717160bb4fa6a0c85584d594f1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-intersection",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "b7b6293976e0d90c78f194920ff5901800f254436f556d1206ddfc62132eca33",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-difference",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "dda5965635a288935cc278b7e8cd2348063427315c197e3c09990c55bfba5c4a",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-difference",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "a08402e694b8bb8ca52e2b7d03e1831e33828fc2ba88dca451f1e4d7cbd81155",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-difference",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "6381795bd4416ddc0735a0216ec12f77602f3168e6cc6ae691f014979cad59f4",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-difference",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "cff9eb6a1a7333b0a5a0e9612504ba0e0781a0c17655a4be1b807df7402c8790",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-stable-sort",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "94a09a449d336a5efc3a130dd1ed8fafc6471ed6bd52425f75ccac61f1239e4b",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-stable-sort",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "c7c299619933deecc77d252387e539c5fb56bf866750efd0f2672e602e5a6db3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-stable-sort",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "08ade833c996059d0b2bee35a7aeee6c8fd4711d53a9793141571b0e395f6c32",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-stable-sort",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "608fd7eef75f7fadd4c1c3fd594449fca9cf32ff894d351ec5b235f624a3d9d5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "9fc36cf603e9500ee4ec6c514c4a988a7669f9702e60ef4cb9d12c07434e2fdc",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "f7fad922bf97867fc6c30eb5d42e83bf6a92e46652aeccb864d8a0650c09557c",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "fb05d22ea9a51f51fd0f8ea598fe1cb4f1c74f30fc94978159b6fe6904e21ae2",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-range-step",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "a91d4e7395aa4df4c8c22073001fc7650b979ee46b12fb301e916f8952b1318f",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-object-pairs",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "1b6e997f07e0948a322b9869f431ed3e3f85ae58b4e77b9c0cfa4eed2d280388",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-object-pairs",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "73ed15da0833264dce65d770269f19c964ce6cbb001dcef51a80f8636d92f944",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-object-pairs",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "4befe50f1906cb56e7f070767058c3be536793b05de6d681183dd276ab0402de",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-object-pairs",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "097a8de633a2ee70eb5b64e945f9e278f2337aae23454cce637dab852e7fdb0f",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-map-object",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "a7b4e04ffb2da12839d7ad745c7a7be67e41ed4ea23271e1d4e4239dc8683718",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-map-object",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "e2c674d605e1f626274cc4c83fc0bf288ecd03252b89a719e14e8e434bd73c67",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-map-object",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "865007813168a230d418a19e5031b07b3fef019c996e0159cef7826b686dd33b",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-map-object",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "4045bfdbe7f2f23cd9dc59ab64a88153000d267a1ccdc75f74065ea54fbb02f6",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "underscore-group-partition",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "6cc74d018c8eab263c59143b9ded52549ef0f64ca81083fa4173a01574552674",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-group-partition",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "43ed4d1c3aa8d0b6d528d45e3756e679cd35be0db4f1ed21d49e7e8f81e93791",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-group-partition",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "fa8ae647fd71d09d1b5e5bf463a8d8e169b83348178b7442b3125df0a4a2d2bd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "underscore-group-partition",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "65c012d39e2fb79a289fbd883b1a83c5452a0ae6a3f06d97f9dbcb817af0f5ca",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-camelize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "59d87606ed03f4077032a838e3dfedee6b6ea8ae30c979d45d3d21012510abfa",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-camelize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "f5357896973147cb0bb59a228d4174b32668753715b02a923295a829ea53f410",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-camelize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "77c0429d7feb5e66757613a1c4db5b94352a825d917ef85e2f055a2697275528",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-camelize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "da082ccc11715acd17394f4a27417789224ca45b4c36022d6da7f9a807d28687",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "e1be7d7fc78656ec492a3e47556176beb8dee96aee9fb69bab89ff8554b1cfd4",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "81515ea3128fbb75dae4f292cda16a9f3c64ea1235f0dfa3acf8dd63a04dddca",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "377e470671171a9be4c97e64ce2d7a852fcc074b60a46f52dfe2b60838b81a9a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "37c227aa3052e8cd5c7a1faf6b9ebe368c6b9af916a3d45e95f3e17dfc652c79",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "0d9df04d4cf3b5f5233d56b7289d2914a81bec11f407ee3e637e151156b49204",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "578c6c4d27afcb5f36a2cfa0545ee93b59b0a5bde93b765a00f76617e799a282",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "dba94dde07afdc41de30fe47068066a8b19846c2faab16975764ba1937e32806",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-humanize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "eaded8f0e69e712ec37d947c46fcece8a418b5a746db3d5abe72a795361c28fb",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "383bb6438e7aebc66210d815433bfa73e442402345dd1b913457210fb0fdf84b",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "57ff4cf8f048038c8b76899d373301a60a6ca95ddbfd822af999e16514c72334",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "3babe2bd9df62534ab3e8c2b8240691b35c6f1560bdb70d6d3744dce276e6ce9",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "a187848825e17070cd051f72ce1a68de48f1a0bd289b2674c0f7a02abc0bf4c3",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "f805ac12845760cf8c68f27b0d7319530a20db526d5b44a09ce61d70851677b9",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "3b675fc5f5383d305979e9f3191f97152d98ef7b143b0b5f4aad50a5f31088e6",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "8febd4dbe36aa7f0cf593d779ddf5aea8670324e73717cc4ca034883e0336394",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "8d0980019bc335a0663ce7d429294fa1ea71427bcad677f920af9af5466ce2d1",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "0afd9727a6a301cbce532bec503c2e58721ac9e0c847926fa5069ed02d3d8722",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "c00181703799c39c32db7db299b2b08b248259b170c0aadd63dad25921c96cc2",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "56e171092e56364221950d8bea78d7b9593bca346b468d45b81196038d3193cd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "1870a1a7f99ebbfc561debc2f538b1ad81bce7f471b616c091e432375c9a4d2e",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "70dafdd5f3d333d225e96c7e905c656033c4e0b1ffae422a86ecbfcb1a095100",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "dc2fafe03e42751f74749c647720569a65afe2a718797500cc62b8e10bdefd5c",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "31c3366a2ae99853309747c0cf2fcd1ea8f051b5b39e65b0d7afe20b80132dde",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "911f59bd92d64f713f6257ad8a4f385dcdea4186d57f17126f04270bc9a4a8e7",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "e13394b43ecbb8d48993bb457128e86b44b2783b724ff12f6b1b818345744d0b",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "79094139f9d9fcf8b0e7c6e9ee7eff4cdff8783425f5daee76c4eac8b39bfbf6",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "a38554b1c9c06d211d18fdd32b3d9a09d24bd268f90986ca738359e9d67216c5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-singularize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "df11ff22a10a87b9f520f44bd5a2d39dc139335558e1d0e643ab235f5ff5b792",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "41af4c76302a902760e48b8eb1ceac133833db8118576a378ad4e0cabc46e343",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "a769755e6dea6a36203c1a9f19fe943e9e4f79d7f54b712f6512fc24058cfad0",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "2e282d8f1f01d8421c4b30b5e14b165d576e978e15bb1667cb40b8ee2d0eb7bf",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-tableize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "3790fb23f4a9ae3bf3c8efa725ca78120ed67d522b2141b967ef41d575c95447",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "fac1f0d39f29c75fcaa8b3d29ca4f87ace662b073e9c33f07cca5fca08633028",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "570f651fa0da4ff6c02538c9740097bd773df22bdbef1114d722720727939df1",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "e2b88de5cffce9a01bf84b73e473fedd929f2f3b5331dd056f99491bacf50558",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-titleize",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "b423369581ee1cd01e615ea6472574a7bcad4011c4d0d788047d2c53142641e5",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "30ff8746dcdf34644cd6bbb6a7fb58e3b87b1915ae19a0cd212cd7f44bd065a3",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "bd157cb719a9f2c2bbf26e02b699514f742bbf83d7b787c10b2b305e52766924",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "c9c7b514cce5c70b92e471b5f4cd75e3a87323c927994dc8cf5223f74114525a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "19f682521d3b8a45eaa8d844e9a113cd63d44f4d4c69005e7e26fc77d538c534",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "db5ce49e3b2136f3625dad5b59b145ace7c6782592cd9d941267fde5105c872c",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "9f7ea98bf22ad11ebe52ad25972ef970b5a9edf7d3464dbcf4316b638eacc459",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "daf91ef4ceab2f2474aae31ff033604eed3a35156177f6d94bef4f4336ebd937",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-inflection-underscore",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "213286678ff2204cf0cc80090ce48a309053762575c85194f8847080149a22d0",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "eeefc17199532522823d40d622ad6352ef265ace39a21bd6d6c7201c08d642c5",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "60ffc64c7149f010d5f489d6f59971b41a00c94ca67030116237c3ad42f6d803",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "b3f508bd218ee90d687901c16f48d560a6155c915196ce2eee98cd01abd307da",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "b8b61d682d00243f89b153fc67ad7a6ca1ef707ead3833889485b8e6e63d05cd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "add0b7e159791b81a5cf3dd30ca873ea4cfcbe6541b63bb530ff1771f2d313c6",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "22a52d13b5cfa434ad6aeffc22ae4419723ba0a28c61412a7af9f280f08f3e36",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "38ce4aecd00ca84675d6df265383c73b2ccf49c2a0aff274500192bb97c0a8ee",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "ec77cc167ed4d168df8160885efe545cc495868cc46cde25d7581f0c46f1b63e",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "4149d1206f45ef975183bce153dd16d4aded2fb1dd5e41d6afbad01ea97c2e7d",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "65e82128861d3aa812fa5fe5021e54355176ef6f589415f2c039b515da551117",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "79f939fc1eed29b4028c6754c4dc7129e0f238eeec0acbcee1ba512492b58d05",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "db459a02763e40002dee85069ce00c61200bffd0a075c159c5ff8539c1eaa63f",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "0dd9b72aaf36352930fdf1f0a77ce378a0707b48a76658c313b1b272a9b934a9",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "669250d983eb87c96da694de911d594772a8a4464881be622d0d618939c9ad83",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "cb7eab61df203866c98660ac3409d5b932a4a17268d7ccc38b696f90b73987a9",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "6103e1cdd87a6b57921485cebf466e2141d697b305c861499ffa419b884fd72d",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "99ffdd6b2fe1b791177507487966a88dc328093a659be59be5e58f111ad649fa",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "1774510376160501c230bbbb0b9469dcc79aa0363e16d65cbf53425fcdb9d3aa",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "37ba2b1289bddad29dda10a2ea0e7ee065741cda6f2b401be7ace3b4304522d0",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "5e93663154e99703779e55879f47120d19213c16e6eef72f359271a6cd5f5d44",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "0396d19c1c5f9308abe613662cf6327cb221d3e65bc6bfef3787b7cd2b4a99a7",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "6dec2ee7db9bea5fc0d3c9eea7c99d5505afa1f530df4858a59baebfb1023bce",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "84897f3683315f4fa67f1b96fd0815e552d45a6bdcc98ecad53a2e31cddc5af8",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "d1389e9ffaf0cd5c8f71f2aa60546c0a487fe1a0b348d432db561f2d7df6eb49",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "20dacc935c78fd47955929ed43914f3af64c6e88553a45e429cb87e6a0302143",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "894cdddd1347d250ecebb87459e71e443fa7ba6bcda6911cc5132149020f9b82",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "0eba205009f69ff0ca2bf4c1ad19678657ad9872a941c4443962d2b3e2b455cc",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "668eaa6c16068a4520517c305268869e41a99acc6a58860e19472a1392cb9a8c",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "8a18fe3471b9cea086e48c327f66a1fb39de275f20d77a1659d4c186648aba86",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "1670473312c267340607c1ee583174bf1559c35780b482d2986b801b406d0c07",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "4c99db63a31c7362102c2d78f976edd845264f7ff6c49c59201f62097a9cdd10",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "3b084449bc3fe96022220750ec871e46fadd31bd8b01858ddb88357669922855",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "eed28e96cb3496609157abce4f64880e7491297cbbd90ca69628efd380a47a1e",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "198868e6a06b4e0f8a76adb08f8e92afcdfa049019d9647c3ba08d43f1bc138a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "a26dd807151587644b9f274c39ea9ce00329a7ca6b86cd0abe225b6c7dc778eb",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "180cabcf4117218ea1982a2399345f3de101c387a94c34eb03196b9a55bc806c",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "f9159c35b5ca1ed1bcf74cfe597b3b130749909849ccd7585b54b7d5e00809d7",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "4c2e9e0149b50b2980a622660ee51fc041e080debcc260b83f15899f4bff1ed7",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "7ab617d638889d4aecd3a227b1abfc2e467bc81d3c83ce32e6c53f4c6feef049",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "1a3ce41156d756c8a5b5199c7ff8a74d5f0df975db4db96d6c39c086b3011966",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "8c84d5e8d5fbd7f2406d3546fb7dd77b5bd810905c9642d25bc50d01ac88ac15",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "5bc2ddaf9e90ad72792528c25010dbb3d10b7397b49c5338e1bdfadbfdc8214a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "e16bc95615dcc1ac3aaf56707b8c56cfdf7bd129fa1b176b4ee16f11770cfa4a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "a63bd353602649c67a5d797839f049d06480c704f7773e67dba9f43e4660623a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "9d2ee8e1a438b1b236f9e9aaf96a431327061e9a3207699d058f1202d9026cbf",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "31bc276500db334a8ecee468e778849b41617c09e5fa2fa28fddaf66932f953a",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "6934e9234dd4567d6cf00181d235d6f02c473440bdeaa9edad7b4ca5d8c32f86",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "09f8f1d1b23990c175b744f516e55927b954a597cbb6cef0defe77651aa19d76",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "803729822d0a6f877131afbcf444d44b396afdc6bb248f3068c637ad06aff7d4",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "4a2a82d8cbb88d08c13e64002f4eb0592e022056b0f53e4bb73928e16b5cf51f",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "b3326c11d1759da25fc8a6633c90ecc3e7d4699369b74d87615f5ac248872452",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "17f7319e8088db8aaf8f9d34e3a1da61a582bde305bb0e00a41e808640d760e8",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "6812ab6bb81ffb9995a1829c9aa4cd90f9280d81ce0f9bd2dc9323334b7a38fd",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "76577160cb1aa6a140075cb229edee5ca766df0a61d4cc831915ed8539f7dccc",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "a0aa24af04b583b9572dc30b97199db9f14a751eb03c699e6ba56cb07fe6cd28",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "5e57295356686bf471a99597e9e64eec683b08bedff9ed07561341f9397e2386",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "d51466ad3b2285d2e17fa42361f82020219d6e98839bfcee6f45b1c8ac98457c",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "181b441e99d1ab4ba132dfc4ae32842420bc9a2843e2f1bab9e2d93e2b061cb3",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "e9362a1b4803f595f1af309501f203563f3475c7d0861f9d47d0acec6834a761",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "0724184584edbd0f3ca79ed6d7db3e6baca9199bda3d170d2976b7123d5a388e",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "224c4ee35664ff673a4f71e0f28a10d1fdb03d3c767046648e560013586a1976",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "5851dd10d23562482e1a42a4bce1d6ff395db84fdad6568543a8c3717baaf9e6",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "3e1ebcaad3a6063f023d787d9946a85ab1be67c55e11d970ce5b73300cd6704a",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "c61b7e5b38112cef314a2f1c43391aafa366ccaab8be9ffacf0717b2e3fca7bd",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "db59c3558114701d7d31e7847ebce0e3f2aec4efe66e3a080e53dfa63f7d52f6",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "936960716f65e8c16c1034719570760ddd44bd91f051f6f7d6a2aeb6980aa8cb",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "52ca6f7f410f887dd94d2539b8395d98809ecd4aa1f7d056e1492feb908d81f4",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "ec2ab78b39c16de368c8e5a7d05be836022c391ffce6b86f06b7dac7686020ad",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "453bbf3f70f9875898075b84a3e38f6e794b9c0b4c8f112b5ee3db23c07c84a2",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "ee77ee4cb49ff0a07fb053d5498435928bc0bec1541a7f66be18b3332eb56f24",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "a0a5eca28bafe3ea4ce82f180ab71b5085fbe84073289ff3d8a71830985bb4ad",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "e8c576840d1859bd5eadb5454ccfd02a5847d3276ef88f6de66d5317253b6c76",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "6cecc01806150f5b6a5fb80765ebba1f0a90ebfec05fa3e5459de1b010966a09",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "faed3f0d768703fb62d572bc35a977cef83a00a79a50a072e77cab471bcb3c30",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "8315ba6017a81e5e9a1951a90b4742202c5c211107a0f77ec76c723013f002fb",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "f865256be94b03540d6ee26fb2d5c8c0c1376b8b64567ee1ffc28a606bee75a9",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "da25e64f381a5ceec9275b9ec5c8bffecf71fcf2c073d0d15d91bfc6170ead91",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "9d97b6671eec68485af337a327d01f593483dc1d6eab0de94fbc4f167b7a8a92",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "f86f14ec868f8ce2dd126f8ecbc6b3c40af08c33cb0a8db3413f541b847d8857",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "2e9eedfdbf257efd19f8298ff112f74bcb3cb2cc1240e968c92929268203ce61",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "0c28e9ec7bbf88af825a304aeff07c8765ff64c7cca5bd6099572635494be191",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "f9b11abccdba9bde5ac0cb859b9f44b9df0657525ccb979362862e1968bd56b6",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "adf29ddc83719589cda6d72ab9c7e00bb9fe66915b0fbd2f316d69da72b6bedf",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "c7fa869a9083127d919b6b427c3dda702981d536e733940c35fb8d2f918ef2fb",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "failed_anchor",
+      "recovery_control_changed_files": 0,
+      "wrong_grade_returncode": 1
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "ordinary",
+      "passed": true,
+      "trajectory_sha256": "e9c9a1707ef81d771256a72092d9589a2e2fc6c78d13beea14058721bef03b14",
+      "retained_slots": [
+        "inspect",
+        "repair",
+        "verify",
+        "submit"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "stalled",
+      "passed": true,
+      "trajectory_sha256": "d0b6ba38122e2bc6278770fd35b2c2ee477f3ff4a1cbabaef13f4a6e732a7b6c",
+      "retained_slots": [
+        "stall_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "control",
+      "passed": true,
+      "trajectory_sha256": "ae902f48b43f418047143ab1e34632a9eb7b129448ccde9922efb102717afce6",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": false,
+      "recovery_mode": null,
+      "recovery_control_changed_files": null,
+      "wrong_grade_returncode": null
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "branch": "recovery",
+      "passed": true,
+      "trajectory_sha256": "dbadb8ef140cdac0d5fcf7ae7948e0abb5951672c2414ab2705dc94cddc0a161",
+      "retained_slots": [
+        "late_repair"
+      ],
+      "recovery_control_independently_failed": true,
+      "recovery_mode": "incorrect_edit",
+      "recovery_control_changed_files": 1,
+      "wrong_grade_returncode": 1
+    }
+  ],
+  "teacher_api_used": false,
+  "development_examples_used": false,
+  "incorrect_actions_supervised": false,
+  "executed_tool_metadata_preserved": true,
+  "parent_data_sha256": "496f699844a8756082a688b5bc281e38fa1193df89aeabceb6f5b844689b4d80",
+  "parent_receipt_sha256": "f0cd312b07bb3f9cb117859630764972f101807f668c177ac47fac10c7053406",
+  "selection_policy": "task-round-robin-quota-uniform-trajectory-v1"
+}
