@@ -98,6 +98,8 @@ def audit(root, run, collection_only=False, allow_partial=False):
                 'completed_requests_verified':sum(r['verified_completed_requests'] for r in records),
                 'audit_source_sha256':sha256(Path(__file__)),'read_only_no_commands_executed':True,
                 'collection_status_counts':dict(Counter(str(r['returncode']) for r in records))}
+    from audit_recovery import audit_recovery
+    recovery = audit_recovery(root, run)
     derived=root/'runs/reference-data021';receipt=read(derived/'observed/receipt.json')
     public=read(derived/'derived-data.json');prepared=root/'runs/prepared-data021/observed'
     assert sha256(prepared/'train.jsonl')==public['prepared_data_sha256']
@@ -141,7 +143,7 @@ def audit(root, run, collection_only=False, allow_partial=False):
             'supervised_tokens':supervised,'input_tokens':inputs,'actual_tool_commands_reexecuted_by_audit':False,
             'scope':'All saved completed training-state prefixes and derived examples; an interrupted in-flight request is not claimed as captured.',
             'collection_status_counts':dict(Counter(str(r['returncode']) for r in records)),
-            'raw_traces_public':False}
+            'raw_traces_public':False, 'derivation_recovery':recovery}
     return result
 
 
