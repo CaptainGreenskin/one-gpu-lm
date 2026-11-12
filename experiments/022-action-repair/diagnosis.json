@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "source_experiment": "021",
+  "source_commit": "22eed13729f5ee024b7bd3bb0176b6c56f730870",
+  "scope": "Manual command-category review of the two reused development regressions; no raw commands, prompts or answers published. Diagnostic patterns inform the curriculum only; these traces never become training data.",
+  "raw_traces_public": false,
+  "evaluation_traces_used_for_supervision": false,
+  "classification": "Explicit call-by-call annotations from inspection, not a general automatic intent classifier or causal proof.",
+  "records": [
+    {
+      "arm": "dev-observed",
+      "id": "fast-deep-equal-map-values",
+      "passed": false,
+      "exit_status": "LimitsExceeded",
+      "first_edit_call": null,
+      "trajectory_sha256": "1c6b675443c5d7e809131c6a09a12d015c48258614f51062e5852412c442e4ec",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_read",
+          "command_sha256": "a36b3021dd9ac2216cd33ac44a8c63732c74a1daeada0ab9c33096465d98ed29",
+          "generated_tokens": 48,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "test_driver_read",
+          "command_sha256": "c8e9d8cabf3031b8c0a17e00a5bac375d320629c9a58bf8f82062069e2336fa4",
+          "generated_tokens": 40,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "test_data_read",
+          "command_sha256": "016c0797580fd9430125d2acb473877611140f5d03e1a6301226dcd1d00145fa",
+          "generated_tokens": 49,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "test_data_read",
+          "command_sha256": "cacf0fa8a2113f0ce058110401c66709736852fe125942f78cd8f15a6bb6dd7a",
+          "generated_tokens": 42,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "test_data_read",
+          "command_sha256": "e0342c5a7da54030d7ba6fa1fa1459face01956104d53e2a787622c35fd5b16b",
+          "generated_tokens": 43,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 6,
+          "category": "test_data_read",
+          "command_sha256": "cacc3b6357c91fa6d95c452b23ea472aa95377950df19e85ded5c55b600f7de5",
+          "generated_tokens": 43,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 7,
+          "category": "test_data_read",
+          "command_sha256": "626b75112a2b6a614ea2712335cdf0ed3d76b539caf544ec6d5b2c0ad5918afe",
+          "generated_tokens": 43,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 8,
+          "category": "test_data_read",
+          "command_sha256": "46b9da66456e0d0977da7c37ec993593c50b003db32cb4177c8b59be0d1a46ef",
+          "generated_tokens": 43,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 9,
+          "category": "build_script_read",
+          "command_sha256": "c4dd6d095f418e597236aeeab1e42a19ffc41bfcd8a93944690b673ceacc5e28",
+          "generated_tokens": 38,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 10,
+          "category": "test_with_masked_exit",
+          "command_sha256": "d4740c7701558cf1e294e59b540775acb24316bb7339dc65e1e27f2099c2e51d",
+          "generated_tokens": 54,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 11,
+          "category": "test_with_masked_exit",
+          "command_sha256": "27904cfed63d852dc76959a007a9f5f18e51ec6a709a24422be15e59b8ed364b",
+          "generated_tokens": 50,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 12,
+          "category": "diagnostic_probe",
+          "command_sha256": "b5a5e608ae192017a1868dccf27a85bfb4b790aae73bc6cbdaec52d86e094a7d",
+          "generated_tokens": 468,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        }
+      ]
+    },
+    {
+      "arm": "dev-observed",
+      "id": "fast-deep-equal-regexp-flags",
+      "passed": false,
+      "exit_status": "LimitsExceeded",
+      "first_edit_call": null,
+      "trajectory_sha256": "d3fe689df7ff6ed335691f87d70503ab3e67d60343f4fb6ccc2b3e4a50bfcce8",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_read",
+          "command_sha256": "24a4dd7cd574aaa9ee74717cc0e9e9b1e5c2cbe396f09f8510f8340ce05d4ae0",
+          "generated_tokens": 50,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "test_driver_read",
+          "command_sha256": "9d17b25c799047a24057a457590ccdbe5ddde89100224fdabc9e086c2f03c771",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "test_data_search",
+          "command_sha256": "e1f7cac99139a6b04edab00d0c96ae9adca1ca89ebba5bf1c316e4a17bbc3375",
+          "generated_tokens": 49,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "build_script_read",
+          "command_sha256": "153d748ef7223cf865947f9fbe6ff3a6b26dc81ce773b84527eb876d69d57310",
+          "generated_tokens": 39,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "package_read",
+          "command_sha256": "8fbc8e07a751c9357894f19d02961a2273afb074c6fa10eb540fa7136a7cf14a",
+          "generated_tokens": 39,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 6,
+          "category": "types_read",
+          "command_sha256": "afc4f372cb0d94e513e5c7857aefeab8cc31f843451cea4c0bf28250d40a6c5a",
+          "generated_tokens": 40,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 7,
+          "category": "missing_generated_file_read",
+          "command_sha256": "a600217880614613202de782bf0508baf415bce76e876c110e5161fe75bf078b",
+          "generated_tokens": 39,
+          "format_valid": true,
+          "tool_exit_code": 2,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 8,
+          "category": "missing_generated_file_read",
+          "command_sha256": "a3b18d59eb69ea1857b56aa797e7cad7c786d34b41fe93df4c9d163a2c70b03d",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 2,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 9,
+          "category": "missing_generated_file_read",
+          "command_sha256": "dd6f07df040c78c968cc8e9779352923f39cf9079ca805a5717cad315a02866f",
+          "generated_tokens": 39,
+          "format_valid": true,
+          "tool_exit_code": 2,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 10,
+          "category": "missing_generated_file_read",
+          "command_sha256": "dee5ec495a82e8359a50ddb466c3bf044bfe40aec3ea0115ff5d392a469b8fbb",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 2,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 11,
+          "category": "documentation_read",
+          "command_sha256": "1e7c97cd2f9c8c1606fb8215038ec820f57c91cb327d77100d2e73405f7367d4",
+          "generated_tokens": 39,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 12,
+          "category": "missing_document_read",
+          "command_sha256": "bddd9488376cd8b02a3b960d75e7f46899ad1bc7ca27f9a7072e7d5abd04101c",
+          "generated_tokens": 40,
+          "format_valid": true,
+          "tool_exit_code": 2,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        }
+      ]
+    },
+    {
+      "arm": "dev-reference020",
+      "id": "fast-deep-equal-map-values",
+      "passed": true,
+      "exit_status": "Submitted",
+      "first_edit_call": 9,
+      "trajectory_sha256": "bb7095be3ff2fc385b0b7bd04517665f841e8a7d0a2641c0f7aeeab68619063d",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_read",
+          "command_sha256": "50bb04074fb281283c13a35e1ddf20febcba0c03a449f9fb99096dd237142b69",
+          "generated_tokens": 38,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "source_read",
+          "command_sha256": "60e94c98e08cd17d0486d096888b5fe596716461aa552375d73d127538311c8b",
+          "generated_tokens": 42,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "build_and_package_read",
+          "command_sha256": "425aa759dea1648d714bb3f0c17feec7502a04b4ea04fd3c462d69fb09f4e0a8",
+          "generated_tokens": 45,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "test_data_search",
+          "command_sha256": "9ad05db9ad1264e4f3216254223c1e4593d7b9e1c01e6a18d346d72f2dd85cc9",
+          "generated_tokens": 58,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "test_data_read",
+          "command_sha256": "db192571da64fbcc80d84f655d2d77f917b641153f41f3b49e32f7e92761a619",
+          "generated_tokens": 44,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 6,
+          "category": "test_driver_read",
+          "command_sha256": "9d9720b798333eac3257204f7f94a0db7927f3c3ff7122b711656f5192398761",
+          "generated_tokens": 54,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 7,
+          "category": "test_data_read",
+          "command_sha256": "48f5185c8f405743bfd531feec6dec37d74f5f4b58b46d3c675d3c6d82a0d242",
+          "generated_tokens": 45,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 8,
+          "category": "source_read",
+          "command_sha256": "bc0d71b1494f1402046facce54c40ddbb8611f5ae85a9a7ab48df780de5f0235",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 9,
+          "category": "edit_and_test",
+          "command_sha256": "510323596a2ff1326e9eefa51b9a65bffee438194dae93d261bfc7b0ee5b7445",
+          "generated_tokens": 206,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        },
+        {
+          "call": 10,
+          "category": "submit",
+          "command_sha256": "2e2577cea459e468a3c7237d52cfd7c074569f65082e4f900514a7f20923eecd",
+          "generated_tokens": 33,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        }
+      ]
+    },
+    {
+      "arm": "dev-reference020",
+      "id": "fast-deep-equal-regexp-flags",
+      "passed": true,
+      "exit_status": "Submitted",
+      "first_edit_call": 6,
+      "trajectory_sha256": "d163545e03b68918b0c90f1407c0f85a49fa44fee36edb8bbd74120e15520811",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_read",
+          "command_sha256": "50bb04074fb281283c13a35e1ddf20febcba0c03a449f9fb99096dd237142b69",
+          "generated_tokens": 38,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "source_and_test_search",
+          "command_sha256": "3cd7e096d3add17c47ef67714a10e852d300cdf63e0d06d831b5b4fdc1afcf22",
+          "generated_tokens": 58,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "build_and_test_search",
+          "command_sha256": "4d0411344bb02ba3ca3d4c294b99a322b7193095c61ec2965f3ddb911e0ab51e",
+          "generated_tokens": 62,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "test_data_search",
+          "command_sha256": "de788bfa2ca07b54d363cbf5e494a8836b2d9da99a7958e8df48b8cd34198d90",
+          "generated_tokens": 47,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "test_data_read",
+          "command_sha256": "3a02937db8a416ce6259ead22f12932063db9c372bbe31c57a7761f02937827d",
+          "generated_tokens": 42,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 6,
+          "category": "edit_and_test",
+          "command_sha256": "e4414df7e35336f50ae198b5d91b62eddf56c1b1ff841659995ba91e4abb7a35",
+          "generated_tokens": 108,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        },
+        {
+          "call": 7,
+          "category": "submit",
+          "command_sha256": "2e2577cea459e468a3c7237d52cfd7c074569f65082e4f900514a7f20923eecd",
+          "generated_tokens": 33,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        }
+      ]
+    },
+    {
+      "arm": "dev-base",
+      "id": "fast-deep-equal-map-values",
+      "passed": false,
+      "exit_status": "LimitsExceeded",
+      "first_edit_call": null,
+      "trajectory_sha256": "2af340632eb9a50c164fdbc70240c9a663f0524abaa8947737f7a1ca065c0d4b",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_and_package_read",
+          "command_sha256": "1f68870eaac01ea21658298a07a8ed24bc227f87bd1c61d2f12ec025818f619f",
+          "generated_tokens": 42,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "build_and_test_search",
+          "command_sha256": "dfca01e19ac6466557420e418734f305ec527dec013fde5276b2f48ba504fd89",
+          "generated_tokens": 47,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "test_data_search",
+          "command_sha256": "c358b740dd9477ec5023a98ed938c84e93e30fa5995c51ed550c71b160377c37",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "test_data_read",
+          "command_sha256": "b67bdf931e7efada005abff7a343434d872f18177a180c499b141be994eab861",
+          "generated_tokens": 40,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "test_data_read",
+          "command_sha256": "388fb41b914c5d64dc6f55e348f7095241eb00ccd0cb7344d8544209eae0f408",
+          "generated_tokens": 41,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 6,
+          "category": "test_data_and_driver_read",
+          "command_sha256": "7214e3314cde13889f6b637bf25647a169effe664ee1c2eefe062b3bece0e235",
+          "generated_tokens": 51,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 7,
+          "category": "test_data_search",
+          "command_sha256": "e60905abcbcd2ccce21ff071cb0625b67af86d0f6a1df2b0614a7941c0a36c16",
+          "generated_tokens": 48,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 8,
+          "category": "test_data_read",
+          "command_sha256": "8501c6d320366584b2597fb23610b9e2f0bd0934e949adaf3310e96bb2bc030b",
+          "generated_tokens": 56,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 9,
+          "category": "test_data_search",
+          "command_sha256": "4fa7d51517ad5651b1587622e3bccae9234065d0e3f357972ada49f1d7658bb5",
+          "generated_tokens": 49,
+          "format_valid": true,
+          "tool_exit_code": 1,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 10,
+          "category": "test_data_search",
+          "command_sha256": "b2784db51bdee43872b2ee38996aad9f3898c1cb41ac37645447cc648b847d9e",
+          "generated_tokens": 46,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 11,
+          "category": "diagnostic_probe",
+          "command_sha256": "adc30b51e71b6ba4c6db1f295e6c1c0ba4e4a42fc8094dd1736a3d81968c5462",
+          "generated_tokens": 224,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 12,
+          "category": "diagnostic_probe",
+          "command_sha256": "adc30b51e71b6ba4c6db1f295e6c1c0ba4e4a42fc8094dd1736a3d81968c5462",
+          "generated_tokens": 224,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        }
+      ]
+    },
+    {
+      "arm": "dev-base",
+      "id": "fast-deep-equal-regexp-flags",
+      "passed": true,
+      "exit_status": "Submitted",
+      "first_edit_call": 5,
+      "trajectory_sha256": "4e98e414ac875a68f9b354f135d1725dd0272e677f304068f451dc810f669245",
+      "calls": [
+        {
+          "call": 1,
+          "category": "source_and_test_read",
+          "command_sha256": "32d73e9697f209c6db69fa3f1dfac219166c7c7db0cc3f653029f499726ddfea",
+          "generated_tokens": 56,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": true,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 2,
+          "category": "source_and_test_search",
+          "command_sha256": "34c3eb4aac695f0d958bdf9015c526df30cc188f1cea0dcf45e36463a46559b5",
+          "generated_tokens": 51,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 3,
+          "category": "test_data_search",
+          "command_sha256": "5a1679dfaab2a4b44371580d171ebc98c94d663a620b8721d8c5e96443992694",
+          "generated_tokens": 48,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 4,
+          "category": "test_data_search",
+          "command_sha256": "c2b31c018bb4cec59b18aedb8c93e7f1ae1c08e075aec39bda5bab6ceec4f774",
+          "generated_tokens": 50,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 0
+        },
+        {
+          "call": 5,
+          "category": "edit",
+          "command_sha256": "2457d71f855e409f9b7554115368a278dd140b00c8b1b57e7b1867dd1481ff20",
+          "generated_tokens": 83,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        },
+        {
+          "call": 6,
+          "category": "test",
+          "command_sha256": "25b4b610621d4ed1c706269eeabfbebceb0cd08381fa14ea6c96af763f900839",
+          "generated_tokens": 45,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        },
+        {
+          "call": 7,
+          "category": "submit",
+          "command_sha256": "2e2577cea459e468a3c7237d52cfd7c074569f65082e4f900514a7f20923eecd",
+          "generated_tokens": 57,
+          "format_valid": true,
+          "tool_exit_code": 0,
+          "output_truncated": false,
+          "changed_editable_files_after_call": 1
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "Both candidate traces contain twelve valid actions and no source edit; a format parser failure does not explain these two regressions.",
+    "Map-values: calls 1-9 read files, calls 10-11 run tests through tail/head pipelines returning zero despite assertion failures, then call 12 probes behavior without editing.",
+    "RegExp-flags: calls 7-10 read four missing generated files, followed by documentation and another missing file, without editing or executing the regression test.",
+    "Frozen 020 comparator edits and tests at calls 9 and 6 respectively, then submits.",
+    "These observations motivate early verified edits and a single missing-read recovery demonstration. They do not prove either factor caused the model regression."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "records": 330,
+  "sha256": "8a067811f39c24438f9d83ee230b8ad6b5aea24995aa15511b89e8235463e56f",
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "admission_sha256": "4e84e62c1bfff76cb9a171f186e86bd8a6afc84993175aaccc86df4f5fbaf347",
+  "license_record_sha256": "c30ef41511e9f8f071a713d4cfe200dfb0cee4a8ebf30926e4d6ba0671c736d3",
+  "parent_data_sha256": "7557287cd72d30180108ef0b4f98a2a1179f89176ca92519b6cf0f4849186034",
+  "raw_data_public": false,
+  "kinds": {
+    "verified-reference-repair": 330
+  },
+  "replaced_records": 55,
+  "replaced_tasks": 55,
+  "assigned_modes": {
+    "evidence_then_edit": 28,
+    "missing_read_then_edit": 27
+  },
+  "accepted_modes": {
+    "evidence_then_edit": 28,
+    "missing_read_then_edit": 27
+  },
+  "fallback_reasons": {},
+  "coverage_passed": true,
+  "evaluation_traces_used": false,
+  "teacher_api_used": false,
+  "incorrect_actions_supervised": false,
+  "shared_records": 275,
+  "original_failure_recovery_records_preserved": 55,
+  "prepared_data_sha256": "c5c83cd288892a56a45441ca74b76889cd2c38c8d512d5165a72b93f4a201861",
+  "prepared_receipt_sha256": "df84314ac7b41df0fcd9119539508b5430a526c3417990340750d5f6a4a2bbfc",
+  "selection_sha256": "d7a855d38f6c8e0fa303182c0507e0ed1ddac6b0f7cd7cb245d46d6d48de016f",
+  "input_tokens": 606773,
+  "supervised_tokens": 43275,
+  "semantic_order_sha256": "a3badbd38dcb1444c95e02bb2e44aea18354da34f3033e0704de4cc8ed60acb8"
+}

@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "audit_source_sha256": "34b58ae003c3650f648dd0c1d5e1570379e694dc6d0fc7b64d56d2b34a903af6",
+  "builder_sha256": "fa74121c75693ddf69cedc0ee73ec615055335f8e13e90e358db78dcf42cfe96",
+  "derived_data_sha256": "a0ceebe4f6c2b61ecadf240a33f98800238db32f67f45898c31fa4218cd81c64",
+  "prepared_data_sha256": "c5c83cd288892a56a45441ca74b76889cd2c38c8d512d5165a72b93f4a201861",
+  "records_checked": 330,
+  "common_identical_records": 275,
+  "early_action_replacements": 55,
+  "fallback_records": 0,
+  "accepted_modes": {
+    "evidence_then_edit": 28,
+    "missing_read_then_edit": 27
+  },
+  "input_tokens": 606773,
+  "supervised_tokens": 43275,
+  "whole_context_and_masking_verified": true,
+  "all_original_failure_recovery_records_preserved": true,
+  "proofs": [
+    {
+      "id": "019-inflection-camelize",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "c77090359440bc2b1c195cbf231acf598d2f4cf70d85c001c061e8597bc98bf1",
+      "input_and_target_ids_sha256": "8ad830f0e152a58dbe4cc463242a34a8f9424eaaed5b89734393cad429847412",
+      "target_sha256": "13725d4c3ede55b968831b53fd9caefdec50657b14e3a6b7a39ebc0367eb715b",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-dasherize",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "6d87391cf238ef6b090a423e6074b5e7530516490d009a9005005d2b757bb4c4",
+      "input_and_target_ids_sha256": "05ada28c46b10a552f9e986a8b9e9807834424c0408fbe1a985f1dac580d4878",
+      "target_sha256": "efd22e5db67687c8af9d7bb794976702794888e8d118979e7dc1a631619c007e",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-humanize",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "63b93a6c7968a54ff3dbeaa59135e92b2cc495131c3cd188d3326538c2bc76de",
+      "input_and_target_ids_sha256": "3e16088198733b2e16a882e6768ae02541c5fb6db2fa57dc6ae381095ebc05b8",
+      "target_sha256": "3b1c84127906b76500dc4acce3a65014d32d19f2510ccddfbb2c152d6ce0d989",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-ordinal",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "f348d57ede69bcaaf6e070dcce33d6130dde66b72d6d39fa66112cd7f9db1943",
+      "input_and_target_ids_sha256": "8e94d4dd15382f622024c8a904f9f67603239a0b650666f17b951200cfe07155",
+      "target_sha256": "500871042a4ea7189e97ecb35d69612f333b3ebaef8e21e02b7051d6e3fb2ad1",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-ordinalize",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "7b24fb0be4925e04820c6688b062007a2e1cf37324d3400612165f4deefdf3a6",
+      "input_and_target_ids_sha256": "1cf0e26943661eaab299d3a962af96a998499f1f56d0351f2ff5a87d9cacc434",
+      "target_sha256": "1c010be2f92b7fc3f790f0d7fc57a1befdbb8e7455285e86d8059598c1f748cc",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-parameterize",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "5adc49a8893101e56a824bb2f1ba67bda541ce3fba70519878dd42b7089931f2",
+      "input_and_target_ids_sha256": "67424c3fbd975e47d9a70635a7b0bb2fa623f512e5eff4986ab3bf7d2ebfa0e7",
+      "target_sha256": "b754e7eb4e2788c7201a4253823d86d4abb0cd00b74b1a713ee5230ff8989e93",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-pluralize",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "5503171ec22ff1abc9f600acab58b07ec99e1d6699461224d6e039c5d0c555ec",
+      "input_and_target_ids_sha256": "ea2fe2c065aee10a4cbf9b61efeaa96ae02db1b266662e614376282ac8f2bf43",
+      "target_sha256": "8236a7da7bf01e3b1d708a9020435a0836dfdc1f5eddc3e337c0fdf8b06de907",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-singularize",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "b8d113f4db13f60ca558deedc87a709519361c41515a101e75c336252ad6a77c",
+      "input_and_target_ids_sha256": "846af92eb2c92a14ee56ee0acbebf47f741e964370ada6d88a73bf50223ab554",
+      "target_sha256": "36e87a80007ef127b3088a9c2da6a19e4d402c30c417652a856dcb6098719355",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-tableize",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "be2c33bbc67f8023032cf076bc1b6abc26570a4c48521addb31424d411b9209c",
+      "input_and_target_ids_sha256": "f01622cb5f6e83aace42370ceb496cd68492ef975cb68b06ccfb8072f6c6e6c3",
+      "target_sha256": "6221dcf1c6356ac41e3daf7000b23234641f3e5e0c5e8350d50e51864a9de42d",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-titleize",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "c56b7a722681ea9bdd7d1f1291d080edd7fe254ec1896307305e787a1018ce68",
+      "input_and_target_ids_sha256": "b866f6276531971e903fb050688170b851b06030bb554bf257b83da69e773078",
+      "target_sha256": "faf0da82635ff29b7f71769de72ad5187da68298bb11da767d4e3dff76d32524",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-transliterate",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "7ebdc55c8b2c487d09cdd42eb2da0060ce53e90222093ff3955db29738587769",
+      "input_and_target_ids_sha256": "00e03fbdf02c3f19aa34889a861758c61b4d650377fe45adeb6ae79978b37bad",
+      "target_sha256": "ba8b6bf139356361b70ec14d27536328c1460ddb7c9c66a7b0536612934817b1",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-inflection-underscore",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "c5b8ff473ea42750b302d624eb09c8a573afa102170e009c1df3af48900ee555",
+      "input_and_target_ids_sha256": "544a4d36df7b69d6a8a6deb9afa7a89a31106e86498d7db631df91a52df5990a",
+      "target_sha256": "72a84d8ba3948c4456cf0da914041212ba8e15474537695c221018bef8aa2c45",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-__getitem",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "9c9dc7a7d5e10e196cfa907bc5a7d5e950f2cc4612a8b63cb829b51fa6c75d04",
+      "input_and_target_ids_sha256": "85702c56e613b7321c2838e431fc0f6c96ffa764a09561598ad81d28c0946da6",
+      "target_sha256": "1754f7fd6c22e2bd31e4e35800aa8cd09e9f9974f2b8d14aa444487f14fedc61",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-__hash",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "9c2462f7a9539d0adb38c4483fef059301d835321155a18c4377f25b16abb38a",
+      "input_and_target_ids_sha256": "63f27d6721ce39e4d5b9186e93ade7a057937d8a0ab931041e0cf022c1eebfbe",
+      "target_sha256": "b8303d148acec4fad2e979ce1856621192c451ee8438d530dec89476d06c8515",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-__iter",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "0c2eabb872d1970956ed7a5a3fb514d6383de6537f57e4b7e862b159d2ebd014",
+      "input_and_target_ids_sha256": "8f6288303d7a1ab56c244127552287c0f0893695b6347d7d2b130d12baed32b4",
+      "target_sha256": "211ff501344b17db0fde096676a7c647f832c6f1d0a78f2b3aeeebf6a6fc5275",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-__repr",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "1a0a6032536570682ff21f15d34ce3648e66247b653623a71263e4f6be249f24",
+      "input_and_target_ids_sha256": "612bfe6391a6a9e4bd4d3b76251e207aefb42eccfa267b1d01e6b3ae416909fa",
+      "target_sha256": "1d2ebc1c9e56b37319ff6a6af26bd94c70a0335183fe1b2127698e863b19d204",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-__str",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "1dd239de3780fdaf50893075c7d515dc8330ce53bc707e1e2589fcee1f3fa979",
+      "input_and_target_ids_sha256": "0d8d94e270bab4374b5e900c349c40b7cc79aeab3b237983d3fc827d2d6cc76a",
+      "target_sha256": "20651be52f3a0babaf1b03b091f77b1ae272da12b4b83b1ea39d70d040988661",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-_increment_prerelease",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "2eca72c1bb399822c022722c5340bbea2d09e67884626902cb4d76f8421c9784",
+      "input_and_target_ids_sha256": "1b9364d0b0a3c0b768f874cb9436866c798bd5da530d6911fa4af48832f97dfb",
+      "target_sha256": "95d1730e996e2bc1a42034722c91bf909d9a5e6adae9d7cf47afc92bfd6ed711",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-_nat_cmp",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "d7601b368968ecc3818be8e52d7c1977730f112036d849d1a4d478e55ce26ba8",
+      "input_and_target_ids_sha256": "189f97dad5ed5daba75cae6ec3a2f0579d897e2e66169656f1111893999ce904",
+      "target_sha256": "575dfd418404dff10cea7baced282ebff0d263823d93eb1ce81f3414a4f5cef4",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-_validate_identifiers",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "2ccd4fdcb0c3e6b86973648d05325fbafd72bd2b386c01da971b5720b6a47b1e",
+      "input_and_target_ids_sha256": "e29df7e0b5aecb3fd99c9040f456e59202f3fdcabf693a82376319e916df5900",
+      "target_sha256": "6967fa2f999e352effae8b5ee2cd22e8b10872a9af7c325f129d82a6a58d09ab",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_build",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "a892c4801d821496fa7298ee1bf7dadca7d81b83d27124bfa90b31d5b89eaf80",
+      "input_and_target_ids_sha256": "2bd28241da7bdee8f9642d4ed8a774fb890514bb2ac7de076e0759cc0774c2f4",
+      "target_sha256": "8bcd9d9b05d806f5de40412b8c6dc56515dfc0c155879291707f549d8ce86690",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_major",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "0721580868dd724bc288527805ba878a373fcfe567cb4c697aec2c760a5c7a3e",
+      "input_and_target_ids_sha256": "9c2d757b34862f72f2eb340960e01ff783a746909d55106f6cc26de2c893061e",
+      "target_sha256": "c32b70bb03e945886dc97d943a19b73f942a8b811eb53855020ad1200f8d9664",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_minor",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "3737d06f2437eda9f4c8410938a214d85f1b95d4877705f0ad4e1202b342d0e6",
+      "input_and_target_ids_sha256": "eae3bc431c252a8e141ac0a8ffe865ee1994ccf62472a70b2a421bbcf368e818",
+      "target_sha256": "82a7ec0bdc948d7fbdc13b2f2aacd27f5c48bfb018bd4d5dbb8b672b3bd19765",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_patch",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "5a9b158288802a808cf75cdbaaa754d2d1e32b29b27757d217f72e16ab75dbc8",
+      "input_and_target_ids_sha256": "f0dfc41bc429f287f9aa5887a91c49b25a89437b66aec4618ea01c621e3d9bf9",
+      "target_sha256": "4f9c9a6b4ba9ec9e3554997bceb037d01341c1814e6256b5c59f5f91e219c5fe",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-bump_prerelease",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "8ab343d3e1209fb680477d82d60348ad7a38f9c223ba74df9189baf146477e49",
+      "input_and_target_ids_sha256": "890258051ca0184c58751ca35d2419092bd6b40dde0898b40342ce63c231d067",
+      "target_sha256": "aec14ad447e265a888c8e16b04ab989409befe3d1f4e0d63ed30c638d7a82058",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-compare",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "049e798d970d9459902082b87f588721f0c63ce7009592096df39b73805a90a5",
+      "input_and_target_ids_sha256": "9b2148450d80ac057ef8d6f8bcc39b4443a1c7e3e87d59cae17d957fa9d15239",
+      "target_sha256": "4d440edba761f5489812b4e1a73e2c5acd3dc1d6d38dbc865f2353160acd1b51",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-finalize_version",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "25beeb07b89f583619846d99b26bd04ac4d9de9dae2dd5ce3611f1b0f5bb3a1e",
+      "input_and_target_ids_sha256": "1aee9c6c7b39cd41b10b083d860240c8fa39ae23b365568bf9bfee3b1086913c",
+      "target_sha256": "62f328013a82dbb73a9041f6cba62f2baa2db2572d8ec89d45122a5f01ea4548",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-is_compatible",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "accff19b40383a7f6720cd72e8dcb0d816ffbd2f5837524d034b58293b28619e",
+      "input_and_target_ids_sha256": "ba45ad6f1da718c2bc943ba292a0db78ddd80835ea3861f4c6123fce8b150181",
+      "target_sha256": "67ee0d1b5d716140f3437e2eb58aeee20405ef983f53b7a68db55286ebf85331",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-is_valid",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "b612eb27dae91b8828c4952e6149a01f3aaa5dec03b7df509efe6c93134e8b25",
+      "input_and_target_ids_sha256": "bd68b74ccc517491217eaf2c045f15ba022308b4ad7646bc25669e26b6153710",
+      "target_sha256": "18235d3dc896b17d21932248070412270bb8c90890830d0c5184372dc10c24bf",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-match",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "a508c5e6f4b6ffd744f32e3c4fa2c7e987d929e2ee822d73b5c4dffeeff4498e",
+      "input_and_target_ids_sha256": "800e1023bd0c84a92b1c052a215cbc43c779232335e0d0e1b93d3a6d34e9ef89",
+      "target_sha256": "d969ee9e22909d5aef48b2b113d9072cac1118ca3882b8980d29f2959596c1b2",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-parse",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "b4112b087aa9acb74d64151eee6a5f491f422ce8d863498fadaa9c0f10af3c64",
+      "input_and_target_ids_sha256": "fd35befd5a788bdd30eb83cf1bf01b81120db9f9369ba859aa6dea0f927374a2",
+      "target_sha256": "768f72dc3febc38668232b24c060923db244900446cfe70c7e5ae31a4565fd9e",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-replace",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "50709d4cc8ba2bca2c32d4eb12cb76b1e03aacc424cdb0969f14afc3c52a6a39",
+      "input_and_target_ids_sha256": "4878cc033c208219fd667465814cee15841a19a490a907de84af8b6c898a90c0",
+      "target_sha256": "4d8f22c6385d9886f05de69c8eed5d11077902117c6e43fb964704f09923f15a",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-to_dict",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "efeaa78b05b8e3d0c46ba6945ecc19973a58f24d35b9fd6b09ff32732cb714d9",
+      "input_and_target_ids_sha256": "cfd5e03a00146099f14e8b09832fd5b56831acb0e3fd88bc7dac7d504047f341",
+      "target_sha256": "c6debda7ab6b829ad7353feb0f28042dd4b4b837b2606a274e76f0b95d1788e1",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "019-python-semver-Version-to_tuple",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "3c9eece00680db18506f4b012f00ec0c0b9c13997f8447842ae3fd9d2dd0e924",
+      "input_and_target_ids_sha256": "3ee1b2ac6597e5e7dddc068ce1e2ad7fb3b8195a0ebe35ea632ec5f6fb73348c",
+      "target_sha256": "83d82c8b4940bf6579cac2c91a36c8134381b602e3da0ca41ea3d18085fca712",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-LRI-__setitem__",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "540b3ac6e33fb4dadce85edcaa588e094e34f363bd849ef9744c679f5dfd872e",
+      "input_and_target_ids_sha256": "642ab4730be38a1ef9a9030f17c45f430eaee9c469d73bf4a878b353286d1b0c",
+      "target_sha256": "5bf08d3fbfe1c000fe7bd3d704eaed5b79d53ea9fc6b48a89b585a39144a1382",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-LRU-__getitem__",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "a45255a5e28ffd38729310019cd7515395123954447c3bb149041d4153f7084c",
+      "input_and_target_ids_sha256": "c3f72192463f2b0daeb7e088430e218ae1e8253b4ce1f1555909b57202e6184d",
+      "target_sha256": "9a34c76c762a57a070e086fb08a85f7b81e2d77cf293f5410e7ccba718674a32",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-asciify",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "d3c067e11fc7760e45a6d77f998ed5cecda439d12eeef42764b77df43d857ae4",
+      "input_and_target_ids_sha256": "9f31abf36e9931f19234648c1dbee1d0200fbaee16c3cd9a76a30ca562f42314",
+      "target_sha256": "701a050e88513ff7e5c703b6d88d7e0c87bc39f361575825f9db5ab7888f3d9d",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-bytes2human",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "36ed8ded2496a80b6a3f3d17507d44e6fc3c78538e8f4ff5475d6689bdbd9963",
+      "input_and_target_ids_sha256": "1deb379a309644e32f534ec4bb088ff37676d45cb6e0abdb8e597c3301024054",
+      "target_sha256": "7ece2601c4a3eeb225ac651eda9988c9b4931cfb9f4942fd54a6da212c974436",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-cache-and-frozen",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "f76842b83d909959c553cb30c65862238320637716645ac3d3bf58656159d6e1",
+      "input_and_target_ids_sha256": "0535f16936eebc5cd17898a37da9d22c232bde3f47bcc21e1ace2e8a70eae351",
+      "target_sha256": "9894631002e264d3da42c95ae15f18705b4e4a1bbe8cd05343f22161e14e6a4c",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-make_cache_key",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "28413b9981729b31e094343892162f10bc6c46647017aa10e85b3dd333f09cd0",
+      "input_and_target_ids_sha256": "e264ca41479cef2c16e25e68095afbc4cca7b8a1bf21624b651828f3c827c4a0",
+      "target_sha256": "ca3595d1dac539dbef6575b150981962afb80dc1c0cce1363160572eec974e03",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-multi-dict",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "a9183d328c119e5f3b3a8778f98b45ee8aa9424411930c86343c9f01480fa4a6",
+      "input_and_target_ids_sha256": "f74dc1a4c6da6a215d4e65a1c53dec65dec280257a6aa975ac21869922fd49b0",
+      "target_sha256": "267dd0b64d9be7ac3562e1ab079949433a1e372538e4f2b5432baff8924e9a52",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-pluralize",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "6edf8d395bd52559578347037b668ebfdeb77de19fb17f28f798bb274c4ea41c",
+      "input_and_target_ids_sha256": "303c7c2f173d8bc7f16e1cdeed027b5f39576e081d0b4f82fe793b2889726ef3",
+      "target_sha256": "3cf56dae6195ce4b8e9cf34b96667c828992a6462230caaa8aeb4fd7416f4a9c",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-research",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "c8847d2e4245b579c41c9c07f377c21b3c08b9aad8dd1caa458988dab9434225",
+      "input_and_target_ids_sha256": "f63287fae980ae6cc1638370aa327aace1b2f33720bba179d86f2f9c5d18faeb",
+      "target_sha256": "b6b6c173e845288511b31d7d8894cd66923839db444e1edfe42c30fa95cfd97c",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "boltons-slugify",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "d1dd4b966e3f4f6999f567c6b215a16fb0707d745a8a3e04a1f9b6d3b1d73fb9",
+      "input_and_target_ids_sha256": "a30aefb83764841625690b00e644a030cd97bddb243c7786890b168770dbcfb6",
+      "target_sha256": "7f9347218cc6a2075dd111937edd4ba2200fc0cfa41ff7c61b6b2af74ff26383",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-defaults",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "e5e931f2707f45fba398f2f1086e52f8f5410ad5b877d4442ccc3137342d07fc",
+      "input_and_target_ids_sha256": "f2bc679a2b966aab12dd7ba477645c70f5ea3d1a549e2af3ca44f4af093e3554",
+      "target_sha256": "34fd596508017a86cf80dbc13b32bf73d11d477d4c69076b850113430317bcda",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-difference",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "f251dfeba6e42465bb3df2ff28b14c3297f8bbe67a2cebe5458c324284f876de",
+      "input_and_target_ids_sha256": "e3ae7596b63c77101b89cb0cde490cc57c71c575227e677d51bc8a50fd01cc47",
+      "target_sha256": "ca4201474f86dc75ec30e7bf9c28a68aef4f9d2c576edb925e1652ec8eb98fdf",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-group-partition",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "ced97c501c594204cf7a4409a9ed8284d975075ff8b8dfac90a845628e91dee7",
+      "input_and_target_ids_sha256": "668a1439188406c8bff2c11ecae0c320643618cb0c706b93e35d723681c6aa1a",
+      "target_sha256": "8052fd916cea322ec51dd3980638c04698fceee37b23eab2df4751b9dfc109a0",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-index-nan",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "1d10a2400ff699c33012ca5519bbd863898fff38c3296916b30ac5a3af5bec7e",
+      "input_and_target_ids_sha256": "3537ee9c8ba525d8dcc38d7d60c5c2714e9e48015fbb5e6b49affc2ee1bc436b",
+      "target_sha256": "35cf1ec075618324bff8a70ff7a9def58a8fdcd5eaa9bbb66fae0b1ef20e5e5a",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-intersection",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "2e915983e149443148867950d3d3fc6464938e5df9275c1790056dbed66cdb10",
+      "input_and_target_ids_sha256": "e665ae60bb4262ff572ff2766748be3cf63513c15d410f9a3e3fcf8539049d51",
+      "target_sha256": "df471531c66e62f7070c2a8955b71fd06a5f057ed92dc89cacc3cf1aaa430199",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-map-object",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "2d6f186d268a1d0d66828a28afaaccd7f269efa43c19b35da1c72072cd3cb59a",
+      "input_and_target_ids_sha256": "1f593b9e74f2bfff2880c91971f35a882fdb04b8316bcc8f7ed27041b60f078a",
+      "target_sha256": "dbde9c565e45460e14f9ad2c482dbb7bef81549d5777a61f795184559a7039ff",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-object-pairs",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "4c0cbff53c50495f329d0a345a1502e9f84995e42a2fa846583d66205b789dc7",
+      "input_and_target_ids_sha256": "fdb8653f015d4b8d0a204d43d7e883259e6db348b1c2d14e45a89cdff0c9f026",
+      "target_sha256": "65f09f6f055cb487f64ca16c82352d2813086fb0bf95aba7fdd9b5d9c80ac9e8",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-range-step",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "98d64ecbfbb6c9ed134190a95e07677e77a87bde1d0532f79b54d5277425d499",
+      "input_and_target_ids_sha256": "6571c0eb2352bc523da16c12370a40404912c1f1b61589eeb2c9ce5d2b27edac",
+      "target_sha256": "d1952858a42ed7d6a060eac57268ae39ebc4f5f592571b3fd583f111c5b5d3a7",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-reduce-initial",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "4a7e7104fd6a0969f8754b965553a1191611d963ee41c98af7bd66932eba7162",
+      "input_and_target_ids_sha256": "4fb9817d7f26faef84f668cef11572acf8c046d4ce69bb11c28281667c0ae9d6",
+      "target_sha256": "505d18a076d02c57f451e4df000a4b51998d68bc54b0d518f3cd65846eb5d3dd",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-stable-sort",
+      "mode": "missing_read_then_edit",
+      "repair_call": 4,
+      "trajectory_sha256": "902492c89d24cbba89b1b4eda51692a616c06f3405747106e0d6b3fee14953bb",
+      "input_and_target_ids_sha256": "0ae28334036df5af839bdad826ca2bf452bb023a71695658cd89aa919700b3bb",
+      "target_sha256": "fff34215989c2d91beea69f6f4386ee157ee566b48e04349778d31b3502fa60d",
+      "independent_repair_passed": true
+    },
+    {
+      "id": "underscore-uniq-iteratee",
+      "mode": "evidence_then_edit",
+      "repair_call": 3,
+      "trajectory_sha256": "292e6f23f7b341b99203deed908108ee2f2afde2b9f3b7865fe2d103cfb4a994",
+      "input_and_target_ids_sha256": "81496c862b95fd97a43ca415e7b113e648d7540b5dc3fdfbde6a54e6913ad032",
+      "target_sha256": "ec8ecb725d6d314f8755ca1126a94bbdd0b676091f25043d993db584d39953de",
+      "independent_repair_passed": true
+    }
+  ],
+  "actual_commands_reexecuted_by_audit": false,
+  "raw_traces_public": false
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "tasks": 142,
+  "train": 55,
+  "development": 15,
+  "historical": 48,
+  "fresh": 24,
+  "repositories": 20,
+  "new_reference_screens": 4,
+  "raw_tasks_public": false,
+  "task_spec_sha256": "9e956ce89d8687f136f0840dee723297fc092420f052a75827310f57dcc08d18",
+  "admission_sha256": "4e84e62c1bfff76cb9a171f186e86bd8a6afc84993175aaccc86df4f5fbaf347",
+  "experiment": "022-action-repair",
+  "inherited_fresh_model_tasks_unopened": true,
+  "parent_protocol_sha256": "e6b5d719e663c84c3c4a33fcb7ecf7f30e3bd1804c9553e5c82d9eb0ead8ec3f",
+  "derived_data_sha256": "a0ceebe4f6c2b61ecadf240a33f98800238db32f67f45898c31fa4218cd81c64",
+  "data_audit_sha256": "c35b6a0aa6e3eccbe25dbf6a2c42e711e67dbf09b10aaf16ab520ce1f335c365",
+  "input_audit_sha256": "aece917cc0ac8a6207b6cd99be3be31e66be8290c564b65dbaaf3ee240614f59",
+  "actual_training_records": 330,
+  "common_parent_records": 275,
+  "replaced_records": 55,
+  "cpu_preparation_outside_model_pipeline_budget": true
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "experiment": "022-action-repair",
+  "status": "rule_locked_after_cpu_admission_before_model_runs",
+  "objective": "Preserve the 020 failure-recovery curriculum while replacing its stalled repair slot with early, evidence-grounded edit-and-test demonstrations; diagnose reused development only, never train on it.",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "model_license": "Apache-2.0"
+  },
+  "budget": {
+    "max_gpu_pipeline_wall_seconds": 43200,
+    "max_candidates": 1,
+    "max_optimizer_updates_per_candidate": 330,
+    "maximum_sequence_tokens": 4096,
+    "max_training_seconds_per_candidate": 5400,
+    "max_backend_start_seconds": 300,
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 900
+  },
+  "candidates": [
+    {
+      "name": "action",
+      "learning_rate": 2e-06,
+      "data_variant": "action"
+    }
+  ],
+  "shared_recipe": {
+    "epochs": 1,
+    "seed": 101,
+    "rank": 8,
+    "alpha": 16,
+    "lora_dropout": 0,
+    "backbone_dtype": "bfloat16",
+    "adapter_dtype": "float32",
+    "assistant_output_only": true,
+    "dialogue_format": "native_roundtrip",
+    "inference_policy": {
+      "format": "native_roundtrip",
+      "context": "full",
+      "progress": "edit_checkpoint_v1"
+    },
+    "target_must_fit_generation_limit": true,
+    "no_teacher_api": true,
+    "candidate_initialization": "One action candidate starts from the identical pinned base; fixed 020 recovery is a comparator only. No 021 weights are used."
+  },
+  "data": {
+    "minimum_admitted_train_tasks": 55,
+    "minimum_training_repositories": 4,
+    "minimum_unique_records": 330,
+    "minimum_supervised_tokens": 16384,
+    "maximum_records": 330,
+    "construction": "Keep five exact 020 recovery slots per task (275 common records, including every late_repair wrong-edit recovery example). Replace only stall_repair (up to 55 slots) with a successful early repair-and-test command after real bounded source inspection and a real failing declared test. A deterministic repository-stratified half also observes one real missing-file error before returning to allowed sources.",
+    "training_repositories": [
+      "mahmoud/boltons",
+      "jashkenas/underscore",
+      "python-semver/python-semver",
+      "jpvanhal/inflection"
+    ],
+    "prior_eval_repositories_never_training": true,
+    "no_dev_or_test_answers_or_trajectories": true,
+    "sample_selection": "All 330 unique complete records. Never truncate history/targets, drop a training task, pad examples or use evaluation feedback as supervision.",
+    "repair_edit_operator": "Existing Python exact literal replacement with all unique anchors checked before writes; set -e stops on edit/test failure.",
+    "training_token_accounting": "Same 330 updates and per-example upper bounds as 020/021; actual training tokens may differ. No equal-token/FLOP claim. CPU data construction is timed separately before the one 12-hour model pipeline.",
+    "minimum_replaced_records": 40,
+    "minimum_tasks_with_replacements": 40,
+    "minimum_each_mode": 16,
+    "record_rules": {
+      "changed_slot": "stall_repair",
+      "modes": [
+        "evidence_then_edit",
+        "missing_read_then_edit"
+      ],
+      "assignment": "Sort tasks by repository then task ID; alternate modes within each repository, starting with evidence_then_edit. Assignment never depends on model scores.",
+      "prefix": "First optional missing-file read (real FileNotFoundError, no source edit); then existing locate_command over declared sources; then unpiped declared regression command returning 1. All history is retained and masked.",
+      "target": "One native bash action: set -e, unique-anchor literal repair, then the exact declared regression command. Independently verify the exact restored source passes. Submit is executed as one additional unsupervised action.",
+      "repair_call": "3 for evidence_then_edit and 4 for missing_read_then_edit; <=12 total calls including completion.",
+      "length": "Whole native input+target <=4096 tokens and target <=512 tokens; never truncate either.",
+      "fallback": "Retain the exact 020 stall_repair row if the complete new example exceeds its limit; record the reason and require coverage >=40 tasks and >=16 per mode before training.",
+      "no_eval_transfer": "No development task prompt, answer, command, source or output becomes training data. The action pattern is constructed anew exclusively on the 55 original training tasks."
+    }
+  },
+  "partitions": {
+    "development": "Same 15 repeatedly observed development tasks; rerun base, fixed 020 recovery and action once with identical ceilings. Development diagnoses inform the curriculum pattern but no task content enters training.",
+    "historical": "All 48 previously observed 020 final tasks, never training or selection",
+    "fresh": "The exact 24 repository-disjoint tasks prepared in 021, still model-unopened after its failed development gate. No new task or fresh model score is selected for 022.",
+    "legacy": "9 original function checks",
+    "fresh_repository_replacements": "Only rights, runtime compatibility, actual clean/broken/restored test controls or reference exposure before any model rollout; retain exclusions. No score-based replacement."
+  },
+  "selection": {
+    "criterion": "One new candidate only. Rerun base, frozen 020 recovery and new candidate once on the same 15 development tasks under identical inference ceilings.",
+    "must_improve_development_net_tasks": 1,
+    "maximum_development_regressions": 1,
+    "must_improve_reference_net_tasks": 1,
+    "maximum_reference_regressions": 1,
+    "if_no_eligible_candidate": "Keep final cohorts unopened; record rejection and do not upload candidate weights."
+  },
+  "release_gate": {
+    "minimum_net_fresh_gain": 3,
+    "maximum_regressed_fresh_tasks": 0,
+    "maximum_regressed_historical_tasks": 0,
+    "legacy_passes_required": 9,
+    "native_format_failure_rate_not_higher": true,
+    "save_reload_greedy_match": true,
+    "rights_and_secret_scan_pass": true,
+    "all_execution_audits_pass": true,
+    "single_training_seed_and_repository_cluster_limits_disclosed": true,
+    "weights_release_scope": "experimental LoRA adapter plus exact base revision; full merged model only after a separate verified export, never label adapter as complete 27B weights",
+    "all_72_final_task_pairs_complete": true,
+    "historical_tasks": 48,
+    "fresh_tasks": 24
+  },
+  "publication": {
+    "code_results": "CaptainGreenskin/one-gpu-lm",
+    "modelscope_namespace": "CaptainGreenskin",
+    "modelscope_profile": "https://www.modelscope.ai/profile/CaptainGreenskin",
+    "modelscope_repository_proposed": "one-gpu-lm-27b-coding-022",
+    "upload_only_if_release_gate_passes": true,
+    "never_publish": [
+      "credentials",
+      "remote machine identifiers",
+      "raw task traces",
+      "private corpora",
+      "optimizer states"
+    ],
+    "license_policy": "Original code MIT; base and training-source licenses separately preserved. No third-party teacher API outputs."
+  },
+  "failure_policy": "Build and audit training data on CPU before freezing exact inputs and publishing the protocol. One 12-hour model-pipeline clock covers loaded controls, a single 330-update candidate and evaluation. No score reruns, extra candidates, relaxed gates or deadline extension; retain failed preparation attempts.",
+  "limitations": [
+    "One training seed; small constructed Python/JavaScript tasks and repeatedly observed development.",
+    "The new slot combines earlier editing, preserved test-exit status and missing-file recovery. This comparison tests the complete curriculum intervention, not the individual causal contribution of each ingredient.",
+    "Reference repairs use licensed training snapshots, not model teachers; no external teacher API or hidden reasoning.",
+    "Twenty-four fresh tasks are inherited unopened from 021; four Python repository clusters cannot certify general multilingual coding or long-task quality.",
+    "Unknown pretraining overlap; repository separation is not concept separation.",
+    "Equal update/call/token ceilings do not mean equal actual token exposure, FLOPs or latency."
+  ],
+  "reference_adapter": {
+    "experiment": "020",
+    "candidate": "recovery",
+    "commit": "5f92aa16d35b62e9655f1e20aa72a3236b38a553",
+    "adapter_model_sha256": "ea7c324af0c9d702491acc0af514568dd1f9a01b43f94e02ec270f8da376bf22",
+    "role": "frozen development comparator, not an eligible release candidate"
+  }
+}
