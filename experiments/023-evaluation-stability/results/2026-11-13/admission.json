@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T23:47:13.295484+00:00",
+  "task_spec_sha256": "cac6110478b3734f4b16ed11f2387199502de83dd68e8420fbb210ba26c40379",
+  "clean": [
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 31.784031830029562,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.3198647699900903,
+      "reason": "ok",
+      "test_runner": "mocha",
+      "failed_tests": 0
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.035953110957053,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.888857821992133,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "more-itertools-windowed",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-windowed",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "890b4766d94c9d10465bf31e4a3d9253b47ec4d752f15d69bd75bde021e6cdf9"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 39.50425045902375,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 31.940275277011096,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-spy",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-spy",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "873501983770a32a816c366b697cd003ffdc087d0042db67e4e18e963241943a"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 34.13921538897557,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 32.139398352999706,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-split_at",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-split_at",
+      "source_files": [
+        "more_itertools/more.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "729e9b9971fc00d420576fc2d60d6faab52e896f9eda26c84b5d11d56af87d3f"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 35.995711593015585,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 31.9372330539627,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "more-itertools-consume-and-window",
+      "repository": "more-itertools/more-itertools",
+      "split": "dev",
+      "family": "more-itertools/more-itertools:iterator-recipes-integration",
+      "source_files": [
+        "more_itertools/more.py",
+        "more_itertools/recipes.py"
+      ],
+      "broken_sha256": {
+        "more_itertools/more.py": "890b4766d94c9d10465bf31e4a3d9253b47ec4d752f15d69bd75bde021e6cdf9",
+        "more_itertools/recipes.py": "f3bfde732461e2f4d85f0f93df49fbca0f713231b3931b1e52fb54f32b69e4df"
+      },
+      "reference_sha256": {
+        "more_itertools/more.py": "b97c08047ea55c9d7bfb4a044085f3d8cabfa4718ab7dcbe0fb983f8d1e1ac8d",
+        "more_itertools/recipes.py": "468ab191bbb5fd62e8603d741e6983acdfa9d697d0ff9252b0c56ffdd24ca9bc"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 40.90434870898025,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 32.0386440519942,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-nan",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:nan-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "707e8e4bf749845bf62d935da8618595a05f28c6e8b689d3fb430da461a9a42c"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 180,
+        "seconds": 0.3704759159591049,
+        "reason": "runtime_error",
+        "test_runner": "mocha",
+        "failed_tests": 180
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3200275939889252,
+        "reason": "ok",
+        "test_runner": "mocha",
+        "failed_tests": 0
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-array-members",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:array-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "d803513b7bb6629556d47ad8160ea529f0856fd9e2b64da8e62c15b77a121b51"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 60,
+        "seconds": 0.3201901499996893,
+        "reason": "runtime_error",
+        "test_runner": "mocha",
+        "failed_tests": 60
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3199482740019448,
+        "reason": "ok",
+        "test_runner": "mocha",
+        "failed_tests": 0
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-map-values",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:map-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "6ebf827de69ae9573df1bbd8bab7ebb3699de68f550a274358e1309486b63637"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 16,
+        "seconds": 0.32004785700701177,
+        "reason": "runtime_error",
+        "test_runner": "mocha",
+        "failed_tests": 16
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3203416969627142,
+        "reason": "ok",
+        "test_runner": "mocha",
+        "failed_tests": 0
+      },
+      "admitted": true
+    },
+    {
+      "id": "fast-deep-equal-regexp-flags",
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "dev",
+      "family": "epoberezkin/fast-deep-equal:regexp-equality",
+      "source_files": [
+        "src/index.jst"
+      ],
+      "broken_sha256": {
+        "src/index.jst": "058291cda7df2e5f4fb7da92d46660683b4b5ff564fdbd85497a2a5f349a769c"
+      },
+      "reference_sha256": {
+        "src/index.jst": "e6475b939b2fd0336664a9cf0f2daaba158dbd1e430caca48041507a486a3226"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 8,
+        "seconds": 0.31994231697171926,
+        "reason": "runtime_error",
+        "test_runner": "mocha",
+        "failed_tests": 8
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 0.3196199599769898,
+        "reason": "ok",
+        "test_runner": "mocha",
+        "failed_tests": 0
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-asdict",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-serialization",
+      "source_files": [
+        "src/attr/_funcs.py"
+      ],
+      "broken_sha256": {
+        "src/attr/_funcs.py": "58b75e7670563cda1c52ea7ee7da2e4f1a01103e6b11176c308cc8a6fa800ce7"
+      },
+      "reference_sha256": {
+        "src/attr/_funcs.py": "eb6623ffeb7a3052483a39635fda25da4ebbe36e4ca6d8dfe66d6e02d8ed9b88"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 20.814426954020746,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.5315533360117115,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-to-bool",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-converters",
+      "source_files": [
+        "src/attr/converters.py"
+      ],
+      "broken_sha256": {
+        "src/attr/converters.py": "e1fa92376f10f7c7692bed62d15f1a6329cd67e5571c47a132b20c1b8065fc04"
+      },
+      "reference_sha256": {
+        "src/attr/converters.py": "be3ce4f8ee6feb27a881b13a734665690fe4c81cfe030089c648f428229a8ed7"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.337688874977175,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.579963062016759,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-optional-validator",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-validators",
+      "source_files": [
+        "src/attr/validators.py"
+      ],
+      "broken_sha256": {
+        "src/attr/validators.py": "1aa89ec61a41e197f99d86198fad1c7df1412b632e886e49c8a3b1f5f5e4a9a7"
+      },
+      "reference_sha256": {
+        "src/attr/validators.py": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 8.23719194997102,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.4810353990178555,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "attrs-filters-and-tuples",
+      "repository": "python-attrs/attrs",
+      "split": "dev",
+      "family": "python-attrs/attrs:class-filters-serialization",
+      "source_files": [
+        "src/attr/_funcs.py",
+        "src/attr/filters.py"
+      ],
+      "broken_sha256": {
+        "src/attr/_funcs.py": "b2404be25f72a95879df09505aa23e0f133a71816f170d6c096bb958b61585cc",
+        "src/attr/filters.py": "3840f58b850f60b23e097917ef63d2d13bd82d8d4bdee4919068183595a80011"
+      },
+      "reference_sha256": {
+        "src/attr/_funcs.py": "eb6623ffeb7a3052483a39635fda25da4ebbe36e4ca6d8dfe66d6e02d8ed9b88",
+        "src/attr/filters.py": "64188a58ba774742df099b2aed7d75a67f565fc36c952db05cce23b272ce19cf"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 25.124909691978246,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 5.631659884005785,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-arguments",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-arguments",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "8e183dc42904984508bb490c658379e2a28d7d1ce6c5789f5d3e66cfaa3ff677"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 9.139612194034271,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.191074886999559,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-pending-count",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-observability",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "47958037f07c8621cb63a9f2f15526fc4eb64eefadbdcd9346e5ddca08f05fc3"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 7.134930219966918,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.03892377804732,
+        "reason": "ok"
+      },
+      "admitted": true
+    },
+    {
+      "id": "p-limit-map-index",
+      "repository": "sindresorhus/p-limit",
+      "split": "dev",
+      "family": "sindresorhus/p-limit:async-mapping",
+      "source_files": [
+        "index.js"
+      ],
+      "broken_sha256": {
+        "index.js": "544f721a9516135ee307a9d04b3f90bff7b0f195b8ba23ede931a081767af55f"
+      },
+      "reference_sha256": {
+        "index.js": "edde12a4a4dbdbe8d27161cdd0853db0bab435d5dc6c15f9f4dedc27ee9bca60"
+      },
+      "broken": {
+        "passed": false,
+        "returncode": 1,
+        "seconds": 9.139871239953209,
+        "reason": "runtime_error"
+      },
+      "restored": {
+        "passed": true,
+        "returncode": 0,
+        "seconds": 9.03927470598137,
+        "reason": "ok"
+      },
+      "admitted": true
+    }
+  ],
+  "complete": true,
+  "finished_utc": "2026-11-12T23:55:01.635277+00:00",
+  "admitted": 15
+}

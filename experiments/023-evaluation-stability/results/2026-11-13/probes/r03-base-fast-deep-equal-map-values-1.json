@@ -1,0 +1,34 @@
+{
+  "input_tokens": 566,
+  "input_tokens_sha256": "14532ab3aa2a8e99b27a071012870cce76d0890ad51c964cbab9c4a7202aa9bb",
+  "generated_tokens": 42,
+  "seconds": 4.524402308044955,
+  "hit_generation_limit": false,
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "full",
+    "progress": "edit_checkpoint_v1"
+  },
+  "context": {
+    "policy": "full",
+    "raw_input_tokens": 566,
+    "packed_input_tokens": 566,
+    "dropped_rounds": 0,
+    "original_messages": 2,
+    "packed_messages": 2
+  },
+  "dialogue": {
+    "structured_tool_calls": 0,
+    "tool_results": 0
+  },
+  "packing_seconds": 0.0722630629898049,
+  "peak_allocated_bytes": 55068590592,
+  "adapter": false,
+  "id": "fast-deep-equal-map-values",
+  "model": "base",
+  "repeat": 3,
+  "within_load_repeat": 1,
+  "output_sha256": "45de09604800f934e0b2c01e3383c43592b3352a05cb1c08ad233e89cee0919b",
+  "ids_sha256": "7d9bc25c059221c2012b4969c81bece92cd4d503661d47713c4eaf4a7de81a21",
+  "backend_attempt": 1
+}

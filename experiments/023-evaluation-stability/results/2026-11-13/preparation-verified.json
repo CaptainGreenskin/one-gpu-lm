@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "audit_source_sha256": "715e52db9becb8229161b127107a0ee5e9dcfe465b291f0a3a28ba23ee217178",
+  "task_spec_sha256": "cac6110478b3734f4b16ed11f2387199502de83dd68e8420fbb210ba26c40379",
+  "admission_sha256": "a94647293421d8f158860faac31ca02f437fba34ff135f305606635468095ff1",
+  "development_tasks": 15,
+  "repository_count": 4,
+  "source_dependency_framework_contents_verified": true,
+  "profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "model_verification": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "manifest_sha256": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "weight_files": 18,
+    "metadata_files": 12,
+    "verified_bytes": 55586105207,
+    "verification_seconds": 41.71043260401348,
+    "content_verified": true
+  },
+  "adapters": {
+    "reference020": {
+      "README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067",
+      "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+      "adapter_model.safetensors": "ea7c324af0c9d702491acc0af514568dd1f9a01b43f94e02ec270f8da376bf22"
+    },
+    "action022": {
+      "README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067",
+      "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+      "adapter_model.safetensors": "b5aeeb49cc92e42c46300b0607baa5240fabc7edaf7fd896d87213f4ed848d4a"
+    }
+  },
+  "probes": [
+    {
+      "id": "fast-deep-equal-map-values",
+      "expected_input_sha256": "14532ab3aa2a8e99b27a071012870cce76d0890ad51c964cbab9c4a7202aa9bb",
+      "expected_input_tokens": 566,
+      "source_trajectory_sha256": "be76175015f19648e8ab2a5275f493ea33445a7acb2fa1e3519450f5e3524c7d"
+    },
+    {
+      "id": "fast-deep-equal-regexp-flags",
+      "expected_input_sha256": "5ca68ea5e5caa0eb125179ef6761ecc992437f0919138ee8aba013b917b91750",
+      "expected_input_tokens": 568,
+      "source_trajectory_sha256": "731813031e0026db97fc4d8825d4062fff105ea12b5121574f365ad95ae238d7"
+    }
+  ],
+  "final_tasks_present": false,
+  "model_generations_performed": 0
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-13T07:25:30.237676+00:00",
+  "task_spec_sha256": "cac6110478b3734f4b16ed11f2387199502de83dd68e8420fbb210ba26c40379",
+  "clean": [
+    {
+      "repository": "more-itertools/more-itertools",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 31.985926103021484,
+      "reason": "ok"
+    },
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 0.3186438279808499,
+      "reason": "ok",
+      "test_runner": "mocha",
+      "failed_tests": 0
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 8.035750934039243,
+      "reason": "ok"
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "passed": true,
+      "returncode": 0,
+      "seconds": 9.142888172005769,
+      "reason": "ok"
+    }
+  ],
+  "tasks": [],
+  "complete": true,
+  "finished_utc": "2026-11-13T07:26:19.785595+00:00",
+  "admitted": 0
+}

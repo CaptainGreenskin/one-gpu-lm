@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "source_sha256": "372bc46bbb50d5c515169b9f4485d08747411f315038e632be0de33da9e755ec",
+  "cases": [
+    {
+      "condition": "raw",
+      "scripted_calls": 3,
+      "command_source_and_returncode_preserved": true,
+      "actual_delivered_history_verified": true,
+      "model_generations": 0
+    },
+    {
+      "condition": "canonical",
+      "scripted_calls": 3,
+      "command_source_and_returncode_preserved": true,
+      "actual_delivered_history_verified": true,
+      "model_generations": 0
+    }
+  ],
+  "purpose": "Scripted CPU boundary check,not model evaluation or a selection score",
+  "final_test_opened": false
+}

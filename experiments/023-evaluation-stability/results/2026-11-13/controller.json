@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-12T23:59:53.184190+00:00",
+  "started_epoch": 1794527993.184185,
+  "deadline_epoch": 1794585593.184185,
+  "protocol_sha256": "85080e7853441c7374bad4c6a3d87a2e26e0656c60de96de0ccc876f97fcd8c1",
+  "complete": true,
+  "attempt": 1,
+  "completed_blocks": [
+    "r01-base",
+    "r01-reference020",
+    "r01-action022",
+    "r02-reference020",
+    "r02-action022",
+    "r02-base",
+    "r03-action022",
+    "r03-base",
+    "r03-reference020"
+  ],
+  "final_test_opened": false,
+  "training_updates": 0,
+  "weights_public": false,
+  "stage": "completed",
+  "updated_utc": "2026-11-13T11:08:37.250170+00:00",
+  "block": "r03-reference020",
+  "task_id": "p-limit-map-index",
+  "condition": "raw",
+  "completed_in_block": 29,
+  "finished_utc": "2026-11-13T11:08:37.250141+00:00",
+  "finished_epoch": 1794568117.2501664,
+  "telemetry": {
+    "samples": 7955,
+    "errors": 0,
+    "thread_stopped": true
+  }
+}
