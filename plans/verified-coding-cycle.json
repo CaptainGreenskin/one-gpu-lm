@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "goal_recorded_experiment_protocol_not_yet_frozen",
+  "created_date": "2026-11-13",
+  "objective": "One auditable 27B coding-improvement cycle separating parameter changes from execution-system changes.",
+  "planning_window_weeks": [
+    2,
+    4
+  ],
+  "first_dependency": {
+    "experiment": "024-feedback-noise",
+    "must_complete_and_publish_before_new_remote_compute": true,
+    "do_not_change_current_frozen_run": true
+  },
+  "development_goal": {
+    "minimum_tasks": 60,
+    "minimum_repository_families": 6,
+    "minimum_languages": 2,
+    "split_unit": "repository family including forks and copied components",
+    "independent_of_training_repositories": true,
+    "old_15_tasks_role": "diagnostic/history only",
+    "target_absolute_gain_percentage_points": 10,
+    "target_is_not_a_promised_result": true,
+    "release_gate_not_relaxed": true,
+    "formal_scoring_and_cost_limits": "Freeze before observing any new development model scores"
+  },
+  "training_pilot": {
+    "verified_trajectory_target": [
+      100,
+      300
+    ],
+    "candidate_count": 1,
+    "student": "existing precisely pinned Qwen/Qwen3.8-27B",
+    "method": "execution-verified trajectory distillation via SFT",
+    "only_training_partition_used_for_teacher_and_recipe_calibration": true,
+    "teacher_can_see_heldout_tests_or_reference_patch": false,
+    "retain_failed_attempt_counts_and_costs": true,
+    "trajectory_unit": "A full executed trajectory; not individual next-action SFT rows. Report distinct tasks and records separately."
+  },
+  "factorial_arms": [
+    {
+      "weights": "base",
+      "runtime": "current"
+    },
+    {
+      "weights": "base",
+      "runtime": "improved"
+    },
+    {
+      "weights": "distilled",
+      "runtime": "current"
+    },
+    {
+      "weights": "distilled",
+      "runtime": "improved"
+    }
+  ],
+  "measurement": {
+    "separate_parameter_system_and_interaction_effects": true,
+    "same_per_task_budget_caps_across_arms": true,
+    "count_all_candidate_and_verifier_costs": true,
+    "report_per_task_and_per_repository_pairs": true,
+    "report_actions_grades_tokens_time_regressions": true,
+    "repeat_count_and_execution_order": "to freeze before scores",
+    "current_short_task_scores_do_not_establish_long_horizon_ability": true
+  },
+  "teacher_candidates_not_selected": [
+    {
+      "kind": "local search-assisted self-distillation",
+      "weights": "existing pinned base",
+      "reason": "No additional model/service license; verified higher-budget rollouts may teach a cheaper student policy. Must demonstrate usable training trajectories; not called a stronger external model."
+    },
+    {
+      "kind": "local different teacher",
+      "candidate": "Qwen/Qwen3-Coder-Next",
+      "official_card": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+      "status": "Apache-2.0 tag observed; exact license/revision, quantization provenance, capacity, tool compatibility and training-task quality not yet approved",
+      "not_assumed_stronger_than_current_base": true
+    },
+    {
+      "kind": "external teacher service",
+      "status": "not selected or purchased; terms and explicit spending authorization required"
+    }
+  ],
+  "publication": {
+    "github": "CaptainGreenskin/one-gpu-lm",
+    "public": [
+      "original implementation",
+      "protocol",
+      "license/source manifests",
+      "validation hashes and numeric receipts",
+      "curves",
+      "complete positive and negative findings"
+    ],
+    "private": [
+      "credentials",
+      "host identifiers",
+      "raw tasks",
+      "raw trajectories",
+      "weights"
+    ],
+    "modelscope": "No upload from this development cycle alone; existing final/release gates remain separate"
+  },
+  "sealed_final": {
+    "opened": false,
+    "used_for_training_teacher_selection_or_policy_selection": false
+  },
+  "completion": "Finish the registered experiment and publish a supported achieved/not-achieved conclusion, even if the candidate fails. Do not label a failed quality target as a successful model.",
+  "background_references": [
+    "https://swesmith.com/",
+    "https://proceedings.mlr.press/v267/pan25g.html",
+    "https://github.com/deepseek-ai/DeepSeek-R1"
+  ]
+}
