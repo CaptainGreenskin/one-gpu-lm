@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-14T23:41:08.193074+00:00",
+  "complete": false,
+  "tasks": [
+    {
+      "id": "humanize-ordinal-teens",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.725157672073692,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.626769584021531,
+        "output_sha256": "38b45cf0937a71013e36fbcbcf11cb0610627017b3b363136c0194842d3f8e43"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6262353690108284,
+        "output_sha256": "9d314514852570a68eee8dc2e8cccb4b1396e38e02d93ad470bae56e2a416ac1"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.7265324590262026
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7256162710255012,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6263236409286037,
+        "output_sha256": "93aa5aabfc8da61b4c3d5113e7f32cc4c1f1db657b8ab9160836fab46b535e6a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6266168939182535,
+        "output_sha256": "168dbddf6878486b39f846d1dca667c42d019d927d891d40fa188f5594aa0476"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/lists.py": "622534ad0d9e026280ec627f363ebe8c4be0dbe6345561b570187f5c3be726a1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.7748983649071306
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-gnu-size-base",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7266640590969473,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6262269190046936,
+        "output_sha256": "4537ea02eebc01e21e658d34e6117d26176f90704bb99bb30970081478cee8e6"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6258586890762672,
+        "output_sha256": "a8dc41e18a3d6eff83ba9c82c9fe9e1fddca94de41d367ad8b326e06194a4fcd"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/filesize.py": "f402b006fa15c56679b076e2e48010c512c937c6ecd8923ae511198ce5ab92f1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.726575535023585
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7767031620023772,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6267273869598284,
+        "output_sha256": "9f68f7bd213aff993a7830f28ad30422037779ff794a80bba2510913b1689f5c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6257251870119944,
+        "output_sha256": "632c315da8247505b93ebf4e97749d19d9f8185b4d1414f7069e2dddfbc2c720"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.7773123220540583
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7765552699565887,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6761828009039164,
+        "output_sha256": "08702efe48a95276a5fe04f6f33f231f99647a302c51b3d8561b1ef2b0a6674a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6766120790271088,
+        "output_sha256": "ef420c1a66a2b866167a1ad6444146442a51ef6878f553a14228a04e20bac984"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "6898289a3e799ffa419e4638d68b757049b0d1591facb90aacf76ace11b81b77"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.7768529400927946
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7767296680249274,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6753249539760873,
+        "output_sha256": "db8fd473580feac7adc58b29f2b488cf6f350bda625985fc109793e81bc1bca6"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6266902829520404,
+        "output_sha256": "5dec56916cf03ba98d227f68355a5e9599c890a7a5abfc5555137a62fa722a8a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.776808531023562
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-fractional-minute",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.7769876699894667,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6762144750682637,
+        "output_sha256": "8b485396b973573a38948737e781dcbd54667c314b71d0e7536733aa66228502"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6261145249009132,
+        "output_sha256": "19af4497e1d0b31e09254545c429eb735051ce1bd30330417cd4be4d8e365d38"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.7757133359555155
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.776797446073033,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6764263150980696,
+        "output_sha256": "cc82e3d6795503a36fd2e686039d83fc58232825f5c743c84c42c0ccef0228e9"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.6761685389792547,
+        "output_sha256": "fe4737cd9243b1761b439061ad3f16a8d849f09ddf662aea2376c7833cfcc25c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "6898289a3e799ffa419e4638d68b757049b0d1591facb90aacf76ace11b81b77"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.776616857969202
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 1.6247269049054012,
+        "output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.5763004990294576,
+        "output_sha256": "0cf30dc2bf937f1aed5271f32c5493cf1608aa67522eee22b7cca2bbf9061b7c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 1.5758941780077294,
+        "output_sha256": "5cb38bea28f3da97af6872c49732af2e5f00f84853fe8aa84dc3564c6171b097"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "58bcf0294137cea783dd79a64d23c47bbd420f52cb24d0b50922c354c307c25e",
+        "seconds": 1.6245671660872176
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "f28a050fbf3262258e92ba8a1a09f568da5f14ce4797fd40555a56ced328b180",
+  "sources_sha256": "ab661075b7245f0d3acb383779ea06c4fb3182997aed637ab9809ef3b27a901f",
+  "runtime_sha256": "930c289aa2c2c83003294cb1118621b4442568eccdbb48fd274b862a2b21aafe",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/sandbox.cpython-310.pyc": "9a53ad226f789981854bfd1ac8914870dc3b630077efe73469c42534ad4d9765",
+    "__pycache__/tasks.cpython-310.pyc": "1d9e584ea277c273719d44aea2f7b5c84f6775cc018850ba9389849f8c5362b2",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "sandbox.py": "fa8e7b67ae578d167a3e9fa63345c33b741d427d02f044847d8ce7200a2ead7c",
+    "tasks.py": "aa72bcd9103d18d5182ee2cbb3f4a70155ff03a1b4356e487d8f531196a4f39d"
+  }
+}

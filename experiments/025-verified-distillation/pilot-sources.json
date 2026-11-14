@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repository": "python-humanize/humanize",
+      "revision": "a95004512dde4e8f0269946bb4af754382347441",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "language": "python",
+      "approved_for": {
+        "training": true,
+        "development": false,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "MIT AND BSD-3-Clause",
+      "notices": [
+        "LICENCE",
+        "upstream-notices/django-BSD.txt"
+      ],
+      "files": {
+        "LICENCE": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380",
+        "src/humanize/__init__.py": "69586bc9cba2dbe0daa63d9f82eed16f8511a9da1ccf2e1045cd5175a9028e40",
+        "src/humanize/_version.py": "4deadb5fec15e80b1fa054ea2fc0b365366d504a5714820ad6aec5814bad3136",
+        "src/humanize/filesize.py": "f402b006fa15c56679b076e2e48010c512c937c6ecd8923ae511198ce5ab92f1",
+        "src/humanize/i18n.py": "d25d0989ea16974e1505fdc2d4ab5294941640cf4ae85102edfc6dfd34488be6",
+        "src/humanize/lists.py": "622534ad0d9e026280ec627f363ebe8c4be0dbe6345561b570187f5c3be726a1",
+        "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb",
+        "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620",
+        "upstream-notices/django-BSD.txt": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
+      },
+      "generated_metadata_files": {
+        "src/humanize/_version.py": "4deadb5fec15e80b1fa054ea2fc0b365366d504a5714820ad6aec5814bad3136"
+      },
+      "review_scope": "Selected source subset and its declared upstream notices for private training-task execution and internal trajectory SFT. No permission inferred for publishing raw tasks, trajectories or model weights.",
+      "obligations": [
+        "retain original and upstream copyright and license notices",
+        "record source revision and modifications",
+        "do not imply upstream endorsement"
+      ],
+      "review_notes": "time.py declares borrowing from Django; BSD notice retained alongside MIT. Generated version metadata only; translations, docs, tests, history and distribution copies are absent.",
+      "related_families": [
+        "django/django"
+      ],
+      "publication_notices": [
+        {
+          "path": "notices/python-humanize--humanize--LICENCE.txt",
+          "sha256": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380"
+        },
+        {
+          "path": "notices/python-humanize--humanize--django-BSD.txt.txt",
+          "sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
+        }
+      ]
+    },
+    {
+      "repository": "gweis/isodate",
+      "revision": "17cb25eb7bc3556a68f3f7b241313e9bb8b23760",
+      "family": "gweis/isodate",
+      "split": "training",
+      "language": "python",
+      "approved_for": {
+        "training": true,
+        "development": false,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "BSD-3-Clause AND Python-2.0",
+      "notices": [
+        "LICENSE",
+        "upstream-notices/python-PSF.txt"
+      ],
+      "files": {
+        "LICENSE": "ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43",
+        "src/isodate/__init__.py": "c1f3c8de67039cb6c49dd89d6a8cd62bf8bf5c6b4ecab1a14c5737e4fa6df483",
+        "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e",
+        "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e",
+        "src/isodate/isodatetime.py": "10101485be7ca2814ab58aea0268d46ccc0306c0af7f1a35ce2899976f5391b5",
+        "src/isodate/isoduration.py": "d7a1bde469235082a56241b8ef7c35fcf273f31d98a4d4bf224545c1ce5129b5",
+        "src/isodate/isoerror.py": "bc098ae0fcf2bbf99cc19ae14d1841c114788c98336cb8ec508862037329576c",
+        "src/isodate/isostrf.py": "0b704bbd54e972d9ab2150a432f24aff011c22ad6447d1af0074b95471ec3476",
+        "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8",
+        "src/isodate/isotzinfo.py": "6898289a3e799ffa419e4638d68b757049b0d1591facb90aacf76ace11b81b77",
+        "src/isodate/tzinfo.py": "647f1b89ccad2e3535e81f6eec616327d0610e8a244f4ba73d719f1f386375f2",
+        "src/isodate/version.py": "6dc874920af2fccdc360652f07efce0b73c51ab63ad6ed8235949c882bebb620",
+        "upstream-notices/python-PSF.txt": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+      },
+      "generated_metadata_files": {
+        "src/isodate/version.py": "6dc874920af2fccdc360652f07efce0b73c51ab63ad6ed8235949c882bebb620"
+      },
+      "review_scope": "Selected source subset and its declared upstream notices for private training-task execution and internal trajectory SFT. No permission inferred for publishing raw tasks, trajectories or model weights.",
+      "obligations": [
+        "retain original and upstream copyright and license notices",
+        "record source revision and modifications",
+        "do not imply upstream endorsement"
+      ],
+      "review_notes": "tzinfo.py declares Python documentation origins; PSF notice retained alongside BSD-3-Clause. Generated version metadata only; docs, tests, history and distributions are absent.",
+      "related_families": [
+        "python/cpython-documentation-tzinfo"
+      ],
+      "publication_notices": [
+        {
+          "path": "notices/gweis--isodate--LICENSE.txt",
+          "sha256": "ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43"
+        },
+        {
+          "path": "notices/gweis--isodate--python-PSF.txt.txt",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ]
+    },
+    {
+      "repository": "npm/ini",
+      "revision": "3c96c74fd42584bd655e17a4e63e2ef0a3b406ee",
+      "family": "npm/ini",
+      "split": "training",
+      "language": "javascript",
+      "approved_for": {
+        "training": true,
+        "development": false,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "ISC",
+      "notices": [
+        "LICENSE"
+      ],
+      "files": {
+        "LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32",
+        "package.json": "1351b4404def0147f1b708552766a9e3dab895bdc6ebb829d4ac0fbf835824fa"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Selected source subset and its declared upstream notices for private training-task execution and internal trajectory SFT. No permission inferred for publishing raw tasks, trajectories or model weights.",
+      "obligations": [
+        "retain original and upstream copyright and license notices",
+        "record source revision and modifications",
+        "do not imply upstream endorsement"
+      ],
+      "review_notes": "ISC source and package manifest; no runtime dependencies; docs, snapshots, tests, history and installed duplicate package are absent.",
+      "related_families": [],
+      "publication_notices": [
+        {
+          "path": "notices/npm--ini--LICENSE.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    }
+  ]
+}

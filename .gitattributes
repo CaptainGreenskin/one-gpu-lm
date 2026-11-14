@@ -41,3 +41,8 @@ experiments/022-action-repair/results/**/*.svg -whitespace
 experiments/023-evaluation-stability/notices/* -text whitespace=cr-at-eol
 experiments/023-evaluation-stability/results/**/*.csv -text whitespace=cr-at-eol
 experiments/023-evaluation-stability/results/**/*.svg -whitespace
+
+# Experiment 025 preserves reviewed notices and evidence bytes.
+experiments/025-verified-distillation/notices/* -text whitespace=cr-at-eol
+experiments/025-verified-distillation/results/**/*.csv -text whitespace=cr-at-eol
+experiments/025-verified-distillation/results/**/*.svg -whitespace

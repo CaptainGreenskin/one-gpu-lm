@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "id": "admission-001",
+      "complete": false,
+      "admitted_observed": 9,
+      "reason": "SSH execution request timed out at 60 seconds; process absence checked before next admission. No model generation."
+    },
+    {
+      "id": "admission-002",
+      "complete": true,
+      "admitted": 12,
+      "reason": "Detached CPU admission of the reviewed compact runtime."
+    },
+    {
+      "id": "admission-003",
+      "complete": true,
+      "admitted": 12,
+      "reason": "Final identity-binding admission after related repository families were explicitly recorded."
+    }
+  ],
+  "earlier_setup_events": [
+    "Initial runtime upload timed out; remote prefix verified and remaining bytes resumed; final whole archive SHA-256 verified.",
+    "First runtime assembly failed on unused Tk extension dependencies; GUI extensions excluded and original attempt preserved.",
+    "First task builder rejected a non-unique mutation anchor before creating task manifest; corrected exact anchor."
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "notes": "Admission implementation manifests include incidental Python bytecode hashes; only .py files are used for portable source identity checks."
+}

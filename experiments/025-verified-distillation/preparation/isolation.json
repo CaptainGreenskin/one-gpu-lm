@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": {
+    "pip": true,
+    "setuptools": true,
+    "packaging": true,
+    "humanize": true,
+    "isodate": true,
+    "host_home_absent": true,
+    "host_usr_tree_absent": true,
+    "external_network_unreachable": true
+  },
+  "seconds": 0.17081384302582592,
+  "model_generations": 0
+}
