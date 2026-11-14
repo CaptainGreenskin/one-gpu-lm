@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "parent_experiment": "022-action-repair",
+  "sources": [
+    {
+      "repository": "epoberezkin/fast-deep-equal",
+      "split": "evaluation",
+      "revision": "a8e7172b6c411ec320d6045fd4afbd2abc1b4bde",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+      "homepage": "https://github.com/epoberezkin/fast-deep-equal",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/epoberezkin--fast-deep-equal.txt"
+      }
+    },
+    {
+      "repository": "more-itertools/more-itertools",
+      "split": "evaluation",
+      "revision": "f42daddf205f335fea6e200dad46049f33e71221",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "homepage": "https://github.com/more-itertools/more-itertools",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/more-itertools--more-itertools.txt"
+      }
+    },
+    {
+      "repository": "python-attrs/attrs",
+      "split": "evaluation",
+      "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+      "homepage": "https://github.com/python-attrs/attrs",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/python-attrs--attrs.txt"
+      }
+    },
+    {
+      "repository": "sindresorhus/p-limit",
+      "split": "evaluation",
+      "revision": "a8a6fbec4e0e866d6d779b10889bb4f5567e70eb",
+      "license_spdx": "MIT",
+      "license_path": "license",
+      "license_sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "homepage": "https://github.com/sindresorhus/p-limit",
+      "rights_review": {
+        "status": "source-license-reviewed; per-task file notices required before admission",
+        "public_raw_corpus": false,
+        "obligations": [
+          "retain applicable copyright and license notices",
+          "record modifications and source revision",
+          "do not imply upstream endorsement"
+        ],
+        "publication_notice": "notices/sindresorhus--p-limit.txt"
+      }
+    }
+  ],
+  "new_sources": false,
+  "training": false
+}

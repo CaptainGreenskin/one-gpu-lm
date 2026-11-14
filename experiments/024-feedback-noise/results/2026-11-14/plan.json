@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "experiment": "024-feedback-noise",
+  "status": "rule_locked_before_new_model_runs",
+  "objective": "Compare frozen023 metadata_v1 against additive test-duration normalization, repeating base/020/022 under identical ceilings; no training, model selection or final tests.",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "model_license": "Apache-2.0"
+  },
+  "agent": {
+    "framework": "SWE-agent/mini-swe-agent",
+    "revision": "04d809ceab9df28f9adaed044884180159172930",
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_tool_output_chars": 2400,
+    "max_tool_seconds": 60,
+    "wall_time_limit_seconds": 900,
+    "decoding": "greedy",
+    "network": "disabled inside tool workspace",
+    "shared_uid_process_thread_limit": 512
+  },
+  "policy": {
+    "format": "native_roundtrip",
+    "context": "full",
+    "progress": "edit_checkpoint_v1"
+  },
+  "models": {
+    "base": {
+      "adapter": null
+    },
+    "reference020": {
+      "experiment": "020",
+      "candidate": "recovery",
+      "commit": "5f92aa16d35b62e9655f1e20aa72a3236b38a553",
+      "adapter_model_sha256": "ea7c324af0c9d702491acc0af514568dd1f9a01b43f94e02ec270f8da376bf22",
+      "role": "frozen development comparator, not an eligible release candidate"
+    },
+    "action022": {
+      "adapter_model_sha256": "b5aeeb49cc92e42c46300b0607baa5240fabc7edaf7fd896d87213f4ed848d4a",
+      "experiment": "022",
+      "candidate": "action"
+    }
+  },
+  "conditions": [
+    "baseline",
+    "extended"
+  ],
+  "repeats": 3,
+  "development_tasks": 15,
+  "planned_task_runs": 270,
+  "schedule": "Latin rotation of model order across three repeats; fresh backend per model/repeat. Pair baseline/extended adjacently for every task, alternate first condition by task index + repeat + model index. Same original task order. No score-dependent scheduling.",
+  "normalization": {
+    "version": "metadata_v2",
+    "baseline": "Exact023 metadata_v1 applied to historical raw2400-character prefix; verified byte-for-byte on every023 observation before freeze.",
+    "extended": "Apply metadata_v1 then remove only complete recognized pytest/unittest aggregate durations and optional AVA reporter row-end durations, preserving test identity, status, count, order and every other character.",
+    "untouched": "No source changes, command rewrites, filename rewriting, arbitrary log dates, exception messages, ordering changes or independent-grader changes. Pattern-only recognition can match same-shaped text; retained private raw/delivered journals permit audit.",
+    "cap": "Same historical raw prefix, then metadata_v1 cap, then v2 removal; never expose hidden tail. Complete trailing lines only; preserve an incomplete last line when original output is truncated."
+  },
+  "probes": {
+    "task_ids": [
+      "fast-deep-equal-map-values",
+      "fast-deep-equal-regexp-flags"
+    ],
+    "input": "Exact initial request from recorded022 development history; encoded hashes checked before freeze. No command execution.",
+    "repetitions_per_backend_per_input": 2,
+    "backend_instances": 9,
+    "planned_calls": 36,
+    "max_new_tokens_per_call": 512,
+    "role": "Within-load and across-load identical-input checks, excluded from task budgets/scores; fixed before all task runs."
+  },
+  "budget": {
+    "max_pipeline_wall_seconds": 57600,
+    "max_backend_start_seconds": 300,
+    "max_probe_calls": 36,
+    "max_task_runs": 270,
+    "max_task_model_calls": 3240,
+    "max_task_generated_tokens": 1658880
+  },
+  "analysis": {
+    "primary": "For each model/condition: action-sequence disagreements /45 task-repeat pairs and mixed-action tasks /15; pass/fail disagreements /45 and mixed-outcome tasks /15; report repeat score range. Command identity and model-call positions jointly define action sequences. No model selection.",
+    "secondary": "Exact input/output hashes,135 matched baseline/extended pairs, first-divergence boundaries, first edit, no-edit failures, actual time/tokens, normalization coverage and hardware. Six fixed-input probe groups with6calls each; task identical-input grouping preregistered.",
+    "attribution": "At first trace divergence: identical input but different generated output is observed generation variability; identical preceding actions/state but different feedback is observed tool variability, subdivided by whether allowed metadata normalization makes feedback identical. Later consequences not assigned a unique cause. Different grades with identical trajectories separately flagged.",
+    "paired_effect": "Descriptive changes of the complete v2 output intervention relative to metadata_v1 on15 reused tasks. No isolated causal attribution per field or broad quality claim.",
+    "incomplete": "Retain every attempt; exclude incomplete pairs from rates with explicit denominators. Do not rerun completed tasks or choose favorable repeats. Deadline is not extended.",
+    "statistics": "Descriptive counts and exact denominators only; three repeats and reused task clusters are too small for broad statistical or causal claims."
+  },
+  "final_test_opened": false,
+  "training_updates": 0,
+  "weights_public": false,
+  "failure_policy": "One16-hour clock includes all model loads,36fixed probes,270task runs and loaded controls. Resume only completed-step checkpoints within original deadline. Keep failed attempts; no duplicate scores, extra probes, relaxed budgets or extension.",
+  "publication": {
+    "repository": "CaptainGreenskin/one-gpu-lm",
+    "publish": [
+      "original code",
+      "frozen plan",
+      "numeric receipts",
+      "plots",
+      "failure analysis"
+    ],
+    "exclude": [
+      "credentials",
+      "host identifiers",
+      "raw tasks",
+      "raw tool/model traces",
+      "weights",
+      "optimizer states"
+    ]
+  },
+  "limitations": [
+    "Three repeats on15 reused development tasks across four repositories; no new holdout score or release decision.",
+    "metadata_v2 only changes complete recognized duration rows. Other timestamps, addresses, output order and unmatched noise remain untouched. Same-shaped source text can match; all transformations are independently audited.",
+    "Existing greedy/SDPA/seed101 settings retained, deterministic CUDA switches not changed. Equal ceilings do not mean equal actual tokens,FLOPs or runtime."
+  ],
+  "source_experiment": {
+    "experiment": "023",
+    "commit": "9bc65d165a395cff044d2603b9b995127d0401bd",
+    "task_spec_sha256": "cac6110478b3734f4b16ed11f2387199502de83dd68e8420fbb210ba26c40379"
+  }
+}

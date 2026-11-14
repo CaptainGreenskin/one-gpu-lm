@@ -85,6 +85,19 @@ def assess(root):
   proof=read(name)
   require(proof['historical_review_sha256']==sha256(root/'historical-review.json') and proof['parent023_sha256']==sha256(root/'parent023.json'),'Parent/historical content identity differs')
  traces={name:{r['id']:r for r in cell['tasks']} for name,cell in audit['campaigns'].items()}
+ residual=read('feedback-residual-review.json');extra=read('posthoc-collection.json')
+ require(extra['files']=={'feedback-residual-review.json':sha256(root/'feedback-residual-review.json')},'Post-hoc collection changed')
+ require(not extra['raw_feedback_public'] and extra['model_generations_performed']==extra['commands_executed']==0,'Post-hoc collection changed execution')
+ require(residual['post_hoc'] and not residual['preregistered_metric'] and not residual['normalizer_changed'],'Residual review must remain post-hoc')
+ require(not residual['raw_feedback_public'] and not residual['final_test_opened'] and residual['model_generations_performed']==residual['commands_executed']==0,'Residual review changed scope')
+ require(residual['source_sha256']==sha256(EXP/'residual_review.py') and residual['analysis_sha256']==sha256(EXP/'analysis.py') and residual['normalizer_sha256']==sha256(EXP/'normalize.py') and residual['execution_audit_sha256']==sha256(root/'execution-audit.json'),'Residual review source/evidence differs')
+ keys=['comparison','model','condition','a','b','id','call','outcome_disagreement','action_disagreement']
+ expected=[{k:p[k] for k in keys} for p in value['pairs'] if p['category']=='other_tool_text']
+ require([{k:p[k] for k in keys} for p in residual['pairs']]==expected,'Residual review selected or changed pairs')
+ require(residual['reviewed_first_other_feedback_differences']==len(expected) and residual['categories']==dict(Counter(p['category'] for p in residual['pairs'])),'Residual review counts differ')
+ for pair in residual['pairs']:
+  observations=[next(o for o in traces[pair[k]][pair['id']]['observation_receipts'] if o['model_call']==pair['call']) for k in ['a','b']]
+  require(pair['v2_sha256']==[o['canonical_sha256'] for o in observations] and pair['delivered_sha256']==[o['delivered_sha256'] for o in observations],'Residual feedback hashes differ')
  repeated_inputs=defaultdict(list)
  for name,cell in audit['campaigns'].items():
   for row in cell['tasks']:
@@ -191,7 +204,7 @@ def assess(root):
   'wall_seconds':controller['finished_epoch']-controller['started_epoch'],'within_original_deadline':controller['finished_epoch']<=controller['deadline_epoch']}
  for k in ['started','finished']:timing[k+'_beijing']=datetime.fromisoformat(controller[k+'_utc']).astimezone(timezone(timedelta(hours=8))).isoformat()
  require(timing['within_original_deadline'],'Original wall deadline exceeded')
- return {'schema_version':1,**value,'historical_feedback_review':history,'probe_groups':groups,'probe_calls':36,'probe_generated_tokens':sum(p['generated_tokens'] for p in probes),
+ return {'schema_version':1,**value,'historical_feedback_review':history,'residual_feedback_review':residual,'probe_groups':groups,'probe_calls':36,'probe_generated_tokens':sum(p['generated_tokens'] for p in probes),
   'normalization_coverage':coverage,'runtime_settings':runtime,
   'runtime_settings_identical_across_loads':len({json.dumps({k:v for k,v in r.items() if k not in ['block','attempt']},sort_keys=True) for r in runtime})==1,
   'hardware':hardware.summarize(samples),
@@ -282,6 +295,7 @@ def render(root):
  '![Input, action and grade stability](behavior-stability.png)','![First trace divergence](trace-divergence.png)','![Identical-input probes](identical-input-probes.png)','',*identical,'',
  'The exact-input grouping is a preregistered descriptive check over task calls, within each fixed model. It checks decoded output text; the 36 preregistered probes separately compare output token sequences. Neither establishes determinism for all future inputs.','',*coverage,'',
  f"Before any 024 model generation, all {value['historical_feedback_review']['observations_checked']} saved 023 observations passed exact baseline checks; v2 equalized {value['historical_feedback_review']['old_first_residual_pairs_now_equal']} / {value['historical_feedback_review']['old_first_residual_pairs']} prior first residual feedback pairs. This is an offline coverage check, not a prediction that future actions or grades will match. See [frozen historical checks](historical-review.json).",'',
+ f"Post-hoc review of every first residual feedback difference: {value['residual_feedback_review']['categories']}. See [all {value['residual_feedback_review']['reviewed_first_other_feedback_differences']} comparisons and their audited hashes](feedback-residual-review.json). This inspection was added after completion; it did not change any model input or primary metric. Both original feedback prefixes were truncated; after v2, the shorter payload exactly prefixes the longer. This does not establish equality beyond the original output cap.",'',
  'A stable score can still be wrong. A first differing tool response or generated action locates an observed boundary,not the sole cause of the final grade. Both conditions retain the exact 023 file-list date and JS-summary rules. The added intervention combines pytest/unittest aggregate times and optional AVA row-end times; it does not isolate individual fields or remove all variability.','',
  'The raw prefix is capped before normalization; file names, commands, source, return codes and independent grading remain unchanged. Baseline/extended conditions share the same upper bounds,not identical token counts or FLOPs.','',
  f"Actual Beijing time: {value['time']['started_beijing']} to {value['time']['finished_beijing']}; {value['time']['wall_seconds']/3600:.3f} hours within the original deadline. The whole-run time includes model loading, controls and probes; [per-cell costs](repeated-scores.csv) separately count task runtime and generated tokens.",'',

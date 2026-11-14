@@ -5,6 +5,19 @@ ROOT=Path(__file__).resolve().parents[1];EXP=ROOT/'experiments/024-feedback-nois
 spec=importlib.util.spec_from_file_location('feedback024_report',EXP/'report.py')
 report=importlib.util.module_from_spec(spec);spec.loader.exec_module(report)
 RESULTS=EXP/'results/2026-11-14'
+spec=importlib.util.spec_from_file_location('feedback024_residual',EXP/'residual_review.py')
+residual=importlib.util.module_from_spec(spec);spec.loader.exec_module(residual)
+
+class ResidualFeedbackClassification(unittest.TestCase):
+ def test_prefix_diagnosis_requires_two_original_truncation_markers(self):
+  marker=residual.norm.MARKER
+  self.assertEqual(residual.classify('same tail'+marker,'same tail continued'+marker)['category'],'v2_truncated_prefix_length')
+  for a,b in [('same tail','same tail continued'),('same tail'+marker,'same tail continued'),('left'+marker,'right'+marker)]:
+   self.assertEqual(residual.classify(a,b)['category'],'v2_other_text')
+ def test_only_status_rows_can_be_labeled_reordered(self):
+  self.assertEqual(residual.classify('header\n  ✔ first\n  ✔ second\nend\n','header\n  ✔ second\n  ✔ first\nend\n')['category'],'v2_test_row_order')
+  self.assertEqual(residual.classify('x = 1\ny = 2\n','y = 2\nx = 1\n')['category'],'v2_other_text')
+  with self.assertRaises(ValueError):residual.classify('identical','identical')
 
 @unittest.skipUnless(RESULTS.exists(),'024 complete evidence has not been collected; no invented results')
 class ActualFeedbackEvidence(unittest.TestCase):
@@ -40,6 +53,16 @@ class ActualFeedbackEvidence(unittest.TestCase):
     value=json.loads((root/name).read_text());change(value);report.write_json(root/name,value)
     collection=json.loads((root/'collection.json').read_text());collection['files'][name]=report.sha256(root/name)
     report.write_json(root/'collection.json',collection)
+    with self.assertRaises(ValueError):report.assess(root)
+ def test_rehashed_posthoc_diagnostic_cannot_change_scope_or_select_pairs(self):
+  changes=[lambda v:v.update(normalizer_changed=True),lambda v:v.update(source_sha256='0'*64),
+   lambda v:v['pairs'].pop(),lambda v:v['pairs'][0].update(v2_sha256=['0'*64,'1'*64])]
+  for i,change in enumerate(changes):
+   with self.subTest(change=i),tempfile.TemporaryDirectory() as temp:
+    root=Path(temp)/'evidence';shutil.copytree(RESULTS,root)
+    name='feedback-residual-review.json';value=json.loads((root/name).read_text());change(value);report.write_json(root/name,value)
+    collection=json.loads((root/'posthoc-collection.json').read_text());collection['files'][name]=report.sha256(root/name)
+    report.write_json(root/'posthoc-collection.json',collection)
     with self.assertRaises(ValueError):report.assess(root)
 
 if __name__=='__main__':unittest.main()

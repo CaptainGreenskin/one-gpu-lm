@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "post_hoc": true,
+  "preregistered_metric": false,
+  "normalizer_changed": false,
+  "source_sha256": "36dcf9c773fbaa02e58112d91e5c0291b2d1dd926f9e711ddb7b7e88de821db0",
+  "analysis_sha256": "5a41c3d4cea558be66927e3ad8296819d7c6463b60c1c228ef7096fbdc074e86",
+  "execution_audit_sha256": "5d247190ae02c976cc1c75f5d7b987cde057931dc7e68416042795ea453157e1",
+  "normalizer_sha256": "d69757e2364aae7cc27d8dd7fbe70377d3905793b0c7a2cc1e09e53ec770c17a",
+  "reviewed_first_other_feedback_differences": 7,
+  "categories": {
+    "v2_truncated_prefix_length": 7
+  },
+  "pairs": [
+    {
+      "comparison": "within_condition",
+      "model": "action022",
+      "condition": "baseline",
+      "a": "r01-action022-baseline",
+      "b": "r03-action022-baseline",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2349,
+        2341
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ],
+      "v2_line_counts": [
+        86,
+        85
+      ],
+      "delivered_sha256": [
+        "7e66a1e78f9cba7e5f294bf721b35db4b7e4ba569eda31644637856fe60bbd1b",
+        "6a4afe1b04270d5a1f58c062d19c88eea0c4696852b0a343efb4d2296672887e"
+      ]
+    },
+    {
+      "comparison": "within_condition",
+      "model": "action022",
+      "condition": "baseline",
+      "a": "r02-action022-baseline",
+      "b": "r03-action022-baseline",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2349,
+        2341
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ],
+      "v2_line_counts": [
+        86,
+        85
+      ],
+      "delivered_sha256": [
+        "99567881e48ef0649c0a8c184cff1cd6df08c600fe79081f4d4e4d545d8ef224",
+        "6a4afe1b04270d5a1f58c062d19c88eea0c4696852b0a343efb4d2296672887e"
+      ]
+    },
+    {
+      "comparison": "within_condition",
+      "model": "action022",
+      "condition": "extended",
+      "a": "r01-action022-extended",
+      "b": "r02-action022-extended",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2349,
+        2341
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ],
+      "v2_line_counts": [
+        86,
+        85
+      ],
+      "delivered_sha256": [
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ]
+    },
+    {
+      "comparison": "within_condition",
+      "model": "action022",
+      "condition": "extended",
+      "a": "r01-action022-extended",
+      "b": "r03-action022-extended",
+      "id": "p-limit-arguments",
+      "call": 11,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2341,
+        2349
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "a154cef79dfd1bbd963b8703017360ac125bc443cd1cfa95dab6d44d2a74a510",
+        "76fc744bd7bd28147e5386bad6c5215e39dfa82c3576482d4ff13047718cc5a4"
+      ],
+      "v2_line_counts": [
+        91,
+        93
+      ],
+      "delivered_sha256": [
+        "a154cef79dfd1bbd963b8703017360ac125bc443cd1cfa95dab6d44d2a74a510",
+        "76fc744bd7bd28147e5386bad6c5215e39dfa82c3576482d4ff13047718cc5a4"
+      ]
+    },
+    {
+      "comparison": "within_condition",
+      "model": "action022",
+      "condition": "extended",
+      "a": "r02-action022-extended",
+      "b": "r03-action022-extended",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2341,
+        2349
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15",
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315"
+      ],
+      "v2_line_counts": [
+        85,
+        86
+      ],
+      "delivered_sha256": [
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15",
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315"
+      ]
+    },
+    {
+      "comparison": "matched_condition",
+      "model": "action022",
+      "condition": "baseline_vs_extended",
+      "a": "r02-action022-baseline",
+      "b": "r02-action022-extended",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2349,
+        2341
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ],
+      "v2_line_counts": [
+        86,
+        85
+      ],
+      "delivered_sha256": [
+        "99567881e48ef0649c0a8c184cff1cd6df08c600fe79081f4d4e4d545d8ef224",
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15"
+      ]
+    },
+    {
+      "comparison": "matched_condition",
+      "model": "action022",
+      "condition": "baseline_vs_extended",
+      "a": "r03-action022-baseline",
+      "b": "r03-action022-extended",
+      "id": "p-limit-arguments",
+      "call": 10,
+      "outcome_disagreement": false,
+      "action_disagreement": false,
+      "category": "v2_truncated_prefix_length",
+      "both_raw_prefixes_truncated": true,
+      "shorter_v2_payload_is_exact_prefix": true,
+      "v2_payload_chars": [
+        2341,
+        2349
+      ],
+      "v2_line_multisets_equal": false,
+      "changed_region_only_test_status_rows": false,
+      "v2_sha256": [
+        "1b6138ca7c009bb766ffa30eb0714a76618a63c4938ae5f0c8dcc666f1a83c15",
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315"
+      ],
+      "v2_line_counts": [
+        85,
+        86
+      ],
+      "delivered_sha256": [
+        "6a4afe1b04270d5a1f58c062d19c88eea0c4696852b0a343efb4d2296672887e",
+        "dcbd6952cc8d3252c9c3385daa0cc58b4c7c96a733143e456bd356b19f00d315"
+      ]
+    }
+  ],
+  "raw_feedback_public": false,
+  "final_test_opened": false,
+  "model_generations_performed": 0,
+  "commands_executed": 0,
+  "scope": "Post-hoc comparison after the frozen v2 projection. After an initial line-order check did not explain the seven residual pairs, the observed truncation-prefix relation was checked on all seven. No claim about unavailable output beyond the original cap. Test-row order remains unchanged in every actual model run; equal line multisets are not a license to reorder arbitrary source or logs."
+}
