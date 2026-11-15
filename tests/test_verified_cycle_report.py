@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from one_gpu_lm.verified.cycle_report import public_input, summarize, report, hardware
+from one_gpu_lm.verified.cycle_report import public_input, summarize, report, hardware, timeline
 from one_gpu_lm.verified.factorial import ARMS
 
 
@@ -38,6 +38,28 @@ def fixture():
 
 
 class CycleReportContracts(unittest.TestCase):
+    def test_phase_gaps_are_separate_from_measured_pipeline_cost(self):
+        result = timeline({'collection': {'started_epoch': 0, 'finished_epoch': 100},
+                           'candidate': {'started_epoch': 130, 'finished_epoch': 200},
+                           'evaluation': {'started_epoch': 260, 'finished_epoch': 400}})
+        self.assertEqual(result['formal_three_phase_calendar_seconds'], 400)
+        self.assertEqual(result['known_phase_seconds_sum'], 310)
+        self.assertEqual(result['between_phase_wall_seconds'], 90)
+        self.assertEqual(result['overlapping_recorded_phase_seconds'], 0)
+
+    def test_missing_and_overlapping_intervals_cannot_fabricate_elapsed_time(self):
+        phases = {'collection': {'started_epoch': 0, 'finished_epoch': 100},
+                  'candidate': {'started_epoch': 50, 'finished_epoch': 150},
+                  'evaluation': {'started_epoch': 200}}
+        result = timeline(phases)
+        self.assertIsNone(result['formal_three_phase_calendar_seconds'])
+        self.assertIsNone(result['between_phase_wall_seconds'])
+        self.assertEqual(result['known_phase_seconds_sum'], 200)
+        self.assertEqual(result['overlapping_recorded_phase_seconds'], 50)
+        self.assertEqual(result['missing_phase_intervals'], ['evaluation'])
+        phases['evaluation']['finished_epoch'] = 190
+        with self.assertRaises(ValueError): timeline(phases)
+
     def test_public_projection_drops_private_content_and_process_identifiers(self):
         value = fixture(); text = json.dumps(value)
         self.assertNotIn('PRIVATE', text); self.assertNotIn('pid', text)

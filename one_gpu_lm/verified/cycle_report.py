@@ -102,6 +102,35 @@ def phase_cost(receipt):
             'cost_definition': 'single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time'}
 
 
+def timeline(phases):
+    """Separate calendar span, measured phase time, gaps and overlaps.
+
+    A gap can include CPU audit, publication and idle time. It is not evidence
+    of GPU utilization or of a particular cloud billing arrangement.
+    """
+    intervals = []; missing = []
+    for name in ('collection', 'candidate', 'evaluation'):
+        phase = phases[name]; start, end = phase.get('started_epoch'), phase.get('finished_epoch')
+        if start is None or end is None:
+            missing.append(name); continue
+        if not all(math.isfinite(v) for v in (start, end)) or end < start:
+            raise ValueError('Invalid phase wall-clock interval')
+        intervals.append((start, end, name))
+    measured = sum(end-start for start, end, _ in intervals)
+    union = 0.; right = None
+    for start, end, _ in sorted(intervals):
+        union += end-start if right is None or start >= right else max(0, end-right)
+        right = end if right is None else max(right, end)
+    span = max(r[1] for r in intervals)-min(r[0] for r in intervals) if intervals else None
+    return {'all_phase_intervals_present': not missing, 'missing_phase_intervals': missing,
+            'known_phase_seconds_sum': measured,
+            'span_of_complete_phase_intervals_seconds': span,
+            'formal_three_phase_calendar_seconds': None if missing else span,
+            'between_phase_wall_seconds': None if missing else max(0, span-union),
+            'overlapping_recorded_phase_seconds': max(0, measured-union),
+            'interpretation': 'Calendar span covers formal collection, candidate training and evaluation controllers; gaps include audits, publication or idle time. Neither gaps nor phase wall time measure GPU kernel-active time or billing.'}
+
+
 def hardware(samples, receipt):
     start, end = receipt.get('started_epoch'), receipt.get('finished_epoch')
     stamps = [datetime.fromisoformat(r['utc']).timestamp() for r in samples]
@@ -193,6 +222,7 @@ def summarize(bundle):
             totals[arm] += by_id[task_id]['scores'][arm]
         result['outcome_curve'].append({'paired_tasks': n, **{a: totals[a]/n for a in ARMS}})
     result['phases'] = {name: phase_cost(bundle[name]) for name in ('collection', 'candidate', 'evaluation')}
+    result['timeline'] = timeline(bundle)
     result['hardware'] = {name: hardware(bundle.get('telemetry', {}).get(name, []), bundle[name])
                           for name in ('collection', 'candidate', 'evaluation')}
     result['training'] = {
@@ -306,6 +336,13 @@ def report(directory, render=True):
         seconds = value['completed_backend_load_seconds']
         load_time = '未单独记录' if seconds is None else f'{seconds:.2f}'
         lines.append(f'| {phase} | {display} | {loads} | {load_time} |')
+    timing = result['timeline']
+    if timing['all_phase_intervals_present']:
+        lines += ['', f"覆盖三个阶段的日历跨度为 {timing['formal_three_phase_calendar_seconds']/3600:.3f} 小时，已记录程序耗时合计 {timing['known_phase_seconds_sum']/3600:.3f} 小时，阶段之间另有 {timing['between_phase_wall_seconds']/3600:.3f} 小时。后者可能包含审计、发布等待和空闲时间，不能据此推算 GPU 利用率或账单。"]
+        if timing['overlapping_recorded_phase_seconds'] > 1e-6:
+            lines.append(f"阶段时间记录存在 {timing['overlapping_recorded_phase_seconds']:.2f} 秒重叠，程序耗时合计不能当作实际经过时间；重叠单列保留。")
+    else:
+        lines += ['', '部分阶段起止记录缺失，无法给出完整日历跨度和阶段间等待时间；已知耗时仍保留。']
     lines += ['', '卡时口径为本轮正式采集、唯一候选训练和四臂评测各自的控制器起止时间，包含加载、CPU 工具和判分，不等于 GPU 核函数活跃时间。此前试跑、校准和容量检查的成本保留在各自报告，不在此表中重复累计。未完成或未单独计时的后端加载不会被算作零成本，其耗时仍在流水线内；未知在途生成成本单独记录。',
         '训练损失来自依次消费的不同动作样本，不能当作验证能力曲线。结果累计曲线仅按固定顺序加入完整任务，不用于选择 checkpoint。', '',
         '![四臂结果与效应区间](outcomes.png)', '![训练损失和梯度](training.png)', '![三阶段硬件记录](hardware.png)', '',
