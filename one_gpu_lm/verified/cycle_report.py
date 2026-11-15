@@ -58,8 +58,9 @@ def public_input(spec, tasks, audit, collection, candidate, evaluation, curve, u
     for name, phase in [('collection', collection), ('candidate', candidate), ('evaluation', evaluation)]:
         value[name] = pick(phase, PHASE_FIELDS)
         value[name]['telemetry'] = pick(phase.get('telemetry', {}), ('samples', 'errors', 'thread_stopped'))
-        value[name]['backend_lifecycles'] = [pick(r, ('index', 'role', 'started_epoch', 'ready_epoch', 'stopped_epoch'))
-                                            for r in phase.get('backend_lifecycles', [])]
+        if 'backend_lifecycles' in phase:
+            value[name]['backend_lifecycles'] = [pick(r, ('index', 'role', 'started_epoch', 'ready_epoch', 'stopped_epoch'))
+                                                for r in phase['backend_lifecycles']]
     return value
 
 
@@ -89,15 +90,15 @@ def phase_cost(receipt):
     seconds = None if start is None or end is None else end - start
     if seconds is not None and (not math.isfinite(seconds) or seconds < 0):
         raise ValueError('Invalid phase wall-clock interval')
-    loads = receipt.get('backend_lifecycles', [])
-    load_seconds = sum(r['ready_epoch'] - r['started_epoch'] for r in loads if 'ready_epoch' in r)
+    loads = receipt.get('backend_lifecycles')
+    load_seconds = None if loads is None else sum(r['ready_epoch'] - r['started_epoch'] for r in loads if 'ready_epoch' in r)
     return {'pipeline_seconds': seconds,
             'started_utc': None if start is None else datetime.fromtimestamp(start, timezone.utc).isoformat(),
             'finished_utc': None if end is None else datetime.fromtimestamp(end, timezone.utc).isoformat(),
             'reserved_single_gpu_hours': None if seconds is None else seconds / 3600,
-            'complete': receipt.get('complete', False), 'backend_loads': len(loads),
+            'complete': receipt.get('complete', False), 'backend_loads': None if loads is None else len(loads),
             'completed_backend_load_seconds': load_seconds,
-            'incomplete_backend_loads': sum('ready_epoch' not in r for r in loads),
+            'incomplete_backend_loads': None if loads is None else sum('ready_epoch' not in r for r in loads),
             'cost_definition': 'single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time'}
 
 
@@ -301,8 +302,11 @@ def report(directory, render=True):
     for phase, value in result['phases'].items():
         hours = value['reserved_single_gpu_hours']
         display = '未完整记录' if hours is None else f'{hours:.3f}'
-        lines.append(f"| {phase} | {display} | {value['backend_loads']} | {value['completed_backend_load_seconds']:.2f} |")
-    lines += ['', '卡时口径为各阶段起止时间，包含加载、CPU 工具和判分，不等于 GPU 核函数活跃时间。未完成的后端加载不会被算作零成本，其耗时仍在流水线内；未知在途生成成本单独记录。',
+        loads = '未单独记录' if value['backend_loads'] is None else str(value['backend_loads'])
+        seconds = value['completed_backend_load_seconds']
+        load_time = '未单独记录' if seconds is None else f'{seconds:.2f}'
+        lines.append(f'| {phase} | {display} | {loads} | {load_time} |')
+    lines += ['', '卡时口径为本轮正式采集、唯一候选训练和四臂评测各自的控制器起止时间，包含加载、CPU 工具和判分，不等于 GPU 核函数活跃时间。此前试跑、校准和容量检查的成本保留在各自报告，不在此表中重复累计。未完成或未单独计时的后端加载不会被算作零成本，其耗时仍在流水线内；未知在途生成成本单独记录。',
         '训练损失来自依次消费的不同动作样本，不能当作验证能力曲线。结果累计曲线仅按固定顺序加入完整任务，不用于选择 checkpoint。', '',
         '![四臂结果与效应区间](outcomes.png)', '![训练损失和梯度](training.png)', '![三阶段硬件记录](hardware.png)', '',
         '逐题、逐仓库配对见 [pairs.csv](pairs.csv) 和 [families.csv](families.csv)；不修改代码、错误修改、非法提交、超预算以及未完成/未核验状态见 [runs.csv](runs.csv)。动作和结果的重复波动、硬件采样覆盖及所有已知成本见 [summary.json](summary.json)。', '',

@@ -1,4 +1,3 @@
-import copy
 import json
 from pathlib import Path
 import tempfile
@@ -66,13 +65,16 @@ class CycleReportContracts(unittest.TestCase):
         self.assertEqual(result['conclusion'], 'not_achieved')
 
     def test_incomplete_loads_keep_pipeline_time_and_no_hardware_is_not_zero_usage(self):
-        result = summarize(fixture())
+        value = fixture(); value['candidate'].pop('backend_lifecycles')
+        result = summarize(value)
         cost = result['phases']['evaluation']
         self.assertEqual(cost['reserved_single_gpu_hours'], 1)
         self.assertEqual(cost['completed_backend_load_seconds'], 20)
         self.assertEqual(cost['incomplete_backend_loads'], 1)
         self.assertIsNone(result['hardware']['evaluation']['utilization_percent']['mean'])
         self.assertEqual(result['hardware']['evaluation']['collection_errors'], 2)
+        self.assertIsNone(result['phases']['candidate']['backend_loads'])
+        self.assertIsNone(result['phases']['candidate']['completed_backend_load_seconds'])
 
     def test_action_instability_is_visible_with_stable_failure_scores(self):
         result = summarize(fixture())
