@@ -15,6 +15,7 @@ from one_gpu_lm.models.verify import verify_model
 from .candidate_data import select, windows
 from .rollout import atomic
 from .tasks import relative
+from .runtime_identity import verify as verify_environment
 
 
 def validate_recipe(profile, spec):
@@ -81,6 +82,9 @@ def run(root, protocol_path):
         result['stage']=stage;atomic(out/'result.json',result)
     save('loading');telemetry=Telemetry(out/'telemetry.csv',1);telemetry.start()
     try:
+        environment_path=root/relative(protocol['environment_path'])
+        write_json(out/'environment.json',verify_environment(json.loads(environment_path.read_text())))
+        result['expected_environment_sha256']=sha256(environment_path)
         import torch
         from peft import LoraConfig, PeftModel, TaskType, get_peft_model
         runtime_info=json.loads((root/'private/parent-runtime.json').read_text())

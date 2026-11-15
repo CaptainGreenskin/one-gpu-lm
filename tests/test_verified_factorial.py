@@ -38,6 +38,14 @@ class FactorialContracts(unittest.TestCase):
     def test_duplicate_run_is_not_averaged_as_an_extra_repeat(self):
         self.rows.append(copy.deepcopy(self.rows[0]))
         with self.assertRaises(ValueError):analyze(self.rows,self.tasks,self.spec,True,True)
+    def test_unverifiable_score_is_excluded_from_pairs_but_retains_cost(self):
+        self.rows[0].update(audit_passed=False)
+        self.rows[0].pop('success_within_budget')
+        value=analyze(self.rows,self.tasks,self.spec,False,True)
+        self.assertFalse(value['development_parameter_gate_passed'])
+        self.assertEqual(value['paired_tasks'],3)
+        self.assertEqual(value['cost']['generated_tokens'],240)
+        self.assertEqual(value['cost']['unverified_score_runs'],1)
 
 
 if __name__=='__main__':unittest.main()

@@ -49,14 +49,18 @@ def analyze(rows, tasks, spec, audit_passed, frozen_inputs_unchanged):
     all_accounted=(set(seen)==expected and all(r.get('complete',False) and not r.get('unknown_inflight_generation_cost',False) for r in rows))
     cost={'attempted_calls':sum(r.get('attempted_calls',0) for r in rows),
           'generated_tokens':sum(r.get('generated_tokens',0) for r in rows),
+          'input_tokens':sum(r.get('input_tokens',0) for r in rows),
           'task_seconds':sum(r.get('seconds',0) for r in rows),
           'partial_runs':sum(not r.get('complete',False) for r in rows),
           'unknown_inflight_runs':sum(bool(r.get('unknown_inflight_generation_cost',False)) for r in rows),
+          'unverified_score_runs':sum(r.get('complete',False) and (r.get('audit_passed') is False or 'success_within_budget' not in r) for r in rows),
+          'missing_or_partial_task_duration_runs':sum(not r.get('complete',False) or 'seconds' not in r for r in rows),
           'missing_runs':len(expected-set(seen))}
     paired=[]
     for task in tasks:
         group=[seen.get((task['id'],rep,arm)) for rep in range(dev['repetitions']) for arm in ARMS]
-        if any(r is None or not r.get('complete',False) or r.get('unknown_inflight_generation_cost',False) for r in group):
+        if any(r is None or not r.get('complete',False) or r.get('unknown_inflight_generation_cost',False)
+               or r.get('audit_passed') is False or 'success_within_budget' not in r for r in group):
             continue
         scores={arm:sum(bool(seen[task['id'],rep,arm]['success_within_budget']) for rep in range(dev['repetitions']))/dev['repetitions'] for arm in ARMS}
         paired.append({'id':task['id'],'repository':task['repository'],'family':task['family'],
