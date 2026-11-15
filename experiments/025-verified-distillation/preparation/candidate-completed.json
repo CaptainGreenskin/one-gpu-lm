@@ -1,0 +1,91 @@
+{
+  "result": {
+    "schema_version": 1,
+    "stage": "completed",
+    "complete": true,
+    "started_epoch": 1794725951.5332773,
+    "started_utc": "2026-11-15T06:59:11.533292+00:00",
+    "protocol_sha256": "f15c6f3e443be0ab92ebd61a525e7767bf90d2d4d926ac5c23c01a5a6ef88c1d",
+    "profile_sha256": "73836093e8f59debe1ce44fb3e50d1c065e3fbcc73c2c86b15917fab7cbf78f0",
+    "data_sha256": "5cf7b01f18ba77d935907a96f614553fe05aca395f7cdd360bb6cbf62e8a3d37",
+    "optimizer_steps": 122,
+    "action_records_consumed": 971,
+    "development_scores": 0,
+    "final_test_opened": false,
+    "candidate_count": 1,
+    "weights_public": false,
+    "publication_commit": "7d89971b267d7194a9a45e81a6f2be2e09add0f5",
+    "expected_environment_sha256": "ed23677f07208afb26a77ad5631e199dd08e09c71f08a8d46052289f2c3f65c7",
+    "trainable_parameters": 58363904,
+    "selected_records": 971,
+    "full_episodes": 127,
+    "training_seconds": 2199.0951675010147,
+    "input_tokens": 2189437,
+    "supervised_tokens": 60299,
+    "peak_allocated_bytes": 84692301312,
+    "peak_reserved_bytes": 98425634816,
+    "frozen_sample_unchanged": true,
+    "frozen_gradients_absent": true,
+    "adapter_changed": true,
+    "all_selected_records_consumed": true,
+    "saved_reload_greedy_ids_equal": true,
+    "reload_probe_ids_sha256": "85bc9cf42377b1c598f4de397cdf24a9b0c04e71834d0f61fcd49e2e925f356c",
+    "telemetry": {
+      "samples": 458,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "finished_epoch": 1794728260.5100977,
+    "finished_utc": "2026-11-15T07:37:40.510101+00:00",
+    "frozen_files_unchanged": true
+  },
+  "supervisor": {
+    "started_epoch": 1794725951.4057071,
+    "protocol_sha256": "f15c6f3e443be0ab92ebd61a525e7767bf90d2d4d926ac5c23c01a5a6ef88c1d",
+    "complete": true,
+    "timed_out": false,
+    "worker_returncode": 0,
+    "finished_epoch": 1794728262.4395247,
+    "finished_utc": "2026-11-15T07:37:42.439553+00:00",
+    "candidate_eligible": true
+  },
+  "adapter": {
+    "base_model": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "weights_public": false,
+    "files": {
+      "adapter_model.safetensors": "411f59f117cc50bd9eba69e85c5a55005c75b2c7526711f47e608205034fe3ea",
+      "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+      "README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067"
+    }
+  },
+  "postrun_integrity": {
+    "checks": {
+      "supervisor_completed_normally": true,
+      "reported_candidate_complete": true,
+      "all_selected_records_same_order": true,
+      "unique_records": true,
+      "whole_episode_count": true,
+      "no_record_exclusion_or_truncation": true,
+      "all_updates_accounted": true,
+      "actual_accumulation_windows": true,
+      "token_counts_match": true,
+      "finite_losses_gradients": true,
+      "adapter_files_match": true,
+      "frozen_files_still_match": true,
+      "reloaded_training_probe_matches": true,
+      "frozen_parameter_sample_unchanged": true,
+      "frozen_parameters_have_no_gradients": true,
+      "adapter_changed": true,
+      "no_heldout_work": true
+    },
+    "passed": true,
+    "raw_result_sha256": "7bcfe9f9c1658601c763eae02fe1cef98217f275e381e58eb6f773fd3f51def9",
+    "raw_selection_sha256": "efdc378f4b8525f439a02f0504ff8d342229c3c58c00fa86e8b9bfd95ae5ebfc",
+    "raw_curve_sha256": "cddcf8ec79ad9f2e8e4dc5f44ecbaa1761fafe6ccebc96378ec8534d3a2d4d32",
+    "raw_updates_sha256": "eeffe05ebce43ae73f9b504e22d53522383d17fa039731256370c2c8f705f5dd",
+    "optimizer_steps": 122,
+    "last_window_records": 3,
+    "private_weights_exported": false
+  }
+}
