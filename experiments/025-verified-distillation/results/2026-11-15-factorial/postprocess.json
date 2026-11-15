@@ -1,0 +1,20 @@
+{
+  "started_epoch": 1794786149.513267,
+  "finished_epoch": 1794786186.5248532,
+  "stage": "audited",
+  "complete": true,
+  "audit_passed": true,
+  "audit_checks": {
+    "all_runs_complete": true,
+    "all_run_audits_passed": true,
+    "frozen_inputs_unchanged": true,
+    "controller_protocol_identity": true,
+    "supervisor_completed_without_timeout": true,
+    "same_registered_model_interpreter": true
+  },
+  "audited_runs": 720,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false
+}

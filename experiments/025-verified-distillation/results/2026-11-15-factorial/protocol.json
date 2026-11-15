@@ -1,0 +1,4451 @@
+{
+  "schema_version": 1,
+  "stage": "registered_factorial_development_preregistration",
+  "cycle_spec": "experiments/025-verified-distillation/cycle-spec.json",
+  "candidate_protocol": "experiments/025-verified-distillation/candidate-protocol.json",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "model_manifest_path": "experiments/011-coding-model-selection/weights-manifest.json",
+  "evaluation_profile_path": "experiments/025-verified-distillation/teacher-profile.json",
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "environment_path": "experiments/025-verified-distillation/preparation/model-environment-observed.json",
+  "data_directory": "private/development-data",
+  "training_sources_path": "private/training-pool-data/sources.json",
+  "previous_families_path": "private/development-data/exclusion-families.json",
+  "admission_path": "runs/development-admission-002/admission.json",
+  "candidate_result": "runs/candidate-001/result.json",
+  "candidate_supervisor": "private/candidate-supervisor.json",
+  "adapter_directory": "runs/candidate-001/private/adapter",
+  "all_adapter_files_sha256": {
+    "adapter_model.safetensors": "411f59f117cc50bd9eba69e85c5a55005c75b2c7526711f47e608205034fe3ea",
+    "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+    "README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067"
+  },
+  "adapter_sha256": {
+    "adapter_model.safetensors": "411f59f117cc50bd9eba69e85c5a55005c75b2c7526711f47e608205034fe3ea"
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended; prefix truncation before normalization, unchanged rules",
+  "schedule": [
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-entity-decoding-base_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-entity-decoding-base_guard"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-entity-decoding-student_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-entity-decoding-student_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-wheel-build-number-base_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-wheel-build-number-student_current"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-wheel-build-number-student_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-wheel-build-number-base_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-log-opinion-student_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-log-opinion-student_guard"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-log-opinion-base_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-log-opinion-base_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-preserve-release-zeros-student_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-preserve-release-zeros-base_current"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-preserve-release-zeros-base_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-preserve-release-zeros-student_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-percent-case-base_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-percent-case-base_guard"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-percent-case-student_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-percent-case-student_guard"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-append-escape-base_guard"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-append-escape-student_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-append-escape-student_guard"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-append-escape-base_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-parent-path-segment-student_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-parent-path-segment-student_guard"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-parent-path-segment-base_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-parent-path-segment-base_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-ampersand-student_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-ampersand-base_current"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-ampersand-base_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-ampersand-student_current"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-name-repeated-separators-base_current"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-name-repeated-separators-base_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-name-repeated-separators-student_current"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-name-repeated-separators-student_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-missing-micro-base_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-missing-micro-student_current"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-missing-micro-student_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-missing-micro-base_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-port-upper-bound-student_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-port-upper-bound-student_guard"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-port-upper-bound-base_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-port-upper-bound-base_guard"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-public-version-local-student_guard"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-public-version-local-base_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-public-version-local-base_guard"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-public-version-local-student_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-name-dot-base_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-name-dot-base_guard"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-name-dot-student_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-name-dot-student_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-hyphenated-sdist-base_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-hyphenated-sdist-student_current"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-hyphenated-sdist-student_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-hyphenated-sdist-base_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-authority-userinfo-student_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-authority-userinfo-student_guard"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-authority-userinfo-base_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-authority-userinfo-base_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-return-object-student_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-return-object-base_current"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-return-object-base_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-return-object-student_current"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-relative-site-paths-base_current"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-relative-site-paths-base_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-relative-site-paths-student_current"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-relative-site-paths-student_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-silent-none-base_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-silent-none-student_current"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-silent-none-student_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-silent-none-base_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-release-prerelease-null-student_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-release-prerelease-null-student_guard"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-release-prerelease-null-base_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-release-prerelease-null-base_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-pattern-array-student_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-pattern-array-base_current"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-pattern-array-base_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-pattern-array-student_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-soft-string-type-base_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-soft-string-type-base_guard"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-soft-string-type-student_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-soft-string-type-student_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-path-prefix-base_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-path-prefix-student_current"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-path-prefix-student_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-path-prefix-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-site-data-order-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-site-data-order-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-site-data-order-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-site-data-order-base_guard"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-auth-first-separator-student_guard"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-auth-first-separator-base_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-auth-first-separator-base_guard"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-auth-first-separator-student_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-version-component-base_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-version-component-base_guard"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-version-component-student_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-version-component-student_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-end-anchor-base_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-end-anchor-student_current"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-end-anchor-student_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-end-anchor-base_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-zero-port-student_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-zero-port-student_guard"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-zero-port-base_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-zero-port-base_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-join-escape-student_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-join-escape-base_current"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-join-escape-base_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-join-escape-student_current"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-negated-pattern-base_current"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-negated-pattern-base_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-negated-pattern-student_current"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-negated-pattern-student_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-replacement-escape-base_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-replacement-escape-student_current"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-replacement-escape-student_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-replacement-escape-base_current"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-ignore-pattern-student_current"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-ignore-pattern-student_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-ignore-pattern-base_current"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-ignore-pattern-base_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-scheme-case-student_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-scheme-case-base_current"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-scheme-case-base_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-scheme-case-student_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-numeric-before-text-base_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-numeric-before-text-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-numeric-before-text-student_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-numeric-before-text-student_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-prepend-escape-base_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-prepend-escape-student_current"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-prepend-escape-student_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-prepend-escape-base_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-build-main-precedence-student_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-build-main-precedence-student_guard"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-build-main-precedence-base_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-build-main-precedence-base_guard"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-descending-sort-student_guard"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-descending-sort-base_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-descending-sort-base_guard"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-descending-sort-student_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-base-version-epoch-base_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-base-version-epoch-base_guard"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-base-version-epoch-student_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-base-version-epoch-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-numeric-identifiers-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-numeric-identifiers-student_current"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-numeric-identifiers-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-numeric-identifiers-base_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-html-protocol-student_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-html-protocol-student_guard"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-html-protocol-base_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-html-protocol-base_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-result-callback-student_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-result-callback-base_current"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-result-callback-base_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-result-callback-student_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-basename-match-base_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-basename-match-base_guard"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-basename-match-student_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-basename-match-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-coerce-rtl-reset-base_guard"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-coerce-rtl-reset-student_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-coerce-rtl-reset-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-coerce-rtl-reset-base_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-data-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-data-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-data-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-data-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-config-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-config-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-config-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-multipath-selection-base_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-multipath-selection-base_guard"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-multipath-selection-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-multipath-selection-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-site-config-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-site-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-site-config-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-site-config-key-base_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-major-difference-student_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-major-difference-student_guard"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-major-difference-base_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-major-difference-base_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-wildcard-valid-range-student_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-wildcard-valid-range-base_current"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-wildcard-valid-range-base_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-wildcard-valid-range-student_current"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-max-satisfying-base_current"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-max-satisfying-base_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-max-satisfying-student_current"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-max-satisfying-student_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-cache-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-cache-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-cache-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-cache-key-base_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-semver-coerce-default-minor-student_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-semver-coerce-default-minor-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-semver-coerce-default-minor-base_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-semver-coerce-default-minor-base_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-empty-fragment-student_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-empty-fragment-base_current"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-empty-fragment-base_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-empty-fragment-student_current"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-prerelease-union-base_current"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-prerelease-union-base_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-prerelease-union-student_current"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-prerelease-union-student_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-markup-tag-whitespace-base_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-markup-tag-whitespace-student_current"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-markup-tag-whitespace-student_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-markup-tag-whitespace-base_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-url-empty-query-student_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-url-empty-query-student_guard"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-url-empty-query-base_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-url-empty-query-base_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-match-callback-metadata-student_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-match-callback-metadata-base_current"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-match-callback-metadata-base_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-match-callback-metadata-student_current"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-nocase-flag-base_current"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-nocase-flag-base_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-nocase-flag-student_current"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-nocase-flag-student_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-picomatch-debug-regex-errors-base_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-picomatch-debug-regex-errors-student_current"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-picomatch-debug-regex-errors-student_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-picomatch-debug-regex-errors-base_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-platformdirs-state-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-platformdirs-state-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-platformdirs-state-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-platformdirs-state-key-base_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 0,
+      "arm": "student_guard",
+      "run_id": "r0-packaging-normalized-full-name-student_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 0,
+      "arm": "base_current",
+      "run_id": "r0-packaging-normalized-full-name-base_current"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 0,
+      "arm": "base_guard",
+      "run_id": "r0-packaging-normalized-full-name-base_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 0,
+      "arm": "student_current",
+      "run_id": "r0-packaging-normalized-full-name-student_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-state-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-state-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-state-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-state-key-base_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-append-escape-student_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-append-escape-student_guard"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-append-escape-base_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-append-escape-base_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-wildcard-valid-range-student_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-wildcard-valid-range-base_current"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-wildcard-valid-range-base_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-wildcard-valid-range-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-multipath-selection-base_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-multipath-selection-base_guard"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-multipath-selection-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-multipath-selection-student_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-join-escape-base_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-join-escape-student_current"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-join-escape-student_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-join-escape-base_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-empty-query-student_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-empty-query-student_guard"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-empty-query-base_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-empty-query-base_guard"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-soft-string-type-student_guard"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-soft-string-type-base_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-soft-string-type-base_guard"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-soft-string-type-student_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-public-version-local-base_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-public-version-local-base_guard"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-public-version-local-student_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-public-version-local-student_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-prepend-escape-base_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-prepend-escape-student_current"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-prepend-escape-student_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-prepend-escape-base_current"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-cache-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-cache-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-cache-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-cache-key-base_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-wheel-build-number-student_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-wheel-build-number-base_current"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-wheel-build-number-base_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-wheel-build-number-student_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-config-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-config-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-config-key-student_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-debug-regex-errors-base_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-debug-regex-errors-student_current"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-debug-regex-errors-student_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-debug-regex-errors-base_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-release-prerelease-null-student_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-release-prerelease-null-student_guard"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-release-prerelease-null-base_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-release-prerelease-null-base_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-hyphenated-sdist-student_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-hyphenated-sdist-base_current"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-hyphenated-sdist-base_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-hyphenated-sdist-student_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-auth-first-separator-base_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-auth-first-separator-base_guard"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-auth-first-separator-student_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-auth-first-separator-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-site-config-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-site-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-site-config-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-site-config-key-base_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-entity-decoding-student_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-entity-decoding-student_guard"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-entity-decoding-base_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-entity-decoding-base_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-ampersand-student_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-ampersand-base_current"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-ampersand-base_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-ampersand-student_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-major-difference-base_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-major-difference-base_guard"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-major-difference-student_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-major-difference-student_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-prerelease-union-base_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-prerelease-union-student_current"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-prerelease-union-student_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-prerelease-union-base_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-descending-sort-student_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-descending-sort-student_guard"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-descending-sort-base_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-descending-sort-base_guard"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-percent-case-student_guard"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-percent-case-base_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-percent-case-base_guard"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-percent-case-student_current"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-return-object-base_current"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-return-object-base_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-return-object-student_current"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-return-object-student_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-name-repeated-separators-base_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-name-repeated-separators-student_current"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-name-repeated-separators-student_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-name-repeated-separators-base_current"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-match-callback-metadata-student_current"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-match-callback-metadata-student_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-match-callback-metadata-base_current"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-match-callback-metadata-base_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-result-callback-student_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-result-callback-base_current"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-result-callback-base_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-result-callback-student_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-port-upper-bound-base_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-port-upper-bound-base_guard"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-port-upper-bound-student_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-port-upper-bound-student_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-relative-site-paths-base_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-relative-site-paths-student_current"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-relative-site-paths-student_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-relative-site-paths-base_current"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-tag-whitespace-student_current"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-tag-whitespace-student_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-tag-whitespace-base_current"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-tag-whitespace-base_guard"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-html-protocol-student_guard"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-html-protocol-base_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-html-protocol-base_guard"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-html-protocol-student_current"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-preserve-release-zeros-base_current"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-preserve-release-zeros-base_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-preserve-release-zeros-student_current"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-preserve-release-zeros-student_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-max-satisfying-base_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-max-satisfying-student_current"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-max-satisfying-student_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-max-satisfying-base_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-log-opinion-student_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-log-opinion-student_guard"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-log-opinion-base_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-log-opinion-base_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-empty-fragment-student_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-empty-fragment-base_current"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-empty-fragment-base_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-empty-fragment-student_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-version-component-base_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-version-component-base_guard"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-version-component-student_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-version-component-student_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-negated-pattern-base_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-negated-pattern-student_current"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-negated-pattern-student_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-negated-pattern-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-site-data-order-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-site-data-order-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-site-data-order-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-site-data-order-base_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-missing-micro-student_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-missing-micro-base_current"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-missing-micro-base_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-missing-micro-student_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-coerce-default-minor-base_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-coerce-default-minor-base_guard"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-coerce-default-minor-student_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-coerce-default-minor-student_guard"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-platformdirs-data-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-platformdirs-data-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-platformdirs-data-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-platformdirs-data-key-base_current"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-pattern-array-student_current"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-pattern-array-student_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-pattern-array-base_current"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-pattern-array-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-numeric-identifiers-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-numeric-identifiers-base_current"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-numeric-identifiers-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-numeric-identifiers-student_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-zero-port-base_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-zero-port-base_guard"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-zero-port-student_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-zero-port-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-numeric-before-text-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-numeric-before-text-student_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-numeric-before-text-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-numeric-before-text-base_current"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-end-anchor-student_current"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-end-anchor-student_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-end-anchor-base_current"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-end-anchor-base_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-nocase-flag-student_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-nocase-flag-base_current"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-nocase-flag-base_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-nocase-flag-student_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-basename-match-base_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-basename-match-base_guard"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-basename-match-student_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-basename-match-student_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-path-prefix-base_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-path-prefix-student_current"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-path-prefix-student_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-path-prefix-base_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-coerce-rtl-reset-student_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-coerce-rtl-reset-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-coerce-rtl-reset-base_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-coerce-rtl-reset-base_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-normalized-full-name-student_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-normalized-full-name-base_current"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-normalized-full-name-base_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-normalized-full-name-student_current"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-scheme-case-base_current"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-scheme-case-base_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-scheme-case-student_current"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-scheme-case-student_guard"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-semver-build-main-precedence-base_guard"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-semver-build-main-precedence-student_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-semver-build-main-precedence-student_guard"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-semver-build-main-precedence-base_current"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-replacement-escape-student_current"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-replacement-escape-student_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-replacement-escape-base_current"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-replacement-escape-base_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-picomatch-ignore-pattern-student_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-picomatch-ignore-pattern-base_current"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-picomatch-ignore-pattern-base_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-picomatch-ignore-pattern-student_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-parent-path-segment-base_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-parent-path-segment-base_guard"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-parent-path-segment-student_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-parent-path-segment-student_guard"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-name-dot-base_guard"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-name-dot-student_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-name-dot-student_guard"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-name-dot-base_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-packaging-base-version-epoch-student_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-packaging-base-version-epoch-student_guard"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-packaging-base-version-epoch-base_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-packaging-base-version-epoch-base_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-markup-silent-none-student_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-markup-silent-none-base_current"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-markup-silent-none-base_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-markup-silent-none-student_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 1,
+      "arm": "base_current",
+      "run_id": "r1-url-authority-userinfo-base_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 1,
+      "arm": "base_guard",
+      "run_id": "r1-url-authority-userinfo-base_guard"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 1,
+      "arm": "student_current",
+      "run_id": "r1-url-authority-userinfo-student_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 1,
+      "arm": "student_guard",
+      "run_id": "r1-url-authority-userinfo-student_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-wheel-build-number-student_current"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-wheel-build-number-student_guard"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-wheel-build-number-base_current"
+    },
+    {
+      "task_id": "packaging-wheel-build-number",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-wheel-build-number-base_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-scheme-case-student_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-scheme-case-base_current"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-scheme-case-base_guard"
+    },
+    {
+      "task_id": "url-scheme-case",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-scheme-case-student_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-append-escape-base_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-append-escape-base_guard"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-append-escape-student_current"
+    },
+    {
+      "task_id": "markup-append-escape",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-append-escape-student_guard"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-log-opinion-base_guard"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-log-opinion-student_current"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-log-opinion-student_guard"
+    },
+    {
+      "task_id": "platformdirs-log-opinion",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-log-opinion-base_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-public-version-local-student_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-public-version-local-student_guard"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-public-version-local-base_current"
+    },
+    {
+      "task_id": "packaging-public-version-local",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-public-version-local-base_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-preserve-release-zeros-student_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-preserve-release-zeros-base_current"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-preserve-release-zeros-base_guard"
+    },
+    {
+      "task_id": "packaging-preserve-release-zeros",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-preserve-release-zeros-student_current"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-prepend-escape-base_current"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-prepend-escape-base_guard"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-prepend-escape-student_current"
+    },
+    {
+      "task_id": "markup-prepend-escape",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-prepend-escape-student_guard"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-base-version-epoch-base_guard"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-base-version-epoch-student_current"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-base-version-epoch-student_guard"
+    },
+    {
+      "task_id": "packaging-base-version-epoch",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-base-version-epoch-base_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-state-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-state-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-state-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-state-key",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-state-key-base_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-debug-regex-errors-student_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-debug-regex-errors-base_current"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-debug-regex-errors-base_guard"
+    },
+    {
+      "task_id": "picomatch-debug-regex-errors",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-debug-regex-errors-student_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-parent-path-segment-base_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-parent-path-segment-base_guard"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-parent-path-segment-student_current"
+    },
+    {
+      "task_id": "url-parent-path-segment",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-parent-path-segment-student_guard"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-zero-port-base_guard"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-zero-port-student_current"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-zero-port-student_guard"
+    },
+    {
+      "task_id": "url-zero-port",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-zero-port-base_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-coerce-rtl-reset-student_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-coerce-rtl-reset-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-coerce-rtl-reset-base_current"
+    },
+    {
+      "task_id": "semver-coerce-rtl-reset",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-coerce-rtl-reset-base_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-relative-site-paths-student_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-relative-site-paths-base_current"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-relative-site-paths-base_guard"
+    },
+    {
+      "task_id": "platformdirs-relative-site-paths",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-relative-site-paths-student_current"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-empty-fragment-base_current"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-empty-fragment-base_guard"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-empty-fragment-student_current"
+    },
+    {
+      "task_id": "url-empty-fragment",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-empty-fragment-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-site-data-order-base_guard"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-site-data-order-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-site-data-order-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-data-order",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-site-data-order-base_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-data-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-data-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-data-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-data-key",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-data-key-base_guard"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-release-prerelease-null-student_guard"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-release-prerelease-null-base_current"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-release-prerelease-null-base_guard"
+    },
+    {
+      "task_id": "semver-release-prerelease-null",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-release-prerelease-null-student_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-soft-string-type-base_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-soft-string-type-base_guard"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-soft-string-type-student_current"
+    },
+    {
+      "task_id": "markup-soft-string-type",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-soft-string-type-student_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-wildcard-valid-range-base_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-wildcard-valid-range-student_current"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-wildcard-valid-range-student_guard"
+    },
+    {
+      "task_id": "semver-wildcard-valid-range",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-wildcard-valid-range-base_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-numeric-before-text-student_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-numeric-before-text-student_guard"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-numeric-before-text-base_current"
+    },
+    {
+      "task_id": "semver-numeric-before-text",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-numeric-before-text-base_guard"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-empty-query-student_guard"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-empty-query-base_current"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-empty-query-base_guard"
+    },
+    {
+      "task_id": "url-empty-query",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-empty-query-student_current"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-join-escape-base_current"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-join-escape-base_guard"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-join-escape-student_current"
+    },
+    {
+      "task_id": "markup-join-escape",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-join-escape-student_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-max-satisfying-base_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-max-satisfying-student_current"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-max-satisfying-student_guard"
+    },
+    {
+      "task_id": "semver-max-satisfying",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-max-satisfying-base_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-build-main-precedence-student_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-build-main-precedence-student_guard"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-build-main-precedence-base_current"
+    },
+    {
+      "task_id": "semver-build-main-precedence",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-build-main-precedence-base_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-ignore-pattern-student_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-ignore-pattern-base_current"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-ignore-pattern-base_guard"
+    },
+    {
+      "task_id": "picomatch-ignore-pattern",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-ignore-pattern-student_current"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-normalized-full-name-base_current"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-normalized-full-name-base_guard"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-normalized-full-name-student_current"
+    },
+    {
+      "task_id": "packaging-normalized-full-name",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-normalized-full-name-student_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-nocase-flag-base_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-nocase-flag-student_current"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-nocase-flag-student_guard"
+    },
+    {
+      "task_id": "picomatch-nocase-flag",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-nocase-flag-base_current"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-path-prefix-student_current"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-path-prefix-student_guard"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-path-prefix-base_current"
+    },
+    {
+      "task_id": "url-path-prefix",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-path-prefix-base_guard"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-entity-decoding-student_guard"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-entity-decoding-base_current"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-entity-decoding-base_guard"
+    },
+    {
+      "task_id": "markup-entity-decoding",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-entity-decoding-student_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-name-dot-base_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-name-dot-base_guard"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-name-dot-student_current"
+    },
+    {
+      "task_id": "packaging-name-dot",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-name-dot-student_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-return-object-base_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-return-object-student_current"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-return-object-student_guard"
+    },
+    {
+      "task_id": "picomatch-return-object",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-return-object-base_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-descending-sort-student_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-descending-sort-student_guard"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-descending-sort-base_current"
+    },
+    {
+      "task_id": "semver-descending-sort",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-descending-sort-base_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-match-callback-metadata-student_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-match-callback-metadata-base_current"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-match-callback-metadata-base_guard"
+    },
+    {
+      "task_id": "picomatch-match-callback-metadata",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-match-callback-metadata-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-multipath-selection-base_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-multipath-selection-base_guard"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-multipath-selection-student_current"
+    },
+    {
+      "task_id": "platformdirs-multipath-selection",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-multipath-selection-student_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-prerelease-union-base_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-prerelease-union-student_current"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-prerelease-union-student_guard"
+    },
+    {
+      "task_id": "packaging-prerelease-union",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-prerelease-union-base_current"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-missing-micro-student_current"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-missing-micro-student_guard"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-missing-micro-base_current"
+    },
+    {
+      "task_id": "packaging-missing-micro",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-missing-micro-base_guard"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-coerce-default-minor-student_guard"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-coerce-default-minor-base_current"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-coerce-default-minor-base_guard"
+    },
+    {
+      "task_id": "semver-coerce-default-minor",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-coerce-default-minor-student_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-authority-userinfo-base_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-authority-userinfo-base_guard"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-authority-userinfo-student_current"
+    },
+    {
+      "task_id": "url-authority-userinfo",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-authority-userinfo-student_guard"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-port-upper-bound-base_guard"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-port-upper-bound-student_current"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-port-upper-bound-student_guard"
+    },
+    {
+      "task_id": "url-port-upper-bound",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-port-upper-bound-base_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-html-protocol-student_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-html-protocol-student_guard"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-html-protocol-base_current"
+    },
+    {
+      "task_id": "markup-html-protocol",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-html-protocol-base_guard"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-major-difference-student_guard"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-major-difference-base_current"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-major-difference-base_guard"
+    },
+    {
+      "task_id": "semver-major-difference",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-major-difference-student_current"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-hyphenated-sdist-base_current"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-hyphenated-sdist-base_guard"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-hyphenated-sdist-student_current"
+    },
+    {
+      "task_id": "packaging-hyphenated-sdist",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-hyphenated-sdist-student_guard"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-basename-match-base_guard"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-basename-match-student_current"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-basename-match-student_guard"
+    },
+    {
+      "task_id": "picomatch-basename-match",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-basename-match-base_current"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-result-callback-student_current"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-result-callback-student_guard"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-result-callback-base_current"
+    },
+    {
+      "task_id": "picomatch-result-callback",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-result-callback-base_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-replacement-escape-student_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-replacement-escape-base_current"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-replacement-escape-base_guard"
+    },
+    {
+      "task_id": "markup-replacement-escape",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-replacement-escape-student_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-percent-case-base_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-percent-case-base_guard"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-percent-case-student_current"
+    },
+    {
+      "task_id": "url-percent-case",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-percent-case-student_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-end-anchor-base_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-end-anchor-student_current"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-end-anchor-student_guard"
+    },
+    {
+      "task_id": "picomatch-end-anchor",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-end-anchor-base_current"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-silent-none-student_current"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-silent-none-student_guard"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-silent-none-base_current"
+    },
+    {
+      "task_id": "markup-silent-none",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-silent-none-base_guard"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-version-component-student_guard"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-version-component-base_current"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-version-component-base_guard"
+    },
+    {
+      "task_id": "platformdirs-version-component",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-version-component-student_current"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-ampersand-base_current"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-ampersand-base_guard"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-ampersand-student_current"
+    },
+    {
+      "task_id": "markup-ampersand",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-ampersand-student_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-markup-tag-whitespace-base_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-markup-tag-whitespace-student_current"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-markup-tag-whitespace-student_guard"
+    },
+    {
+      "task_id": "markup-tag-whitespace",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-markup-tag-whitespace-base_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-config-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-config-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-config-key",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-config-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-cache-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-cache-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-cache-key-base_guard"
+    },
+    {
+      "task_id": "platformdirs-cache-key",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-cache-key-student_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-url-auth-first-separator-base_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-url-auth-first-separator-base_guard"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-url-auth-first-separator-student_current"
+    },
+    {
+      "task_id": "url-auth-first-separator",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-url-auth-first-separator-student_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-pattern-array-base_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-pattern-array-student_current"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-pattern-array-student_guard"
+    },
+    {
+      "task_id": "picomatch-pattern-array",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-pattern-array-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-platformdirs-site-config-key-student_current"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-platformdirs-site-config-key-student_guard"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-platformdirs-site-config-key-base_current"
+    },
+    {
+      "task_id": "platformdirs-site-config-key",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-platformdirs-site-config-key-base_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-packaging-name-repeated-separators-student_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-packaging-name-repeated-separators-base_current"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-packaging-name-repeated-separators-base_guard"
+    },
+    {
+      "task_id": "packaging-name-repeated-separators",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-packaging-name-repeated-separators-student_current"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-semver-numeric-identifiers-base_current"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-semver-numeric-identifiers-base_guard"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-semver-numeric-identifiers-student_current"
+    },
+    {
+      "task_id": "semver-numeric-identifiers",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-semver-numeric-identifiers-student_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 2,
+      "arm": "base_guard",
+      "run_id": "r2-picomatch-negated-pattern-base_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 2,
+      "arm": "student_current",
+      "run_id": "r2-picomatch-negated-pattern-student_current"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 2,
+      "arm": "student_guard",
+      "run_id": "r2-picomatch-negated-pattern-student_guard"
+    },
+    {
+      "task_id": "picomatch-negated-pattern",
+      "repetition": 2,
+      "arm": "base_current",
+      "run_id": "r2-picomatch-negated-pattern-base_current"
+    }
+  ],
+  "run_directory": "runs/factorial-001",
+  "publication_receipt": "private/evaluation-preregistration.json",
+  "supervisor_receipt": "private/evaluation-supervisor.json",
+  "new_development_scores_before_freeze": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "no_implicit_retry": true,
+  "frozen_files": {
+    "experiments/011-coding-model-selection/weights-manifest.json": "e2cae9c195fd1b7d52cc45431fe31df327bf5efe274b23459cf1cd27b6567f8d",
+    "experiments/023-evaluation-stability/normalize.py": "e8e0b0de0318750e6d13f3b6868bd9cb33d83393e59049deba32d195d1129223",
+    "experiments/024-feedback-noise/_feedback024.py": "a4de87c2ca0662095ce79fa08a1d2dcc7035273ec5ce1e5bf8219da9ff3412a5",
+    "experiments/024-feedback-noise/normalize.py": "d69757e2364aae7cc27d8dd7fbe70377d3905793b0c7a2cc1e09e53ec770c17a",
+    "experiments/025-verified-distillation/candidate-profile.json": "73836093e8f59debe1ce44fb3e50d1c065e3fbcc73c2c86b15917fab7cbf78f0",
+    "experiments/025-verified-distillation/candidate-protocol.json": "f15c6f3e443be0ab92ebd61a525e7767bf90d2d4d926ac5c23c01a5a6ef88c1d",
+    "experiments/025-verified-distillation/capacity-profile.json": "25ab07cb68822f9164be0f7d8786fd9e52f5ffa526dfd1ac4a0a667db5e8b24c",
+    "experiments/025-verified-distillation/collection-protocol.json": "8e2cf62d36f63c8c24245435fdf8be9c570640ace806beda8c41dda12b17cccf",
+    "experiments/025-verified-distillation/collection.md": "77725ee5f0e00b1a96434878467b748f6f6c9b7a08c600e90c6938407ee200f3",
+    "experiments/025-verified-distillation/cycle-spec.json": "09355fa8edcf2c73009f5cc3acd215d111464b3cee0e84d686472cd843eba198",
+    "experiments/025-verified-distillation/preparation/model-environment-observed.json": "ed23677f07208afb26a77ad5631e199dd08e09c71f08a8d46052289f2c3f65c7",
+    "experiments/025-verified-distillation/teacher-profile.json": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+    "one_gpu_lm/__init__.py": "66c607c8569d59c0d3fa1acfb923abf01e0d53e361a3f4d7bff4b9a06aa6ce60",
+    "one_gpu_lm/common/__init__.py": "08b58fc6f36a4572033437fb3d5f4aec6fa66cd1affe6724b230d29b823275c1",
+    "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+    "one_gpu_lm/common/agent_policy.py": "ddab718b3cea1eed5fe038b2038e5aa67bd1f5d1005b4d58c5d2ee0e4583fc3c",
+    "one_gpu_lm/common/checkpoints.py": "cd8b70e378564572db38e59d0d23c7cec0e53625bad0ef3c7f6fcc7817fda4ab",
+    "one_gpu_lm/common/edit_progress.py": "00fa4814c7498b39b60f50cfa87d7786370cd11191f96af3e121c4dfc0019216",
+    "one_gpu_lm/common/receipts.py": "208458fe2f13fd9e0fc205a25653b74c654903710c8f90e2734f0f3a25913a75",
+    "one_gpu_lm/common/repair_verification.py": "03107eade51ad4f4dc014053a25d4ce5a54675c97548cd88796463b2d9b18778",
+    "one_gpu_lm/common/runstate.py": "32a4fdea1460392f8117105b4b3f9f8b6d2c789aa2a00bfb3ec31e1e0e815bbc",
+    "one_gpu_lm/common/source.py": "8ae9ffa945fd4f68fe67e7def27573e81c1967a0164f1a99f892962ce871a034",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450",
+    "one_gpu_lm/common/tokenization.py": "b74d119846100155e426642bfc544eee4f8610650f63fb9b91d970ea76fc3b40",
+    "one_gpu_lm/common/tool_history.py": "f83d42e320f009e650b1d71456c6568676de21f43a53c7f651826413457cf46c",
+    "one_gpu_lm/common/training_data.py": "0c25786eb77ff877fd1d3bf365b137b04db26271a354d1cdd638170cf5178d20",
+    "one_gpu_lm/common/training_encoding.py": "d1b73171f7d6edfbbea5188c71a4d5bf6ada1807c1a5cda11a3fd96ca9c88113",
+    "one_gpu_lm/models/__init__.py": "499d69fef9d23d929feaab842629d2546ffc1a59cc000eb1d541c17db6f0078d",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/serving/__init__.py": "7573ed080ebcfd514fbb34a675599ecaf7fa181b665c1876af50a79cf3322655",
+    "one_gpu_lm/serving/client.py": "80459a290783f2cbb68e8451f8297005fe81b01d840781208df419cf0c39e88d",
+    "one_gpu_lm/serving/local_backend.py": "1589d597def9d71d0d997ad1f3613c19db85c4d67f6f664a1a36ef130b80e27a",
+    "one_gpu_lm/verified/__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "one_gpu_lm/verified/candidate.py": "dd4f62315df450ec90382505600330ce9704d3341a737190a679ed568b1b85c5",
+    "one_gpu_lm/verified/candidate_data.py": "ddc3a847412025b563e82ac3c1da586bfc24ad805f51e450d3b23bd5cc59a60a",
+    "one_gpu_lm/verified/candidate_watch.py": "f00c0fdf99c330c107ced7e40e016ed73ecb54a0c18189b4a378e12a0b548028",
+    "one_gpu_lm/verified/collection.py": "cd6d32aeed1cbda7ada17ee93eecfbf56b6cd0ac3455b4e48f7a0b8a8255297e",
+    "one_gpu_lm/verified/collection_watch.py": "abe037183dbb67227499bef4d562646cb7b7ca026e6a433ba654d595048e2e47",
+    "one_gpu_lm/verified/cycle_report.py": "408fe9192312fd4f244b0a2eefefb756761a46af8fc8e8145ee383773a4ba845",
+    "one_gpu_lm/verified/evaluation.py": "71fd2d07642dcf91471992733538be9082cee66c351d847e10c869bd1a6b876b",
+    "one_gpu_lm/verified/evaluation_audit.py": "7e36360ffe667d4ded638a6bd276b696d7da496b1312a86378a4df91ad4ef38f",
+    "one_gpu_lm/verified/evaluation_backend.py": "95561025bba48c2d056663305687000ca894b6ea1130fbc93a37a8d895e4c62b",
+    "one_gpu_lm/verified/evaluation_rollout.py": "d2df79ad14ba17821d2f38e358d43ced94133d1dca4f7eb12380c30720349ec4",
+    "one_gpu_lm/verified/evaluation_watch.py": "6e2ede19fd92336e221a416c3cbc53dd7efa9cddb6c615675b142a93335a7397",
+    "one_gpu_lm/verified/export.py": "ce71251520ea865c0ee9500b6117a3732af30c0ea1dae0e15916b14c1540cc6e",
+    "one_gpu_lm/verified/factorial.py": "e696c58e314763f2d15dbcb485222e4ede414d648abe6879fbc5b6ce9c9648a1",
+    "one_gpu_lm/verified/guard_audit.py": "ea1f69a54cd9a12c67e0e37de56eef3a3cf11bb15332730196e5f583ebd44a9f",
+    "one_gpu_lm/verified/rollout.py": "666caef98cf283ecfd2b6a04921cf6da4334cc41f56d68dd079fcc892427f972",
+    "one_gpu_lm/verified/runtime_identity.py": "d98fa228a30a3f7dc013297f8a5610f39d7212396c2c46bc8a3e63230786e3e7",
+    "one_gpu_lm/verified/sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "one_gpu_lm/verified/submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "one_gpu_lm/verified/tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13",
+    "private/candidate-supervisor.json": "74e8e8f70ec5029ced95b0efd986da9b92a239058d0dcb2d1f902f492cb2a353",
+    "private/collection-export/data.jsonl": "5cf7b01f18ba77d935907a96f614553fe05aca395f7cdd360bb6cbf62e8a3d37",
+    "private/collection-export/manifest.json": "92de4fe7427ebba323f016b4da8e94262ec879257c1418be1de584e46ae646fb",
+    "private/collection-supervisor.json": "e1068a60217007e58e08d8b9be790ee0d52b5f219ac23a1c0495315700624da7",
+    "private/development-data/exclusion-families.json": "a3fa8898dfbce1ba374824bdf56f38be7e92f56fc8e4dba471956115ba6f1543",
+    "private/development-data/sources.json": "798b03d72bb593747af3b8e38129b35dbaad3ee3f8bc467c65233eafd7eb9e2a",
+    "private/development-data/tasks.json": "f26d788cbb688e33d5f9ffafbff4ff790b5036a01c188d3da31eb92dae1c3670",
+    "private/parent-runtime.json": "9aa80fe7ec1f4ca1ce46c0e635efffb5eabf2a0bff942081f7b3333584bae620",
+    "private/task-runtime.json": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+    "private/training-pool-data/sources.json": "1d9ffd9aa2b852a2a23a4e2e236d5efd4947b2afa3d5d75c925a8fa8d382e645",
+    "private/training-pool-data/tasks.json": "4d159b7942e38bab22b26e61ed093a2093f02ff12d598d4798dccc03027b99e4",
+    "runs/candidate-001/adapter.json": "cbe7410cb3bd0864750f0d71901f0f0c0423ce589c1d8964168a792df2762d17",
+    "runs/candidate-001/curve.json": "cddcf8ec79ad9f2e8e4dc5f44ecbaa1761fafe6ccebc96378ec8534d3a2d4d32",
+    "runs/candidate-001/environment.json": "e3fd204442115fb6e89b52f5fe31974dd4790c1bf699562431d7f8ea30bd9151",
+    "runs/candidate-001/private/adapter/README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067",
+    "runs/candidate-001/private/adapter/adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+    "runs/candidate-001/private/adapter/adapter_model.safetensors": "411f59f117cc50bd9eba69e85c5a55005c75b2c7526711f47e608205034fe3ea",
+    "runs/candidate-001/result.json": "7bcfe9f9c1658601c763eae02fe1cef98217f275e381e58eb6f773fd3f51def9",
+    "runs/candidate-001/selection.json": "efdc378f4b8525f439a02f0504ff8d342229c3c58c00fa86e8b9bfd95ae5ebfc",
+    "runs/candidate-001/updates.json": "eeffe05ebce43ae73f9b504e22d53522383d17fa039731256370c2c8f705f5dd",
+    "runs/development-admission-002/admission.json": "e2f65e130a31de3c2213be0bd195c2d736817d7f4925120beb0f9e32d764b83c",
+    "runs/teacher-collection-001/audit.json": "dbde3e4dbfd369358d8df71e9c0f333646f1c71accd03b7c8899586823fdd1a2",
+    "runs/teacher-collection-001/controller.json": "f7cbc666ca4f1e4eb5f794dac834fd9106ab9e1905ea2efb45a542daf59b3336",
+    "runs/teacher-collection-001/postprocess.json": "21a63960fc95e9d71b1327d7d3fcd53f9abf325419dfae2f06cf7ebb9a412012",
+    "runs/training-capacity-001/result.json": "ad9542708480160697260737899c060c6160cf79d4559576b3a7f605d02e73f1",
+    "runs/training-pool-admission-001/admission.json": "132e50489f1438360fa386ce5d117a6b60f4cc6f6e7bce1c904cd72e0df5b4bf"
+  }
+}

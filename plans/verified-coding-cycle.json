@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "goal_recorded_experiment_protocol_not_yet_frozen",
+  "status": "experiment_completed_parameter_target_not_achieved",
   "created_date": "2026-11-13",
   "objective": "One auditable 27B coding-improvement cycle separating parameter changes from execution-system changes.",
   "planning_window_weeks": [
@@ -110,5 +110,24 @@
     "https://swesmith.com/",
     "https://proceedings.mlr.press/v267/pan25g.html",
     "https://github.com/deepseek-ai/DeepSeek-R1"
-  ]
+  ],
+  "last_updated_date": "2026-11-16",
+  "actual_result": {
+    "experiment": "025-verified-distillation",
+    "scientific_rules": "experiments/025-verified-distillation/cycle-spec.json",
+    "candidate_protocol": "experiments/025-verified-distillation/candidate-protocol.json",
+    "evaluation_protocol": "experiments/025-verified-distillation/evaluation-protocol.json",
+    "results": "experiments/025-verified-distillation/results/2026-11-15-factorial/",
+    "qualified_full_trajectories": 127,
+    "trained_candidates": 1,
+    "unique_development_tasks": 60,
+    "repository_families": 6,
+    "repetitions_per_arm": 3,
+    "completed_and_audited_runs": 720,
+    "parameter_gain_percentage_points": -1.6666666666666667,
+    "parameter_quality_gate_passed": false,
+    "final_test_opened": false,
+    "weights_published": false,
+    "original_plan_fields_preserved_as_planning_record": true
+  }
 }
