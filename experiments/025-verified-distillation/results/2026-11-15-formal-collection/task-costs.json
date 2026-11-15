@@ -1,0 +1,1642 @@
+[
+  {
+    "id": "isodate-datetime-custom-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 210,
+    "input_tokens": 5484,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-clone-array-copy",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 246,
+    "input_tokens": 5457,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-dasherize-all",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 228,
+    "input_tokens": 4314,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-section-separation",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 386,
+    "input_tokens": 14442,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-scientific-exponent-sign",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 549,
+    "input_tokens": 16959,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-negative-offset",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 544,
+    "input_tokens": 13458,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-reduce-initial-presence",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 20,
+    "completed_generation_receipts": 20,
+    "generated_tokens": 981,
+    "input_tokens": 50088,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-underscore-digit-boundary",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 475,
+    "input_tokens": 19975,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-safe-leading-bracket",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 611,
+    "input_tokens": 32224,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-clamp-ceil-equality",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 352,
+    "input_tokens": 17725,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-add-duration-months",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 487,
+    "input_tokens": 17455,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-first-scalar",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 192,
+    "input_tokens": 4186,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-underscore-acronym",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 471,
+    "input_tokens": 17812,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-semicolon-comment",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 13,
+    "completed_generation_receipts": 13,
+    "generated_tokens": 784,
+    "input_tokens": 40967,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-intword-rounding-carry",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 16,
+    "completed_generation_receipts": 16,
+    "generated_tokens": 3170,
+    "input_tokens": 64163,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-ordinal-day",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 425,
+    "input_tokens": 13554,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-intersection-dedup",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 265,
+    "input_tokens": 5909,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-parameterize-regex-separator",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 659,
+    "input_tokens": 21007,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-sort",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 467,
+    "input_tokens": 16188,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-intcomma-string-groups",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 10432,
+    "input_tokens": 113647,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-timezone-colon-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 336,
+    "input_tokens": 9962,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-partition-order",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 266,
+    "input_tokens": 5799,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-singularize-rule-order",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 10438,
+    "input_tokens": 114510,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-nested-section-cleanup",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 9849,
+    "input_tokens": 115548,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-intword-sign",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 457,
+    "input_tokens": 18597,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-negative-fixed",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 502,
+    "input_tokens": 21669,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-memoize-hasher",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 490,
+    "input_tokens": 12696,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-underscore-dash",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 259,
+    "input_tokens": 11596,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-literal-types",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 660,
+    "input_tokens": 35324,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-delta-hour-rounding",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 4354,
+    "input_tokens": 113484,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-leap-century",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 398,
+    "input_tokens": 11165,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-escape-all",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 312,
+    "input_tokens": 6906,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-tableize-normalization",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 506,
+    "input_tokens": 23317,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-unbracketed-duplicates",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 13,
+    "completed_generation_receipts": 13,
+    "generated_tokens": 744,
+    "input_tokens": 41349,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-clamp-callable-marker",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 1017,
+    "input_tokens": 35142,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-inequality-components",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 453,
+    "input_tokens": 13198,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-sortby-stability",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 220,
+    "input_tokens": 4737,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-ordinalize-sign",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 346,
+    "input_tokens": 16290,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-whitespace",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 564,
+    "input_tokens": 27544,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-size-negative-sign",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 502,
+    "input_tokens": 14689,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-time-comma-fraction",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 976,
+    "input_tokens": 35895,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-clone-object-copy",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 400,
+    "input_tokens": 13870,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-humanize-spaces",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 255,
+    "input_tokens": 12749,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-decode-array",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 901,
+    "input_tokens": 34970,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-delta-negative",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2358,
+    "input_tokens": 104298,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-fractional-minute",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2510,
+    "input_tokens": 94756,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-negate-context",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 227,
+    "input_tokens": 3991,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-humanize-id-anchor",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 3525,
+    "input_tokens": 99333,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-unbracketed-array",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 553,
+    "input_tokens": 22919,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-delta-minute-rounding",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2930,
+    "input_tokens": 107509,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-time-custom-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 443,
+    "input_tokens": 25173,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-mapobject-value",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 1102,
+    "input_tokens": 57996,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-ordinal-teen-cycle",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 668,
+    "input_tokens": 21624,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-safe-hash-escape",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 674,
+    "input_tokens": 31733,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-delta-millisecond-scale",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 19,
+    "completed_generation_receipts": 19,
+    "generated_tokens": 1252,
+    "input_tokens": 63041,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-offset-format-sign",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 560,
+    "input_tokens": 13134,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-last-count",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 327,
+    "input_tokens": 6922,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-camelize-segments",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 379,
+    "input_tokens": 16662,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-nested-section-boundary",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 3834,
+    "input_tokens": 105819,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-size-singular-negative",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 522,
+    "input_tokens": 12730,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-negative-calendar",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 14,
+    "completed_generation_receipts": 14,
+    "generated_tokens": 795,
+    "input_tokens": 43302,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-map-object-key",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 261,
+    "input_tokens": 7019,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-ordinal-negative",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 638,
+    "input_tokens": 20134,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-key-whitespace",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 6750,
+    "input_tokens": 112659,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-gnu-size-base",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 5787,
+    "input_tokens": 94018,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-fraction-components",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2519,
+    "input_tokens": 118388,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-isempty-null",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 197,
+    "input_tokens": 4375,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-transliterate-decomposition",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 1870,
+    "input_tokens": 79777,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-unsafe-padded-quote",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 754,
+    "input_tokens": 24364,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-naturaltime-tense",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2028,
+    "input_tokens": 96399,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-second-floor-precision",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2424,
+    "input_tokens": 87477,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-contains-first",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 186,
+    "input_tokens": 4106,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-pluralize-rule-order",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 5610,
+    "input_tokens": 117731,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-repeated-section",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 14,
+    "completed_generation_receipts": 14,
+    "generated_tokens": 1081,
+    "input_tokens": 46240,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-negative-fraction",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 700,
+    "input_tokens": 23662,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-negate-calendar-months",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 259,
+    "input_tokens": 9571,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-ismatch-missing",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 758,
+    "input_tokens": 17476,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-pluralize-uncountable-case",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2635,
+    "input_tokens": 119424,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-unsafe-unknown-escape",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 13,
+    "completed_generation_receipts": 13,
+    "generated_tokens": 959,
+    "input_tokens": 38944,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-apnumber-nine",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 277,
+    "input_tokens": 11053,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-thirty-day-month",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 499,
+    "input_tokens": 17742,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-toarray-unicode",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 226,
+    "input_tokens": 6536,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-parameterize-edges",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 546,
+    "input_tokens": 20360,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-safe-semicolon-escape",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 19,
+    "completed_generation_receipts": 19,
+    "generated_tokens": 1295,
+    "input_tokens": 67885,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-clamp-floor-equality",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 491,
+    "input_tokens": 20090,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-default-day",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 795,
+    "input_tokens": 22238,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-reject-polarity",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 286,
+    "input_tokens": 6038,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-parameterize-collapse",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 339,
+    "input_tokens": 14815,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-section-newline",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 422,
+    "input_tokens": 19363,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-ordinal-teens",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 1382,
+    "input_tokens": 77800,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-default-month-year",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 14,
+    "completed_generation_receipts": 14,
+    "generated_tokens": 785,
+    "input_tokens": 49152,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-indexof-negative-offset",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 340,
+    "input_tokens": 6612,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-camelize-lower-first",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 18,
+    "completed_generation_receipts": 18,
+    "generated_tokens": 2102,
+    "input_tokens": 68910,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-array-preserve-scalar",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 620,
+    "input_tokens": 33650,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-fractional-roundup",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 1093,
+    "input_tokens": 32091,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-negate-duration-days",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2201,
+    "input_tokens": 92311,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-object-pairs",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 212,
+    "input_tokens": 4438,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "inflection-parameterize-lower",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 243,
+    "input_tokens": 5638,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-bare-key",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 669,
+    "input_tokens": 31576,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-size-rounding-carry",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 1687,
+    "input_tokens": 31563,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-fractional-hour-scale",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 900,
+    "input_tokens": 29285,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-range-rounding",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 451,
+    "input_tokens": 6428,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-array-order",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 217,
+    "input_tokens": 6557,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-intcomma-digits-zero",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 331,
+    "input_tokens": 12073,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-add-date-year-carry",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 723,
+    "input_tokens": 33543,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-min-positive",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 15,
+    "completed_generation_receipts": 15,
+    "generated_tokens": 1161,
+    "input_tokens": 62790,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-child-prefix",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 8743,
+    "input_tokens": 113990,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-delta-month-option",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 619,
+    "input_tokens": 26165,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-force-object",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 13,
+    "completed_generation_receipts": 13,
+    "generated_tokens": 1291,
+    "input_tokens": 39868,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-each-object-key",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 213,
+    "input_tokens": 4723,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-unsafe-trailing-backslash",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 475,
+    "input_tokens": 12977,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-natural-list-tail",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 231,
+    "input_tokens": 4872,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-equality-month-conversion",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2760,
+    "input_tokens": 94202,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-compact-falsy",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 222,
+    "input_tokens": 5178,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-array-order",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 485,
+    "input_tokens": 28204,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "humanize-intcomma-grouping",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 8817,
+    "input_tokens": 108071,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-century-start",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 390,
+    "input_tokens": 22274,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-initial-default",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 669,
+    "input_tokens": 25452,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-unsafe-single-quote",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 644,
+    "input_tokens": 29287,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-subtract-duration-months",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 550,
+    "input_tokens": 25011,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-size-null",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 13,
+    "completed_generation_receipts": 13,
+    "generated_tokens": 624,
+    "input_tokens": 24859,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-unsafe-escaped-comment",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 9731,
+    "input_tokens": 115490,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-totimedelta-end-direction",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2654,
+    "input_tokens": 104695,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-sortedindex-ties",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 17,
+    "completed_generation_receipts": 17,
+    "generated_tokens": 919,
+    "input_tokens": 37602,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-alignment",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 8,
+    "completed_generation_receipts": 8,
+    "generated_tokens": 455,
+    "input_tokens": 17373,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-subtract-from-date-months",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2410,
+    "input_tokens": 90274,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-has-inherited",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 306,
+    "input_tokens": 6327,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-section-shortcut",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 540,
+    "input_tokens": 26355,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-time-offset-minutes",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 461,
+    "input_tokens": 12940,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-countby-first",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 260,
+    "input_tokens": 6145,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-safe-outer-space",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 688,
+    "input_tokens": 31107,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-multiply-calendar-months",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 730,
+    "input_tokens": 29676,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-difference-polarity",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 927,
+    "input_tokens": 96602,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-encode-platform-newline",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 310,
+    "input_tokens": 10807,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-naive-timezone-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 16,
+    "completed_generation_receipts": 16,
+    "generated_tokens": 1066,
+    "input_tokens": 69076,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-rest-default",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 14,
+    "completed_generation_receipts": 14,
+    "generated_tokens": 1075,
+    "input_tokens": 36668,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-parse-empty-value",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 9105,
+    "input_tokens": 112801,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-fraction-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2289,
+    "input_tokens": 106855,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-object-parallel",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 185,
+    "input_tokens": 4278,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "ini-safe-equals-quoting",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 469,
+    "input_tokens": 19500,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "isodate-duration-zero-format",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 1121,
+    "input_tokens": 108617,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-range-default-descent",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 393,
+    "input_tokens": 6865,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-after-threshold",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 197,
+    "input_tokens": 3994,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-pairs-orientation",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 219,
+    "input_tokens": 4225,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-last-scalar",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 228,
+    "input_tokens": 5459,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-partial-dynamic-context",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 2313,
+    "input_tokens": 94874,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-tap-return",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 192,
+    "input_tokens": 3992,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-max-negative",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 10,
+    "completed_generation_receipts": 10,
+    "generated_tokens": 785,
+    "input_tokens": 19544,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-get-falsy",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 244,
+    "input_tokens": 5786,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-first-count",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 9,
+    "completed_generation_receipts": 9,
+    "generated_tokens": 452,
+    "input_tokens": 12535,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-times-index",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 200,
+    "input_tokens": 4123,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-values-not-keys",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 234,
+    "input_tokens": 5664,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-toarray-copy",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 252,
+    "input_tokens": 7601,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-functions-sort",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 444,
+    "input_tokens": 9257,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-uniqueid-increment",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 7,
+    "completed_generation_receipts": 7,
+    "generated_tokens": 325,
+    "input_tokens": 10306,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-chunk-tail",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 188,
+    "input_tokens": 4195,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-invert-orientation",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 251,
+    "input_tokens": 6087,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-groupby-retain",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 295,
+    "input_tokens": 6204,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-flatten-depth",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 12,
+    "completed_generation_receipts": 12,
+    "generated_tokens": 858,
+    "input_tokens": 22686,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-memoize-falsy-cache",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 6,
+    "completed_generation_receipts": 6,
+    "generated_tokens": 267,
+    "input_tokens": 5969,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-findkey-result",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 190,
+    "input_tokens": 4212,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-result-context",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 24,
+    "completed_generation_receipts": 24,
+    "generated_tokens": 3962,
+    "input_tokens": 80601,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-before-return-cache",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 5,
+    "completed_generation_receipts": 5,
+    "generated_tokens": 281,
+    "input_tokens": 4393,
+    "unknown_inflight_generation_cost": false
+  },
+  {
+    "id": "underscore-allkeys-inherited",
+    "trace_present": true,
+    "complete": true,
+    "attempted_calls": 11,
+    "completed_generation_receipts": 11,
+    "generated_tokens": 662,
+    "input_tokens": 21637,
+    "unknown_inflight_generation_cost": false
+  }
+]
