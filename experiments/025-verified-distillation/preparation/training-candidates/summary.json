@@ -1,0 +1,51 @@
+{
+  "status": "CPU_preparation_only",
+  "preview_runs": [
+    {
+      "cpu_run": "scale-preview-admission-001",
+      "candidates": 30,
+      "admitted": 30,
+      "tasks_sha256": "cbb8e78044b2056dead367ce9944204deb162120137dc49e69993f2851e8efea",
+      "sources_sha256": "a650e74f7b1366198b2d70e9ef6ba7d00d39024308a918a6bcca274ce7d2fde1",
+      "model_generations": 0
+    },
+    {
+      "cpu_run": "inflection-preview-admission-001",
+      "candidates": 20,
+      "admitted": 20,
+      "tasks_sha256": "b1046f424b9d54ccc454593c6384b20c2f1895ca8f9b81d943cb918058655140",
+      "sources_sha256": "1834314ff21093cc7783df9206b7c6c302139c01da36498c9b127030fe5345ad",
+      "model_generations": 0
+    },
+    {
+      "cpu_run": "underscore-extra-admission-001",
+      "candidates": 25,
+      "admitted": 25,
+      "tasks_sha256": "547ecce3fe495eed58e6c2466506eba067421998f837d542a4da949bf4f007a3",
+      "sources_sha256": "a650e74f7b1366198b2d70e9ef6ba7d00d39024308a918a6bcca274ce7d2fde1",
+      "model_generations": 0
+    },
+    {
+      "cpu_run": "humanize-preview-admission-001",
+      "candidates": 21,
+      "admitted": 20,
+      "tasks_sha256": "f316298b0299593e3e286a61d4a13cc2ab74a8b5bc80c90459c9b88a6657925f",
+      "sources_sha256": "a5cb7bf85221130f856f271cfc3eb95ddde9fbb20cdf8d8a025c86156af7b657",
+      "model_generations": 0
+    }
+  ],
+  "new_fault_candidates": 96,
+  "admitted_new_tasks": 95,
+  "excluded_before_any_model_collection": 1,
+  "repository_families": 3,
+  "languages": [
+    "javascript",
+    "python"
+  ],
+  "actual_new_teacher_episodes": 0,
+  "new_development_model_scores": 0,
+  "final_test_opened": false,
+  "full_collection_protocol_frozen": false,
+  "teacher_collection_authorized_by_this_preparation": false,
+  "raw_tasks_source_and_trajectories_published": false
+}

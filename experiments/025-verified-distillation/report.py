@@ -17,6 +17,7 @@ def report(directory):
     controller = json.loads((root / 'controller.json').read_text())
     audit = json.loads((root / 'audit.json').read_text())
     diagnosis = json.loads((root / 'diagnosis.json').read_text())
+    calibration = controller.get('collection_policy') == 'explicit_submission_guard_v1'
     rows = controller['tasks']; screened = {r['id']: r for r in audit['rows']}
     samples = list(csv.DictReader((root / 'telemetry.csv').open()))
     duration = controller['finished_epoch'] - controller['started_epoch']
@@ -32,7 +33,7 @@ def report(directory):
     for key in ['temperature_c', 'power_w', 'utilization_percent', 'memory_used_mib']:
         values = [float(r[key]) for r in samples]
         hardware[key] = {'mean': statistics.mean(values) if values else None, 'peak': max(values) if values else None}
-    summary = {'stage': 'training_only_teacher_feasibility', 'attempts': 1, 'controller_complete': controller['complete'],
+    summary = {'stage': 'training_only_submission_guard_calibration' if calibration else 'training_only_teacher_feasibility', 'attempts': 1, 'controller_complete': controller['complete'],
                'tasks_completed': len(rows), 'tasks_registered': len(audit['rows']), 'independent_grader_passes': passed,
                'eligible_full_episodes': eligible, 'eligible_action_records': sum(len(r.get('encoded_actions',[])) for r in audit['rows'] if r['eligible_for_sft']),
                'attempted_calls_accounted_in_completed_tasks': calls, 'generated_tokens_accounted_in_completed_tasks': tokens,
@@ -40,6 +41,8 @@ def report(directory):
                'pipeline_seconds': duration, 'task_seconds': sum(r['seconds'] for r in rows),
                'termination_counts': dict(Counter(r['terminal_reason'] for r in rows)), 'hardware': hardware,
                'post_hoc_diagnosis_categories': diagnosis['categories'],
+               'explicit_submissions': sum(r['submitted'] for r in rows),
+               'unexecuted_policy_rejections': sum(r.get('unexecuted_policy_rejections',0) for r in diagnosis['rows']),
                'decision': audit['decision'], 'optimizer_updates': 0, 'new_development_scores': 0, 'final_test_opened': False}
     (root / 'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
     fields = ['id','repository','calls','generated_tokens','seconds','first_edit_call','grader_passed','explicit_submit','agent_verified','eligible_for_sft','terminal_reason']
@@ -79,9 +82,9 @@ def report(directory):
     zone=timezone(timedelta(hours=8))
     started=datetime.fromtimestamp(controller['started_epoch'],zone).strftime('%Y-%m-%d %H:%M:%S')
     ended=datetime.fromtimestamp(controller['finished_epoch'],zone).strftime('%Y-%m-%d %H:%M:%S')
-    lines=['# 025：教师轨迹试跑结果','',
+    lines=['# 025：提交验证校准结果' if calibration else '# 025：教师轨迹试跑结果','',
         f"本次可行性门槛：**{'通过' if audit['decision']['passed'] else '未通过'}**。独立判分通过 {passed}/{len(audit['rows'])} 题；完整且通过训练编码筛查的轨迹 {eligible} 条。模型参数未训练，不能据此声称学生能力提高。",'',
-        f'北京时间 {started} 至 {ended}，控制器持续 {duration/60:.2f} 分钟。共登记 12 道训练题，完成 {len(rows)} 道；只有一次尝试，没有按结果重跑。',
+        f'北京时间 {started} 至 {ended}，控制器持续 {duration/60:.2f} 分钟。共登记 12 道训练题，完成 {len(rows)} 道；本次协议每题尝试一次。'+('此前首次试跑也完整保留，两个协议各自计数。' if calibration else '没有按结果重跑。'),
         f'完整任务累计 {calls} 次调用、{tokens:,} 个生成 token；保留全部失败。存在未完成或在途成本时，见 summary.json 的不完整列表，不能将其成本记为零。','',
         '| 检查 | 结果 |','| --- | --- |']
     lines += [f"| {k} | {'通过' if v else '未通过'} |" for k,v in audit['decision']['checks'].items()]
@@ -93,7 +96,31 @@ def report(directory):
         f'硬件共 {len(samples)} 次采样、{hardware["collection_errors"]} 次采集错误，最大相邻采样间隔 {hardware["maximum_sample_gap_seconds"]:.2f} 秒；起止边界未覆盖 {hardware["boundary_uncovered_seconds"]:.2f} 秒。平均利用率含权重加载与 CPU 工具时间，不代表持续训练吞吐。','',
         '局限：仅 3 个训练仓库上的 12 道构造故障，主要是局部修复，不代表真实长任务或独立仓库成功率；公开源码可能已进入底座预训练，不能证明预训练去污染。教师是同一个底座的高预算版本。未比较新开发集，未打开最终测试，未发布权重。','',
         '下一步仍须完成训练数据扩充、仓库家族隔离的新开发集、唯一学生候选及四臂同预算对照。试跑通过只说明采集方法在这批训练题上可行。','',
-        '[固定规则](../../pilot-protocol.json) · [逐题数据](tasks.csv) · [完整摘要](summary.json) · [输入和编码审计](audit.json)']
+        f'[固定规则](../../{"calibration-protocol.json" if calibration else "pilot-protocol.json"}) · [逐题数据](tasks.csv) · [完整摘要](summary.json) · [输入和编码审计](audit.json)']
+    if calibration:
+        comparison = json.loads((root/'comparison.json').read_text())
+        pairs = comparison['pairs']
+        with (root/'comparison.csv').open('w',newline='') as stream:
+            if pairs:
+                writer=csv.DictWriter(stream,list(pairs[0]));writer.writeheader();writer.writerows(pairs)
+        keys=['correct','submitted','qualified_episode'];names=['Correct repair','Explicit submit','Qualified episode']
+        fig,ax=plt.subplots(figsize=(9,4));x=list(range(3))
+        for offset,prefix,color,label in [(-.18,'original','#8a9198','Original'),(.18,'guard','#167d8d','Submission guard')]:
+            counts=[sum(r[prefix+'_'+key] for r in pairs) for key in keys]
+            bars=ax.bar([n+offset for n in x],counts,width=.36,color=color,label=label)
+            ax.bar_label(bars)
+        ax.set(xticks=x,xticklabels=names,ylabel='Complete paired training tasks',ylim=(0,len(pairs)+2),
+               title='Collection feasibility on the same observed tasks')
+        ax.legend();fig.tight_layout();fig.savefig(root/'paired-outcomes.png',dpi=160);plt.close(fig)
+        summary['paired_analysis']={k:v for k,v in comparison.items() if k not in ['pairs','prefix_audit']}
+        (root/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+        lines += ['', '## 与首次试跑配对', '',
+            f'完整且请求审计通过的配对 {comparison["complete_pairs"]} 个；排除 {len(comparison["excluded_pairs"])} 个不完整或未核验配对，普通修复失败仍纳入。两次尝试的所有已观测成本与不确定成本另行保留。',
+            f'修复改善 {len(comparison["repair_gains"])} 题，修复退步 {len(comparison["repair_regressions"])} 题。本次明确拒绝、未执行的提交请求 {summary["unexecuted_policy_rejections"]} 次，计入调用和 token 成本，排除出正例监督目标。','',
+            '![配对结果](paired-outcomes.png)','',
+            '干预反馈前的逐调用输入/生成摘要对照：'+', '.join(f'{k}={v}' for k,v in comparison['prefix_categories'].items())+'。这只能描述本次记录，不能证明未来运行完全确定。',
+            '相同训练题按时间先后运行，没有随机化交错，也没有更新模型参数；合格轨迹增加属于采集改进，不能写成独立模型能力提升。','',
+            '[逐题配对](comparison.csv) · [配对、全部成本与前缀审计](comparison.json) · [保留的首次试跑](../2026-11-15/)']
     (root/'README.md').write_text('\n'.join(lines)+'\n')
     return summary
 

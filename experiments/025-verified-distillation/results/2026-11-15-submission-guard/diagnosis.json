@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "analysis": "post_hoc_description_only",
+  "gate_changed": false,
+  "regression_text_mention_proves_execution": false,
+  "note": "String presence is not execution proof. Exact-command requirement was preregistered and remains unchanged; compound commands may need richer verification instrumentation in a future protocol.",
+  "categories": {
+    "no_edit": 3,
+    "executed_verified_episode_before_encoding_screen": 8,
+    "correct_repair_without_strict_verification": 1
+  },
+  "rows": [
+    {
+      "id": "humanize-ordinal-teens",
+      "repository": "python-humanize/humanize",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 16,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 23,
+        "runtime_error": 1
+      },
+      "trajectory_sha256": "4b67f61641c51a7b51cda9cd9575d74520b126f04c3db3c89cb834a56f25069f"
+    },
+    {
+      "id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 0,
+      "tool_reason_counts": {
+        "ok": 4,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "e905e939558b7ae8cc0874b5d152374e618f1b157de6220cabd897943b5bbfb2"
+    },
+    {
+      "id": "humanize-gnu-size-base",
+      "repository": "python-humanize/humanize",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 16,
+      "invalid_actions": 1,
+      "unexecuted_policy_rejections": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 0,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 23
+      },
+      "trajectory_sha256": "c2a10ebfc493f3d48c5b726ff2105d127786f063902ff5a523a99d6b23d1bf9a"
+    },
+    {
+      "id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 3,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 9,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "f249fba781dded1ee6e5fbc9137e4680164b234f8fc1d4e3bb4171ada0f867c7"
+    },
+    {
+      "id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 6,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "ee5d61d35ed52951cf056ed5a1bb674273da5820a87c0a182117aa4adc58f877"
+    },
+    {
+      "id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 6,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "f8e23c0230bf46dc929863ceeb97308203a1d0b4e76e880381546b6af5b6c3cd"
+    },
+    {
+      "id": "isodate-fractional-minute",
+      "repository": "gweis/isodate",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 14,
+      "invalid_actions": 1,
+      "unexecuted_policy_rejections": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 23
+      },
+      "trajectory_sha256": "ea8abc6de7b4c12b8afc6a7cba7283949d8e84c40652c06e51510968d3b5ea06"
+    },
+    {
+      "id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 6,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "6a5dd4c435a34688cdb9adeb6355d8056a1d73ab38db6826b5c0b76ed6d5253d"
+    },
+    {
+      "id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 3,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 8,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "c934b1b1037accc5a74edb30d9d2b8253df6338737e8fd49d0848c2c1e664e9c"
+    },
+    {
+      "id": "ini-decode-array",
+      "repository": "npm/ini",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 3,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 10,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "3124f6b2caa07c3c7c84a8dc3ad99072012178a5a065ed2e172ccf4749a008a2"
+    },
+    {
+      "id": "ini-encode-platform-newline",
+      "repository": "npm/ini",
+      "category": "executed_verified_episode_before_encoding_screen",
+      "independent_grader_passed": true,
+      "strict_verified": true,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "unexecuted_policy_rejections": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 1,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 6,
+        "submission_requires_verification": 1
+      },
+      "trajectory_sha256": "87ebfd0a4481494026eb220fdf48463ef4eb53934a8be9ebe274ef58f6e035fa"
+    },
+    {
+      "id": "ini-unsafe-escaped-comment",
+      "repository": "npm/ini",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 18,
+      "unexecuted_policy_rejections": 0,
+      "outputs_at_generation_cap": 18,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 6
+      },
+      "trajectory_sha256": "88c570740e1b0c104eb0fc97f9d95df1cd3a8577cccbd22677f71f60a930c552"
+    }
+  ]
+}

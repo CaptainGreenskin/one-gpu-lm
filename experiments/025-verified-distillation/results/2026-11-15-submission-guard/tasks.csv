@@ -1,0 +1,13 @@
+id,repository,calls,generated_tokens,seconds,first_edit_call,grader_passed,explicit_submit,agent_verified,eligible_for_sft,terminal_reason
+humanize-ordinal-teens,python-humanize/humanize,24,1382,130.9061935710488,,False,False,False,False,call_limit
+humanize-natural-list-tail,python-humanize/humanize,5,231,19.94231046899222,2,True,True,True,True,submitted
+humanize-gnu-size-base,python-humanize/humanize,24,5787,496.26195573899895,,False,False,False,False,call_limit
+humanize-negative-fraction,python-humanize/humanize,10,700,63.77388197998516,5,True,True,True,True,submitted
+isodate-negative-offset,gweis/isodate,8,544,48.52341362996958,4,True,True,True,True,submitted
+isodate-ordinal-day,gweis/isodate,8,425,38.514712092932314,5,True,True,True,True,submitted
+isodate-fractional-minute,gweis/isodate,24,2510,222.78755743103102,,False,False,False,False,call_limit
+isodate-offset-format-sign,gweis/isodate,7,560,47.98891196097247,3,True,True,True,True,submitted
+ini-encode-sort,npm/ini,9,467,40.727284235996194,4,True,True,True,True,submitted
+ini-decode-array,npm/ini,12,901,80.48818208102603,7,True,True,True,True,submitted
+ini-encode-platform-newline,npm/ini,7,310,27.36563870497048,4,True,True,True,True,submitted
+ini-unsafe-escaped-comment,npm/ini,24,9731,803.3487003650516,6,True,False,False,False,call_limit

@@ -6,10 +6,12 @@ from pathlib import Path
 from one_gpu_lm.common.receipts import sha256, write_json
 
 
-def diagnose(root, out):
+def diagnose(root, out, run_name='teacher-pilot-001'):
     root, out = Path(root), Path(out)
     if out.exists(): raise ValueError('Preserve previous diagnosis')
-    run = root / 'runs/teacher-pilot-001'
+    if run_name not in {'teacher-pilot-001', 'teacher-calibration-001'}:
+        raise ValueError('Unknown registered training attempt')
+    run = root / 'runs' / run_name
     controller = json.loads((run / 'controller.json').read_text())
     if not controller.get('finished_epoch'): raise ValueError('Wait for terminal controller')
     tasks = {t['id']: t for t in json.loads((root / 'private/pilot-data/tasks.json').read_text())['tasks']}
@@ -33,7 +35,7 @@ def diagnose(root, out):
                 tool = json.loads(tool_path.read_text())
                 truncated += int(len(tool['output']) > 2400)
                 reasons[tool['reason']] += 1
-        category = ('eligible_executed_episode' if result['eligible_verified_trajectory'] else
+        category = ('executed_verified_episode_before_encoding_screen' if result['eligible_verified_trajectory'] else
                     'correct_repair_without_strict_verification' if result['grade']['passed'] and not result['agent_verified_final_source'] else
                     'correct_repair_without_submission' if result['grade']['passed'] else
                     'no_edit' if result['first_edit_call'] is None else 'edited_but_incorrect')
@@ -41,6 +43,7 @@ def diagnose(root, out):
                      'independent_grader_passed':result['grade']['passed'],'strict_verified':result['agent_verified_final_source'],
                      'submitted':result['submitted'],'repeated_command_source_and_feedback':repeats,
                      'invalid_actions':sum(not s['action_format_valid'] for s in t['steps']),
+                     'unexecuted_policy_rejections':sum(s.get('observation',{}).get('executed') is False for s in t['steps']),
                      'outputs_at_generation_cap':sum(s['generation']['generated_tokens'] == 512 for s in t['steps']),
                      'regression_command_text_mentions':mentions,'exact_regression_commands':exact,
                      'raw_tool_outputs_exceeding_2400_chars':truncated,'tool_reason_counts':dict(reasons),
@@ -54,4 +57,5 @@ def diagnose(root, out):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
-    a=p.parse_args();print(json.dumps(diagnose(a.root,a.out)['categories']))
+    p.add_argument('--run-name',default='teacher-pilot-001')
+    a=p.parse_args();print(json.dumps(diagnose(a.root,a.out,a.run_name)['categories']))

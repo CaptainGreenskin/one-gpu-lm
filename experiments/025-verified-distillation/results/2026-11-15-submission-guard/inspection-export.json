@@ -1,0 +1,100 @@
+{
+  "full_episodes": 8,
+  "unique_tasks": 8,
+  "positive_action_records": 55,
+  "minimum_100_full_episodes_met": false,
+  "candidate_training_authorized_by_this_export": false,
+  "schema_version": 1,
+  "purpose": "training_data_inspection",
+  "audit_sha256": "5ad5f633b5e3816dd3009627301d03daacc3dd655680a02d4851eedb37b49357",
+  "protocol_sha256": "a9cee5a521b2827d9458aa0410a90993d0bd3da8bacc4fab30c20ca48e75d1b4",
+  "data_sha256": "5ec43c64f24b488d16222ca63746ace2e6e03266582aa42ae952b8ef097840bd",
+  "episodes": [
+    {
+      "episode_id": "teacher-calibration-001:humanize-natural-list-tail",
+      "task_id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "trajectory_sha256": "e905e939558b7ae8cc0874b5d152374e618f1b157de6220cabd897943b5bbfb2",
+      "positive_action_records": 4,
+      "excluded_unexecuted_action_calls": [
+        3
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:humanize-negative-fraction",
+      "task_id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "trajectory_sha256": "f249fba781dded1ee6e5fbc9137e4680164b234f8fc1d4e3bb4171ada0f867c7",
+      "positive_action_records": 9,
+      "excluded_unexecuted_action_calls": [
+        8
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:isodate-negative-offset",
+      "task_id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "trajectory_sha256": "ee5d61d35ed52951cf056ed5a1bb674273da5820a87c0a182117aa4adc58f877",
+      "positive_action_records": 6,
+      "excluded_unexecuted_action_calls": [
+        6
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:isodate-ordinal-day",
+      "task_id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "trajectory_sha256": "f8e23c0230bf46dc929863ceeb97308203a1d0b4e76e880381546b6af5b6c3cd",
+      "positive_action_records": 6,
+      "excluded_unexecuted_action_calls": [
+        6
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:isodate-offset-format-sign",
+      "task_id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "trajectory_sha256": "6a5dd4c435a34688cdb9adeb6355d8056a1d73ab38db6826b5c0b76ed6d5253d",
+      "positive_action_records": 6,
+      "excluded_unexecuted_action_calls": [
+        5
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:ini-encode-sort",
+      "task_id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "trajectory_sha256": "c934b1b1037accc5a74edb30d9d2b8253df6338737e8fd49d0848c2c1e664e9c",
+      "positive_action_records": 8,
+      "excluded_unexecuted_action_calls": [
+        7
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:ini-decode-array",
+      "task_id": "ini-decode-array",
+      "repository": "npm/ini",
+      "trajectory_sha256": "3124f6b2caa07c3c7c84a8dc3ad99072012178a5a065ed2e172ccf4749a008a2",
+      "positive_action_records": 10,
+      "excluded_unexecuted_action_calls": [
+        10
+      ]
+    },
+    {
+      "episode_id": "teacher-calibration-001:ini-encode-platform-newline",
+      "task_id": "ini-encode-platform-newline",
+      "repository": "npm/ini",
+      "trajectory_sha256": "87ebfd0a4481494026eb220fdf48463ef4eb53934a8be9ebe274ef58f6e035fa",
+      "positive_action_records": 6,
+      "excluded_unexecuted_action_calls": [
+        5
+      ]
+    }
+  ],
+  "maximum_record_tokens": 4294,
+  "supervised_tokens": 3736,
+  "raw_data_public": false,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "new_development_scores": 0
+}

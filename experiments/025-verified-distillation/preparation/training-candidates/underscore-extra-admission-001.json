@@ -1,0 +1,937 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T01:09:39.915666+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "underscore-get-falsy",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2711139669409022,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17106007505208254,
+        "output_sha256": "4af8d6b126f6a96219b2ebe11ef18a4fb64e80762505ddbac7a93a3854159d2d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12088930793106556,
+        "output_sha256": "835a9f855b7109aa930cd1ea390e7d0f028d8f16d65f2c6cd07df3cf4ae20e25"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/get.js": "fe1a6324ac2c2fa93f5366158f3147dc3c414e45bc9fd2bdda3e7c59060e9916"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2705341139808297
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-has-inherited",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710665139602497,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17065412807278335,
+        "output_sha256": "2fff9442f84079aaedfc5c8244b23cc544b375dcd99ac09d427f48ebc2ae4532"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17071400105487555,
+        "output_sha256": "c1e6e7aa4f596d04218746a8378c86cd28d1aaf64abd15d13895c55715ff2398"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/has.js": "bd3dfbde0c63c3506585303df1d524d5b181ed34153568b50b54e1ca72578d5d"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27071042102761567
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-contains-first",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27111792599316686,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17052695306483656,
+        "output_sha256": "ff215e57bca36e90b630dbbebd11c48f88122a26a6fc77267316321e03634adb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1204564010258764,
+        "output_sha256": "3776204c703545a38be859289d4db2b73014c30f715f8cdc2154e4afe5c2b5d3"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/contains.js": "6e6d5a86b102fe7d0794296ebb2d5aa886943c99ad0d0a584701f80d5be9dff1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27107651298865676
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-reject-polarity",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710037810029462,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17061770695727319,
+        "output_sha256": "25179a7ff293eec7993bde08d5742d1d7e537db0de3245a9af37fdf057fe5239"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1711458470672369,
+        "output_sha256": "f389ea540d8b97aa28c4273daac03d70b3157355dd5f6f01b636d055b234f870"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/reject.js": "f9fef2bc2a1a35ef1634d4724f0b50dcbac5e6b5372b5ff166de0566cc442d6b"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2692167820641771
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-each-object-key",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27101026999298483,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17037804692517966,
+        "output_sha256": "2f4be5851eb5f5dee3dfa9d26387eb67efa928c9199b01b4aeb146f6eabc6a23"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17026630300097167,
+        "output_sha256": "2a52428c5ee48fbcc9e0cb2fce2c58e0193ca08da3699f46265b714ef700eaa9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/each.js": "5a66129eba0a35165ff3404227fd11182618fda33de0d5a9fff5ed4de14d8aa6"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27097844891250134
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-map-object-key",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27086699497886,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17069533898029476,
+        "output_sha256": "ad4a4d36c608859a23d8dd5c50d5beaa692df7f0458d16bcd8301ded7254f4be"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1706810579635203,
+        "output_sha256": "4e75cb270e9005bf730cca4cefbd47dbbb4c329dfc3ca673d0b6f9472bbe6bfb"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/map.js": "ac12515a4b82d7f19461763369e6d63766d0527f153c174bac1f3573fc2b164e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2701547760516405
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-findkey-result",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2711244539823383,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17021692905109376,
+        "output_sha256": "c2c24a8439299867e0a3ebff1a1610e92333869a711e2e16f9e09c6b039ac1fb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17039273690897971,
+        "output_sha256": "e440efa1d90767dd0d40298afb753702f48401c90115ccace2e5b6b6b3b74bc2"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/findKey.js": "f78c67e11238c4f9a765f6f7f5617807fa9cd7847451f27119b7127891b87502"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27100253792013973
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-uniqueid-increment",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27063170389737934,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17052688205149025,
+        "output_sha256": "d57ff31fc25b5b15c9e93af84ee941dfac17120ee00a0c164176bf499d417e1b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17018852790351957,
+        "output_sha256": "8cacdd0036607d1883285d28588e466d8a37ecdbe5e3089aae60b7b6ca4facae"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/uniqueId.js": "71e09fd92847f2bbec8ba210253e1eeee51016533b0bc852767776d9b95124bd"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2709683070424944
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-negate-context",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27063582302071154,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1198292849585414,
+        "output_sha256": "8e9010c8cb6192d129c2f42670becfcda2e10d4dc745f941752a685a21473f86"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1708958640228957,
+        "output_sha256": "cb4c4d023973c68d631d49c2143e04c05af3b1c7b9ab204b099871c215c490b9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/negate.js": "de64c68456cc1e022aac975c55795b9463e14e44f3ed97f8741519033a9c6425"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2710984409786761
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-after-threshold",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27045319497119635,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17056608200073242,
+        "output_sha256": "397eb7bf3bc4138347b97e40fbae032cf61625641c095a442efdbec61f722dc8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.16998671006876975,
+        "output_sha256": "50b7e127b944a7c64e8429cff2939c555aff27eac17a8cbe1f556e574f06cc1a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/after.js": "d8854cb516e3bdc8e6c5b8f56c8f55fb66c4b73371271b62f344a45de3c589f7"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27076415705960244
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-before-return-cache",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2709452740382403,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12044955906458199,
+        "output_sha256": "7805d73f7f4fd13798ae6d479c212fc1d3b8a3dfade923665a33f27ce3988f0e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17048144899308681,
+        "output_sha256": "9f497248c96170ffa5a55ef6b35b8971adc092a5a08217a84db304e838f3fc5f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/before.js": "1db26ce3a1abac69ec69fa1441097433ef9a1722c680b2ad9256d02def143752"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2708338990341872
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-memoize-falsy-cache",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2700415690196678,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17073410702869296,
+        "output_sha256": "a07ea7b59501be672fc097202ea769ac76e7d2fc927c9895d400d25d30d4ff96"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1707932100398466,
+        "output_sha256": "6583f15a39f36a45abf2aab2805467125de864e93b4dd69d05b07432ed6ef6a8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/memoize.js": "bd1afccdb76fb181c725bc3e2ae180ab8d6e9eb6f3086be3002756955dcd3cba"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2703148180153221
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-memoize-hasher",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2708920689765364,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17041195498313755,
+        "output_sha256": "e7094489624bf9aed91c12b5bbf58f377e26f5680ebb31c0b236215e16396969"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1688889169599861,
+        "output_sha256": "2596f533faebcd88002820899dd02e705bb64e0903067cf1558f86269dfce755"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/memoize.js": "bd1afccdb76fb181c725bc3e2ae180ab8d6e9eb6f3086be3002756955dcd3cba"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27097575296647847
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-partial-dynamic-context",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2707581149879843,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.170460976078175,
+        "output_sha256": "37e42f28fbd979b443d0e5573d9ea1b9a1682da560476fd06ed9355243f3f528"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1707338859559968,
+        "output_sha256": "08783dacaaa5858535c6956b2f2ddfed286b716d508d3f02950df351c3fc5ad8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/partial.js": "ef2bb111c75e680d28f28a2ea4e00cc08e8abde1f9e27cbe87b1806369435bff"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27064228896051645
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-result-context",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2707940050167963,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17131055903155357,
+        "output_sha256": "8a28d5cf37fbd70f572aee55db6c4aef4dbcceb6db13e2bb3773743ff103de91"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12098451796919107,
+        "output_sha256": "29ff7cc1786df220a10065d514b9d6e5dbb7da0e08fe82a256eca38e673e47ce"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/result.js": "d687411ab247daea235d2fdf33a0bfe3b719ff10a4254b5123c892de8213b23c"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2707708239322528
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-allkeys-inherited",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27114782796707004,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17051405692473054,
+        "output_sha256": "bf810c304f303624736e586c76fe76184490e46391ef46b0a457035072b23227"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1708080479875207,
+        "output_sha256": "dae8e051f686e0cfe8143410484623c8f0792464784d0218668f45bfd2724b78"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/allKeys.js": "dbc7f75d8699545c250d8b47cfc09752d63f1bfc19cf8310eece62e9897f738a"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2711684280075133
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-values-not-keys",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2709681399865076,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1708599099656567,
+        "output_sha256": "0b0961d128c4fc9583dc10f1bc60db00ab32dfe1c6bd93a5f76f7a4b6e807b41"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17029599798843265,
+        "output_sha256": "12983a8236b8ba0b6589cc02f496e9c577704e1e32c9fd72aa323f6670642b24"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/values.js": "45ab9d49b6775f1538990e1d5ea5ebbadae6410ffb14387582ce0ca315b09e91"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27066839893814176
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-functions-sort",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2708480649162084,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17075464595109224,
+        "output_sha256": "f6592ba4ebe212526f168675f363f5cbe9f20592a0444fa93f24444de98d9a7b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11997131700627506,
+        "output_sha256": "afd5d62627ebfb2d70ac7327ac9e1e6516f5ee353fd6a2c7213c0c49f7ec8b7a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/functions.js": "cc0540b22cf8b71ad97c4a9cb2d972f9d9acf718efb2de887adab36372926384"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2696967109804973
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-clone-array-copy",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.270936727989465,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1707055630395189,
+        "output_sha256": "737798502c0c898ae0c8d8083cfa359fb74104bade3945a8f4a0f42420b04e23"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17074822506401688,
+        "output_sha256": "08bdd057cbd43b35b412d1aa8d05ce9684340fc5f1e360cd34b12acd463a3587"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/clone.js": "71fa26f497218cf972e325e0013ae470eeb85e6fa248f6075364376fb6145031"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2710242710309103
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-clone-object-copy",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.22082913492340595,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17063448997214437,
+        "output_sha256": "8c10b5e17fa8ecead92ecf767635291f6fc26c536e7e9d150c75467fe0d4d4d8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1207934389822185,
+        "output_sha256": "dfcebde0893658a00c71fcd7f4c830e446ec48b25bff83442094dbb0c6535127"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/clone.js": "71fa26f497218cf972e325e0013ae470eeb85e6fa248f6075364376fb6145031"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2707709399983287
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-tap-return",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27007760398555547,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1203071199124679,
+        "output_sha256": "cbe84cc47fd3f878dbed41d38413cedbba24c6b0f81ec425d5b817294b3d8e11"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17003278608899564,
+        "output_sha256": "4bb52cd8cfe383e897857a093f280f001540ed47e26e1b4e8e6e030fcb7ff2e2"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/tap.js": "229eef826b63dacf9d888a049b994898b3a3dbfe4b2930a4700152b3468ef077"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27074034803081304
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-times-index",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27081408095546067,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17081922595389187,
+        "output_sha256": "a835275dc88649d3233309be104a902a21ba1dc844a34459415fb41c2083275b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17075297294650227,
+        "output_sha256": "584a0b21b1800db5505ae89557258057f755072edfa44436088b83f8ec6873f8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/times.js": "f0780d2f72da82edb5383ff031712ca756a47d5547b17a192de130d0c4e23647"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27110693196300417
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-escape-all",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.32131279609166086,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17082975595258176,
+        "output_sha256": "c0e7eaf66d6fa4c2f9bd99c3dacbb57fd1c150b117f2af32e914cd0185955cbc"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12034354999195784,
+        "output_sha256": "f0a62c05bd8171293b2acf557d22ae2465a3b9f4bfedfbb9995e1b82bbf3c25b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/_createEscaper.js": "dc8154f3a330ea6247175a20c319c8651868464c48eaea1f0e8896180e14e173"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2705738510703668
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-reduce-initial-presence",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2207434499869123,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12017033295705914,
+        "output_sha256": "08991a72587271d3750ab3d6510b21af2a782387caed32626461d53e831b7e85"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12030165898613632,
+        "output_sha256": "43be5956c5b2c9df6ded8ef747d6c98533f942ef85dd1440c8e1b4aa926bbcb5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/_createReduce.js": "761effc6ffd6129128dbc87b6a3d0fb822106f98e4455dcac05f74e4a6f3b619"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2702237869380042
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "underscore-indexof-negative-offset",
+      "repository": "jashkenas/underscore",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27107402903493494,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17057692597154528,
+        "output_sha256": "5c5dbca805d82c4fb4f607d54aaeec22c0d8bc82e53ea69d8bd4d1ce0fa2fd37"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17060329590458423,
+        "output_sha256": "d0b99de123683426419388b58e390e537053127260346435e2128cc24db998f6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "modules/_createIndexFinder.js": "6c280755c03f6b2783522ec522b4bbaec633e567b4641588fc8ade9708a6e575"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27025988802779466
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "547ecce3fe495eed58e6c2466506eba067421998f837d542a4da949bf4f007a3",
+  "sources_sha256": "a650e74f7b1366198b2d70e9ef6ba7d00d39024308a918a6bcca274ce7d2fde1",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/calibration.cpython-310.pyc": "5c95fe6fb949ebadc24ff9e9db7d905a1645f109bc37626f93e937515a4021b7",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/submission.cpython-310.pyc": "cb0a91549a56d219029affb6272d458eb99d273f6924b51951552d3685e94fe6",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "calibration.py": "bebe2e60c92740bbced5fe265b9b0b28111958cd17330396fd72bb9343016042",
+    "export.py": "2ac4a6aa4b04fd0166fc1d01694bc342492b6c211f3988d9930681b7f535233d",
+    "guard_audit.py": "8f1345820c1b657bb695b0f876974e910f39b44fc9ca9814eb5f6ca61968efe6",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": true,
+  "finished_utc": "2026-11-15T01:10:07.543640+00:00"
+}

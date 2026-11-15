@@ -1,0 +1,13 @@
+id,repository,original_correct,original_submitted,original_qualified_episode,original_calls,original_generated_tokens,original_seconds,guard_correct,guard_submitted,guard_qualified_episode,guard_calls,guard_generated_tokens,guard_seconds
+humanize-ordinal-teens,python-humanize/humanize,False,False,False,24,1382,128.31426705501508,False,False,False,24,1382,130.9061935710488
+humanize-natural-list-tail,python-humanize/humanize,True,True,False,3,167,14.322375255054794,True,True,True,5,231,19.94231046899222
+humanize-gnu-size-base,python-humanize/humanize,False,False,False,24,5787,491.02179850800894,False,False,False,24,5787,496.26195573899895
+humanize-negative-fraction,python-humanize/humanize,True,True,False,8,636,57.20273696503136,True,True,True,10,700,63.77388197998516
+isodate-negative-offset,gweis/isodate,True,True,False,6,480,42.51407164800912,True,True,True,8,544,48.52341362996958
+isodate-ordinal-day,gweis/isodate,True,True,False,6,361,32.3799162809737,True,True,True,8,425,38.514712092932314
+isodate-fractional-minute,gweis/isodate,False,False,False,24,2510,232.44533202098683,False,False,False,24,2510,222.78755743103102
+isodate-offset-format-sign,gweis/isodate,True,True,False,5,496,42.321435687015764,True,True,True,7,560,47.98891196097247
+ini-encode-sort,npm/ini,True,True,False,7,403,34.85336368402932,True,True,True,9,467,40.727284235996194
+ini-decode-array,npm/ini,True,True,False,10,837,73.25380316702649,True,True,True,12,901,80.48818208102603
+ini-encode-platform-newline,npm/ini,True,True,False,5,246,21.370746430009604,True,True,True,7,310,27.36563870497048
+ini-unsafe-escaped-comment,npm/ini,True,False,False,24,9731,819.1818637599936,True,False,False,24,9731,803.3487003650516

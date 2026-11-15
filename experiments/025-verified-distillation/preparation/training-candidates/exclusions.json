@@ -1,0 +1,9 @@
+{
+  "phase": "CPU_admission_before_model_collection",
+  "candidate": "humanize-intword-boundary",
+  "retained": false,
+  "reason": "Both visible and hidden checks still pass on the mutated source. Rounding carry restores exact-power outputs; this is not an admitted behavioral fault. No model result used.",
+  "original_preview_preserved": true,
+  "admitted_humanize_candidates": 20,
+  "new_teacher_calls": 0
+}

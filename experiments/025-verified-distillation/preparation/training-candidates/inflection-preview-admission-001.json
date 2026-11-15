@@ -1,0 +1,757 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T01:07:33.393508+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "inflection-camelize-segments",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2705605069641024,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17123497906140983,
+        "output_sha256": "e8fa9a4c4c659a5bcf0c21312424f8d6b675b9e3380549d92db1a0eb45078275"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1713268019957468,
+        "output_sha256": "d4cd904ce5b93833731e58c8f3828a552803478a71a98e037baf9e1a56f508ed"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2712434330023825
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-camelize-lower-first",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2716090860776603,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12131663504987955,
+        "output_sha256": "4f104888e197d22a00f5deecfe8969edd47fbd429b57f180d277e7255b397bcf"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17111283401027322,
+        "output_sha256": "d375b925b34c096d1c99ab8648adb884bb7b618463cb913d5dc1eb6738e2c3df"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2715069520054385
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-dasherize-all",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27143653004895896,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17147932795342058,
+        "output_sha256": "8c94e0b94f0bde3f70dc61627841a59710a9eb0141d8dd76d85241aecfd5f960"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17117920599412173,
+        "output_sha256": "8a85afbc8ba9a43b9d951a025a94f9cff37e0a55e5022e3d87bb73409f176922"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27145557093899697
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-humanize-id-anchor",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27139284706208855,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11906151799485087,
+        "output_sha256": "7ae4a506ead19e60de4bb9cc95a8e13cc8db5d7a4b14a049900ab71c4a8503f7"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1693280329927802,
+        "output_sha256": "ebb9ab62573ec438133e28eda705b6bbfa581140c71f0fc405f92f8d5f75f8df"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27126806206069887
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-humanize-spaces",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715044099604711,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.171311890007928,
+        "output_sha256": "3b90d08ea1b74153197417454c47459e1f35791028e2fed1bea4cdebb86ec4eb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716161819640547,
+        "output_sha256": "1d6fbce52511bb43b5da0a88ab57b88e760cf131206ac404b6c5a3dac9c953db"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2711970789823681
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-ordinal-negative",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.26974640309344977,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1711236929986626,
+        "output_sha256": "d535eb610e5c14b68ba2801bfe4b7f832456f1675999f57da976ad14eb1834c4"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12118132808245718,
+        "output_sha256": "832caac5aee2bd4f9baa84c55cd06f5607aa542cd3ce518cf904802856527c59"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2705777130322531
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-ordinal-teen-cycle",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27126672002486885,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1712117959978059,
+        "output_sha256": "f0fba7c79d0774b0fd18948d05e8cbab7fbbb1b11374e600cf9b08470bfc85b1"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12132513301912695,
+        "output_sha256": "5930975307720972a58fc91a3e8e7b0348d3782d40affb726fad35c3856cea32"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714271260192618
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-ordinalize-sign",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27036117401439697,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17151853698305786,
+        "output_sha256": "3ec6bd84582a23139daa44c8665a9fb2c84779753d1cec7990181150bbfb9706"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1705838799243793,
+        "output_sha256": "720775db0e01be834431067ba6bdbf77a0f7e6f133e1e714b400a8b43445e445"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.271411624038592
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-parameterize-lower",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715389089426026,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17113566200714558,
+        "output_sha256": "206a0d4085b07bffb7318e9b9e8ceaba25ff30215a01866dc61d62a08ee03cd1"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17092858394607902,
+        "output_sha256": "a3a8a20c6987de4ca3b5d8e5aa558ea6c7c50c0a132bb836533876d435d98385"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27126959792803973
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-parameterize-collapse",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2714155239518732,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1711155199445784,
+        "output_sha256": "eace84abb9ad6004fc544e7777a521f587bdcdb4ed547a00888fe8c3e9d269eb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17096145497635007,
+        "output_sha256": "21d13e565c79fcc66ab0d644b3d1bd359c2b5037fb1b96f3923aef3441aa3e6c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27192207297775894
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-parameterize-edges",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2213517950149253,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17142542195506394,
+        "output_sha256": "4f8b1c6c2ce2c6b8ae0e5686f8a2ce357baf1dcc47f9a10afe79a17ff56d1fc6"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.16944723494816571,
+        "output_sha256": "e2dc7fb2b3573d133d0b22d25a8c9592eb4599e9f9172ce4cde697657a557d26"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27152620698325336
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-parameterize-regex-separator",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2712455859873444,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1717447639675811,
+        "output_sha256": "6063d53e33e6cf05c52f3157fd0c4df390dd7cddc37231161a1a454832c00012"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17137741902843118,
+        "output_sha256": "889c2e1f50bf9e19ff8bbb35eca6828ce246b371a786f190c6465e928053dd4f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27159273892175406
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-pluralize-uncountable-case",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27133441902697086,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17113308003172278,
+        "output_sha256": "c4002715d30486f95f0f297694e9c89f16aee8b3b7114c50b2caacdf3332dd19"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17128233599942178,
+        "output_sha256": "ee7343f938ee62b788d729632530a5b0ce1789a4ac7eb84cbeaacb86129301bf"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2713377979816869
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-pluralize-rule-order",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715680570108816,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17144595098216087,
+        "output_sha256": "8604e97a4bec146eebed841b43636af3bb91f326af6bf2c7c7e93ffe9122ad5c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17138759896624833,
+        "output_sha256": "f60f749d3ff7644fca49d8d1018fc9c7c0262153783a752fe6b50b4c21222684"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27125343400985
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-singularize-rule-order",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2707581549184397,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17116006999276578,
+        "output_sha256": "820050f0686ba50c5ea7c1c5bec30664dfe9693b192682030e890eb8486a9b8c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17147343198303133,
+        "output_sha256": "74b02e948cc49a5e8c520daa1b683f8a13345b0885d4e37b3432facb59cb9d9e"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2711944410111755
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-tableize-normalization",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27173449203837663,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17102809494826943,
+        "output_sha256": "780e2033fbaaac614ba36241c7674b63d81d2024380bc6d389a8a827daf8209a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17105211492162198,
+        "output_sha256": "d3d3880c7f5208b63393f72005d7406c506d88b92c43b68b3804a7e2a0653c32"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27141573803965
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-transliterate-decomposition",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27161816600710154,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12039796495810151,
+        "output_sha256": "c8febcf73a591a6812d96018943c330e867824468a3aa8a4d14299a49a43bbbe"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17123040091246367,
+        "output_sha256": "5e468c692ef1b6c05f7bcab27e6342bac06ceb0b336b6ddc401448f9234447cf"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27159930497873574
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-underscore-acronym",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715779850259423,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17131260503083467,
+        "output_sha256": "78db76b53830bce31783ce06b56239700c9b60c6255479a3b2bf5d552e163ca8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17118624900467694,
+        "output_sha256": "64e30f28828f414674ceddd5c1f41bc3ab9790e13b4d99b65015c1cdd023377f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27143911796156317
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-underscore-digit-boundary",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27175493992399424,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1712472520302981,
+        "output_sha256": "91fb3f3373117f3701130b7b7c37e8060f62d3a795e97d49f82f026e8632e027"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17112242698203772,
+        "output_sha256": "c80de2f1b9b372397013cb4926ff65107e86cde890ca6bae6091fcc72af486d6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2715190310264006
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "inflection-underscore-dash",
+      "repository": "jpvanhal/inflection",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710777339525521,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17193358798976988,
+        "output_sha256": "a5299f5774d6947409d79149ad5704deff72425c9919658b69a18c06baca93c2"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17169555800501257,
+        "output_sha256": "5c064cc96fc573e0f49d3ca4c7b7ac2300be6169aaa96ed200ec070530826091"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "inflection/__init__.py": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27170200704131275
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "b1046f424b9d54ccc454593c6384b20c2f1895ca8f9b81d943cb918058655140",
+  "sources_sha256": "1834314ff21093cc7783df9206b7c6c302139c01da36498c9b127030fe5345ad",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/calibration.cpython-310.pyc": "5c95fe6fb949ebadc24ff9e9db7d905a1645f109bc37626f93e937515a4021b7",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/submission.cpython-310.pyc": "cb0a91549a56d219029affb6272d458eb99d273f6924b51951552d3685e94fe6",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "calibration.py": "bebe2e60c92740bbced5fe265b9b0b28111958cd17330396fd72bb9343016042",
+    "export.py": "2ac4a6aa4b04fd0166fc1d01694bc342492b6c211f3988d9930681b7f535233d",
+    "guard_audit.py": "8f1345820c1b657bb695b0f876974e910f39b44fc9ca9814eb5f6ca61968efe6",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": true,
+  "finished_utc": "2026-11-15T01:07:51.151824+00:00"
+}

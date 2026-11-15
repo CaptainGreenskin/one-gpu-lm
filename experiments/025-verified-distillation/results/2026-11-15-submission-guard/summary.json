@@ -1,0 +1,105 @@
+{
+  "stage": "training_only_submission_guard_calibration",
+  "attempts": 1,
+  "controller_complete": true,
+  "tasks_completed": 12,
+  "tasks_registered": 12,
+  "independent_grader_passes": 9,
+  "eligible_full_episodes": 8,
+  "eligible_action_records": 55,
+  "attempted_calls_accounted_in_completed_tasks": 162,
+  "generated_tokens_accounted_in_completed_tasks": 23548,
+  "unaccounted_generation_or_not_run_tasks": [],
+  "pipeline_seconds": 2101.3575258255005,
+  "task_seconds": 2020.6287422609748,
+  "termination_counts": {
+    "call_limit": 4,
+    "submitted": 8
+  },
+  "hardware": {
+    "samples": 417,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.218227863311768,
+    "sample_span_seconds": 2098.579220056534,
+    "boundary_uncovered_seconds": 2.778305768966675,
+    "temperature_c": {
+      "mean": 49.86330935251799,
+      "peak": 63.0
+    },
+    "power_w": {
+      "mean": 280.09868105515585,
+      "peak": 560.84
+    },
+    "utilization_percent": {
+      "mean": 50.23741007194245,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 60371.85851318945,
+      "peak": 62689.0
+    }
+  },
+  "post_hoc_diagnosis_categories": {
+    "no_edit": 3,
+    "executed_verified_episode_before_encoding_screen": 8,
+    "correct_repair_without_strict_verification": 1
+  },
+  "explicit_submissions": 8,
+  "unexecuted_policy_rejections": 8,
+  "decision": {
+    "passed": true,
+    "checks": {
+      "complete_single_attempt": true,
+      "no_unaccounted_generation": true,
+      "minimum_full_episodes": true,
+      "repository_coverage": true,
+      "language_coverage": true,
+      "frozen_inputs_unchanged": true
+    },
+    "eligible_full_episodes": 8,
+    "eligible_distinct_tasks": 8,
+    "eligible_by_repository": {
+      "gweis/isodate": 3,
+      "npm/ini": 3,
+      "python-humanize/humanize": 2
+    },
+    "model_quality_improvement_established": false,
+    "weight_publication_allowed": false
+  },
+  "optimizer_updates": 0,
+  "new_development_scores": 0,
+  "final_test_opened": false,
+  "paired_analysis": {
+    "schema_version": 1,
+    "analysis": "post_hoc_training_only_calibration",
+    "gate_changed": false,
+    "complete_pairs": 12,
+    "excluded_pairs": [],
+    "repair_gains": [],
+    "repair_regressions": [],
+    "all_attempt_costs_original_then_guard": [
+      {
+        "all_observed_attempted_calls": 146,
+        "all_observed_generated_tokens": 23036,
+        "pipeline_seconds": 2105.85852599144,
+        "unreplayed_attempts_with_uncertain_cost": [],
+        "not_run_tasks": [],
+        "incomplete_attempt_costs_are_not_assumed_zero": true
+      },
+      {
+        "all_observed_attempted_calls": 162,
+        "all_observed_generated_tokens": 23548,
+        "pipeline_seconds": 2101.3575258255005,
+        "unreplayed_attempts_with_uncertain_cost": [],
+        "not_run_tasks": [],
+        "incomplete_attempt_costs_are_not_assumed_zero": true
+      }
+    ],
+    "prefix_categories": {
+      "shared_prefix_identical_without_rejection": 4,
+      "shared_prefix_identical_through_first_rejection": 8
+    },
+    "independent_model_quality_improvement_established": false,
+    "limitation": "Same observed training tasks, sequential runs without randomized interleaving. Ordinary failures remain paired. Incomplete or unaudited rows are explicitly excluded from paired outcomes, never from total cost disclosure."
+  }
+}

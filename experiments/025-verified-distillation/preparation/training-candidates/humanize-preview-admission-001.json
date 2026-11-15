@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T01:12:01.560955+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "humanize-intcomma-digits-zero",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2702574960421771,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12044646590948105,
+        "output_sha256": "d5e16b7d3b3dac46b132ee1cf1e3e89794b20952fb037ad309f594b5e0f92cd1"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12108358007390052,
+        "output_sha256": "4afa85b01204027f738f73b76982e118fb4a7c32d37418eaaa5054a954cfef56"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27168066904414445
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-intcomma-grouping",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27121385105419904,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12077444791793823,
+        "output_sha256": "1347aa005b54028c0cf0d125a6ee274d2b21f440f0d55615515ffb361948795d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1188195050926879,
+        "output_sha256": "c5a82f4162cc63d423b4a01e07305f3e4ef7469b88e18e8341cbe4e133f397bf"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714622209314257
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-intcomma-string-groups",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.22128565807361156,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12074502697214484,
+        "output_sha256": "17d884bb6ddecf2d7a54f05f81eb6b3bf8bf3bc36020cd5cedbed319fb4b722e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12103970895987004,
+        "output_sha256": "78ea257174bd717fe1c6247afa04b32cd93ddb845b65961cd2578c2882d72778"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2198479939252138
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-intword-sign",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27143815997987986,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12117915402632207,
+        "output_sha256": "13d2e50abe12df35a6a6a653fbd593d42e2c14ae75bcd6fc02e14e5200fddc1e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11963356507476419,
+        "output_sha256": "cc62a210219e4b3171ff5513c711cd357cf5a71c7beb14c80f0d59d773c9e124"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22083520097658038
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-intword-boundary",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": false,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27148759097326547,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1207260258961469,
+        "output_sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+      },
+      "fault-hidden": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.12098245602101088,
+        "output_sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714899000711739
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-intword-rounding-carry",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2712396899005398,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11938586493488401,
+        "output_sha256": "6ee9ceea39eb97132642111a75edb83523a3bc5adddd08e1b67c79bf4a8f253c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12070274504367262,
+        "output_sha256": "fc3b27838aba511f89828658b79573c36ee15458da60ad7ae5dfb669f0e0b8d1"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2711429479531944
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-apnumber-nine",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.272103063063696,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12103995704092085,
+        "output_sha256": "c33fda6306ecd500ea8a20de8ce12a510ff0bb0fff6b938737d28468eb6d53e7"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12105582898948342,
+        "output_sha256": "0d9da9e078e9ce495d0e229dc53a4f8ada547e7a469333ae12376395c77a486c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22071268502622843
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-fractional-roundup",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27112826495431364,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12056453910190612,
+        "output_sha256": "4e01a188b52b2dee36291a94ecf47c5336eea1cd21f43c904e236aec4cadd433"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17120370909105986,
+        "output_sha256": "2626fa14c52e59e5cc922f62b6e68096716ff08d9ba2bb0322b68a3d7a5002fa"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2709466590313241
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-scientific-exponent-sign",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2694044510135427,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12078134797047824,
+        "output_sha256": "50cf51d5b7fcf97b0da49f4e1b08c54f9c0d0383db47227581aadf65d786afd9"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12095702404621989,
+        "output_sha256": "1bd82b11f039282f832922bf437f7a1d78939b8241a4ed56692a698582ce7407"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714272169396281
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-clamp-floor-equality",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27081372297834605,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12096369406208396,
+        "output_sha256": "8b2d24335bdb80251c38fd60688423bbecf8b9062fee4541dbcfbd55c0cd9d96"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1209302629576996,
+        "output_sha256": "efad83da32b2241058637fc642dfbe2bbc2230d86633c858e2f7342e6ce7f854"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27141139609739184
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-clamp-ceil-equality",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27090605697594583,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12144054204691201,
+        "output_sha256": "42106eac478052f2a4871690eb67daec1d2bb3260769cee22b4e03e762994288"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12143561197444797,
+        "output_sha256": "816bddeebf2428635932b3f1cf4e9834f631560814ee2de5d84b3b03661d92c2"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22063200105912983
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-clamp-callable-marker",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2709176370408386,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11957453098148108,
+        "output_sha256": "d9395d35406b1e3233db189835680151053bef6699278e7a03ecb6a7336f56de"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12069301400333643,
+        "output_sha256": "6c89206d653e12fc041b49174a80aeff4d99ed2f198f812ec4e01280a6d058f8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "2ab61afb03ab23f183a94dc1693edec660652211bdafcf2efb4bf8752122e6fb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22085426899138838
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-size-negative-sign",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27172237692866474,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12114811094943434,
+        "output_sha256": "0fe1de26ed55d5ba3ca53f202536a4e7d46f498dd6c96e909b513ba60cab7e35"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12028497795108706,
+        "output_sha256": "14441149d789bf2ea8ebefd6fc922a31dc29bd818c8d16ded7a8a8585a7fe8ed"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/filesize.py": "f402b006fa15c56679b076e2e48010c512c937c6ecd8923ae511198ce5ab92f1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2710323309293017
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-size-singular-negative",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27145317604299635,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12156888598110527,
+        "output_sha256": "2a4d46942ba2479cde079ed2ca5c0c50472fea960eb3a99566802740e0825d66"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12105701700784266,
+        "output_sha256": "cf59062b8331890a4822fc177a6e8c15f12fd094d9fc9ac7071183e193377c02"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/filesize.py": "f402b006fa15c56679b076e2e48010c512c937c6ecd8923ae511198ce5ab92f1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27150176803115755
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-size-rounding-carry",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.22128045500721782,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12106069701258093,
+        "output_sha256": "030f4f7d06ca79426fdc2976530dfa1c6836dad0aa8e6ef0e0d62ce1932b6932"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12076208600774407,
+        "output_sha256": "fecc4c4da61ed7ee4f1cc516fcd208c1d5af208f39327d88644de178b12461cf"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/filesize.py": "f402b006fa15c56679b076e2e48010c512c937c6ecd8923ae511198ce5ab92f1"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27124747703783214
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-delta-negative",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27127338806167245,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1210905680200085,
+        "output_sha256": "f4ec5c5ea97cdfea553c4c8e9de468edbf1b0197f64817d46d4739e376711f23"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12089807994198054,
+        "output_sha256": "2c27e03798764a82ea9e6871b6e5ec0f80c1dd6cab1eb4b38881d30e7e310bb8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27111542294733226
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-delta-month-option",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27146956603974104,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12052008602768183,
+        "output_sha256": "45a191b737e23339a1edb61229a7a6564d42f43abad4ffa7120e65a215023583"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12056395900435746,
+        "output_sha256": "d4537e5e729e91d71b2ff4759c276f74fb4442b5ad91ec0e7b291f4b9772c011"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.26960269501432776
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-delta-minute-rounding",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2706063030054793,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1210167440585792,
+        "output_sha256": "72f1d6f4c59c96497447eb2b7a0f33dd750ee3bc40727b72b63a37d4e9b12f0d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.11936667200643569,
+        "output_sha256": "cb656318e0062051a8bb6873d6eba66bcc3eac9bc906c8dab037e885af0c43aa"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22177348204422742
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-delta-hour-rounding",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27104295801837,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12089299003127962,
+        "output_sha256": "8a996d20cb9b8acbd393a78fa55cfa1328cb26514671573373b63e492b99ad70"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1202785869827494,
+        "output_sha256": "0e3881c6e9d7950bd5ca136c1f8ff80177a2a2595062942d5440d53c2095d4a7"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27161558996886015
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-delta-millisecond-scale",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2719437819905579,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12107708607800305,
+        "output_sha256": "e728646d435be803de92413debbb5407338455a239a067582cebf795092fa06e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12070063198916614,
+        "output_sha256": "c3cf1871351420a81b934a194d50080d99e237d697df68c938ed022ae6a22b01"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.21935570007190108
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "humanize-naturaltime-tense",
+      "repository": "python-humanize/humanize",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2712224449496716,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12099711399059743,
+        "output_sha256": "4f45bbba10359be5bd3bba8539b89514cf827aa548d3e0fb09034f245b10a23a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12024431605823338,
+        "output_sha256": "5ee4b32acd892d04a232c8839607521301a241f8ea6b1b87ebfe3cd5a0e58915"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/time.py": "4a325404ef4b8e27677d2e854d490eed4210998b39e448e823b0c6a2fea69620"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22125243197660893
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "f316298b0299593e3e286a61d4a13cc2ab74a8b5bc80c90459c9b88a6657925f",
+  "sources_sha256": "a5cb7bf85221130f856f271cfc3eb95ddde9fbb20cdf8d8a025c86156af7b657",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/calibration.cpython-310.pyc": "5c95fe6fb949ebadc24ff9e9db7d905a1645f109bc37626f93e937515a4021b7",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/submission.cpython-310.pyc": "cb0a91549a56d219029affb6272d458eb99d273f6924b51951552d3685e94fe6",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "calibration.py": "bebe2e60c92740bbced5fe265b9b0b28111958cd17330396fd72bb9343016042",
+    "export.py": "2ac4a6aa4b04fd0166fc1d01694bc342492b6c211f3988d9930681b7f535233d",
+    "guard_audit.py": "8f1345820c1b657bb695b0f876974e910f39b44fc9ca9814eb5f6ca61968efe6",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": false,
+  "finished_utc": "2026-11-15T01:12:18.185312+00:00"
+}
