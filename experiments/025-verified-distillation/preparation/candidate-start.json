@@ -1,0 +1,23 @@
+{
+  "observed_epoch": 1794726125.6871579,
+  "stage": "training",
+  "started_utc": "2026-11-15T06:59:11.533292+00:00",
+  "original_deadline_epoch": 1794769151.4057071,
+  "selected_records": 971,
+  "full_episodes": 127,
+  "optimizer_steps": 2,
+  "action_records_consumed": 23,
+  "frozen_input_count": 57,
+  "frozen_inputs_mismatched": [],
+  "new_development_scores": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "publication_commit": "7d89971b267d7194a9a45e81a6f2be2e09add0f5",
+  "protocol_sha256": "f15c6f3e443be0ab92ebd61a525e7767bf90d2d4d926ac5c23c01a5a6ef88c1d",
+  "anonymous_protocol_verified": true,
+  "ci_conclusion": "success",
+  "ci_url": "https://github.com/CaptainGreenskin/one-gpu-lm/actions/runs/43687792651",
+  "original_deadline_utc": "2026-11-15T18:59:11.405707+00:00",
+  "completed_training": false,
+  "model_improvement_established": false
+}
