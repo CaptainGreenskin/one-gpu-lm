@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "stage": "formal_training_only_collection_started",
+  "started_utc": "2026-11-15T01:43:27.600960+00:00",
+  "deadline_epoch": 1794750207.6009471,
+  "registered_maximum_seconds": 43200,
+  "supervisor_grace_seconds": 30,
+  "expected_tasks": 164,
+  "attempts_per_task": 1,
+  "protocol_sha256": "8e2cf62d36f63c8c24245435fdf8be9c570640ace806beda8c41dda12b17cccf",
+  "preregistration_commit": "4dc3adcae77a9527c4d220ea20e098fe4c87bee9",
+  "anonymous_preregistration_files_verified": true,
+  "public_preregistration_url": "https://github.com/CaptainGreenskin/one-gpu-lm/blob/4dc3adcae77a9527c4d220ea20e098fe4c87bee9/experiments/025-verified-distillation/collection.md",
+  "public_link_http_status": "200",
+  "ci_run_id": 43664279823,
+  "ci_conclusion": "success",
+  "ci_jobs": [
+    {
+      "name": "cpu-contracts (3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "cpu-contracts (3.10)",
+      "conclusion": "success"
+    }
+  ],
+  "student_updates_at_launch": 0,
+  "new_development_scores_at_launch": 0,
+  "final_test_opened": false
+}
