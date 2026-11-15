@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "analysis": "post_hoc_description_only",
+  "gate_changed": false,
+  "regression_text_mention_proves_execution": false,
+  "note": "String presence is not execution proof. Exact-command requirement was preregistered and remains unchanged; compound commands may need richer verification instrumentation in a future protocol.",
+  "categories": {
+    "no_edit": 3,
+    "correct_repair_without_strict_verification": 9
+  },
+  "rows": [
+    {
+      "id": "humanize-ordinal-teens",
+      "repository": "python-humanize/humanize",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 16,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 23,
+        "runtime_error": 1
+      },
+      "trajectory_sha256": "4d6862db774070ad3e435a1d30d6575925121c8bc9a065d869c92edec2194a0f"
+    },
+    {
+      "id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 0,
+      "tool_reason_counts": {
+        "ok": 3
+      },
+      "trajectory_sha256": "7d431d395a19012dfa803b47077a5ff8d689ddc170e1eceb23c068b933b90fd5"
+    },
+    {
+      "id": "humanize-gnu-size-base",
+      "repository": "python-humanize/humanize",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 16,
+      "invalid_actions": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 0,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 23
+      },
+      "trajectory_sha256": "f27a57a7f1bd92d65cb480c61642610af6ca7f0f11e9aa0c6aa9ce23bf9fb931"
+    },
+    {
+      "id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 8
+      },
+      "trajectory_sha256": "6f8a0b6dcc52f154033944a9f5b045e9468008375c27db1582818b40d1a19c11"
+    },
+    {
+      "id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 5
+      },
+      "trajectory_sha256": "1c5e611352f6dc4d27f5abcd4f6a29430c21f3d6875c1d4b6d03360e83b270bc"
+    },
+    {
+      "id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 5
+      },
+      "trajectory_sha256": "5e888d9dc3d0b2a289aae1855d104dd64d93b3dcf10f7dc6e25634979fa0155f"
+    },
+    {
+      "id": "isodate-fractional-minute",
+      "repository": "gweis/isodate",
+      "category": "no_edit",
+      "independent_grader_passed": false,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 14,
+      "invalid_actions": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 23
+      },
+      "trajectory_sha256": "23bbf5fe7d7b22b518573958e6090480e0ad3138d2abe312e2e431a1929d56bb"
+    },
+    {
+      "id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 5
+      },
+      "trajectory_sha256": "4fbaa8aec97c9c754e1a61b53e47631d5bcbc18022b83369fc4851edd3e62fb8"
+    },
+    {
+      "id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 7
+      },
+      "trajectory_sha256": "4b08d541e28101b090b8c840ee73821c578854e7cad035e7a2a9df084a4f3e41"
+    },
+    {
+      "id": "ini-decode-array",
+      "repository": "npm/ini",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 1,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 9
+      },
+      "trajectory_sha256": "05e9e0f2e4ea1130394815409757e40505b09ccaa709afba4672a5087f731ab1"
+    },
+    {
+      "id": "ini-encode-platform-newline",
+      "repository": "npm/ini",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": true,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 0,
+      "outputs_at_generation_cap": 0,
+      "regression_command_text_mentions": 1,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 1,
+      "tool_reason_counts": {
+        "ok": 5
+      },
+      "trajectory_sha256": "d245e3accd868214a0d7b07120a83e05b143b7d42971c06d0bb25be766c4eb84"
+    },
+    {
+      "id": "ini-unsafe-escaped-comment",
+      "repository": "npm/ini",
+      "category": "correct_repair_without_strict_verification",
+      "independent_grader_passed": true,
+      "strict_verified": false,
+      "submitted": false,
+      "repeated_command_source_and_feedback": 0,
+      "invalid_actions": 18,
+      "outputs_at_generation_cap": 18,
+      "regression_command_text_mentions": 2,
+      "exact_regression_commands": 0,
+      "raw_tool_outputs_exceeding_2400_chars": 2,
+      "tool_reason_counts": {
+        "ok": 6
+      },
+      "trajectory_sha256": "ddcfe8b827699769e4bf2c998a64c7a32a9f15f09aa5a43485dc2f6d9e068ec1"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "old_tasks_sha256": "71085d64eab822e7bbf18926ae0bcdea008212eea4de02440e233722151b7a11",
+  "new_tasks_sha256": "f26d788cbb688e33d5f9ffafbff4ff790b5036a01c188d3da31eb92dae1c3670",
+  "changes": {
+    "markup-silent-none": "Add independently composed hidden case exercising the injected fault; keep previous cases",
+    "picomatch-end-anchor": "Add independently composed hidden case exercising the injected fault; keep previous cases",
+    "url-auth-first-separator": "Add independently composed hidden case exercising the injected fault; keep previous cases",
+    "url-port-upper-bound": "Add independently composed hidden case exercising the injected fault; keep previous cases"
+  },
+  "basis": "CPU admission: clean and restored passed but faulty source passed hidden checks",
+  "model_scores_observed": 0,
+  "mutations_visible_checks_prompts_unchanged": true,
+  "old_version_retained": true
+}

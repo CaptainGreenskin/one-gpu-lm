@@ -1,0 +1,2191 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T00:32:04.841613+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "markup-ampersand",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710655240807682,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17104207398369908,
+        "output_sha256": "567c6bb849ae8c9fe5f8fce31c001b08971e5a39c3b8857865fab72a962f8add"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.171541717951186,
+        "output_sha256": "a3c91b248c04adc037aa4c7a683e35ae785e9b236ae7cd6b72a517e17dd834e1"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/_native.py": "8522ecf099b3e5aa9acae7a780927791d4f93f0369056a4aae6412762a67742f"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27197676396463066
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-silent-none",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27193966205231845,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1714499300578609,
+        "output_sha256": "81ed8fb4e600f28c89683a5168eb14a72b6ebea8b992a5b8f062d8dbfc85c8ca"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17158549698069692,
+        "output_sha256": "3f1f26feb2aa8762f4ce2628ee66f960ddc1e4eb9df2d24109852ac1dbabb4ba"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2717023949371651
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-soft-string-type",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715471279807389,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1718620778992772,
+        "output_sha256": "3d1416dc72cec3ad6bbad5f20d59b5eb9e36137ee644fe33181fcab6a2188dc6"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.171076888917014,
+        "output_sha256": "3e2a7c400ed69c6d6d3f880d9761aac9d77c96ceebbdbfc63d748f2dac6e3431"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2718293060315773
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-html-protocol",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2717704629758373,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1714133539935574,
+        "output_sha256": "93389fda7210561c6ff9560e5983b292308f8864d980f9d31bee3032ef3aaa58"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17121595202479511,
+        "output_sha256": "4c4fa3266dca3a01984a19daefe7f082d6637fac0fd92dd9c5f8d4635e53b25f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27020460495259613
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-append-escape",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2719571159686893,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17178642889484763,
+        "output_sha256": "fa8a6299aa5ff191dc484013164797329c44a8b0c5759c8440ca5846c9127bbb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17168187291827053,
+        "output_sha256": "91b2d1304788bfb00e664bbae954fbda2a7ebe0d4e217f4668fcd13ae082f326"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2722535450011492
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-prepend-escape",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27178494399413466,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1719754250952974,
+        "output_sha256": "6ec22c48f0b23d9d36e95960769c0ac678884f4bdb963cc7e71abea1c712b2c3"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716183079406619,
+        "output_sha256": "f6e0c7ce6dd94a549268f27733d4fcf7efa1a52f41949eac746bfad74034cb9f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27162234007846564
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-join-escape",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27202016906812787,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.171630205004476,
+        "output_sha256": "5a68156ef3253c548817b35331e96640c2ca1ae62b5926567f88933ec3f7d913"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17062186694238335,
+        "output_sha256": "fcfa3587680c830baaa0b1af5b57146c1f4c5f8fc8f78e92517737f57ca92c98"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27180917595978826
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-replacement-escape",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2717405209550634,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17167034302838147,
+        "output_sha256": "dc60b75f7327e950ec23e5429e15a3023a1ea77d008dd26b1adcede23cc12b4b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1718999840086326,
+        "output_sha256": "adc5fbf0f27c82a3686f473383b2cf081922aeba8593ea96ea593eb869365f07"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2716158429393545
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-tag-whitespace",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27228143997490406,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17208675004076213,
+        "output_sha256": "6a627288aabef60fbf34114ebcb629656a17cb4a0a1fd50bdb4e006f1d934656"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1713369939243421,
+        "output_sha256": "4cf7d18154ef88b2028a038bea80b385ae6e6d258f4d538017ad3d55561aac7c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2713816680479795
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "markup-entity-decoding",
+      "repository": "pallets/markupsafe",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2719795609591529,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17140927503351122,
+        "output_sha256": "e5bb3dc6344892c1b6af77a5387b9d3c07752ec427acbd9919108d62ce284f1c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17139512300491333,
+        "output_sha256": "1b8638e0c1c0daeef88c16eabad87811284db6186a70101f05f3f64563d8741d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2718599650543183
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-name-dot",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4218693639850244,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22171677893493325,
+        "output_sha256": "20503e30cc171f204f64b2c2ffcc868b9a1ffdcf69dc2762f8b3eee56c5817e3"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22178902302403003,
+        "output_sha256": "56c7311de1569708210a946e309223339dcc985046ff529a387d41b33c355f6f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42221622401848435
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-name-repeated-separators",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4220242709852755,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22159637999720871,
+        "output_sha256": "04c670a8c1d891ace17a94d8da4683f92e370178a10dfa1e6cde9e96ce15114a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22122107993345708,
+        "output_sha256": "423cf0935113ad19b5ec1c529572f55b4494ba07595117a3a0eb6df38b9ba3f8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42162891395855695
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-normalized-full-name",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4223291469970718,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22166888508945704,
+        "output_sha256": "79fccf94719c1770858f801b6d5dc1f4fe209df1fd27f94a12d2d55472fc6a12"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2219538080971688,
+        "output_sha256": "91b10c1b8df4ab0ad08d2177a19ba9f1d02b91962cd418ddbf955ca4a62c75f6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42169081000611186
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-preserve-release-zeros",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4211672180099413,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2216953911120072,
+        "output_sha256": "3183740ae11b49117cc915f373cd98c5fa949bf501b863f6698ceb138b9523ce"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22178955492563546,
+        "output_sha256": "18970e13a220f75917f28e11776ca40d2d97e47b689a8cf872f6079df81c4d64"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42257621802855283
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-hyphenated-sdist",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.371990357991308,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22174354910384864,
+        "output_sha256": "d24000e08ddd7e079637944c8e2abaf22b39a0be73717d784a92e59e7ee35d08"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22156122897285968,
+        "output_sha256": "80d63c484a6349bf37fdb67f4d6e4e11957d0df2929d939417372f0c3292a237"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4214969449676573
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-wheel-build-number",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37195819802582264,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22151820198632777,
+        "output_sha256": "21aa4bf4b398aaffb36fc404e3abe6beb546817301cbaa320ae471253320125a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22179024305660278,
+        "output_sha256": "686183de966044b9e1039e90d6ba1da03f9916eef534c4601062e525b3cd64b0"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42165678495075554
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-public-version-local",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.42231005104258657,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2217489460017532,
+        "output_sha256": "4478f28f3d2e574d4991b32c04604d6bb96ea42f5bc270468b8b976f4de6acea"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22141898097470403,
+        "output_sha256": "cb0d708f4731b0f86bad5677db316bce654cbd0151fc139a7ab266f7cbf02411"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/version.py": "9463cfeadb5ca3100bcaf678afa392ff98a3b85887f2d8dd2de7f5c232f1f1cb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42225172207690775
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-base-version-epoch",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4211819660849869,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22164231701754034,
+        "output_sha256": "ce890d9b1106405684c969aebee5230020bd20a9d4c54a2270276537a4c6b31b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22155187197495252,
+        "output_sha256": "1a0932ec528f0188d1d072a310567a5cbc55c862a92c3f97cc47575a11df044b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/version.py": "9463cfeadb5ca3100bcaf678afa392ff98a3b85887f2d8dd2de7f5c232f1f1cb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4209655079757795
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-prerelease-union",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4220764599740505,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22181872802320868,
+        "output_sha256": "a731936973a17258d87a4de824a2d4671fa4d694c8647e921ca6ae378add6b07"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22145922994241118,
+        "output_sha256": "31ba33c5a9062fbbe6ec2acfc2cc3e0454985bc2d502bcfaacd58c95b79a50b6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/version.py": "9463cfeadb5ca3100bcaf678afa392ff98a3b85887f2d8dd2de7f5c232f1f1cb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4220885030226782
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "packaging-missing-micro",
+      "repository": "pypa/packaging",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.42225486505776644,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2217683109920472,
+        "output_sha256": "f2b8ddc914c634d7687889f7f49327ed64f0c9f3988ab5ce5bc2a1f78ebff99f"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2214600460138172,
+        "output_sha256": "49005ffc2a9ac6c04e14023a3c4db20a3cbc660e79516fcda6da7ce02e8dec6b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/packaging/version.py": "9463cfeadb5ca3100bcaf678afa392ff98a3b85887f2d8dd2de7f5c232f1f1cb"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.42210359300952405
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-pattern-array",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1721977840643376,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12131758197210729,
+        "output_sha256": "916477a9b1a6c9382ee969b3524064cf1246b4cf8aee7fa2aebb7c8cb38fa375"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07114609307609499,
+        "output_sha256": "abfde63aee77610ca697d5751efa3425f528b190f959b70f2e65dadd8d28abe5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17012896900996566
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-ignore-pattern",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17172696196939796,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1213567639933899,
+        "output_sha256": "7110b4217d1e576157eb8e289acf051147d53344f5299ce295ce79b98d5e30bd"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12134786101523787,
+        "output_sha256": "f377b1661f6ae7ac712d29d8f4d38d8c33a3afc957e53f58c51b52d2bd76f9dc"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17138925299514085
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-result-callback",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1715184299973771,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12159830296877772,
+        "output_sha256": "a98beb47c7b7dcc25c038df98a999a7752a53ab9c6effe9681af055d88a8ace8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12148479698225856,
+        "output_sha256": "726a8a46f4072329c0c2277c37d8fa6cefd49cfd07cf511177e1bf339e279be0"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1715415910584852
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-match-callback-metadata",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1716375140240416,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12106912699528039,
+        "output_sha256": "a74e9b2630fee205c73f8b9e488f832fd11f329c16a1329bba479aff8fc536e2"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12145045306533575,
+        "output_sha256": "49f0a4e212b688e8cff2d566562e825c602d069a7dfce3c79512560b5a871ee8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1715812999755144
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-return-object",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17165373300667852,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1215817800257355,
+        "output_sha256": "d338548a97947de5ebad3980805c3d4a9ae9e8cbc987500fdd638a03230b7d6f"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12138347106520087,
+        "output_sha256": "d6ee0a8ec9273883318e5a2699f5dfabc09c181cc1fa4665f7391b87310e81dc"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17117193702142686
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-basename-match",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1712657620664686,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.0706886479165405,
+        "output_sha256": "916477a9b1a6c9382ee969b3524064cf1246b4cf8aee7fa2aebb7c8cb38fa375"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12130663392599672,
+        "output_sha256": "abfde63aee77610ca697d5751efa3425f528b190f959b70f2e65dadd8d28abe5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17145098000764847
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-nocase-flag",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17147274198941886,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12146250193472952,
+        "output_sha256": "916477a9b1a6c9382ee969b3524064cf1246b4cf8aee7fa2aebb7c8cb38fa375"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12137695599813014,
+        "output_sha256": "abfde63aee77610ca697d5751efa3425f528b190f959b70f2e65dadd8d28abe5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1714154549408704
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-end-anchor",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17051758407615125,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12079868896398693,
+        "output_sha256": "5e3b39774b1a3e1cc53e942cdd100aa304415a44f76e8d52bd3cb83911335324"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12079211906529963,
+        "output_sha256": "98feab07ed1f6ef91d677e16711b409609c5bda20e23b56d0af16b0ea2f18503"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17087248002644628
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-negated-pattern",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1214905099477619,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12080028699710965,
+        "output_sha256": "916477a9b1a6c9382ee969b3524064cf1246b4cf8aee7fa2aebb7c8cb38fa375"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12143572699278593,
+        "output_sha256": "abfde63aee77610ca697d5751efa3425f528b190f959b70f2e65dadd8d28abe5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17099901207257062
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "picomatch-debug-regex-errors",
+      "repository": "micromatch/picomatch",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17103242396842688,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12102945789229125,
+        "output_sha256": "15eb4f6fd67c2bb1f1263a6da6600ed9b4a4d0844104eef4c066ec3d271f923c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12085675902199,
+        "output_sha256": "b2cb19401308a2a9e14a84eb50303a03f3171d713403324253a3a6a53677dd31"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17137851798906922
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-data-key",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37224567006342113,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22148005804046988,
+        "output_sha256": "625b0f3c1f334381e2822c6354155b729c3c6483f82be2054b0ff20ec7de651e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22187800600659102,
+        "output_sha256": "65de050900512adba099eef17b4745bac18aa7eec50b19b994b4d3c4fdc9a457"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.3703001829562709
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-config-key",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.3718615050893277,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22008148906752467,
+        "output_sha256": "79dbb34cfe1990f49a723515a6a073e34e0cf1c9dee0251ed167074da8d3d79f"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22136384493205696,
+        "output_sha256": "4c6841036057ba657f61d06406a97af8c1e77436dd5a7fbbe59fa5a04d56106b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.37178799498360604
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-cache-key",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37179133493918926,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22151053696870804,
+        "output_sha256": "f734b2ecaaa477c2bf901a5541dc6448bea88c535814823e0bc3940229ce386b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22041977592743933,
+        "output_sha256": "8856b7c04a2265e11df3f4f068f9c75726408d90e0cd0583fcf52ead18dcf7b8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.3718873120378703
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-state-key",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.3719136599684134,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22116208600346,
+        "output_sha256": "d45a0eaf6482db4d0ffdf726ca691e1e0b528eece21668a16b16a522271f6c63"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22167787002399564,
+        "output_sha256": "e4c85b7d3bfe631f60430ed94c0f5a68ed8592c94e3d051945e8fa75e61482b8"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.37216225801967084
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-site-data-order",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37201689404901117,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22141915396787226,
+        "output_sha256": "72df8c156180f41f44c634e1f0e2c5f33662484ed37e5eccaba2d2b5b8604722"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22166949603706598,
+        "output_sha256": "54b0e865c8ed4e8759f26f719d1a8b4e20ed863f546bee0b41407990cfee82d4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.3721342060016468
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-site-config-key",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.3720469990512356,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22154706495348364,
+        "output_sha256": "a4c8bdd6367d638c7f728864612a7ac2ba44f70cfa3a2d4f530901c4facf85e9"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22177038399968296,
+        "output_sha256": "a39af48ffc4793d247c50329340c66906e349ba6442ee90f7293fc8922b72ae4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.37202101096045226
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-version-component",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37213482602965087,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22182530292775482,
+        "output_sha256": "eb712d890f62e5ec86a1eb5ea51cf013a7cfc2c4ebeceb37e401774fe71c5ae3"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22109369607642293,
+        "output_sha256": "d3212dc7d36628d4d12a3926b94c8626ad5bb51258ca65f99af80995ce2d1837"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/api.py": "f2905caab42a4a61f49f490e607aff14e14b168775ccae92d0871f7ef2e11cd4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.3722982869949192
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-multipath-selection",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.3721166970208287,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22150574205443263,
+        "output_sha256": "575b240bb782d382692a253c5dceb0051b7524143da542be9a33a75e9607a64b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2210457599721849,
+        "output_sha256": "a39af48ffc4793d247c50329340c66906e349ba6442ee90f7293fc8922b72ae4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/api.py": "f2905caab42a4a61f49f490e607aff14e14b168775ccae92d0871f7ef2e11cd4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.3720686989836395
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-relative-site-paths",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.3720081109786406,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2211663209600374,
+        "output_sha256": "09b0d3a01839cf70287153cc7b66b33d1f010068d9a42d291663da05abd119cc"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2213758210418746,
+        "output_sha256": "4d4b17d8c94a0703399ebf622490ca76ae54b7e90275a7b737ec965cb6bc7218"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.37155469600111246
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "platformdirs-log-opinion",
+      "repository": "tox-dev/platformdirs",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.37193285999819636,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2218121869955212,
+        "output_sha256": "176fbe27fe8fd55a95ee966d62ea33141b9e9c2114b0aa5eb297e6b4b28d6326"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22134988592006266,
+        "output_sha256": "11037d2b2d601556c6a11d355ee938f5479a2250c97c6473073d5d6fc9b6fb5a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/platformdirs/unix.py": "a446e3b895e36cbecba0afea690ba7e17d33d8cb61de98fa821005f576ec2a4e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.37224933702964336
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-numeric-identifiers",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17123097192961723,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12174982205033302,
+        "output_sha256": "f577ed61040ec7b58ccdf142f3a9b19a497ac91876fb3cab66d230b17b381757"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12129011994693428,
+        "output_sha256": "aeea46ef935c2ee93b519f18ff16f03cccb8b4234da5b16de3b504eedf35b6ef"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "internal/identifiers.js": "b4916b09dc7869ae0eb05e71c855c942a3a7365f7e6e89185d59a9e45a2451d7"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.171365698100999
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-numeric-before-text",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1717290919041261,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.121114999987185,
+        "output_sha256": "f577ed61040ec7b58ccdf142f3a9b19a497ac91876fb3cab66d230b17b381757"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.121255645994097,
+        "output_sha256": "32f1a3b705c62d089f805b676f1e4f381a84a20b67079fe736a26b29391ecd76"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "internal/identifiers.js": "b4916b09dc7869ae0eb05e71c855c942a3a7365f7e6e89185d59a9e45a2451d7"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17144783795811236
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-release-prerelease-null",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17167082894593477,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12153495801612735,
+        "output_sha256": "729b71077251b597f5abc58a23976c68fa0b0234e5695695b4e9d7078d603a8d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1212279429892078,
+        "output_sha256": "212ac06c34202601321a048764d120c5fcfdb3e7438504b5ef77ad893995434d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/prerelease.js": "baedbf503d5610ad041bfb56071efa48feb331ca278295c399537d35d3ffb593"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17121372395195067
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-major-difference",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17122280597686768,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12114411895163357,
+        "output_sha256": "3cfd8d879b2ba226859a38d657f0c07b5d116b3d80273f183923e24714c2e698"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12131555692758411,
+        "output_sha256": "2db9d2b3a8e42dee6439a6412363f58974a53cb57d29d85d87cc0a504940e9a5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/diff.js": "7a11fd39b987cdf06c65e928cb1aca49bec583feb86fb5c8fe47a6fd61d7de31"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1714232339290902
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-build-main-precedence",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1713869400555268,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12091968592721969,
+        "output_sha256": "f577ed61040ec7b58ccdf142f3a9b19a497ac91876fb3cab66d230b17b381757"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07112888398114592,
+        "output_sha256": "aeea46ef935c2ee93b519f18ff16f03cccb8b4234da5b16de3b504eedf35b6ef"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/compare-build.js": "5ab651d5b40af289bd85c645a92b6d8cfe1a986dc413c797cfcc8d623d7c844c"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1710967159597203
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-descending-sort",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17136467900127172,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12106797297019511,
+        "output_sha256": "44c540b818d07c0773179d9591ca3ab53743022f1c0e8c23d39958b7e4e67e37"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12068012298550457,
+        "output_sha256": "4aecb7cf7a7075688922b1b22fe4a842da865e52729e08935a16b02b9756646a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/rsort.js": "6ec659ce3b6c2b173c719286caab04409adba046c0917874ec3b5e36ddfbc7e3"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17155794496648014
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-coerce-default-minor",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17120681796222925,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12140179704874754,
+        "output_sha256": "efab9e803a6dcbfa8df31a2cba2ec7ec4d8b1e735bc4e1841242dd53304ff6c9"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07121972797904164,
+        "output_sha256": "c013706eec66f079e6f51ea3117dfcc5e673829189af8bb1086607ed36c09c4a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/coerce.js": "28a251c5ab210ddf9e97551b9f37a53329fcce91f0c3943dcbc02de1a1de915a"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1709672079887241
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-coerce-rtl-reset",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1714681580197066,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12124693708028644,
+        "output_sha256": "374c71e89b37c61d1a407d2fa8a0871dff3a339d67c266d422f3eb87070bdf56"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12135536200366914,
+        "output_sha256": "610b55aa2833049f097eeb9c9be536da807e31ab5125f3d825d4fdfe98c6b9f0"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "functions/coerce.js": "28a251c5ab210ddf9e97551b9f37a53329fcce91f0c3943dcbc02de1a1de915a"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17088248091749847
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-max-satisfying",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17157255194615573,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12128798896446824,
+        "output_sha256": "7fb2c9a92728d5a3b3468658dd4855a1b7467d0f5631b6e665e70c7cc34f684c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12110625905916095,
+        "output_sha256": "4cb7c577cc8fed3b42f71a01364000126897bbfa2d016a08ef8179c06354244e"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "ranges/max-satisfying.js": "e1a2c0d6144cc772cd20bbc8ecb9e8a3a4074e9172a3d8e794838b591cdeb416"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22122835204936564
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "semver-wildcard-valid-range",
+      "repository": "npm/node-semver",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1714679840952158,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12141713197343051,
+        "output_sha256": "58acedeedf3bdce715378d86ef7dc878a6066b871c1dad9f227e38e350d2a194"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12142645299900323,
+        "output_sha256": "539c40abac5ef454b90bf94f0e715306fa7c150182d0e8e3c7aa0ce8125313d6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "ranges/valid.js": "5ef6f995af801868925940cf8df5735d565ebabb090b068695cae65218bcd3ac"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17160470003727823
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-path-prefix",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47090451302938163,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22152642195578665,
+        "output_sha256": "dba23cbbfb758eaae6e6cc351e8fa0cc5100fa639a0fa40f003f31595b6a493d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22191428998485208,
+        "output_sha256": "06807d79ec8c3329521e06146eb7ed2cdc3f9b6c5191f9d5e12c9b8f8923ca4e"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4721208210103214
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-scheme-case",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47194794297683984,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22160012798849493,
+        "output_sha256": "bd0b68712eba4c9479254984ea00c199b243cbb4537fcef2201146e976beccc7"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22134624503087252,
+        "output_sha256": "090c145ca9aab81a0b3b7752b4d3beafee4e8523193cae59e1a01caa137ac15a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4723491729237139
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-empty-query",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47234991705045104,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22027573210652918,
+        "output_sha256": "08b358b55b241420caaed284a7f9ec49980506743b217c6f5fd1340ddfc3d8d6"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22223948210012168,
+        "output_sha256": "3712d2e5ea0727ae8d99d24f7cf069d5c52e0e35d335dac7edfefc78b437add2"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.47238752094563097
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-zero-port",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4736580459866673,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22196643601637334,
+        "output_sha256": "cbc7e727d55f49eec6bb12d7a0688b008adc8d84e6598b5cd030f668a501c2d4"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22150939097627997,
+        "output_sha256": "3e83f5921ac32799b628465f258d112aacb403a505d3ab469a1cdae25645244d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4723223259206861
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-authority-userinfo",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47216117510106415,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.221622932003811,
+        "output_sha256": "fd1191c896bf84b13ec74d2770f42593bfdaa53208f206466d7a6e64d2812c9c"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22132547793444246,
+        "output_sha256": "0d29766640ef50d4d8b95ca3a8264b6558b021801ae02d523c795d71bafa76cf"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.47196497907862067
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-empty-fragment",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47263050300534815,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22157469601370394,
+        "output_sha256": "853a8c79414c3173d2ace4a74e511301de51ee861059403bece72be143f69d13"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2217241720063612,
+        "output_sha256": "fa795ff1ade43df624f4f9ae71dd3528e6e5656f1529d96a0a7243ec3d343700"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.47210945992264897
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-auth-first-separator",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47213778109289706,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22204170899931341,
+        "output_sha256": "601ddcfeba615f137d905d6948775d8d592e07972850315dd1847d61fbcf7d34"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22102739301044494,
+        "output_sha256": "9c3fa376f94d7156b513a69193e9f5d3b45fe13000fb9109e940561aa8625a72"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4723218419821933
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-parent-path-segment",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47147521597798914,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2214050559559837,
+        "output_sha256": "9064b46d762329090b6daad3043923bea8fc9739fdfda7ce3fe3223f4641c533"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22130620188545436,
+        "output_sha256": "8f348914fa88a33f5a6ca87ea503ddcfbc90ab1487b4e0280fcb9a9b8df1485b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.4718894080724567
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-percent-case",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.4722059100167826,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.2215669989818707,
+        "output_sha256": "f0df2e5786209639bc1829fbf28fbabbca666d055e2d9afe7f4f08c74bafcff8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22205442795529962,
+        "output_sha256": "b0521690545d1f9fb4c0fccc18f9c8f26ba6f51349f8563a9fe0d9981fe11599"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.47207061504013836
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "url-port-upper-bound",
+      "repository": "urllib3/urllib3",
+      "split": "development",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.47194038494490087,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22142908594105393,
+        "output_sha256": "12e665d2bd4aa158ccbc91f8145ec6ed845c167e1d4c58bc528912427f239e5e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.22171570791397244,
+        "output_sha256": "ac305ca1ae4573e90b13f3858648734446098b2fe4ac6cef8417b539d99d1a95"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.47203479206655174
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "f26d788cbb688e33d5f9ffafbff4ff790b5036a01c188d3da31eb92dae1c3670",
+  "sources_sha256": "798b03d72bb593747af3b8e38129b35dbaad3ee3f8bc467c65233eafd7eb9e2a",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": true,
+  "finished_utc": "2026-11-15T00:33:06.184672+00:00"
+}

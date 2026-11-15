@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "stage": "completed",
+  "complete": true,
+  "started_epoch": 1794700484.242393,
+  "started_utc": "2026-11-14T23:54:44.242408+00:00",
+  "deadline_epoch": 1794714884.242393,
+  "finished_epoch": 1794702590.100919,
+  "finished_utc": "2026-11-15T00:29:50.100929+00:00",
+  "protocol_sha256": "ad705f36633cf35c8c270a807a3e2c4919362b25435a443fdc59c1c28e9a2333",
+  "final_test_opened": false,
+  "development_tasks_scored": 0,
+  "training_updates": 0,
+  "external_teacher_requests": 0,
+  "publication_commit": "94e2e6ec9663612b03412fd2f5ee7d61aab4173f",
+  "telemetry": {
+    "samples": 418,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "backend_stopped": true,
+  "frozen_files_unchanged": true,
+  "tasks": [
+    {
+      "id": "humanize-ordinal-teens",
+      "repository": "python-humanize/humanize",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 1382,
+      "attempted_calls": 24,
+      "submitted": false,
+      "terminal_reason": "call_limit",
+      "seconds": 128.31426705501508,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/humanize/number.py": "90abcae04a5fbdaef30aebb1e9279cc1803edf12822582c857901b780e96d7cc"
+      },
+      "final_source_sha256": {
+        "src/humanize/number.py": "90abcae04a5fbdaef30aebb1e9279cc1803edf12822582c857901b780e96d7cc"
+      },
+      "trajectory_sha256": "4d6862db774070ad3e435a1d30d6575925121c8bc9a065d869c92edec2194a0f",
+      "invalid_actions": 0,
+      "first_edit_call": null,
+      "failed_tool_commands": 1,
+      "grade": {
+        "passed": false,
+        "reason": "no_source_change",
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 167,
+      "attempted_calls": 3,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 14.322375255054794,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/humanize/lists.py": "d2d0b7039124c511b5cfe93fb801c53961a35e82d526bb410f980c6b9c144a3b"
+      },
+      "final_source_sha256": {
+        "src/humanize/lists.py": "622534ad0d9e026280ec627f363ebe8c4be0dbe6345561b570187f5c3be726a1"
+      },
+      "trajectory_sha256": "7d431d395a19012dfa803b47077a5ff8d689ddc170e1eceb23c068b933b90fd5",
+      "invalid_actions": 0,
+      "first_edit_call": 2,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/lists.py": "622534ad0d9e026280ec627f363ebe8c4be0dbe6345561b570187f5c3be726a1"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27128300501499325,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "humanize-gnu-size-base",
+      "repository": "python-humanize/humanize",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 5787,
+      "attempted_calls": 24,
+      "submitted": false,
+      "terminal_reason": "call_limit",
+      "seconds": 491.02179850800894,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/humanize/filesize.py": "8e69e02c9c11eaecaf630d9e77d2e1ec98f3b87a5791966d34f10081198015d2"
+      },
+      "final_source_sha256": {
+        "src/humanize/filesize.py": "8e69e02c9c11eaecaf630d9e77d2e1ec98f3b87a5791966d34f10081198015d2"
+      },
+      "trajectory_sha256": "f27a57a7f1bd92d65cb480c61642610af6ca7f0f11e9aa0c6aa9ce23bf9fb931",
+      "invalid_actions": 1,
+      "first_edit_call": null,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": false,
+        "reason": "no_source_change",
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 636,
+      "attempted_calls": 8,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 57.20273696503136,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/humanize/number.py": "18e77a066ac42a6c6f15223b599232f35fba4d005f24f29272f209cfff012b13"
+      },
+      "final_source_sha256": {
+        "src/humanize/number.py": "9e6a5ab9634d95a120d6954da106ab81513f1d687cd51e3f4b624f21d1c88d73"
+      },
+      "trajectory_sha256": "6f8a0b6dcc52f154033944a9f5b045e9468008375c27db1582818b40d1a19c11",
+      "invalid_actions": 0,
+      "first_edit_call": 5,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/humanize/number.py": "9e6a5ab9634d95a120d6954da106ab81513f1d687cd51e3f4b624f21d1c88d73"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714254519669339,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "family": "gweis/isodate",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 480,
+      "attempted_calls": 6,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 42.51407164800912,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/isodate/isotzinfo.py": "db65331ee20422f233e7ec2a1b9956d181acca76f08310df9ab68293f840f695"
+      },
+      "final_source_sha256": {
+        "src/isodate/isotzinfo.py": "613622b52aa924ab56d694a4bc36677c782b1761e539b5609fb75da77ffeee55"
+      },
+      "trajectory_sha256": "1c5e611352f6dc4d27f5abcd4f6a29430c21f3d6875c1d4b6d03360e83b270bc",
+      "invalid_actions": 1,
+      "first_edit_call": 4,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "613622b52aa924ab56d694a4bc36677c782b1761e539b5609fb75da77ffeee55"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27157519792672247,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "family": "gweis/isodate",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 361,
+      "attempted_calls": 6,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 32.3799162809737,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/isodate/isodates.py": "cc0ba625c9add9678491fc517cceff4a666d5a0d7025004503e58ad6e04f41d9"
+      },
+      "final_source_sha256": {
+        "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+      },
+      "trajectory_sha256": "5e888d9dc3d0b2a289aae1855d104dd64d93b3dcf10f7dc6e25634979fa0155f",
+      "invalid_actions": 1,
+      "first_edit_call": 5,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2717849570326507,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "isodate-fractional-minute",
+      "repository": "gweis/isodate",
+      "family": "gweis/isodate",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 2510,
+      "attempted_calls": 24,
+      "submitted": false,
+      "terminal_reason": "call_limit",
+      "seconds": 232.44533202098683,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/isodate/isotime.py": "205811f088355f394aa66112432f1b02933fd7c0d50365cffe5f72e738579b94"
+      },
+      "final_source_sha256": {
+        "src/isodate/isotime.py": "205811f088355f394aa66112432f1b02933fd7c0d50365cffe5f72e738579b94"
+      },
+      "trajectory_sha256": "23bbf5fe7d7b22b518573958e6090480e0ad3138d2abe312e2e431a1929d56bb",
+      "invalid_actions": 1,
+      "first_edit_call": null,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": false,
+        "reason": "no_source_change",
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "family": "gweis/isodate",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 496,
+      "attempted_calls": 5,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 42.321435687015764,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "src/isodate/isotzinfo.py": "491ae46dd9d4b049e285ee126554609c8d0ba30f02117ecb8c95a621ef76b5ab"
+      },
+      "final_source_sha256": {
+        "src/isodate/isotzinfo.py": "785ebe8c9d0e1e016b089b545d388215acfd77c488c77af73ce774dfb0fe0332"
+      },
+      "trajectory_sha256": "4fbaa8aec97c9c754e1a61b53e47631d5bcbc18022b83369fc4851edd3e62fb8",
+      "invalid_actions": 0,
+      "first_edit_call": 3,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "785ebe8c9d0e1e016b089b545d388215acfd77c488c77af73ce774dfb0fe0332"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.26977181201800704,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "family": "npm/ini",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 403,
+      "attempted_calls": 7,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 34.85336368402932,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "lib/ini.js": "c19bc328e121eef455c23967cb7fa8b38044b93e907c6b24afef8099735d66d0"
+      },
+      "final_source_sha256": {
+        "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+      },
+      "trajectory_sha256": "4b08d541e28101b090b8c840ee73821c578854e7cad035e7a2a9df084a4f3e41",
+      "invalid_actions": 0,
+      "first_edit_call": 4,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17133146000560373,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "ini-decode-array",
+      "repository": "npm/ini",
+      "family": "npm/ini",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 837,
+      "attempted_calls": 10,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 73.25380316702649,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "lib/ini.js": "cf174a9581c07c8cf9510cf5565d109a172f6516dfef65d741058835ac652f78"
+      },
+      "final_source_sha256": {
+        "lib/ini.js": "5603272c755268c3c8c7effe74e91be7d291f8e74f8672a074e079a71335f719"
+      },
+      "trajectory_sha256": "05e9e0f2e4ea1130394815409757e40505b09ccaa709afba4672a5087f731ab1",
+      "invalid_actions": 1,
+      "first_edit_call": 7,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "5603272c755268c3c8c7effe74e91be7d291f8e74f8672a074e079a71335f719"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17073028406593949,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "ini-encode-platform-newline",
+      "repository": "npm/ini",
+      "family": "npm/ini",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 246,
+      "attempted_calls": 5,
+      "submitted": true,
+      "terminal_reason": "submitted",
+      "seconds": 21.370746430009604,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "lib/ini.js": "170c9f21cf270a758a07f63465aaf3c2f83b8650b4483741c669f419226d855d"
+      },
+      "final_source_sha256": {
+        "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+      },
+      "trajectory_sha256": "d245e3accd868214a0d7b07120a83e05b143b7d42971c06d0bb25be766c4eb84",
+      "invalid_actions": 0,
+      "first_edit_call": 4,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.12135772500187159,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    },
+    {
+      "id": "ini-unsafe-escaped-comment",
+      "repository": "npm/ini",
+      "family": "npm/ini",
+      "split": "training",
+      "producer_kind": "model",
+      "teacher_kind": "local_higher_budget_self_distillation_pilot",
+      "complete": true,
+      "generated_tokens": 9731,
+      "attempted_calls": 24,
+      "submitted": false,
+      "terminal_reason": "call_limit",
+      "seconds": 819.1818637599936,
+      "agent_verified_final_source": false,
+      "eligible_verified_trajectory": false,
+      "original_source_sha256": {
+        "lib/ini.js": "7aeff17fd8ad1fff59ed86cb88d4e9879e750ca0a730d562eb908dc8c900f6e9"
+      },
+      "final_source_sha256": {
+        "lib/ini.js": "b00f45f13dba7ea25e46693d565cdd533b40ca4f64838dc4179acad8d98893cd"
+      },
+      "trajectory_sha256": "ddcfe8b827699769e4bf2c998a64c7a32a9f15f09aa5a43485dc2f6d9e068ec1",
+      "invalid_actions": 18,
+      "first_edit_call": 6,
+      "failed_tool_commands": 0,
+      "grade": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "b00f45f13dba7ea25e46693d565cdd533b40ca4f64838dc4179acad8d98893cd"
+        },
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1703107679495588,
+        "ignored_new_file_count": 0,
+        "protected_file_tampering_count": 0
+      }
+    }
+  ]
+}

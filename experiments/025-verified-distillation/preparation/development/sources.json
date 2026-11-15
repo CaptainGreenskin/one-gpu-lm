@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "status": "source_subsets_reviewed_tasks_not_constructed_or_admitted",
+  "sources": [
+    {
+      "repository": "pypa/packaging",
+      "revision": "284ff8900e59115dc86f85ca4e9d87d95e7dbc75",
+      "family": "pypa/packaging",
+      "related_families": [],
+      "split": "development",
+      "language": "python",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "Apache-2.0 OR BSD-2-Clause",
+      "notices": [
+        "LICENSE",
+        "LICENSE.APACHE",
+        "LICENSE.BSD"
+      ],
+      "files": {
+        "LICENSE": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "LICENSE.APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "LICENSE.BSD": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+        "src/packaging/__init__.py": "bd88511068f82d7a5ecc0cc6f9cf4d519b6e3cc2828ac6e88d51acfda806e65e",
+        "src/packaging/_elffile.py": "01fad840bc2d83297b1f2cb3be54c1314aa76b13c3b3a60b4b738e8a7de5d0e7",
+        "src/packaging/_manylinux.py": "f82a68151c0f950ef235e04045f4a476a0909fb32385fb75f570930f69110486",
+        "src/packaging/_musllinux.py": "e4bf2603703b17e280f7fae10a5017586d362d015cef2d632b99d64b8337b3f3",
+        "src/packaging/_parser.py": "a32decd5551826300ffa39e75fdfe54e349d34cf0982343dcdb6821ef28e4850",
+        "src/packaging/_ranges.py": "ccead4a604a138da86e2bbbcf1e35709b6c081a23b86a05914def6b8721b54b4",
+        "src/packaging/_structures.py": "eb48d16c5efca7ccf930a9cd77a700a6b80e69d0891d5d03966526441a8565cb",
+        "src/packaging/_tokenizer.py": "e5a9d4b3cada2e8ac4a7eebe35315cca6ae5d6e51775fde47ae104e1c198a0c0",
+        "src/packaging/dependency_groups.py": "c364d202f37cedecd2ee6d845b552be8451af08ae95e62a4c79a3c47eb67003d",
+        "src/packaging/direct_url.py": "157ef6c93b2b7a5d7d7407727b254b2e6c3ae6dd0a0005982034117a6503c664",
+        "src/packaging/errors.py": "7ed0edac73bb994d36983b3ff7d4a8fecc7f0122a629ba86bbe1f9cb399546c6",
+        "src/packaging/markers.py": "90f555c6cac159265ada11560175799a4b829ff0aae5d4e2576086332a69c7d7",
+        "src/packaging/ranges.py": "708c33d49120bb4166b76f8055b928fb4cb09654c944c4e2551bcd91bc573543",
+        "src/packaging/requirements.py": "b1746da2ded0b813f36003af597e64a687444a3e1e9f8cae37b71e0aacb36cea",
+        "src/packaging/specifiers.py": "e323a72de85ea60a6bbfccd11c89e6a07653b598fee9f38c25d51419c1e7f36c",
+        "src/packaging/tags.py": "7c1832ec00bd2d71a72ba8f11e58d6b8b76bf39f26c2c6fcab188523e1bcbc54",
+        "src/packaging/utils.py": "dab6640b9c74093dd4e10480441f5a77c4a61fb32f3d54e11eac9bb7f380db2e",
+        "src/packaging/version.py": "9463cfeadb5ca3100bcaf678afa392ff98a3b85887f2d8dd2de7f5c232f1f1cb"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Selected core Python modules; excludes license parser, SPDX data, metadata and pylock modules. No installed pip/setuptools/poetry vendor copy is mounted.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    },
+    {
+      "repository": "pallets/markupsafe",
+      "revision": "4e111271b1494995708a9e878a10829b5e10c7ba",
+      "family": "pallets/markupsafe",
+      "related_families": [],
+      "split": "development",
+      "language": "python",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "BSD-3-Clause",
+      "notices": [
+        "LICENSE.txt"
+      ],
+      "files": {
+        "LICENSE.txt": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+        "src/markupsafe/__init__.py": "310afadaabdd94a53d5b57c84cbd56b1ebe1877454be8ba986237d142e533df0",
+        "src/markupsafe/_native.py": "8522ecf099b3e5aa9acae7a780927791d4f93f0369056a4aae6412762a67742f"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Only the Python implementation and fallback; excludes C speedups, compiled alternatives, tests and documentation.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    },
+    {
+      "repository": "micromatch/picomatch",
+      "revision": "9fab7bf61913ea334c4203ed321c426cfde44a42",
+      "family": "micromatch/picomatch",
+      "related_families": [],
+      "split": "development",
+      "language": "javascript",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "MIT",
+      "notices": [
+        "LICENSE"
+      ],
+      "files": {
+        "LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+        "index.js": "02ae26406508e28f9ba0865be16cf77f0b33de6c4d4d49c212c4176df1d5625a",
+        "lib/constants.js": "cdcb0716c3c7137f34fbec4fe29613de0aaa0a7de01505601ef3a88a5ba05fb0",
+        "lib/parse.js": "4c92a8492700bacd183c21abe2fa63dfe3c27544a3641b3804da1f0815beaae1",
+        "lib/picomatch.js": "fdd249d7ffff853f3bb1c77eafc8baa1a437bea85a94c35877b83c6a40d9ca94",
+        "lib/scan.js": "6457a1764e5c2e543cc3a0c00ce12ebb3764097628868198370b64d4e642aaae",
+        "lib/utils.js": "f04604f70cd1a3f6ace80b84766468674ff38b4bb83818d2ef1d81fc6355f935",
+        "package.json": "479b70b87aa7b44344d62c8a459ae7e53dd2bca6c61f1396bd55e63e9de73fc6",
+        "posix.js": "5695ff5dfcd5a338a40630bd506056f2950bcb08fe1cc068519cbbfe60add480"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Core implementation, package manifest and entrypoints only. No upstream tests or Bash test fixtures copied; future checks independently authored.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    },
+    {
+      "repository": "npm/node-semver",
+      "revision": "b37b033b585ad5e575afeccadb426ea41bc6cea4",
+      "family": "npm/node-semver",
+      "related_families": [],
+      "split": "development",
+      "language": "javascript",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "ISC",
+      "notices": [
+        "LICENSE"
+      ],
+      "files": {
+        "LICENSE": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "classes/comparator.js": "054202956430d63d5ff4599fae09760ce465b489e4f0b5ef5ce7cc7ac21157ac",
+        "classes/index.js": "3bb69280c2a788d0eb16f915bb9df4dbe812075182024c753dca2283bcea1b17",
+        "classes/range.js": "301811a48b055bb62a0c49240c64cc0b701cb926b67c425758df45920ff985dc",
+        "classes/semver.js": "813b2c185512d30c9b931c2fed8140889d9d7490ceeeedc370da30337dc8ca57",
+        "functions/clean.js": "4eadb0892844cf3ae295121a86163a66c73f89acd1b7f0b114ec115b4539512f",
+        "functions/cmp.js": "a63d74e87b73788e78e9ce0a4892b5333d6b809c0de88b31e4ed76cbf17f94b3",
+        "functions/coerce.js": "28a251c5ab210ddf9e97551b9f37a53329fcce91f0c3943dcbc02de1a1de915a",
+        "functions/compare-build.js": "5ab651d5b40af289bd85c645a92b6d8cfe1a986dc413c797cfcc8d623d7c844c",
+        "functions/compare-loose.js": "07b6a3a1db0a5210ceb784c1708bd4679f3a94fc73a9c9eb349349e7070a6f78",
+        "functions/compare.js": "d404b5aa48aaddc8a654c5da8fb7d4443404b7948589b21ac4b045d1cee4e34c",
+        "functions/diff.js": "7a11fd39b987cdf06c65e928cb1aca49bec583feb86fb5c8fe47a6fd61d7de31",
+        "functions/eq.js": "b6e30a7168e52723216fc163d300e2bbabf92ec0251f9ac5438bb6ccf57c8936",
+        "functions/gt.js": "135523704aa48cd98834dd170ee9f74f0e68043b379f32d021db11e6304c5c93",
+        "functions/gte.js": "991c5bbe48ecb210a562646872f05862ad9fc0d42186d85aa60bdc6fa323eb9d",
+        "functions/inc.js": "952069fc8690b7d3af0fe9d55f7c54fe2ac067b48c5e74f6a54f9ce19a334493",
+        "functions/lt.js": "1c897a9bc849320e2e9dc0f6c09555c01ee3ddf30734515d717b88ad7740ea25",
+        "functions/lte.js": "3a8d0b1d00423f60cc7cb810b36ab77b61330831ad237dbe73eb5cecfa412800",
+        "functions/major.js": "5c678480d882f511200fed2c16ec3847dfedb08a1d70328dc2f031d35d825276",
+        "functions/minor.js": "1b051794f1713adec2a236517196691687c35f82e0b596ff3316a78b3cc10ae6",
+        "functions/neq.js": "a662883751918822c162183b46b9e20d09489132f82686c92ab78bee67f3a127",
+        "functions/parse.js": "29a69e15b6d02fe381d573f861881a89590e9d0f0f0ca740c5f85eaf0234c4ad",
+        "functions/patch.js": "f02d3c1b059fe3d96ce124886f7eef321d381a95638fd3c4a8d5ccd8e76ffadd",
+        "functions/prerelease.js": "baedbf503d5610ad041bfb56071efa48feb331ca278295c399537d35d3ffb593",
+        "functions/rcompare.js": "84fa5e88adf08d15c993cac8cdec6d1a65045b7e95a9c55184230a7f807f4dc0",
+        "functions/rsort.js": "6ec659ce3b6c2b173c719286caab04409adba046c0917874ec3b5e36ddfbc7e3",
+        "functions/satisfies.js": "8cf5e122b757251671ed6c9d9680904b71cd375845853f05312e608cf2cc2946",
+        "functions/sort.js": "c2fe2d3ed0be8a4e9de8f02abdfd5d9c0d3bcc510d88e87af84185592882c4b8",
+        "functions/truncate.js": "e145833a250311927c92f424f56498c52f1b7bb1271ce6afbf006db87773ff43",
+        "functions/valid.js": "0de7ea736cb7807179d46dfac09c830a9338e02b6a07db12d7040cde2def6025",
+        "index.js": "4b3e57d3d40e29e0706002eba113d09f35aea593578376bbeec83b777b9912ab",
+        "internal/constants.js": "8274b2f7ce15171895c43ef98c0da88aeeda1cf937bffe3c23893f159f3cddaa",
+        "internal/debug.js": "8a9f420572260f3cf944463b5090d62a60f0730589dc23a7ec4ca25e2ee41bb3",
+        "internal/identifiers.js": "b4916b09dc7869ae0eb05e71c855c942a3a7365f7e6e89185d59a9e45a2451d7",
+        "internal/lrucache.js": "14d087c87da87b6f5c36fc4cdd7d2d14077874b14a68e20fce5b6138fa2ca34f",
+        "internal/parse-options.js": "fdf51d0de8d5442c35a997ef58cd530d239ce206f961d14c5121354451b01d01",
+        "internal/re.js": "5833262888e2b5d843a69193f83c05e374818dbe55379b497819b5bf58e48cd8",
+        "internal/trim-comparator-whitespace.js": "828e567bc845d9d26a04f66fc442b48be3b2d8e27161733fae15325cd7ea428b",
+        "package.json": "0a3f93689bb0be4e2fcdabc585da62ae24695f1abefc6974d68968c8918af381",
+        "ranges/gtr.js": "8fadad28e36d28e93d498ac7ac20badba2a407312845eabc18e82e90a0732b19",
+        "ranges/intersects.js": "fe87ac5d3020010ad3ec00636dadbf0c669ff07d0f57e0a8165a8264f79a676f",
+        "ranges/ltr.js": "e5186fcc03018acf9be6d968755d4c49727aeb0d981d179eb568ae5fbe983038",
+        "ranges/max-satisfying.js": "e1a2c0d6144cc772cd20bbc8ecb9e8a3a4074e9172a3d8e794838b591cdeb416",
+        "ranges/min-satisfying.js": "2681abf54098aa670f12826b76a6ec77a2441186ae4243afde3be8ae4908f7ca",
+        "ranges/min-version.js": "fefba0a88c2bf74d5cede504b5ae50a8dc3edfd69cf0174a491e2cf3e442614b",
+        "ranges/outside.js": "3a2b0b23593d2f49419c06af2af75450cab103b0c25d665d48fe5bca495a21ca",
+        "ranges/simplify.js": "7b78581c13322bc68ece2088685386b2a9b51c15b94d0a2063bdf2546bd41934",
+        "ranges/subset.js": "ceb9eb6ed5bfc6c7ac7af7f47e5c3535444a4e66a0e2b58cdad4bd02a35d454d",
+        "ranges/to-comparators.js": "6c5e966210cff270fa2850668aaf8460fac7759f8d99f282521ef7a78f4564e9",
+        "ranges/valid.js": "5ef6f995af801868925940cf8df5735d565ebabb090b068695cae65218bcd3ac"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Core implementation, package manifest and entrypoint only, no tests/history/distribution duplicate. Python-semver is a separate implementation, not assumed a fork; comparisons remain scoped.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    },
+    {
+      "repository": "urllib3/urllib3",
+      "revision": "d9f9b0ad5b99247e06aa9a50b7a5747aa5c2e35d",
+      "family": "urllib3/urllib3",
+      "related_families": [
+        "python-hyper/rfc3986"
+      ],
+      "split": "development",
+      "language": "python",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "MIT AND Apache-2.0",
+      "notices": [
+        "LICENSE.txt",
+        "upstream-notices/rfc3986-license.txt",
+        "upstream-notices/Apache-2.0.txt"
+      ],
+      "files": {
+        "LICENSE.txt": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+        "src/urllib3/exceptions.py": "8503c7a2aa38cb0e3a7ac3525647225505d5520031580825b21e8c6f242d6be4",
+        "src/urllib3/util/url.py": "b2fda11a5cab9671d4ba3f519529073b257d4383ca51f7b91b946f138ea495b4",
+        "src/urllib3/util/util.py": "8f795b64ad633f28b00f7e13f08809cdd5846554fee04fb4bd82098bd52378d0",
+        "upstream-notices/rfc3986-license.txt": "c0ddce33bfac480a66bde40c590ede2647a4c8a729dcb0d2ce46c014473d5dd8",
+        "upstream-notices/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      "generated_metadata_files": {},
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Module-level URL tasks only: url.py, its to_str helper, exceptions. Namespace import, not the full urllib3 public root API. Excludes copied CPython connection/TLS modules, contrib code and non-ASCII IDNA dependency use. Follow-up: parse_url declares that parser/helpers are based heavily on rfc3986; upstream notice and family review required before admission. Upstream rfc3986 copyright notice and complete Apache-2.0 terms now retained; associated family recorded. No previous repository name matches this lineage.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    },
+    {
+      "repository": "tox-dev/platformdirs",
+      "revision": "2f915d83f8822a017b839ed270da701c4048db4c",
+      "family": "tox-dev/platformdirs",
+      "related_families": [
+        "ActiveState/appdirs"
+      ],
+      "split": "development",
+      "language": "python",
+      "approved_for": {
+        "training": false,
+        "development": true,
+        "raw_redistribution": false,
+        "weight_publication": false
+      },
+      "notice_review_complete": true,
+      "lineage_review_complete": true,
+      "license_spdx": "MIT",
+      "notices": [
+        "LICENSE",
+        "upstream-notices/appdirs-MIT.txt"
+      ],
+      "files": {
+        "LICENSE": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+        "src/platformdirs/__init__.py": "ceebfff78ee58184b54687d32b352005a678d55225ea5caeced97457f46b2b4e",
+        "src/platformdirs/__main__.py": "5906b780e824573fea9383065df2884d5d39a953cd49e16d98d6efca8d8d113c",
+        "src/platformdirs/_android.py": "a5160163380c6db8f0de84e5a024a0ad9db2a3cfcb72b290b72ac206e2073b7f",
+        "src/platformdirs/_runtime.py": "ec4ed22166d9e3d01d7d59072a9e7bb74c35fd3ff82a7ae8f42d26013f6ff015",
+        "src/platformdirs/_xdg.py": "215189fd0304c97b9125bb6baeda9be3653b6317bcb30c7e659e4877d89398db",
+        "src/platformdirs/android.py": "6fd398ac8027fe4bd4bcb0ce611b0ada8fc6a5034684820821cc1521dbc82679",
+        "src/platformdirs/api.py": "f2905caab42a4a61f49f490e607aff14e14b168775ccae92d0871f7ef2e11cd4",
+        "src/platformdirs/ios.py": "1f8a703a37b04f0da13e7f9c4f1124a3d8708e56fcaf83b5652d1e1aed6ac76f",
+        "src/platformdirs/macos.py": "4515f3f4028ac5b885ba5faec31717030913cf5028dccc46c73188725e91f92f",
+        "src/platformdirs/pytest_plugin.py": "162f4b52c3e28bfca7b327e0db77ccde4feccb498808f1f19516a8263040bd74",
+        "src/platformdirs/testing.py": "2ba6e6ce9d5bdf7887325615cd92912e5cc34b55d7db00fb9eaec3d2bdbfd839",
+        "src/platformdirs/unix.py": "a446e3b895e36cbecba0afea690ba7e17d33d8cb61de98fa821005f576ec2a4e",
+        "src/platformdirs/version.py": "1948814b984b4a3c92e615b55ce5578e19a6ca85924a6a845d2d31cdc51b3297",
+        "src/platformdirs/windows.py": "7255d8e0870eaf9a18c5bbbea8cb1d792548f7f58a9701367c5fd327f869e43f",
+        "upstream-notices/appdirs-MIT.txt": "9cc8662783b092bf8393338f8a44edd3dfe2a7fcd308f6c54026f2b208a75946"
+      },
+      "generated_metadata_files": {
+        "src/platformdirs/version.py": "1948814b984b4a3c92e615b55ce5578e19a6ca85924a6a845d2d31cdc51b3297"
+      },
+      "review_scope": "Private CPU task construction and later development evaluation only, on this exact source subset. No task/model admission or redistribution permission inferred.",
+      "review_notes": "Python source and generated version metadata only. Original AppDirs notice retained as a conservative lineage obligation; no installed appdirs or platformdirs copy mounted.",
+      "obligations": [
+        "retain original and applicable upstream notices",
+        "record source revision and changes",
+        "do not imply upstream endorsement"
+      ]
+    }
+  ]
+}

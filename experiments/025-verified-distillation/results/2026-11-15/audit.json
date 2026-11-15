@@ -1,0 +1,943 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "ad705f36633cf35c8c270a807a3e2c4919362b25435a443fdc59c1c28e9a2333",
+  "rows": [
+    {
+      "id": "humanize-ordinal-teens",
+      "repository": "python-humanize/humanize",
+      "language": "python",
+      "trajectory_sha256": "4d6862db774070ad3e435a1d30d6575925121c8bc9a065d869c92edec2194a0f",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 24,
+      "generated_tokens": 1382,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 597,
+          "supervised_tokens": 43
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1476,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 2029,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2564,
+          "supervised_tokens": 96
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2707,
+          "supervised_tokens": 36
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 2820,
+          "supervised_tokens": 35
+        },
+        {
+          "call": 7,
+          "kind": "other",
+          "tokens": 2940,
+          "supervised_tokens": 52
+        },
+        {
+          "call": 8,
+          "kind": "other",
+          "tokens": 3033,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 9,
+          "kind": "other",
+          "tokens": 3125,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 10,
+          "kind": "other",
+          "tokens": 3217,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 11,
+          "kind": "other",
+          "tokens": 3309,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 12,
+          "kind": "other",
+          "tokens": 3401,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 13,
+          "kind": "other",
+          "tokens": 3493,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 14,
+          "kind": "other",
+          "tokens": 3585,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 15,
+          "kind": "other",
+          "tokens": 3677,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 16,
+          "kind": "other",
+          "tokens": 3769,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 17,
+          "kind": "other",
+          "tokens": 3861,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 18,
+          "kind": "other",
+          "tokens": 3953,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 19,
+          "kind": "other",
+          "tokens": 4045,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 20,
+          "kind": "other",
+          "tokens": 4137,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 21,
+          "kind": "other",
+          "tokens": 4229,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 22,
+          "kind": "other",
+          "tokens": 4321,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 23,
+          "kind": "other",
+          "tokens": 4413,
+          "supervised_tokens": 62
+        },
+        {
+          "call": 24,
+          "kind": "other",
+          "tokens": 4505,
+          "supervised_tokens": 62
+        }
+      ]
+    },
+    {
+      "id": "humanize-natural-list-tail",
+      "repository": "python-humanize/humanize",
+      "language": "python",
+      "trajectory_sha256": "7d431d395a19012dfa803b47077a5ff8d689ddc170e1eceb23c068b933b90fd5",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 3,
+      "generated_tokens": 167,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 588,
+          "supervised_tokens": 33
+        },
+        {
+          "call": 2,
+          "kind": "edit",
+          "tokens": 991,
+          "supervised_tokens": 103
+        },
+        {
+          "call": 3,
+          "kind": "submit",
+          "tokens": 1090,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "humanize-gnu-size-base",
+      "repository": "python-humanize/humanize",
+      "language": "python",
+      "trajectory_sha256": "f27a57a7f1bd92d65cb480c61642610af6ca7f0f11e9aa0c6aa9ce23bf9fb931",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 24,
+      "generated_tokens": 5787,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 729,
+          "supervised_tokens": 43
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1625,
+          "supervised_tokens": 44
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 1916,
+          "supervised_tokens": 31
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2103,
+          "supervised_tokens": 113
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 2215,
+          "supervised_tokens": 66
+        },
+        {
+          "call": 7,
+          "kind": "other",
+          "tokens": 2416,
+          "supervised_tokens": 180
+        },
+        {
+          "call": 8,
+          "kind": "other",
+          "tokens": 3078,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 9,
+          "kind": "other",
+          "tokens": 4507,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 10,
+          "kind": "other",
+          "tokens": 5936,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 11,
+          "kind": "other",
+          "tokens": 7365,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 12,
+          "kind": "other",
+          "tokens": 5178,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 13,
+          "kind": "other",
+          "tokens": 5178,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 14,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 15,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 16,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 17,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 18,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 19,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 20,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 21,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 22,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 23,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        },
+        {
+          "call": 24,
+          "kind": "other",
+          "tokens": 5179,
+          "supervised_tokens": 310
+        }
+      ]
+    },
+    {
+      "id": "humanize-negative-fraction",
+      "repository": "python-humanize/humanize",
+      "language": "python",
+      "trajectory_sha256": "6f8a0b6dcc52f154033944a9f5b045e9468008375c27db1582818b40d1a19c11",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 8,
+      "generated_tokens": 636,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 596,
+          "supervised_tokens": 43
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1480,
+          "supervised_tokens": 50
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1724,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2475,
+          "supervised_tokens": 52
+        },
+        {
+          "call": 5,
+          "kind": "edit",
+          "tokens": 2757,
+          "supervised_tokens": 254
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 2910,
+          "supervised_tokens": 130
+        },
+        {
+          "call": 7,
+          "kind": "other",
+          "tokens": 3000,
+          "supervised_tokens": 36
+        },
+        {
+          "call": 8,
+          "kind": "submit",
+          "tokens": 3057,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "isodate-negative-offset",
+      "repository": "gweis/isodate",
+      "language": "python",
+      "trajectory_sha256": "1c5e611352f6dc4d27f5abcd4f6a29430c21f3d6875c1d4b6d03360e83b270bc",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 6,
+      "generated_tokens": 480,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 737,
+          "supervised_tokens": 44
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1568,
+          "supervised_tokens": 53
+        },
+        {
+          "call": 4,
+          "kind": "edit",
+          "tokens": 1986,
+          "supervised_tokens": 165
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2134,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 6,
+          "kind": "submit",
+          "tokens": 2235,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "isodate-ordinal-day",
+      "repository": "gweis/isodate",
+      "language": "python",
+      "trajectory_sha256": "5e888d9dc3d0b2a289aae1855d104dd64d93b3dcf10f7dc6e25634979fa0155f",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 6,
+      "generated_tokens": 361,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 733,
+          "supervised_tokens": 43
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1494,
+          "supervised_tokens": 53
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 1705,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 5,
+          "kind": "edit",
+          "tokens": 2224,
+          "supervised_tokens": 128
+        },
+        {
+          "call": 6,
+          "kind": "submit",
+          "tokens": 2318,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "isodate-fractional-minute",
+      "repository": "gweis/isodate",
+      "language": "python",
+      "trajectory_sha256": "23bbf5fe7d7b22b518573958e6090480e0ad3138d2abe312e2e431a1929d56bb",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 24,
+      "generated_tokens": 2510,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 730,
+          "supervised_tokens": 42
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1512,
+          "supervised_tokens": 43
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2220,
+          "supervised_tokens": 44
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2799,
+          "supervised_tokens": 128
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 3041,
+          "supervised_tokens": 99
+        },
+        {
+          "call": 7,
+          "kind": "other",
+          "tokens": 3169,
+          "supervised_tokens": 86
+        },
+        {
+          "call": 8,
+          "kind": "other",
+          "tokens": 3265,
+          "supervised_tokens": 64
+        },
+        {
+          "call": 9,
+          "kind": "other",
+          "tokens": 3393,
+          "supervised_tokens": 90
+        },
+        {
+          "call": 10,
+          "kind": "other",
+          "tokens": 3556,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 11,
+          "kind": "other",
+          "tokens": 3777,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 12,
+          "kind": "other",
+          "tokens": 3998,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 13,
+          "kind": "other",
+          "tokens": 4219,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 14,
+          "kind": "other",
+          "tokens": 4440,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 15,
+          "kind": "other",
+          "tokens": 4661,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 16,
+          "kind": "other",
+          "tokens": 4882,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 17,
+          "kind": "other",
+          "tokens": 5103,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 18,
+          "kind": "other",
+          "tokens": 5324,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 19,
+          "kind": "other",
+          "tokens": 5545,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 20,
+          "kind": "other",
+          "tokens": 5766,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 21,
+          "kind": "other",
+          "tokens": 5987,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 22,
+          "kind": "other",
+          "tokens": 6208,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 23,
+          "kind": "other",
+          "tokens": 6429,
+          "supervised_tokens": 125
+        },
+        {
+          "call": 24,
+          "kind": "other",
+          "tokens": 6650,
+          "supervised_tokens": 125
+        }
+      ]
+    },
+    {
+      "id": "isodate-offset-format-sign",
+      "repository": "gweis/isodate",
+      "language": "python",
+      "trajectory_sha256": "4fbaa8aec97c9c754e1a61b53e47631d5bcbc18022b83369fc4851edd3e62fb8",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 5,
+      "generated_tokens": 496,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 600,
+          "supervised_tokens": 49
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1438,
+          "supervised_tokens": 59
+        },
+        {
+          "call": 3,
+          "kind": "edit",
+          "tokens": 2059,
+          "supervised_tokens": 170
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2271,
+          "supervised_tokens": 189
+        },
+        {
+          "call": 5,
+          "kind": "submit",
+          "tokens": 2358,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "ini-encode-sort",
+      "repository": "npm/ini",
+      "language": "javascript",
+      "trajectory_sha256": "4b08d541e28101b090b8c840ee73821c578854e7cad035e7a2a9df084a4f3e41",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 7,
+      "generated_tokens": 403,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 594,
+          "supervised_tokens": 46
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1441,
+          "supervised_tokens": 78
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1608,
+          "supervised_tokens": 42
+        },
+        {
+          "call": 4,
+          "kind": "edit",
+          "tokens": 1926,
+          "supervised_tokens": 74
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2049,
+          "supervised_tokens": 100
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 2154,
+          "supervised_tokens": 36
+        },
+        {
+          "call": 7,
+          "kind": "submit",
+          "tokens": 2211,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "ini-decode-array",
+      "repository": "npm/ini",
+      "language": "javascript",
+      "trajectory_sha256": "05e9e0f2e4ea1130394815409757e40505b09ccaa709afba4672a5087f731ab1",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 10,
+      "generated_tokens": 837,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 739,
+          "supervised_tokens": 46
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1552,
+          "supervised_tokens": 44
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2354,
+          "supervised_tokens": 58
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 2913,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 6,
+          "kind": "other",
+          "tokens": 3217,
+          "supervised_tokens": 45
+        },
+        {
+          "call": 7,
+          "kind": "edit",
+          "tokens": 3772,
+          "supervised_tokens": 298
+        },
+        {
+          "call": 8,
+          "kind": "other",
+          "tokens": 3969,
+          "supervised_tokens": 174
+        },
+        {
+          "call": 9,
+          "kind": "other",
+          "tokens": 4079,
+          "supervised_tokens": 36
+        },
+        {
+          "call": 10,
+          "kind": "submit",
+          "tokens": 4136,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "ini-encode-platform-newline",
+      "repository": "npm/ini",
+      "language": "javascript",
+      "trajectory_sha256": "d245e3accd868214a0d7b07120a83e05b143b7d42971c06d0bb25be766c4eb84",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 5,
+      "generated_tokens": 246,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 593,
+          "supervised_tokens": 46
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1406,
+          "supervised_tokens": 44
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 1538,
+          "supervised_tokens": 39
+        },
+        {
+          "call": 4,
+          "kind": "edit",
+          "tokens": 1772,
+          "supervised_tokens": 88
+        },
+        {
+          "call": 5,
+          "kind": "submit",
+          "tokens": 1852,
+          "supervised_tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "ini-unsafe-escaped-comment",
+      "repository": "npm/ini",
+      "language": "javascript",
+      "trajectory_sha256": "ddcfe8b827699769e4bf2c998a64c7a32a9f15f09aa5a43485dc2f6d9e068ec1",
+      "input_replay_passed": true,
+      "eligible_for_sft": false,
+      "executed_verified_episode": false,
+      "attempted_calls": 24,
+      "generated_tokens": 9731,
+      "complete": true,
+      "encoding_errors": [],
+      "encoded_actions": [
+        {
+          "call": 1,
+          "kind": "other",
+          "tokens": 600,
+          "supervised_tokens": 46
+        },
+        {
+          "call": 2,
+          "kind": "other",
+          "tokens": 1425,
+          "supervised_tokens": 56
+        },
+        {
+          "call": 3,
+          "kind": "other",
+          "tokens": 2225,
+          "supervised_tokens": 57
+        },
+        {
+          "call": 4,
+          "kind": "other",
+          "tokens": 2878,
+          "supervised_tokens": 69
+        },
+        {
+          "call": 5,
+          "kind": "other",
+          "tokens": 3262,
+          "supervised_tokens": 60
+        },
+        {
+          "call": 6,
+          "kind": "edit",
+          "tokens": 3525,
+          "supervised_tokens": 233
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "passed": false,
+    "checks": {
+      "complete_single_attempt": true,
+      "no_unaccounted_generation": true,
+      "minimum_full_episodes": false,
+      "repository_coverage": false,
+      "language_coverage": false,
+      "frozen_inputs_unchanged": true
+    },
+    "eligible_full_episodes": 0,
+    "eligible_distinct_tasks": 0,
+    "eligible_by_repository": {},
+    "model_quality_improvement_established": false,
+    "weight_publication_allowed": false
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "new_development_scores": 0
+}

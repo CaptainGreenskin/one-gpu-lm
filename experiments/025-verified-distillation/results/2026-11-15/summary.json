@@ -1,0 +1,65 @@
+{
+  "stage": "training_only_teacher_feasibility",
+  "attempts": 1,
+  "controller_complete": true,
+  "tasks_completed": 12,
+  "tasks_registered": 12,
+  "independent_grader_passes": 9,
+  "eligible_full_episodes": 0,
+  "eligible_action_records": 0,
+  "attempted_calls_accounted_in_completed_tasks": 146,
+  "generated_tokens_accounted_in_completed_tasks": 23036,
+  "unaccounted_generation_or_not_run_tasks": [],
+  "pipeline_seconds": 2105.85852599144,
+  "task_seconds": 1989.1817104611546,
+  "termination_counts": {
+    "call_limit": 4,
+    "submitted": 8
+  },
+  "hardware": {
+    "samples": 418,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.067434072494507,
+    "sample_span_seconds": 2103.438683986664,
+    "boundary_uncovered_seconds": 2.419842004776001,
+    "temperature_c": {
+      "mean": 49.24641148325359,
+      "peak": 62.0
+    },
+    "power_w": {
+      "mean": 271.8753827751196,
+      "peak": 545.07
+    },
+    "utilization_percent": {
+      "mean": 49.08133971291866,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 59842.92344497608,
+      "peak": 62689.0
+    }
+  },
+  "post_hoc_diagnosis_categories": {
+    "no_edit": 3,
+    "correct_repair_without_strict_verification": 9
+  },
+  "decision": {
+    "passed": false,
+    "checks": {
+      "complete_single_attempt": true,
+      "no_unaccounted_generation": true,
+      "minimum_full_episodes": false,
+      "repository_coverage": false,
+      "language_coverage": false,
+      "frozen_inputs_unchanged": true
+    },
+    "eligible_full_episodes": 0,
+    "eligible_distinct_tasks": 0,
+    "eligible_by_repository": {},
+    "model_quality_improvement_established": false,
+    "weight_publication_allowed": false
+  },
+  "optimizer_updates": 0,
+  "new_development_scores": 0,
+  "final_test_opened": false
+}

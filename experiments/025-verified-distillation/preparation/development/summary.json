@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "stage": "CPU_preparation_only",
+  "tasks": 60,
+  "unique_tasks": 60,
+  "unique_mutations": 60,
+  "repositories": {
+    "pallets/markupsafe": 10,
+    "pypa/packaging": 10,
+    "micromatch/picomatch": 10,
+    "tox-dev/platformdirs": 10,
+    "npm/node-semver": 10,
+    "urllib3/urllib3": 10
+  },
+  "languages": {
+    "python": 40,
+    "javascript": 20
+  },
+  "first_admission": {
+    "passed": 56,
+    "total": 60
+  },
+  "second_admission": {
+    "passed": 60,
+    "total": 60
+  },
+  "tasks_sha256": "f26d788cbb688e33d5f9ffafbff4ff790b5036a01c188d3da31eb92dae1c3670",
+  "sources_sha256": "798b03d72bb593747af3b8e38129b35dbaad3ee3f8bc467c65233eafd7eb9e2a",
+  "model_generations": 0,
+  "model_scores": 0,
+  "teacher_exposure": false,
+  "final_test_opened": false,
+  "full_factorial_recipe_frozen": false,
+  "notices": [
+    {
+      "repository": "pypa/packaging",
+      "source_path": "LICENSE",
+      "public_path": "notices/pypa--packaging--LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "repository": "pypa/packaging",
+      "source_path": "LICENSE.APACHE",
+      "public_path": "notices/pypa--packaging--LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "repository": "pypa/packaging",
+      "source_path": "LICENSE.BSD",
+      "public_path": "notices/pypa--packaging--LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "repository": "pallets/markupsafe",
+      "source_path": "LICENSE.txt",
+      "public_path": "notices/pallets--markupsafe--LICENSE.txt",
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+    },
+    {
+      "repository": "micromatch/picomatch",
+      "source_path": "LICENSE",
+      "public_path": "notices/micromatch--picomatch--LICENSE",
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+    },
+    {
+      "repository": "npm/node-semver",
+      "source_path": "LICENSE",
+      "public_path": "notices/npm--node-semver--LICENSE",
+      "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+    },
+    {
+      "repository": "urllib3/urllib3",
+      "source_path": "LICENSE.txt",
+      "public_path": "notices/urllib3--urllib3--LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "repository": "urllib3/urllib3",
+      "source_path": "upstream-notices/rfc3986-license.txt",
+      "public_path": "notices/urllib3--urllib3--upstream-notices--rfc3986-license.txt",
+      "sha256": "c0ddce33bfac480a66bde40c590ede2647a4c8a729dcb0d2ce46c014473d5dd8"
+    },
+    {
+      "repository": "urllib3/urllib3",
+      "source_path": "upstream-notices/Apache-2.0.txt",
+      "public_path": "notices/urllib3--urllib3--upstream-notices--Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "repository": "tox-dev/platformdirs",
+      "source_path": "LICENSE",
+      "public_path": "notices/tox-dev--platformdirs--LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "repository": "tox-dev/platformdirs",
+      "source_path": "upstream-notices/appdirs-MIT.txt",
+      "public_path": "notices/tox-dev--platformdirs--upstream-notices--appdirs-MIT.txt",
+      "sha256": "9cc8662783b092bf8393338f8a44edd3dfe2a7fcd308f6c54026f2b208a75946"
+    }
+  ],
+  "limitations": [
+    "Authored semantic regressions on selected module source, not historical issues or long-horizon tasks",
+    "Split by reviewed repository family, not proof of base-model pretraining decontamination",
+    "Within-repository tasks are correlated; report repository-level pairs in the later evaluation"
+  ]
+}

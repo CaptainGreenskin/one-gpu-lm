@@ -1,0 +1,33 @@
+{
+  "scope": "Public source manifests only; no sealed task specifications read",
+  "repository_names": [
+    "SWE-agent/mini-swe-agent",
+    "dbader/schedule",
+    "dgilland/pydash",
+    "epoberezkin/fast-deep-equal",
+    "epoberezkin/fast-json-stable-stringify",
+    "jashkenas/underscore",
+    "jmespath/jmespath.py",
+    "jpvanhal/inflection",
+    "lepture/mistune",
+    "litl/backoff",
+    "ljharb/qs",
+    "mahmoud/boltons",
+    "marshmallow-code/marshmallow",
+    "mewwts/addict",
+    "more-itertools/more-itertools",
+    "pallets-eco/blinker",
+    "pallets/itsdangerous",
+    "python-attrs/attrs",
+    "python-humanize/humanize",
+    "python-hyper/hyperlink",
+    "python-semver/python-semver",
+    "pytoolz/toolz",
+    "rspeer/ordered-set",
+    "scrapy/cssselect",
+    "sindresorhus/p-limit",
+    "sindresorhus/p-map",
+    "tkem/cachetools"
+  ],
+  "inventory_correction": "The public experiment017 supplement also used humanize; recorded explicitly. No sealed task specifications read."
+}
