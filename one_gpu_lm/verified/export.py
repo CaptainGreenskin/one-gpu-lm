@@ -49,7 +49,7 @@ def run(root, protocol_path, out):
             or audit['protocol_sha256'] != sha256(protocol_path)
             or controller['protocol_sha256'] != sha256(protocol_path)):
         raise ValueError('Complete, unchanged and audited collection is required')
-    data = root / 'private/pilot-data'
+    data = root / relative(protocol.get('data_directory', 'private/pilot-data'))
     tasks = {t['id']: t for t in json.loads((data/'tasks.json').read_text())['tasks']}
     sources = {s['repository']: s for s in json.loads((data/'sources.json').read_text())['sources']}
     profile = json.loads((root/'experiments/025-verified-distillation/teacher-profile.json').read_text())

@@ -43,10 +43,10 @@ def run(root,data,task,source,backend,sandbox,protocol,out):
     if health['model_id']!=protocol['model_id'] or health['revision']!=protocol['revision'] or health['adapter'] or health['profile_sha256']!=protocol['teacher_profile_sha256']:
         raise ValueError('Unexpected teacher artifact')
     state={'schema_version':1,'id':task['id'],'repository':task['repository'],'family':task['family'],'split':'training',
-           'producer_kind':'model','teacher_kind':'local_higher_budget_self_distillation_pilot',
+           'producer_kind':'model','teacher_kind':protocol.get('teacher_kind','local_higher_budget_self_distillation_pilot'),
            'backend':health,'protocol_sha256':digest(json.dumps(protocol,sort_keys=True).encode()),
            'started_epoch':epoch,'complete':False,'boundary':'before_generation','messages':messages,'steps':[],
-           'generated_tokens':0,'attempted_calls':0,'submitted':False,'terminal_reason':None,'runtime_variant':'current',
+           'generated_tokens':0,'attempted_calls':0,'submitted':False,'terminal_reason':None,'runtime_variant':protocol.get('collection_policy','current'),
            'original_source_sha256':{n:before[n] for n in task['editable_files']}}
     atomic(out/'trajectory.json',state)
     last_check_state=None

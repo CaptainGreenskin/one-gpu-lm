@@ -11,7 +11,7 @@ from one_gpu_lm.common.agent_policy import prepare_context
 from one_gpu_lm.common.tokenization import encode_prefix
 from one_gpu_lm.common.training_encoding import encode_training_example
 from one_gpu_lm.common.receipts import sha256, write_json
-from .tasks import digest
+from .tasks import digest, relative
 
 
 def target_is_executed(step):
@@ -44,7 +44,7 @@ def run(root, protocol_path, out):
     protocol = json.loads(Path(protocol_path).read_text())
     if protocol['collection_policy'] != 'explicit_submission_guard_v1':
         raise ValueError('Unexpected collection policy')
-    run_dir = root / 'runs/teacher-calibration-001'
+    run_dir = root / relative(protocol.get('run_directory', 'runs/teacher-calibration-001'))
     controller = json.loads((run_dir / 'controller.json').read_text())
     if not controller.get('finished_epoch') or not controller['backend_stopped']:
         raise ValueError('Audit only after the controller has stopped')
@@ -52,8 +52,9 @@ def run(root, protocol_path, out):
     profile = json.loads((root / 'experiments/025-verified-distillation/teacher-profile.json').read_text())
     # This is an encoding feasibility screen, not the final student training recipe.
     tokenizer = AutoTokenizer.from_pretrained(runtime['model'], local_files_only=True, trust_remote_code=False)
-    tasks = {t['id']: t for t in json.loads((root / 'private/pilot-data/tasks.json').read_text())['tasks']}
-    sources = {s['repository']: s for s in json.loads((root / 'private/pilot-data/sources.json').read_text())['sources']}
+    data = root / relative(protocol.get('data_directory', 'private/pilot-data'))
+    tasks = {t['id']: t for t in json.loads((data / 'tasks.json').read_text())['tasks']}
+    sources = {s['repository']: s for s in json.loads((data / 'sources.json').read_text())['sources']}
     rows = []
     for task_id in protocol['task_ids']:
         task = tasks[task_id]; directory = run_dir / 'private/tasks' / task_id

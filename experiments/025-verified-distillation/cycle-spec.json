@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "scientific_rules_preregistered_before_bulk_collection_and_new_development_scores",
+  "scope": "first controlled verified self-distillation cycle; not a claim of general, long-horizon or frontier coding ability",
+  "implementation_gate": "Collection implementation is frozen separately. Candidate training and four-arm evaluation implementations must be published, CI-checked and hash-frozen before their respective first execution. No scientific rule change after any new development model score.",
+  "training_data_gate": {
+    "minimum_complete_unique_verified_episodes": 100,
+    "maximum_complete_unique_verified_episodes": 164,
+    "minimum_per_training_repository": 5,
+    "minimum_languages": 2,
+    "one_formal_attempt_per_task": true,
+    "previous_pilot_or_calibration_episodes_included": false,
+    "complete_collection_and_request_replay_required": true,
+    "selection": "all eligible whole episodes; all audited executed valid actions; no target truncation, no partial-episode filtering, no hidden-check or reference-restoration supervision"
+  },
+  "candidate": {
+    "count": 1,
+    "initialization": "verified pinned base, never a previous adapter",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lora_target_profile": "same language-model module expression as capacity-profile.json",
+    "seed": 101,
+    "epochs": 1,
+    "max_sequence_length": 8192,
+    "micro_batch_size": 1,
+    "gradient_accumulation_records": 8,
+    "gradient_checkpointing": true,
+    "optimizer": "AdamW",
+    "learning_rate": 1e-05,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "scheduler": "constant",
+    "max_grad_norm": 1.0,
+    "loss": "assistant target tokens only; mean supervised-token loss per record, averaged over actual record count in each accumulation window",
+    "order": "sort action records by SHA256 of UTF8(025-student-v1 plus literal NUL plus record id); one pass, all eligible records exactly once",
+    "checkpoint_selection": "only end of the complete epoch; no development-driven selection or retry",
+    "maximum_training_pipeline_seconds": 43200,
+    "failed_or_partial_candidate_evaluation_allowed": false,
+    "required_integrity": [
+      "all frozen parameters have no gradients",
+      "sampled frozen parameter values unchanged",
+      "adapter changed",
+      "all loss and gradient norms finite",
+      "all selected records consumed",
+      "saved adapter reload matches a training-only greedy probe"
+    ]
+  },
+  "development": {
+    "unique_tasks": 60,
+    "repository_families": 6,
+    "languages": 2,
+    "tasks_sha256": "f26d788cbb688e33d5f9ffafbff4ff790b5036a01c188d3da31eb92dae1c3670",
+    "sources_sha256": "798b03d72bb593747af3b8e38129b35dbaad3ee3f8bc467c65233eafd7eb9e2a",
+    "repository_family_disjoint_from_training_and_prior_development": true,
+    "pretraining_decontamination_claimed": false,
+    "repetitions": 3,
+    "arms": [
+      "base_current",
+      "base_guard",
+      "student_current",
+      "student_guard"
+    ],
+    "total_task_runs": 720,
+    "common_budget": {
+      "max_model_calls": 12,
+      "max_generated_tokens_per_call": 512,
+      "max_total_generated_tokens": 6144,
+      "max_input_tokens": 8192,
+      "max_task_seconds": 600,
+      "max_tool_seconds": 60,
+      "max_tool_output_chars": 2400
+    },
+    "decoding": "greedy; same pinned base tokenizer, chat template, backend and 024 feedback normalization",
+    "runtime_intervention": "explicit_submission_guard_v1 only; identical visible task prompt and tools otherwise",
+    "fresh_workspace_per_run": true,
+    "order": "Within each repetition, tasks sorted by SHA256(UTF8(025-dev-v1 plus literal NUL plus repetition index 0..2 plus literal NUL plus task id)). For task index i, arm order is the four listed arms cyclically rotated left by (i + repetition index) modulo 4. Each four-arm task block completes before the next task.",
+    "maximum_evaluation_pipeline_seconds": 172800,
+    "model_generations_before_implementation_freeze": 0,
+    "primary_score": "fraction of tasks with changed source passing fresh independent grading within actor caps; explicit-submit rate reported separately",
+    "ordinary_failure_policy": "no edit, wrong patch, format, tool failure and actor budget exhaustion count as failures, not exclusions",
+    "infrastructure_failure_policy": "retain traces and all costs; no silent rerun, no positive complete-cycle claim with missing pairs or unaccounted generation"
+  },
+  "analysis": {
+    "primary_parameter_effect": "student_current minus base_current, mean over the 60 per-task three-repeat success fractions",
+    "system_effect": "base_guard minus base_current",
+    "parameter_effect_under_guard": "student_guard minus base_guard",
+    "interaction": "(student_guard minus student_current) minus (base_guard minus base_current)",
+    "uncertainty": "paired two-level bootstrap: resample six repository families with replacement, then ten tasks within each selected family; retain all three repeats per selected task; 10000 draws with seed 25025; 2.5 and 97.5 percentiles",
+    "minimum_development_parameter_gain_pp": 10,
+    "require_primary_95_percent_interval_lower_bound_above_zero": true,
+    "maximum_allowed_primary_drop_in_any_repository_pp": 10,
+    "require_all_720_runs_and_costs_accounted": true,
+    "required_reports": [
+      "all four arm scores",
+      "per-task and per-repository paired outcomes",
+      "repeat/action instability",
+      "no-edit and wrong-edit failures",
+      "calls and generated/input tokens",
+      "GPU hours including reloads",
+      "collection and training costs separately",
+      "loss and outcome curves",
+      "achieved or not-achieved conclusion"
+    ],
+    "limitations": "Only six repository clusters and short authored faults: confidence intervals are limited evidence and do not establish general coding or long-task ability. Three repeats are not 180 independent tasks. Extra system compute is not reported as parameter gain.",
+    "private_task_specs_limit_external_exact_replication": true
+  },
+  "release": {
+    "existing_final_test_opened": false,
+    "publish_weights_on_development_result": false,
+    "modelscope_upload_authorized_by_this_cycle": false,
+    "external_paid_teacher_requests": false
+  }
+}

@@ -1,0 +1,1123 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T01:33:28.668105+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "isodate-century-start",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2706465439405292,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1210680779768154,
+        "output_sha256": "86f027cb2c8037bcf41f75ac4223f4e2f0d59bfeeecc7e9f410eb4e98c328b68"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.16992295894306153,
+        "output_sha256": "a62a3880f05ee952acfa49e5772a9b171485b8bb2a8aeb16aa07cc48a5267f58"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2717406840529293
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-default-day",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.26993209694046527,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1715635999571532,
+        "output_sha256": "eeadab77bed342338d3939dbf1c431ea647141970438617f7bb2e4e0e2a03f09"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17145107605028898,
+        "output_sha256": "6db2ce3dde18ef2abe3429269240d77431bf32c6181f890ef44d9a07c1429315"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27133753907401115
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-default-month-year",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2716950519243255,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1697328429436311,
+        "output_sha256": "97edf71924783a64d3e143e216a63535542d7d858dae5c2a686d7eff97a90c99"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17152943892870098,
+        "output_sha256": "9db14225d2362e200cea063bcae07bba64e21d3abda798f62139b5a45b3275a5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714669241104275
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-week-default-day",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": false,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710599990095943,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17128349002450705,
+        "output_sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+      },
+      "fault-hidden": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1705808840924874,
+        "output_sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodates.py": "e6702a07faf3f99728761316895b1b3c27b55e9b06eec8ddafbe827937ddf22e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714541839668527
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-fractional-hour-scale",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27184497797861695,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17149586707819253,
+        "output_sha256": "cfc75e387693502a242e9633742b6a5e92d2901e21e299972b88e402ce735f67"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17128976003732532,
+        "output_sha256": "23253d973345ed3fcb899500dff78f98c07cc8f925ee73e0573404074e1237dd"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2715584069956094
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-time-comma-fraction",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2712647959124297,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17142377595882863,
+        "output_sha256": "643b96a532ef200848780fa35e1c2150dc15427913fa96a42fd9f82b52cd604b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.169837616966106,
+        "output_sha256": "e33fd0c70b53f26e0f0b6d401f99dc0748d419deb713b2d6f7c893cd3d7c8b1c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27104810904711485
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-second-floor-precision",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715324170421809,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1701744890306145,
+        "output_sha256": "6ac2b81ef97dd8e333180b1cf25df68312b4b9be4c2299b1c02a8930eb55abf5"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1712433178909123,
+        "output_sha256": "eadcf3db59600053d1da3318ae683a89b96c2ec291f14fea2434e23885504a0c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2705354589270428
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-time-offset-minutes",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27201065397821367,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17134762194473296,
+        "output_sha256": "542d69ff3b2b653c55cd9489ff515702052d7e8194cdf1f0b4921ce730d3a886"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.16983089607674628,
+        "output_sha256": "972881dd7bde1de63966cb7751a0424e7803be4bf052475a605d0dbc21ab02e9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27147335396148264
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-time-custom-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715348469791934,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1699505599681288,
+        "output_sha256": "36988069b28e6369f54ad80028ce64a9f25fb71e18e2108fb41fc83939398af3"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1715383289847523,
+        "output_sha256": "0c250ba47e0822f2c09da5a52635db99697c7b9a78fc46dcf0499c189a097635"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotime.py": "505b200ad02901a1a29aec38c1564aabe49161427bb35c41bd5b5191b9d33ac8"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2713098080130294
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-datetime-custom-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2714825849980116,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17166517407167703,
+        "output_sha256": "294173c9ce9c650cca578dc93c857a3355f0559bff73616006182aa26346ec84"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716190529987216,
+        "output_sha256": "640de035fca7ecd30c197719375db87cdbca0673aef71964fe1ab436f127c6fb"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isodatetime.py": "10101485be7ca2814ab58aea0268d46ccc0306c0af7f1a35ce2899976f5391b5"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27151649503502995
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-fraction-components",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27188926900271326,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716056220466271,
+        "output_sha256": "bae980d2797ffd247738940fed4820974bf8421e92b168b4b6ab40c93d8aaa79"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17134136206004769,
+        "output_sha256": "c2f7538f0103eb39eb4c1fd2bfee45a7ac81db53a075d1f8c22d408ab7dc1e5e"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isoduration.py": "d7a1bde469235082a56241b8ef7c35fcf273f31d98a4d4bf224545c1ce5129b5"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27188710996415466
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-negative-fixed",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2720436949748546,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17140431399457157,
+        "output_sha256": "f98d7d7dd952d2c5b07f42742cc6cb9d93d73029abab5ad323ca1522dbd857a0"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1710536110913381,
+        "output_sha256": "c16be3b39b509d5504373fd64fbe60f6ba09a300639d7727ca823e6d2fb3a0ca"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isoduration.py": "d7a1bde469235082a56241b8ef7c35fcf273f31d98a4d4bf224545c1ce5129b5"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27138350100722164
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-negative-calendar",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.270299491006881,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1709699280327186,
+        "output_sha256": "c240fea88cb83033dc985e8d6e6bbdbd298445d29ddb49425e03ade60c8e71e9"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17133779102005064,
+        "output_sha256": "955bf9ae9cec571bb654a06220afcc41f2b35dab67c657cca0c885af9c5a40a9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isoduration.py": "d7a1bde469235082a56241b8ef7c35fcf273f31d98a4d4bf224545c1ce5129b5"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714533630060032
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-force-object",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2715901390183717,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17105710098985583,
+        "output_sha256": "a188ea97428f881b953a87c1e0622d092e062918208b34132e2e15fadd5421ec"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12100604607257992,
+        "output_sha256": "362283539a184ab14f4630057bea94c831dc160895ecfa8c47f88d516a0ef5f5"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isoduration.py": "d7a1bde469235082a56241b8ef7c35fcf273f31d98a4d4bf224545c1ce5129b5"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27108673902694136
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-negate-calendar-months",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2710515479557216,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17047506000380963,
+        "output_sha256": "770a84b249d8dd8317df3f10c558c48e9f551aa9e24984401c2b8d6cc19b9c2e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17074396996758878,
+        "output_sha256": "bec00464de06e20505f5ddef49a628e0ae8014b50c967853cb9e01f36db9b624"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2710328079992905
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-negate-duration-days",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2713689600350335,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17148472694680095,
+        "output_sha256": "19f33e36647646a4164927eefd2ebb7962ad10d39c443f3c3ecf65713d7c1464"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17139116302132607,
+        "output_sha256": "13ec8139b4d7c561838c34cd13f74a7c8a57dc56029a0d02e5c09035a614e999"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2708762319525704
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-add-duration-months",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27152897708583623,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17128898005466908,
+        "output_sha256": "ebd7c8a05753e20afd1451f088be6e39b0e375609b65f78211c2a6d23850e082"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17132311093155295,
+        "output_sha256": "71782de4a106fed10c092793e6b49ea068c9aeced3bd82867d456057a72838f6"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2708668609848246
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-add-date-year-carry",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2702448290074244,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716470830142498,
+        "output_sha256": "8c3a7f975a5caaef5d7ed18a5d6216e7a3f7e6fd8e55ecb16ad81f7a581f27fb"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1712901300052181,
+        "output_sha256": "7d90f9a4bf86ed0190d8e3cc9f81d0356c43f620da3c5a2151e9f4c047067464"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.26980665302835405
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-multiply-calendar-months",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2716867720009759,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1716179420473054,
+        "output_sha256": "edd7ec914cb45340690feb89531818b27511a3a9d9caa10c002090e39f799f56"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17140791390556842,
+        "output_sha256": "f91a34dcea41f0229cbdda59d94cfaf9f17e41ac999130462d5d2e63e479e010"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27144477190449834
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-subtract-duration-months",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2716713610570878,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17160197102930397,
+        "output_sha256": "6f11a9dc4ce87c08d6919842de87f80775d95eda2b282d60fbe5fb076afe1ff3"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17139508400578052,
+        "output_sha256": "76bfd14dc1831fc1295667d481cc843edc1ff006f872614af600e6998add53f3"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27136387897189707
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-subtract-from-date-months",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27164229995105416,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17155488894786686,
+        "output_sha256": "602519d834730487e0284f6786cf2c04d2e93d3fae198dd7ef9bc29be442f6c4"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17132643202785403,
+        "output_sha256": "ba4f8d4d51f5aca13ce21e8ef1b616a2d7277d74dc4612230b487347038c1c41"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2714936740230769
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-leap-century",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27135817008093,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17166651296429336,
+        "output_sha256": "7344e7a7ca5669ab99f7adbc45c114baa3769c2a91235408cfd69e19507d2311"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17124378797598183,
+        "output_sha256": "5a83f61d555344bf3903f61b5765fb5f4f8ce964050ef3465b5a8966ee5865f4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2716554200742394
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-thirty-day-month",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27160495799034834,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17133165092673153,
+        "output_sha256": "6521c864bfcf7ef9d38d8d7c79b1a4172ed4eb88582c4015410f72ff0981e323"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17121911607682705,
+        "output_sha256": "67d06fa8f56be35146d44057191169826266cc6f8426976c43126b7c7450e485"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27153714606538415
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-totimedelta-end-direction",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2714114710688591,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17161202104762197,
+        "output_sha256": "cf75f88eee8cd050285406af20499408a38616823968b2fbe27f233785e71985"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17117885500192642,
+        "output_sha256": "d53dea575cf51fc58f97c84a0aa3cc18d068c355f4eb7d3287e08f645c11e144"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2716027090791613
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-equality-month-conversion",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27145609294530004,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17173272592481226,
+        "output_sha256": "72a095743d52db31b8ab406b854f3545c5a26390bf1df64a8280afa7583002ef"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1700136719737202,
+        "output_sha256": "7e31d8631d957147977d33b996e7978779e468115ea4879707c48c3042dd5f07"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27179698599502444
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-inequality-components",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27192105003632605,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.171533667948097,
+        "output_sha256": "930d1ab75accc9ec1bcbd7c26ee7fbdd106f994fc471bcec9541ba1e7c53e0ca"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17119176604319364,
+        "output_sha256": "c3cba2634fe75bdc1e0d7bd60d82a3b5eac6dfdf2580af3c5e5cc8281d1220e7"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/duration.py": "bf247a96efef3e2dc55921fe86882d3ca964f22fa5d18564872a8bc6a1457c1e"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.22150717210024595
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-fraction-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27104662696365267,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17078830092214048,
+        "output_sha256": "f4ec34e217fc8d52c738f46521f93d1b634d25b5a3a8dc32b42639244ebca27f"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17130048002582043,
+        "output_sha256": "6e0e88082cb998de5b2b542fc5449607aa38afcfbfa71327251614f59b11d265"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isostrf.py": "0b704bbd54e972d9ab2150a432f24aff011c22ad6447d1af0074b95471ec3476"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2708870710339397
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-duration-zero-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27186906698625535,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17117652494926006,
+        "output_sha256": "a98355b9674091f2e2a99a56f0c5a56f03e1ad0dd3d72e6bbab0a9872b584dc2"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17083955300040543,
+        "output_sha256": "a2f90757d22adab4ce8eca4d8c895312e02884e6aaf61b85cb9c5a721960a74d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isostrf.py": "0b704bbd54e972d9ab2150a432f24aff011c22ad6447d1af0074b95471ec3476"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27122323401272297
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-timezone-colon-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.2702079260488972,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17125784803647548,
+        "output_sha256": "a1b44456947e17177c64efe00ad9512ad64a62363a5b1f9753273b3d0e1b1927"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17128719901666045,
+        "output_sha256": "b340db1c1c5968d0cc425862a13f4aeeca2ab5b8be35f67f964180e8d985f650"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "6898289a3e799ffa419e4638d68b757049b0d1591facb90aacf76ace11b81b77"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.27145987295079976
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "isodate-naive-timezone-format",
+      "repository": "gweis/isodate",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.27200767304748297,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17166635300964117,
+        "output_sha256": "1c9fabc99172062f92f3ded40c6072b7e1c2b6a4b228c7b371edb94ea47448cd"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.17166370304767042,
+        "output_sha256": "5302adea86d01c47f0b02679984773f128ffb94c4c156e553033dab1450cc75f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "src/isodate/isotzinfo.py": "6898289a3e799ffa419e4638d68b757049b0d1591facb90aacf76ace11b81b77"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.2718025560025126
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "22884662fdc851193d4c69e74fd36bef42aba7d89c5a659c033658748fa36411",
+  "sources_sha256": "46e09d9a11bab76393d71c8b4a1d4c34a463968876f7edf3ff13369755a4ac4b",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/calibration.cpython-310.pyc": "5c95fe6fb949ebadc24ff9e9db7d905a1645f109bc37626f93e937515a4021b7",
+    "__pycache__/capacity.cpython-310.pyc": "672b33024eb723b9320db74f83cda6c138e9a6d0e38435f364df560c2f71af8d",
+    "__pycache__/capacity_watch.cpython-310.pyc": "a4f454790c394f8a838065a7a6cc3f4da5c063a202aa248f5a08251201cf3cf3",
+    "__pycache__/export.cpython-310.pyc": "475d933c23cc06782f7e639bfca4805e9224e7c54f0d02d8ce8dda0d51ae7077",
+    "__pycache__/guard_audit.cpython-310.pyc": "d60651167d613f3b300b517e6c192c52c1f15ed7afba9740f609d9adc480200e",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/submission.cpython-310.pyc": "cb0a91549a56d219029affb6272d458eb99d273f6924b51951552d3685e94fe6",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "calibration.py": "bebe2e60c92740bbced5fe265b9b0b28111958cd17330396fd72bb9343016042",
+    "capacity.py": "7211dde26ef415c1b00e290ed3a1d18046a0d3dba27bb9dfb71a4685ce8b0000",
+    "capacity_watch.py": "e9fc01d9657c28f9cafccb63f1534bcd1ff84231d37c8581c5c8d575275a30f9",
+    "export.py": "2ac4a6aa4b04fd0166fc1d01694bc342492b6c211f3988d9930681b7f535233d",
+    "guard_audit.py": "8f1345820c1b657bb695b0f876974e910f39b44fc9ca9814eb5f6ca61968efe6",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": false,
+  "finished_utc": "2026-11-15T01:33:56.014426+00:00"
+}

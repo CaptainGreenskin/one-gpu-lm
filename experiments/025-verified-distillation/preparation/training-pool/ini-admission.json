@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-15T01:34:39.245891+00:00",
+  "complete": true,
+  "tasks": [
+    {
+      "id": "ini-encode-whitespace",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17075821803882718,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07116873806808144,
+        "output_sha256": "b8b957773e7a03e8ce3d9d6e165342b0ac668bb841c9e1156e00b3e6a8e5eab7"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1215076131047681,
+        "output_sha256": "8634cf830eabe33289c5fefcb96071bcd8c70675edaaeccd38e7a94f8a888d87"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17139743303414434
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-alignment",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1716633120086044,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07156471197959036,
+        "output_sha256": "6d95b2f1da540d4e27727297c7cb0f8ff0a12c1e721d9af6b522c54395cab7ad"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12123004300519824,
+        "output_sha256": "8bbbe56c7d272b9ecc333b7d88cecdf1ada4276f8d58828d12264bdc01f78105"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1714213639497757
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-unbracketed-array",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17165682197082788,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.0713033729698509,
+        "output_sha256": "a5616980077149056fe6128f4b57858d43e999bd9cc7a4b11487a13428c70882"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07076328305993229,
+        "output_sha256": "9e191887a6e0ae9d3bef59436607ca6b398bf13e213459e56a191f26ee6276c1"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1716523920185864
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-array-order",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17155504901893437,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1212994750821963,
+        "output_sha256": "c519a4dc739032dcc6d1bdb38fb8519d30773877fabdc87c133a376e9deea8e8"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07132194307632744,
+        "output_sha256": "8d4d27cc6b3ab21a134f7ff0c30969162cf38b574fb56e9a25d8340c7d4e0555"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17125714698340744
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-section-shortcut",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17137333110440522,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07007259700912982,
+        "output_sha256": "ffc3d8af57cb2be5db9bed31b671df0565494d666add837551afef4225fb4a16"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12220119906123728,
+        "output_sha256": "41eacaa388ea8a94cd793739fc8ec24629dbe62dac3a4cfee99aa168fb607367"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.12168161000590771
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-section-newline",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.11972434702329338,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.06971582397818565,
+        "output_sha256": "cee93bc71580b347d52f4f0de7ad40e8423588a2816e55719a68af9f966545ba"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07152871100697666,
+        "output_sha256": "a4c757b9075f6ca0095c58889583abbedfc4dede22c9a4146c63e596273a9837"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17192478198558092
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-child-prefix",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17096312600187957,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07119791896548122,
+        "output_sha256": "eac03c15f4ceb0445777e45e258e30e5ccd191e9f8ee3ed7c840ab43a3e3f69e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07146843802183867,
+        "output_sha256": "fa272f8566bde8f74a7221ce67a32327406ebd844e4f270ecfeb9f1f42070def"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17133739998098463
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-encode-section-separation",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.12138499901629984,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.0705663759727031,
+        "output_sha256": "3e7e82cde828845d0f153e755835341227c443aa9e37ed5b5ae199b9bd417d40"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07145180902443826,
+        "output_sha256": "6321ffc710bebb39c9ec89fc2be595cc347f5e07acb073d63cb6a6b0f0952c4c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17157342901919037
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-semicolon-comment",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.171231125947088,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07120042899623513,
+        "output_sha256": "6feb2953676100f4a9b19fb11d89b4ecd1ed7207469e64fac67e1d7bdc66d28a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07060091698076576,
+        "output_sha256": "6bfa448b749c96cb13c6aba5d4995d472be7ff57f3c021d17af36d2ffa0de02f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1712556870188564
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-unbracketed-duplicates",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17136087093967944,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07128268200904131,
+        "output_sha256": "62cbe619e71d0f0754e864e9460b20ba52e14779f766ef5dff4f9bdc0f3aa729"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.0710101219592616,
+        "output_sha256": "d46981a7056b177eb2ba99c1c725a2654a9b6ca20a6bf47a7fc63ea51820d855"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1716000899905339
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-array-preserve-scalar",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.171545158023946,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12147914303932339,
+        "output_sha256": "a156061f1f220e76adab42603f66c58780530a611cf44be3bb70cbb20c9930aa"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07128240098245442,
+        "output_sha256": "34e9a427de158565ab2eb74e483046e06835f51034ccfd58731ad6b9a2f55c52"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.16981420409865677
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-array-order",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1719302129931748,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07138843601569533,
+        "output_sha256": "878b7bcfe738d30558e4ce9beaea2a987f0cd2f8b231995454fc9543586580cc"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12135529704391956,
+        "output_sha256": "21fe0d52d926fdb178fce7761fab5d7392f996e4c41c4cbc6f65b77a8ff48f4b"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.12120213301386684
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-key-whitespace",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1715146569767967,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07118097797501832,
+        "output_sha256": "b06193ca6c64510af06b957ba8513d664984107f0b163bb4251636db0c147eda"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1207174239680171,
+        "output_sha256": "831d42f11a82f67ec7b5bb34724794e373842c39e45c1a91c2dac5a52713bcc4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17129930795636028
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-literal-types",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17174870590679348,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07170023710932583,
+        "output_sha256": "97a14876499c3331931a31aa67e9eed04f78bc3f6cd685a7e79fbeff6fb4851d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07127644191496074,
+        "output_sha256": "c14982237d5362ff957cb55202b80658c09fc70f90c2f1beebc7fb64108309b9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17069662595167756
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-bare-key",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17155207798350602,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07126782101113349,
+        "output_sha256": "f582d7a258fe728bccd40005b2fb47b5720cdccac60604de5d816cf862cc6317"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07100293203257024,
+        "output_sha256": "5049b2be960fb504e61abb5c1e0191db1bcb99b7a6f691028de7148d9d197cdb"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17106178996618837
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-empty-value",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.1720401659840718,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07091760891489685,
+        "output_sha256": "9058c8a6fdbdeca84d1ab057e1c8c0edfa4c89a0d422fd0ea8eb4db0e2e4ca28"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07170675706584007,
+        "output_sha256": "36186b623dc9fcc22d8bd675804199921494a26fdb4bba14d8df9c8971f8093c"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17210468894336373
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-parse-repeated-section",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17175306600984186,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07139358599670231,
+        "output_sha256": "0a1555407948c66d6168cb83d2cec500d35dc0468ecb4bfb069f7ed90d960828"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07138301606755704,
+        "output_sha256": "3711aea26f224c3dc4e1b4ac3ab79fea7c0b84833b41f49a2129a42471e5ba5a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.12042844400275499
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-safe-equals-quoting",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.16976492200046778,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12199274101294577,
+        "output_sha256": "c68e0f83b43640ad66516bc0141e866af6d33276c91bee638a1a42beb71e0c7e"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07121354900300503,
+        "output_sha256": "e908a110c6540acee30b3fb59fa4efaeb755be32a574dfe19d84b28237ff6e3a"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.1699596889084205
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-safe-leading-bracket",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.12161532801110297,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07105124404188246,
+        "output_sha256": "e74a29c472efca67f68debf834c5a5db8a87f4e1d71fba371789916cfafb5d31"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07065339793916792,
+        "output_sha256": "9adc65e22216b11f9c43ca1734478a68d0634ab34dadfc728b51e4f07fd39b68"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.11973552801646292
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-safe-outer-space",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17166908201761544,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12147685198578984,
+        "output_sha256": "d35f125afaa2c2d6ef3ed1c6c793f2feefd0b19d3d68cbb501f263614434a338"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07116278703324497,
+        "output_sha256": "555172cf3dea359a8f31c8f77644404697984d3f8609e8938b4f3679e4ef1b32"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.171177834039554
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-safe-semicolon-escape",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17134233098477125,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12132984702475369,
+        "output_sha256": "c25d6d28c08c95cbd6943fc06af11b4d1e36fae410d8944fabf40b80b80303dd"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12162055703811347,
+        "output_sha256": "f9fa85fe06c9aaf971cbd84c46fff514bc866064c1818aebc725b441ad0061d9"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17150693701114506
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-safe-hash-escape",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.12129045510664582,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07158808293752372,
+        "output_sha256": "658ee2847eddcd2fc5fc1f82a8d26f8b6939c297f9d822225253100a81e67e01"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07120884896721691,
+        "output_sha256": "f26b7c022178b3de3b4bdcdd186ca993442240e998f3f3451aedeb259f3dc0d4"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.16982776497025043
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-unsafe-padded-quote",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.12147125194314867,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.12115489097777754,
+        "output_sha256": "927fce383c323ebe944f40bc53db498710307f3abd852ea076f6c6c93563f4ee"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07115923694800586,
+        "output_sha256": "f73904e04bc348a70d8ea5c78a7fab268eb3db682973f72ac4e50665883d9c1f"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17152962705586106
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-unsafe-trailing-backslash",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17147145501803607,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07138036598917097,
+        "output_sha256": "f7c99b7fe316348cf8b955791c21844dd726b84155988611b90fff5aa743680a"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07086302700918168,
+        "output_sha256": "a6009e9fdc761788c55dfe9f28db51c2b4829f3829b654fd8c757408bd306efe"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.16986874502617866
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-unsafe-unknown-escape",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17143597395624965,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07116309797856957,
+        "output_sha256": "9b6935f8bd7871bc0970eceecc271457db53b659553fa9befaa568061539903d"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07074384205043316,
+        "output_sha256": "99e5c8a1fe1e638e131b250a0d73020a218c0e3552953fc37dfebd8b19150af0"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17133611906319857
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-unsafe-single-quote",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17138053197413683,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07156100193969905,
+        "output_sha256": "e3a0a6ba716c10df50a87716a4e45fb03b97eb9e9607767ce4989200190ae25b"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07055320497602224,
+        "output_sha256": "c3baacaef185c21d393c0297daa23d61859b341675ad81aa806073057b5f270d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17127229797188193
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-nested-section-boundary",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17213463003281504,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07157263299450278,
+        "output_sha256": "0dc54120c155d7966a15bd461fcf73347cd8bf7d792a6dc45c75a777851581ae"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.07050511299166828,
+        "output_sha256": "2f0d5f77d9ad32c0e4575f05dce7e32cc6be077150ec66e26e850e4ed8ea9776"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.17154360807035118
+      },
+      "hidden_checks_absent_from_agent": true
+    },
+    {
+      "id": "ini-nested-section-cleanup",
+      "repository": "npm/ini",
+      "split": "training",
+      "admitted": true,
+      "clean": {
+        "returncode": 0,
+        "reason": "ok",
+        "seconds": 0.17138965195044875,
+        "output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad"
+      },
+      "fault-visible": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.071291693020612,
+        "output_sha256": "c6c9f0e26665306e2f5c604917e9535e9ae2b7598bc5d6aa93636c39122e2107"
+      },
+      "fault-hidden": {
+        "returncode": 1,
+        "reason": "runtime_error",
+        "seconds": 0.1209316219901666,
+        "output_sha256": "485f21b964912981053e8d4d926de52e2c58b0a56578720610cbf0e32d949f3d"
+      },
+      "reference_restoration": {
+        "passed": true,
+        "reason": "ok",
+        "returncode": 0,
+        "source_sha256": {
+          "lib/ini.js": "007123836ffec243f41c8b35584fb3db0498aa12a440a9e0efc675d0000f4c32"
+        },
+        "ignored_new_files": [],
+        "grader_output_sha256": "188d3ea3d4e64e9d80fc54500fcdd4e07dcc6343f8cd2d839538f5396d9ab0ad",
+        "seconds": 0.12105026701465249
+      },
+      "hidden_checks_absent_from_agent": true
+    }
+  ],
+  "model_generations": 0,
+  "reference_restoration_is_teacher_data": false,
+  "final_test_opened": false,
+  "tasks_sha256": "e68f745ef3c526d4f6d8ee9bd699fc2e928b1829a834e1d430d2bd80ca93d1b4",
+  "sources_sha256": "da02f3f81efaf2949e95bb5731ae4804c57aaa775cb78b619f72df96b4bc6cb5",
+  "runtime_sha256": "afddbe03bc9285c387b47d9de94f79f5eda8046bf8d8a0305b6b42bfea449acb",
+  "implementation_sha256": {
+    "__init__.py": "5f2c80660ba9820249fcc97b7ef427b98de1550507dc4e74335eb517cdd25742",
+    "__pycache__/__init__.cpython-310.pyc": "a7a1a1f4d0df5402424c418af08fe715a051191865c3a9078a69053e9fa965aa",
+    "__pycache__/admit.cpython-310.pyc": "edf34aad43b3e6b75b25ef9c5d6ff119bd9574545539991405225a20b60e6081",
+    "__pycache__/audit.cpython-310.pyc": "580feacf9374c6ee3c1195e5435878b75973437d51dc3e3c4d20f74e795464e8",
+    "__pycache__/calibration.cpython-310.pyc": "5c95fe6fb949ebadc24ff9e9db7d905a1645f109bc37626f93e937515a4021b7",
+    "__pycache__/capacity.cpython-310.pyc": "672b33024eb723b9320db74f83cda6c138e9a6d0e38435f364df560c2f71af8d",
+    "__pycache__/capacity_watch.cpython-310.pyc": "a4f454790c394f8a838065a7a6cc3f4da5c063a202aa248f5a08251201cf3cf3",
+    "__pycache__/export.cpython-310.pyc": "475d933c23cc06782f7e639bfca4805e9224e7c54f0d02d8ce8dda0d51ae7077",
+    "__pycache__/guard_audit.cpython-310.pyc": "d60651167d613f3b300b517e6c192c52c1f15ed7afba9740f609d9adc480200e",
+    "__pycache__/pilot.cpython-310.pyc": "8d18d196a95dadb7f7e6d31dd7a72622bc1743fa756a4abdbf6ff9edb7272ef4",
+    "__pycache__/rollout.cpython-310.pyc": "5276bf55f14d22061b62e7df6c581ad2b933ba68324decc4ffe49115f85d718a",
+    "__pycache__/sandbox.cpython-310.pyc": "4b564d1f1ecb8c4ed1606dfe340361cc7df376483aa214c3de1798e55963fecc",
+    "__pycache__/submission.cpython-310.pyc": "cb0a91549a56d219029affb6272d458eb99d273f6924b51951552d3685e94fe6",
+    "__pycache__/tasks.cpython-310.pyc": "fdbe0f83b463137a52fc54b4ca91f1b8ad8e6056b4c08ddb4460932b19f1a7db",
+    "admit.py": "c41e6ea1492e40c8d55de4f04473d27adfa56508c7a61a283239b75d47556931",
+    "audit.py": "9979313097903802deaeca26b95fd7b9808f6b780da8c5b43dad47303a2a767f",
+    "calibration.py": "bebe2e60c92740bbced5fe265b9b0b28111958cd17330396fd72bb9343016042",
+    "capacity.py": "7211dde26ef415c1b00e290ed3a1d18046a0d3dba27bb9dfb71a4685ce8b0000",
+    "capacity_watch.py": "e9fc01d9657c28f9cafccb63f1534bcd1ff84231d37c8581c5c8d575275a30f9",
+    "export.py": "2ac4a6aa4b04fd0166fc1d01694bc342492b6c211f3988d9930681b7f535233d",
+    "guard_audit.py": "8f1345820c1b657bb695b0f876974e910f39b44fc9ca9814eb5f6ca61968efe6",
+    "pilot.py": "47acca0a758c5ec41298858d9755b17ac708ed7d89069b9aec1e3c8d4e73d731",
+    "rollout.py": "31aa1c8c92ebd69de2dbbfcce3789e3de334536a5520ca36bdfe62304fe3e32c",
+    "sandbox.py": "71ffd21054a3fe2ae4fb6ec22e4032c695f909c42cf2a527b4d53bb4ea93ebec",
+    "submission.py": "9ecfe29cbb33bf8aca2d156431eedbc82a88434b2dc225275759b151d48dbfa1",
+    "tasks.py": "7e5b5ab353c71470256f2ab65333c9a2fc433b780911082396913b98ad0f5a13"
+  },
+  "passed": true,
+  "finished_utc": "2026-11-15T01:34:53.417659+00:00"
+}
