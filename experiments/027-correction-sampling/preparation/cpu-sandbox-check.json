@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "fixture_kind": "scripted CPU sandbox actions; not model data",
+  "passed": true,
+  "checks": {
+    "bad_source_edit_executed": true,
+    "non_regression_rejected_without_execution": true,
+    "edited_source_test_failed": true,
+    "corrective_edit_executed": true,
+    "standalone_regression_passed": true,
+    "explicit_submission_accepted": true,
+    "host_and_hidden_files_absent": true
+  },
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}

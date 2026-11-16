@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "source_audit_sha256": "f1a117c0560210b8690fc7a5d4bf55ba622f06c20322b96faf9e607a40b67a0e",
+  "rows": [
+    {
+      "id": "underscore-difference-polarity",
+      "family": "jashkenas/underscore",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "58a9ab8fbb0c36fcadb058bbdd6a289a1854f0d389be21e39b577d9a82109c29"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "35d71001b8f61821e34d841433c5198509800967abf7b0deef89da684a4c6a26"
+      }
+    },
+    {
+      "id": "humanize-delta-negative",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "c24b151c5bec374525b72824632fac827d43dc2c892175d3a3705cb83e61524b"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [
+          10
+        ],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [
+          10
+        ],
+        "repeated_exact_command_same_source_calls": [
+          12
+        ],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "7f4c51ad1eb241fa253180e5951826212ccb843961714a85269b942058716f7c"
+      }
+    },
+    {
+      "id": "ini-nested-section-boundary",
+      "family": "npm/ini",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [
+          11
+        ],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "99f3a535acd2f1aee7c7c24f10a226b2b9ad5f6f98410249c1c9b043c1f3e757"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [
+          12
+        ],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "d7c7308168d810b33f8aa823bba6e45c25e27a481fd6f57dc6c20cda5caf8264"
+      }
+    },
+    {
+      "id": "inflection-camelize-lower-first",
+      "family": "jpvanhal/inflection",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [
+          8,
+          9,
+          11
+        ],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [
+          8,
+          9,
+          11
+        ],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "62efe7f0ac489b60fadc7e334b4957da86dcf0c6f1c292008c5ea986c39b7449"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [
+          5,
+          6,
+          9,
+          11
+        ],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [
+          5,
+          6,
+          9,
+          11
+        ],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "52ba41b19301c3aad475a860a7e79825617b409d881febd4d7895d4cfbee3d53"
+      }
+    },
+    {
+      "id": "humanize-intcomma-string-groups",
+      "family": "python-humanize/humanize",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "f463c3e505eadd6a84f046372defc4694633650c9c61dab46905fdd36d6b2eed"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "generated_at_parent_512_token_cap_calls": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "fbb970852676134d32d4495ea944e8e8099c54138ef74eebf68eb28f2b3e42eb"
+      }
+    },
+    {
+      "id": "isodate-duration-fraction-components",
+      "family": "gweis/isodate",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "6c787941eb4e88d26b351b5986311b947880b9b24a37eb882f271205e4773484"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [
+          4,
+          10,
+          11,
+          12
+        ],
+        "generated_at_parent_512_token_cap_calls": [
+          4,
+          10,
+          11,
+          12
+        ],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "f9f454349a3a2000b9f065a9256fee255f6c6350fed99e70cd0775cf8e92660e"
+      }
+    },
+    {
+      "id": "underscore-partial-dynamic-context",
+      "family": "jashkenas/underscore",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "5a1cbaf0158b93c7875aacfc78d8ebc35e74b602c86d35d45b544e6bfc02e666"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "c6c18e15f0199c7c836522e64c4ea869ba5f902fa21087d0074bdcc8eff50366"
+      }
+    },
+    {
+      "id": "inflection-humanize-id-anchor",
+      "family": "jpvanhal/inflection",
+      "split": "training",
+      "student": {
+        "attempted_calls": 12,
+        "edit_calls": [
+          11
+        ],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [
+          11
+        ],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "43e8c4e861d02cafa079b220ae5f96217290f6378df5bc4eb77940f8499a40fe"
+      },
+      "teacher": {
+        "attempted_calls": 12,
+        "edit_calls": [
+          9,
+          10,
+          12
+        ],
+        "standalone_failed_checks_after_edit": [],
+        "edit_commands_with_nonzero_exit": [
+          9,
+          10,
+          12
+        ],
+        "repeated_exact_command_same_source_calls": [],
+        "malformed_calls": [],
+        "generated_at_parent_512_token_cap_calls": [],
+        "terminal_reason": "call_limit",
+        "success": false,
+        "trajectory_sha256": "5ea86beeac4997e40c8fbc0bdacf7587f7713fe809f663d04052dbf081bd9869"
+      }
+    }
+  ],
+  "training_tasks": 8,
+  "both_no_edit_tasks": 5,
+  "new_model_calls": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false
+}
