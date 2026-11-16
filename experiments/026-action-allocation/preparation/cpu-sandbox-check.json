@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "identical_restored_state": true,
+    "independent_branch_writes": true,
+    "host_and_hidden_content_absent": true,
+    "failed_command_retained": true,
+    "tool_timeout_retained": true
+  },
+  "passed": true,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "fixture_not_training_data": true
+}

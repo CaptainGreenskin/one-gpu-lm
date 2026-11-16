@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "status": "design_complete_execution_implementation_not_yet_frozen",
-  "execution_ready": false,
+  "status": "executable_protocol_prepared_before_any_gpu_call",
+  "execution_ready": true,
   "purpose": "Test whether the pinned base teacher can recover from student-generated training-only no-edit states under equal remaining budgets; this is not an independent model-quality evaluation.",
   "source_experiment_commit": "423db8b210707c54a97f1a9ad021f73479d64e7a",
   "hypothesis": "Verified teacher continuations from actual student states may add repair and recovery supervision missing from successful teacher-only trajectories; no causal mechanism or improvement asserted.",
@@ -91,7 +91,33 @@
     "teacher_extra_hint": false,
     "guard": "same explicit submission verification rule for both branches",
     "branch_order": "alternate teacher-first/student-first by preselected task index, snapshot each once; preserve both attempts",
-    "early_completed_or_edited_tasks": "Retain student outcome and costs; no teacher branch; never claim them as complete pairs."
+    "early_completed_or_edited_tasks": "Retain student outcome and costs; no teacher branch; never claim them as complete pairs.",
+    "snapshot_preserved": [
+      "file contents",
+      "empty directories",
+      "permission modes",
+      "mtime_ns",
+      "complete visible message history",
+      "consumed budget counters",
+      "submission verification state"
+    ],
+    "snapshot_not_preserved": [
+      "inode",
+      "ctime",
+      "atime",
+      "external clock",
+      "process memory"
+    ],
+    "serialization_bounds": {
+      "maximum_entries": 4096,
+      "maximum_bytes": 67108864,
+      "rejected_types": [
+        "symlinks",
+        "hardlinks",
+        "special files"
+      ],
+      "failure_disposition": "retain original student path and cost; report unpaired nonserializable prefix"
+    }
   },
   "budget": {
     "student_max_model_calls": 12,
@@ -131,7 +157,8 @@
       "calls/tokens/time/reloads/hardware",
       "negative outcomes and exclusions",
       "repository-cluster uncertainty with small-sample limitations"
-    ]
+    ],
+    "positive_targets": "All actually executed teacher continuation actions in each qualified continuation; exclude malformed and policy-rejected unexecuted requests as positive targets, retain them in history and counts. Never supervise the student prefix. Encoding screen 8192 tokens; reject whole continuation on any target encoding failure."
   },
   "before_gpu_execution": [
     "Implement and test exact live snapshot/restore and two-branch budget accounting.",
