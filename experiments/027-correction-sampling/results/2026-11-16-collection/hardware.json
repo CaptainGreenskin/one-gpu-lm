@@ -1,0 +1,32 @@
+{
+  "samples": 1036,
+  "collector": {
+    "samples": 1036,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "interval_seconds": 5,
+  "first_to_last_seconds": 5220.154979944229,
+  "maximum_gap_seconds": 5.0671257972717285,
+  "pipeline_seconds": 5223.369851350784,
+  "first_sample_delay_seconds": 0.0633702278137207,
+  "last_sample_to_finish_seconds": 3.151501178741455,
+  "temperature_c": {
+    "mean": 53.45173745173745,
+    "maximum": 66.0
+  },
+  "power_w": {
+    "mean": 297.8093822393822,
+    "maximum": 553.01
+  },
+  "utilization_percent": {
+    "mean": 52.95849420849421,
+    "maximum": 100.0
+  },
+  "memory_used_mib": {
+    "mean": 66000.84749034749,
+    "maximum": 67661.0
+  },
+  "sampled_gpu_energy_kwh": 0.4319751670584759,
+  "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity"
+}

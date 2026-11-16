@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "registered_tasks": 32,
+  "registered_runs": 64,
+  "complete_audited_pairs": 32,
+  "outcomes": {
+    "control": {
+      "success": 18,
+      "qualified": 0,
+      "no_edit": 14,
+      "edited_failure": 0,
+      "qualified_families": 0,
+      "qualified_supplemental_tasks": 0,
+      "qualified_task_ids": [],
+      "calls": 411,
+      "generated_tokens": 35610
+    },
+    "correction": {
+      "success": 26,
+      "qualified": 1,
+      "no_edit": 6,
+      "edited_failure": 0,
+      "qualified_families": 1,
+      "qualified_supplemental_tasks": 0,
+      "qualified_task_ids": [
+        "isodate-duration-fraction-components"
+      ],
+      "calls": 287,
+      "generated_tokens": 22716
+    }
+  },
+  "qualified_gain_task_ids": [
+    "isodate-duration-fraction-components"
+  ],
+  "qualified_regression_task_ids": [],
+  "net_qualified_gain": 1,
+  "feasibility_gate": {
+    "minimum_qualified_unique_tasks": 6,
+    "minimum_qualified_families": 3,
+    "minimum_qualified_supplemental_tasks": 3,
+    "minimum_net_qualified_gain": 3,
+    "no_net_repair_success_decline": true,
+    "all_attempts_audited": true
+  },
+  "feasibility_checks": {
+    "complete_audit": true,
+    "qualified_unique_tasks": false,
+    "qualified_training_families": false,
+    "qualified_supplemental_tasks": false,
+    "net_qualified_gain": false,
+    "no_net_repair_success_decline": true
+  },
+  "data_feasibility_gate_passed": false,
+  "actual_cost": {
+    "attempted_calls": 698,
+    "generated_tokens": 58326,
+    "input_tokens": 2008905,
+    "actor_seconds": 5135.469461555709,
+    "unknown_generation_cost_attempts": 0
+  },
+  "private_export_summary": {
+    "qualified_unique_tasks": 1,
+    "action_records": 4,
+    "supervised_tokens": 378,
+    "data_sha256": "9dbb392100631053f2e4d5f2990cc6319ef921413cec1b88b26e6d01f8261314",
+    "failed_edits_used_as_positive_targets": false,
+    "failed_edits_retained_as_context": true,
+    "raw_data_public": false
+  },
+  "new_student_optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "independent_model_quality_evaluation": false
+}
