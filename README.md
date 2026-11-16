@@ -49,6 +49,7 @@
 | 023 · 评测重复运行稳定性 | 原始工具反馈与固定无关元数据的反馈，是否产生不同的跨轮波动？ | [270 次任务、36 个探针与完整曲线](experiments/023-evaluation-stability/results/2026-11-13/) · [中文复盘](experiments/023-evaluation-stability/results/2026-11-13/behavior-review.md)；原始反馈 020、022 各一题翻转，规范化组零翻转，总成功数不变，最终测试封存 |
 | 024 · 测试耗时与动作稳定性 | 在 023 规则上处理额外耗时，能否减少动作和评分波动？ | [270 次任务、36 个探针与曲线](experiments/024-feedback-noise/results/2026-11-14/) · [中文复盘](experiments/024-feedback-noise/results/2026-11-14/behavior-review.md)；动作分歧 19/135 → 0/135，新增两次通过来自同一道题的重复运行，最终测试封存 |
 | 025 · 执行验证轨迹蒸馏 | 完整成功轨迹能否改善独立仓库修复？参数与执行流程分别贡献多少？ | [完整四臂结果与曲线](experiments/025-verified-distillation/results/2026-11-15-factorial/) · [失败与成本复盘](experiments/025-verified-distillation/results/2026-11-15-factorial/behavior-review.md)；127 条轨迹训练唯一候选，60 题 × 4 组 × 3 轮全部核验。学生 75.00% / 底座 76.67%，参数提升门槛未达成；最终测试继续封存 |
+| 026 · 学生状态与动作分配 | 未修改代码是否与动作分配、预算和纠错示范覆盖有关？ | [884 条轨迹诊断与图表](experiments/026-action-allocation/results/2026-11-16-diagnosis/) · [48 题训练侧接手设计](experiments/026-action-allocation/)；诊断已完成，GPU 采集尚未启动；最终测试继续封存 |
 
 015 已完成 96 次配对运行：格式组和组合组的新仓库任务从基线 2/12 提高到 5/12，格式错误率约从 20.2% 降至 2.8%；两组都退步了 1 个历史任务，未通过冻结的晋级门槛。上下文管理消除了本轮少量超限请求，没有额外提高成功率。任务控制器耗时分别增加约 29% 和 31%。这是同一 27B 底座的接口评测，未更新权重；小样本构造任务结果不代表通用编码能力认证。
 
