@@ -1,0 +1,577 @@
+{
+  "stage": "completed",
+  "complete": true,
+  "started_epoch": 1794797577.7228308,
+  "started_utc": "2026-11-16T02:52:57.722844+00:00",
+  "deadline_epoch": 1794819177.7228308,
+  "finished_epoch": 1794806704.885498,
+  "finished_utc": "2026-11-16T05:25:04.885499+00:00",
+  "protocol_sha256": "6136d7c40a5430f86a959b717e4317b8c5c15f0c91c8a23ad5cadfa0d3bcce6b",
+  "publication_commit": "174de71ea2be36b6acdb5a8106c3e156a6cdbb15",
+  "expected_tasks": 48,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "telemetry": {
+    "samples": 1811,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "backend_stopped": true,
+  "frozen_files_unchanged": true,
+  "backend_lifecycles": [
+    {
+      "index": 1,
+      "role": "student",
+      "started_epoch": 1794797619.0736704,
+      "ready_epoch": 1794797648.6142018,
+      "stopped_epoch": 1794797796.3299527,
+      "returncode": -15
+    },
+    {
+      "index": 2,
+      "role": "base",
+      "started_epoch": 1794797796.370307,
+      "ready_epoch": 1794797823.4086096,
+      "stopped_epoch": 1794797873.1646075,
+      "returncode": -15
+    },
+    {
+      "index": 3,
+      "role": "student",
+      "started_epoch": 1794797873.3942053,
+      "ready_epoch": 1794797901.9336543,
+      "stopped_epoch": 1794798122.3995407,
+      "returncode": -15
+    },
+    {
+      "index": 4,
+      "role": "base",
+      "started_epoch": 1794798122.4403613,
+      "ready_epoch": 1794798149.4784768,
+      "stopped_epoch": 1794798208.8873973,
+      "returncode": -15
+    },
+    {
+      "index": 5,
+      "role": "student",
+      "started_epoch": 1794798209.1310806,
+      "ready_epoch": 1794798237.673408,
+      "stopped_epoch": 1794798264.130507,
+      "returncode": -15
+    },
+    {
+      "index": 6,
+      "role": "base",
+      "started_epoch": 1794798264.1709702,
+      "ready_epoch": 1794798291.2106261,
+      "stopped_epoch": 1794798352.0690732,
+      "returncode": -15
+    },
+    {
+      "index": 7,
+      "role": "student",
+      "started_epoch": 1794798352.2766447,
+      "ready_epoch": 1794798380.8149614,
+      "stopped_epoch": 1794798566.3588908,
+      "returncode": -15
+    },
+    {
+      "index": 8,
+      "role": "base",
+      "started_epoch": 1794798566.4006813,
+      "ready_epoch": 1794798593.4388404,
+      "stopped_epoch": 1794798610.5666008,
+      "returncode": -15
+    },
+    {
+      "index": 9,
+      "role": "student",
+      "started_epoch": 1794798610.8116338,
+      "ready_epoch": 1794798639.3546455,
+      "stopped_epoch": 1794798784.4366686,
+      "returncode": -15
+    },
+    {
+      "index": 10,
+      "role": "base",
+      "started_epoch": 1794798784.4775565,
+      "ready_epoch": 1794798811.01529,
+      "stopped_epoch": 1794798868.4910343,
+      "returncode": -15
+    },
+    {
+      "index": 11,
+      "role": "student",
+      "started_epoch": 1794798868.694614,
+      "ready_epoch": 1794798897.73503,
+      "stopped_epoch": 1794799101.345623,
+      "returncode": -15
+    },
+    {
+      "index": 12,
+      "role": "base",
+      "started_epoch": 1794799101.3782668,
+      "ready_epoch": 1794799128.4162052,
+      "stopped_epoch": 1794799172.870325,
+      "returncode": -15
+    },
+    {
+      "index": 13,
+      "role": "student",
+      "started_epoch": 1794799173.1282892,
+      "ready_epoch": 1794799201.6673534,
+      "stopped_epoch": 1794799224.3785787,
+      "returncode": -15
+    },
+    {
+      "index": 14,
+      "role": "base",
+      "started_epoch": 1794799224.419395,
+      "ready_epoch": 1794799251.45891,
+      "stopped_epoch": 1794799298.3094203,
+      "returncode": -15
+    },
+    {
+      "index": 15,
+      "role": "student",
+      "started_epoch": 1794799298.5589275,
+      "ready_epoch": 1794799327.5991213,
+      "stopped_epoch": 1794799490.1448972,
+      "returncode": -15
+    },
+    {
+      "index": 16,
+      "role": "base",
+      "started_epoch": 1794799490.176178,
+      "ready_epoch": 1794799517.2164042,
+      "stopped_epoch": 1794799605.9902847,
+      "returncode": -15
+    },
+    {
+      "index": 17,
+      "role": "student",
+      "started_epoch": 1794799606.247628,
+      "ready_epoch": 1794799634.7862403,
+      "stopped_epoch": 1794800000.306008,
+      "returncode": -15
+    },
+    {
+      "index": 18,
+      "role": "base",
+      "started_epoch": 1794800000.3389409,
+      "ready_epoch": 1794800026.8819826,
+      "stopped_epoch": 1794800086.0383372,
+      "returncode": -15
+    },
+    {
+      "index": 19,
+      "role": "student",
+      "started_epoch": 1794800086.2907448,
+      "ready_epoch": 1794800114.8290493,
+      "stopped_epoch": 1794800140.1391056,
+      "returncode": -15
+    },
+    {
+      "index": 20,
+      "role": "base",
+      "started_epoch": 1794800140.1799178,
+      "ready_epoch": 1794800167.2183642,
+      "stopped_epoch": 1794800186.1208317,
+      "returncode": -15
+    },
+    {
+      "index": 21,
+      "role": "student",
+      "started_epoch": 1794800186.373448,
+      "ready_epoch": 1794800214.9176452,
+      "stopped_epoch": 1794800355.959847,
+      "returncode": -15
+    },
+    {
+      "index": 22,
+      "role": "base",
+      "started_epoch": 1794800355.9996228,
+      "ready_epoch": 1794800382.5373743,
+      "stopped_epoch": 1794800430.8576865,
+      "returncode": -15
+    },
+    {
+      "index": 23,
+      "role": "student",
+      "started_epoch": 1794800431.1118712,
+      "ready_epoch": 1794800460.1541226,
+      "stopped_epoch": 1794800554.4997597,
+      "returncode": -15
+    },
+    {
+      "index": 24,
+      "role": "base",
+      "started_epoch": 1794800554.541486,
+      "ready_epoch": 1794800581.5813518,
+      "stopped_epoch": 1794800635.2983732,
+      "returncode": -15
+    },
+    {
+      "index": 25,
+      "role": "student",
+      "started_epoch": 1794800635.5023737,
+      "ready_epoch": 1794800664.5416648,
+      "stopped_epoch": 1794800849.1117995,
+      "returncode": -15
+    },
+    {
+      "index": 26,
+      "role": "base",
+      "started_epoch": 1794800849.1453168,
+      "ready_epoch": 1794800875.6868093,
+      "stopped_epoch": 1794800910.3189082,
+      "returncode": -15
+    },
+    {
+      "index": 27,
+      "role": "student",
+      "started_epoch": 1794800910.5768983,
+      "ready_epoch": 1794800939.116507,
+      "stopped_epoch": 1794801059.5684805,
+      "returncode": -15
+    },
+    {
+      "index": 28,
+      "role": "base",
+      "started_epoch": 1794801059.6123857,
+      "ready_epoch": 1794801086.653184,
+      "stopped_epoch": 1794801118.9168942,
+      "returncode": -15
+    },
+    {
+      "index": 29,
+      "role": "student",
+      "started_epoch": 1794801119.1719053,
+      "ready_epoch": 1794801147.713443,
+      "stopped_epoch": 1794801329.313552,
+      "returncode": -15
+    },
+    {
+      "index": 30,
+      "role": "base",
+      "started_epoch": 1794801329.3539999,
+      "ready_epoch": 1794801356.3938076,
+      "stopped_epoch": 1794801466.5338626,
+      "returncode": -15
+    },
+    {
+      "index": 31,
+      "role": "student",
+      "started_epoch": 1794801466.7903733,
+      "ready_epoch": 1794801495.3327973,
+      "stopped_epoch": 1794801519.0393808,
+      "returncode": -15
+    },
+    {
+      "index": 32,
+      "role": "base",
+      "started_epoch": 1794801519.0728126,
+      "ready_epoch": 1794801546.1164536,
+      "stopped_epoch": 1794801604.4354925,
+      "returncode": -15
+    },
+    {
+      "index": 33,
+      "role": "student",
+      "started_epoch": 1794801604.682223,
+      "ready_epoch": 1794801633.2262325,
+      "stopped_epoch": 1794801833.737778,
+      "returncode": -15
+    },
+    {
+      "index": 34,
+      "role": "base",
+      "started_epoch": 1794801833.7823312,
+      "ready_epoch": 1794801860.3248966,
+      "stopped_epoch": 1794801918.9386141,
+      "returncode": -15
+    },
+    {
+      "index": 35,
+      "role": "student",
+      "started_epoch": 1794801919.1978076,
+      "ready_epoch": 1794801947.2394798,
+      "stopped_epoch": 1794802043.9295833,
+      "returncode": -15
+    },
+    {
+      "index": 36,
+      "role": "base",
+      "started_epoch": 1794802043.9740467,
+      "ready_epoch": 1794802071.0138175,
+      "stopped_epoch": 1794802091.1291447,
+      "returncode": -15
+    },
+    {
+      "index": 37,
+      "role": "student",
+      "started_epoch": 1794802091.387261,
+      "ready_epoch": 1794802119.9285827,
+      "stopped_epoch": 1794802143.2268174,
+      "returncode": -15
+    },
+    {
+      "index": 38,
+      "role": "base",
+      "started_epoch": 1794802143.2673213,
+      "ready_epoch": 1794802170.3070374,
+      "stopped_epoch": 1794802225.5501637,
+      "returncode": -15
+    },
+    {
+      "index": 39,
+      "role": "student",
+      "started_epoch": 1794802225.8075979,
+      "ready_epoch": 1794802254.351937,
+      "stopped_epoch": 1794802687.0155916,
+      "returncode": -15
+    },
+    {
+      "index": 40,
+      "role": "base",
+      "started_epoch": 1794802687.0567503,
+      "ready_epoch": 1794802714.0968866,
+      "stopped_epoch": 1794802758.4001656,
+      "returncode": -15
+    },
+    {
+      "index": 41,
+      "role": "student",
+      "started_epoch": 1794802758.654312,
+      "ready_epoch": 1794802787.692769,
+      "stopped_epoch": 1794802810.1042025,
+      "returncode": -15
+    },
+    {
+      "index": 42,
+      "role": "base",
+      "started_epoch": 1794802810.1489124,
+      "ready_epoch": 1794802836.692893,
+      "stopped_epoch": 1794802875.339927,
+      "returncode": -15
+    },
+    {
+      "index": 43,
+      "role": "student",
+      "started_epoch": 1794802875.5970309,
+      "ready_epoch": 1794802904.6407144,
+      "stopped_epoch": 1794803008.650192,
+      "returncode": -15
+    },
+    {
+      "index": 44,
+      "role": "base",
+      "started_epoch": 1794803008.6950114,
+      "ready_epoch": 1794803035.23959,
+      "stopped_epoch": 1794803077.0908952,
+      "returncode": -15
+    },
+    {
+      "index": 45,
+      "role": "student",
+      "started_epoch": 1794803077.3502705,
+      "ready_epoch": 1794803106.3903763,
+      "stopped_epoch": 1794803372.5536668,
+      "returncode": -15
+    },
+    {
+      "index": 46,
+      "role": "base",
+      "started_epoch": 1794803372.599921,
+      "ready_epoch": 1794803399.146206,
+      "stopped_epoch": 1794803465.6418955,
+      "returncode": -15
+    },
+    {
+      "index": 47,
+      "role": "student",
+      "started_epoch": 1794803465.846706,
+      "ready_epoch": 1794803494.3905578,
+      "stopped_epoch": 1794803520.8070898,
+      "returncode": -15
+    },
+    {
+      "index": 48,
+      "role": "base",
+      "started_epoch": 1794803520.8531137,
+      "ready_epoch": 1794803547.898656,
+      "stopped_epoch": 1794803628.0160844,
+      "returncode": -15
+    },
+    {
+      "index": 49,
+      "role": "student",
+      "started_epoch": 1794803628.2711332,
+      "ready_epoch": 1794803656.8109097,
+      "stopped_epoch": 1794803871.8125393,
+      "returncode": -15
+    },
+    {
+      "index": 50,
+      "role": "base",
+      "started_epoch": 1794803871.8578024,
+      "ready_epoch": 1794803898.9016585,
+      "stopped_epoch": 1794803921.0980604,
+      "returncode": -15
+    },
+    {
+      "index": 51,
+      "role": "student",
+      "started_epoch": 1794803921.3555603,
+      "ready_epoch": 1794803950.401538,
+      "stopped_epoch": 1794804273.8059378,
+      "returncode": -15
+    },
+    {
+      "index": 52,
+      "role": "base",
+      "started_epoch": 1794804273.847731,
+      "ready_epoch": 1794804300.3891053,
+      "stopped_epoch": 1794804418.9851687,
+      "returncode": -15
+    },
+    {
+      "index": 53,
+      "role": "student",
+      "started_epoch": 1794804419.2438,
+      "ready_epoch": 1794804448.2882006,
+      "stopped_epoch": 1794804469.9470232,
+      "returncode": -15
+    },
+    {
+      "index": 54,
+      "role": "base",
+      "started_epoch": 1794804469.9937592,
+      "ready_epoch": 1794804497.0382502,
+      "stopped_epoch": 1794804736.001529,
+      "returncode": -15
+    },
+    {
+      "index": 55,
+      "role": "student",
+      "started_epoch": 1794804736.2596216,
+      "ready_epoch": 1794804764.8038578,
+      "stopped_epoch": 1794805004.5281045,
+      "returncode": -15
+    },
+    {
+      "index": 56,
+      "role": "base",
+      "started_epoch": 1794805004.5766315,
+      "ready_epoch": 1794805031.625116,
+      "stopped_epoch": 1794805377.5901184,
+      "returncode": -15
+    },
+    {
+      "index": 57,
+      "role": "student",
+      "started_epoch": 1794805377.8108552,
+      "ready_epoch": 1794805406.3546433,
+      "stopped_epoch": 1794805429.292458,
+      "returncode": -15
+    },
+    {
+      "index": 58,
+      "role": "base",
+      "started_epoch": 1794805429.339936,
+      "ready_epoch": 1794805455.8893955,
+      "stopped_epoch": 1794805658.4232364,
+      "returncode": -15
+    },
+    {
+      "index": 59,
+      "role": "student",
+      "started_epoch": 1794805658.682712,
+      "ready_epoch": 1794805687.2301455,
+      "stopped_epoch": 1794805903.3647976,
+      "returncode": -15
+    },
+    {
+      "index": 60,
+      "role": "base",
+      "started_epoch": 1794805903.4028337,
+      "ready_epoch": 1794805929.9456012,
+      "stopped_epoch": 1794805971.8970962,
+      "returncode": -15
+    },
+    {
+      "index": 61,
+      "role": "student",
+      "started_epoch": 1794805972.1612453,
+      "ready_epoch": 1794806001.2038023,
+      "stopped_epoch": 1794806028.4606965,
+      "returncode": -15
+    },
+    {
+      "index": 62,
+      "role": "base",
+      "started_epoch": 1794806028.5095391,
+      "ready_epoch": 1794806055.055003,
+      "stopped_epoch": 1794806080.267076,
+      "returncode": -15
+    },
+    {
+      "index": 63,
+      "role": "student",
+      "started_epoch": 1794806080.5234134,
+      "ready_epoch": 1794806109.066422,
+      "stopped_epoch": 1794806220.5388978,
+      "returncode": -15
+    },
+    {
+      "index": 64,
+      "role": "base",
+      "started_epoch": 1794806220.586467,
+      "ready_epoch": 1794806247.1331336,
+      "stopped_epoch": 1794806267.090531,
+      "returncode": -15
+    },
+    {
+      "index": 65,
+      "role": "student",
+      "started_epoch": 1794806267.301298,
+      "ready_epoch": 1794806295.843925,
+      "stopped_epoch": 1794806376.819695,
+      "returncode": -15
+    },
+    {
+      "index": 66,
+      "role": "base",
+      "started_epoch": 1794806376.85801,
+      "ready_epoch": 1794806403.4055161,
+      "stopped_epoch": 1794806419.472829,
+      "returncode": -15
+    },
+    {
+      "index": 67,
+      "role": "student",
+      "started_epoch": 1794806419.6902988,
+      "ready_epoch": 1794806448.232789,
+      "stopped_epoch": 1794806584.7036397,
+      "returncode": -15
+    },
+    {
+      "index": 68,
+      "role": "base",
+      "started_epoch": 1794806584.747272,
+      "ready_epoch": 1794806611.7909102,
+      "stopped_epoch": 1794806704.8764744,
+      "returncode": -15
+    }
+  ],
+  "supervisor": {
+    "complete": true,
+    "timed_out": false,
+    "worker_returncode": 0,
+    "recovery_complete": true,
+    "started_epoch": 1794797576.6932805,
+    "finished_epoch": 1794806706.2933648
+  },
+  "pipeline_seconds": 9127.162667274475
+}

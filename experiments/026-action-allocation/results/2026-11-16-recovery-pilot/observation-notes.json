@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "observer_disconnects": 1,
+  "recovered_epoch": 1794805561.5027132,
+  "same_original_supervisor_confirmed": true,
+  "original_worker_alive_at_recovery": true,
+  "collection_restarted": false,
+  "deadline_extended": false,
+  "telemetry_samples_at_recovery": 1577,
+  "maximum_telemetry_gap_at_recovery_seconds": 5.311858177185059,
+  "scope": "Read-only SSH observation interrupted; original remote collection and supervisor remained active. No new GPU attempt.",
+  "telemetry_publication": {
+    "normalization": "CRLF to LF only; CSV rows and values unchanged",
+    "original_remote_sha256": "8e9805aa406cce3636e9cdd10c3edca75e11031ea2d4d44470d75dddac91735a",
+    "public_sha256": "7a78886c194a06269ae3f6c6de0dd948ed601eeeb90873f98d77235f24bb6b0d",
+    "rows_excluding_header": 1811
+  }
+}
