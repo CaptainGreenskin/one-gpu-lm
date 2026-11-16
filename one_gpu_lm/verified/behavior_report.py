@@ -120,7 +120,7 @@ def main():
     data=json.loads((args.results/'diagnosis.json').read_text());summary=summarize(data)
     (args.results/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
     with (args.results/'pairs.csv').open('w',newline='') as stream:
-        writer=csv.DictWriter(stream,fieldnames=list(summary['pairs'][0]));writer.writeheader();writer.writerows(summary['pairs'])
+        writer=csv.DictWriter(stream,fieldnames=list(summary['pairs'][0]),lineterminator='\n');writer.writeheader();writer.writerows(summary['pairs'])
     render(summary,args.results)
     if not args.no_figures:plot(data,args.results)
     print(json.dumps({'diagnosed_trajectories':summary['all_trajectories'],'regressions':len(summary['regressions']),'gains':len(summary['gains']),'new_model_calls':0}))
