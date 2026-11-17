@@ -6,6 +6,7 @@ from pathlib import Path
 import traceback
 
 from one_gpu_lm.common.actions import parse_action
+from one_gpu_lm.common.reasoning import request_options, action_text, settings, separate
 from one_gpu_lm.common.agent_policy import system_prompt, format_feedback, prepare_context
 from one_gpu_lm.common.tokenization import encode_prefix
 from one_gpu_lm.common.receipts import sha256, write_json
@@ -36,10 +37,11 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, pre
             expected={'operation':'generate','messages':messages,'agent_policy':policy,
                       'max_input_tokens':budget['max_input_tokens'],
                       'max_new_tokens':min(budget['max_total_generated_tokens']-total,budget['max_generated_tokens_per_call'])}
+            expected.update(request_options(protocol, arm))
             flags['registered_request']=call==index and payload==expected and sha256(request_path)==step['request_sha256']
             generated=step['generation']
             def encode(items):
-                return encode_prefix(tokenizer,items,profile['chat_template_kwargs'],policy['format'])[0]
+                return encode_prefix(tokenizer,items,settings(profile,payload)[0],policy['format'])[0]
             tokens,context=prepare_context(payload['messages'],encode,payload['max_input_tokens'],policy['context'])
             flags['token_input_replay']=(len(tokens)==generated['input_tokens']
                  and digest(json.dumps(tokens,separators=(',',':')).encode())==generated['input_tokens_sha256']
@@ -49,13 +51,15 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, pre
                  and generated.get('adapter') is student
                  and generated['generated_tokens']<=payload['max_new_tokens']
                  and generated['input_tokens']<=budget['max_input_tokens'])
+            if protocol.get('reasoning_comparison'):
+                flags['reasoning_separation'] = generated.get('separation') == separate(tokenizer, generated['ids'], profile, payload)
             total+=generated['generated_tokens'];input_total+=generated['input_tokens']
             flags['source_chain']=step['source_before']==last_source
             flags['before_source_evidence'] = source_evidence(directory, step, 'before', task)
-            assistant={'role':'assistant','content':generated['text'],'extra':{}}
+            assistant={'role':'assistant','content':action_text(generated,protocol),'extra':{}}
             messages.append(assistant)
             try:
-                action=parse_action(generated['text'])
+                action=parse_action(action_text(generated,protocol))
             except ValueError:
                 action=None
             flags['action_parse']=(action is not None)==step['action_format_valid']

@@ -1,0 +1,67 @@
+{
+  "source_experiment": "029",
+  "source_audit_sha256": "768e9c0ee269d6bf7c8427bfa014b5ee890f9b94df1d2ca0468cbdb896952402",
+  "rows": [
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "trajectory_sha256": "dea8a5b7f35e30e9ba2e8026dde5da7a2983df4e396d45c3863d65b35f803d94",
+      "calls": 12,
+      "source_change_calls": [
+        2,
+        6,
+        9
+      ],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "visible_trace_review": "Three new edits do not fix the observed contract; exact-regression and unverified-submission rejections consume calls. This is a 029 regression, not an action-format parse failure."
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "trajectory_sha256": "732ad5fab2bdfa36000444c54e51c4bdb52723f40d3b5890f0755b727d176b9f",
+      "calls": 12,
+      "source_change_calls": [],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "visible_trace_review": "Repeated inspection and probes exhaust twelve calls without a new source change."
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "trajectory_sha256": "ec524ab660efa3351f06c64c1b1f7d764ef026deb3075006e9c956f23f62a73f",
+      "calls": 5,
+      "source_change_calls": [
+        1
+      ],
+      "submitted": true,
+      "independent_grade_passed": false,
+      "visible_trace_review": "One new edit, visible verification and submission pass, but independent training grading fails. Hidden case contents were not used for diagnosis."
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "trajectory_sha256": "168268317e8ec9b19d30b08fb552e42b702cda5b50ead3c798e3605b9c73917f",
+      "calls": 12,
+      "source_change_calls": [],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "visible_trace_review": "Replacement commands preserve identical source bytes; no new source change."
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "trajectory_sha256": "2f18e76d99198f391a641c16691e187011e3b14c2c7cf90d14a8c32c140ad716",
+      "calls": 12,
+      "source_change_calls": [
+        1,
+        4,
+        6,
+        8
+      ],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "visible_trace_review": "Four new source changes still fail the observed contract; calling an edit command is not evidence of repair."
+    }
+  ],
+  "selection": "all five unqualified correction paths; experiment retains all nine states",
+  "training_only": true,
+  "hidden_case_contents_read": false,
+  "raw_commands_public": false,
+  "final_test_opened": false
+}

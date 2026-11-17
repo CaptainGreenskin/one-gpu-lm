@@ -5,6 +5,7 @@ from pathlib import Path
 import traceback
 from one_gpu_lm.common.agent_policy import prepare_context
 from one_gpu_lm.common.tokenization import encode_prefix
+from one_gpu_lm.common.reasoning import action_text, settings
 from one_gpu_lm.common.training_encoding import encode_training_example
 from one_gpu_lm.common.receipts import sha256, write_json
 from .failure_continuation import behavior, load_snapshot, initial_messages
@@ -17,7 +18,7 @@ from .submission import SubmissionGuard, SUBMIT
 from .tasks import prepare, relative, digest
 
 
-def encode_correction(directory,trace,task,p,profile,tokenizer,prefix,selected):
+def encode_correction(directory,trace,task,p,profile,tokenizer,prefix,selected,student_profile=None):
     chain=behavior(trace,task);records=[];excluded=[];errors=[];receipts=[]
     if not chain['qualified_behavior']:
         return dict(chain,qualified=False,encoded_actions=[],excluded_calls=[],encoding_errors=[]),records
@@ -31,7 +32,7 @@ def encode_correction(directory,trace,task,p,profile,tokenizer,prefix,selected):
             payload=json.loads((Path(directory)/f"request-{step['call']:03d}.json").read_text());captured={}
             def encode(messages):
                 captured['messages']=messages
-                return encode_prefix(tokenizer,messages,profile['chat_template_kwargs'],p['agent_policy']['format'])[0]
+                return encode_prefix(tokenizer,messages,settings(profile,payload)[0],p['agent_policy']['format'])[0]
             tokens,context=prepare_context(payload['messages'],encode,payload['max_input_tokens'],p['agent_policy']['context'])
             if (digest(json.dumps(tokens,separators=(',',':')).encode())!=step['generation']['input_tokens_sha256']
                     or context!=step['generation']['context']):raise ValueError('Actual continuation input does not replay')
@@ -41,17 +42,24 @@ def encode_correction(directory,trace,task,p,profile,tokenizer,prefix,selected):
                     raise ValueError('Historical failed edit or confirmed failure absent from actual repair input')
             kind=('edit' if step.get('source_after')!=step['source_before'] else 'verify' if step['command']==task['regression_command']
                   else 'submit' if step['command']==SUBMIT else 'other')
-            row={'id':task['id']+':'+trace['branch']+':'+str(step['call']),'messages':captured['messages'],'target':step['generation']['text'],
+            row={'id':task['id']+':'+trace['branch']+':'+str(step['call']),'messages':captured['messages'],'target':action_text(step['generation'],p),
                  'provenance':{'split':'train','task_id':task['id'],'repository':task['repository'],'arm':trace['branch'],
                     'call':step['call'],'kind':kind,'producer_kind':'model','model_role':'base','executed':True,
                     'state_id':selected['state_id'],'admitted_prefix_sha256':selected['snapshot']['prefix.json'],
                     'trajectory_sha256':sha256(Path(directory)/'trajectory.json'),'request_sha256':step['request_sha256'],
                     'historical_failed_edit_call':prefix['failed_edit_call'],'historical_failure_call':prefix['failure_call'],
                     'target_start_call':start}}
-            encoded=encode_training_example(row,tokenizer,profile)
-            if (encoded['ids'][:len(tokens)]!=tokens or len(encoded['ids'])>p['encoding_screen_max_tokens'] or encoded['supervised_tokens']<=0):
+            export_profile=student_profile or profile
+            student_tokens,_=encode_prefix(tokenizer,captured['messages'],export_profile['chat_template_kwargs'],p['agent_policy']['format']) if student_profile else (tokens,{})
+            encoded=encode_training_example(row,tokenizer,export_profile)
+            if (encoded['ids'][:len(student_tokens)]!=student_tokens or len(encoded['ids'])>p['encoding_screen_max_tokens'] or encoded['supervised_tokens']<=0):
                 raise ValueError('Untruncated corrective target does not fit')
             receipt={'call':step['call'],'kind':kind,'tokens':len(encoded['ids']),'supervised_tokens':encoded['supervised_tokens']}
+            if student_profile:
+                receipt.update(export_mode='action_only_cross_mode',teacher_input_sha256=step['generation']['input_tokens_sha256'],
+                    student_input_sha256=digest(json.dumps(student_tokens,separators=(',',':')).encode()),
+                    student_profile_sha256=p['reasoning_comparison']['student_profile_sha256'],teacher_mode=payload['generation_mode'])
+                row['provenance']['target_transform']='verified_final_action_only_no_thought_labels'
             row['encoding_receipt']=receipt;records.append(row);receipts.append(receipt)
         except (ValueError,KeyError) as error:errors.append({'call':step['call'],'error_type':type(error).__name__})
     qualified=not errors and {'edit','verify','submit'}<={r['kind'] for r in receipts}
@@ -85,6 +93,11 @@ def run(root,protocol_path,out):
     selected_by_task={r['task_id']:r for r in p['selected_states']}
     profile=json.loads((root/relative(p['evaluation_profile_path'])).read_text());runtime=json.loads((root/'private/parent-runtime.json').read_text())
     tokenizer=AutoTokenizer.from_pretrained(runtime['model'],local_files_only=True,trust_remote_code=False);norm=normalization(root)
+    student_profile=None
+    if p.get('reasoning_comparison'):
+        student_path=root/relative(p['reasoning_comparison']['student_profile_path'])
+        if sha256(student_path)!=p['reasoning_comparison']['student_profile_sha256']:raise ValueError('Student profile changed')
+        student_profile=json.loads(student_path.read_text())
     reconstruction=run_dir/'private/audit-reconstruction';reconstruction.mkdir()
     export=run_dir/'private/correction-export';export.mkdir();by_id={r['run_id']:r for r in c['runs']};rows=[];records=[]
     for item in p['schedule']:
@@ -103,7 +116,7 @@ def run(root,protocol_path,out):
             final=SubmissionGuard.source_state(directory/'workspace',task)
             verified=replayed['reconstructed_verified_source'] is not None and replayed['reconstructed_verified_source']==final
             submitted=bool(t['steps'] and t['steps'][-1].get('command')==SUBMIT and t['steps'][-1].get('observation',{}).get('returncode')==0 and t['steps'][-1].get('observation',{}).get('executed') is True)
-            encoded,raw=encode_correction(directory,t,task,p,profile,tokenizer,prefix,selected)
+            encoded,raw=encode_correction(directory,t,task,p,profile,tokenizer,prefix,selected,student_profile)
             first_evidence=json.loads((directory/'source-states'/(t['steps'][0]['source_evidence_before']+'.json')).read_text()) if t['steps'] else None
             checks={'request_replay':replayed['passed'],'recorded_grader':grade==t['grade'],
                 'identity':task['split']==t['split']=='training' and t['id']==task['id'] and t['branch']==item['arm'] and t['protocol_sha256']==digest(json.dumps(p,sort_keys=True).encode()),
@@ -120,6 +133,10 @@ def run(root,protocol_path,out):
                 'admitted_source':t['state_id']==selected['state_id'] and t['failed_source_sha256']==prefix['failed_source_sha256'] and t['original_source_sha256']==prefix['original_source_sha256'],
                 'historical_cost':t['historical_prefix_cost']=={k:prefix[k] for k in ['historical_calls','historical_generated_tokens','historical_input_tokens']}}
             row.update(result=value,encoding=encoded,historical_prefix_cost=t['historical_prefix_cost'],checks=checks,complete=True,audit_passed=all(checks.values()))
+            if p.get('reasoning_comparison'):
+                row['reasoning_usage']={k:sum(s['generation']['separation'][k] for s in t['steps']) for k in ['thought_tokens','action_tokens','unclassified_tokens']}
+                row['reasoning_usage']['boundary_failures']=sum(not s['generation']['separation']['valid'] for s in t['steps'])
+                row['reasoning_usage']['mode']=p['reasoning_comparison']['arms'][item['arm']]
             row['qualified']=bool(encoded['qualified'] and row['audit_passed'])
             if row['qualified'] and item['arm']=='correction': records.extend(raw)
         except Exception as error:

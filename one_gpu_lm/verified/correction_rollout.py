@@ -7,6 +7,7 @@ import shutil
 import time
 
 from one_gpu_lm.common.actions import parse_action
+from one_gpu_lm.common.reasoning import request_options, action_text
 from one_gpu_lm.common.agent_policy import format_feedback
 from one_gpu_lm.common.receipts import write_json
 from one_gpu_lm.serving.client import request
@@ -73,6 +74,7 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
             break
         payload = {'operation': 'generate', 'messages': copy.deepcopy(state['messages']), 'agent_policy': policy,
                    'max_input_tokens': budget['max_input_tokens'], 'max_new_tokens': remaining['next_generation_cap']}
+        payload.update(request_options(protocol, arm))
         request_path = out/f'request-{call:03d}.json'
         if request_path.exists():
             raise ValueError('No duplicate generation request')
@@ -89,10 +91,10 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
         evidence_before, protected_before = save_source(out, workspace, task, original_inventory)
         step = {'source_evidence_before': evidence_before, 'protected_before': protected_before, 'call': call, 'model_role': role, 'request_sha256': digest(request_path.read_bytes()),
                 'generation': generated, 'source_before': guard.source_state(workspace, task), 'action_format_valid': False}
-        assistant = {'role': 'assistant', 'content': generated['text'], 'extra': {}}
+        assistant = {'role': 'assistant', 'content': action_text(generated, protocol), 'extra': {}}
         state['messages'].append(assistant)
         try:
-            action = parse_action(generated['text'])
+            action = parse_action(action_text(generated, protocol))
         except ValueError:
             state['messages'].append({'role': 'user', 'content': format_feedback(policy)})
             state['steps'].append(step); state['boundary'] = 'completed_step'; save(); continue

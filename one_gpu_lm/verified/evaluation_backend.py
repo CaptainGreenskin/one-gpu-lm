@@ -15,7 +15,14 @@ def main():
     if args.environment_receipt.exists():raise ValueError('Preserve previous backend environment receipt')
     actual=verify(json.loads(args.expected_environment.read_text()))
     write_json(args.environment_receipt,actual)
-    from one_gpu_lm.serving.local_backend import main as serve
+    options=argparse.ArgumentParser(add_help=False)
+    options.add_argument('--profile',type=Path,required=True)
+    variant,_=options.parse_known_args(remaining)
+    profile=json.loads(variant.profile.read_text())
+    if profile.get('generation_modes'):
+        from one_gpu_lm.serving.reasoning_backend import main as serve
+    else:
+        from one_gpu_lm.serving.local_backend import main as serve
     sys.argv=[sys.argv[0],*remaining];serve()
 
 

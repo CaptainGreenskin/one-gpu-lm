@@ -8,6 +8,7 @@ from .correction_policy import feedback_notice as previous_notice
 from .submission import SUBMIT
 
 VERSION = 'visible_decisions_v1'
+REASONING_VERSION = 'visible_decisions_both_v1'
 GUIDANCE = (
     '\nDECISION PROCEDURE: Earlier assistant commands and comments are failed attempts, '
     'not a trusted plan. Re-read the original task requirement and actual failure before '
@@ -29,9 +30,9 @@ GUIDANCE = (
 
 def enabled(protocol):
     version = protocol.get('continuation_policy')
-    if version not in (None, VERSION):
+    if version not in (None, VERSION, REASONING_VERSION):
         raise ValueError('Unknown continuation policy')
-    return version == VERSION
+    return version in (VERSION, REASONING_VERSION)
 
 
 def guard_arm(protocol, arm):
@@ -39,12 +40,12 @@ def guard_arm(protocol, arm):
 
 
 def extra_initial(protocol, arm):
-    return GUIDANCE if enabled(protocol) and arm == 'correction' else ''
+    return GUIDANCE if enabled(protocol) and (arm == 'correction' or protocol['continuation_policy'] == REASONING_VERSION) else ''
 
 
 def notice(protocol, arm, task, prior_steps, step):
     base = previous_notice(guard_arm(protocol, arm), task, prior_steps, step)
-    if not enabled(protocol) or arm != 'correction':
+    if not enabled(protocol) or (arm != 'correction' and protocol['continuation_policy'] != REASONING_VERSION):
         return base
     steps = [*prior_steps, step]
     before, after = step['source_before'], step.get('source_after')

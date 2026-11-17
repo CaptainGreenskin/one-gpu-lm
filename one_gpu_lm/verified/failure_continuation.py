@@ -20,6 +20,10 @@ def initial_messages(prefix, protocol, arm):
           f"{budget['max_total_generated_tokens']} generated tokens in total and {budget['max_task_seconds']} seconds. "
           "Earlier calls do not consume this new continuation budget. The same restored source was separately checked "
           "with the declared visible regression; its recorded current feedback follows:\n"+prefix['standalone_feedback'])
+    if protocol.get('reasoning_comparison'):
+        messages[0]['content'] += (f"\nCURRENT CONTINUATION BUDGET overrides historical limits: {budget['max_model_calls']} new calls, "
+            f"{budget['max_generated_tokens_per_call']} generated tokens per call and {budget['max_total_generated_tokens']} total. "
+            "All thinking and final-action tokens count. Finish any thinking and emit exactly one tool action within the per-call limit.")
     messages[-1]['content']+=note+(GUIDANCE if guard_arm(protocol,arm)=='correction' else '')+extra_initial(protocol,arm)
     return messages
 

@@ -1,0 +1,13 @@
+{
+  "model_identity": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0"
+  },
+  "chat_template_sha256": "af16f654968d47d09a6c604e00370b12dbc21f76456f59c9e98b82e84d9f6375",
+  "reasoning_markers": {
+    "opening_token_id": 248068,
+    "closing_token_id": 248069
+  },
+  "source": "installed local files at the pinned model revision; no inference was run",
+  "web_page_verification": "unavailable via web reader; installed template used for actual tokenizer preflight"
+}
