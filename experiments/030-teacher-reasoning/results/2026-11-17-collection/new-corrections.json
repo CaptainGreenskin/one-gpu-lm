@@ -1,0 +1,293 @@
+{
+  "analysis_scope": "descriptive secondary count; does not alter preregistered gate",
+  "definition_module_sha256": "c90e3d15c0106ba6c5f062e96ceb2d522b47d73e4b26a803cfbc3096bfca262f",
+  "source_audit_sha256": "3995576a600634a3ff6f2a0c7794d08d9be7877b6ac91cf4240b7f80c061cde1",
+  "historical_failure_is_not_a_new_attempt_failure": true,
+  "rows": [
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "control",
+      "trajectory_sha256": "4905444084552048c50913ba548357283f07284abf1085d1ec15b6568774efb7",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "correction",
+      "trajectory_sha256": "38fbdfdc2ab11e02a7857a4e8842f817fd75998825779b952ea588422883bfbb",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "correction",
+      "trajectory_sha256": "45f1a2f4bad18ca9e5deefbb0482745c78b8742a0d276a4142460c440a6bbe8b",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "control",
+      "trajectory_sha256": "b06892e961ea0d55e1a275e2059e09cf05aa58716e1c64ef10b9a8b4d649bece",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "control",
+      "trajectory_sha256": "6a846d72d6287290ee374acf8e24019ec563f600db50b60f870ce2715724dbf9",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "correction",
+      "trajectory_sha256": "fa210541f056b0d188b1192692228608c3eb6c83d03abd337891544aee2a0d3c",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          2
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 2
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "correction",
+      "trajectory_sha256": "f53000600d6846f5dd5f450a0e1bf1d4222319fd29a5eb3d43dadb5bb72b8aeb",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "control",
+      "trajectory_sha256": "a3fc24b5516f28a9bab33205bf5ca9949aa50ce1c5b1f3c82a3d80d6a6d52deb",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "control",
+      "trajectory_sha256": "210a099db279690d8ed1c954ccf2ef407e2e006f6108d138bd96398358d5c85d",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "correction",
+      "trajectory_sha256": "b68d44a6c99bb6c8874c91b819caf756ceb430d9fdfc161f37de3f1e471839d6",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          2,
+          7
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 7
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "correction",
+      "trajectory_sha256": "385d7f2ac47bc64a8caa8cd1fbd8b8688475bc513431c589ddd27495a3e2b44e",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "control",
+      "trajectory_sha256": "073cca4d2bb57955405e654db56e1b14b408b12460502fdb57b9b5de0fb39e3e",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [
+          4
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "control",
+      "trajectory_sha256": "d1751bb3f2863b520cc24837cabd7bfc8ace98ad1aa6f23a78a05cac1b09ddb6",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          2
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 2
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "correction",
+      "trajectory_sha256": "a5e02e17e31a6af3b9c48225fc9160199ff6a6e5e38798a8d2ebb2182ac4af8f",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          2
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 2
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "correction",
+      "trajectory_sha256": "3584a07662016eba8f3078379dd873dfd77af41eef0e436ce314fe7eef9f1e14",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "control",
+      "trajectory_sha256": "5eb929ee66305333851a8edee4730ee48272c8cc312593436ee445418c536927",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "control",
+      "trajectory_sha256": "315aca96e669874ab06ef261964579b58d193c5f981ea2b7c7b9898342dba6a8",
+      "qualified_continuation": false,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": null
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "correction",
+      "trajectory_sha256": "cbde35748ffe6d9846df2af6a39574122adbd6121d3c1c9123e156c477bf1e64",
+      "qualified_continuation": true,
+      "new_attempt_correction": {
+        "edit_calls": [
+          1
+        ],
+        "qualifying_failure_calls": [],
+        "protected_files_intact_throughout": true,
+        "qualified_behavior": false,
+        "first_failure_call": null
+      },
+      "export_starts_at_last_successful_new_edit": 1
+    }
+  ]
+}

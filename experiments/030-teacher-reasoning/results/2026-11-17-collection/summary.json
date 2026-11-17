@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "registered_tasks": 9,
+  "registered_runs": 18,
+  "complete_audited_pairs": 9,
+  "outcomes": {
+    "control": {
+      "success": 4,
+      "qualified": 3,
+      "qualified_families": 3,
+      "qualified_not_previously_qualified_027": 2,
+      "qualified_task_ids": [
+        "isodate-duration-fraction-components",
+        "humanize-delta-negative",
+        "underscore-flatten-depth"
+      ],
+      "no_new_edit": 2,
+      "edited_failure": 3,
+      "calls": 76,
+      "generated_tokens": 13732,
+      "actor_seconds": 1195.337885545101,
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 13732,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0
+      }
+    },
+    "correction": {
+      "success": 9,
+      "qualified": 9,
+      "qualified_families": 4,
+      "qualified_not_previously_qualified_027": 8,
+      "qualified_task_ids": [
+        "isodate-duration-fraction-components",
+        "underscore-functions-sort",
+        "inflection-humanize-id-anchor",
+        "humanize-naturaltime-tense",
+        "underscore-ismatch-missing",
+        "inflection-pluralize-uncountable-case",
+        "humanize-delta-negative",
+        "underscore-flatten-depth",
+        "inflection-camelize-lower-first"
+      ],
+      "no_new_edit": 0,
+      "edited_failure": 0,
+      "calls": 48,
+      "generated_tokens": 10740,
+      "actor_seconds": 909.6243579419097,
+      "reasoning_usage": {
+        "thought_tokens": 5811,
+        "action_tokens": 4929,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0
+      }
+    }
+  },
+  "repair_gain_task_ids": [
+    "underscore-functions-sort",
+    "inflection-humanize-id-anchor",
+    "humanize-naturaltime-tense",
+    "underscore-ismatch-missing",
+    "inflection-camelize-lower-first"
+  ],
+  "repair_regression_task_ids": [],
+  "feasibility_checks": {
+    "complete_audit": true,
+    "qualified_unique_tasks": true,
+    "qualified_families": true,
+    "additional_corrective_tasks_beyond_027": true,
+    "no_net_qualified_decline": true,
+    "no_net_repair_success_decline": true,
+    "minimum_net_qualified_gain": true
+  },
+  "data_feasibility_gate_passed": true,
+  "actual_new_cost": {
+    "attempted_calls": 124,
+    "generated_tokens": 24472,
+    "input_tokens": 598909,
+    "actor_seconds": 2104.9622434870107
+  },
+  "unknown_generation_cost_attempts": 0,
+  "historical_prefix_cost_reused_once_per_task": {
+    "historical_calls": 64,
+    "historical_generated_tokens": 4627,
+    "historical_input_tokens": 154546
+  },
+  "private_export_summary": {
+    "qualified_unique_tasks": 9,
+    "action_records": 35,
+    "supervised_tokens": 3692,
+    "data_sha256": "1640438f0860d3ac4605354b3a89c0483ede32e3f0c862b3942facf6131b781e",
+    "failed_edits_used_as_positive_targets": false,
+    "historical_actions_used_as_positive_targets": false,
+    "failed_edits_retained_as_context": true,
+    "raw_data_public": false
+  },
+  "new_student_optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "independent_model_quality_evaluation": false,
+  "qualification_gain_task_ids": [
+    "underscore-functions-sort",
+    "inflection-humanize-id-anchor",
+    "humanize-naturaltime-tense",
+    "underscore-ismatch-missing",
+    "inflection-pluralize-uncountable-case",
+    "inflection-camelize-lower-first"
+  ],
+  "qualification_regression_task_ids": [],
+  "control_policy": "029 decision procedure, thinking disabled, per-call ceiling 2048",
+  "treatment_policy": "same procedure, low-effort thinking enabled",
+  "student_export_mode": "action_only_cross_mode"
+}

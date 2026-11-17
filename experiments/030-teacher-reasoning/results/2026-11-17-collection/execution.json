@@ -1,0 +1,41 @@
+{
+  "stage": "completed",
+  "complete": true,
+  "started_epoch": 1794902248.9355447,
+  "started_utc": "2026-11-17T07:57:28.935559+00:00",
+  "deadline_epoch": 1794913048.9355447,
+  "finished_epoch": 1794904469.8813741,
+  "finished_utc": "2026-11-17T08:34:29.881381+00:00",
+  "protocol_sha256": "9aa6550deeed094ca71946720ce1ecd0deacfa0498a2f9df03efddd0f0e3301e",
+  "publication_commit": "435c33143ea0c1266ddea03ab994d61097b3c758",
+  "expected_runs": 18,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "telemetry": {
+    "samples": 441,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "backend_stopped": true,
+  "frozen_files_unchanged": true,
+  "backend_lifecycles": [
+    {
+      "index": 1,
+      "role": "base",
+      "started_epoch": 1794902308.108978,
+      "ready_epoch": 1794902357.170491,
+      "stopped_epoch": 1794904469.8780956,
+      "returncode": -15
+    }
+  ],
+  "supervisor": {
+    "complete": true,
+    "timed_out": false,
+    "worker_returncode": 0,
+    "correction_complete": true,
+    "started_epoch": 1794902247.605526,
+    "finished_epoch": 1794904471.2735426
+  },
+  "pipeline_seconds": 2220.9458293914795
+}

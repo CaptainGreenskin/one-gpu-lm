@@ -1,0 +1,2328 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "9aa6550deeed094ca71946720ce1ecd0deacfa0498a2f9df03efddd0f0e3301e",
+  "passed": true,
+  "checks": {
+    "all_runs_audited": true,
+    "all_generation_cost_known": true,
+    "global_caps": true,
+    "physical_cost_matches": true,
+    "no_unregistered_task_directory": true,
+    "frozen_inputs_unchanged": true,
+    "same_model_interpreter": true,
+    "supervisor_complete": true,
+    "controller_protocol_identity": true
+  },
+  "rows": [
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "control",
+      "run_id": "isodate-duration-fraction-components--control",
+      "family": "gweis/isodate",
+      "state_id": "state-024",
+      "previously_qualified_027": true,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "isodate-duration-fraction-components",
+        "repository": "gweis/isodate",
+        "family": "gweis/isodate",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 383,
+        "attempted_calls": 4,
+        "actor_seconds": 35.682612522970885,
+        "grader_seconds": 0.28362132993061095,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "4905444084552048c50913ba548357283f07284abf1085d1ec15b6568774efb7",
+        "first_edit_call": 1,
+        "input_tokens": 16048,
+        "invalid_actions": 0,
+        "run_id": "isodate-duration-fraction-components--control",
+        "arm": "control",
+        "state_id": "state-024",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 3860,
+            "supervised_tokens": 166,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "3cf98fa9d7c37b4eb09ffecc9488c3bbbf9769aa2fdff91b30adde7f3ce2e84b",
+            "student_input_sha256": "3cf98fa9d7c37b4eb09ffecc9488c3bbbf9769aa2fdff91b30adde7f3ce2e84b",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 3977,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "db9792e43e48736f08d2bc4b57ddf13d4b536fa8839bd1912c81b1afabd031de",
+            "student_input_sha256": "db9792e43e48736f08d2bc4b57ddf13d4b536fa8839bd1912c81b1afabd031de",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 4194,
+            "supervised_tokens": 134,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "02c859768e436d459112571ec2a464054b78b726697c1a5b75a6e7c43ef6ca42",
+            "student_input_sha256": "02c859768e436d459112571ec2a464054b78b726697c1a5b75a6e7c43ef6ca42",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 4404,
+            "supervised_tokens": 55,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "f1bc8d338d59317e0864ac1332a811a197214071ef5156a6fc723b8f3e5f77dd",
+            "student_input_sha256": "f1bc8d338d59317e0864ac1332a811a197214071ef5156a6fc723b8f3e5f77dd",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 407,
+        "historical_input_tokens": 6773
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 383,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "correction",
+      "run_id": "isodate-duration-fraction-components--correction",
+      "family": "gweis/isodate",
+      "state_id": "state-024",
+      "previously_qualified_027": true,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "isodate-duration-fraction-components",
+        "repository": "gweis/isodate",
+        "family": "gweis/isodate",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 694,
+        "attempted_calls": 4,
+        "actor_seconds": 58.85582300694659,
+        "grader_seconds": 0.33424281200859696,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "38fbdfdc2ab11e02a7857a4e8842f817fd75998825779b952ea588422883bfbb",
+        "first_edit_call": 1,
+        "input_tokens": 16525,
+        "invalid_actions": 0,
+        "run_id": "isodate-duration-fraction-components--correction",
+        "arm": "correction",
+        "state_id": "state-024",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 3910,
+            "supervised_tokens": 216,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "529340f8b3e37cd9f8a919c45e31d6795cf1c0db096f81da29108310d5c0f20a",
+            "student_input_sha256": "3cf98fa9d7c37b4eb09ffecc9488c3bbbf9769aa2fdff91b30adde7f3ce2e84b",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "verify",
+            "tokens": 4349,
+            "supervised_tokens": 42,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "e2662246abb1378621502103a3786ca9eb7adf839857a503c46f1dc8aa0e649b",
+            "student_input_sha256": "b1755d5ee41468cc2b473c5e906c20f3a9ed5c1aa0984fc8370f85fbddbd4ecf",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 4504,
+            "supervised_tokens": 73,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "2b3d29a7ab0ed95f31996c8b1040b50dfa39b6b447f90b3361bae678be63d947",
+            "student_input_sha256": "5b1f86c6c5d2ba29ddf4b1fdca81c40f6f596e201eb8fca2da53092a39cd0797",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 2,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 407,
+        "historical_input_tokens": 6773
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 165,
+        "action_tokens": 529,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "correction",
+      "run_id": "underscore-functions-sort--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-011",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "underscore-functions-sort",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 577,
+        "attempted_calls": 4,
+        "actor_seconds": 49.91861940501258,
+        "grader_seconds": 0.3418567309854552,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "45f1a2f4bad18ca9e5deefbb0482745c78b8742a0d276a4142460c440a6bbe8b",
+        "first_edit_call": 1,
+        "input_tokens": 10166,
+        "invalid_actions": 0,
+        "run_id": "underscore-functions-sort--correction",
+        "arm": "correction",
+        "state_id": "state-011",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 2379,
+            "supervised_tokens": 148,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "0dd00eb807b1a3efdf0deddb0c31db2de14bbf64378d0a8a064038d7bbab52bb",
+            "student_input_sha256": "5e02cb9e57a3e691442b1e4ea83a8b419a899660171d7881e4f6ccd2b4502be7",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 2498,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "cf3f36e69ad20ba950f84872366bc167e47775b463491125867d9676054c5a29",
+            "student_input_sha256": "cbd64099acc8114fd87fed9f0faef8196dab9937952bc838e85f2c3c14e1c1e1",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 2705,
+            "supervised_tokens": 124,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "892cc4f39e8e1b84c0e882989a58f9e6968db8ead8d8b71bff312eeec48d3028",
+            "student_input_sha256": "ddaa09a2353d346f9bf1e8035f0a5207cc8f583b936f04f4bfa71ed6344341bd",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 2842,
+            "supervised_tokens": 50,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "6dd98a32602a59f7df8740c4f49617fb8ddaa099937f982b89a230fa1149dc96",
+            "student_input_sha256": "39da32921472fa23cf5259a117d4628c5e8a91e770bfeaecf10fdab46f53ad0f",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 3,
+        "historical_generated_tokens": 220,
+        "historical_input_tokens": 2427
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 223,
+        "action_tokens": 354,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "control",
+      "run_id": "underscore-functions-sort--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-011",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-functions-sort",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1512,
+        "attempted_calls": 12,
+        "actor_seconds": 135.73369553207885,
+        "grader_seconds": 0.2421578960493207,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "b06892e961ea0d55e1a275e2059e09cf05aa58716e1c64ef10b9a8b4d649bece",
+        "first_edit_call": null,
+        "input_tokens": 56099,
+        "invalid_actions": 0,
+        "run_id": "underscore-functions-sort--control",
+        "arm": "control",
+        "state_id": "state-011",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 3,
+        "historical_generated_tokens": 220,
+        "historical_input_tokens": 2427
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 1512,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "control",
+      "run_id": "inflection-humanize-id-anchor--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-002",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-humanize-id-anchor",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 2084,
+        "attempted_calls": 12,
+        "actor_seconds": 182.74910075007938,
+        "grader_seconds": 0.17816591390874237,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "6a846d72d6287290ee374acf8e24019ec563f600db50b60f870ce2715724dbf9",
+        "first_edit_call": 1,
+        "input_tokens": 66909,
+        "invalid_actions": 0,
+        "run_id": "inflection-humanize-id-anchor--control",
+        "arm": "control",
+        "state_id": "state-002",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 703,
+        "historical_input_tokens": 28005
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 2084,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "correction",
+      "run_id": "inflection-humanize-id-anchor--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-002",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "inflection-humanize-id-anchor",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 921,
+        "attempted_calls": 6,
+        "actor_seconds": 80.09492564108223,
+        "grader_seconds": 0.2780331700341776,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "fa210541f056b0d188b1192692228608c3eb6c83d03abd337891544aee2a0d3c",
+        "first_edit_call": 2,
+        "input_tokens": 29291,
+        "invalid_actions": 0,
+        "run_id": "inflection-humanize-id-anchor--correction",
+        "arm": "correction",
+        "state_id": "state-002",
+        "correction_behavior": {
+          "edit_calls": [
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 2,
+        "encoded_actions": [
+          {
+            "call": 2,
+            "kind": "edit",
+            "tokens": 4752,
+            "supervised_tokens": 151,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "855a78a68eb0346bcaa56941fc7f4672cf4b4c00d869dfd801192b0b31b2a7df",
+            "student_input_sha256": "78dd2a89abf8988908da2bb86839a949277feb0ad2d61484a017b1c79a1083f2",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "verify",
+            "tokens": 5016,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "70cba54e956163a84f82127a30687164313fac5a2b8b46d6e01ffcf15dbb0210",
+            "student_input_sha256": "03768d90a87e69f003942448cd2bf380711b6d02641e788902bafea17a32c1ce",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 5,
+            "kind": "other",
+            "tokens": 5189,
+            "supervised_tokens": 91,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "078c7023a9b2d576921c765f9b3bcb69cdab02f5bce0e22f7b681c725cabc385",
+            "student_input_sha256": "d5abec0cb702f0b6fcfcfe79aacdea5a431245dfd9d6d93df607723b23c67637",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 6,
+            "kind": "submit",
+            "tokens": 5351,
+            "supervised_tokens": 69,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "5e918c682781331943ac4b199c8272e43f4057fd90605483adef97c84e4d2d4d",
+            "student_input_sha256": "c7b66be6910b0a47a837a89fc31b39d0a1f2a969831a5dd565aca2ada7dc8ba4",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 3,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 703,
+        "historical_input_tokens": 28005
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 448,
+        "action_tokens": 473,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "correction",
+      "run_id": "humanize-naturaltime-tense--correction",
+      "family": "python-humanize/humanize",
+      "state_id": "state-004",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "humanize-naturaltime-tense",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1229,
+        "attempted_calls": 5,
+        "actor_seconds": 103.93202024395578,
+        "grader_seconds": 0.23176862695254385,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "f53000600d6846f5dd5f450a0e1bf1d4222319fd29a5eb3d43dadb5bb72b8aeb",
+        "first_edit_call": 1,
+        "input_tokens": 23731,
+        "invalid_actions": 0,
+        "run_id": "humanize-naturaltime-tense--correction",
+        "arm": "correction",
+        "state_id": "state-004",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 4496,
+            "supervised_tokens": 160,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "75260801c3d290e96f10b432044d6cd2e1a03b45354974b9ef21cb04adf255ac",
+            "student_input_sha256": "49081a8f04cd2e56c225c0811fd4ab119396f9f747ac2f22c6b3e763332bd05f",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "verify",
+            "tokens": 4772,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "186a9a6f485087f3f534635b8e9313a85e8254646e18d8cdbe69c2d759dc8f17",
+            "student_input_sha256": "9627b56e67205119b8382f64d52a53c1fe40c3ce055ac193ff789e03c8018f69",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "other",
+            "tokens": 4999,
+            "supervised_tokens": 145,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "055a78584c8103ec0d7ed7f14cd999c050cd8dbbd53fd6b4364183e9215832e3",
+            "student_input_sha256": "3d7bda8a328b2455ee82dff85af52b96cfbf4659ffe257ddd77244ebed6bf517",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 5,
+            "kind": "submit",
+            "tokens": 5162,
+            "supervised_tokens": 65,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "fc1cc55c6162697228e8ece9b82853a1436dc69b08b2d981cf2f7f94db49edcb",
+            "student_input_sha256": "0412264694093c1811ced18aabd7e04ba0e013bce74d37c4525a26a0fc13bb3e",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 2,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 729,
+        "historical_input_tokens": 19689
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 783,
+        "action_tokens": 446,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "control",
+      "run_id": "humanize-naturaltime-tense--control",
+      "family": "python-humanize/humanize",
+      "state_id": "state-004",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "humanize-naturaltime-tense",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 886,
+        "attempted_calls": 12,
+        "actor_seconds": 86.41134522098582,
+        "grader_seconds": 0.13224722200538963,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "a3fc24b5516f28a9bab33205bf5ca9949aa50ce1c5b1f3c82a3d80d6a6d52deb",
+        "first_edit_call": null,
+        "input_tokens": 68549,
+        "invalid_actions": 0,
+        "run_id": "humanize-naturaltime-tense--control",
+        "arm": "control",
+        "state_id": "state-004",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 729,
+        "historical_input_tokens": 19689
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 886,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "control",
+      "run_id": "underscore-ismatch-missing--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-005",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-ismatch-missing",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 530,
+        "attempted_calls": 6,
+        "actor_seconds": 46.371520546032116,
+        "grader_seconds": 0.3445446219993755,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "210a099db279690d8ed1c954ccf2ef407e2e006f6108d138bd96398358d5c85d",
+        "first_edit_call": 1,
+        "input_tokens": 15710,
+        "invalid_actions": 0,
+        "run_id": "underscore-ismatch-missing--control",
+        "arm": "control",
+        "state_id": "state-005",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 237,
+        "historical_input_tokens": 3776
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 530,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "correction",
+      "run_id": "underscore-ismatch-missing--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-005",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "underscore-ismatch-missing",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 2197,
+        "attempted_calls": 10,
+        "actor_seconds": 182.67360128299333,
+        "grader_seconds": 0.34402663400396705,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "b68d44a6c99bb6c8874c91b819caf756ceb430d9fdfc161f37de3f1e471839d6",
+        "first_edit_call": 2,
+        "input_tokens": 32846,
+        "invalid_actions": 0,
+        "run_id": "underscore-ismatch-missing--correction",
+        "arm": "correction",
+        "state_id": "state-005",
+        "correction_behavior": {
+          "edit_calls": [
+            2,
+            7
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2,
+          7
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 7,
+        "encoded_actions": [
+          {
+            "call": 7,
+            "kind": "edit",
+            "tokens": 3739,
+            "supervised_tokens": 150,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "3c3d5536df9a51ed25c70e781d179a0bd81009188d490b30532f2656b719eab2",
+            "student_input_sha256": "001ce6a4c4426b94becdf751454edebabff525c1d9765b48c1f334fbd62932d6",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 8,
+            "kind": "verify",
+            "tokens": 3997,
+            "supervised_tokens": 48,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "892d49783214914c1e23c4b43b740bef502e76956e1e97ad277d07fbd0eddeff",
+            "student_input_sha256": "f98bf32b4528386f404745ff9d5f8d0e75f15e2fd9a0ec4d090b1a60a517ceb4",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 9,
+            "kind": "other",
+            "tokens": 4208,
+            "supervised_tokens": 129,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "7cbc07e7a58beff6fcb80bb8099653e91906b6fd66c9e8a195004bea0262523b",
+            "student_input_sha256": "b10fe47113f51425e27eb0d00b60efe1b57a57ae738e6954ed4c6c72f5eca4c8",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 10,
+            "kind": "submit",
+            "tokens": 4361,
+            "supervised_tokens": 57,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "e46c940d2d89839d2579a8be69a0d6e9354e3315f9058dfa31690eb05a7703bd",
+            "student_input_sha256": "bb055b86f501282e6e3185b36e8dd52310daffe8d264d12e7b966fa255df7132",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 237,
+        "historical_input_tokens": 3776
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 1177,
+        "action_tokens": 1020,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "correction",
+      "run_id": "inflection-pluralize-uncountable-case--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-006",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "inflection-pluralize-uncountable-case",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1367,
+        "attempted_calls": 4,
+        "actor_seconds": 115.89898565900512,
+        "grader_seconds": 0.2764502960490063,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "385d7f2ac47bc64a8caa8cd1fbd8b8688475bc513431c589ddd27495a3e2b44e",
+        "first_edit_call": 1,
+        "input_tokens": 26365,
+        "invalid_actions": 0,
+        "run_id": "inflection-pluralize-uncountable-case--correction",
+        "arm": "correction",
+        "state_id": "state-006",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 6442,
+            "supervised_tokens": 285,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "375b35d4e1393f8b6caf988f62ca8b1647116190f7277b8af7fa9504c50852d8",
+            "student_input_sha256": "69ee1503cdd4d8dc81fd36eecbdf1e6fcac76b617810ed904e2e16211deb5ac9",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 6576,
+            "supervised_tokens": 47,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "1017e81a37328ec98f9b6c723dce4357f740c335b23281388fccb108e7eec7b5",
+            "student_input_sha256": "8f0d37cc9b29ceff6a71050206ebc51c830d427f8f33b30cd94911e40b70e7bf",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 6772,
+            "supervised_tokens": 113,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "01674a635ccba6472ac7d24c1e7b1f8f7e6faa0ae6be385d587e6be8920bc4b7",
+            "student_input_sha256": "8cd917da35d6fbcd2f6080fd8eddc5459deb0f0930ff992888d222bbaf19d7af",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 6983,
+            "supervised_tokens": 59,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "13513f35eb080eaa898c6083844ef786850d2cd77a63396184bcc14685d3aa06",
+            "student_input_sha256": "1873b2376aca60d6240fbeafba285ab3b8bb4db9bf875037693898748c74e1f1",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 844,
+        "historical_input_tokens": 39327
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 863,
+        "action_tokens": 504,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "control",
+      "run_id": "inflection-pluralize-uncountable-case--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-006",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-pluralize-uncountable-case",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 6144,
+        "attempted_calls": 8,
+        "actor_seconds": 505.3619818749139,
+        "grader_seconds": 0.2780267010675743,
+        "submitted": false,
+        "terminal_reason": "token_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": false,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "073cca4d2bb57955405e654db56e1b14b408b12460502fdb57b9b5de0fb39e3e",
+        "first_edit_call": 4,
+        "input_tokens": 49456,
+        "invalid_actions": 3,
+        "run_id": "inflection-pluralize-uncountable-case--control",
+        "arm": "control",
+        "state_id": "state-006",
+        "correction_behavior": {
+          "edit_calls": [
+            4
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          4
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 844,
+        "historical_input_tokens": 39327
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 6144,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "control",
+      "run_id": "humanize-delta-negative--control",
+      "family": "python-humanize/humanize",
+      "state_id": "state-013",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "humanize-delta-negative",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 695,
+        "attempted_calls": 6,
+        "actor_seconds": 63.690535485045984,
+        "grader_seconds": 0.2826870180433616,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "d1751bb3f2863b520cc24837cabd7bfc8ace98ad1aa6f23a78a05cac1b09ddb6",
+        "first_edit_call": 2,
+        "input_tokens": 36815,
+        "invalid_actions": 0,
+        "run_id": "humanize-delta-negative--control",
+        "arm": "control",
+        "state_id": "state-013",
+        "correction_behavior": {
+          "edit_calls": [
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 2,
+        "encoded_actions": [
+          {
+            "call": 2,
+            "kind": "edit",
+            "tokens": 7193,
+            "supervised_tokens": 395,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "406f497470cb8e64988683c77ba6afc62ad4a412aba39ba6f067b2544c7189b4",
+            "student_input_sha256": "406f497470cb8e64988683c77ba6afc62ad4a412aba39ba6f067b2544c7189b4",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 4,
+            "kind": "verify",
+            "tokens": 6119,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "d57aede3b9f8ed2d2546ea45c21b7a3194bb6b54996f24f92eec1b5acadb20c7",
+            "student_input_sha256": "d57aede3b9f8ed2d2546ea45c21b7a3194bb6b54996f24f92eec1b5acadb20c7",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 5,
+            "kind": "other",
+            "tokens": 5688,
+            "supervised_tokens": 113,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "82bd14b10cc4f825a7b99566571bf9ad23c7b7f39ed48ada826df5ccaba1255b",
+            "student_input_sha256": "82bd14b10cc4f825a7b99566571bf9ad23c7b7f39ed48ada826df5ccaba1255b",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 6,
+            "kind": "submit",
+            "tokens": 5819,
+            "supervised_tokens": 34,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "471ec457939516b947f49c0f51f77c3c0dea88e5caa3c7ea0fc9fa931b21fc74",
+            "student_input_sha256": "471ec457939516b947f49c0f51f77c3c0dea88e5caa3c7ea0fc9fa931b21fc74",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 3,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 10,
+        "historical_generated_tokens": 586,
+        "historical_input_tokens": 33165
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 695,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "correction",
+      "run_id": "humanize-delta-negative--correction",
+      "family": "python-humanize/humanize",
+      "state_id": "state-013",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "humanize-delta-negative",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1089,
+        "attempted_calls": 6,
+        "actor_seconds": 96.33486138400622,
+        "grader_seconds": 0.2782807450275868,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "a5e02e17e31a6af3b9c48225fc9160199ff6a6e5e38798a8d2ebb2182ac4af8f",
+        "first_edit_call": 2,
+        "input_tokens": 37958,
+        "invalid_actions": 0,
+        "run_id": "humanize-delta-negative--correction",
+        "arm": "correction",
+        "state_id": "state-013",
+        "correction_behavior": {
+          "edit_calls": [
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 2,
+        "encoded_actions": [
+          {
+            "call": 2,
+            "kind": "edit",
+            "tokens": 7018,
+            "supervised_tokens": 172,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "0b5143b3fcaa35de19daef6db54fe217d40a678db7904d5e9e7152ef242bf148",
+            "student_input_sha256": "fbc43489005a931a927ae12a23a78fc0266f69ad5422a5908fc031b545ce2255",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "verify",
+            "tokens": 6046,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "421bdf0b64d9d37a40c17053501377d2d6b551c8a351685c143ec74f38e5906e",
+            "student_input_sha256": "2ba04405cbcaf45b17bc4403bb7c214ad1be574a60a4e91472dbac04f149008b",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 5,
+            "kind": "other",
+            "tokens": 5623,
+            "supervised_tokens": 121,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "b7c8eb2d23db845701204662b30ae3f6f283f14206ccd7934008eea75e940ca8",
+            "student_input_sha256": "e725bb6cd024a8aa34378ddd7cda07a432adb548a54dfa245d67a19071733198",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 6,
+            "kind": "submit",
+            "tokens": 5785,
+            "supervised_tokens": 68,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "fbcaa1f48fea2293f6c29b6a45e274799a4837f5f19d689104563922526e6f33",
+            "student_input_sha256": "54ed6c880236c5628f30f21cb5e0da358582c777d286ff7cc38852381149fa98",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 3,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 10,
+        "historical_generated_tokens": 586,
+        "historical_input_tokens": 33165
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 512,
+        "action_tokens": 577,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "correction",
+      "run_id": "underscore-flatten-depth--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-012",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "underscore-flatten-depth",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1242,
+        "attempted_calls": 4,
+        "actor_seconds": 102.84576261998154,
+        "grader_seconds": 0.3278622309444472,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "3584a07662016eba8f3078379dd873dfd77af41eef0e436ce314fe7eef9f1e14",
+        "first_edit_call": 1,
+        "input_tokens": 14548,
+        "invalid_actions": 0,
+        "run_id": "underscore-flatten-depth--correction",
+        "arm": "correction",
+        "state_id": "state-012",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 3458,
+            "supervised_tokens": 188,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "b046c9378059cabb0753bf7ce25a3d2be0461331d80acc556e399ca80329101b",
+            "student_input_sha256": "a51538a62fa1b9339c1ccda0bc49c4127e4b728542c0ebe1a02932d38d54740d",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 3593,
+            "supervised_tokens": 48,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "73f3fef1bcb31e7dde5aa53a8ef573d4fbd79c1d182bc0bc199253ad582de55a",
+            "student_input_sha256": "c7d1213c9290da88eee754cf028daba5b9308293c42d75f41303c64e0ccc4202",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 3833,
+            "supervised_tokens": 157,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "4dcab282456baae458ec23a3a05f402e7084af14cd7da4971dd0716f16d89f4b",
+            "student_input_sha256": "0776d238a49f52b8d348902c3f4ee77b1e941726bc93ab885a87c8d2d6383eb0",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 4039,
+            "supervised_tokens": 78,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "e04e1e431745a0bd3e7ba704f4bbf6a9adc9a6a304d2ea97aa026181e7731a3e",
+            "student_input_sha256": "843a7668dde81d28c6de7059cd40aac06c1ed5c7ae21ec209ee34c7819e1e6c0",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 483,
+        "historical_input_tokens": 11436
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 771,
+        "action_tokens": 471,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "control",
+      "run_id": "underscore-flatten-depth--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-012",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "underscore-flatten-depth",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 376,
+        "attempted_calls": 4,
+        "actor_seconds": 33.505498912069015,
+        "grader_seconds": 0.34368920896667987,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "5eb929ee66305333851a8edee4730ee48272c8cc312593436ee445418c536927",
+        "first_edit_call": 1,
+        "input_tokens": 14294,
+        "invalid_actions": 0,
+        "run_id": "underscore-flatten-depth--control",
+        "arm": "control",
+        "state_id": "state-012",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 3430,
+            "supervised_tokens": 160,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "a51538a62fa1b9339c1ccda0bc49c4127e4b728542c0ebe1a02932d38d54740d",
+            "student_input_sha256": "a51538a62fa1b9339c1ccda0bc49c4127e4b728542c0ebe1a02932d38d54740d",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 3549,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "b187622b1d652dc924e68960506a212f07c45528bcf168dd532f7f6107392e33",
+            "student_input_sha256": "b187622b1d652dc924e68960506a212f07c45528bcf168dd532f7f6107392e33",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 3754,
+            "supervised_tokens": 122,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "93f4d8f96333ab12e89b57b2ecf49067f8d350ffe44626a4c3f1e5e37537ac3b",
+            "student_input_sha256": "93f4d8f96333ab12e89b57b2ecf49067f8d350ffe44626a4c3f1e5e37537ac3b",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 3941,
+            "supervised_tokens": 66,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "5283476509d556fa896b5801f949e190cb5fae0e1cd0bb305f4b9fad599f7ef8",
+            "student_input_sha256": "5283476509d556fa896b5801f949e190cb5fae0e1cd0bb305f4b9fad599f7ef8",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "direct"
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 483,
+        "historical_input_tokens": 11436
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 376,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "control",
+      "run_id": "inflection-camelize-lower-first--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-007",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-camelize-lower-first",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1122,
+        "attempted_calls": 12,
+        "actor_seconds": 105.83159470092505,
+        "grader_seconds": 0.17786796996369958,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "315aca96e669874ab06ef261964579b58d193c5f981ea2b7c7b9898342dba6a8",
+        "first_edit_call": 1,
+        "input_tokens": 61894,
+        "invalid_actions": 0,
+        "run_id": "inflection-camelize-lower-first--control",
+        "arm": "control",
+        "state_id": "state-007",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 5,
+        "historical_generated_tokens": 418,
+        "historical_input_tokens": 9948
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 0,
+        "action_tokens": 1122,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "direct"
+      }
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "correction",
+      "run_id": "inflection-camelize-lower-first--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-007",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "inflection-camelize-lower-first",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1424,
+        "attempted_calls": 5,
+        "actor_seconds": 119.06975869892631,
+        "grader_seconds": 0.2786091909511015,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "cbde35748ffe6d9846df2af6a39574122adbd6121d3c1c9123e156c477bf1e64",
+        "first_edit_call": 1,
+        "input_tokens": 21705,
+        "invalid_actions": 0,
+        "run_id": "inflection-camelize-lower-first--correction",
+        "arm": "correction",
+        "state_id": "state-007",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 4125,
+            "supervised_tokens": 289,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "c9e8e27af077917278e556c83d86552c18a474e83d2fe4543e14ebe4a4f9349d",
+            "student_input_sha256": "ae8b08e1d97beb83cfa17913fb5df3fc342c2e350b0bc029836897c0f57d6a81",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 3,
+            "kind": "verify",
+            "tokens": 4401,
+            "supervised_tokens": 32,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "609d5814bbab65a4a53e527eb38317acf8fe9f0ab39a82624ee06b1a19a5192c",
+            "student_input_sha256": "9902699782c4bff252617bb69fdc3edbaefba3804eef3188bd09c965c545b465",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 4,
+            "kind": "other",
+            "tokens": 4593,
+            "supervised_tokens": 110,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "9f40a2c869e418bc97518910c11be0b92c5b7d29951d48c29c8e872276c89e46",
+            "student_input_sha256": "2a0d9aa721f6b9c1fa4b37ece6133baf429e74f9057a0e8fce4217629cccd8b5",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          },
+          {
+            "call": 5,
+            "kind": "submit",
+            "tokens": 4764,
+            "supervised_tokens": 79,
+            "export_mode": "action_only_cross_mode",
+            "teacher_input_sha256": "fd1dd063717ae81ce1fee74603e2126a92bcfd41c5b3ca884c12c0b49fb06299",
+            "student_input_sha256": "3e927d2c54ec52381090d8212831b07b4a5874c68fc4f5a962a5335679ca0ef0",
+            "student_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+            "teacher_mode": "low"
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 2,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 5,
+        "historical_generated_tokens": 418,
+        "historical_input_tokens": 9948
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      },
+      "reasoning_usage": {
+        "thought_tokens": 869,
+        "action_tokens": 555,
+        "unclassified_tokens": 0,
+        "boundary_failures": 0,
+        "mode": "low"
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "run_id": "isodate-duration-fraction-components--control",
+      "attempted_calls": 4,
+      "generated_tokens": 383,
+      "input_tokens": 16048,
+      "actor_seconds": 35.682612522970885,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "4905444084552048c50913ba548357283f07284abf1085d1ec15b6568774efb7"
+    },
+    {
+      "run_id": "isodate-duration-fraction-components--correction",
+      "attempted_calls": 4,
+      "generated_tokens": 694,
+      "input_tokens": 16525,
+      "actor_seconds": 58.85582300694659,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "38fbdfdc2ab11e02a7857a4e8842f817fd75998825779b952ea588422883bfbb"
+    },
+    {
+      "run_id": "underscore-functions-sort--correction",
+      "attempted_calls": 4,
+      "generated_tokens": 577,
+      "input_tokens": 10166,
+      "actor_seconds": 49.91861940501258,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "45f1a2f4bad18ca9e5deefbb0482745c78b8742a0d276a4142460c440a6bbe8b"
+    },
+    {
+      "run_id": "underscore-functions-sort--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1512,
+      "input_tokens": 56099,
+      "actor_seconds": 135.73369553207885,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "b06892e961ea0d55e1a275e2059e09cf05aa58716e1c64ef10b9a8b4d649bece"
+    },
+    {
+      "run_id": "inflection-humanize-id-anchor--control",
+      "attempted_calls": 12,
+      "generated_tokens": 2084,
+      "input_tokens": 66909,
+      "actor_seconds": 182.74910075007938,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "6a846d72d6287290ee374acf8e24019ec563f600db50b60f870ce2715724dbf9"
+    },
+    {
+      "run_id": "inflection-humanize-id-anchor--correction",
+      "attempted_calls": 6,
+      "generated_tokens": 921,
+      "input_tokens": 29291,
+      "actor_seconds": 80.09492564108223,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "fa210541f056b0d188b1192692228608c3eb6c83d03abd337891544aee2a0d3c"
+    },
+    {
+      "run_id": "humanize-naturaltime-tense--correction",
+      "attempted_calls": 5,
+      "generated_tokens": 1229,
+      "input_tokens": 23731,
+      "actor_seconds": 103.93202024395578,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "f53000600d6846f5dd5f450a0e1bf1d4222319fd29a5eb3d43dadb5bb72b8aeb"
+    },
+    {
+      "run_id": "humanize-naturaltime-tense--control",
+      "attempted_calls": 12,
+      "generated_tokens": 886,
+      "input_tokens": 68549,
+      "actor_seconds": 86.41134522098582,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "a3fc24b5516f28a9bab33205bf5ca9949aa50ce1c5b1f3c82a3d80d6a6d52deb"
+    },
+    {
+      "run_id": "underscore-ismatch-missing--control",
+      "attempted_calls": 6,
+      "generated_tokens": 530,
+      "input_tokens": 15710,
+      "actor_seconds": 46.371520546032116,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "210a099db279690d8ed1c954ccf2ef407e2e006f6108d138bd96398358d5c85d"
+    },
+    {
+      "run_id": "underscore-ismatch-missing--correction",
+      "attempted_calls": 10,
+      "generated_tokens": 2197,
+      "input_tokens": 32846,
+      "actor_seconds": 182.67360128299333,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "b68d44a6c99bb6c8874c91b819caf756ceb430d9fdfc161f37de3f1e471839d6"
+    },
+    {
+      "run_id": "inflection-pluralize-uncountable-case--correction",
+      "attempted_calls": 4,
+      "generated_tokens": 1367,
+      "input_tokens": 26365,
+      "actor_seconds": 115.89898565900512,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "385d7f2ac47bc64a8caa8cd1fbd8b8688475bc513431c589ddd27495a3e2b44e"
+    },
+    {
+      "run_id": "inflection-pluralize-uncountable-case--control",
+      "attempted_calls": 8,
+      "generated_tokens": 6144,
+      "input_tokens": 49456,
+      "actor_seconds": 505.3619818749139,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "073cca4d2bb57955405e654db56e1b14b408b12460502fdb57b9b5de0fb39e3e"
+    },
+    {
+      "run_id": "humanize-delta-negative--control",
+      "attempted_calls": 6,
+      "generated_tokens": 695,
+      "input_tokens": 36815,
+      "actor_seconds": 63.690535485045984,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "d1751bb3f2863b520cc24837cabd7bfc8ace98ad1aa6f23a78a05cac1b09ddb6"
+    },
+    {
+      "run_id": "humanize-delta-negative--correction",
+      "attempted_calls": 6,
+      "generated_tokens": 1089,
+      "input_tokens": 37958,
+      "actor_seconds": 96.33486138400622,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "a5e02e17e31a6af3b9c48225fc9160199ff6a6e5e38798a8d2ebb2182ac4af8f"
+    },
+    {
+      "run_id": "underscore-flatten-depth--correction",
+      "attempted_calls": 4,
+      "generated_tokens": 1242,
+      "input_tokens": 14548,
+      "actor_seconds": 102.84576261998154,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "3584a07662016eba8f3078379dd873dfd77af41eef0e436ce314fe7eef9f1e14"
+    },
+    {
+      "run_id": "underscore-flatten-depth--control",
+      "attempted_calls": 4,
+      "generated_tokens": 376,
+      "input_tokens": 14294,
+      "actor_seconds": 33.505498912069015,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "5eb929ee66305333851a8edee4730ee48272c8cc312593436ee445418c536927"
+    },
+    {
+      "run_id": "inflection-camelize-lower-first--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1122,
+      "input_tokens": 61894,
+      "actor_seconds": 105.83159470092505,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "315aca96e669874ab06ef261964579b58d193c5f981ea2b7c7b9898342dba6a8"
+    },
+    {
+      "run_id": "inflection-camelize-lower-first--correction",
+      "attempted_calls": 5,
+      "generated_tokens": 1424,
+      "input_tokens": 21705,
+      "actor_seconds": 119.06975869892631,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "cbde35748ffe6d9846df2af6a39574122adbd6121d3c1c9123e156c477bf1e64"
+    }
+  ],
+  "private_export_summary": {
+    "qualified_unique_tasks": 9,
+    "action_records": 35,
+    "supervised_tokens": 3692,
+    "data_sha256": "1640438f0860d3ac4605354b3a89c0483ede32e3f0c862b3942facf6131b781e",
+    "failed_edits_used_as_positive_targets": false,
+    "historical_actions_used_as_positive_targets": false,
+    "failed_edits_retained_as_context": true,
+    "raw_data_public": false
+  },
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}
