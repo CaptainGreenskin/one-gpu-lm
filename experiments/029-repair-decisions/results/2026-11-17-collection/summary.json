@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "registered_tasks": 9,
+  "registered_runs": 18,
+  "complete_audited_pairs": 9,
+  "outcomes": {
+    "control": {
+      "success": 4,
+      "qualified": 3,
+      "qualified_families": 3,
+      "qualified_not_previously_qualified_027": 3,
+      "qualified_task_ids": [
+        "inflection-humanize-id-anchor",
+        "humanize-delta-negative",
+        "underscore-flatten-depth"
+      ],
+      "no_new_edit": 3,
+      "edited_failure": 2,
+      "calls": 88,
+      "generated_tokens": 10041,
+      "actor_seconds": 903.6768059339374
+    },
+    "correction": {
+      "success": 4,
+      "qualified": 4,
+      "qualified_families": 3,
+      "qualified_not_previously_qualified_027": 3,
+      "qualified_task_ids": [
+        "isodate-duration-fraction-components",
+        "underscore-functions-sort",
+        "humanize-delta-negative",
+        "underscore-flatten-depth"
+      ],
+      "no_new_edit": 2,
+      "edited_failure": 3,
+      "calls": 72,
+      "generated_tokens": 8073,
+      "actor_seconds": 734.7990572097478
+    }
+  },
+  "repair_gain_task_ids": [
+    "underscore-functions-sort"
+  ],
+  "repair_regression_task_ids": [
+    "inflection-humanize-id-anchor"
+  ],
+  "feasibility_checks": {
+    "complete_audit": true,
+    "qualified_unique_tasks": false,
+    "qualified_families": true,
+    "additional_corrective_tasks_beyond_027": true,
+    "no_net_qualified_decline": true,
+    "no_net_repair_success_decline": true,
+    "minimum_net_qualified_gain": false
+  },
+  "data_feasibility_gate_passed": false,
+  "actual_new_cost": {
+    "attempted_calls": 160,
+    "generated_tokens": 18114,
+    "input_tokens": 782545,
+    "actor_seconds": 1638.4758631436853
+  },
+  "unknown_generation_cost_attempts": 0,
+  "historical_prefix_cost_reused_once_per_task": {
+    "historical_calls": 64,
+    "historical_generated_tokens": 4627,
+    "historical_input_tokens": 154546
+  },
+  "private_export_summary": {
+    "qualified_unique_tasks": 4,
+    "action_records": 17,
+    "supervised_tokens": 1881,
+    "data_sha256": "508c65875c5654fa64fb2a7145a5825113e4b0ceba5ff0e630b796e32d95add9",
+    "failed_edits_used_as_positive_targets": false,
+    "historical_actions_used_as_positive_targets": false,
+    "failed_edits_retained_as_context": true,
+    "raw_data_public": false
+  },
+  "new_student_optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "independent_model_quality_evaluation": false,
+  "qualification_gain_task_ids": [
+    "isodate-duration-fraction-components",
+    "underscore-functions-sort"
+  ],
+  "qualification_regression_task_ids": [
+    "inflection-humanize-id-anchor"
+  ],
+  "control_policy": "028 correction procedure rerun on original admitted states",
+  "treatment_policy": "visible_decisions_v1"
+}

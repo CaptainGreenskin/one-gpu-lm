@@ -1,0 +1,41 @@
+{
+  "stage": "completed",
+  "complete": true,
+  "started_epoch": 1794897236.8628275,
+  "started_utc": "2026-11-17T06:33:56.862845+00:00",
+  "deadline_epoch": 1794908036.8628275,
+  "finished_epoch": 1794898977.4293082,
+  "finished_utc": "2026-11-17T07:02:57.429311+00:00",
+  "protocol_sha256": "e88683e2a6dbfe99fb3d810b485068fa0a55fadef2344a1a4acd423f29ea4051",
+  "publication_commit": "862d32304f41c7b3d5920042c82c18fded7a6cb8",
+  "expected_runs": 18,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "telemetry": {
+    "samples": 346,
+    "errors": 0,
+    "thread_stopped": true
+  },
+  "backend_stopped": true,
+  "frozen_files_unchanged": true,
+  "backend_lifecycles": [
+    {
+      "index": 1,
+      "role": "base",
+      "started_epoch": 1794897293.4871473,
+      "ready_epoch": 1794897332.0386717,
+      "stopped_epoch": 1794898977.4215016,
+      "returncode": -15
+    }
+  ],
+  "supervisor": {
+    "complete": true,
+    "timed_out": false,
+    "worker_returncode": 0,
+    "correction_complete": true,
+    "started_epoch": 1794897235.5626762,
+    "finished_epoch": 1794898978.9560285
+  },
+  "pipeline_seconds": 1740.5664806365967
+}
