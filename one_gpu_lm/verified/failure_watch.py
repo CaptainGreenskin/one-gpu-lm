@@ -46,7 +46,7 @@ def run(root, protocol_path):
     state={'started_epoch':time.time(),'protocol_sha256':sha256(protocol_path),'complete':False}
     with receipt.open('x') as stream:stream.write(json.dumps(state)+'\n')
     child=subprocess.Popen(['python3','-u','-m','one_gpu_lm.verified.failure_collection','--root',str(root),'--protocol',str(protocol_path)],
-              cwd=root,stdout=(root/'private/failure028-worker.log').open('wb'),stderr=subprocess.STDOUT,start_new_session=True)
+              cwd=root,stdout=(root/relative(protocol.get('worker_log','private/failure028-worker.log'))).open('wb'),stderr=subprocess.STDOUT,start_new_session=True)
     state['worker_pid']=child.pid;atomic(receipt,state);timed_out=False
     try:child.wait(timeout=protocol['maximum_pipeline_seconds']+30)
     except subprocess.TimeoutExpired:timed_out=True

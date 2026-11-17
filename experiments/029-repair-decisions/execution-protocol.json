@@ -515,7 +515,7 @@
     "runs/correction027-001/audit.json": "16c783e3825a149a1b7b28508e64bea303e9b8befdf95092a69423fae84ed934",
     "one_gpu_lm/verified/failure_preflight.py": "72aa9cd661176a8d7d71cf4de9d555d9c0766ebd7f25067aa83b15c7b3689730",
     "one_gpu_lm/verified/failure_audit.py": "c404a3d1e10caf1bfe1fa2b94c706e0885ff8d3b67f44dd976409346911d14d0",
-    "one_gpu_lm/verified/failure_watch.py": "d01ddab3096f054326d524863b0277dc14f95777818f6697689792a07f7166de",
+    "one_gpu_lm/verified/failure_watch.py": "8214030ee22eb6ead0a183736b2a0bc59151848fe14b741954c50e8e3759dfcc",
     "one_gpu_lm/verified/failure_continuation.py": "1de35eaf5399b74edbad4297715a1a62ee02989e2e818df8137db7e363c0708d",
     "one_gpu_lm/verified/failure_report.py": "014a7f388ac472c265dca43bb865ef32ac28968420d2c85143f98a0c75a221cb",
     "one_gpu_lm/verified/failure_replay.py": "6fc8aa215ff52bf8bc6863d3cb52f17b4e26cbba5d32d3a82237fde36cf6cf4d",
@@ -572,6 +572,7 @@
     "runs/failure028-001/audit.json": "8b73519b2f140ad4b2fbcbb6a76af32d1c29cc8fe15bf10c6ad792c8ae2dabc2",
     "experiments/029-repair-decisions/preparation/context-screen.json": "6bda269853627f5440f9174a932c73dbdd0c124483ffadf1423d9a25846d8634"
   },
+  "worker_log": "private/decisions029-worker.log",
   "continuation_policy": "visible_decisions_v1",
   "comparison": {
     "control": "fresh rerun of 028 correction policy",
