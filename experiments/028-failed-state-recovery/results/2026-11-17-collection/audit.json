@@ -1,0 +1,1789 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "1069b67194dd139c168175372a88e0a34acbfda0913a24002ccd308c42223e0e",
+  "passed": true,
+  "checks": {
+    "all_runs_audited": true,
+    "all_generation_cost_known": true,
+    "global_caps": true,
+    "physical_cost_matches": true,
+    "no_unregistered_task_directory": true,
+    "frozen_inputs_unchanged": true,
+    "same_model_interpreter": true,
+    "supervisor_complete": true,
+    "controller_protocol_identity": true
+  },
+  "rows": [
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "control",
+      "run_id": "isodate-duration-fraction-components--control",
+      "family": "gweis/isodate",
+      "state_id": "state-024",
+      "previously_qualified_027": true,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "isodate-duration-fraction-components",
+        "repository": "gweis/isodate",
+        "family": "gweis/isodate",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1238,
+        "attempted_calls": 9,
+        "actor_seconds": 110.75701585202478,
+        "grader_seconds": 0.2838091100566089,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "9d1930d017ec6ed6e531a20cb1ffdea3e1289da5ff311b558c6779c4fc7db591",
+        "first_edit_call": 1,
+        "input_tokens": 41724,
+        "invalid_actions": 0,
+        "run_id": "isodate-duration-fraction-components--control",
+        "arm": "control",
+        "state_id": "state-024",
+        "correction_behavior": {
+          "edit_calls": [
+            1,
+            4
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1,
+          4
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 4,
+        "encoded_actions": [
+          {
+            "call": 4,
+            "kind": "edit",
+            "tokens": 4911,
+            "supervised_tokens": 385
+          },
+          {
+            "call": 5,
+            "kind": "other",
+            "tokens": 5072,
+            "supervised_tokens": 138
+          },
+          {
+            "call": 6,
+            "kind": "other",
+            "tokens": 5250,
+            "supervised_tokens": 63
+          },
+          {
+            "call": 8,
+            "kind": "verify",
+            "tokens": 5408,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 9,
+            "kind": "submit",
+            "tokens": 5465,
+            "supervised_tokens": 34
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 7,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 407,
+        "historical_input_tokens": 6773
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "arm": "correction",
+      "run_id": "isodate-duration-fraction-components--correction",
+      "family": "gweis/isodate",
+      "state_id": "state-024",
+      "previously_qualified_027": true,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "isodate-duration-fraction-components",
+        "repository": "gweis/isodate",
+        "family": "gweis/isodate",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1465,
+        "attempted_calls": 12,
+        "actor_seconds": 132.11511872208212,
+        "grader_seconds": 0.28213006199803203,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": false,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "a0594fa1d3f2a6991a1d89bbf4a4a4d255203d1ffec13eaef2dd5f80c02a16b6",
+        "first_edit_call": 1,
+        "input_tokens": 62082,
+        "invalid_actions": 0,
+        "run_id": "isodate-duration-fraction-components--correction",
+        "arm": "correction",
+        "state_id": "state-024",
+        "correction_behavior": {
+          "edit_calls": [
+            1,
+            7
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1,
+          7
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 407,
+        "historical_input_tokens": 6773
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "correction",
+      "run_id": "underscore-functions-sort--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-011",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-functions-sort",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1025,
+        "attempted_calls": 12,
+        "actor_seconds": 90.50837451498955,
+        "grader_seconds": 0.2552811308996752,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "5238ded2800b39eca0c89e696a0af26382ba29901a15fa5e42817f802489fe1c",
+        "first_edit_call": null,
+        "input_tokens": 36475,
+        "invalid_actions": 0,
+        "run_id": "underscore-functions-sort--correction",
+        "arm": "correction",
+        "state_id": "state-011",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 3,
+        "historical_generated_tokens": 220,
+        "historical_input_tokens": 2427
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "arm": "control",
+      "run_id": "underscore-functions-sort--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-011",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-functions-sort",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 958,
+        "attempted_calls": 12,
+        "actor_seconds": 85.07787689997349,
+        "grader_seconds": 0.24160819698590785,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "9efddabfa49655c847e0c189aeb2cd3daef802eea3ebf5566dc6523b3cf0812c",
+        "first_edit_call": null,
+        "input_tokens": 34150,
+        "invalid_actions": 0,
+        "run_id": "underscore-functions-sort--control",
+        "arm": "control",
+        "state_id": "state-011",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 3,
+        "historical_generated_tokens": 220,
+        "historical_input_tokens": 2427
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "control",
+      "run_id": "inflection-humanize-id-anchor--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-002",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-humanize-id-anchor",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 3133,
+        "attempted_calls": 12,
+        "actor_seconds": 264.0195475280052,
+        "grader_seconds": 0.27720151597168297,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "cea528357641dbdc267415fe9f652ab3a16a81f120c15d41058002138e166a7d",
+        "first_edit_call": 1,
+        "input_tokens": 64440,
+        "invalid_actions": 1,
+        "run_id": "inflection-humanize-id-anchor--control",
+        "arm": "control",
+        "state_id": "state-002",
+        "correction_behavior": {
+          "edit_calls": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 703,
+        "historical_input_tokens": 28005
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-humanize-id-anchor",
+      "arm": "correction",
+      "run_id": "inflection-humanize-id-anchor--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-002",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "inflection-humanize-id-anchor",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1093,
+        "attempted_calls": 12,
+        "actor_seconds": 100.39386189391371,
+        "grader_seconds": 0.2287376510212198,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "47a4ed31128e1238b71b8a73649f7a9a5810a223e939448479f676d6d003f44a",
+        "first_edit_call": 2,
+        "input_tokens": 60495,
+        "invalid_actions": 0,
+        "run_id": "inflection-humanize-id-anchor--correction",
+        "arm": "correction",
+        "state_id": "state-002",
+        "correction_behavior": {
+          "edit_calls": [
+            2,
+            5,
+            8
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2,
+          5,
+          8
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 8,
+        "encoded_actions": [
+          {
+            "call": 8,
+            "kind": "edit",
+            "tokens": 5590,
+            "supervised_tokens": 198
+          },
+          {
+            "call": 9,
+            "kind": "verify",
+            "tokens": 5669,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 10,
+            "kind": "other",
+            "tokens": 5837,
+            "supervised_tokens": 145
+          },
+          {
+            "call": 11,
+            "kind": "verify",
+            "tokens": 5935,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 12,
+            "kind": "submit",
+            "tokens": 5992,
+            "supervised_tokens": 34
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 703,
+        "historical_input_tokens": 28005
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "correction",
+      "run_id": "humanize-naturaltime-tense--correction",
+      "family": "python-humanize/humanize",
+      "state_id": "state-004",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "humanize-naturaltime-tense",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1198,
+        "attempted_calls": 12,
+        "actor_seconds": 109.85637784004211,
+        "grader_seconds": 0.132169640972279,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "e2a6d59e10d8cec402e90ca73d4cfac7fc60cfba668ec5e161f1f0d95b102651",
+        "first_edit_call": null,
+        "input_tokens": 64884,
+        "invalid_actions": 0,
+        "run_id": "humanize-naturaltime-tense--correction",
+        "arm": "correction",
+        "state_id": "state-004",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 729,
+        "historical_input_tokens": 19689
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "arm": "control",
+      "run_id": "humanize-naturaltime-tense--control",
+      "family": "python-humanize/humanize",
+      "state_id": "state-004",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "humanize-naturaltime-tense",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1122,
+        "attempted_calls": 12,
+        "actor_seconds": 102.48285897995811,
+        "grader_seconds": 0.13194326299708337,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "d6dd5a21a1e309d7de0a2bc2305bb4abed1f3c57015bdbc73b1a60d04a955ff5",
+        "first_edit_call": null,
+        "input_tokens": 60866,
+        "invalid_actions": 0,
+        "run_id": "humanize-naturaltime-tense--control",
+        "arm": "control",
+        "state_id": "state-004",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 729,
+        "historical_input_tokens": 19689
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "control",
+      "run_id": "underscore-ismatch-missing--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-005",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-ismatch-missing",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 705,
+        "attempted_calls": 8,
+        "actor_seconds": 60.62538884696551,
+        "grader_seconds": 0.3447662650141865,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "698e7ce44961a059dd04a6be57f1fcb160b9caa927bd77be898e7069bde882a9",
+        "first_edit_call": 1,
+        "input_tokens": 19201,
+        "invalid_actions": 0,
+        "run_id": "underscore-ismatch-missing--control",
+        "arm": "control",
+        "state_id": "state-005",
+        "correction_behavior": {
+          "edit_calls": [
+            1,
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1,
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 237,
+        "historical_input_tokens": 3776
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "arm": "correction",
+      "run_id": "underscore-ismatch-missing--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-005",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-ismatch-missing",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 512,
+        "attempted_calls": 7,
+        "actor_seconds": 44.52641982503701,
+        "grader_seconds": 0.3423303129384294,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "b368a0c40fc3444b2535eb352536044ff12964279547a4d0b939dd9b49b87274",
+        "first_edit_call": 1,
+        "input_tokens": 17702,
+        "invalid_actions": 0,
+        "run_id": "underscore-ismatch-missing--correction",
+        "arm": "correction",
+        "state_id": "state-005",
+        "correction_behavior": {
+          "edit_calls": [
+            1,
+            5
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1,
+          5
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 4,
+        "historical_generated_tokens": 237,
+        "historical_input_tokens": 3776
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "correction",
+      "run_id": "inflection-pluralize-uncountable-case--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-006",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-pluralize-uncountable-case",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 2096,
+        "attempted_calls": 12,
+        "actor_seconds": 183.73960090300534,
+        "grader_seconds": 0.17832710198126733,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "720991ee8e91a170c4ef6dfb73a002b779b3a34dc6bf9f702c977da8b1a46e85",
+        "first_edit_call": null,
+        "input_tokens": 73096,
+        "invalid_actions": 0,
+        "run_id": "inflection-pluralize-uncountable-case--correction",
+        "arm": "correction",
+        "state_id": "state-006",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 844,
+        "historical_input_tokens": 39327
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "arm": "control",
+      "run_id": "inflection-pluralize-uncountable-case--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-006",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-pluralize-uncountable-case",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1900,
+        "attempted_calls": 12,
+        "actor_seconds": 167.55453640408814,
+        "grader_seconds": 0.17843233200255781,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "d81ce58241cf5b94b0c8071898dba1a00c229dbb627210aa398465f7c4b39f23",
+        "first_edit_call": null,
+        "input_tokens": 71993,
+        "invalid_actions": 0,
+        "run_id": "inflection-pluralize-uncountable-case--control",
+        "arm": "control",
+        "state_id": "state-006",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 11,
+        "historical_generated_tokens": 844,
+        "historical_input_tokens": 39327
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "control",
+      "run_id": "humanize-delta-negative--control",
+      "family": "python-humanize/humanize",
+      "state_id": "state-013",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "humanize-delta-negative",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 597,
+        "attempted_calls": 7,
+        "actor_seconds": 57.83496816002298,
+        "grader_seconds": 0.28223082900512964,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "497699ab34d69b6da402ed6737c3d12d4a2cb1098652cb7fb1d5b39a72837215",
+        "first_edit_call": 2,
+        "input_tokens": 46937,
+        "invalid_actions": 0,
+        "run_id": "humanize-delta-negative--control",
+        "arm": "control",
+        "state_id": "state-013",
+        "correction_behavior": {
+          "edit_calls": [
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 2,
+        "encoded_actions": [
+          {
+            "call": 2,
+            "kind": "edit",
+            "tokens": 6582,
+            "supervised_tokens": 224
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 6759,
+            "supervised_tokens": 154
+          },
+          {
+            "call": 4,
+            "kind": "other",
+            "tokens": 6862,
+            "supervised_tokens": 36
+          },
+          {
+            "call": 6,
+            "kind": "verify",
+            "tokens": 7020,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 7,
+            "kind": "submit",
+            "tokens": 7077,
+            "supervised_tokens": 34
+          }
+        ],
+        "excluded_calls": [
+          {
+            "call": 5,
+            "reason": "malformed_or_unexecuted"
+          }
+        ],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 10,
+        "historical_generated_tokens": 586,
+        "historical_input_tokens": 33165
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "humanize-delta-negative",
+      "arm": "correction",
+      "run_id": "humanize-delta-negative--correction",
+      "family": "python-humanize/humanize",
+      "state_id": "state-013",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "humanize-delta-negative",
+        "repository": "python-humanize/humanize",
+        "family": "python-humanize/humanize",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 513,
+        "attempted_calls": 5,
+        "actor_seconds": 48.21754843404051,
+        "grader_seconds": 0.2787861980032176,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "b0fa42aa3e32d1e0c97afcb9bbdeb924585f3b025009c9cadc31f33bfd5157ac",
+        "first_edit_call": 2,
+        "input_tokens": 33369,
+        "invalid_actions": 0,
+        "run_id": "humanize-delta-negative--correction",
+        "arm": "correction",
+        "state_id": "state-013",
+        "correction_behavior": {
+          "edit_calls": [
+            2
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          2
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 2,
+        "encoded_actions": [
+          {
+            "call": 2,
+            "kind": "edit",
+            "tokens": 6700,
+            "supervised_tokens": 226
+          },
+          {
+            "call": 3,
+            "kind": "verify",
+            "tokens": 6781,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 4,
+            "kind": "other",
+            "tokens": 6940,
+            "supervised_tokens": 136
+          },
+          {
+            "call": 5,
+            "kind": "submit",
+            "tokens": 7028,
+            "supervised_tokens": 34
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 10,
+        "historical_generated_tokens": 586,
+        "historical_input_tokens": 33165
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "correction",
+      "run_id": "underscore-flatten-depth--correction",
+      "family": "jashkenas/underscore",
+      "state_id": "state-012",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": true,
+      "result": {
+        "id": "underscore-flatten-depth",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 434,
+        "attempted_calls": 4,
+        "actor_seconds": 37.55786594399251,
+        "grader_seconds": 0.3441170690348372,
+        "submitted": true,
+        "terminal_reason": "submitted",
+        "actor_budget_compliant": true,
+        "success_within_budget": true,
+        "agent_verified_final_source": true,
+        "eligible_verified_trajectory": true,
+        "grader_passed": true,
+        "grade_reason": "ok",
+        "trajectory_sha256": "6bc81c5ee2e1d4ac5867194959a3bee97ebf21cffd028504d8bfdd37ae54dc63",
+        "first_edit_call": 1,
+        "input_tokens": 12954,
+        "invalid_actions": 0,
+        "run_id": "underscore-flatten-depth--correction",
+        "arm": "correction",
+        "state_id": "state-012",
+        "correction_behavior": {
+          "edit_calls": [
+            1
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": true
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          1
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": true,
+        "qualified": true,
+        "target_start_call": 1,
+        "encoded_actions": [
+          {
+            "call": 1,
+            "kind": "edit",
+            "tokens": 3148,
+            "supervised_tokens": 160
+          },
+          {
+            "call": 2,
+            "kind": "verify",
+            "tokens": 3229,
+            "supervised_tokens": 32
+          },
+          {
+            "call": 3,
+            "kind": "other",
+            "tokens": 3431,
+            "supervised_tokens": 179
+          },
+          {
+            "call": 4,
+            "kind": "submit",
+            "tokens": 3584,
+            "supervised_tokens": 67
+          }
+        ],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 483,
+        "historical_input_tokens": 11436
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "underscore-flatten-depth",
+      "arm": "control",
+      "run_id": "underscore-flatten-depth--control",
+      "family": "jashkenas/underscore",
+      "state_id": "state-012",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "underscore-flatten-depth",
+        "repository": "jashkenas/underscore",
+        "family": "jashkenas/underscore",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1968,
+        "attempted_calls": 12,
+        "actor_seconds": 171.7962566789938,
+        "grader_seconds": 0.24471300607547164,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "f4bc8036a11040a1328a22c116af239c6c2dea4e2cc1876d26ee810a62c0c5ed",
+        "first_edit_call": null,
+        "input_tokens": 60961,
+        "invalid_actions": 0,
+        "run_id": "underscore-flatten-depth--control",
+        "arm": "control",
+        "state_id": "state-012",
+        "correction_behavior": {
+          "edit_calls": [],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": false,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": false,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 8,
+        "historical_generated_tokens": 483,
+        "historical_input_tokens": 11436
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "control",
+      "run_id": "inflection-camelize-lower-first--control",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-007",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-camelize-lower-first",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "control",
+        "complete": true,
+        "generated_tokens": 1211,
+        "attempted_calls": 12,
+        "actor_seconds": 109.0497272190405,
+        "grader_seconds": 0.17801338795106858,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "107857176c5b9a677a2a6c7852a9b402e8e813bec9212be9f54d839f63e79c39",
+        "first_edit_call": 4,
+        "input_tokens": 51831,
+        "invalid_actions": 0,
+        "run_id": "inflection-camelize-lower-first--control",
+        "arm": "control",
+        "state_id": "state-007",
+        "correction_behavior": {
+          "edit_calls": [
+            4
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          4
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 5,
+        "historical_generated_tokens": 418,
+        "historical_input_tokens": 9948
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "arm": "correction",
+      "run_id": "inflection-camelize-lower-first--correction",
+      "family": "jpvanhal/inflection",
+      "state_id": "state-007",
+      "previously_qualified_027": false,
+      "complete": true,
+      "audit_passed": true,
+      "qualified": false,
+      "result": {
+        "id": "inflection-camelize-lower-first",
+        "repository": "jpvanhal/inflection",
+        "family": "jpvanhal/inflection",
+        "split": "training",
+        "branch": "correction",
+        "complete": true,
+        "generated_tokens": 1705,
+        "attempted_calls": 12,
+        "actor_seconds": 149.9050252409652,
+        "grader_seconds": 0.1784539349609986,
+        "submitted": false,
+        "terminal_reason": "call_limit",
+        "actor_budget_compliant": true,
+        "success_within_budget": false,
+        "agent_verified_final_source": false,
+        "eligible_verified_trajectory": false,
+        "grader_passed": false,
+        "grade_reason": "runtime_error",
+        "trajectory_sha256": "d77eaaf4b8eb1e07cc1f5dc28bcd97586625796c8f15d26c01f92a1d36c54b61",
+        "first_edit_call": 4,
+        "input_tokens": 57191,
+        "invalid_actions": 0,
+        "run_id": "inflection-camelize-lower-first--correction",
+        "arm": "correction",
+        "state_id": "state-007",
+        "correction_behavior": {
+          "edit_calls": [
+            4,
+            8,
+            11
+          ],
+          "protected_files_intact_throughout": true,
+          "changed_from_failed_and_original_source": true,
+          "qualified_behavior": false
+        }
+      },
+      "encoding": {
+        "edit_calls": [
+          4,
+          8,
+          11
+        ],
+        "protected_files_intact_throughout": true,
+        "changed_from_failed_and_original_source": true,
+        "qualified_behavior": false,
+        "qualified": false,
+        "encoded_actions": [],
+        "excluded_calls": [],
+        "encoding_errors": []
+      },
+      "historical_prefix_cost": {
+        "historical_calls": 5,
+        "historical_generated_tokens": 418,
+        "historical_input_tokens": 9948
+      },
+      "checks": {
+        "request_replay": true,
+        "recorded_grader": true,
+        "identity": true,
+        "original_source": true,
+        "original_inventory": true,
+        "final_source": true,
+        "score": true,
+        "verified_submission": true,
+        "costs": true,
+        "recorded_result": true,
+        "behavior_rule": true,
+        "restored_state": true,
+        "initial_workspace_contents": true,
+        "admitted_source": true,
+        "historical_cost": true
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "run_id": "isodate-duration-fraction-components--control",
+      "attempted_calls": 9,
+      "generated_tokens": 1238,
+      "input_tokens": 41724,
+      "actor_seconds": 110.75701585202478,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "9d1930d017ec6ed6e531a20cb1ffdea3e1289da5ff311b558c6779c4fc7db591"
+    },
+    {
+      "run_id": "isodate-duration-fraction-components--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 1465,
+      "input_tokens": 62082,
+      "actor_seconds": 132.11511872208212,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "a0594fa1d3f2a6991a1d89bbf4a4a4d255203d1ffec13eaef2dd5f80c02a16b6"
+    },
+    {
+      "run_id": "underscore-functions-sort--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 1025,
+      "input_tokens": 36475,
+      "actor_seconds": 90.50837451498955,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "5238ded2800b39eca0c89e696a0af26382ba29901a15fa5e42817f802489fe1c"
+    },
+    {
+      "run_id": "underscore-functions-sort--control",
+      "attempted_calls": 12,
+      "generated_tokens": 958,
+      "input_tokens": 34150,
+      "actor_seconds": 85.07787689997349,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "9efddabfa49655c847e0c189aeb2cd3daef802eea3ebf5566dc6523b3cf0812c"
+    },
+    {
+      "run_id": "inflection-humanize-id-anchor--control",
+      "attempted_calls": 12,
+      "generated_tokens": 3133,
+      "input_tokens": 64440,
+      "actor_seconds": 264.0195475280052,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "cea528357641dbdc267415fe9f652ab3a16a81f120c15d41058002138e166a7d"
+    },
+    {
+      "run_id": "inflection-humanize-id-anchor--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 1093,
+      "input_tokens": 60495,
+      "actor_seconds": 100.39386189391371,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "47a4ed31128e1238b71b8a73649f7a9a5810a223e939448479f676d6d003f44a"
+    },
+    {
+      "run_id": "humanize-naturaltime-tense--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 1198,
+      "input_tokens": 64884,
+      "actor_seconds": 109.85637784004211,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "e2a6d59e10d8cec402e90ca73d4cfac7fc60cfba668ec5e161f1f0d95b102651"
+    },
+    {
+      "run_id": "humanize-naturaltime-tense--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1122,
+      "input_tokens": 60866,
+      "actor_seconds": 102.48285897995811,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "d6dd5a21a1e309d7de0a2bc2305bb4abed1f3c57015bdbc73b1a60d04a955ff5"
+    },
+    {
+      "run_id": "underscore-ismatch-missing--control",
+      "attempted_calls": 8,
+      "generated_tokens": 705,
+      "input_tokens": 19201,
+      "actor_seconds": 60.62538884696551,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "698e7ce44961a059dd04a6be57f1fcb160b9caa927bd77be898e7069bde882a9"
+    },
+    {
+      "run_id": "underscore-ismatch-missing--correction",
+      "attempted_calls": 7,
+      "generated_tokens": 512,
+      "input_tokens": 17702,
+      "actor_seconds": 44.52641982503701,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "b368a0c40fc3444b2535eb352536044ff12964279547a4d0b939dd9b49b87274"
+    },
+    {
+      "run_id": "inflection-pluralize-uncountable-case--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 2096,
+      "input_tokens": 73096,
+      "actor_seconds": 183.73960090300534,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "720991ee8e91a170c4ef6dfb73a002b779b3a34dc6bf9f702c977da8b1a46e85"
+    },
+    {
+      "run_id": "inflection-pluralize-uncountable-case--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1900,
+      "input_tokens": 71993,
+      "actor_seconds": 167.55453640408814,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "d81ce58241cf5b94b0c8071898dba1a00c229dbb627210aa398465f7c4b39f23"
+    },
+    {
+      "run_id": "humanize-delta-negative--control",
+      "attempted_calls": 7,
+      "generated_tokens": 597,
+      "input_tokens": 46937,
+      "actor_seconds": 57.83496816002298,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "497699ab34d69b6da402ed6737c3d12d4a2cb1098652cb7fb1d5b39a72837215"
+    },
+    {
+      "run_id": "humanize-delta-negative--correction",
+      "attempted_calls": 5,
+      "generated_tokens": 513,
+      "input_tokens": 33369,
+      "actor_seconds": 48.21754843404051,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "b0fa42aa3e32d1e0c97afcb9bbdeb924585f3b025009c9cadc31f33bfd5157ac"
+    },
+    {
+      "run_id": "underscore-flatten-depth--correction",
+      "attempted_calls": 4,
+      "generated_tokens": 434,
+      "input_tokens": 12954,
+      "actor_seconds": 37.55786594399251,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "6bc81c5ee2e1d4ac5867194959a3bee97ebf21cffd028504d8bfdd37ae54dc63"
+    },
+    {
+      "run_id": "underscore-flatten-depth--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1968,
+      "input_tokens": 60961,
+      "actor_seconds": 171.7962566789938,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "f4bc8036a11040a1328a22c116af239c6c2dea4e2cc1876d26ee810a62c0c5ed"
+    },
+    {
+      "run_id": "inflection-camelize-lower-first--control",
+      "attempted_calls": 12,
+      "generated_tokens": 1211,
+      "input_tokens": 51831,
+      "actor_seconds": 109.0497272190405,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "107857176c5b9a677a2a6c7852a9b402e8e813bec9212be9f54d839f63e79c39"
+    },
+    {
+      "run_id": "inflection-camelize-lower-first--correction",
+      "attempted_calls": 12,
+      "generated_tokens": 1705,
+      "input_tokens": 57191,
+      "actor_seconds": 149.9050252409652,
+      "unknown_generation_cost": false,
+      "trajectory_sha256": "d77eaaf4b8eb1e07cc1f5dc28bcd97586625796c8f15d26c01f92a1d36c54b61"
+    }
+  ],
+  "private_export_summary": {
+    "qualified_unique_tasks": 3,
+    "action_records": 13,
+    "supervised_tokens": 1307,
+    "data_sha256": "a2cc1de90425ad675221ad01b146d82d09edb95a02412010d6bb5e45470f4549",
+    "failed_edits_used_as_positive_targets": false,
+    "historical_actions_used_as_positive_targets": false,
+    "failed_edits_retained_as_context": true,
+    "raw_data_public": false
+  },
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}
