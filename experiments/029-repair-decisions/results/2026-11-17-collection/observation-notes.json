@@ -6,5 +6,13 @@
     "normalization": "CRLF to LF only; CSV rows and values unchanged",
     "original_remote_sha256": "6905f84b5858e9481baa65814a2fd0b19e7cb9d859860560aef4408802ef2b3d",
     "public_sha256": "8d9d18c928b850e904a3a90dde4810483dc84a27b1484a35c3bd2a643961a3be"
+  },
+  "post_collection_ci_followup": {
+    "path": ".github/workflows/training-contracts.yml",
+    "reason": "Include 029 result files in push and pull_request CI path filters. Original executable preregistration CI passed before collection; result-only commit did not trigger this workflow.",
+    "frozen_sha256": "b63bcf17aa100f9934e4f4bad6e475eac0e40dafc97a7139713d1b29115152bd",
+    "publication_sha256": "f4d80dcd7b8eb8a28650f3aa2782bee5c67ce4359b9c2f05e07d168d578dec03",
+    "execution_completed_before_change": true,
+    "experiment_protocol_changed": false
   }
 }
