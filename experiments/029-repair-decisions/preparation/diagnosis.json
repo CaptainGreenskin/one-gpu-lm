@@ -1,0 +1,125 @@
+{
+  "experiment": "029",
+  "source_experiment": "028",
+  "source_audit_sha256": "8b73519b2f140ad4b2fbcbb6a76af32d1c29cc8fe15bf10c6ad792c8ae2dabc2",
+  "training_only": true,
+  "selected_for_diagnosis": "all six unqualified correction-arm paths in 028",
+  "rows": [
+    {
+      "task_id": "isodate-duration-fraction-components",
+      "trajectory_sha256": "a0594fa1d3f2a6991a1d89bbf4a4a4d255203d1ffec13eaef2dd5f80c02a16b6",
+      "calls": 12,
+      "source_change_calls": [
+        1,
+        7
+      ],
+      "same_command_same_source_repeat_calls": [],
+      "guard_rejection_calls": [
+        2
+      ],
+      "submitted": false,
+      "independent_grade_passed": true,
+      "manual_visible_trace_review": "Correct final source and visible verification, then unavailable test-framework/discovery attempts; no explicit submission within budget."
+    },
+    {
+      "task_id": "underscore-functions-sort",
+      "trajectory_sha256": "5238ded2800b39eca0c89e696a0af26382ba29901a15fa5e42817f802489fe1c",
+      "calls": 12,
+      "source_change_calls": [],
+      "same_command_same_source_repeat_calls": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "guard_rejection_calls": [],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "manual_visible_trace_review": "First write preserves identical bytes; later repeated probes preserve the failing behavior."
+    },
+    {
+      "task_id": "humanize-naturaltime-tense",
+      "trajectory_sha256": "e2a6d59e10d8cec402e90ca73d4cfac7fc60cfba668ec5e161f1f0d95b102651",
+      "calls": 12,
+      "source_change_calls": [],
+      "same_command_same_source_repeat_calls": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "guard_rejection_calls": [],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "manual_visible_trace_review": "Repeated observations and source inspection without any source change."
+    },
+    {
+      "task_id": "underscore-ismatch-missing",
+      "trajectory_sha256": "b368a0c40fc3444b2535eb352536044ff12964279547a4d0b939dd9b49b87274",
+      "calls": 7,
+      "source_change_calls": [
+        1,
+        5
+      ],
+      "same_command_same_source_repeat_calls": [],
+      "guard_rejection_calls": [
+        2,
+        3
+      ],
+      "submitted": true,
+      "independent_grade_passed": false,
+      "manual_visible_trace_review": "Visible regression passes after edits and submission, but independent training grader fails; no hidden-case content read for this diagnosis."
+    },
+    {
+      "task_id": "inflection-pluralize-uncountable-case",
+      "trajectory_sha256": "720991ee8e91a170c4ef6dfb73a002b779b3a34dc6bf9f702c977da8b1a46e85",
+      "calls": 12,
+      "source_change_calls": [],
+      "same_command_same_source_repeat_calls": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "guard_rejection_calls": [],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "manual_visible_trace_review": "Repeated replacement commands write identical before/after text; repeated probes and unchanged failure."
+    },
+    {
+      "task_id": "inflection-camelize-lower-first",
+      "trajectory_sha256": "d77eaaf4b8eb1e07cc1f5dc28bcd97586625796c8f15d26c01f92a1d36c54b61",
+      "calls": 12,
+      "source_change_calls": [
+        4,
+        8,
+        11
+      ],
+      "same_command_same_source_repeat_calls": [
+        11,
+        12
+      ],
+      "guard_rejection_calls": [
+        5,
+        12
+      ],
+      "submitted": false,
+      "independent_grade_passed": false,
+      "manual_visible_trace_review": "Source changes add/remove a placeholder comment without repairing the observed behavior; two regression-order guard rejections."
+    }
+  ],
+  "raw_commands_public": false,
+  "hidden_case_contents_read": false,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}

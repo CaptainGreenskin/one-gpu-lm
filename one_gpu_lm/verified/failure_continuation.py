@@ -6,6 +6,7 @@ import time
 
 from one_gpu_lm.common.receipts import sha256, write_json
 from .correction_policy import GUIDANCE
+from .decision_policy import guard_arm, extra_initial
 from .recovery_state import canonical, copy_tree, inventory
 from .tasks import digest, relative
 
@@ -19,7 +20,7 @@ def initial_messages(prefix, protocol, arm):
           f"{budget['max_total_generated_tokens']} generated tokens in total and {budget['max_task_seconds']} seconds. "
           "Earlier calls do not consume this new continuation budget. The same restored source was separately checked "
           "with the declared visible regression; its recorded current feedback follows:\n"+prefix['standalone_feedback'])
-    messages[-1]['content']+=note+(GUIDANCE if arm=='correction' else '')
+    messages[-1]['content']+=note+(GUIDANCE if guard_arm(protocol,arm)=='correction' else '')+extra_initial(protocol,arm)
     return messages
 
 

@@ -10,7 +10,9 @@ from .tasks import relative, digest
 
 
 def screen_identity(p):
-    return digest(json.dumps({k:p[k] for k in ['selected_states','evaluation_budget','agent_policy','evaluation_profile_path','evaluation_profile_sha256']},sort_keys=True).encode())
+    values={k:p[k] for k in ['selected_states','evaluation_budget','agent_policy','evaluation_profile_path','evaluation_profile_sha256']}
+    if 'continuation_policy' in p:values['continuation_policy']=p['continuation_policy']
+    return digest(json.dumps(values,sort_keys=True).encode())
 
 
 def run(root,p):

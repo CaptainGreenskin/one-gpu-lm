@@ -1,0 +1,279 @@
+{
+  "configuration_sha256": "e742e0d57bfb51619582200c82d9806e0e0ee0741955669401cb7cc25b1f3637",
+  "passed": true,
+  "rows": [
+    {
+      "state_id": "state-024",
+      "arm": "control",
+      "input_tokens": 3412,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "8fbb19d2dd062b922e08594db076c2f4f2e343abf86e120a69e053aaedebe938",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 3412,
+        "packed_input_tokens": 3412,
+        "dropped_rounds": 0,
+        "original_messages": 10,
+        "packed_messages": 10
+      }
+    },
+    {
+      "state_id": "state-024",
+      "arm": "correction",
+      "input_tokens": 3636,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "605ded9095a06c814f7f2b95a3a3e5cd79eae3a8403e6bef957c7cc5435b7c81",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 3636,
+        "packed_input_tokens": 3636,
+        "dropped_rounds": 0,
+        "original_messages": 10,
+        "packed_messages": 10
+      }
+    },
+    {
+      "state_id": "state-011",
+      "arm": "control",
+      "input_tokens": 1949,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "adbde3dad8e8811009f3236bbb2c8c3a33354774b951b412d5d4448ef54e6b85",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 1949,
+        "packed_input_tokens": 1949,
+        "dropped_rounds": 0,
+        "original_messages": 8,
+        "packed_messages": 8
+      }
+    },
+    {
+      "state_id": "state-011",
+      "arm": "correction",
+      "input_tokens": 2173,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "738682016dfb75c847f8e494a211e4aaec9bfa2bf733af38bedf1492f79c3e2d",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 2173,
+        "packed_input_tokens": 2173,
+        "dropped_rounds": 0,
+        "original_messages": 8,
+        "packed_messages": 8
+      }
+    },
+    {
+      "state_id": "state-002",
+      "arm": "control",
+      "input_tokens": 4063,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "153f9c6c845c37f0190c8f66c6e3f62e04c7563c908766a78ea2078b48c67d41",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 4063,
+        "packed_input_tokens": 4063,
+        "dropped_rounds": 0,
+        "original_messages": 24,
+        "packed_messages": 24
+      }
+    },
+    {
+      "state_id": "state-002",
+      "arm": "correction",
+      "input_tokens": 4287,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "9031804d391d1deb7062da4145cbed6d7a80102bc32184bbd7a7f3d64e01d94b",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 4287,
+        "packed_input_tokens": 4287,
+        "dropped_rounds": 0,
+        "original_messages": 24,
+        "packed_messages": 24
+      }
+    },
+    {
+      "state_id": "state-004",
+      "arm": "control",
+      "input_tokens": 4054,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "1b0330bca2c3ce87c73e929bf702132658c924dce568f7ba111e0529a2f3087b",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 4054,
+        "packed_input_tokens": 4054,
+        "dropped_rounds": 0,
+        "original_messages": 18,
+        "packed_messages": 18
+      }
+    },
+    {
+      "state_id": "state-004",
+      "arm": "correction",
+      "input_tokens": 4278,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "342e6e1e62d543ea916e912df9e9ef49ce35bcef61ffc1fc65350ee6bc4fb9ef",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 4278,
+        "packed_input_tokens": 4278,
+        "dropped_rounds": 0,
+        "original_messages": 18,
+        "packed_messages": 18
+      }
+    },
+    {
+      "state_id": "state-005",
+      "arm": "control",
+      "input_tokens": 1820,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "49ec55f4bcd077ba146fd68ed89332b97e6281809f147f2a7d0c9f0a3b844cb2",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 1820,
+        "packed_input_tokens": 1820,
+        "dropped_rounds": 0,
+        "original_messages": 10,
+        "packed_messages": 10
+      }
+    },
+    {
+      "state_id": "state-005",
+      "arm": "correction",
+      "input_tokens": 2044,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "c5e92026f22ad368f6391a7cb85ca26ce68acfb9292dca005a2d85d2d9fd9926",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 2044,
+        "packed_input_tokens": 2044,
+        "dropped_rounds": 0,
+        "original_messages": 10,
+        "packed_messages": 10
+      }
+    },
+    {
+      "state_id": "state-006",
+      "arm": "control",
+      "input_tokens": 5875,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "62228dbd1fc41333dcaf8a9fe38d7621417b25ac68ce3a9108c62eed5c31a161",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 5875,
+        "packed_input_tokens": 5875,
+        "dropped_rounds": 0,
+        "original_messages": 24,
+        "packed_messages": 24
+      }
+    },
+    {
+      "state_id": "state-006",
+      "arm": "correction",
+      "input_tokens": 6099,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "120a4b419c6340e9448b91750af97904121164a4d06889d2f300e95dc7530913",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 6099,
+        "packed_input_tokens": 6099,
+        "dropped_rounds": 0,
+        "original_messages": 24,
+        "packed_messages": 24
+      }
+    },
+    {
+      "state_id": "state-013",
+      "arm": "control",
+      "input_tokens": 6348,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "801dd4299fa6e4bf08590a8dcc53738f5ff4becce871cc6f9ea30105bcd216d2",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 6348,
+        "packed_input_tokens": 6348,
+        "dropped_rounds": 0,
+        "original_messages": 22,
+        "packed_messages": 22
+      }
+    },
+    {
+      "state_id": "state-013",
+      "arm": "correction",
+      "input_tokens": 6572,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "e8b93ca5a7f9288a0e56c0f0be5757f205fc90297945e47d65bf2eee2f9bd603",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 6572,
+        "packed_input_tokens": 6572,
+        "dropped_rounds": 0,
+        "original_messages": 22,
+        "packed_messages": 22
+      }
+    },
+    {
+      "state_id": "state-012",
+      "arm": "control",
+      "input_tokens": 2988,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "ed8b0b29968439bb397f74a953d7641b852c3fc66996c476a0b5fa666c01d4aa",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 2988,
+        "packed_input_tokens": 2988,
+        "dropped_rounds": 0,
+        "original_messages": 18,
+        "packed_messages": 18
+      }
+    },
+    {
+      "state_id": "state-012",
+      "arm": "correction",
+      "input_tokens": 3212,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "9ca2e7dff9b02159da529baf128fb50f1f13e07b2f4fd83516e74e0e5cd8fa53",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 3212,
+        "packed_input_tokens": 3212,
+        "dropped_rounds": 0,
+        "original_messages": 18,
+        "packed_messages": 18
+      }
+    },
+    {
+      "state_id": "state-007",
+      "arm": "control",
+      "input_tokens": 3554,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "a34deeb87ed2a76dbb2262db342737f499299b28ef3f0ad6b86af4de8db47683",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 3554,
+        "packed_input_tokens": 3554,
+        "dropped_rounds": 0,
+        "original_messages": 12,
+        "packed_messages": 12
+      }
+    },
+    {
+      "state_id": "state-007",
+      "arm": "correction",
+      "input_tokens": 3778,
+      "failure_context_intact": true,
+      "input_tokens_sha256": "c75031ad6c0d680958f57ba853fc672b671f11fd75fbad29d809233f4ce587ee",
+      "context": {
+        "policy": "bounded_history_v1",
+        "raw_input_tokens": 3778,
+        "packed_input_tokens": 3778,
+        "dropped_rounds": 0,
+        "original_messages": 12,
+        "packed_messages": 12
+      }
+    }
+  ],
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}

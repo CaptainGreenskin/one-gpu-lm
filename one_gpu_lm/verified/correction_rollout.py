@@ -11,6 +11,7 @@ from one_gpu_lm.common.agent_policy import format_feedback
 from one_gpu_lm.common.receipts import write_json
 from one_gpu_lm.serving.client import request
 from .correction_policy import initial_messages, CorrectionGuard, feedback_notice
+from .decision_policy import guard_arm, notice as continuation_notice
 from .evaluation_rollout import atomic, normalization
 from .recovery_state import remaining_budget, canonical
 from .recovery_rollout import identity_ok, finish
@@ -54,7 +55,7 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
     state['backend_identities'][role] = health
     norm = normalization(root)
     workspace = out/'workspace'; key = str(workspace.resolve())
-    guard = CorrectionGuard(runner, {key: {k: task[k] for k in ['editable_files', 'regression_command']}}, arm)
+    guard = CorrectionGuard(runner, {key: {k: task[k] for k in ['editable_files', 'regression_command']}}, guard_arm(protocol, arm))
     original_inventory = json.loads((out/'before.json').read_text())
     if state.get('verified_source') is not None:
         if state['verified_source'] != guard.source_state(workspace, task):
@@ -110,7 +111,7 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
             step['source_evidence_after'], step['protected_after'] = save_source(out, workspace, task, original_inventory)
         except ValueError:
             state['steps'].append(step); state['terminal_reason'] = 'unsafe_workspace'; break
-        notice = feedback_notice(arm, task, state['steps'], step)
+        notice = continuation_notice(protocol, arm, task, state['steps'], step)
         step['policy_notice'] = notice
         state['messages'].append({'role': 'user', 'content': f"Exit code: {output['returncode']}\n{delivered}{notice}",
                                   'extra': {'tool': step['observation']}})

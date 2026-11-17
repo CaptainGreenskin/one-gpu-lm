@@ -12,6 +12,7 @@ from one_gpu_lm.common.receipts import sha256, write_json
 from .rollout import normalization
 from .submission import SUBMIT
 from .correction_policy import feedback_notice, correction_rejection
+from .decision_policy import guard_arm, notice as continuation_notice
 from .failure_continuation import initial_messages
 from .correction_replay import source_evidence
 from .tasks import digest, files, prepare, grade, relative, validate_source
@@ -78,7 +79,7 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, pre
                     if guard:
                         before=step['source_before']
                         if verified!=before:verified=None
-                        correction_reject = arm=='correction' and pending and command!=task['regression_command']
+                        correction_reject = guard_arm(protocol,arm)=='correction' and pending and command!=task['regression_command']
                         reject=correction_reject or (command==SUBMIT and (not all(v is not None for v in before.values()) or verified!=before))
                         flags['guard_execution']=raw.get('executed') is (not reject)
                         if correction_reject:
@@ -101,7 +102,7 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, pre
                             if after!=step['source_before'] or (command==task['regression_command'] and raw['returncode']!=0):verified=None
                             if command==task['regression_command'] and raw['returncode']==0 and after==step['source_before'] and all(v is not None for v in after.values()):verified=after
                         last_source=after
-                        notice=feedback_notice(arm,task,trace['steps'][:index-1],step)
+                        notice=continuation_notice(protocol,arm,task,trace['steps'][:index-1],step)
                         flags['policy_notice'] = notice==step.get('policy_notice')
                         messages.append({'role':'user','content':f"Exit code: {raw['returncode']}\n{delivered}{notice}",'extra':{'tool':step['observation']}})
                         feedback.append(digest(messages[-1]['content'].encode()))
