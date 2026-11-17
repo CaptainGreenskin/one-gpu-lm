@@ -1,0 +1,113 @@
+{
+  "complete": true,
+  "integrity_checks": {
+    "exact_selected_records": true,
+    "mixed_lineage_and_counts": true,
+    "complete_epoch_order": true,
+    "unique_records": true,
+    "record_and_update_numbers": true,
+    "all_registered_optimizer_updates": true,
+    "all_losses_and_norms_finite": true,
+    "token_accounting": true,
+    "no_truncation_or_exclusion": true,
+    "training_only": true,
+    "within_original_pipeline_cap": true,
+    "candidate_and_supervisor_eligible": true,
+    "all_frozen_inputs_unchanged": true,
+    "profile_identity": true,
+    "environment_identity": true,
+    "data_identity": true,
+    "trainable_parameter_count": true,
+    "saved_adapter_identity": true,
+    "parameter_checks_and_training_only_reload": true,
+    "supervisor_protocol_identity": true
+  },
+  "mixture": {
+    "full_episodes": 127,
+    "corrective_fragments": 9,
+    "original_action_records": 971,
+    "corrective_action_records": 35,
+    "unique_tasks": 134,
+    "overlapping_task_ids": [
+      "underscore-flatten-depth",
+      "underscore-functions-sort"
+    ],
+    "selected_records": 1006,
+    "supervised_tokens": 63991,
+    "target_truncation": false,
+    "oversampling": false,
+    "thought_labels": false
+  },
+  "phase": {
+    "pipeline_seconds": 2457.9097969532013,
+    "started_utc": "2026-11-17T08:50:55.155728+00:00",
+    "finished_utc": "2026-11-17T09:31:53.065525+00:00",
+    "reserved_single_gpu_hours": 0.6827527213758893,
+    "complete": true,
+    "backend_loads": null,
+    "completed_backend_load_seconds": null,
+    "incomplete_backend_loads": null,
+    "cost_definition": "single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time"
+  },
+  "hardware": {
+    "samples": 487,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.809548854827881,
+    "sample_span_seconds": 2454.548045873642,
+    "boundary_uncovered_seconds": 3.361751079559326,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 74.37577002053388,
+      "peak": 80.0
+    },
+    "power_w": {
+      "mean": 514.4006776180697,
+      "peak": 561.18
+    },
+    "utilization_percent": {
+      "mean": 91.50718685831622,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 80521.09445585216,
+      "peak": 96645.0
+    }
+  },
+  "training": {
+    "started_epoch": 1794905455.1557283,
+    "finished_epoch": 1794907913.0655253,
+    "complete": true,
+    "optimizer_steps": 126,
+    "action_records_consumed": 1006,
+    "full_episodes": 127,
+    "selected_records": 1006,
+    "input_tokens": 2352717,
+    "supervised_tokens": 63991,
+    "training_seconds": 2337.450468607014,
+    "peak_allocated_bytes": 85091232768,
+    "peak_reserved_bytes": 100365500416,
+    "saved_reload_greedy_ids_equal": true,
+    "trainable_parameters": 58363904
+  },
+  "original025": {
+    "training_seconds": 2199.0951675010147,
+    "optimizer_steps": 122,
+    "action_records_consumed": 971,
+    "input_tokens": 2189437,
+    "supervised_tokens": 60299
+  },
+  "extra_training_seconds": 138.3553011059994,
+  "extra_optimizer_updates": 4,
+  "record_groups": {
+    "whole_episode": 971,
+    "corrective_fragment": 35
+  },
+  "record_mean_loss_by_group": {
+    "corrective_fragment": 0.1441104600411823,
+    "whole_episode": 0.03464981584319066
+  },
+  "last_accumulation_records": 6,
+  "loss_is_not_validation_quality": true,
+  "final_test_opened": false,
+  "weights_public": false
+}
