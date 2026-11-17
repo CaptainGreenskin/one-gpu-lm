@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "actual_tokenizer": true,
+  "mixture": {
+    "full_episodes": 127,
+    "corrective_fragments": 9,
+    "original_action_records": 971,
+    "corrective_action_records": 35,
+    "unique_tasks": 134,
+    "overlapping_task_ids": [
+      "underscore-flatten-depth",
+      "underscore-functions-sort"
+    ],
+    "selected_records": 1006,
+    "supervised_tokens": 63991,
+    "target_truncation": false,
+    "oversampling": false,
+    "thought_labels": false
+  },
+  "maximum_record_tokens": 7018,
+  "expected_optimizer_steps": 126,
+  "private_export_hashes": {
+    "private/mixed031-export/data.jsonl": "b76f0996ae76fe76e439cad9fb4725d3a0f13ae6a5171348c46ce1a177f5dd08",
+    "private/mixed031-export/manifest.json": "77fd7a3efa45db2db6b99519cb2a12b52988386bbc9e95c01cfbf007fd12353e"
+  },
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "development_scores": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

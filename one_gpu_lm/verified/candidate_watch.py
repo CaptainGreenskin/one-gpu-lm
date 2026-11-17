@@ -24,7 +24,7 @@ def run(root, protocol_path):
     runtime=json.loads((root/'private/parent-runtime.json').read_text())
     child=subprocess.Popen([runtime['model_python'],'-u','-m','one_gpu_lm.verified.candidate',
               '--root',str(root),'--protocol',str(protocol_path)],cwd=root,
-              stdout=(root/'private/candidate-worker.log').open('wb'),stderr=subprocess.STDOUT,start_new_session=True)
+              stdout=(root/relative(protocol.get('worker_log','private/candidate-worker.log'))).open('wb'),stderr=subprocess.STDOUT,start_new_session=True)
     state['worker_pid']=child.pid;atomic(receipt,state);timed_out=False
     try:
         child.wait(timeout=spec['candidate']['maximum_training_pipeline_seconds'])

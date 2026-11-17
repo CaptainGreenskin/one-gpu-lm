@@ -93,11 +93,21 @@ def run(root, protocol_path):
         write_json(out/'model-verification.json',verification)
         runtime=Runtime(model_path,profile,out)
         rows=[json.loads(line) for line in data_path.read_text().splitlines() if line.strip()]
-        selected=select(rows,manifest,audit,sources,profile,spec,runtime.tokenizer)
+        mixed_selection=None
+        if protocol.get('correction_mix'):
+            from .mixed_inputs import select as select_mixed
+            selected,mixed_selection=select_mixed(root,protocol,profile,runtime.tokenizer,rows,manifest)
+        else:
+            selected=select(rows,manifest,audit,sources,profile,spec,runtime.tokenizer)
         selection={'full_episodes':manifest['full_episodes'],'unique_tasks':manifest['unique_tasks'],
                    'selected_records':len(selected),'excluded_records':0,'target_truncation':False,
                    'records':[{'id':r['id'],'episode_id':r['episode_id'],'tokens':len(r['ids']),
                                'supervised_tokens':r['supervised_tokens']} for r in selected]}
+        if mixed_selection is not None:
+            selection['mixed_selection']=mixed_selection
+            selection['unique_tasks']=mixed_selection['unique_tasks']
+            result['mixed_selection']=mixed_selection
+            for saved,row in zip(selection['records'],selected):saved['record_group_kind']=row['record_group_kind']
         write_json(out/'selection.json',selection)
         torch.manual_seed(spec['candidate']['seed'])
         model=get_peft_model(runtime.model,LoraConfig(task_type=TaskType.CAUSAL_LM,**profile['lora']))
@@ -130,6 +140,7 @@ def run(root, protocol_path):
                               'update':result['optimizer_steps']+1,'tokens':len(row['ids']),
                               'supervised_tokens':row['supervised_tokens'],'loss':loss.item(),
                               'seconds':time.monotonic()-micro_tick})
+                if mixed_selection is not None:curve[-1]['record_group_kind']=row['record_group_kind']
                 result['action_records_consumed']=len(curve)
                 atomic(out/'curve.json',curve);save('training')
                 del loss,output,ids,labels
