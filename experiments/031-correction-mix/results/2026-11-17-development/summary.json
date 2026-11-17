@@ -1,0 +1,1892 @@
+{
+  "registered_runs": 540,
+  "complete_accounting": true,
+  "paired_tasks": 60,
+  "pairs": [
+    {
+      "id": "markup-ampersand",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-append-escape",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 0.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-entity-decoding",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-html-protocol",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-join-escape",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 0.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-prepend-escape",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-replacement-escape",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": -1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-silent-none",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-soft-string-type",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "markup-tag-whitespace",
+      "repository": "pallets/markupsafe",
+      "family": "pallets/markupsafe",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-base-version-epoch",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-hyphenated-sdist",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-missing-micro",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 0.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-name-dot",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-name-repeated-separators",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-normalized-full-name",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-prerelease-union",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-preserve-release-zeros",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-public-version-local",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "packaging-wheel-build-number",
+      "repository": "pypa/packaging",
+      "family": "pypa/packaging",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-basename-match",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-debug-regex-errors",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-end-anchor",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-ignore-pattern",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-match-callback-metadata",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-negated-pattern",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-nocase-flag",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-pattern-array",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-result-callback",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "picomatch-return-object",
+      "repository": "micromatch/picomatch",
+      "family": "micromatch/picomatch",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-cache-key",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-config-key",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-data-key",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-log-opinion",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-multipath-selection",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-relative-site-paths",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-site-config-key",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": -1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-site-data-order",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-state-key",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "platformdirs-version-component",
+      "repository": "tox-dev/platformdirs",
+      "family": "tox-dev/platformdirs",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-build-main-precedence",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-coerce-default-minor",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-coerce-rtl-reset",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-descending-sort",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-major-difference",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-max-satisfying",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-numeric-before-text",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 0.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-numeric-identifiers",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-release-prerelease-null",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "semver-wildcard-valid-range",
+      "repository": "npm/node-semver",
+      "family": "npm/node-semver",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-auth-first-separator",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": -1.0,
+      "gain_vs_original025": -1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-authority-userinfo",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-empty-fragment",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 0.0,
+        "original025": 0.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-empty-query",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-parent-path-segment",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 0.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-path-prefix",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-percent-case",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 0.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 1.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-port-upper-bound",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-scheme-case",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 1.0,
+        "mixed031": 1.0
+      },
+      "gain_vs_base": 0.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    },
+    {
+      "id": "url-zero-port",
+      "repository": "urllib3/urllib3",
+      "family": "urllib3/urllib3",
+      "scores": {
+        "base": 1.0,
+        "original025": 0.0,
+        "mixed031": 0.0
+      },
+      "gain_vs_base": -1.0,
+      "gain_vs_original025": 0.0,
+      "repeat_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      },
+      "action_disagreement": {
+        "base": false,
+        "original025": false,
+        "mixed031": false
+      }
+    }
+  ],
+  "cost": {
+    "attempted_calls": 3864,
+    "generated_tokens": 257631,
+    "input_tokens": 8047482,
+    "actor_seconds": 33335.531580540235
+  },
+  "missing_runs": 0,
+  "unknown_generation_cost_runs": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "development_parameter_gate_passed": false,
+  "scores": {
+    "base": 0.7666666666666667,
+    "original025": 0.75,
+    "mixed031": 0.8166666666666667
+  },
+  "primary_gain": 0.04999999999999993,
+  "secondary_gain": 0.06666666666666665,
+  "primary_interval_95": [
+    -0.06666666666666667,
+    0.16666666666666666
+  ],
+  "repositories": {
+    "pallets/markupsafe": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.7,
+        "original025": 0.8,
+        "mixed031": 0.8
+      },
+      "gain_vs_base": 0.1
+    },
+    "pypa/packaging": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.9,
+        "original025": 0.8,
+        "mixed031": 0.9
+      },
+      "gain_vs_base": 0.0
+    },
+    "micromatch/picomatch": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.7,
+        "original025": 0.7,
+        "mixed031": 0.7
+      },
+      "gain_vs_base": 0.0
+    },
+    "tox-dev/platformdirs": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.8,
+        "original025": 0.7,
+        "mixed031": 0.9
+      },
+      "gain_vs_base": 0.1
+    },
+    "npm/node-semver": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.7,
+        "original025": 0.8,
+        "mixed031": 0.8
+      },
+      "gain_vs_base": 0.1
+    },
+    "urllib3/urllib3": {
+      "tasks": 10,
+      "scores": {
+        "base": 0.8,
+        "original025": 0.7,
+        "mixed031": 0.8
+      },
+      "gain_vs_base": 0.0
+    }
+  },
+  "checks": {
+    "complete_audit": true,
+    "minimum_gain": false,
+    "positive_interval_lower_bound": false,
+    "no_excessive_repository_decline": true,
+    "no_net_decline_vs_original025": true
+  },
+  "gain_task_ids": [
+    "markup-append-escape",
+    "markup-join-escape",
+    "platformdirs-multipath-selection",
+    "platformdirs-site-data-order",
+    "semver-numeric-before-text",
+    "url-empty-fragment",
+    "url-parent-path-segment"
+  ],
+  "regression_task_ids": [
+    "markup-replacement-escape",
+    "platformdirs-site-config-key",
+    "url-auth-first-separator",
+    "url-zero-port"
+  ],
+  "scope": "previously_observed_development_only",
+  "conclusion": "not_achieved",
+  "phase": {
+    "pipeline_seconds": 35231.31628584862,
+    "started_utc": "2026-11-17T09:36:46.174654+00:00",
+    "finished_utc": "2026-11-17T19:23:57.490940+00:00",
+    "reserved_single_gpu_hours": 9.786476746069061,
+    "complete": true,
+    "backend_loads": 52,
+    "completed_backend_load_seconds": 1576.6057312488556,
+    "incomplete_backend_loads": 0,
+    "cost_definition": "single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time"
+  },
+  "hardware": {
+    "samples": 6987,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.423494100570679,
+    "sample_span_seconds": 35229.13516116142,
+    "boundary_uncovered_seconds": 2.181124687194824,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 47.30885931014742,
+      "peak": 65.0
+    },
+    "power_w": {
+      "mean": 227.10221983683996,
+      "peak": 556.58
+    },
+    "utilization_percent": {
+      "mean": 38.51066265922427,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 57319.61242307142,
+      "peak": 62933.0
+    }
+  },
+  "variants": {
+    "base": {
+      "recorded_runs": 180,
+      "verified_runs": 180,
+      "successes": 138,
+      "explicit_submissions": 138,
+      "categories": {
+        "success": 138,
+        "wrong_edit": 9,
+        "no_final_source_edit": 33
+      },
+      "invalid_actions": 57,
+      "cost": {
+        "attempted_calls": 1266,
+        "input_tokens": 2611323,
+        "generated_tokens": 104565,
+        "actor_seconds": 8989.017018815619,
+        "seconds": 9037.055333585595
+      },
+      "repeat_outcome_disagreement_tasks": 0,
+      "repeat_action_disagreement_tasks": 0,
+      "unknown_generation_cost_runs": 0
+    },
+    "original025": {
+      "recorded_runs": 180,
+      "verified_runs": 180,
+      "successes": 135,
+      "explicit_submissions": 135,
+      "categories": {
+        "success": 135,
+        "no_final_source_edit": 45
+      },
+      "invalid_actions": 0,
+      "cost": {
+        "attempted_calls": 1335,
+        "input_tokens": 2866536,
+        "generated_tokens": 76998,
+        "actor_seconds": 12301.348040420562,
+        "seconds": 12345.23237961554
+      },
+      "repeat_outcome_disagreement_tasks": 0,
+      "repeat_action_disagreement_tasks": 0,
+      "unknown_generation_cost_runs": 0
+    },
+    "mixed031": {
+      "recorded_runs": 180,
+      "verified_runs": 180,
+      "successes": 147,
+      "explicit_submissions": 141,
+      "categories": {
+        "success": 147,
+        "no_final_source_edit": 33
+      },
+      "invalid_actions": 3,
+      "cost": {
+        "attempted_calls": 1263,
+        "input_tokens": 2569623,
+        "generated_tokens": 76068,
+        "actor_seconds": 12045.166521304054,
+        "seconds": 12094.027474358561
+      },
+      "repeat_outcome_disagreement_tasks": 0,
+      "repeat_action_disagreement_tasks": 0,
+      "unknown_generation_cost_runs": 0
+    }
+  },
+  "accumulation_curve": [
+    {
+      "paired_tasks": 1,
+      "base": 0.0,
+      "original025": 1.0,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 2,
+      "base": 0.5,
+      "original025": 1.0,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 3,
+      "base": 0.3333333333333333,
+      "original025": 0.6666666666666666,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 4,
+      "base": 0.5,
+      "original025": 0.75,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 5,
+      "base": 0.6,
+      "original025": 0.8,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 6,
+      "base": 0.6666666666666666,
+      "original025": 0.8333333333333334,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 7,
+      "base": 0.7142857142857143,
+      "original025": 0.8571428571428571,
+      "mixed031": 1.0
+    },
+    {
+      "paired_tasks": 8,
+      "base": 0.625,
+      "original025": 0.75,
+      "mixed031": 0.875
+    },
+    {
+      "paired_tasks": 9,
+      "base": 0.6666666666666666,
+      "original025": 0.7777777777777778,
+      "mixed031": 0.8888888888888888
+    },
+    {
+      "paired_tasks": 10,
+      "base": 0.7,
+      "original025": 0.8,
+      "mixed031": 0.9
+    },
+    {
+      "paired_tasks": 11,
+      "base": 0.6363636363636364,
+      "original025": 0.8181818181818182,
+      "mixed031": 0.9090909090909091
+    },
+    {
+      "paired_tasks": 12,
+      "base": 0.5833333333333334,
+      "original025": 0.75,
+      "mixed031": 0.9166666666666666
+    },
+    {
+      "paired_tasks": 13,
+      "base": 0.6153846153846154,
+      "original025": 0.7692307692307693,
+      "mixed031": 0.9230769230769231
+    },
+    {
+      "paired_tasks": 14,
+      "base": 0.6428571428571429,
+      "original025": 0.7857142857142857,
+      "mixed031": 0.9285714285714286
+    },
+    {
+      "paired_tasks": 15,
+      "base": 0.6666666666666666,
+      "original025": 0.8,
+      "mixed031": 0.9333333333333333
+    },
+    {
+      "paired_tasks": 16,
+      "base": 0.6875,
+      "original025": 0.8125,
+      "mixed031": 0.9375
+    },
+    {
+      "paired_tasks": 17,
+      "base": 0.7058823529411765,
+      "original025": 0.8235294117647058,
+      "mixed031": 0.9411764705882353
+    },
+    {
+      "paired_tasks": 18,
+      "base": 0.7222222222222222,
+      "original025": 0.8333333333333334,
+      "mixed031": 0.9444444444444444
+    },
+    {
+      "paired_tasks": 19,
+      "base": 0.7368421052631579,
+      "original025": 0.8421052631578947,
+      "mixed031": 0.9473684210526315
+    },
+    {
+      "paired_tasks": 20,
+      "base": 0.75,
+      "original025": 0.85,
+      "mixed031": 0.95
+    },
+    {
+      "paired_tasks": 21,
+      "base": 0.7619047619047619,
+      "original025": 0.8571428571428571,
+      "mixed031": 0.9523809523809523
+    },
+    {
+      "paired_tasks": 22,
+      "base": 0.7272727272727273,
+      "original025": 0.8181818181818182,
+      "mixed031": 0.9090909090909091
+    },
+    {
+      "paired_tasks": 23,
+      "base": 0.7391304347826086,
+      "original025": 0.8260869565217391,
+      "mixed031": 0.9130434782608695
+    },
+    {
+      "paired_tasks": 24,
+      "base": 0.75,
+      "original025": 0.7916666666666666,
+      "mixed031": 0.875
+    },
+    {
+      "paired_tasks": 25,
+      "base": 0.76,
+      "original025": 0.76,
+      "mixed031": 0.88
+    },
+    {
+      "paired_tasks": 26,
+      "base": 0.7692307692307693,
+      "original025": 0.7692307692307693,
+      "mixed031": 0.8846153846153846
+    },
+    {
+      "paired_tasks": 27,
+      "base": 0.7777777777777778,
+      "original025": 0.7777777777777778,
+      "mixed031": 0.8888888888888888
+    },
+    {
+      "paired_tasks": 28,
+      "base": 0.7857142857142857,
+      "original025": 0.7857142857142857,
+      "mixed031": 0.8928571428571429
+    },
+    {
+      "paired_tasks": 29,
+      "base": 0.7931034482758621,
+      "original025": 0.7931034482758621,
+      "mixed031": 0.896551724137931
+    },
+    {
+      "paired_tasks": 30,
+      "base": 0.8,
+      "original025": 0.8,
+      "mixed031": 0.9
+    },
+    {
+      "paired_tasks": 31,
+      "base": 0.8064516129032258,
+      "original025": 0.8064516129032258,
+      "mixed031": 0.9032258064516129
+    },
+    {
+      "paired_tasks": 32,
+      "base": 0.8125,
+      "original025": 0.8125,
+      "mixed031": 0.90625
+    },
+    {
+      "paired_tasks": 33,
+      "base": 0.7878787878787878,
+      "original025": 0.7878787878787878,
+      "mixed031": 0.8787878787878788
+    },
+    {
+      "paired_tasks": 34,
+      "base": 0.7941176470588235,
+      "original025": 0.7941176470588235,
+      "mixed031": 0.8823529411764706
+    },
+    {
+      "paired_tasks": 35,
+      "base": 0.8,
+      "original025": 0.8,
+      "mixed031": 0.8857142857142857
+    },
+    {
+      "paired_tasks": 36,
+      "base": 0.8055555555555556,
+      "original025": 0.8055555555555556,
+      "mixed031": 0.8888888888888888
+    },
+    {
+      "paired_tasks": 37,
+      "base": 0.7837837837837838,
+      "original025": 0.8108108108108109,
+      "mixed031": 0.8918918918918919
+    },
+    {
+      "paired_tasks": 38,
+      "base": 0.7894736842105263,
+      "original025": 0.8157894736842105,
+      "mixed031": 0.8947368421052632
+    },
+    {
+      "paired_tasks": 39,
+      "base": 0.7692307692307693,
+      "original025": 0.7948717948717948,
+      "mixed031": 0.8717948717948718
+    },
+    {
+      "paired_tasks": 40,
+      "base": 0.775,
+      "original025": 0.8,
+      "mixed031": 0.85
+    },
+    {
+      "paired_tasks": 41,
+      "base": 0.7560975609756098,
+      "original025": 0.7804878048780488,
+      "mixed031": 0.8536585365853658
+    },
+    {
+      "paired_tasks": 42,
+      "base": 0.7619047619047619,
+      "original025": 0.7619047619047619,
+      "mixed031": 0.8333333333333334
+    },
+    {
+      "paired_tasks": 43,
+      "base": 0.7441860465116279,
+      "original025": 0.7441860465116279,
+      "mixed031": 0.813953488372093
+    },
+    {
+      "paired_tasks": 44,
+      "base": 0.7272727272727273,
+      "original025": 0.7272727272727273,
+      "mixed031": 0.7954545454545454
+    },
+    {
+      "paired_tasks": 45,
+      "base": 0.7333333333333333,
+      "original025": 0.7333333333333333,
+      "mixed031": 0.8
+    },
+    {
+      "paired_tasks": 46,
+      "base": 0.7391304347826086,
+      "original025": 0.7391304347826086,
+      "mixed031": 0.8043478260869565
+    },
+    {
+      "paired_tasks": 47,
+      "base": 0.7446808510638298,
+      "original025": 0.723404255319149,
+      "mixed031": 0.7872340425531915
+    },
+    {
+      "paired_tasks": 48,
+      "base": 0.75,
+      "original025": 0.7291666666666666,
+      "mixed031": 0.7916666666666666
+    },
+    {
+      "paired_tasks": 49,
+      "base": 0.7551020408163265,
+      "original025": 0.7346938775510204,
+      "mixed031": 0.7959183673469388
+    },
+    {
+      "paired_tasks": 50,
+      "base": 0.74,
+      "original025": 0.74,
+      "mixed031": 0.8
+    },
+    {
+      "paired_tasks": 51,
+      "base": 0.7450980392156863,
+      "original025": 0.7450980392156863,
+      "mixed031": 0.803921568627451
+    },
+    {
+      "paired_tasks": 52,
+      "base": 0.75,
+      "original025": 0.75,
+      "mixed031": 0.8076923076923077
+    },
+    {
+      "paired_tasks": 53,
+      "base": 0.7358490566037735,
+      "original025": 0.7358490566037735,
+      "mixed031": 0.7924528301886793
+    },
+    {
+      "paired_tasks": 54,
+      "base": 0.7407407407407407,
+      "original025": 0.7222222222222222,
+      "mixed031": 0.7962962962962963
+    },
+    {
+      "paired_tasks": 55,
+      "base": 0.7454545454545455,
+      "original025": 0.7272727272727273,
+      "mixed031": 0.8
+    },
+    {
+      "paired_tasks": 56,
+      "base": 0.75,
+      "original025": 0.7321428571428571,
+      "mixed031": 0.8035714285714286
+    },
+    {
+      "paired_tasks": 57,
+      "base": 0.7543859649122807,
+      "original025": 0.7368421052631579,
+      "mixed031": 0.8070175438596491
+    },
+    {
+      "paired_tasks": 58,
+      "base": 0.7586206896551724,
+      "original025": 0.7413793103448276,
+      "mixed031": 0.8103448275862069
+    },
+    {
+      "paired_tasks": 59,
+      "base": 0.7627118644067796,
+      "original025": 0.7457627118644068,
+      "mixed031": 0.8135593220338984
+    },
+    {
+      "paired_tasks": 60,
+      "base": 0.7666666666666667,
+      "original025": 0.75,
+      "mixed031": 0.8166666666666667
+    }
+  ]
+}
