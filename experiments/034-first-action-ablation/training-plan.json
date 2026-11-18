@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-19",
+  "parent_protocol": "experiments/032-multifile-completion/candidate-protocol.json",
+  "parent_protocol_sha256": "819172524e89cfa8be264413c0009638b6bc8a7909dc02be157c0a41c3949301",
+  "original_trainer": "one_gpu_lm/verified/historic_candidate.py",
+  "implementation_sha256": {
+    "one_gpu_lm/verified/historic_candidate.py": "7443cc4edb233378072ea36ea6fea92bddaf453ffc6ed35dc980835e58487f38",
+    "one_gpu_lm/verified/first_action_loss.py": "65f56a755a85c62854b7178f570927e01806bad1d9f40f620f108e13ed9f9cf8",
+    "experiments/034-first-action-ablation/trainer.patch": "9d81e64ab2ac19b6305998c50642bb06af06cf96f50244ca02b28168e004e9c3",
+    "experiments/034-first-action-ablation/train.py": "5af5b1e4e2781435a2c81da4253164d0c4930e66f871d793ac508b89093a4276"
+  },
+  "generated_trainer_sha256": "dfefb170841aa5f7c47043f0093a4bd9af592a5cab0db63715d3bad3756f2350",
+  "arm_order": [
+    "control",
+    "masked"
+  ],
+  "loss_weights": {
+    "control": 1,
+    "masked": 0
+  },
+  "optimizer_updates_per_arm": 155,
+  "target_receipt": {
+    "records": 1238,
+    "target_records": 40,
+    "target_supervised_tokens": 1280,
+    "target_ids_sha256": "96ffb46a13e8bfb901287312743605ed2d28a2e7feac09b4f299439895574849",
+    "ordered_records_sha256": "7b69fe25177412c5e9d692ac397c87b5fbdd2cbe599867c3f4453a0c16f537f3",
+    "supervised_tokens": 92897
+  },
+  "compute": "All records use forward and backward passes. The record-count denominator is unchanged. Only 40 named objectives are multiplied by zero.",
+  "training_seeds": [
+    101
+  ],
+  "model_score_before_freeze": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

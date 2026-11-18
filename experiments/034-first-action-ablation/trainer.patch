@@ -1,0 +1,55 @@
+--- historic_candidate.py
++++ _historic034_candidate.py
+@@ -1,4 +1,4 @@
+-"""032 candidate retaining 031 data plus audited reference-guided whole episodes."""
++"""034 paired retrain of 032 with a frozen first-action loss ablation."""
+ import argparse
+ from datetime import datetime, timezone
+ import gc
+@@ -12,7 +12,8 @@
+ from one_gpu_lm.common.telemetry import Telemetry
+ from one_gpu_lm.models.hf_runtime import Runtime
+ from one_gpu_lm.models.verify import verify_model
+-from .candidate_data import select, windows
++from .candidate_data import windows
++from .first_action_loss import initial_adapter_sha256, plan
+ from .rollout import atomic
+ from .tasks import relative
+ from .runtime_identity import verify as verify_environment
+@@ -90,6 +91,7 @@
+         rows=[json.loads(line) for line in data_path.read_text().splitlines() if line.strip()]
+         from .historic_inputs import select as select_historic
+         selected,mixed_selection=select_historic(root,protocol,profile,runtime.tokenizer,rows,manifest)
++        masked, result['loss_ablation']=plan(rows,selected,protocol['loss_ablation'])
+         selection={'full_episodes':manifest['full_episodes'],'unique_tasks':manifest['unique_tasks'],
+                    'selected_records':len(selected),'excluded_records':0,'target_truncation':False,
+                    'records':[{'id':r['id'],'episode_id':r['episode_id'],'tokens':len(r['ids']),
+@@ -113,6 +115,7 @@
+                    eps=recipe['adam_epsilon'],weight_decay=recipe['weight_decay'],foreach=False)
+         frozen_samples=[(p,p.detach().reshape(-1)[:8].clone()) for p in model.parameters() if not p.requires_grad][:3]
+         adapter_before={n:p.detach().clone() for n,p in model.named_parameters() if p.requires_grad}
++        result['initial_adapter_sha256']=initial_adapter_sha256(adapter_before.items(),torch)
+         model.train();torch.cuda.reset_peak_memory_stats();training_started=time.monotonic()
+         result.update(trainable_parameters=trainable,selected_records=len(selected),full_episodes=manifest['full_episodes'])
+         for window in windows(selected,recipe['gradient_accumulation_records']):
+@@ -126,15 +129,17 @@
+                 loss=output.loss
+                 if not torch.isfinite(loss):
+                     raise ValueError('Nonfinite training loss')
+-                (loss/len(window)).backward();torch.cuda.synchronize()
++                weight=0 if row['id'] in masked else 1
++                objective=loss if weight else loss*0.0
++                (objective/len(window)).backward();torch.cuda.synchronize()
+                 curve.append({'record':len(curve)+1,'id':row['id'],'episode_id':row['episode_id'],
+                               'update':result['optimizer_steps']+1,'tokens':len(row['ids']),
+-                              'supervised_tokens':row['supervised_tokens'],'loss':loss.item(),
++                              'supervised_tokens':row['supervised_tokens'],'loss':loss.item(),'loss_weight':weight,
+                               'seconds':time.monotonic()-micro_tick})
+                 if mixed_selection is not None:curve[-1]['record_group_kind']=row['record_group_kind']
+                 result['action_records_consumed']=len(curve)
+                 atomic(out/'curve.json',curve);save('training')
+-                del loss,output,ids,labels
++                del loss,objective,output,ids,labels
+             norm=torch.nn.utils.clip_grad_norm_(parameters,recipe['max_grad_norm'],error_if_nonfinite=True)
+             optimizer.step();torch.cuda.synchronize();result['optimizer_steps']+=1
+             updates.append({'step':result['optimizer_steps'],'records':len(window),'grad_norm':norm.item(),
