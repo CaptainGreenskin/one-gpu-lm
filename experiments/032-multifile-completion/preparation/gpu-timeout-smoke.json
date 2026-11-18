@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "source": "synthetic_fixture_no_registered_development_tasks",
+  "started_epoch": 1794981146.266637,
+  "tasks": [
+    {
+      "id": "synthetic-timeout",
+      "actor_limit_seconds": 0.25,
+      "actor_seconds": 6.143363084993325,
+      "generated_tokens": 30,
+      "input_tokens": 549,
+      "model_seconds": 6.081103737931699,
+      "accounting_wait_seconds": 5.890491273952648,
+      "trajectory_sha256": "93b4414e1c55574dbeeea002b52516233580351539fae45c948ef49bfac39643",
+      "checks": {
+        "same_gpu_backend": true,
+        "same_032_adapter": true,
+        "positive_gpu_generation": true,
+        "exact_durable_response": true,
+        "exact_one_call": true,
+        "no_duplicate_generation": true,
+        "timeout_recovered": true,
+        "no_late_tool": true,
+        "no_late_submission": true,
+        "original_deadline_exceeded": true
+      }
+    },
+    {
+      "id": "synthetic-next",
+      "actor_limit_seconds": 60,
+      "actor_seconds": 4.532943936996162,
+      "generated_tokens": 30,
+      "input_tokens": 549,
+      "model_seconds": 4.444344323943369,
+      "accounting_wait_seconds": 0,
+      "trajectory_sha256": "513709860772bd877ba3cb3fc449f15186fb6cdfe4698157bbabf2159377b48a",
+      "checks": {
+        "same_gpu_backend": true,
+        "same_032_adapter": true,
+        "positive_gpu_generation": true,
+        "exact_durable_response": true,
+        "exact_one_call": true,
+        "no_duplicate_generation": true,
+        "next_completed_without_timeout": true,
+        "next_tool_executed": true
+      }
+    }
+  ],
+  "final_test_opened": false,
+  "finished_epoch": 1794981201.275704,
+  "backend_stopped": true,
+  "backend_loads": 1,
+  "adapter_sha256": {
+    "adapter_model.safetensors": "5d1d6bb1a110aa00a3a6fefe424b804a7a277f69f7571f413d468860c9872c47"
+  }
+}
