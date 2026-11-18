@@ -9,6 +9,7 @@ from .evaluation_rollout import normalization
 from .historic_eval_design import effective_protocol,internal_arm,VARIANTS
 from .tasks import relative,digest
 from .historic_tasks import prepare
+from .historic_outcomes import executed_completion
 
 
 def run(root, protocol_path, out):
@@ -54,12 +55,17 @@ def run(root, protocol_path, out):
                 and trace['generated_tokens']<=budget['max_total_generated_tokens']
                 and all(s['generation']['generated_tokens']<=budget['max_generated_tokens_per_call'] and s['generation']['input_tokens']<=budget['max_input_tokens'] for s in trace['steps']))
             success=expected_grade['passed'] and compliant
+            final_source={n:sha256(directory/'workspace'/n) for n in task['editable_files']
+                          if (directory/'workspace'/n).is_file() and not (directory/'workspace'/n).is_symlink()}
+            completion=executed_completion(trace,task,final_source)
             flags={'run_identity':trace['id']==task['id'] and trace['arm']==arm and result['variant']==item['variant'] and result['repetition']==item['repetition'] and result['block']==item['block'] and trace['split']=='development'
                          and trace['training_export_allowed'] is False,
                    'protocol_identity':trace['protocol_sha256']==digest(json.dumps(effective,sort_keys=True).encode()),
                    'original_source':trace['original_source_sha256']=={n:before[task['id']][n] for n in task['editable_files']},
                    'recorded_grade':expected_grade==trace['grade']==result['grade'],
-                   'completion_score':(success and trace['submitted'])==trace['complete_success_within_budget']==result['complete_success_within_budget'],
+                   'executed_completion':all(trace[k]==result[k]==v for k,v in completion.items()),
+                   'final_source_identity':trace['final_source_sha256']==final_source==result['final_source_sha256'],
+                   'completion_score':(success and completion['submitted'])==trace['complete_success_within_budget']==result['complete_success_within_budget'],
                    'budget_score':compliant==trace['actor_budget_compliant'] and success==trace['success_within_budget']==result['success_within_budget'],
                    'result_in_controller':controller_map.get(item['run_id'])==result,
                    'trace_hash':result['trajectory_sha256']==sha256(path),
@@ -69,7 +75,8 @@ def run(root, protocol_path, out):
                    'no_runtime_intervention':result['rejected_unexecuted_requests']==0 and trace['runtime_variant']=='current'}
             row.update(checks=flags,audit_passed=all(flags.values()),success_within_budget=bool(success),complete_success_within_budget=bool(success and trace['submitted']),
                        grader_passed=expected_grade['passed'],grade_reason=expected_grade['reason'],
-                       actor_seconds=trace['actor_seconds'],submitted=trace['submitted'],terminal_reason=trace['terminal_reason'],
+                       actor_seconds=trace['actor_seconds'],submitted=completion['submitted'],
+                       agent_verified_final_source=completion['agent_verified_final_source'],terminal_reason=trace['terminal_reason'],
                        first_edit_call=result['first_edit_call'],invalid_actions=result['invalid_actions'],
                        rejected_unexecuted_requests=result['rejected_unexecuted_requests'])
         except Exception as error:

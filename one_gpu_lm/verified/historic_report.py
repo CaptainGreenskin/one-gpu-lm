@@ -10,7 +10,7 @@ from .historic_eval_design import VARIANTS,analyze,schedule
 
 
 
-ROW_FIELDS = (*ROW_FIELDS, 'complete_success_within_budget')
+ROW_FIELDS = (*ROW_FIELDS, 'complete_success_within_budget', 'agent_verified_final_source')
 
 def category(row):
     if checked_score(row) and row['success_within_budget'] and not row.get('submitted'):
@@ -73,7 +73,7 @@ def summarize(bundle):
         group=[r for r in rows if r['variant']==v];verified=[r for r in group if checked_score(r)]
         pairs=result['pairs']
         result['variants'][v]={'recorded_runs':len(group),'verified_runs':len(verified),'successes':sum(r['complete_success_within_budget'] for r in verified),'correct_patches_within_budget':sum(r['success_within_budget'] for r in verified),
-          'explicit_submissions':sum(bool(r.get('submitted')) for r in verified),'categories':dict(Counter(category(r) for r in group)),
+          'explicit_submissions':sum(bool(r.get('submitted')) for r in verified),'standalone_final_verifications':sum(bool(r.get('agent_verified_final_source')) for r in verified),'categories':dict(Counter(category(r) for r in group)),
           'invalid_actions':sum(r.get('invalid_actions',0) for r in group),
           'cost':{k:sum(r.get(k,0) for r in group) for k in ['attempted_calls','input_tokens','generated_tokens','actor_seconds','seconds']},
           'repeat_outcome_disagreement_tasks':sum(r['repeat_disagreement'][v] for r in pairs),

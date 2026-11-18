@@ -148,7 +148,7 @@
     "one_gpu_lm/verified/historic_admit.py": "c50c878405d4e6593bbd3fec2860ff0d63d6c46dc7929bdc52ab6ded59da4e30",
     "one_gpu_lm/verified/historic_candidate.py": "7443cc4edb233378072ea36ea6fea92bddaf453ffc6ed35dc980835e58487f38",
     "one_gpu_lm/verified/historic_candidate_watch.py": "922761493e6215daf74fbe82f58220ee5867abe0bfa43678f1964b0226976784",
-    "one_gpu_lm/verified/historic_eval_audit.py": "ab3c29000c52d728f07f3a01d81e4ffcd51da1da59295dbb2eeeaa92957c3b7f",
+    "one_gpu_lm/verified/historic_eval_audit.py": "03e2eabbeab496cb0dabab733de7a352a8d33285b5526272042dbd2aeea4f92a",
     "one_gpu_lm/verified/historic_eval_design.py": "46101f03255efba429d25e1e959a1bd6b8d9fe0a05f6ae091bd156feb17075ec",
     "one_gpu_lm/verified/historic_eval_watch.py": "648d87289088643978d8ca3b1fa627fb4c1113b8f7a4019875eaf0e67547128b",
     "one_gpu_lm/verified/historic_evaluation.py": "a72896e47210695953d811a6afb7e07f3e185b22069a57d5f7e95843b98834d4",
@@ -157,7 +157,7 @@
     "one_gpu_lm/verified/historic_plan.py": "833717cfa1e21b63604ee167afdf58e09f85988d903abeb89c4ba024fb5de767",
     "one_gpu_lm/verified/historic_policy.py": "695584ced0c4b92ee53eeadbe638ce64080f92c976c364909d2975e3be769261",
     "one_gpu_lm/verified/historic_replay.py": "5e646fc7550ed935b3474e7691cee053453d25c071e4f55ff9c31b617f268831",
-    "one_gpu_lm/verified/historic_report.py": "b6662e40a5b9951809cb24729bd49006809b91f87fbbd79fbdfa2e9f89a76f95",
+    "one_gpu_lm/verified/historic_report.py": "244d203ee2c3a27e29bd71bcc6a284d17a5f985e060e829d3d2ae448e778c1a1",
     "one_gpu_lm/verified/historic_rollout.py": "fb7fd753f83aa53e5d37a908673d4d3390a699302afcf026599a21262afd0eb8",
     "one_gpu_lm/verified/historic_selection.py": "9791d38c97aaf0dfd95c429ef0795eb4c6cb644f44fa99b727953a3c3f05db2c",
     "one_gpu_lm/verified/historic_stability.py": "9dd8a94c32c8a6846a690a1e7e6d6d41b85eca48be4cec1a08f51396456db1bf",
@@ -225,8 +225,15 @@
     "private/historic032-v4-runtime-jshttp--cookie.json": "8100bdbda576c6221ed781ff3f61df26575b84081fb49097e1b0851ef4b0c56c",
     "private/historic032-v4-runtime-python-poetry--tomlkit.json": "af1af6d88e3e922864f4e35766a9037421e29b9f15d4841790cbbfa59d5ad392",
     "private/historic032-v4-runtime-theskumar--python-dotenv.json": "1e0d1864f37a340fd36c7df521d73c46f6c61e038dba6162ea3ac5278c08cd8a",
-    "private/historic032-v4-runtime-tox-dev--filelock.json": "c910e8b4cab7bee2b1e6d63f170f7cbe559f404cb1dbc33b8e88fec5d8be80ca"
+    "private/historic032-v4-runtime-tox-dev--filelock.json": "c910e8b4cab7bee2b1e6d63f170f7cbe559f404cb1dbc33b8e88fec5d8be80ca",
+    "one_gpu_lm/verified/historic_outcomes.py": "88461f18e4262c0ac9e57ec8fff5614f1cfc8305b99ec6197913b8f3286a8585"
   },
   "registered_optimizer_steps": 155,
-  "registered_records": 1238
+  "registered_records": 1238,
+  "pre_execution_amendment": {
+    "supersedes_protocol_sha256": "9ca32abdb54dd66fb5620d78e1c30ec93ea69a29601ad1b8299de473d1bb49a9",
+    "reason": "Derive explicit submission and standalone final verification from executed tool actions and final source hashes, rather than trusting summary flags. Scientific rules, training data, recipe and budget unchanged.",
+    "optimizer_updates_before_amendment": 0,
+    "new_development_model_calls_before_amendment": 0
+  }
 }
