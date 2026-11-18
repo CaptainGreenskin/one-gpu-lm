@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "selected_records": 1238,
+  "optimizer_updates": 155,
+  "last_accumulation_records": 6,
+  "record_groups": {
+    "whole_episode": 971,
+    "reference_guided_whole_episode": 232,
+    "corrective_fragment": 35
+  },
+  "input_tokens": 2718795,
+  "supervised_tokens": 92897,
+  "protocol_sha256": "819172524e89cfa8be264413c0009638b6bc8a7909dc02be157c0a41c3949301",
+  "receipt_sha256": {
+    "result.json": "4ff65b1b06219cb3c6123aaa904d81417575f1cdca0485391ccf4ca0f7915fd6",
+    "curve.json": "dc4f07679398ddf56b55f250e5da7dabf15358df672bccbae2f276fceb55f909",
+    "updates.json": "2b1f7da840e6f47a70098aa7f8ae7a3eb12f6014341afaecad38f962afe79891",
+    "selection.json": "6e92c78e02627f476f868ae5c106004aba9aa8f2ae7325515a8490b7a165f903",
+    "adapter.json": "30ea9a8d775dd08515724d87f0de618010281fd68c0921395297e9f110ab80e9",
+    "environment.json": "e3fd204442115fb6e89b52f5fe31974dd4790c1bf699562431d7f8ea30bd9151"
+  },
+  "adapter_files_sha256": {
+    "adapter_model.safetensors": "5d1d6bb1a110aa00a3a6fefe424b804a7a277f69f7571f413d468860c9872c47",
+    "adapter_config.json": "36191837a2c4fa259a77b971a3b862324b946627765d11ccf14d5fa91a1d8f8b",
+    "README.md": "4ee2a480dd2a1b9112bdf43f7fd0b08428d0b45ed2c0fadac8c5b8929e7f0067"
+  },
+  "actual_tokenizer": true,
+  "audit_model_generations": 0,
+  "audit_optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false,
+  "checks": {
+    "exact_selected_records": true,
+    "mixed_lineage_and_counts": true,
+    "complete_epoch_order": true,
+    "unique_records": true,
+    "record_and_update_numbers": true,
+    "all_registered_optimizer_updates": true,
+    "all_losses_and_norms_finite": true,
+    "token_accounting": true,
+    "no_truncation_or_exclusion": true,
+    "training_only": true,
+    "within_original_pipeline_cap": true,
+    "candidate_and_supervisor_eligible": true,
+    "all_frozen_inputs_unchanged": true,
+    "profile_identity": true,
+    "environment_identity": true,
+    "data_identity": true,
+    "trainable_parameter_count": true,
+    "saved_adapter_identity": true,
+    "parameter_checks_and_training_only_reload": true,
+    "supervisor_protocol_identity": true
+  },
+  "mixture": {
+    "full_episodes": 167,
+    "corrective_fragments": 9,
+    "unique_tasks": 174,
+    "selected_records": 1238,
+    "supervised_tokens": 92897,
+    "target_truncation": false,
+    "oversampling": false,
+    "new_expert_episodes": 40,
+    "new_multifile_episodes": 6,
+    "new_expert_action_records": 232,
+    "all_031_records_retained_once": true,
+    "new_autonomous_teacher_rollouts": 0
+  }
+}

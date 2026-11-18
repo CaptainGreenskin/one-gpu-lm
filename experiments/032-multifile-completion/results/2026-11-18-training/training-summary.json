@@ -1,0 +1,113 @@
+{
+  "complete": true,
+  "integrity_checks": {
+    "exact_selected_records": true,
+    "mixed_lineage_and_counts": true,
+    "complete_epoch_order": true,
+    "unique_records": true,
+    "record_and_update_numbers": true,
+    "all_registered_optimizer_updates": true,
+    "all_losses_and_norms_finite": true,
+    "token_accounting": true,
+    "no_truncation_or_exclusion": true,
+    "training_only": true,
+    "within_original_pipeline_cap": true,
+    "candidate_and_supervisor_eligible": true,
+    "all_frozen_inputs_unchanged": true,
+    "profile_identity": true,
+    "environment_identity": true,
+    "data_identity": true,
+    "trainable_parameter_count": true,
+    "saved_adapter_identity": true,
+    "parameter_checks_and_training_only_reload": true,
+    "supervisor_protocol_identity": true
+  },
+  "mixture": {
+    "full_episodes": 167,
+    "corrective_fragments": 9,
+    "unique_tasks": 174,
+    "selected_records": 1238,
+    "supervised_tokens": 92897,
+    "target_truncation": false,
+    "oversampling": false,
+    "new_expert_episodes": 40,
+    "new_multifile_episodes": 6,
+    "new_expert_action_records": 232,
+    "all_031_records_retained_once": true,
+    "new_autonomous_teacher_rollouts": 0
+  },
+  "phase": {
+    "pipeline_seconds": 2834.6117351055145,
+    "started_utc": "2026-11-18T01:48:02.394215+00:00",
+    "finished_utc": "2026-11-18T02:35:17.005950+00:00",
+    "reserved_single_gpu_hours": 0.7873921486404207,
+    "complete": true,
+    "backend_loads": null,
+    "completed_backend_load_seconds": null,
+    "incomplete_backend_loads": null,
+    "cost_definition": "single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time"
+  },
+  "hardware": {
+    "samples": 561,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 7.056503057479858,
+    "sample_span_seconds": 2829.829997062683,
+    "boundary_uncovered_seconds": 4.781738042831421,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 74.56862745098039,
+      "peak": 80.0
+    },
+    "power_w": {
+      "mean": 514.415008912656,
+      "peak": 564.47
+    },
+    "utilization_percent": {
+      "mean": 90.44028520499108,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 80779.10695187165,
+      "peak": 94791.0
+    }
+  },
+  "training": {
+    "started_epoch": 1794966482.3942149,
+    "finished_epoch": 1794969317.00595,
+    "complete": true,
+    "optimizer_steps": 155,
+    "action_records_consumed": 1238,
+    "full_episodes": 167,
+    "selected_records": 1238,
+    "input_tokens": 2718795,
+    "supervised_tokens": 92897,
+    "training_seconds": 2706.6164744129637,
+    "peak_allocated_bytes": 85091232768,
+    "peak_reserved_bytes": 100369694720,
+    "saved_reload_greedy_ids_equal": true,
+    "trainable_parameters": 58363904
+  },
+  "mixed031": {
+    "training_seconds": 2337.450468607014,
+    "optimizer_steps": 126,
+    "action_records_consumed": 1006,
+    "input_tokens": 2352717,
+    "supervised_tokens": 63991
+  },
+  "extra_training_seconds": 369.1660058059497,
+  "extra_optimizer_updates": 29,
+  "record_groups": {
+    "whole_episode": 971,
+    "reference_guided_whole_episode": 232,
+    "corrective_fragment": 35
+  },
+  "record_mean_loss_by_group": {
+    "corrective_fragment": 0.14552329002596837,
+    "reference_guided_whole_episode": 0.24545663639608015,
+    "whole_episode": 0.03866668469542238
+  },
+  "last_accumulation_records": 6,
+  "loss_is_not_validation_quality": true,
+  "final_test_opened": false,
+  "weights_public": false
+}
