@@ -50,4 +50,3 @@ class JournalBackend(Backend):
         write_json(directory/'served-artifact.json',request(self.socket,{'operation':'health'}))
         self.check_exclusive()
         return self.socket
-
