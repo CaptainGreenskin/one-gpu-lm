@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "source_experiment": "031",
+  "rows": [
+    {
+      "run_id": "r0-markup-replacement-escape-base",
+      "task_id": "markup-replacement-escape",
+      "variant": "base",
+      "trajectory_sha256": "259cbf75fd908a98dd51a43db9d0a2e66d24121f78c8dd52c0deb31efcb6d8d4",
+      "calls": 8,
+      "first_edit_call": 5,
+      "edit_calls": [
+        5
+      ],
+      "remaining_calls_after_first_edit": 7,
+      "grader_passed": true,
+      "submitted": true,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1
+      ],
+      "category": "correct_and_submitted",
+      "input_tokens": 15040,
+      "generated_tokens": 620
+    },
+    {
+      "run_id": "r0-markup-replacement-escape-mixed031",
+      "task_id": "markup-replacement-escape",
+      "variant": "mixed031",
+      "trajectory_sha256": "3d065b93bfb1615fa9d5e4d40477947ebe801fd00f9b90c81a6b6e9873f1d270",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 37762,
+      "generated_tokens": 545
+    },
+    {
+      "run_id": "r0-markup-replacement-escape-original025",
+      "task_id": "markup-replacement-escape",
+      "variant": "original025",
+      "trajectory_sha256": "e6993c90f28d2ef0920bab36226f33911a2123a39d355b41dd0d5e9dbe7d53dd",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 37203,
+      "generated_tokens": 516
+    },
+    {
+      "run_id": "r0-platformdirs-multipath-selection-base",
+      "task_id": "platformdirs-multipath-selection",
+      "variant": "base",
+      "trajectory_sha256": "3f323ab23179c61fb80a01659e40e65e68d2a6b6b0ecce11dc6c5a980321e1db",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        3,
+        4,
+        5,
+        9,
+        10,
+        12
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 44026,
+      "generated_tokens": 777
+    },
+    {
+      "run_id": "r0-platformdirs-multipath-selection-mixed031",
+      "task_id": "platformdirs-multipath-selection",
+      "variant": "mixed031",
+      "trajectory_sha256": "34567250e03a70876192c86bd41db4cdc4c1400d1c0b5145ed92283b19b6f152",
+      "calls": 12,
+      "first_edit_call": 12,
+      "edit_calls": [
+        12
+      ],
+      "remaining_calls_after_first_edit": 0,
+      "grader_passed": true,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "category": "first_edit_on_final_call_no_completion_budget",
+      "input_tokens": 44321,
+      "generated_tokens": 680
+    },
+    {
+      "run_id": "r0-platformdirs-multipath-selection-original025",
+      "task_id": "platformdirs-multipath-selection",
+      "variant": "original025",
+      "trajectory_sha256": "6806c76b7d035bd2e884dbc6837ba83704d898f11f7ec9de3dc1b41e59b8b2c2",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 44164,
+      "generated_tokens": 616
+    },
+    {
+      "run_id": "r0-platformdirs-site-config-key-base",
+      "task_id": "platformdirs-site-config-key",
+      "variant": "base",
+      "trajectory_sha256": "1d66ccc0cddb2acb61a56ea86d972e52b7aada1858a33710fb9303c81b99e30f",
+      "calls": 11,
+      "first_edit_call": 9,
+      "edit_calls": [
+        9
+      ],
+      "remaining_calls_after_first_edit": 3,
+      "grader_passed": true,
+      "submitted": true,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3
+      ],
+      "category": "correct_and_submitted",
+      "input_tokens": 34120,
+      "generated_tokens": 564
+    },
+    {
+      "run_id": "r0-platformdirs-site-config-key-mixed031",
+      "task_id": "platformdirs-site-config-key",
+      "variant": "mixed031",
+      "trajectory_sha256": "072a6f0eff1ac3be326fee87efe29ab87b429b7be5cd052ef80889cadb46c9fe",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 40739,
+      "generated_tokens": 564
+    },
+    {
+      "run_id": "r0-platformdirs-site-config-key-original025",
+      "task_id": "platformdirs-site-config-key",
+      "variant": "original025",
+      "trajectory_sha256": "5c4989be0fc16e639fd0061434d1f1adb3fc88322c9de0713efe6c5f16259d0b",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 41603,
+      "generated_tokens": 589
+    },
+    {
+      "run_id": "r0-platformdirs-site-data-order-base",
+      "task_id": "platformdirs-site-data-order",
+      "variant": "base",
+      "trajectory_sha256": "42720cdc4f5c33c3efd34bf14238e7639d693bacb5a3d13f50d29e594aec049e",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 41991,
+      "generated_tokens": 629
+    },
+    {
+      "run_id": "r0-platformdirs-site-data-order-mixed031",
+      "task_id": "platformdirs-site-data-order",
+      "variant": "mixed031",
+      "trajectory_sha256": "8e7c808bc6bbe32f2379474b9e1939b4537e29239177f113256f1be9a14aa383",
+      "calls": 12,
+      "first_edit_call": 12,
+      "edit_calls": [
+        12
+      ],
+      "remaining_calls_after_first_edit": 0,
+      "grader_passed": true,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "category": "first_edit_on_final_call_no_completion_budget",
+      "input_tokens": 39141,
+      "generated_tokens": 545
+    },
+    {
+      "run_id": "r0-platformdirs-site-data-order-original025",
+      "task_id": "platformdirs-site-data-order",
+      "variant": "original025",
+      "trajectory_sha256": "fa691191e6b3e5e12ff4fbf60a4ff282f3694c0af1b138f44ceecc023982b13e",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [
+        1,
+        2,
+        3
+      ],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 37566,
+      "generated_tokens": 587
+    },
+    {
+      "run_id": "r0-url-auth-first-separator-base",
+      "task_id": "url-auth-first-separator",
+      "variant": "base",
+      "trajectory_sha256": "fb33e7b05fa39b1bde76ca571c494890beaab009640fc6749f317b3a800fb91b",
+      "calls": 7,
+      "first_edit_call": 4,
+      "edit_calls": [
+        4
+      ],
+      "remaining_calls_after_first_edit": 8,
+      "grader_passed": true,
+      "submitted": true,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "correct_and_submitted",
+      "input_tokens": 9300,
+      "generated_tokens": 491
+    },
+    {
+      "run_id": "r0-url-auth-first-separator-mixed031",
+      "task_id": "url-auth-first-separator",
+      "variant": "mixed031",
+      "trajectory_sha256": "f3b5040c6c73a7369f1d0c3f7f69b8866ed9e147d88ea75cf979bdae8eaef753",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 34761,
+      "generated_tokens": 639
+    },
+    {
+      "run_id": "r0-url-auth-first-separator-original025",
+      "task_id": "url-auth-first-separator",
+      "variant": "original025",
+      "trajectory_sha256": "431e5099f97e0d6c28e221dc8e1d906a2414cbd7d8ad770487ec540a486b05ca",
+      "calls": 5,
+      "first_edit_call": 4,
+      "edit_calls": [
+        4
+      ],
+      "remaining_calls_after_first_edit": 8,
+      "grader_passed": true,
+      "submitted": true,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "correct_and_submitted",
+      "input_tokens": 5674,
+      "generated_tokens": 271
+    },
+    {
+      "run_id": "r0-url-zero-port-base",
+      "task_id": "url-zero-port",
+      "variant": "base",
+      "trajectory_sha256": "e0f39542aabbf105771690b7dcd87637cab711eab9692f555d0c71e68e8bb478",
+      "calls": 6,
+      "first_edit_call": 4,
+      "edit_calls": [
+        4
+      ],
+      "remaining_calls_after_first_edit": 8,
+      "grader_passed": true,
+      "submitted": true,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "correct_and_submitted",
+      "input_tokens": 8207,
+      "generated_tokens": 292
+    },
+    {
+      "run_id": "r0-url-zero-port-mixed031",
+      "task_id": "url-zero-port",
+      "variant": "mixed031",
+      "trajectory_sha256": "b1946a29ba9009176988aad04c33f8ec64082e88025b965de8dd0f9d32f66fc2",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 31908,
+      "generated_tokens": 625
+    },
+    {
+      "run_id": "r0-url-zero-port-original025",
+      "task_id": "url-zero-port",
+      "variant": "original025",
+      "trajectory_sha256": "26dda67dfa65aad774c0c328b32d6f45a1eeef7fdb83d493d31c3305f8d1334c",
+      "calls": 12,
+      "first_edit_call": null,
+      "edit_calls": [],
+      "remaining_calls_after_first_edit": null,
+      "grader_passed": false,
+      "submitted": false,
+      "standalone_verification_of_final_source": false,
+      "clipped_tool_output_calls": [],
+      "category": "no_edit_before_budget_exhaustion",
+      "input_tokens": 34099,
+      "generated_tokens": 601
+    }
+  ],
+  "new_model_calls": 0,
+  "final_test_opened": false,
+  "development_examples_added_to_training": 0,
+  "causal_claim": "Behavioral diagnosis only; these observations do not isolate a causal training intervention.",
+  "limitations": [
+    "The six cases were selected after seeing development results.",
+    "Detailed traces use repeat zero; the original audit checks all three repeats.",
+    "A clipped output is not proof that a specific missing line caused failure.",
+    "A correct patch at the call limit is distinct from explicit verified completion."
+  ]
+}
