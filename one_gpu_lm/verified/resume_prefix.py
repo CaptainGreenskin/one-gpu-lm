@@ -23,15 +23,17 @@ def clean_samples(path):
     lines = path.read_bytes().splitlines()
     valid = []
     for line in lines[1:]:
+        if b'\0' in line:
+            continue
         try:
             row = next(csv.reader([line.decode()]))
-            if b'\0' in line or len(row) != 6:
+            if len(row) != 6:
                 continue
             datetime.fromisoformat(row[0]); int(row[1])
             for number in row[2:]:
                 float(number)
             valid.append(line)
-        except (ValueError, UnicodeError):
+        except (ValueError, UnicodeError, csv.Error):
             continue
     if not valid:
         raise ValueError('No surviving GPU telemetry')
