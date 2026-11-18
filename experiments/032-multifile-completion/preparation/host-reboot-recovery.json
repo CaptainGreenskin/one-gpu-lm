@@ -1,0 +1,23 @@
+{
+  "boot_epoch": 1794991822,
+  "interrupted_controller_sha256": "aa1837a6ff199ccdd08b8833f9cbf1b77e465ba7b833ff57dfa50584f310989f",
+  "interrupted_supervisor_sha256": "47bdae4eb0a02ecac760e8741c174230517de0fb77e213e5f498614bc8f50e81",
+  "interrupted_trajectory_sha256": "732214573da0ded45b038f974e5d41ee6a99adc8168d8fa9ec2af107021c82d6",
+  "completed_runs": 100,
+  "interrupted_run_id": "r0-fast-json-stringify-04a55c43eddb-base",
+  "aborted_attempted_calls": 11,
+  "final_test_opened": false,
+  "reason": "host_boot_after_evaluation_processes_stopped",
+  "aborted_known_generated_tokens": 445,
+  "aborted_known_input_tokens": 31671,
+  "aborted_unknown_response_count": 1,
+  "aborted_unknown_generated_tokens_bounds": [
+    0,
+    512
+  ],
+  "damaged_telemetry_rows": 1,
+  "last_pre_reboot_gpu_sample_epoch": 1794991533.721364,
+  "pre_reboot_missing_request_bodies": 2,
+  "aborted_actor_counts_in_scores": false,
+  "completed_prefix_retried": false
+}
