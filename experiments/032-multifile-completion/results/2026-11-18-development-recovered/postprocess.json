@@ -1,0 +1,41 @@
+{
+  "stage": "audited",
+  "complete": true,
+  "started_epoch": 1795015482.8905933,
+  "finished_epoch": 1795015528.048327,
+  "audit_passed": true,
+  "audit_checks": {
+    "all_runs_complete": true,
+    "all_run_audits_passed": true,
+    "frozen_inputs_unchanged": true,
+    "controller_protocol_identity": true,
+    "supervisor_protocol_identity": true,
+    "development_only_no_updates": true,
+    "supervisor_completed_without_timeout": true,
+    "same_registered_model_interpreter": true,
+    "physical_costs_accounted": true,
+    "no_unregistered_task_directory": true,
+    "controller_order_and_uniqueness": true,
+    "at_most_54_model_loads": true,
+    "all_task_journals_verified": true,
+    "journal_inventory_exact": true,
+    "physical_request_count_matches_journal": true,
+    "registered_segment_checkpoint_load_order": true,
+    "retained_prefix_matches_archive": true,
+    "interrupted_actor_kept_out_of_scores": true,
+    "recovery_receipt_identity": true,
+    "all_execution_protocols_verified_by_segment": true
+  },
+  "audited_runs": 324,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false,
+  "protocol_identity_recheck": {
+    "first_audit_sha256": "6439d54a653d854499f0f70aad713780daf24c61727387b33fdaea5706c84af2",
+    "updated_protocol_identity_rows": 100,
+    "first_segment_rows": 100,
+    "second_segment_rows": 224,
+    "no_model_generations_or_regrades": true
+  }
+}
