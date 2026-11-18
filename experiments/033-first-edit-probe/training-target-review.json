@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "source_training_protocol_sha256": "819172524e89cfa8be264413c0009638b6bc8a7909dc02be157c0a41c3949301",
+  "archive_sha256": "9f2b5ef39f672bf61dc0c06b660d6d7d9c553665a88da4181ebfd174d37e81f4",
+  "groups": {
+    "retained_031": {
+      "source_sha256": "b76f0996ae76fe76e439cad9fb4725d3a0f13ae6a5171348c46ce1a177f5dd08",
+      "records": 1006,
+      "regression_target_records": 142,
+      "initial_targets": 118,
+      "initial_exact_regression_targets": 0,
+      "supervised_tokens": 63991,
+      "registered_action_kinds": {
+        "other": 588,
+        "edit": 140,
+        "verify": 142,
+        "submit": 136
+      }
+    },
+    "new_reference_guided": {
+      "source_sha256": "3aa32eff8b3834967d5d0a1608655de93a2812aba1eeafa5625127b9bef0d269",
+      "records": 232,
+      "regression_target_records": 86,
+      "initial_targets": 40,
+      "initial_exact_regression_targets": 40,
+      "supervised_tokens": 28906,
+      "registered_action_kinds": {
+        "baseline_regression": 40,
+        "focused_inspection": 40,
+        "reference_edit": 66,
+        "final_verification": 40,
+        "explicit_submission": 40,
+        "partial_repair_regression": 6
+      }
+    }
+  },
+  "records": 1238,
+  "initial_target_definition": "first physical call with only system and user messages",
+  "compare_declared_visible_command_by_exact_text": true,
+  "new_model_generations": 0,
+  "new_tool_executions": 0,
+  "new_optimizer_updates": 0,
+  "final_test_opened": false
+}

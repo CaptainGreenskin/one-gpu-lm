@@ -1,0 +1,252 @@
+{
+  "scope": "observed_development_diagnostic_action_text_only",
+  "states": 14,
+  "audited_generations": 42,
+  "groups": [
+    {
+      "cohort": "regression",
+      "history_model": "base",
+      "label": "5 道退步题 · 底座历史",
+      "cells": [
+        {
+          "variant": "base",
+          "states": 5,
+          "actions": {
+            "exact_base_first_edit": 5
+          },
+          "observed_first_edit_commands": 5,
+          "exact_base_commands": 5
+        },
+        {
+          "variant": "mixed031",
+          "states": 5,
+          "actions": {
+            "other_parseable": 2,
+            "exact_base_first_edit": 2,
+            "inspection_shaped": 1
+          },
+          "observed_first_edit_commands": 2,
+          "exact_base_commands": 2
+        },
+        {
+          "variant": "multifile032",
+          "states": 5,
+          "actions": {
+            "other_parseable": 4,
+            "inspection_shaped": 1
+          },
+          "observed_first_edit_commands": 0,
+          "exact_base_commands": 0
+        }
+      ]
+    },
+    {
+      "cohort": "regression",
+      "history_model": "multifile032",
+      "label": "5 道退步题 · 032 历史",
+      "cells": [
+        {
+          "variant": "base",
+          "states": 5,
+          "actions": {
+            "other_parseable": 2,
+            "inspection_shaped": 3
+          },
+          "observed_first_edit_commands": 0,
+          "exact_base_commands": 0
+        },
+        {
+          "variant": "mixed031",
+          "states": 5,
+          "actions": {
+            "other_parseable": 2,
+            "inspection_shaped": 3
+          },
+          "observed_first_edit_commands": 0,
+          "exact_base_commands": 0
+        },
+        {
+          "variant": "multifile032",
+          "states": 5,
+          "actions": {
+            "inspection_shaped": 5
+          },
+          "observed_first_edit_commands": 0,
+          "exact_base_commands": 0
+        }
+      ]
+    },
+    {
+      "cohort": "stable_success",
+      "history_model": "base",
+      "label": "4 道稳定成功题 · 底座历史",
+      "cells": [
+        {
+          "variant": "base",
+          "states": 4,
+          "actions": {
+            "exact_base_first_edit": 4
+          },
+          "observed_first_edit_commands": 4,
+          "exact_base_commands": 4
+        },
+        {
+          "variant": "mixed031",
+          "states": 4,
+          "actions": {
+            "other_parseable": 2,
+            "inspection_shaped": 1,
+            "exact_base_first_edit": 1
+          },
+          "observed_first_edit_commands": 1,
+          "exact_base_commands": 1
+        },
+        {
+          "variant": "multifile032",
+          "states": 4,
+          "actions": {
+            "other_parseable": 2,
+            "inspection_shaped": 2
+          },
+          "observed_first_edit_commands": 0,
+          "exact_base_commands": 0
+        }
+      ]
+    }
+  ],
+  "regression_crossed_pairs": [
+    {
+      "task_id": "cookie-042073f1d679",
+      "call": 5,
+      "categories": {
+        "base": {
+          "base": "exact_base_first_edit",
+          "mixed031": "other_parseable",
+          "multifile032": "other_parseable"
+        },
+        "multifile032": {
+          "base": "other_parseable",
+          "mixed031": "other_parseable",
+          "multifile032": "inspection_shaped"
+        }
+      }
+    },
+    {
+      "task_id": "cookie-24f7da040389",
+      "call": 3,
+      "categories": {
+        "base": {
+          "base": "exact_base_first_edit",
+          "mixed031": "exact_base_first_edit",
+          "multifile032": "other_parseable"
+        },
+        "multifile032": {
+          "base": "inspection_shaped",
+          "mixed031": "inspection_shaped",
+          "multifile032": "inspection_shaped"
+        }
+      }
+    },
+    {
+      "task_id": "cookie-ba8bd30205b5",
+      "call": 5,
+      "categories": {
+        "base": {
+          "base": "exact_base_first_edit",
+          "mixed031": "other_parseable",
+          "multifile032": "other_parseable"
+        },
+        "multifile032": {
+          "base": "inspection_shaped",
+          "mixed031": "inspection_shaped",
+          "multifile032": "inspection_shaped"
+        }
+      }
+    },
+    {
+      "task_id": "dateutil-68994217fbe2",
+      "call": 4,
+      "categories": {
+        "base": {
+          "base": "exact_base_first_edit",
+          "mixed031": "exact_base_first_edit",
+          "multifile032": "inspection_shaped"
+        },
+        "multifile032": {
+          "base": "other_parseable",
+          "mixed031": "other_parseable",
+          "multifile032": "inspection_shaped"
+        }
+      }
+    },
+    {
+      "task_id": "filelock-1510ebc38995",
+      "call": 8,
+      "categories": {
+        "base": {
+          "base": "exact_base_first_edit",
+          "mixed031": "inspection_shaped",
+          "multifile032": "other_parseable"
+        },
+        "multifile032": {
+          "base": "inspection_shaped",
+          "mixed031": "inspection_shaped",
+          "multifile032": "inspection_shaped"
+        }
+      }
+    }
+  ],
+  "original_checkpoint_response_replay": {
+    "base": {
+      "states": 9,
+      "identical_output_ids": 9
+    },
+    "multifile032": {
+      "states": 5,
+      "identical_output_ids": 5
+    }
+  },
+  "phase": {
+    "pipeline_seconds": 771.6665639877319,
+    "started_utc": "2026-11-18T22:59:59.417621+00:00",
+    "finished_utc": "2026-11-18T23:12:51.084185+00:00",
+    "reserved_single_gpu_hours": 0.21435182332992553,
+    "complete": true,
+    "backend_loads": 3,
+    "completed_backend_load_seconds": 96.13731980323792,
+    "incomplete_backend_loads": 0,
+    "cost_definition": "Wall time for checkpoint verification, loads, generation and cleanup"
+  },
+  "hardware": {
+    "samples": 153,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.273216962814331,
+    "sample_span_seconds": 766.9660630226135,
+    "boundary_uncovered_seconds": 4.700500965118408,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 38.37908496732026,
+      "peak": 53.0
+    },
+    "power_w": {
+      "mean": 185.98039215686268,
+      "peak": 332.19
+    },
+    "utilization_percent": {
+      "mean": 32.111111111111114,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 48403.660130718956,
+      "peak": 55313.0
+    }
+  },
+  "input_tokens": 95304,
+  "generated_tokens": 5024,
+  "generation_seconds": 616.9354739960108,
+  "recovered_socket_timeouts": 0,
+  "new_tool_executions": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}
