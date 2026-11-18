@@ -82,6 +82,14 @@ class RequestJournal:
             if receipt['state'] == 'generation_error':
                 return {'error': receipt['error_type'], 'unknown_generation_cost': True}
             raise RuntimeError('Request in flight or interrupted; no implicit retry')
+        # Persist the directory entry that claims this identity before running
+        # the model. Fsyncing only a receipt inside it does not persist its name
+        # in the parent directory across a sudden host failure.
+        descriptor = os.open(self.directory, os.O_RDONLY)
+        try:
+            os.fsync(descriptor)
+        finally:
+            os.close(descriptor)
         persist_new(path / 'accepted.json', {
             'schema_version': 1, 'request_id': request_id, 'payload_sha256': payload_hash,
             'accepted_epoch': time.time(), 'state': 'accepted',
