@@ -1,0 +1,27 @@
+{
+  "stage": "audited",
+  "complete": true,
+  "started_epoch": 1794978962.9957812,
+  "finished_epoch": 1794978981.6132424,
+  "audit_passed": false,
+  "audit_checks": {
+    "all_runs_complete": false,
+    "all_run_audits_passed": false,
+    "frozen_inputs_unchanged": true,
+    "controller_protocol_identity": true,
+    "supervisor_protocol_identity": true,
+    "development_only_no_updates": true,
+    "supervisor_completed_without_timeout": true,
+    "same_registered_model_interpreter": true,
+    "physical_costs_accounted": false,
+    "no_unregistered_task_directory": true,
+    "controller_order_and_uniqueness": false,
+    "at_most_54_model_loads": true,
+    "exact_registered_checkpoint_load_order": false
+  },
+  "audited_runs": 324,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "test_commands_reexecuted": 0,
+  "final_test_opened": false
+}

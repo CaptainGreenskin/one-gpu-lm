@@ -1,0 +1,169 @@
+{
+  "registered_runs": 324,
+  "complete_accounting": false,
+  "paired_tasks": 0,
+  "pairs": [],
+  "cost": {
+    "attempted_calls": 1033,
+    "known_generated_tokens": 56645,
+    "known_input_tokens": 3245416,
+    "completed_actor_seconds": 7936.232003893005,
+    "coverage": "received generations and completed actor durations only",
+    "unknown_response_requests": 1,
+    "exact_generation_cost_known": false,
+    "generated_tokens_bounds": [
+      56645,
+      57157
+    ]
+  },
+  "missing_runs": 232,
+  "unknown_generation_cost_runs": 1,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "development_parameter_gate_passed": false,
+  "scope": "new_source_family_historical_development_only",
+  "conclusion": "incomplete_no_parameter_gain_conclusion",
+  "phase": {
+    "pipeline_seconds": 9220.555243492126,
+    "started_utc": "2026-11-18T02:41:44.500912+00:00",
+    "finished_utc": "2026-11-18T05:15:25.056155+00:00",
+    "reserved_single_gpu_hours": 2.5612653454144794,
+    "complete": false,
+    "backend_loads": 16,
+    "completed_backend_load_seconds": 575.3320126533508,
+    "incomplete_backend_loads": 0,
+    "cost_definition": "single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time"
+  },
+  "hardware": {
+    "samples": 1829,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.182288885116577,
+    "sample_span_seconds": 9218.671628952026,
+    "boundary_uncovered_seconds": 1.8836145401000977,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 47.106615636960086,
+      "peak": 65.0
+    },
+    "power_w": {
+      "mean": 223.21566429743035,
+      "peak": 557.82
+    },
+    "utilization_percent": {
+      "mean": 36.54674685620558,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 57491.96992892291,
+      "peak": 62969.0
+    }
+  },
+  "variants": {
+    "base": {
+      "recorded_runs": 30,
+      "verified_runs": 30,
+      "successes": 7,
+      "correct_patches_within_budget": 8,
+      "explicit_submissions": 7,
+      "standalone_final_verifications": 0,
+      "categories": {
+        "no_final_source_edit": 22,
+        "success": 7,
+        "correct_patch_not_submitted": 1,
+        "not_run": 78
+      },
+      "cost": {
+        "attempted_calls": 321,
+        "seconds": 1893.5934971395181,
+        "known_generated_tokens": 19101,
+        "known_input_tokens": 997781,
+        "completed_actor_seconds": 1886.3745126362192,
+        "coverage": "received generations and completed actor durations only"
+      },
+      "repeat_outcome_disagreement_tasks": null,
+      "repeat_action_disagreement_tasks": null,
+      "unknown_generation_cost_runs": 0,
+      "scheduled_runs": 108,
+      "not_started_runs": 78,
+      "incomplete_runs": 0,
+      "invalid_actions_from_complete_runs": 2,
+      "repeat_coverage_tasks": 0
+    },
+    "mixed031": {
+      "recorded_runs": 30,
+      "verified_runs": 30,
+      "successes": 7,
+      "correct_patches_within_budget": 9,
+      "explicit_submissions": 7,
+      "standalone_final_verifications": 2,
+      "categories": {
+        "no_final_source_edit": 21,
+        "success": 7,
+        "correct_patch_not_submitted": 2,
+        "not_run": 78
+      },
+      "cost": {
+        "attempted_calls": 333,
+        "seconds": 3237.6683450408746,
+        "known_generated_tokens": 17799,
+        "known_input_tokens": 1086646,
+        "completed_actor_seconds": 3227.84412712208,
+        "coverage": "received generations and completed actor durations only"
+      },
+      "repeat_outcome_disagreement_tasks": null,
+      "repeat_action_disagreement_tasks": null,
+      "unknown_generation_cost_runs": 0,
+      "scheduled_runs": 108,
+      "not_started_runs": 78,
+      "incomplete_runs": 0,
+      "invalid_actions_from_complete_runs": 0,
+      "repeat_coverage_tasks": 0
+    },
+    "multifile032": {
+      "recorded_runs": 33,
+      "verified_runs": 32,
+      "successes": 4,
+      "correct_patches_within_budget": 6,
+      "explicit_submissions": 4,
+      "standalone_final_verifications": 2,
+      "categories": {
+        "no_final_source_edit": 26,
+        "success": 4,
+        "correct_patch_not_submitted": 2,
+        "incomplete": 1,
+        "not_run": 75
+      },
+      "cost": {
+        "attempted_calls": 379,
+        "seconds": 2826.535921834875,
+        "known_generated_tokens": 19745,
+        "known_input_tokens": 1160989,
+        "completed_actor_seconds": 2822.0133641347056,
+        "coverage": "received generations and completed actor durations only"
+      },
+      "repeat_outcome_disagreement_tasks": null,
+      "repeat_action_disagreement_tasks": null,
+      "unknown_generation_cost_runs": 1,
+      "scheduled_runs": 108,
+      "not_started_runs": 75,
+      "incomplete_runs": 1,
+      "invalid_actions_from_complete_runs": 0,
+      "repeat_coverage_tasks": 0
+    }
+  },
+  "accumulation_curve": [],
+  "multifile_subset": {
+    "registered_tasks": 12,
+    "complete_paired_tasks": 0,
+    "scores": {
+      "base": null,
+      "mixed031": null,
+      "multifile032": null
+    }
+  },
+  "reporting_revision": "032-interruption-v1",
+  "completed_runs": 92,
+  "audited_completed_runs": 92,
+  "incomplete_runs": 1,
+  "not_started_runs": 231
+}

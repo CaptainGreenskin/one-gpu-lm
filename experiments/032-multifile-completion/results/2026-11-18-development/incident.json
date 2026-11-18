@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "kind": "actor_deadline_with_unaccounted_inflight_response",
+  "run_id": "r0-python-dotenv-0b2880591780-multifile032",
+  "trajectory_sha256": "e2b52377ba923abaa95f64fcc97f9924011f2bdd769a5a01a1cbe8c6cdf3afa7",
+  "failed_actor_started_epoch": 1794978324.5878973,
+  "pipeline_finished_epoch": 1794978925.0561554,
+  "completed_calls": 9,
+  "attempted_calls": 10,
+  "unknown_response_requests": 1,
+  "known_generated_tokens": 3656,
+  "unknown_generated_tokens_bounds": [
+    0,
+    512
+  ],
+  "known_response_steps": [
+    {
+      "call": 1,
+      "generated_tokens": 31,
+      "generation_seconds": 4.681795908021741,
+      "input_tokens": 571,
+      "action_format_valid": true,
+      "hit_generation_limit": false
+    },
+    {
+      "call": 2,
+      "generated_tokens": 41,
+      "generation_seconds": 6.2472079490544274,
+      "input_tokens": 957,
+      "action_format_valid": true,
+      "hit_generation_limit": false
+    },
+    {
+      "call": 3,
+      "generated_tokens": 512,
+      "generation_seconds": 77.59863043297082,
+      "input_tokens": 1602,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 4,
+      "generated_tokens": 512,
+      "generation_seconds": 82.22698591894004,
+      "input_tokens": 2188,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 5,
+      "generated_tokens": 512,
+      "generation_seconds": 80.72789877699688,
+      "input_tokens": 2774,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 6,
+      "generated_tokens": 512,
+      "generation_seconds": 77.73659630992915,
+      "input_tokens": 3360,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 7,
+      "generated_tokens": 512,
+      "generation_seconds": 77.82177342800424,
+      "input_tokens": 3946,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 8,
+      "generated_tokens": 512,
+      "generation_seconds": 80.69573178794235,
+      "input_tokens": 4532,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    },
+    {
+      "call": 9,
+      "generated_tokens": 512,
+      "generation_seconds": 79.97267093497794,
+      "input_tokens": 5118,
+      "action_format_valid": false,
+      "hit_generation_limit": true
+    }
+  ],
+  "consecutive_invalid_limit_responses": 7,
+  "invalid_response_unique_text_hashes": 1,
+  "client_error_type": "TimeoutError",
+  "last_backend_returncode": -15,
+  "original_campaign_restarted": false,
+  "completed_runs_retried": false,
+  "final_test_opened": false,
+  "weights_public": false,
+  "hardware_fault_evidence_found": false,
+  "evidence_limit": "No hardware fault is evidenced by these receipts; this is not a full hardware diagnosis.",
+  "can_recover_actual_final_generation_count": false
+}
