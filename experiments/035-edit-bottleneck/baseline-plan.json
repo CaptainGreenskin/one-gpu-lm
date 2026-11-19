@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-19",
+  "034_results_commit": "c991ed22ef937110db34fdee8f6fd00625309f02",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "adapter": false,
+  "tasks": 20,
+  "families": {
+    "arrow-py/arrow": 5,
+    "d3/d3-array": 5,
+    "networkx/networkx": 5,
+    "ramda/ramda": 5
+  },
+  "language_counts": {
+    "python": 10,
+    "javascript": 10
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "primary_outcome": "Within actor budget, edited source passes a protected fresh regrade and model executed terminal submission.",
+  "recovery_accounting_seconds": 180,
+  "rollouts": 20,
+  "schedule_sha256": "604e59f7f229db48666b1f96d1d771024dc55cbbcd7bee8cb68da2d4ba8f8cd8",
+  "order": "Exactly the task order of the 034 control arm. One rollout per development task.",
+  "pipeline_limit_seconds": 18000,
+  "diagnostics": [
+    "source change timing",
+    "inspection-shaped calls before first edit",
+    "repeated command with same source and feedback",
+    "tool nonzero exits and format failures",
+    "feedback length, context compaction and generation limit"
+  ],
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "frozen_files": {
+    "experiments/034-first-action-ablation/evaluation-plan.json": "4ae86ba82829c93a090388dedf3f4884489bfb53b44e45b407fad24bb2a5298b",
+    "experiments/035-edit-bottleneck/baseline.py": "9cce2982bfee4968df6419d95f233fbd47273dc23e622b673e781073295c31d6",
+    "experiments/035-edit-bottleneck/audit.py": "af495cf0cbd6c262878050574130c6788b67af47fcb5488f4237ca40006d8c7c",
+    "one_gpu_lm/verified/behavior_diagnosis.py": "0719e70beb397a715847e510fcd0c58eb0af74f02450d84c7bea13f94b0d39a5",
+    "one_gpu_lm/common/agent_policy.py": "ddab718b3cea1eed5fe038b2038e5aa67bd1f5d1005b4d58c5d2ee0e4583fc3c",
+    "one_gpu_lm/common/actions.py": "ac779cf9163a1473ac65aa39005f0601e944983599c3fcbaed29ad4d6e2d52f9",
+    "one_gpu_lm/common/tool_history.py": "f83d42e320f009e650b1d71456c6568676de21f43a53c7f651826413457cf46c",
+    "one_gpu_lm/common/tokenization.py": "b74d119846100155e426642bfc544eee4f8610650f63fb9b91d970ea76fc3b40",
+    "one_gpu_lm/serving/journaled_backend.py": "deec687886d60e3dae2f16f0133498117560ff17d0c854931e280a1b17dbb76f",
+    "one_gpu_lm/serving/receipt_client.py": "1f7042182c542964d2497c740ba0288ef13ba8031dd1bbaee8a599e4adf0c5de",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "private/first-action-ablation/development-integrity.json": "199cd4f002642b45391fbccbbc56f74a27443817a9e038b0079b6c9907100d30",
+    "runs/historic034-development-001/controller.json": "da3a74119bf9d8940e5d9389e63a795cb94486a798436bce6baa24cc51bee880"
+  }
+}
