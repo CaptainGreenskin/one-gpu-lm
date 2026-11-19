@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-19",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "adapter": false,
+  "tasks": 20,
+  "families": {
+    "arrow-py/arrow": 5,
+    "d3/d3-array": 5,
+    "networkx/networkx": 5,
+    "ramda/ramda": 5
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "recovery_accounting_seconds": 180,
+  "primary_outcome": "Within actor budget, edited source passes a protected fresh regrade and model executed terminal submission.",
+  "baseline_report_commit": "51a1fb6e8ea60f9023151ea6b6388f68a289dd27",
+  "baseline_public_measurements_sha256": "b9793b567300e0e144b373304e72b6661b6814a73e9447ecbc143f0b6d579643",
+  "rollouts": 20,
+  "schedule_sha256": "65bdd536aef87e6e4d21332bd97c7550ed063d1d58c11eff160af07f992001d3",
+  "pipeline_limit_seconds": 18000,
+  "intervention": {
+    "request_number": 5,
+    "minimum_prior_successful_inspection_shaped_calls": 3,
+    "all_prior_allowed_source_bytes_unchanged": true,
+    "rule": "One temporary addition to the pinned system message. It reports used calls and encourages a minimal justified repair, one focused probe if necessary, validation, and explicit submission."
+  },
+  "historical_preflight": {
+    "034_prefixes_reencoded": 40,
+    "034_would_trigger": 37,
+    "034_max_extra_input_tokens": 66,
+    "035_base_would_trigger": 15,
+    "035_base_no_edit_would_trigger": 9
+  },
+  "comparison": "One new base rollout per task on the diagnosis cohort with the registered checkpoint. Pair with the archived 035 base outcome. Count no-trigger runs. Separate gains whose histories already diverged before the prompt.",
+  "mechanism_gate": {
+    "minimum_net_completed_repairs": 2,
+    "minimum_improved_families": 2,
+    "maximum_regressed_tasks": 1,
+    "also_require_minimum_net_in_triggered_pairs_with_matching_prefix": true
+  },
+  "new_reminder_scores_before_registration": 0,
+  "generated_source_sha256": {
+    "resilient_rollout": "318eda4a96b8f6147d22ac63c8eb4ba1170cd7f5b39a09303dff15a1ac045406",
+    "historic_replay": "dda263cf17465ee768dbbd280cfa85789cc0d203a2dee5944f63e163aaaf6fec"
+  },
+  "frozen_files": {
+    "experiments/035-edit-bottleneck/baseline.py": "9cce2982bfee4968df6419d95f233fbd47273dc23e622b673e781073295c31d6",
+    "experiments/035-edit-bottleneck/audit.py": "af495cf0cbd6c262878050574130c6788b67af47fcb5488f4237ca40006d8c7c",
+    "experiments/035-edit-bottleneck/baseline-plan.json": "7a50c479a8a3af2f7028f63687a6741254de72e47b43cbac9b90ea669e2011ba",
+    "experiments/035-edit-bottleneck/reminder.py": "5c8a7f8d37e5d1a65c12fac30e677f7e7c85587fa80a24860d4d3c5049e8514a",
+    "experiments/035-edit-bottleneck/edit_checkpoint.py": "9bfb78d29515fd09cca71a26ae4a68aad15b92d0d4da997e89ef6ec2be6faa8c",
+    "experiments/035-edit-bottleneck/resilient_rollout.patch": "57a81629cfb74a0c039c28136f8619e4ca721be1c2700dacbf834a4190d57eae",
+    "experiments/035-edit-bottleneck/historic_replay.patch": "9c409223489dd6ac174e5fda887c4457515ccbc1f384a22a74740b36edb04841",
+    "runs/historic035-base-001/audit.json": "19b49ef5ce6b70a8af0a3656b385fa48845665b1959ebeb7611172147b0bf398",
+    "runs/historic035-base-001/controller.json": "e848bc793490af0781d3ac1448944dea9b3799b79ece7becc5a33df8c315ba25",
+    "one_gpu_lm/verified/resilient_rollout.py": "2e91dda081d4e651afd8690777475e90eb9872b672dbae9a4f245829045c88e5",
+    "one_gpu_lm/verified/historic_replay.py": "5e646fc7550ed935b3474e7691cee053453d25c071e4f55ff9c31b617f268831"
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false
+}

@@ -1,0 +1,30 @@
+--- resilient_rollout.py
++++ _edit035_resilient_rollout.py
+@@ -13,7 +13,7 @@
+ from one_gpu_lm.serving.receipt_client import generate_once
+
+
+-def run(root,data,task,source,backend,sandbox,protocol,out,arm,*,journal_path,recovery_seconds):
++def run(root,data,task,source,backend,sandbox,protocol,out,arm,*,journal_path,recovery_seconds,checkpoint):
+     root,data,out=Path(root),Path(data),Path(out)
+     if out.exists():raise ValueError('Preserve previous trajectory; no implicit retry')
+     if task['split']!='development':raise ValueError('This evaluator accepts development tasks only')
+@@ -44,7 +44,8 @@
+         remaining_tokens=budget['max_total_generated_tokens']-state['generated_tokens']
+         if remaining_time<=0 or remaining_tokens<=0:
+             state['terminal_reason']='time_limit' if remaining_time<=0 else 'token_limit';break
+-        payload={'operation':'generate','messages':messages,'agent_policy':policy,
++        request_messages, progress = checkpoint(messages,state['steps'],state['original_source_sha256'],call,budget['max_model_calls'])
++        payload={'operation':'generate','messages':request_messages,'agent_policy':policy,
+                  'max_input_tokens':budget['max_input_tokens'],'max_new_tokens':min(remaining_tokens,budget['max_generated_tokens_per_call'])}
+         state.update(boundary='in_flight',attempted_calls=call);atomic(out/'trajectory.json',state)
+         request_path=out/f'request-{call:03d}.json';write_json(request_path,payload)
+@@ -59,6 +60,8 @@
+         state['generated_tokens']+=generated['generated_tokens']
+         step={'call':call,'request_sha256':digest(request_path.read_bytes()),'generation':generated,
+               'source_before':{n:digest((out/'workspace'/n).read_bytes()) if (out/'workspace'/n).is_file() and not (out/'workspace'/n).is_symlink() else None for n in task['editable_files']},'action_format_valid':False}
++        if progress is not None:
++            step['edit_checkpoint'] = progress
+         if recovery is not None:
+             step['transport_timeout_receipt'] = recovery
+             state['timeout_call'] = call

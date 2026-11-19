@@ -1,0 +1,22 @@
+--- historic_replay.py
++++ _edit035_historic_replay.py
+@@ -19,7 +19,7 @@
+     return common_messages(task,protocol['agent_policy'],protocol['evaluation_budget'])
+
+
+-def replay(directory, trace, task, protocol, profile, tokenizer, normalizer):
++def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, *, checkpoint):
+     directory=Path(directory);budget=protocol['evaluation_budget'];policy=protocol['agent_policy']
+     messages=initial_messages(task,protocol);total=0;input_total=0;checks=[];actions=[];feedback=[]
+     errors=[];last_source=trace['original_source_sha256'];verified=None
+@@ -33,7 +33,9 @@
+         flags={};call=step['call']
+         try:
+             request_path=directory/f'request-{call:03d}.json';payload=json.loads(request_path.read_text())
+-            expected={'operation':'generate','messages':messages,'agent_policy':policy,
++            request_messages, progress = checkpoint(messages,trace['steps'][:index-1],trace['original_source_sha256'],call,budget['max_model_calls'])
++            flags['checkpoint_receipt'] = step.get('edit_checkpoint') == progress
++            expected={'operation':'generate','messages':request_messages,'agent_policy':policy,
+                       'max_input_tokens':budget['max_input_tokens'],
+                       'max_new_tokens':min(budget['max_total_generated_tokens']-total,budget['max_generated_tokens_per_call'])}
+             flags['registered_request']=call==index and payload==expected and sha256(request_path)==step['request_sha256']
