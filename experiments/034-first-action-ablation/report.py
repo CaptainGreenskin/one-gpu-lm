@@ -160,11 +160,18 @@ def development(directory):
     counts = {arm: sum(r['multifile'] and r['completed_repair'] for r in rows if r['arm'] == arm) for arm in ARMS}
     multifile = sum(r['multifile'] for r in rows if r['arm'] == 'control')
     gate = '通过' if analysis['mechanism_followup_gate_passed'] else '未通过'
+    net = analysis['masked_only_success'] - analysis['control_only_success']
+    positive_families = sum(value > 0 for value in analysis['paired_delta_by_family'].values())
+    fewer_openings = totals['control']['first_exact_regression'] - totals['masked']['first_exact_regression']
+    edits_at_nine = {arm: sum(value is not None and value <= 9 for value in first[arm]) for arm in ARMS}
     lines += [
         '', (f"{multifile} 道多文件题中，对照组完成 {counts['control']} 道，屏蔽组完成 {counts['masked']} 道。"
              f"按仓库家族再按题目分层重抽样，得到描述性 95% 区间 [{lo:+.1f}, {hi:+.1f}] 个百分点。"
              '这轮使用四个家族和一个训练种子。'), '',
-        f'预注册的机制复验门槛{gate}。', '',
+        (f"到第 9 次调用时，对照组有 {edits_at_nine['control']} 道题改过源码，屏蔽组有 {edits_at_nine['masked']} 道。"
+         '首步原样运行指定命令的计数只比较命令文本。'), '',
+        (f'预注册的机制复验门槛{gate}。修复并提交净变化 {net:+d} 道，门槛为至少 +2 道。'
+         f'有正收益的仓库家族为 {positive_families} 个，门槛为至少 2 个。原样执行指定首步回归命令减少 {fewer_openings:+d} 次。'), '',
         (f"{len(rows)} 次运行共审计 {bundle['verified_requests']:,} 次生成，核对了每组成对任务的首次输入 token、"
          '原请求、生成回执和保护环境的评分回执。'
          f"评估从北京时间 {beijing_stamp(start)} 运行至 {beijing_stamp(finish)}，用时 {(finish-start)/60:.2f} 分钟。"

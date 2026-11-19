@@ -17,3 +17,14 @@
 [评估预注册](evaluation-plan.json)锁定 Arrow、D3 Array、NetworkX、Ramda 四个此前未用于本项目的仓库家族。每家 5 道，Python 和 JavaScript 各 10 道，其中有 3 道通过逐文件反转验证的多文件题。每道选题先用 CPU 按原版失败和参考修复通过的规则准入，再分别重查两遍。评估保留原断言，Python 部分运行上游回归类或文件，JavaScript 使用固定依赖及种子的 TAP 测试入口，所有工具调用都在离线文件沙箱内。
 
 共 40 次运行，每题每组一次，四个区块交替组顺序。两组上限均为 12 次调用、每次生成 512 tokens、全题生成 6,144 tokens、输入 8,192 tokens、任务限时 600 秒。把保护环境内通过重跑且显式提交作为主要结果，并按同题统计净变化。若至少净增 2 道、在至少 2 家仓库有正净变化且首步原样测试次数降低，进入下一次机制复验。开发样本数和训练种子有限，结果用于研究决策。原测试可见，单独分发的任务、工具输出和权重保留在私有工作区。
+
+## 开发结果
+
+两组在 20 道独立开发题上都完成评估。屏蔽组首步原样执行指定回归命令的次数由 10 降到 0，预算内修复且提交由 1 降到 0。从未修改源码的题分别有 15 道和 16 道。两个模型在这批题上都很少完成修复，对照的主要发现是这 40 条监督目标能改变首步命令，而单独屏蔽它们没有改善这次的修复结果。预注册的机制复验门槛未通过。[开发结果、首次修改曲线和匿名逐题表](results/2026-11-19-development/)。
+
+两份 `measurements.json` 是已审计的公开汇总。使用 Python 和 Matplotlib，可在仓库根目录重建图表。
+
+```bash
+python experiments/034-first-action-ablation/report.py training experiments/034-first-action-ablation/results/2026-11-19-training
+python experiments/034-first-action-ablation/report.py development experiments/034-first-action-ablation/results/2026-11-19-development
+```
