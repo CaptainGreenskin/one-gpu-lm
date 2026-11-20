@@ -1,6 +1,7 @@
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 from types import SimpleNamespace
@@ -9,17 +10,21 @@ from unittest.mock import patch
 
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.common.edit_progress import EditableProgress
+from one_gpu_lm.common.runstate import identity_digest
+from one_gpu_lm.verified.reload_probe import PROBES, probe_requests
+from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery','final_campaign','final_audit')
+entrypoints = ('analysis','promotion','recovery','final_campaign','final_audit','release_package')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
     import final_audit
     import final_campaign
+    import release_package
     from promotion import REFERENCE, authorize, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
 finally:
@@ -216,3 +221,129 @@ class ModelScopePromotionTests(unittest.TestCase):
         self.assertIn('historical_regressions',regressed['failed_gates'])
         with self.assertRaises(ValueError):
             release_decision(authorization,base,candidate,historical,dict(complete=True,results=historical['results'][:24]),checks)
+
+    def test_release_packaging_checks_development_before_reading_final_state(self):
+        destination = self.directory/'staged'
+        args = SimpleNamespace(root=self.directory,seal=self.directory/'absent',
+                               input_review=self.directory/'absent',out=destination)
+        with self.assertRaisesRegex(ValueError,'development_pending'):
+            release_package.assemble(args)
+        self.assertFalse(destination.exists())
+
+    def test_release_packaging_binds_audit_rights_and_payload(self):
+        # Synthetic scores and adapter bytes exercise the assembly without the sealed task files.
+        reference = REFERENCE/'protocol.json'
+        inventory = REFERENCE/'results/2026-11-12/task-inventory.json'
+        plan = read(reference)
+        review = self.save('inputs.json',{'known_pattern_findings':{'fixture':0},'sources':{}})
+        identity = {'model_id':self.plan['pretrained_model'],'base_revision':self.plan['base_revision']}
+        training = self.directory/'training'
+        training.mkdir()
+        adapter = self.directory/'adapter'
+        adapter.mkdir()
+        for name in release_package.FILES:
+            (adapter/name).write_text(name)
+        (adapter/'private-training-log.txt').write_text('private fixture')
+        adapter_hashes = {name:sha256(adapter/name) for name in release_package.FILES}
+        (training/'candidate-profile.json').write_bytes((release_package.TRAINING/'candidate-profile.json').read_bytes())
+        integrity = training/'results/2026-11-17-training/integrity.json'
+        integrity.parent.mkdir(parents=True)
+        integrity.write_text(json.dumps({'passed':True,'adapter_files_sha256':adapter_hashes}))
+        permission = dict(identity,approved=True,stage='final_evaluation',development_gain_pp=12.0,
+                          development_audit_sha256='a'*64,checkpoint_sha256=adapter_hashes,
+                          candidate_review_sha256=sha256(review),cohorts={'fresh':24,'historical':48,'legacy':9},
+                          reference_release_protocol_sha256=sha256(reference),public_task_inventory_sha256=sha256(inventory))
+        out = self.directory/release_package.FINAL
+        out.mkdir(parents=True)
+        control = out/'controller.json'
+        control.write_text(json.dumps({'stage':'scored_audit_pending','complete':True,'final_test_opened':True,
+                                       'weights_public':False,'optimizer_updates':0}))
+        promotion = out/'promotion.json'
+        promotion.write_text(json.dumps(permission))
+        artifacts, repository, legacy, pairs = {}, {}, {}, []
+        for arm in release_package.ARMS:
+            rows = []
+            for role in release_package.COHORTS:
+                ids = [r['id'] for r in read(inventory) if r.get('evaluation_role') == role]
+                amount = 5 if arm == 'final-selected' and role == release_package.COHORTS[0] else 2
+                scores = [dict(id=n,passed=i<amount,generated_tokens=1,generations=[{'action_format_valid':True}])
+                          for i,n in enumerate(ids)]
+                pairs.append({'complete':True,'results':scores})
+                rows.extend(scores)
+            campaign = out/arm/'campaign.json'
+            campaign.parent.mkdir()
+            campaign.write_text(json.dumps({'complete':True,'results':rows}))
+            artifact = out/('artifact-'+arm+'.json')
+            artifact.write_text('{}')
+            functions = out/('legacy-'+arm)/'result.json'
+            functions.parent.mkdir()
+            functions.write_text(json.dumps({'complete':True,'passed':9,'results':[{'passed':True}]*9}))
+            artifacts[arm] = {'campaign_sha256':sha256(campaign),'served_artifact_sha256':sha256(artifact)}
+            repository[arm] = [{'id':row['id'],'passed':row['passed']} for row in rows]
+            legacy[arm] = {'result_sha256':sha256(functions),'scores_replayed':9}
+        checks = {'legacy_passes':9,'all_execution_audits_pass':True}
+        early_decision = release_decision(permission,pairs[0],pairs[2],pairs[1],pairs[3],checks)
+        (out/'execution-audit.json').write_text(json.dumps(dict(
+            execution_audit_passed=True,model_generations=0,final_test_opened=True,weights_public=False,
+            controller_sha256=sha256(control),promotion_sha256=sha256(promotion),adapter_files_sha256=adapter_hashes,
+            audit_source_sha256=sha256(EXP/'final_audit.py'),artifacts=artifacts,repository_replay=repository,
+            legacy_replay=legacy,checks=checks,release_decision_with_execution_evidence=early_decision)))
+        notice = self.save(release_package.BASE_LICENSE,'public license fixture')
+        notice_readback = self.save('notices.json',dict(identity,notices={notice.name:{
+            'byte_equal':True,'source_sha256':sha256(notice)}}))
+        rights = dict(identity,schema_version=1,approved_for_weight_publication=False,
+                      rights_and_secret_scan_pass=True,publication_basis='Fixture only',release_license='Apache-2.0',
+                      adapter_files_sha256=adapter_hashes,input_review_sha256=sha256(review),
+                      notice_readback_sha256=sha256(notice_readback))
+        rights_path = self.save('rights.json',rights)
+        captures = dict(schema_version=1,configuration=dict(identity,
+            adapter_files_sha256=adapter_hashes,profile_sha256=plan['frozen_files'][release_package.PROFILE_KEY],
+            base_manifest_sha256=plan['frozen_files'][release_package.BASE_MANIFEST],runtime_sha256='d'*64,
+            probe_definition_sha256=identity_digest(probe_requests()),
+            software={'python':'3.12.0','packages':dict.fromkeys(PACKAGES,'1.0')}),
+            probes=[dict(name=name,input_tokens=6,generated_tokens=10,input_tokens_sha256='e'*64,
+                         generated_ids_sha256='f'*64) for name,_ in PROBES])
+        args = SimpleNamespace(root=self.directory,sealed=self.directory,seal=self.directory/'absent',
+                               input_review=review,rights=rights_path,notice_readback=notice_readback,
+                               notices=self.directory,adapter=adapter,repo_id='CaptainGreenskin/fixture',
+                               before=self.save('before.json',dict(captures,capture_id='a'*32)),
+                               after=self.save('after.json',dict(captures,capture_id='b'*32)),
+                               out=self.directory/'staged')
+
+        def copy_fixture(source,destination,_profile,hashes):
+            destination.mkdir()
+            for name in hashes:
+                shutil.copyfile(source/name,destination/name)
+            return {'adapter_files_sha256':hashes}
+
+        with patch.object(release_package,'promotion_from_finished_run',return_value=permission), \
+                patch.object(release_package,'TRAINING',training), \
+                patch.object(release_package,'restore_adapter',side_effect=copy_fixture) as restore:
+            original_scores = campaign.read_bytes()
+            campaign.write_bytes(original_scores+b'\n')
+            with self.assertRaisesRegex(ValueError,'Scored artifacts differ'):
+                release_package.assemble(args)
+            campaign.write_bytes(original_scores)
+            with self.assertRaisesRegex(ValueError,'distribution and sensitive-content review'):
+                release_package.assemble(args)
+            restore.assert_not_called()
+            self.assertFalse(args.out.exists())
+            self.save('rights.json',dict(rights,approved_for_weight_publication=True))
+            notice.write_text('different notice')
+            with self.assertRaisesRegex(ValueError,'Notice bytes differ'):
+                release_package.assemble(args)
+            self.assertFalse(args.out.exists())
+            self.save(notice.name,'public license fixture')
+            manifest = release_package.assemble(args)
+
+        payload = args.out/'payload'
+        self.assertEqual(set(manifest['files']),{'README.md',notice.name,*release_package.FILES})
+        self.assertEqual({p.name for p in payload.iterdir()},set(manifest['files']))
+        for name,entry in manifest['files'].items():
+            self.assertEqual(entry,{'bytes':(payload/name).stat().st_size,'sha256':sha256(payload/name)})
+        model_card = (payload/'README.md').read_text()
+        self.assertIn('| 新留出 | 24 | 2 | 5 |',model_card)
+        self.assertIn('一个训练种子 `101`',model_card)
+        evidence = read(args.out/'release-evidence.json')
+        self.assertTrue(evidence['decision']['accepted'])
+        self.assertFalse(evidence['weights_public'])

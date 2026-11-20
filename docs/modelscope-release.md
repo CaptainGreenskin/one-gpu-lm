@@ -15,6 +15,8 @@
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
+[发布打包入口](../experiments/039-release-development/release_package.py)重算已经回放审计的最终配对分数，核对同一适配器的分发审查、许可原文和两次独立重载。全部门槛通过后，才在新目录生成 `payload/` 和 `release-evidence.json`。前者包含两份适配器文件、带聚合结果和加载示例的模型卡，以及核验过的许可材料。后者保留在本地，记录逐文件大小与 SHA-256。发布后用实际 ModelScope 提交号补全下载校验回执。
+
 ## 恢复适配器备份
 
 已有 031 私有备份可用以下命令恢复。运行环境需安装 NumPy 与 safetensors。命令在 CPU 上核对 SHA-256、底座 revision、目标模块、LoRA 秩和全部张量，并复查恢复目录。发布版本下载后还需在匹配底座上执行固定输入的加载和生成复验。
