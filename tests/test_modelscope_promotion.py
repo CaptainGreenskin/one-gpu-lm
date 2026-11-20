@@ -3,19 +3,22 @@ import json
 from pathlib import Path
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
 from one_gpu_lm.common.receipts import sha256
+from one_gpu_lm.common.edit_progress import EditableProgress
 
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery','final_campaign')
+entrypoints = ('analysis','promotion','recovery','final_campaign','final_audit')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
+    import final_audit
     import final_campaign
     from promotion import REFERENCE, authorize, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
@@ -126,6 +129,55 @@ class ModelScopePromotionTests(unittest.TestCase):
             tasks.write_bytes(b'changed sealed fixture bytes')
             with self.assertRaisesRegex(ValueError,'frozen final environment'):
                 final_campaign.verify_sealed_files(root)
+
+    def test_final_replay_rejects_changed_tokens_opening_and_workspace(self):
+        directory = self.directory
+        workspace = directory/'workspace'
+        workspace.mkdir()
+        (workspace/'module.py').write_text('answer = 2\n')
+        original = {'module.py':sha256(workspace/'module.py')}
+        tracker = EditableProgress(workspace,original,original)
+        state = tracker.snapshot()
+        opening = [('system','Fixture system'),('user','Fixture repair')]
+        messages = [{'role':role,'content':content} for role,content in opening]
+        _,progress = tracker.prepare_request(messages,0,12,True)
+        protocol = read(REFERENCE/'protocol.json')
+        policy,budget = protocol['variants']['shared'],protocol['agent']
+        identity = {'agent_policy':policy,'backend':{'adapter':True}}
+        tokens = [1,2,3]
+        tokenizer = SimpleNamespace(apply_chat_template=lambda *_args,**_kwargs:tokens)
+        generation = {'progress':progress,'input_tokens':len(tokens),'input_tokens_sha256':final_audit.json_sha256(tokens),
+                      'generated_tokens':8,'agent_policy':policy,'adapter':True,'action_format_valid':True,
+                      'dialogue':{'structured_tool_calls':0,'tool_results':0},
+                      'context':{'policy':'full','raw_input_tokens':3,'packed_input_tokens':3,
+                                 'dropped_rounds':0,'original_messages':2,'packed_messages':2}}
+        messages += [{'role':'assistant','content':'```bash\necho hello\n```',
+                      'extra':{'generation':generation,'actions':[{'command':'echo hello'}]}},
+                     {'role':'user','content':'Exit code: 0\nhello','extra':{'tool':{'returncode':0}}}]
+        steps = [dict(state,call_index=1)]
+        result = {'agent_policy':policy,'calls':1,'generated_tokens':8,'generations':[generation],
+                  'tool_calls':1,'source_progress':steps,'backend_errors':[],'source_sha256':original}
+        trace = {'messages':messages,'local_model':{'config':budget,'policy':policy,'responses':[generation],
+                                                   'generated_tokens':8,'backend_errors':[],'source_progress':steps},
+                 'environment':{'tool_calls':1}}
+        checkpoint = {'trajectory':trace,'identity':identity,'n_calls':1,'boundary':'completed_step','workspace_manifest':original}
+        self.save('original.json',original)
+
+        def replay(prompt):
+            for name,value in [('trajectory.json',trace),('result.json',result),('checkpoint.json',checkpoint)]:
+                self.save(name,value)
+            return final_audit.replay_trace(directory,result,original,identity,budget,
+                                            {'chat_template_kwargs':{}},tokenizer,prompt)
+
+        self.assertEqual(replay(opening)['requests_replayed'],1)
+        with self.assertRaisesRegex(ValueError,'Opening messages'):
+            replay(opening[:1]+[('user','Different repair')])
+        generation['input_tokens_sha256'] = '0'*64
+        with self.assertRaisesRegex(ValueError,'input or progress'):
+            replay(opening)
+        (workspace/'module.py').write_text('answer = 5\n')
+        with self.assertRaisesRegex(ValueError,'workspace manifest changed'):
+            replay(opening)
 
     def test_final_gate_reuses_the_full_public_inventory(self):
         reference = REFERENCE/'protocol.json'
