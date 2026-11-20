@@ -15,4 +15,16 @@
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
+## 恢复适配器备份
+
+已有 031 私有备份可用以下命令恢复。运行环境需安装 NumPy 与 safetensors。命令在 CPU 上核对 SHA-256、底座 revision、目标模块、LoRA 秩和全部张量，并复查恢复目录。发布版本下载后还需在匹配底座上执行固定输入的加载和生成复验。
+
+```bash
+python -m one_gpu_lm.models.adapter_bundle \
+  --adapter /path/to/backup \
+  --profile experiments/031-correction-mix/candidate-profile.json \
+  --receipt experiments/031-correction-mix/results/2026-11-17-training/integrity.json \
+  --restore-to /path/to/restored-adapter
+```
+
 031、032 等历史候选保留已验证备份，模型卡会注明测试任务分布、训练种子和局限。短仓库修复结果描述本轮预算内的能力。长任务另有独立证据后在发布记录中报告。若候选落败，公开该轮开发结论，后续候选继续使用封存边界。
