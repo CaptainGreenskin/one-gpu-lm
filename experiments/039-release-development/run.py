@@ -22,9 +22,9 @@ from one_gpu_lm.verified.sandbox import Sandbox
 from one_gpu_lm.verified.tasks import relative, validate_source
 
 from analysis import schedule
+from recovery import AMENDMENT, EXP, RESUMED, inspect, restore, served_weight_hashes, validate_amendment
 
 
-EXP = Path('experiments/039-release-development')
 REFERENCE = Path('experiments/038-independent-compact')
 PRIVATE = Path('private/modelscope-development')
 DATA = PRIVATE/'development'
@@ -72,6 +72,8 @@ class Context:
     proof: dict
     order: list
     runtime: dict
+    files: dict
+    recovery: dict = None
 
 
 def reference_protocol(root):
@@ -89,11 +91,13 @@ def prefix_prompt(root, common, task, output):
     return evidence.make_task(task,output,'transcript',normalization(root),common['evaluation_budget']['max_tool_output_chars'])
 
 
-def inputs(root):
+def inputs(root, *, resume=False):
     path=root/EXP/'protocol.json'
     plan=read(path)
     design=read(root/EXP/'design.json')
-    if any(plan.get(k)!=v for k,v in design.items()) or not frozen(root,plan['frozen_files']):
+    recovery, files = (validate_amendment(root,path,plan,root/PRIVATE/'recovery-publication.json')
+                       if resume else (None,plan['frozen_files']))
+    if any(plan.get(k)!=v for k,v in design.items()) or not frozen(root,files):
         raise ValueError('Changed scientific design or frozen input')
     publication=read(root/PRIVATE/'publication.json')
     if (not publication['anonymous_files_verified'] or publication['ci_conclusion']!='success'
@@ -111,7 +115,7 @@ def inputs(root):
             or candidate['checkpoint_files_sha256']!=actual or plan['all_adapter_files_sha256']!=actual):
         raise ValueError('031 candidate differs from the reviewed weight files')
     common.update(adapter_directory=str(adapter_dir),all_adapter_files_sha256=actual,
-                  adapter_sha256={n:actual[n] for n in ('adapter_config.json','adapter_model.safetensors')})
+                  adapter_sha256=served_weight_hashes(actual))
     tasks={i:t for i,t in enumerate(read(root/DATA/'tasks.json')['tasks'],1)}
     sources={s['source_id']:s for s in read(root/DATA/'sources.json')['sources']}
     proof=read(root/DATA/'preflight.json')
@@ -136,11 +140,12 @@ def inputs(root):
     order=schedule(list(tasks),plan)
     if fingerprint(order)!=plan['schedule_sha256']:
         raise ValueError('Evaluation schedule changed')
-    return Context(plan,path,common,tasks,sources,prompts,proof,order,read(root/'private/parent-runtime.json'))
+    return Context(plan,path,common,tasks,sources,prompts,proof,order,
+                   read(root/'private/parent-runtime.json'),files,recovery)
 
 
 def run(root, context):
-    out=root/OUT
+    out=root/(RESUMED if context.recovery else OUT)
     if out.exists():
         raise ValueError('Preserve the original registered attempt')
     if len(str(out/'backend.sock').encode())>=108:
@@ -151,24 +156,39 @@ def run(root, context):
     budget=plan['evaluation_budget']
     sandboxes={path:Sandbox(read(root/path),budget['max_tool_seconds'])
                for path in {test_runtime(t['family']) for t in context.tasks.values()}}
-    (out/'private').mkdir(mode=0o700,parents=True)
-    start=time.time()
+    retained=inspect(root/OUT,context) if context.recovery else None
+    resume_start=time.time()
+    start=retained['started_epoch'] if retained else resume_start
     deadline=start+plan['pipeline_limit_seconds']
+    if resume_start>=deadline:
+        raise TimeoutError('Original registered deadline has expired')
+    if retained:
+        restore(root/OUT,out,retained)
+    else:
+        (out/'private').mkdir(mode=0o700,parents=True)
     state={'stage':'loading','complete':False,'started_epoch':start,'deadline_epoch':deadline,
            'protocol_sha256':sha256(context.plan_path),'schedule_sha256':plan['schedule_sha256'],
            'expected_runs':len(context.order),'runs':[],'backend_lifecycles':[],
            'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
+    if retained:
+        state.update(runs=retained['runs'],backend_lifecycles=retained['backend_lifecycles'],
+                     recovery={'plan_sha256':sha256(root/AMENDMENT),'resumed_epoch':resume_start,
+                               'previous_finished_epoch':retained['finished_epoch'],
+                               'retained_rollouts':len(retained['runs']),
+                               'retained_telemetry':retained['telemetry']})
+    remaining=context.order[len(state['runs']):]
 
     def save():
         atomic(out/'controller.json',state)
 
     save()
     backend=JournalBackend(root,out,context.runtime,common,state['backend_lifecycles'],save)
-    telemetry=Telemetry(out/'telemetry.csv',1)
+    backend.number=len(state['backend_lifecycles'])
+    telemetry=Telemetry(out/'telemetry.csv',2 if retained else 1)
     telemetry.start()
     try:
         previous=None
-        for item in context.order:
+        for item in remaining:
             arm=item['arm']
             planned=budget['max_task_seconds']+budget['max_tool_seconds']+plan['recovery_accounting_seconds']
             if time.time()+planned+(600 if arm!=previous else 0)>deadline:
@@ -200,8 +220,13 @@ def run(root, context):
         raise
     finally:
         backend.stop()
-        unchanged=frozen(root,plan['frozen_files'])
-        state.update(frozen_inputs_unchanged=unchanged,backend_stopped=True,telemetry=telemetry.stop(),
+        unchanged=frozen(root,context.files)
+        samples=telemetry.stop()
+        if retained:
+            state['recovery']['new_telemetry']=samples.copy()
+            for key in ('samples','errors'):
+                samples[key]+=retained['telemetry'][key]
+        state.update(frozen_inputs_unchanged=unchanged,backend_stopped=True,telemetry=samples,
                      finished_epoch=time.time(),finished_utc=datetime.now(timezone.utc).isoformat())
         if not unchanged:
             state.update(stage='inputs_changed',complete=False)
@@ -212,9 +237,12 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--check',action='store_true')
+    p.add_argument('--resume',action='store_true',help='Use the published recovery amendment')
     a=p.parse_args()
-    root=a.root.resolve(); context=inputs(root)
+    root=a.root.resolve(); context=inputs(root,resume=a.resume)
     if a.check:
-        print(json.dumps({'tasks':len(context.tasks),'rollouts':len(context.order),'final_test_opened':False}))
+        retained=inspect(root/OUT,context) if a.resume else None
+        print(json.dumps({'tasks':len(context.tasks),'rollouts':len(context.order),
+                          'retained_rollouts':len(retained['runs']) if retained else 0,'final_test_opened':False}))
     else:
         run(root,context)

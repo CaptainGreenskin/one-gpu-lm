@@ -81,9 +81,15 @@ def run(directory, design):
             'positive_interval_lower_bound':'区间下界大于零','maximum_family_drop':'单家族下降至多 10 个百分点'}
     lines.extend(f"| {labels[key]} | {'满足' if passed else '未满足'} |" for key,passed in result['checks'].items())
     start,end=(datetime.fromtimestamp(raw[k],BEIJING) for k in ('started_epoch','finished_epoch'))
+    recovery=raw.get('recovery')
+    pause=recovery['resumed_epoch']-recovery['previous_finished_epoch'] if recovery else 0
     lines+=['',f'北京时间 {start:%Y-%m-%d %H:%M:%S} 至 {end:%Y-%m-%d %H:%M:%S}。'
-              f'包含 {raw["backend_loads"]} 次加载，共 {(end-start).total_seconds()/3600:.2f} 单卡小时。'
-              f'{raw["verified_requests"]:,} 次生成请求通过回执审计。','',
+              f'包含 {raw["backend_loads"]} 次加载，评测进程占用单卡 {(end-start).total_seconds()/3600-pause/3600:.2f} 小时。'
+              f'{raw["verified_requests"]:,} 次生成请求通过回执审计。']
+    if recovery:
+        lines.extend(['',f'保留首段 {recovery["retained_rollouts"]} 次评测，随后续跑 {recovery["resumed_rollouts"]} 次。'
+                     f'曾在首个候选生成前中断，排除等待恢复的 {pause/60:.1f} 分钟。'])
+    lines+=['',
         '范围为六个仓库家族的 60 道历史功能修复。每题重复三次，配对区间保留题目内的重复关联。'
         '保护评分器在独立副本重跑原公开测试。预训练去污染、长任务和公开参数验收需要独立证据。','',
         '[匿名逐次结果](matched-repeats.csv) · [曲线数值](call-curves.csv) · [测量与审计](measurements.json)','']

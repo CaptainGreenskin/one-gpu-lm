@@ -13,12 +13,13 @@ from one_gpu_lm.verified.historic_tasks import prepare
 from one_gpu_lm.verified.rollout import normalization
 
 from analysis import analyze
+from recovery import AMENDMENT, RESUMED, inspect
 from run import DATA, OUT, effective, inputs, load, read
 
 
-def run(root):
-    context=inputs(root)
-    out=root/OUT
+def run(root, *, resume=False):
+    context=inputs(root,resume=resume)
+    out=root/(RESUMED if resume else OUT)
     target=out/'audit.json'
     if target.exists():
         raise ValueError('Preserve the original audit')
@@ -27,8 +28,29 @@ def run(root):
     if (not state['complete'] or not state['backend_stopped'] or not state['frozen_inputs_unchanged']
             or state['optimizer_updates'] or state['final_test_opened'] or state['weights_public']
             or state['protocol_sha256']!=sha256(context.plan_path) or state['schedule_sha256']!=context.plan['schedule_sha256']
+            or not state['started_epoch']<=state['finished_epoch']<=state['deadline_epoch']
             or [r['run_id'] for r in state['runs']]!=[r['run_id'] for r in context.order]):
         raise ValueError('Expected the complete original scheduled development run')
+    empty_backend=None
+    recovery=None
+    if resume:
+        original=inspect(root/OUT,context)
+        evidence=state['recovery']
+        if (evidence['plan_sha256']!=sha256(root/AMENDMENT)
+                or evidence['retained_rollouts']!=len(original['runs'])
+                or state['runs'][:len(original['runs'])]!=original['runs']
+                or state['backend_lifecycles'][:len(original['backend_lifecycles'])]!=original['backend_lifecycles']
+                or state['started_epoch']!=original['started_epoch'] or state['deadline_epoch']!=original['deadline_epoch']
+                or evidence['previous_finished_epoch']!=original['finished_epoch']
+                or not original['finished_epoch']<=evidence['resumed_epoch']<=state['finished_epoch']
+                or not state['telemetry']['thread_stopped']
+                or evidence['retained_telemetry']!=original['telemetry']
+                or any(state['telemetry'][key]!=original['telemetry'][key]+evidence['new_telemetry'][key]
+                       for key in ('samples','errors'))):
+            raise ValueError('The continuation did not preserve the original window and receipts')
+        empty_backend=context.recovery['incident']['failed_backend_index']
+        recovery={**evidence,**context.recovery['incident'],
+                  'resumed_rollouts':len(state['runs'])-len(original['runs'])}
     common=context.common
     prior=root/'experiments/035-edit-bottleneck'
     sys.path.insert(0,str(prior))
@@ -52,6 +74,7 @@ def run(root):
                 or artifact['model_id']!=common['model_id'] or artifact['revision']!=common['revision']
                 or artifact['adapter'] is not (role=='student') or artifact['adapter_sha256']!=selected['adapter_sha256']
                 or artifact['profile_sha256']!=common['evaluation_profile_sha256']
+                or not (directory/'requests').is_dir()
                 or read(directory.with_name(directory.name+'-environment.json'))!=environment):
             raise ValueError('Unexpected model load or runtime identity')
         journals[i]=RequestJournal(directory/'requests')
@@ -88,7 +111,8 @@ def run(root):
             seen[i].update(requests)
             row.update(repetition=item['repetition'],multifile=proof['multifile'],opening_input_tokens=proof['input_tokens'])
             rows.append(row)
-    if set(seen)!=set(journals) or any(seen[i]!={path.name for path in journal.directory.iterdir() if path.is_dir()}
+    expected_used=set(journals)-({empty_backend} if empty_backend is not None else set())
+    if set(seen)!=expected_used or any(seen.get(i,set())!={path.name for path in journal.directory.iterdir()}
                                       for i,journal in journals.items()):
         raise ValueError('Unreconciled backend request journal')
     summary={'passed':True,'schema_version':1,'protocol_sha256':sha256(context.plan_path),
@@ -96,6 +120,8 @@ def run(root):
         'started_epoch':state['started_epoch'],'finished_epoch':state['finished_epoch'],'backend_loads':len(backends),
         'telemetry':state['telemetry'],'rows':rows,'analysis':analyze(rows,context.plan),
         'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
+    if recovery:
+        summary['recovery']=recovery
     write_json(target,summary)
     return summary
 
@@ -103,6 +129,8 @@ def run(root):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
-    value=run(p.parse_args().root.resolve())
+    p.add_argument('--resume',action='store_true')
+    args=p.parse_args()
+    value=run(args.root.resolve(),resume=args.resume)
     print(json.dumps({'passed':value['passed'],'verified_requests':value['verified_requests'],
           'development_gate_passed':value['analysis']['development_gate_passed']}))

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "original_protocol_sha256": "fa0dfeea4a7480571c035ab51c6a5fdc3d57587d5e49ecf6528dfc20ad252b5f",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "remaining_schedule_sha256": "4c5a4e46cd9ecb97024862a9b573df89ab23e3ef20be4a156efc67a082c3bb2f",
+  "incident": {
+    "original_controller_sha256": "84b35b0771e91108c0da553f81845bc32bfa6abf40321c12dfa4f7ebc814f0f9",
+    "original_telemetry_sha256": "cce55c2f61786e5236e2d81efe5f110e9eaafbb7b68d0d6323b4f6064395884a",
+    "retained_rollouts": 10,
+    "retained_verified_requests": 113,
+    "failed_backend_index": 2,
+    "aborted_generation_requests": 0
+  },
+  "frozen_replacements": {
+    "experiments/039-release-development/run.py": "3d65d827df05bbb6e25e435d2dbe527a712aa12e3d9a3c2440879e349c3d850e",
+    "experiments/039-release-development/audit.py": "b510f43027625ca72b77b7f4e4d3ae729618a94ea5e559e7d98e39a70a6d793c"
+  },
+  "frozen_additions": {
+    "experiments/039-release-development/recovery.py": "96f2ef0d83a6e489cade173873131038adeaf3814874b61bf3ff2c2fee5b8a8c"
+  }
+}
