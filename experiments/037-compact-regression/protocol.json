@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-20",
+  "036_commit": "1dd9fc626bc6ce29358b69e2e7e9117b6c9aad35",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "adapter": false,
+  "evaluation_cohort": "034_development",
+  "tasks": 20,
+  "families": {
+    "arrow-py/arrow": 5,
+    "d3/d3-array": 5,
+    "networkx/networkx": 5,
+    "ramda/ramda": 5
+  },
+  "language_counts": {
+    "python": 10,
+    "javascript": 10
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "recovery_accounting_seconds": 180,
+  "primary_outcome": "Within actor budget, edited source passes a protected fresh regrade and model executed terminal submission.",
+  "followup_gate": {
+    "minimum_net_repairs": 2,
+    "minimum_positive_families": 2,
+    "maximum_regressions": 1
+  },
+  "arms": [
+    "prefix",
+    "compact"
+  ],
+  "rollouts": 40,
+  "pipeline_limit_seconds": 21600,
+  "schedule": "Run both formats afresh on each of the same 20 tasks. Alternate the first arm by task number.",
+  "schedule_sha256": "e4cf4b90b750c08afae804bf41dbf8c35f108647a70a0ac0faf09c2b34dc55bd",
+  "treatment": {
+    "prefix": "Exact 036 transcript opening with existing normalization and 2400-character raw prefix.",
+    "compact": "Apply previous normalizations to the full archived public test output. Extract original failure text, test name, location, and available diff lines within 1200 characters.",
+    "max_failure_blocks": 4,
+    "unsupported_format": "Use identical prior prefix.",
+    "output_source": "The same stored public regression receipt per task. No new tool or teacher calls for preparation.",
+    "common": "Both arms use one unchanged unadapted model load, same tasks, actor and grader budgets, shell isolation, and later feedback."
+  },
+  "preflight": {
+    "tasks": 20,
+    "model_calls": 0,
+    "new_tool_calls": 0,
+    "pytest": 10,
+    "tap": 10,
+    "fallback": 0,
+    "old_prefix_cut": 11,
+    "recovered_failure_lines_tasks": 5,
+    "recovered_failure_lines": 10,
+    "prefix_chars": 42162,
+    "compact_chars": 9483,
+    "max_compact_chars": 983,
+    "prefix_opening_tokens": 24338,
+    "compact_opening_tokens": 15458
+  },
+  "subgroups": [
+    "original prefix clipped",
+    "exact failure line absent under old prefix and fully shown by extractor",
+    "035 base and reminder both never edited"
+  ],
+  "new_model_scores_before_registration": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "frozen_files": {
+    "experiments/037-compact-regression/audit.py": "98ebf19cbc62e268d05109f82208c3742018aa270b0988341f167bb00ca991be",
+    "experiments/037-compact-regression/compact_feedback.py": "9aa9d9e33761c64b0434d03c4b4718d866f8cd573b76b104841c11225017e5b4",
+    "experiments/037-compact-regression/prepare.py": "81fc922085b9e71ef7ef03309dccf56121cef4e0ba70ca3adec3d7f4d2001dff",
+    "experiments/037-compact-regression/run.py": "54b70c5746832984532d84af573963b567af6856123ec2ffef46e80ea02fe53a",
+    "experiments/036-regression-evidence/protocol.json": "e8965d38b57f81fe47215949da9c09b03959ad4bf5e89d016d2854b0f122469f",
+    "experiments/036-regression-evidence/run.py": "8f67e6e21d751bee53cd84c2ad07673bb5f2b08e7f2e54f1f5ff03de1c4731e4",
+    "experiments/036-regression-evidence/evidence.py": "153f51322134e2fe71a32da4633254f110b0d274e88c6042598f886ca5e2529e",
+    "private/compact-regression/compaction-preflight.json": "08baaf0b77c8ef08db90d27c64c48761e29b664fccb314c6f52199e58819480c",
+    "runs/historic036-evidence-r1/audit.json": "45a9782a65a5fe0a935f2865d267f93be12a72f80f6b249645dca0980389c824"
+  }
+}
