@@ -11,7 +11,7 @@
 
 038 的独立复验已结束。失败摘录净增两道，低于三道的门槛。下一轮参数对照统一沿用旧前缀。[038 结果与曲线](../experiments/038-independent-compact/results/2026-11-20/)
 
-[039 的独立参数筛查](../experiments/039-release-development/)先核验 031 适配器，再在六个新家族的 60 道题上与底座同预算对照。031 的五个训练来源均有实验用途记录，准备公开参数时还需完成分发资格审查。
+[039 的独立参数筛查](../experiments/039-release-development/)先核验 031 适配器，再在六个新家族的 60 道题上与底座同预算对照。031 的训练输入、教师模型和上游许可材料已绑定到同一候选。公开分发范围仍待审查。[031 来源与许可核验](../experiments/031-correction-mix/release-provenance.md)
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
