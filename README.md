@@ -60,6 +60,7 @@
 | 034 · 首步目标权重对照 | 固定数据和训练步数，屏蔽 40 条首步测试目标会改变预算内修复表现吗？ | [训练曲线](experiments/034-first-action-ablation/results/2026-11-19-training/)与[20 对独立开发题结果](experiments/034-first-action-ablation/results/2026-11-19-development/)。原样首步测试 10 → 0，修复且提交 1 → 0，未达复验门槛。 |
 | 035 · 首次改码瓶颈 | 长时间查阅后加一次提示，能否提高预算内修复并提交率？ | [同题底座诊断](experiments/035-edit-bottleneck/results/2026-11-19-baseline/) · [提示对照](experiments/035-edit-bottleneck/results/2026-11-19-reminder/)。修复并提交 1 → 2，全程未改码 12 → 14，未达复验门槛。 |
 | 036 · 公开回归失败证据 | 在同预算下直接提供失败输出，能否带来更多正确修复？ | [20 对结果和曲线](experiments/036-regression-evidence/results/2026-11-20/) · [重启恢复协议](experiments/036-regression-evidence/recovery-plan.json)。修复并提交 3 → 3，新增 2 道、退步 2 道，未达复验门槛。 |
+| 037 · 失败输出摘录 | 从同一份输出保留断言和位置，能否改善预算内修复？ | [20 对结果和曲线](experiments/037-compact-regression/results/2026-11-20/)。修复并提交 3 → 5，全程未改码 14 → 10，满足独立复验门槛。 |
 
 015 已完成 96 次配对运行：格式组和组合组的新仓库任务从基线 2/12 提高到 5/12，格式错误率约从 20.2% 降至 2.8%；两组都退步了 1 个历史任务，未通过冻结的晋级门槛。上下文管理消除了本轮少量超限请求，没有额外提高成功率。任务控制器耗时分别增加约 29% 和 31%。这是同一 27B 底座的接口评测，未更新权重；小样本构造任务结果不代表通用编码能力认证。
 
