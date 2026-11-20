@@ -4,17 +4,19 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from one_gpu_lm.common.receipts import sha256
 
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery')
+entrypoints = ('analysis','promotion','recovery','final_campaign')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
+    import final_campaign
     from promotion import REFERENCE, authorize, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
 finally:
@@ -79,6 +81,51 @@ class ModelScopePromotionTests(unittest.TestCase):
         audit.update(analysis=analyze(audit['rows'],self.plan),verified_requests=359)
         with self.assertRaises(ValueError):
             authorize(self.plan_path,self.save('audit',audit),absent,absent)
+
+    def test_final_entry_waits_for_the_completed_audited_controller(self):
+        root = self.directory/'working'
+        absent = self.directory/'unopened'
+        status = root/final_campaign.PRIVATE/'pipeline-resumed.json'
+        status.parent.mkdir(parents=True)
+        status.write_text(json.dumps({'stage':'executing','complete':False,'final_test_opened':False}))
+        with patch.object(final_campaign,'authorize',side_effect=AssertionError('The seal is still closed')):
+            result = final_campaign.promotion_from_finished_run(root,absent,absent)
+        self.assertEqual(result,{'approved':False,'stage':'development_pending','final_test_opened':False})
+        self.assertFalse(absent.exists())
+
+        plan = root/final_campaign.EXP/'protocol.json'
+        plan.parent.mkdir(parents=True)
+        plan.write_bytes(self.plan_path.read_bytes())
+        path = root/final_campaign.RESUMED
+        path.mkdir(parents=True)
+        status.write_text(json.dumps({'stage':'complete','complete':True,'final_test_opened':False}))
+        controller = {'stage':'completed','complete':True,'backend_stopped':True,'frozen_inputs_unchanged':True,
+                      'started_epoch':1,'finished_epoch':200,'final_test_opened':False,'runs':[0]*360}
+        control = path/'controller.json'
+        control.write_text(json.dumps(controller))
+        audit = dict(self.synthetic_audit(False),controller_sha256=sha256(control))
+        (path/'audit.json').write_text(json.dumps(audit))
+        result = final_campaign.promotion_from_finished_run(root,absent,absent)
+        self.assertFalse(result['approved'])
+        self.assertEqual(result['stage'],'development_gate')
+        control.write_text(json.dumps(dict(controller,finished_epoch=201)))
+        with self.assertRaisesRegex(ValueError,'completed controller'):
+            final_campaign.promotion_from_finished_run(root,absent,absent)
+
+    def test_final_seal_verifier_checks_bytes_without_reading_task_schema(self):
+        root = self.directory/'archive'
+        tasks = root/'private/tasks.json'
+        tasks.parent.mkdir(parents=True)
+        tasks.write_bytes(b'sealed fixture bytes')
+        protocol = root/final_campaign.SEALED_EXPERIMENT/'protocol.json'
+        protocol.parent.mkdir(parents=True)
+        value = {'frozen_files':{'private/tasks.json':sha256(tasks)}}
+        protocol.write_text(json.dumps(value))
+        with patch.object(final_campaign,'REFERENCE',protocol.parent):
+            self.assertEqual(final_campaign.verify_sealed_files(root),value)
+            tasks.write_bytes(b'changed sealed fixture bytes')
+            with self.assertRaisesRegex(ValueError,'frozen final environment'):
+                final_campaign.verify_sealed_files(root)
 
     def test_final_gate_reuses_the_full_public_inventory(self):
         reference = REFERENCE/'protocol.json'
