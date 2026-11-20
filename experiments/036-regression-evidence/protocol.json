@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-20",
+  "035_commit": "c97efe77d6c86c945e8e68de683a6c35b5a07fee",
+  "evaluation_cohort": "034_development",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "adapter": false,
+  "tasks": 20,
+  "families": {
+    "arrow-py/arrow": 5,
+    "d3/d3-array": 5,
+    "networkx/networkx": 5,
+    "ramda/ramda": 5
+  },
+  "language_counts": {
+    "python": 10,
+    "javascript": 10
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "recovery_accounting_seconds": 180,
+  "primary_outcome": "Within actor budget, edited source passes a protected fresh regrade and model executed terminal submission.",
+  "arms": [
+    "exit_only",
+    "transcript"
+  ],
+  "intervention": {
+    "shared": "Before model work, one registered public regression executes in a disposable copy of each original defective workspace. Both arms receive its exit code and the same instruction to test after editing.",
+    "exit_only": "The initial user request contains the exit summary.",
+    "transcript": "The initial user request additionally contains the identical raw output after the existing capped feedback normalization.",
+    "fresh_workspaces": true,
+    "public_regressions_shared_between_arms": true,
+    "preflight_seconds_outside_actor_budget": true
+  },
+  "preflight": {
+    "public_regressions": 20,
+    "received_failure_marker": 16,
+    "clipped_outputs": 11,
+    "total_tool_seconds": 22.38873810003861,
+    "maximum_delivered_chars": 2449
+  },
+  "historically_stuck_tasks": 12,
+  "post_hoc_diagnosis_before_new_rollouts": {
+    "named_editable_source_in_first_four": 12,
+    "ran_exact_regression": 0,
+    "exhausted_calls": 12
+  },
+  "rollouts": 40,
+  "schedule_sha256": "f761353179a93cf01d9eeda18b19007c8eccf86043e8d43b6b0f9e779e19b214",
+  "schedule": "Same fixed 20 tasks as 035. Adjacent paired rollouts with arm order alternating by anonymous task number.",
+  "pipeline_limit_seconds": 36000,
+  "followup_gate": {
+    "minimum_net_repairs": 2,
+    "minimum_positive_families": 2,
+    "maximum_regressions": 1
+  },
+  "secondary_outcomes": [
+    "first source edit by call index",
+    "no edit",
+    "protected grade without submission",
+    "literal regression execution",
+    "previously stuck 12 tasks",
+    "actual token and wall time cost"
+  ],
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "new_model_scores_before_registration": 0,
+  "frozen_files": {
+    "experiments/036-regression-evidence/run.py": "8f67e6e21d751bee53cd84c2ad07673bb5f2b08e7f2e54f1f5ff03de1c4731e4",
+    "experiments/036-regression-evidence/audit_results.py": "eced5100eaa9b060c5967b7cf6232c53718d0b70e0a50fd3483b20befbbf92b8",
+    "experiments/036-regression-evidence/evidence.py": "153f51322134e2fe71a32da4633254f110b0d274e88c6042598f886ca5e2529e",
+    "experiments/035-edit-bottleneck/baseline.py": "9cce2982bfee4968df6419d95f233fbd47273dc23e622b673e781073295c31d6",
+    "experiments/035-edit-bottleneck/audit.py": "af495cf0cbd6c262878050574130c6788b67af47fcb5488f4237ca40006d8c7c",
+    "experiments/035-edit-bottleneck/baseline-plan.json": "7a50c479a8a3af2f7028f63687a6741254de72e47b43cbac9b90ea669e2011ba",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/verified/historic_admit.py": "c50c878405d4e6593bbd3fec2860ff0d63d6c46dc7929bdc52ab6ded59da4e30",
+    "private/regression-evidence/evidence-preflight.json": "54d47b0a87f7b50514cf453f3c162c83856d1e152216ca3dca016bd2aadb5945",
+    "runs/historic035-base-001/audit.json": "19b49ef5ce6b70a8af0a3656b385fa48845665b1959ebeb7611172147b0bf398",
+    "runs/historic035-reminder-001/audit.json": "306a5912d8910f7627e7e4b94da9f3d89aabbe6641e49366f510066c70b740b2",
+    "runs/historic035-base-001/controller.json": "e848bc793490af0781d3ac1448944dea9b3799b79ece7becc5a33df8c315ba25"
+  }
+}
