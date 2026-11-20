@@ -31,7 +31,16 @@ python -m one_gpu_lm.models.adapter_bundle \
 
 ## 核对 ModelScope 上的发布版本
 
-发布回执包含站点 `endpoint`、仓库 `repo_id`、完整 ModelScope Git 提交 `revision`，以及批准发布的逐文件 `files` 清单，每项有 `bytes` 和 `sha256`。文件清单依据打包时确定的文件字节。回读先匿名核对仓库、公开状态和完整文件清单，再将指定提交逐文件下载到新目录并计算哈希。[下载校验实现](../one_gpu_lm/models/modelscope_readback.py)
+[发布入口](../experiments/039-release-development/publish_package.py)使用通过验收的打包目录和 ModelScope 国际站的登录态。在本机安装 `modelscope-hub==0.7.0` 后，`check` 核对回执与本地文件。`stage` 创建私有模型仓库，只上传经审核的文件，从实际 Git 提交重新下载并逐文件校验。`publish` 再次比对同一提交后开放访问，匿名下载到新目录。状态保存在打包目录的 `modelscope-release.json`，网络中断后可按原提交恢复。[ModelScope Hub SDK](https://github.com/modelscope/modelscope_hub)
+
+```bash
+PYTHONPATH=. python experiments/039-release-development/publish_package.py check --package /path/to/accepted-release
+PYTHONPATH=. python experiments/039-release-development/publish_package.py stage --package /path/to/accepted-release
+PYTHONPATH=. python experiments/039-release-development/publish_package.py publish \
+  --package /path/to/accepted-release --download-to /path/to/fresh-download
+```
+
+`modelscope-release.json` 中的 `staged_manifest` 包含站点 `endpoint`、仓库 `repo_id`、完整 ModelScope Git 提交 `revision`，以及逐文件的 `files` 清单，每项有 `bytes` 和 `sha256`。可以将该字段单独保存为 JSON 后独立复验。回读先匿名核对仓库、公开状态和完整文件清单，再将指定提交逐文件下载到新目录并计算哈希。[下载校验实现](../one_gpu_lm/models/modelscope_readback.py)
 
 ```bash
 python -m one_gpu_lm.models.modelscope_readback \
