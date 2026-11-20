@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "fixed_design_before_development_scoring",
+  "reference_experiment_commit": "98a516cbb84818615c12d11dc16f7fae42433a41",
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "candidate": "original_031_mixed_lora",
+  "candidate_selection": "Test the original audited 031 adapter once. Its previous constructed cohort gave a modest gain and the later historical cohort showed no net advantage. Reassessment under the frozen reference runtime measures whether it generalizes to this cohort.",
+  "conditioning": "Exact 038 prefix arm. Each task gets the same one CPU-verified public failure output, normalized with 038 rules and clipped at the same boundary. Both checkpoint variants receive byte-identical initial prompts on the same task.",
+  "families": {
+    "acornjs/acorn": 10,
+    "agronholm/apscheduler": 10,
+    "date-fns/date-fns": 10,
+    "hynek/structlog": 10,
+    "josdejong/mathjs": 10,
+    "textualize/rich": 10
+  },
+  "language_counts": {"python": 30, "javascript": 30},
+  "task_count": 60,
+  "selection": "Require two original-parent semantic failures, two passing upstream reference runs and a passing protected regrade. Choose by ascending task ID hash within each family. Verify prior training and development lineage and check mounted runtime contents for reference answers.",
+  "repetitions": 3,
+  "rollout_count": 360,
+  "block_size": 10,
+  "schedule": "Hash order with repetition as salt; complete both variants on each ten-task block; alternate first variant by block and repetition.",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "primary_metric": "Source changed, passes the protected fresh grader and explicitly submits within the actor budget.",
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 39039,
+    "complete_audited_repetitions_required": true
+  },
+  "optimizer_updates_during_development": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed_by_development": false
+}
