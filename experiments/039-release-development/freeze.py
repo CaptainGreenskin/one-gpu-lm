@@ -18,7 +18,7 @@ from one_gpu_lm.verified.historic_tasks import prepare, validate_split
 from one_gpu_lm.verified.tasks import relative
 
 from analysis import schedule
-from run import DATA, EXP, OUT, PRIVATE, REFERENCE, TEST_RUNTIME, prefix_prompt, read, reference_protocol
+from run import DATA, EXP, OUT, PRIVATE, REFERENCE, prefix_prompt, read, reference_protocol, test_runtime
 
 
 def select(root,design):
@@ -28,13 +28,13 @@ def select(root,design):
             or lineage['reference_experiment_commit']!=design['reference_experiment_commit']):
         raise ValueError('Complete development family lineage proof required')
     index=read(private/'admission-index.json')
-    runtime=root/TEST_RUNTIME
-    runtime_hash=sha256(runtime)
-    mounted={m['sha256'] for m in read(runtime)['mounts']}
+    runtimes={p:(sha256(root/p),{m['sha256'] for m in read(root/p)['mounts']})
+              for p in {test_runtime(family) for family in design['families']}}
     selected=[]
     family_receipts={}
     admission_paths=[]
     for family,size in sorted(design['families'].items()):
+        runtime_hash,mounted=runtimes[test_runtime(family)]
         entry=index[family]
         corpus=private/relative(entry['candidate_directory'])
         stem=family.replace('/','--')
@@ -128,8 +128,8 @@ def freeze(root):
                      Path('experiments/035-edit-bottleneck/audit.py'),
                      Path('experiments/032-multifile-completion/evaluation-protocol.json')]
     dependencies += [common[name] for name in ('environment_path','evaluation_profile_path','model_manifest_path')]
-    dependencies += [TEST_RUNTIME]
-    dependencies += [PRIVATE/name for name in ('runtime-proof-v2.json','lineage-review.json',
+    dependencies += [test_runtime(family) for family in design['families']]
+    dependencies += [PRIVATE/name for name in ('runtime-proof-v2.json','runtime-proof-date.json','lineage-review.json',
                                               'admission-index.json','candidate-input-review.json')]
     dependencies += [DATA/name for name in ('tasks.json','sources.json','preflight.json')]
     dependencies += [DATA/'public-tests'/f't{i:02d}.json' for i in range(1,len(chosen)+1)]

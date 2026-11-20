@@ -30,6 +30,7 @@ PRIVATE = Path('private/modelscope-development')
 DATA = PRIVATE/'development'
 OUT = Path('runs/q039-development')
 TEST_RUNTIME = PRIVATE/'offline-runtime-v2.json'
+DATE_RUNTIME = PRIVATE/'offline-runtime-date.json'
 
 
 def read(path):
@@ -46,6 +47,10 @@ def load(name,path):
 
 def frozen(root, files):
     return all((root/relative(name)).is_file() and sha256(root/relative(name))==value for name,value in files.items())
+
+
+def test_runtime(family):
+    return DATE_RUNTIME if family=='date-fns/date-fns' else TEST_RUNTIME
 
 
 def effective(common, arm):
@@ -144,7 +149,8 @@ def run(root, context):
     profile=read(root/common['evaluation_profile_path'])
     verify_model(Path(context.runtime['model']),root/common['model_manifest_path'],profile)
     budget=plan['evaluation_budget']
-    sandbox=Sandbox(read(root/TEST_RUNTIME),budget['max_tool_seconds'])
+    sandboxes={path:Sandbox(read(root/path),budget['max_tool_seconds'])
+               for path in {test_runtime(t['family']) for t in context.tasks.values()}}
     (out/'private').mkdir(mode=0o700,parents=True)
     start=time.time()
     deadline=start+plan['pipeline_limit_seconds']
@@ -176,6 +182,7 @@ def run(root, context):
             previous=arm
             task=context.prompts[item['task_number']]
             directory=out/'private/tasks'/item['run_id']
+            sandbox=sandboxes[test_runtime(task['family'])]
             result=rollout(root,root/DATA,task,context.sources[task['source_id']],socket,sandbox,
                          protocol,directory,role+'_current',journal_path=backend.journal_path,
                          recovery_seconds=plan['recovery_accounting_seconds'])
