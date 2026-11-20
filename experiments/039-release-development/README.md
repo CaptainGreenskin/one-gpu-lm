@@ -9,4 +9,4 @@
 
 CPU 准入完成。135 个候选中 107 个通过，按预定哈希顺序抽取 60 道，其中 9 道具有逐文件反转确认的多文件修复。工作站检查以新副本完成，保留最初因归档元数据、测试依赖或运行时兼容性导致的失败记录。原 031 的权重及 1,006 条训练输入已经核对，五份主许可证与固定上游版本逐字节一致，来源分发资格仍需发布审查。通过开发门槛后才开启单独封存的最终测试。发布范围与下载、验哈希、加载要求见 [ModelScope 发布目标](../../docs/modelscope-release.md)。
 
-[冻结协议](protocol.json) · [固定设计](design.json) · [分析实现](analysis.py) · [031 结果](../031-correction-mix/STATUS.md)
+[冻结协议](protocol.json) · [固定设计](design.json) · [分析实现](analysis.py) · [曲线生成](report.py) · [031 结果](../031-correction-mix/STATUS.md)
