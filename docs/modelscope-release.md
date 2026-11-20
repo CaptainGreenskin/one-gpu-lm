@@ -1,6 +1,6 @@
 # 27B 编码模型发布目标
 
-首个发布物是通过验收的 27B 编码 LoRA，发布到 [CaptainGreenskin 的 ModelScope 账号](https://www.modelscope.ai/profile/CaptainGreenskin)。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。
+首个发布物是通过验收的 27B 编码 LoRA，发布到 ModelScope 国际站的 CaptainGreenskin 账号。认证、发布与公开下载均使用该账号所在站点。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。[ModelScope 发布账号](https://www.modelscope.ai/profile/CaptainGreenskin) · [官方站点说明](https://www.modelscope.cn/skills/modelscope/ms-hub)
 
 | 阶段 | 验收证据 |
 |---|---|
@@ -26,5 +26,17 @@ python -m one_gpu_lm.models.adapter_bundle \
   --receipt experiments/031-correction-mix/results/2026-11-17-training/integrity.json \
   --restore-to /path/to/restored-adapter
 ```
+
+## 核对 ModelScope 上的发布版本
+
+发布回执包含站点 `endpoint`、仓库 `repo_id`、完整 ModelScope Git 提交 `revision`，以及批准发布的逐文件 `files` 清单，每项有 `bytes` 和 `sha256`。文件清单依据打包时确定的文件字节。回读先匿名核对仓库、公开状态和完整文件清单，再将指定提交逐文件下载到新目录并计算哈希。[下载校验实现](../one_gpu_lm/models/modelscope_readback.py)
+
+```bash
+python -m one_gpu_lm.models.modelscope_readback \
+  --manifest /path/to/release-files.json \
+  --out /path/to/fresh-download
+```
+
+下载复验通过后，用同一底座 revision 与评测配置加载适配器，并比较固定输入的 greedy 输出回执。
 
 031、032 等历史候选保留已验证备份，模型卡会注明测试任务分布、训练种子和局限。短仓库修复结果描述本轮预算内的能力。长任务另有独立证据后在发布记录中报告。若候选落败，公开该轮开发结论，后续候选继续使用封存边界。
