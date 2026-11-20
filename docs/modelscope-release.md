@@ -37,6 +37,21 @@ python -m one_gpu_lm.models.modelscope_readback \
   --out /path/to/fresh-download
 ```
 
-下载复验通过后，用同一底座 revision 与评测配置加载适配器，并比较固定输入的 greedy 输出回执。
+发布前，在空闲 GPU 上分别独立加载原始适配器和恢复到新目录的副本。两次使用同一份底座文件清单、评测配置和适配器哈希回执。回执记录两个固定输入的 token 哈希与 greedy 输出 token 哈希。
+
+```bash
+python -m one_gpu_lm.verified.reload_probe capture \
+  --model /path/to/verified-base --adapter /path/to/adapter \
+  --profile /path/to/evaluation-profile.json \
+  --base-manifest /path/to/base-files.json \
+  --adapter-receipt /path/to/approved-adapter-hashes.json \
+  --out /path/to/before.json
+
+python -m one_gpu_lm.verified.reload_probe compare \
+  --before /path/to/before.json --after /path/to/after.json \
+  --out /path/to/reload-comparison.json
+```
+
+第二次 `capture` 使用恢复后的适配器目录，将输出写入 `after.json`。公开下载校验完成后，将下载目录再做一次 `capture`，与发布前的 `before.json` 比较。[重载校验实现](../one_gpu_lm/verified/reload_probe.py)
 
 031、032 等历史候选保留已验证备份，模型卡会注明测试任务分布、训练种子和局限。短仓库修复结果描述本轮预算内的能力。长任务另有独立证据后在发布记录中报告。若候选落败，公开该轮开发结论，后续候选继续使用封存边界。
