@@ -8,7 +8,7 @@
 
 本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
 
-**让下一代基模复用成果。** [模型升级协议](docs/model-upgrades.md) 规定新模型如何接入、对照和发布；[training_lab](training_lab/) 把模型 profile 与数据、隔离评测、LoRA 和报告流程分开。GitHub 保存可审计的实现和实验，ModelScope 承载后续通过验收的具体模型版本，InfraGuide 解释原理。当前尚未发布编码模型权重。
+**让下一代基模复用成果。** [模型升级协议](docs/model-upgrades.md) 规定新模型如何接入、对照和发布；[training_lab](training_lab/) 把模型 profile 与数据、隔离评测、LoRA 和报告流程分开。GitHub 保存可审计的实现和实验，ModelScope 承载后续通过验收的具体模型版本，InfraGuide 解释原理。[27B 的 ModelScope 发布目标](docs/modelscope-release.md)记录从独立开发到公开加载复验的验收证据。当前尚未发布编码模型权重。
 
 **一个主仓库，明确模块职责。** 当前仓库编码链路的实现已划入 [one_gpu_lm](one_gpu_lm/)：数据、模型适配、训练、评测、推理服务和共享契约各有目录。旧 `repo_lab` 命令保留兼容入口；历史实验和已发布结果保留原身份。新能力优先放入对应模块，待出现独立使用与发布需求时再拆仓库。
 
@@ -61,6 +61,7 @@
 | 035 · 首次改码瓶颈 | 长时间查阅后加一次提示，能否提高预算内修复并提交率？ | [同题底座诊断](experiments/035-edit-bottleneck/results/2026-11-19-baseline/) · [提示对照](experiments/035-edit-bottleneck/results/2026-11-19-reminder/)。修复并提交 1 → 2，全程未改码 12 → 14，未达复验门槛。 |
 | 036 · 公开回归失败证据 | 在同预算下直接提供失败输出，能否带来更多正确修复？ | [20 对结果和曲线](experiments/036-regression-evidence/results/2026-11-20/) · [重启恢复协议](experiments/036-regression-evidence/recovery-plan.json)。修复并提交 3 → 3，新增 2 道、退步 2 道，未达复验门槛。 |
 | 037 · 失败输出摘录 | 从同一份输出保留断言和位置，能否改善预算内修复？ | [20 对结果和曲线](experiments/037-compact-regression/results/2026-11-20/)。修复并提交 3 → 5，全程未改码 14 → 10，满足独立复验门槛。 |
+| 038 · 新仓库复验 | 失败摘录的收益能否在独立仓库复现？ | [24 对预注册协议](experiments/038-independent-compact/)。同一 27B 底座、相同预算，最终测试封存。 |
 
 015 已完成 96 次配对运行：格式组和组合组的新仓库任务从基线 2/12 提高到 5/12，格式错误率约从 20.2% 降至 2.8%；两组都退步了 1 个历史任务，未通过冻结的晋级门槛。上下文管理消除了本轮少量超限请求，没有额外提高成功率。任务控制器耗时分别增加约 29% 和 31%。这是同一 27B 底座的接口评测，未更新权重；小样本构造任务结果不代表通用编码能力认证。
 

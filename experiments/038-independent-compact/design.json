@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "037_commit": "2a53a8b76af7acd0f6ccbb00b3e59904e222faf6",
+  "evaluation_cohort": "four_new_development_repository_families",
+  "tasks": 24,
+  "families": {
+    "jd/tenacity": 6,
+    "moment/luxon": 6,
+    "python-babel/babel": 6,
+    "simple-statistics/simple-statistics": 6
+  },
+  "language_counts": {"python": 12, "javascript": 12},
+  "license_by_family": {
+    "jd/tenacity": "Apache-2.0",
+    "moment/luxon": "MIT",
+    "python-babel/babel": "BSD-3-Clause",
+    "simple-statistics/simple-statistics": "ISC"
+  },
+  "selection": "Ordinary functional repairs from pinned public history. Require two failing parent checks, two passing reference checks, and a passing protected reference grade. Select by ascending task ID fingerprint within each family, before model scores.",
+  "schedule": "Interleave families with alternating traversal direction on each round. Evaluate both arms on every task and alternate which arm starts by task number.",
+  "pipeline_limit_seconds": 21600,
+  "followup_gate": {
+    "minimum_net_repairs": 3,
+    "minimum_positive_families": 2,
+    "maximum_regressions": 1
+  },
+  "new_model_scores_before_registration": 0
+}

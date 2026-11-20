@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "037_commit": "2a53a8b76af7acd0f6ccbb00b3e59904e222faf6",
+  "evaluation_cohort": "four_new_development_repository_families",
+  "tasks": 24,
+  "families": {
+    "jd/tenacity": 6,
+    "moment/luxon": 6,
+    "python-babel/babel": 6,
+    "simple-statistics/simple-statistics": 6
+  },
+  "language_counts": {
+    "python": 12,
+    "javascript": 12
+  },
+  "license_by_family": {
+    "jd/tenacity": "Apache-2.0",
+    "moment/luxon": "MIT",
+    "python-babel/babel": "BSD-3-Clause",
+    "simple-statistics/simple-statistics": "ISC"
+  },
+  "selection": "Ordinary functional repairs from pinned public history. Require two failing parent checks, two passing reference checks, and a passing protected reference grade. Select by ascending task ID fingerprint within each family, before model scores.",
+  "schedule": "Interleave families with alternating traversal direction on each round. Evaluate both arms on every task and alternate which arm starts by task number.",
+  "pipeline_limit_seconds": 21600,
+  "followup_gate": {
+    "minimum_net_repairs": 3,
+    "minimum_positive_families": 2,
+    "maximum_regressions": 1
+  },
+  "new_model_scores_before_registration": 0,
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "recovery_accounting_seconds": 180,
+  "primary_outcome": "Within actor budget, edited source passes a protected fresh regrade and model executed terminal submission.",
+  "arms": [
+    "prefix",
+    "compact"
+  ],
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "treatment": {
+    "prefix": "Exact 036 transcript opening with existing normalization and 2400-character raw prefix.",
+    "compact": "Apply previous normalizations to the full archived public test output. Extract original failure text, test name, location, and available diff lines within 1200 characters.",
+    "max_failure_blocks": 4,
+    "unsupported_format": "Use identical prior prefix.",
+    "output_source": "New score-blind CPU receipt from each admitted parent.",
+    "common": "Both arms use one unchanged unadapted model load, same tasks, actor and grader budgets, shell isolation, and later feedback."
+  },
+  "frozen_utc": "2026-11-20T12:34:41.290891+00:00",
+  "schedule_sha256": "ceb63d2c202776b2d7a9baf841a2998ee4dd45169875488b81b27290fd646559",
+  "rollouts": 48,
+  "admission": {
+    "jd/tenacity": {
+      "candidates": 12,
+      "admitted": 12,
+      "selected": 6,
+      "status_sha256": "9f3863face47ea2e19436146ab205911ffaa604ce6367e3bcee19fc742143379"
+    },
+    "moment/luxon": {
+      "candidates": 12,
+      "admitted": 9,
+      "selected": 6,
+      "status_sha256": "6d6e144738f5cdb9154244dac30a89fe3aca885236207187668ebed1b9adda6a"
+    },
+    "python-babel/babel": {
+      "candidates": 11,
+      "admitted": 9,
+      "selected": 6,
+      "status_sha256": "11841d46c782184e622d7bb848c15e1a02e2fd61dc7ccd6208b046ab44efa309"
+    },
+    "simple-statistics/simple-statistics": {
+      "candidates": 12,
+      "admitted": 12,
+      "selected": 6,
+      "status_sha256": "224b62d3e1cb2f26ee64110ef99419f2ae27c3366dbb2e3102886bfd5bba3217"
+    }
+  },
+  "preflight": {
+    "tasks": 24,
+    "model_calls": 0,
+    "new_tool_calls": 0,
+    "pytest": 11,
+    "tap": 7,
+    "fallback": 6,
+    "old_prefix_cut": 18,
+    "recovered_failure_lines_tasks": 6,
+    "recovered_failure_lines": 12,
+    "prefix_chars": 51940,
+    "compact_chars": 18933,
+    "max_compact_chars": 2449,
+    "prefix_opening_tokens": 29184,
+    "compact_opening_tokens": 20380
+  },
+  "frozen_files": {
+    "experiments/036-regression-evidence/evidence.py": "153f51322134e2fe71a32da4633254f110b0d274e88c6042598f886ca5e2529e",
+    "experiments/036-regression-evidence/protocol.json": "e8965d38b57f81fe47215949da9c09b03959ad4bf5e89d016d2854b0f122469f",
+    "experiments/036-regression-evidence/run.py": "8f67e6e21d751bee53cd84c2ad07673bb5f2b08e7f2e54f1f5ff03de1c4731e4",
+    "experiments/037-compact-regression/audit.py": "98ebf19cbc62e268d05109f82208c3742018aa270b0988341f167bb00ca991be",
+    "experiments/037-compact-regression/compact_feedback.py": "9aa9d9e33761c64b0434d03c4b4718d866f8cd573b76b104841c11225017e5b4",
+    "experiments/037-compact-regression/prepare.py": "81fc922085b9e71ef7ef03309dccf56121cef4e0ba70ca3adec3d7f4d2001dff",
+    "experiments/037-compact-regression/protocol.json": "2c9b987a9458d4a62eb44e9df5537cff1f8ae68088bf97cf1935b08d989b09f4",
+    "experiments/037-compact-regression/run.py": "54b70c5746832984532d84af573963b567af6856123ec2ffef46e80ea02fe53a",
+    "experiments/038-independent-compact/audit_fresh.py": "277b6b8eda1e3db3326ef79c64a91d1873ce47190d5b43ee2867e53bdcbc7e12",
+    "experiments/038-independent-compact/design.json": "028ee2f7c6619c358f846c2af73c56bda195ebdeab897556bd352480b336ffe9",
+    "experiments/038-independent-compact/freeze.py": "5dfee0f9bc09f179c22fd0233a67b1ac8eb824cdb3ff67a2051466022eba6f83",
+    "experiments/038-independent-compact/report.py": "42a8064e07a3280b18378f5c9eb9c15f3f92907d68399afa2eb71af183e668a9",
+    "experiments/038-independent-compact/study.py": "926c53fde00cc428327600e38245f71d7db577e0d54d80f6c8f076f701fedc4e",
+    "private/independent-compact/admission-index.json": "8f4e25d18892d83193c0b2699a707f581ce62d82c4d2738907e7ebe77b454b33",
+    "private/independent-compact/admit_remote.py": "c6416df36201f8622724433b18682a9d00a376e2b297e8a4d9c9c6b87a50eae1",
+    "private/independent-compact/development/admission.json": "e7a0c7f0af06e638a5f393fcb033712c169c1ff9a8dbf67e50fae867bc68ea6e",
+    "private/independent-compact/development/preflight.json": "22a32f301a0864c87460f1456cf761ec3c1335894c7e165d877ddb1ca509e6ca",
+    "private/independent-compact/development/public-tests/t01.json": "f3019f63fd14032181ac00da673541a90013c7ec6218f6d18072561ef82267e5",
+    "private/independent-compact/development/public-tests/t02.json": "f1eef147a3a4bdf71ec57d5a46b5e8121016befc610ac8cd58957bbc00d0f39a",
+    "private/independent-compact/development/public-tests/t03.json": "9916bd88ac0d09e86822832ea8a7d777e1e6fe981ccc4796b69164d25f52343b",
+    "private/independent-compact/development/public-tests/t04.json": "c0d90e0d37a2f7f76121c5431fe7a9f7bc2ba360d0567422750b171b842a55ba",
+    "private/independent-compact/development/public-tests/t05.json": "66e376f1ac9710fda636c836189584fd559c712015c4fd1c7559989bc960940b",
+    "private/independent-compact/development/public-tests/t06.json": "fc2a0424435b3d3e9acab4d6e96752f9c7bd92f20774952f2911a9e475ce53c4",
+    "private/independent-compact/development/public-tests/t07.json": "d75faaeb81e54f0768cf162989bc34c356ec128d9b96bf511b7939528b37d564",
+    "private/independent-compact/development/public-tests/t08.json": "960d2ff7cd00bdcdcb1b732adfe66499b31dcf515ba49274be53df67850b659d",
+    "private/independent-compact/development/public-tests/t09.json": "feb0c8e98db95008fbd046a7af46c787b9a00a7c2a12888284e5ac2e55d06a8b",
+    "private/independent-compact/development/public-tests/t10.json": "16d99b24fb98223fff6f411d2397171dff081b09d71c7a36f10f513de084f942",
+    "private/independent-compact/development/public-tests/t11.json": "2191ec307bb3860a58532d3c9ea08b412944b846c6fe72e61d23376723dded84",
+    "private/independent-compact/development/public-tests/t12.json": "7d48eb26c46e0961ece49a0bbdf73068721380cda77704e215c2762e517e1760",
+    "private/independent-compact/development/public-tests/t13.json": "2c1efaf1d52336a1c449b5dcf51f2d40aeee1223646106b7a42b173faba8083a",
+    "private/independent-compact/development/public-tests/t14.json": "2ad62e63a3283e4a5a4165d404edabf064243b1ab6575992ca255badb694b25a",
+    "private/independent-compact/development/public-tests/t15.json": "e0b8e59f6ea8d4d6ac84b99001589adead1413f9c17a3a89658a26c6d5f11e28",
+    "private/independent-compact/development/public-tests/t16.json": "093c02ab6475c0ce0ba6e7d468bb1e666966cf974f53ff4f659acdae8548d495",
+    "private/independent-compact/development/public-tests/t17.json": "09775719d807e2b285dae6b56879eba15c0d94c615f234d3fdf8bc591246bd83",
+    "private/independent-compact/development/public-tests/t18.json": "e084d8f7acd5915cc9268219f810821a943022af3e80a4ad0d15d16e966d3813",
+    "private/independent-compact/development/public-tests/t19.json": "1c2ea2765836fd8b25ff92740b43722547b070bd6a0a5d94a9a306f34b77e0a6",
+    "private/independent-compact/development/public-tests/t20.json": "670e63909631ad3cbe77dd02fe306eb32bb712821eeb4ae8f8f8f17165d6f78a",
+    "private/independent-compact/development/public-tests/t21.json": "38a2db1df18e92056be8a0eabbd4892de28016624efb08a72ad24a0e90ed70b5",
+    "private/independent-compact/development/public-tests/t22.json": "5b8f4c7b3a8009596ac76a2866d582cecac1a00f1e9787fc9dd5707684804398",
+    "private/independent-compact/development/public-tests/t23.json": "df070de27f55b7961c67184a896e39cf24a60322ffa347a37febcda05bbfd795",
+    "private/independent-compact/development/public-tests/t24.json": "d2a9cb3b330e925a135e228a48a28b10406d7b48dba046578535e17f6de24804",
+    "private/independent-compact/development/sources.json": "214af9a19ccd3eded65672287ed22afb7eae0f9e963131ffd5edbb3d6014aa60",
+    "private/independent-compact/development/tasks.json": "b51857c1a7affa73411ac78d36a6a9ce95dbee03f0ba48866c4f70db5b3c0f64",
+    "private/independent-compact/lineage-review.json": "f70bf3d425d9b328372c1121be99613c7b6f9fe742d786dd8206240ca59d66bd",
+    "private/independent-compact/offline-runtime.json": "0f8e8c2a376a655c3c8f0b0feba6821e605cfb31ef5b558227d34ea470edf710",
+    "private/independent-compact/runtime-proof.json": "891e61063504780d12c4dccf14625da27d9e74511518111133d4e6c755d35149"
+  }
+}
