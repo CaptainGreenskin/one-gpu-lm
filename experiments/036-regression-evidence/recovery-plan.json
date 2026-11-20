@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "registered_on": "2026-11-20",
+  "original_registration_commit": "f6f6afab8eb3ff34415762c220bcf482cb65d9eb",
+  "original_plan_sha256": "e8965d38b57f81fe47215949da9c09b03959ad4bf5e89d016d2854b0f122469f",
+  "original_schedule_sha256": "f761353179a93cf01d9eeda18b19007c8eccf86043e8d43b6b0f9e779e19b214",
+  "remaining_schedule_sha256": "4c9e287900eeb1a4f861708e207b008cc870b80d5ef07006eda953d89d2621f1",
+  "remaining_scored_rollouts": 10,
+  "retained_verified_requests": 332,
+  "interrupt": {
+    "boot_epoch": 1795148572,
+    "controller_sha256": "69cfdf5128758784cddf9d795ace4ad45012d22a0a77eb427bf91af1294790bc",
+    "original_pipeline_sha256": "1805c873f2f260a7ad13cfae4f5240e66f630082dfc5a50f0841358e94b0fd4f",
+    "original_launch_sha256": "c732fcf894f53bc879707f91c48299d079d52ccf348c52647fe7cd28c78cabc2",
+    "partial_trajectory_sha256": "d75994c9bf3573439d874d4752796179247907b7014b4b026904d40cd8868aa2",
+    "known_generated_tokens": 829,
+    "known_input_tokens": 35542,
+    "completed_responses": 11,
+    "unknown_responses": 1,
+    "damaged_request_payloads": 1,
+    "aborted_attempted_calls": 12,
+    "completed_runs": 30,
+    "last_preboot_gpu_sample_epoch": 1795148437.460249,
+    "damaged_preboot_samples": 0,
+    "original_deadline_epoch": 1795181663.4263275,
+    "archived_preboot_samples": 551
+  },
+  "maximum_unobserved_generation_tokens": 512,
+  "recovery_rule": "Preserve the first 15 complete pairs. Exclude and preserve the host-interrupted actor. Start only the 10 unscored rollouts in original order on fresh task workspaces and a new base load. No calls against completed tasks, no changes to either treatment, budget, grading or follow-up gate.",
+  "cost_rule": "Keep 12 physically accepted interrupted requests separate. Eleven completed responses have exact costs. The last accepted request has no response and its payload hash is reconstructed from the persisted pre-generation state without executing it.",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "recovery_accounting_seconds": 180,
+  "followup_gate": {
+    "minimum_net_repairs": 2,
+    "minimum_positive_families": 2,
+    "maximum_regressions": 1
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "recovery_scores_viewed_before_registration": 0,
+  "frozen_files": {
+    "one_gpu_lm/verified/resume_prefix.py": "499e218a9bbba6503a174ea954f6841e9ced01fd89b038ea1fc413c839078549",
+    "one_gpu_lm/verified/resilient_eval_audit.py": "405a79b3babbe27cf1ef5c2001f3614b718fcfcdd7cfc8f79086c24f5cc654d6",
+    "experiments/036-regression-evidence/recover.py": "b7d5752259d008c8131b5ce405092b7a36cf5944b91621c1f52f2973b66976c7",
+    "experiments/036-regression-evidence/audit_recovery.py": "7286c8e50bf9be3c918b5c21a264a66a6d4c56f951c5e4f1e9913662222284c6",
+    "runs/historic036-evidence-001/controller.json": "69cfdf5128758784cddf9d795ace4ad45012d22a0a77eb427bf91af1294790bc",
+    "private/regression-evidence/pipeline.json": "1805c873f2f260a7ad13cfae4f5240e66f630082dfc5a50f0841358e94b0fd4f",
+    "private/regression-evidence/launch.json": "c732fcf894f53bc879707f91c48299d079d52ccf348c52647fe7cd28c78cabc2"
+  }
+}
