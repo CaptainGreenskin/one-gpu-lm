@@ -17,7 +17,7 @@ from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery','host_restart','final_campaign','final_audit','release_package')
+entrypoints = ('analysis','promotion','recovery','host_restart','final_campaign','final_audit','release_package','report')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
@@ -28,6 +28,7 @@ try:
     import release_package
     from promotion import REFERENCE, authorize, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
+    from report import reproduce_analysis
 finally:
     sys.path.pop(0)
     for name in entrypoints:
@@ -105,6 +106,14 @@ class ModelScopePromotionTests(unittest.TestCase):
         audit.update(analysis=analyze(audit['rows'],self.plan),verified_requests=359)
         with self.assertRaises(ValueError):
             authorize(self.plan_path,self.save('audit',audit),absent,absent)
+
+    def test_report_permits_duration_roundoff_and_checks_completed_counts_exactly(self):
+        audit = self.synthetic_audit(False)
+        audit['analysis']['costs']['base']['actor_seconds'] += 2e-12
+        self.assertEqual(reproduce_analysis(audit,self.plan),audit['analysis'])
+        audit['analysis']['successes']['base'] += 1
+        with self.assertRaisesRegex(ValueError,'Exact audited repetitions'):
+            reproduce_analysis(audit,self.plan)
 
     def test_final_entry_waits_for_the_completed_audited_controller(self):
         root = self.directory/'working'

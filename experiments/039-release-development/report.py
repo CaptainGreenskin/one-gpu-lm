@@ -3,6 +3,7 @@ import argparse
 import csv
 from datetime import datetime, timedelta, timezone
 import json
+import math
 from pathlib import Path
 
 from analysis import ARMS, analyze
@@ -38,13 +39,24 @@ def plot(path, points):
     path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n',encoding='utf-8')
 
 
+def reproduce_analysis(raw, design):
+    result=analyze(raw['rows'],design)
+    # CPython 3.12 sums float durations with different rounding than 3.10.
+    for arm in ARMS:
+        measured=result['costs'][arm]['actor_seconds']
+        recorded=raw['analysis']['costs'][arm]['actor_seconds']
+        if math.isclose(measured,recorded,rel_tol=0,abs_tol=1e-9):
+            result['costs'][arm]['actor_seconds']=recorded
+    if result!=raw['analysis'] or not result['complete_accounting']:
+        raise ValueError('Exact audited repetitions are required')
+    return result
+
+
 def run(directory, design):
     raw=json.loads((directory/'measurements.json').read_text(encoding='utf-8'))
     if not raw['passed'] or raw['final_test_opened'] or raw['weights_public'] or raw['optimizer_updates']:
         raise ValueError('Expected audited development-only measurements')
-    result=analyze(raw['rows'],design)
-    if result!=raw['analysis'] or not result['complete_accounting']:
-        raise ValueError('Exact audited repetitions are required')
+    result=reproduce_analysis(raw,design)
     rows=raw['rows']
     groups={arm:[r for r in rows if r['arm']==arm] for arm in ARMS}
     limit=design['evaluation_budget']['max_model_calls']
@@ -65,15 +77,21 @@ def run(directory, design):
     denominator=design['task_count']*design['repetitions']
     lower,upper=result['gain_interval_95_pp']
     status='通过' if result['development_gate_passed'] else '未通过'
+    improved=sum(p['gain']>0 for p in result['pairs'])
+    regressed=sum(p['gain']<0 for p in result['pairs'])
     lines=['# 039 · 27B 参数独立开发筛查','',
         (f'底座修复并提交 **{base}/{denominator}**，031 LoRA **{candidate}/{denominator}**。'
          f'净变化 **{result["gain_pp"]:+.2f} 个百分点**，家族与任务的配对 95% bootstrap 区间为 '
-         f'[{lower:+.2f}, {upper:+.2f}]。开发门槛**{status}**。'),'','| 指标 | 底座 | 031 LoRA |','|---|---:|---:|']
+         f'[{lower:+.2f}, {upper:+.2f}]。开发门槛**{status}**。'),'',
+        f'按每道题三轮的完成次数比较，LoRA 在 {improved} 道题上提高，在 {regressed} 道题上下降。','',
+        '| 指标 | 底座 | 031 LoRA |','|---|---:|---:|']
     for key,label,group in (
         ('no_edit','全程未编辑','behaviors'),('correct_without_submission','修对未提交','behaviors'),
         ('attempted_calls','调用数','costs'),('input_tokens','输入 token','costs'),('generated_tokens','生成 token','costs'),
         ('timeout_recovered','取回回执的超时','behaviors')):
         lines.append(f"| {label} | {result[group]['base'][key]:,} | {result[group]['candidate'][key]:,} |")
+    base_seconds,candidate_seconds=(result['costs'][arm]['actor_seconds'] for arm in ARMS)
+    lines.append(f'| 任务执行累计秒数 | {base_seconds:,.2f} | {candidate_seconds:,.2f} |')
     lines+=['','![First edit and completed repair](call-curves.svg)','','| 家族 | 净变化（百分点） |','|---|---:|']
     lines.extend(f'| {family} | {gain:+.2f} |' for family,gain in result['family_gain_pp'].items())
     lines+=['','| 开发门槛 | 结果 |','|---|---:|']
