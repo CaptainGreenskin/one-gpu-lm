@@ -10,6 +10,7 @@ import re
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.verified.first_action_loss import fingerprint
 from analysis import schedule
+from candidate_restart import interruption_summary
 from report import reproduce_analysis
 
 
@@ -193,6 +194,8 @@ def verify_comparison(protocol_path, controller_path, audit_path, publication_pa
             or audit['started_epoch']!=controller['started_epoch'] or audit['finished_epoch']!=controller['finished_epoch']
             or len(controller['runs'])!=len(order) or len(audit['rows'])!=len(order)):
         raise ValueError('Require a complete development controller and its exact replay audit')
+    if controller.get('restarts') and audit.get('interruptions')!=interruption_summary(controller):
+        raise ValueError('Require complete accounting for interrupted physical generations')
 
     served = audit['served_checkpoints']
     files = protocol['all_adapter_files_sha256']

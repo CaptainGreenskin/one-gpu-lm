@@ -12,7 +12,7 @@ import time
 import traceback
 
 from one_gpu_lm.common.agent_policy import prepare_context
-from one_gpu_lm.common.receipts import sha256, write_json
+from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.common.runstate import atomic_json, gpu_lock_path, single_writer, utc
 from one_gpu_lm.common.telemetry import Telemetry
 from one_gpu_lm.common.tokenization import encode_prefix
@@ -28,6 +28,8 @@ from one_gpu_lm.verified.sandbox import Sandbox
 from one_gpu_lm.verified.tasks import digest, relative
 
 from analysis import analyze, schedule
+from candidate_restart import actor_directory, attempt_directory, backend_directory, host_boot
+from candidate_restart import prepare_restart, reconcile_requests, replay_interruptions
 from recovery import served_weight_hashes
 from run import effective, frozen, load, prefix_prompt, read, reference_protocol
 
@@ -235,44 +237,62 @@ def registered_inputs(args):
     return plan,plan_hash,openings_hash,order,panel
 
 
-def evaluate(root, plan, plan_hash, order, panel):
+def evaluate(root, plan, plan_hash, order, panel, *, resume=False):
     out = root / relative(plan['run_directory'])
     if len(str(out/'backend.sock').encode()) >= 108:
         raise ValueError('The registered backend socket path is too long')
     chosen = plan['selected_opening']
     budget = plan['evaluation_budget']
     with single_writer(gpu_lock_path()):
-        if out.exists():
+        boot = host_boot()
+        if resume:
+            state = prepare_restart(out, read(out/'controller.json'), plan, plan_hash, order, boot)
+            if (out/'backend.sock').exists() and not (out/'backend.sock').is_socket():
+                raise ValueError('Unexpected entry at the evaluation backend socket')
+        elif out.exists():
             raise FileExistsError('Preserve the original development attempt')
         verify_model(panel.model_runtime['model'],root/relative(panel.common['model_manifest_path']),panel.profile)
         sandbox = Sandbox(read(panel.runtime_path),budget['max_tool_seconds'])
-        (out/'private').mkdir(mode=0o700,parents=True)
-        start = time.time()
-        deadline = start + plan['pipeline_limit_seconds']
-        state = {'schema_version':1,'stage':'loading','complete':False,'started_epoch':start,'started_utc':utc(),
-                 'deadline_epoch':deadline,'protocol_sha256':plan_hash,'schedule_sha256':plan['schedule_sha256'],
-                 'runs':[],'backend_lifecycles':[],'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
+        if not resume:
+            start = time.time()
+            state = {'schema_version':1,'stage':'loading','complete':False,'started_epoch':start,'started_utc':utc(),
+                     'deadline_epoch':start + plan['pipeline_limit_seconds'],
+                     'protocol_sha256':plan_hash,'schedule_sha256':plan['schedule_sha256'],
+                     'runs':[],'backend_lifecycles':[],'attempt':1,'boot_id':boot[0],
+                     'attempt_started_epoch':start,'restarts':[],
+                     'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
+        attempt = state['attempt']
+        attempt_dir = attempt_directory(out, attempt)
+        (attempt_dir/'private').mkdir(mode=0o700,parents=True,exist_ok=resume)
+        previous_loads = len(state['backend_lifecycles'])
+        deadline = state['deadline_epoch']
 
         def save():
+            for entry in state['backend_lifecycles'][previous_loads:]:
+                entry['attempt'] = attempt
             atomic_json(out/'controller.json',state)
 
-        backend = JournalBackend(root,out,panel.model_runtime,panel.common,state['backend_lifecycles'],save)
-        telemetry = Telemetry(out/'telemetry.csv',1)
+        backend = JournalBackend(root,attempt_dir,panel.model_runtime,panel.common,state['backend_lifecycles'],save)
+        backend.number = max((entry['index'] for entry in state['backend_lifecycles']), default=0)
+        backend.socket = out/'backend.sock'
+        telemetry = Telemetry(attempt_dir/'telemetry.csv',attempt)
         save()
         telemetry.start()
         try:
-            for item in order:
+            for item in order[len(state['runs']):]:
                 arm = item['arm']
                 role = 'base' if arm == 'base' else 'student'
                 required = budget['max_task_seconds'] + budget['max_tool_seconds'] + plan['recovery_accounting_seconds']
                 if time.time() + required + (600 if backend.role != role else 0) > deadline:
                     raise TimeoutError('Registered wall budget cannot fit the next task')
                 case = panel.cases[item['task_number']]
-                state.update(stage='evaluating',current_run=item)
+                state.update(stage='evaluating',current_run=item,current_backend_index=None)
                 save()
                 backend.protocol = effective(panel.common,arm)
                 socket = backend.ensure(role,deadline)
-                directory = out/'private/tasks'/item['run_id']
+                state['current_backend_index'] = backend.number
+                save()
+                directory = actor_directory(out, attempt, item['run_id'])
                 result = rollout(root,panel.data,case['prompts'][chosen],case['source'],socket,sandbox,
                                  backend.protocol,directory,role+'_current',journal_path=backend.journal_path,
                                  recovery_seconds=plan['recovery_accounting_seconds'])
@@ -283,15 +303,15 @@ def evaluate(root, plan, plan_hash, order, panel):
                         or steps[0]['generation']['input_tokens'] != opening['input_tokens']):
                     raise ValueError('Physical generation did not use the frozen paired opening')
                 result.update(run_id=item['run_id'],task_number=item['task_number'],repetition=item['repetition'],
-                              block=item['block'],contrast_arm=arm,backend_index=backend.number)
-                write_json(directory/'result.json',result)
+                              block=item['block'],contrast_arm=arm,backend_index=backend.number,attempt=attempt)
+                atomic_json(directory/'result.json',result)
                 state['runs'].append(result)
                 save()
                 print(json.dumps({'completed_rollouts':len(state['runs']),'planned_rollouts':len(order)}),flush=True)
             state.update(stage='completed',complete=True)
         except BaseException as error:
             state.update(stage='failed',error_type=type(error).__name__)
-            (out/'private/error.log').write_text(traceback.format_exc(),encoding='utf-8')
+            (attempt_dir/'private/error.log').write_text(traceback.format_exc(),encoding='utf-8')
             raise
         finally:
             try:
@@ -330,13 +350,18 @@ def audit(root, plan, plan_hash, openings_hash, order, panel):
     for backend in state['backend_lifecycles']:
         index,role = backend['index'],backend['role']
         arm = {'base':'base','student':'candidate'}[role]
-        directory = out/'private/backends'/f'{index:04d}-{role}'
+        directory = backend_directory(out, backend)
+        if 'ready_epoch' not in backend:
+            if not backend.get('stop_timestamp_is_upper_bound') or any((directory/'requests').glob('*')):
+                raise ValueError('An unready backend cannot contribute generation requests')
+            continue
         artifact = read(directory/'served-artifact.json')
         condition = effective(panel.common,arm)
         if (index in backends or not state['started_epoch'] <= backend['ready_epoch'] <= backend['stopped_epoch'] <= state['finished_epoch']
                 or (artifact['model_id'],artifact['revision']) != (panel.common['model_id'],panel.common['revision'])
                 or artifact['adapter'] is not (role=='student') or artifact['adapter_sha256'] != condition['adapter_sha256']
                 or artifact['profile_sha256'] != panel.common['evaluation_profile_sha256']
+                or not (directory/'requests').is_dir()
                 or read(directory.with_name(directory.name+'-environment.json')) != environment):
             raise ValueError('Audit detected a different checkpoint, decoding profile or environment')
         backends[index],artifacts[index],journals[index] = backend,artifact,RequestJournal(directory/'requests')
@@ -346,9 +371,10 @@ def audit(root, plan, plan_hash, openings_hash, order, panel):
             number,index,arm = item['task_number'],result['backend_index'],item['arm']
             case = panel.cases[number]
             task,opening = case['prompts'][chosen],case['opening']['openings'][chosen]
-            run_dir = out/'private/tasks'/item['run_id']
+            run_dir = actor_directory(out, result.get('attempt',1), item['run_id'])
             trace = read(run_dir/'trajectory.json')
             if (backends[index]['role'] != ('base' if arm=='base' else 'student') or trace['backend'] != artifacts[index]
+                    or result.get('attempt',1) != backends[index].get('attempt',1)
                     or result['id'] != task['id'] or result['contrast_arm'] != arm
                     or any(result[key] != item[key] for key in ('task_number','repetition','block'))):
                 raise ValueError('Physical run differs from the paired schedule')
@@ -363,18 +389,19 @@ def audit(root, plan, plan_hash, openings_hash, order, panel):
                        multifile=case['opening']['multifile'],opening_input_tokens=opening['input_tokens'],
                        opening_input_sha256=first)
             rows.append(row)
-    if (set(seen) != set(journals)
-            or any(seen[i] != {p.name for p in journal.directory.iterdir()} for i,journal in journals.items())
-            or sum(map(len,seen.values())) != sum(row['attempted_calls'] for row in rows)):
+    extra, interruptions = replay_interruptions(out,state,order,plan['evaluation_budget']['max_model_calls'])
+    reconcile_requests(out,state,seen,extra)
+    requests = sum(map(len,seen.values()))
+    if requests != sum(row['attempted_calls'] for row in rows):
         raise ValueError('Unaccounted backend journal entries')
     profile_hash = panel.common['evaluation_profile_sha256']
     result = {'schema_version':1,'passed':True,'protocol_sha256':plan_hash,'controller_sha256':sha256(controller),
-              'opening_preflight_sha256':openings_hash,'verified_requests':sum(map(len,seen.values())),
+              'opening_preflight_sha256':openings_hash,'verified_requests':requests,
               'started_epoch':state['started_epoch'],'finished_epoch':state['finished_epoch'],'backend_loads':len(backends),
               'served_checkpoints':{'base':{'adapter_files_sha256':{},'profile_sha256':profile_hash},
                                     'candidate':{'adapter_files_sha256':plan['all_adapter_files_sha256'],
                                                  'profile_sha256':profile_hash}},
-              'telemetry':state['telemetry'],'rows':rows,'analysis':analyze(rows,plan),
+              'telemetry':state['telemetry'],'interruptions':interruptions,'rows':rows,'analysis':analyze(rows,plan),
               'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
     atomic_json(target,result)
     return result
@@ -391,7 +418,7 @@ def main():
     freeze = modes.add_parser('freeze',help='Freeze the ready candidate and development comparison before registration')
     for name in ('data','openings','runtime','adapter','candidate-review','run-directory','protocol'):
         freeze.add_argument('--'+name,type=Path,required=True)
-    for mode in ('run','audit'):
+    for mode in ('run','resume','audit'):
         command = modes.add_parser(mode)
         for name in ('protocol','publication','openings'):
             command.add_argument('--'+name,type=Path,required=True)
@@ -405,13 +432,13 @@ def main():
         result = freeze_protocol(args)
     else:
         plan,plan_hash,openings_hash,order,panel = registered_inputs(args)
-        if args.mode == 'run':
+        if args.mode in ('run','resume'):
             def interrupted(*_):
                 raise KeyboardInterrupt('Development comparison interrupted')
 
             for kind in (signal.SIGINT,signal.SIGTERM):
                 signal.signal(kind,interrupted)
-            state = evaluate(args.root,plan,plan_hash,order,panel)
+            state = evaluate(args.root,plan,plan_hash,order,panel,resume=args.mode=='resume')
             if state['complete'] is not True:
                 raise ValueError('The registered comparison ended without complete evidence')
             result = {'stage':state['stage'],'rollouts':len(state['runs']),'final_test_opened':False}

@@ -9,7 +9,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from one_gpu_lm.common.receipts import sha256
+from one_gpu_lm.common.receipts import sha256, write_json
 from one_gpu_lm.common.edit_progress import EditableProgress
 from one_gpu_lm.common.runstate import identity_digest
 from one_gpu_lm.verified.first_action_loss import fingerprint
@@ -19,7 +19,7 @@ from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','candidate_comparison','candidate_release','promotion','recovery','host_restart',
+entrypoints = ('analysis','candidate_comparison','candidate_release','candidate_restart','promotion','recovery','host_restart',
                'final_campaign','final_audit','release_package','report','run')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
@@ -224,11 +224,11 @@ class ModelScopePromotionTests(unittest.TestCase):
                     directory = self.out/'private/backends'/f'{self.number:04d}-{role}'
                     self.journal_path = directory/'requests'
                     self.journal_path.mkdir(parents=True)
-                    candidate_comparison.write_json(directory.with_name(directory.name+'-environment.json'),environment)
+                    write_json(directory.with_name(directory.name+'-environment.json'),environment)
                     self.artifact = dict(model_id=common['model_id'],revision=common['revision'],
                                          adapter=role=='student',adapter_sha256=self.protocol['adapter_sha256'],
                                          profile_sha256=common['evaluation_profile_sha256'])
-                    candidate_comparison.write_json(directory/'served-artifact.json',self.artifact)
+                    write_json(directory/'served-artifact.json',self.artifact)
                 return self.artifact
 
             def check_exclusive(self):
@@ -242,7 +242,7 @@ class ModelScopePromotionTests(unittest.TestCase):
         def record(root,data,task,source,backend,sandbox,protocol,directory,arm,*,journal_path,**options):
             used.append((arm,task['description'],protocol['adapter_sha256']))
             directory.mkdir(parents=True)
-            candidate_comparison.write_json(directory/'trajectory.json',{
+            write_json(directory/'trajectory.json',{
                 'backend':backend,'steps':[{'generation':{'input_tokens':7,'input_tokens_sha256':fingerprint(task)}}]})
             (journal_path/fingerprint(directory.name)).touch()
             return {'id':task['id']}
@@ -256,6 +256,7 @@ class ModelScopePromotionTests(unittest.TestCase):
 
         with patch.multiple(candidate_comparison,JournalBackend=JournalProvider,rollout=record,
                             gpu_lock_path=lambda:lock,Sandbox=lambda *_:None,verify_model=lambda *_:None,
+                            host_boot=lambda:('fixture-boot',1),
                             Telemetry=lambda *_:SimpleNamespace(start=lambda:None,stop=lambda:{'thread_stopped':True})):
             state = candidate_comparison.evaluate(work,plan,'c'*64,order,panel)
         self.assertEqual(state['stage'],'completed')
