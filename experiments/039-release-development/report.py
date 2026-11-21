@@ -19,7 +19,7 @@ def write_csv(path, rows):
         writer.writerows(rows)
 
 
-def plot(path, points):
+def plot(path, points, labels=('Base weights','031 LoRA')):
     import matplotlib
     matplotlib.use('Agg')
     matplotlib.rcParams.update({'svg.hashsalt':'039-release-development','axes.spines.top':False,
@@ -28,7 +28,7 @@ def plot(path, points):
     fig,axes=plt.subplots(1,2,figsize=(10,4),layout='constrained',sharey=True)
     calls=[p['call'] for p in points]
     for ax,key,title in zip(axes,('edited','completed'),('First source edit','Repair completed and submitted')):
-        for arm,color,label in zip(ARMS,('#2D6496','#B85034'),('Base weights','031 LoRA')):
+        for arm,color,label in zip(ARMS,('#2D6496','#B85034'),labels):
             ax.step(calls,[100*p[f'{key}_{arm}'] for p in points],where='post',color=color,linewidth=2,label=label)
         ax.set(title=title,xlabel='Model calls',xlim=(0,max(calls)),ylim=(0,101),xticks=calls[::2])
         ax.grid(axis='y',alpha=.25)
@@ -52,14 +52,8 @@ def reproduce_analysis(raw, design):
     return result
 
 
-def run(directory, design):
-    raw=json.loads((directory/'measurements.json').read_text(encoding='utf-8'))
-    if not raw['passed'] or raw['final_test_opened'] or raw['weights_public'] or raw['optimizer_updates']:
-        raise ValueError('Expected audited development-only measurements')
-    result=reproduce_analysis(raw,design)
-    rows=raw['rows']
+def call_curves(rows, limit):
     groups={arm:[r for r in rows if r['arm']==arm] for arm in ARMS}
-    limit=design['evaluation_budget']['max_model_calls']
     points=[]
     for call in range(limit+1):
         row={'call':call}
@@ -67,6 +61,16 @@ def run(directory, design):
             row[f'edited_{arm}']=sum(r['first_edit_call'] is not None and r['first_edit_call']<=call for r in group)/len(group)
             row[f'completed_{arm}']=sum(r['completed_repair'] and r['attempted_calls']<=call for r in group)/len(group)
         points.append(row)
+    return points
+
+
+def run(directory, design):
+    raw=json.loads((directory/'measurements.json').read_text(encoding='utf-8'))
+    if not raw['passed'] or raw['final_test_opened'] or raw['weights_public'] or raw['optimizer_updates']:
+        raise ValueError('Expected audited development-only measurements')
+    result=reproduce_analysis(raw,design)
+    rows=raw['rows']
+    points=call_curves(rows,design['evaluation_budget']['max_model_calls'])
     write_csv(directory/'call-curves.csv',points)
     plot(directory/'call-curves.svg',points)
     write_csv(directory/'matched-repeats.csv',[
