@@ -98,6 +98,9 @@ def approved_notices(permission, input_review_path, rights_path, readback_path):
             and rights['notice_readback_sha256'] == sha256(readback_path)
             and review['known_pattern_findings'] and all(n == 0 for n in review['known_pattern_findings'].values()),
             'Require a distribution and sensitive-content review for the exact checkpoint and source notices')
+    if 'source_revisions' in readback:
+        require(readback['source_revisions'] == {repo: source['revision'] for repo,source in review['sources'].items()},
+                'The notice readback covers different training-source revisions')
     expected = {BASE_LICENSE:readback['notices'][BASE_LICENSE]['source_sha256']}
     for repo,source in review['sources'].items():
         for name,digest in source['notices'].items():

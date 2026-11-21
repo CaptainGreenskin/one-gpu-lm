@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "f47cfa28462931b73446d9b36bf0e9032f615aa40a9395c687e39e08c49f50a4",
+  "verified_utc": "2026-11-21T05:45:14.524480+00:00",
+  "selected_training_states": 9,
+  "selected_sources": {
+    "gweis/isodate": {
+      "revision": "17cb25eb7bc3556a68f3f7b241313e9bb8b23760",
+      "license": "BSD-3-Clause AND Python-2.0",
+      "selected_states": 4
+    },
+    "jashkenas/underscore": {
+      "revision": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b",
+      "license": "MIT",
+      "selected_states": 1
+    },
+    "jpvanhal/inflection": {
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "license": "MIT",
+      "selected_states": 2
+    },
+    "npm/ini": {
+      "revision": "3c96c74fd42584bd655e17a4e63e2ef0a3b406ee",
+      "license": "ISC",
+      "selected_states": 1
+    },
+    "python-humanize/humanize": {
+      "revision": "a95004512dde4e8f0269946bb4af754382347441",
+      "license": "MIT AND BSD-3-Clause",
+      "selected_states": 1
+    }
+  },
+  "training_source_manifest_sha256": "1d9ffd9aa2b852a2a23a4e2e236d5efd4947b2afa3d5d75c925a8fa8d382e645",
+  "base": {
+    "model_id": "Qwen/Qwen3.8-27B",
+    "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "base_license": "Apache-2.0",
+    "upstream_model_license_files": [
+      "LICENSE"
+    ],
+    "upstream_model_metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B/revision/37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+    "upstream_model_tree_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B/tree/37561816e66b5b9153b1b64c10968c18c1e6f4a0"
+  },
+  "notices": {
+    "training-source-notices/gweis--isodate/LICENSE": {
+      "source_sha256": "ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43",
+      "official_url": "https://raw.githubusercontent.com/gweis/isodate/17cb25eb7bc3556a68f3f7b241313e9bb8b23760/LICENSE",
+      "bytes": 1609,
+      "byte_equal": true
+    },
+    "training-source-notices/jashkenas--underscore/LICENSE": {
+      "source_sha256": "92905fb54f5d168a27e6d5dc7c2197020add11842be4c70689d084bae3bfe37a",
+      "official_url": "https://raw.githubusercontent.com/jashkenas/underscore/5c1e5f686f8500af9c9d15614ed60289d6d35d6b/LICENSE",
+      "bytes": 1139,
+      "byte_equal": true
+    },
+    "training-source-notices/jpvanhal--inflection/LICENSE": {
+      "source_sha256": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133",
+      "official_url": "https://raw.githubusercontent.com/jpvanhal/inflection/88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1/LICENSE",
+      "bytes": 1062,
+      "byte_equal": true
+    },
+    "training-source-notices/npm--ini/LICENSE": {
+      "source_sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+      "official_url": "https://raw.githubusercontent.com/npm/ini/3c96c74fd42584bd655e17a4e63e2ef0a3b406ee/LICENSE",
+      "bytes": 765,
+      "byte_equal": true
+    },
+    "training-source-notices/python-humanize--humanize/LICENCE": {
+      "source_sha256": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380",
+      "official_url": "https://raw.githubusercontent.com/python-humanize/humanize/a95004512dde4e8f0269946bb4af754382347441/LICENCE",
+      "bytes": 1078,
+      "byte_equal": true
+    },
+    "training-source-notices/gweis--isodate/upstream-notices/python-PSF.txt": {
+      "source_sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "official_url": "https://raw.githubusercontent.com/python/cpython/2c2462afc5d978d31f3d073001fc202d269917ff/LICENSE",
+      "bytes": 13936,
+      "byte_equal": true
+    },
+    "training-source-notices/jashkenas--underscore/upstream-notices/python-PSF.txt": {
+      "source_sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "official_url": "https://raw.githubusercontent.com/python/cpython/2c2462afc5d978d31f3d073001fc202d269917ff/LICENSE",
+      "bytes": 13936,
+      "byte_equal": true
+    },
+    "training-source-notices/python-humanize--humanize/upstream-notices/django-BSD.txt": {
+      "source_sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+      "official_url": "https://raw.githubusercontent.com/django/django/6a0dc2176f4ebf907e124d433411e52bba39a28e/LICENSE",
+      "bytes": 1552,
+      "byte_equal": true
+    },
+    "training-source-notices/jpvanhal--inflection/upstream-notices/rails-activesupport-MIT.txt": {
+      "source_sha256": "1dc5619b15611109ed62052fde21c0fbb1f8be4c73fefc0fdbdcad48fa640aa1",
+      "official_url": "https://raw.githubusercontent.com/rails/rails/914caca2d31bd753f47f9168f2a375921d9e91cc/activesupport/MIT-LICENSE",
+      "bytes": 1073,
+      "byte_equal": true
+    },
+    "BASE-MODEL-LICENSE.txt": {
+      "source_sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "official_url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/37561816e66b5b9153b1b64c10968c18c1e6f4a0/LICENSE",
+      "bytes": 11544,
+      "byte_equal": true
+    }
+  },
+  "upstream_notice_bytes_verified": true,
+  "weight_publication_approved_by_this_review": false,
+  "final_test_opened": false
+}

@@ -33,6 +33,8 @@ python -m one_gpu_lm.models.adapter_bundle \
 
 后续实验的晋级入口可将通过开发复验的授权、同一候选的适配器和经核验的训练配方交给 `run_approved`，随后用 `audit_approved` 复核原登记的最终测试。打包时成组提供 `--training-protocol`、`--training-profile` 和 `--training-integrity`，核对晋级授权、训练数据、来源清单、配方及适配器哈希。模型卡根据通过核验的记录填写候选名称和训练种子。打包同时重算原最终验收门槛，并核对逐文件许可材料和独立重载回执。[最终验收入口](../experiments/039-release-development/final_campaign.py) · [打包入口](../experiments/039-release-development/release_package.py) · [训练来源校验](../one_gpu_lm/models/release_lineage.py)
 
+041 的九份接续状态使用与 031 相同的五个训练来源和固定版本。已复核工作站快照、上游模型许可清单及十份许可与署名文件的原始字节。打包时按实际入选训练来源的版本复用材料，分发审查继续绑定具体候选、训练数据和拟发布文件。[041 来源回执](../experiments/041-first-edit-continuation/source-notices.json) · [031 来源说明](../experiments/031-correction-mix/release-provenance.md) · [Apache-2.0 分发条款](https://www.apache.org/licenses/LICENSE-2.0#redistribution)
+
 ## 核对 ModelScope 上的发布版本
 
 [发布入口](../experiments/039-release-development/publish_package.py)使用通过验收的打包目录和 ModelScope 国际站的登录态。在本机安装 `modelscope-hub==0.7.0` 后，`check` 核对回执与本地文件。`stage` 创建私有模型仓库，只上传经审核的文件，从实际 Git 提交重新下载并逐文件校验。`publish` 再次比对同一提交后开放访问，匿名下载到新目录。状态保存在打包目录的 `modelscope-release.json`，网络中断后可按原提交恢复。[ModelScope Hub SDK](https://github.com/modelscope/modelscope_hub)

@@ -271,6 +271,29 @@ class ModelScopePromotionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             release_decision(authorization,base,candidate,historical,dict(complete=True,results=historical['results'][:24]),checks)
 
+    def test_reused_notice_readback_must_cover_the_reviewed_source_revision(self):
+        repo = 'owner/training-source'
+        base = {'model_id':'fixture/base','base_revision':'c'*40}
+        weights = {name:'e'*64 for name in release_package.FILES}
+        review = self.save('source-review.json',{'known_pattern_findings':{'fixture':0},
+            'sources':{repo:{'revision':'a'*40,'notices':{'LICENSE':'b'*64}}}})
+        permission = dict(base,checkpoint_sha256=weights,candidate_review_sha256=sha256(review))
+        readback_data = dict(base,source_revisions={repo:'f'*40},notices={
+            release_package.BASE_LICENSE:{'source_sha256':'d'*64,'byte_equal':True},
+            'training-source-notices/owner--training-source/LICENSE':{'source_sha256':'b'*64,'byte_equal':True}})
+        readback = self.save('readback.json',readback_data)
+        rights_data = dict(base,schema_version=1,approved_for_weight_publication=True,rights_and_secret_scan_pass=True,
+            publication_basis='Fixture only',release_license='Apache-2.0',adapter_files_sha256=weights,
+            input_review_sha256=sha256(review),notice_readback_sha256=sha256(readback))
+        rights = self.save('rights-review.json',rights_data)
+        with self.assertRaisesRegex(ValueError,'different training-source revisions'):
+            release_package.approved_notices(permission,review,rights,readback)
+        self.save('readback.json',dict(readback_data,source_revisions={repo:'a'*40}))
+        self.save('rights-review.json',dict(rights_data,notice_readback_sha256=sha256(readback)))
+        license_id, notices = release_package.approved_notices(permission,review,rights,readback)
+        self.assertEqual(license_id,'Apache-2.0')
+        self.assertEqual(len(notices),2)
+
     def test_release_packaging_checks_development_before_reading_final_state(self):
         destination = self.directory/'staged'
         args = SimpleNamespace(root=self.directory,seal=self.directory/'absent',
