@@ -2,6 +2,7 @@
 import argparse
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
+from hashlib import sha256 as hash_bytes
 import json
 import math
 from pathlib import Path
@@ -16,6 +17,7 @@ FLAGS = ('audit_passed','completed_repair','no_edit','correct_without_submission
 COUNTS = ('task_number','repetition','attempted_calls','input_tokens','generated_tokens')
 RESTART_COUNTS = ('reboots','attempted_calls','journaled_requests','finished_responses','unknown_response_costs',
                   'known_input_tokens','known_generated_tokens')
+GPU_FIELDS = ('utilization_percent','power_w','memory_used_mib','temperature_c')
 
 
 def read(path):
@@ -38,6 +40,63 @@ def project_rows(rows, families, budget):
         projected.append(dict({key:row[key] for key in (*FLAGS,*COUNTS,'arm','first_edit_call','actor_seconds')},
                               family=aliases[row['family']]))
     return projected, aliases
+
+
+def gpu_statistics(out, state):
+    from candidate_restart import attempt_directory
+    from one_gpu_lm.verified.recovery_report import hardware
+
+    restarts = state['restarts']
+    starts = [state['started_epoch'], *(event['resumed_epoch'] for event in restarts)]
+    ends = [*(event['boot_epoch'] for event in restarts), state['finished_epoch']]
+    segments, unavailable = [], []
+    for attempt, (start, end) in enumerate(zip(starts, ends), 1):
+        path = attempt_directory(out, attempt)/'telemetry.csv'
+        collector = state['telemetry'] if attempt == len(starts) else None
+        try:
+            expected = restarts[attempt - 1]['prior_telemetry_sha256'] if collector is None else None
+            source_hash = sha256(path)
+            if collector is None and source_hash != expected:
+                raise ValueError('Telemetry differs from the recorded restart')
+            checked = hardware(path, {'started_epoch':start,'finished_epoch':end,'telemetry':collector})
+            if ((collector is not None and checked['samples'] != collector['samples'])
+                    or any(not math.isfinite(v) for key in GPU_FIELDS if checked[key]
+                           for v in checked[key].values())):
+                raise ValueError('Hardware samples differ from their collector receipt')
+        except (OSError, ValueError, TypeError, KeyError):
+            unavailable.append(attempt)
+            continue
+        keep = ('samples','first_to_last_seconds','maximum_gap_seconds',*GPU_FIELDS)
+        segments.append({**{key:checked[key] for key in keep},'attempt':attempt,
+                         'telemetry_sha256':source_hash,'collector_errors':collector['errors'] if collector else None})
+    samples = sum(segment['samples'] for segment in segments)
+    summary = {'samples':samples,'segments':segments,'unavailable_attempts':unavailable,
+               'sample_span_seconds':sum(segment['first_to_last_seconds'] for segment in segments)}
+    for key in GPU_FIELDS:
+        valid = [segment for segment in segments if segment[key] is not None]
+        summary[key] = {'mean':sum(s['samples']*s[key]['mean'] for s in valid)/samples,
+                        'maximum':max(s[key]['maximum'] for s in valid)} if samples else None
+    return summary
+
+
+def evaluation_timing(out, state):
+    from candidate_restart import actor_directory
+
+    generation = 0.0
+    for row in state['runs']:
+        path = actor_directory(out,row.get('attempt',1),row['run_id'])/'trajectory.json'
+        payload = path.read_bytes()
+        if hash_bytes(payload).hexdigest() != row['trajectory_sha256']:
+            raise ValueError('Timing must come from the audited execution trace')
+        durations = [step['generation']['seconds'] for step in json.loads(payload)['steps']]
+        if any(not math.isfinite(seconds) or seconds < 0 for seconds in durations):
+            raise ValueError('Invalid generation duration')
+        generation += sum(durations)
+    return {'paired_generation_seconds':generation,
+            'paired_actor_seconds':sum(row['actor_seconds'] for row in state['runs']),
+            'paired_grading_and_close_seconds':sum(row['seconds']-row['actor_seconds'] for row in state['runs']),
+            'ready_backend_loading_seconds':sum(entry['ready_epoch']-entry['started_epoch']
+                                               for entry in state['backend_lifecycles'] if 'ready_epoch' in entry)}
 
 
 def capture(root, protocol, controller, audit_path, publication, openings):
@@ -66,11 +125,13 @@ def capture(root, protocol, controller, audit_path, publication, openings):
         raise ValueError('Anonymization changed the measured development decision')
     interruptions = {key:audit['interruptions'][key] for key in (*RESTART_COUNTS,'retained_prefixes')}
     telemetry = {key:state['telemetry'][key] for key in ('samples','errors','thread_stopped')}
+    gpu = gpu_statistics(controller.parent,state)
+    timing = evaluation_timing(controller.parent,state)
     return {'schema_version':1,'protocol_sha256':protocol_hash,'audit_sha256':audit_hash,
             'controller_sha256':sha256(controller),'registration_commit':published['commit'],
             'started_epoch':state['started_epoch'],'finished_epoch':state['finished_epoch'],
             'backend_loads':audit['backend_loads'],'verified_requests':audit['verified_requests'],
-            'interruptions':interruptions,'last_telemetry_segment':telemetry,'design':design,
+            'interruptions':interruptions,'last_telemetry_segment':telemetry,'gpu':gpu,'timing':timing,'design':design,
             'rows':rows,'analysis':public,'passed':True,'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
 
 
@@ -113,6 +174,19 @@ def render(root, directory, registration):
     lines += ['','![累计首次改码和完成提交曲线](call-curves.svg)','',
               f'北京时间 {start:%Y-%m-%d %H:%M:%S} 至 {end:%Y-%m-%d %H:%M:%S}。'
               f'流水线历时 {(end-start).total_seconds()/3600:.2f} 小时，完成配对中的 {value["verified_requests"]:,} 条生成请求已逐条核对。']
+    if timing := value.get('timing'):
+        lines += ['',f'完整配对累计生成用时 {timing["paired_generation_seconds"]/3600:.2f} 小时，'
+                  f'独立评分与收尾共 {timing["paired_grading_and_close_seconds"]/60:.1f} 分钟。'
+                  f'已就绪后端累计加载 {timing["ready_backend_loading_seconds"]/60:.1f} 分钟。']
+    if gpu := value.get('gpu'):
+        if gpu['samples']:
+            lines += ['',f'GPU 记录 {gpu["samples"]:,} 个样本，各次执行的首末采样跨度合计 '
+                      f'{gpu["sample_span_seconds"]/3600:.2f} 小时。采样平均利用率 {gpu["utilization_percent"]["mean"]:.1f}%，'
+                      f'平均功耗 {gpu["power_w"]["mean"]:.0f} W，峰值显存 {gpu["memory_used_mib"]["maximum"]:.0f} MiB，'
+                      f'最高温度 {gpu["temperature_c"]["maximum"]:.0f} °C。']
+        if gpu['unavailable_attempts']:
+            attempts = ', '.join(str(n) for n in gpu['unavailable_attempts'])
+            lines += ['',f'第 {attempts} 次执行的硬件记录无法核验。']
     overhead = value['interruptions']
     if overhead['reboots']:
         lines += ['',f'工作站重启 {overhead["reboots"]} 次。中断分支中的 {overhead["journaled_requests"]} 条请求单独记账，'
