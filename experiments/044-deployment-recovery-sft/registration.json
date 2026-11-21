@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "experiment": "044-deployment-recovery-sft",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "design_sha256": "beaf94080794523109c6a4b89153d5c2b709452c86b4f925054f667ceea97c29",
+  "private_protocol_sha256": "65744458ca7988c35109d4a2fbd7417948149a6b030df952da93d390de09006d",
+  "collection": {
+    "experiment": "043-decision-state-collection",
+    "results_commit": "9c72d8dfc232db93b0c2ee0c74bbfa0f0dd40d8e",
+    "protocol_sha256": "5d3503140973752b6e1d764b3ff549102fa888ad386434107e55c9def5f42dca",
+    "audit_sha256": "810d55e9cab832ea63415ebe03005ebc9b0ff3015662f63717cda6f2b63a81d6",
+    "historical_protocol_sha256": "8e2cf62d36f63c8c24245435fdf8be9c570640ace806beda8c41dda12b17cccf",
+    "historical_audit_sha256": "dbde3e4dbfd369358d8df71e9c0f333646f1c71accd03b7c8899586823fdd1a2",
+    "positive_sequences": 21,
+    "replayed_sequences": 20,
+    "sequences_excluded_due_to_retained_tasks": 2,
+    "sequences_excluded_due_to_call_budget": 1
+  },
+  "training": {
+    "retained_031_action_records": 1006,
+    "action_records": 1116,
+    "new_continuation_tasks": 18,
+    "new_source_families": 5,
+    "new_action_records": 110,
+    "new_action_kinds": {
+      "other": 56,
+      "edit": 18,
+      "regression_pass": 18,
+      "submit": 18
+    },
+    "new_input_tokens": 301935,
+    "new_supervised_tokens": 8060,
+    "input_tokens": 2654652,
+    "supervised_tokens": 72051,
+    "max_sequence_tokens": 7018,
+    "max_new_target_tokens": 244,
+    "optimizer_updates": 126,
+    "trainable_parameters": 58363904,
+    "batch_identity_sha256": "a7ee0c0c4f460b055ac92977afeee4ea977792f771e4ffa35a1eaf0085c1b8c3",
+    "frozen_files": 206,
+    "target_truncation": false,
+    "oversampling": false
+  },
+  "development": {
+    "cohort_sha256": "d519f377030374a2ac2b67826d622772906385ba88627a3ed5ca8e13d681e9ef",
+    "tasks": 60,
+    "families": 6,
+    "repetitions": 3,
+    "opening": "original",
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true
+  },
+  "optimizer_updates_before_registration": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

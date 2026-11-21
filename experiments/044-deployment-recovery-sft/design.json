@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "experiment": "044-deployment-recovery-sft",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "collection": {
+    "experiment": "043-decision-state-collection",
+    "results_commit": "9c72d8dfc232db93b0c2ee0c74bbfa0f0dd40d8e",
+    "protocol_sha256": "5d3503140973752b6e1d764b3ff549102fa888ad386434107e55c9def5f42dca",
+    "audit_sha256": "810d55e9cab832ea63415ebe03005ebc9b0ff3015662f63717cda6f2b63a81d6",
+    "historical_protocol_sha256": "8e2cf62d36f63c8c24245435fdf8be9c570640ace806beda8c41dda12b17cccf",
+    "historical_audit_sha256": "dbde3e4dbfd369358d8df71e9c0f333646f1c71accd03b7c8899586823fdd1a2",
+    "positive_sequences": 21
+  },
+  "selection": "Replay every verified low-thinking early-edit continuation with a fresh defective opening, the 039 original task prompt, normalized raw tool feedback, unchanged before/after source, and a fresh protected training grade. Remove collection-only denied actions and feedback without executing or labeling those requests. Retain all executed action targets from each complete passing replay. Omit any task already represented in the retained 031 records. Reject an over-budget or non-reproducible sequence as a unit.",
+  "retained_training": {
+    "experiment": "031-correction-mix",
+    "records": 1006,
+    "optimizer_updates": 126,
+    "new_records_per_optimizer_window_at_most": 1,
+    "checkpoint_selection": "Only the complete epoch, initialized from the pinned base. No development-driven checkpoint selection."
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "actor_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "development": {
+    "cohort_sha256": "d519f377030374a2ac2b67826d622772906385ba88627a3ed5ca8e13d681e9ef",
+    "tasks": 60,
+    "families": 6,
+    "repetitions": 3,
+    "opening": "original",
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true
+  },
+  "final_test_opened": false,
+  "weights_public": false
+}
