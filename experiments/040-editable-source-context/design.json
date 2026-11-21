@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "reference_results_commit": "06e74f230cf93b94015c3d02e85fb67ddff89c8e",
+  "cohort": "all_60_existing_039_development_tasks",
+  "task_count": 60,
+  "repetitions": 1,
+  "rollout_count": 120,
+  "arms": {
+    "base": "exact_039_opening",
+    "candidate": "039_opening_with_original_editable_source_excerpts"
+  },
+  "source_context": {
+    "max_added_tokens": 1536,
+    "max_opening_tokens": 4096,
+    "window_lines": [64, 32, 16, 8]
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 40040,
+    "complete_audited_repetitions_required": true
+  },
+  "primary_metric": "Source changed, passes the protected fresh grader and explicitly submits within the actor budget.",
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false
+}

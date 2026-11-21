@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "reference_results_commit": "06e74f230cf93b94015c3d02e85fb67ddff89c8e",
+  "cohort": "all_60_existing_039_development_tasks",
+  "task_count": 60,
+  "repetitions": 1,
+  "rollout_count": 120,
+  "arms": {
+    "base": "exact_039_opening",
+    "candidate": "039_opening_with_original_editable_source_excerpts"
+  },
+  "source_context": {
+    "max_added_tokens": 1536,
+    "max_opening_tokens": 4096,
+    "window_lines": [
+      64,
+      32,
+      16,
+      8
+    ]
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 40040,
+    "complete_audited_repetitions_required": true
+  },
+  "primary_metric": "Source changed, passes the protected fresh grader and explicitly submits within the actor budget.",
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed": false,
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "families": {
+    "acornjs/acorn": 10,
+    "agronholm/apscheduler": 10,
+    "date-fns/date-fns": 10,
+    "hynek/structlog": 10,
+    "josdejong/mathjs": 10,
+    "textualize/rich": 10
+  },
+  "schedule_sha256": "1fd6ac1153585f3c8e32f3864f2d3733f56eb3298e65059b8f31bcfc0cb02a41",
+  "reference_inputs_sha256": "ef3ed2e310e11ae54cac46081030001473844b03a6d5e434ae75febfc3b6b1c6",
+  "reference_audit_sha256": "ea21f805e4f6a24da4238ce87d49856f205ae6fa1141d52de766272692b7dc71",
+  "preflight_sha256": "12128bf0fb9331d601db49339b24466fe67bd8e81373ff71eebb4064f80ac083",
+  "frozen_files": {
+    "experiments/040-editable-source-context/design.json": "4593826981bb974d89007a3ddb1c5665f2a02c6ac4cf910effb11f2bacf286f4",
+    "experiments/040-editable-source-context/study.py": "d78022d8ca85dc07363795efa558c8698dd13811283bf436c8f43e65ffebdd70",
+    "experiments/040-editable-source-context/source_context.py": "b194d46a343a703f667bcdc67351a964ef67f27f0e1a43705fbf239d8bfa48bd",
+    "experiments/040-editable-source-context/audit.py": "7172586ff94d1db0967294bd403da9d667e409349e990136c93a465550411bd8",
+    "experiments/035-edit-bottleneck/baseline.py": "9cce2982bfee4968df6419d95f233fbd47273dc23e622b673e781073295c31d6",
+    "experiments/035-edit-bottleneck/audit.py": "af495cf0cbd6c262878050574130c6788b67af47fcb5488f4237ca40006d8c7c"
+  },
+  "preflight": {
+    "tasks": 60,
+    "modified_openings": 60,
+    "window_line_counts": {
+      "16": 2,
+      "32": 10,
+      "64": 48
+    },
+    "max_candidate_input_tokens": 2870,
+    "max_added_input_tokens": 1452
+  }
+}
