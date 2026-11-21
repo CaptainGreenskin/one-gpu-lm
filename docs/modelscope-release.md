@@ -13,7 +13,7 @@
 
 039 在六个新家族的 60 道题上与底座同预算对照。031 LoRA 与底座各完成 48/180，开发净变化 0 个百分点，未通过开发门槛。最终测试集仍封存。031 的训练输入、教师模型和上游许可材料已绑定到同一候选。[039 完整审计与曲线](../experiments/039-release-development/results/2026-11-20/) · [031 来源与许可核验](../experiments/031-correction-mix/release-provenance.md)
 
-041 在九道训练题上采集到 27 条经审计的接续训练记录。042 将这些记录加入既有训练样本，完成 126 次更新并验证重载生成一致。独立开发对照使用六个新仓库家族的 60 道题，每题以同一推理流程和预算分别运行底座与 LoRA 各三次。晋级以完整配对审计为准。[041 采集结果](../experiments/041-first-edit-continuation/results/2026-11-21/) · [042 训练曲线](../experiments/042-first-edit-sft/results/2026-11-21-training/) · [042 开发登记](../experiments/042-first-edit-sft/development-registration.json)
+041 在九道训练题上采集到 27 条经审计的接续训练记录。042 将这些记录加入既有训练样本，完成 126 次更新并验证重载生成一致。独立开发对照使用六个新仓库家族的 60 道题，每题以同一推理流程和预算分别运行底座与 LoRA 各三次。完整审计后，底座完成 30/180，LoRA 完成 24/180。042 未通过开发门槛。[041 采集结果](../experiments/041-first-edit-continuation/results/2026-11-21/) · [042 训练曲线](../experiments/042-first-edit-sft/results/2026-11-21-training/) · [042 独立对照与硬件记录](../experiments/042-first-edit-sft/results/2026-11-21-development/)
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
