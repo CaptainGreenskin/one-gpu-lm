@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment": "042-first-edit-sft",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "private_protocol_sha256": "45a69bc66453d54c9a4fdadb6795032b337d156e442fb115665f9e06a4db78ec",
+  "collection": {
+    "experiment": "041-first-edit-continuation",
+    "results_commit": "eaae3caf50c0eeefe37ccdc9af57cf7301519a24",
+    "protocol_sha256": "f47cfa28462931b73446d9b36bf0e9032f615aa40a9395c687e39e08c49f50a4",
+    "audit_sha256": "eb8beb3b9be0cffe0b16113e38d7b1e8e6c231fe13ab4e55fc979e11618d0324",
+    "qualified_tasks": 9,
+    "qualified_families": 5,
+    "action_records": 27
+  },
+  "training": {
+    "retained_031_action_records": 1006,
+    "action_records": 1033,
+    "input_tokens": 2465490,
+    "supervised_tokens": 66440,
+    "new_supervised_tokens": 2449,
+    "optimizer_updates": 126,
+    "trainable_parameters": 58363904,
+    "batch_identity_sha256": "01812dde0f31c50ed1d696b6b5b77fb987a578e16c2fb3a0eeef56f382ea90a4",
+    "frozen_files": 190,
+    "target_truncation": false,
+    "oversampling": false
+  },
+  "final_test_opened": false,
+  "weights_public": false
+}
