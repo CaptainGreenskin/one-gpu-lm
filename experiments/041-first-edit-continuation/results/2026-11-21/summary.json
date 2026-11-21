@@ -1,0 +1,58 @@
+{
+  "planned_pairs": 9,
+  "complete_audited_pairs": 9,
+  "audited_arms": 18,
+  "verified_requests": 91,
+  "outcomes": {
+    "direct": {
+      "correct_patch": 6,
+      "verified_and_submitted_within_budget": 5,
+      "qualified": 5,
+      "timeout_recovered": 0,
+      "edit_actions": 7,
+      "attempted_calls": 48,
+      "generated_tokens": 10769,
+      "input_tokens": 201088,
+      "invalid_actions": 3,
+      "seconds": 933.4356958400094,
+      "first_edited": 7
+    },
+    "low": {
+      "correct_patch": 9,
+      "verified_and_submitted_within_budget": 9,
+      "qualified": 9,
+      "timeout_recovered": 0,
+      "edit_actions": 9,
+      "attempted_calls": 43,
+      "generated_tokens": 8852,
+      "input_tokens": 168086,
+      "invalid_actions": 0,
+      "seconds": 752.4078885849995,
+      "first_edited": 9
+    }
+  },
+  "paired_low_minus_direct": {
+    "correct_patch": {
+      "gain": 3,
+      "loss": 0,
+      "net": 3
+    },
+    "verified_and_submitted_within_budget": {
+      "gain": 4,
+      "loss": 0,
+      "net": 4
+    },
+    "qualified": {
+      "gain": 4,
+      "loss": 0,
+      "net": 4
+    }
+  },
+  "qualified_tasks": 9,
+  "qualified_families": 5,
+  "collection_gate_passed": true,
+  "private_export_counts": {
+    "records": 27,
+    "supervised_tokens": 2449
+  }
+}

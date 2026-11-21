@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "f47cfa28462931b73446d9b36bf0e9032f615aa40a9395c687e39e08c49f50a4",
+  "design_sha256": "70917b63a277099ee06612b3d574854f5657d83ee81e0afa104ff4eaa586f2f7",
+  "controller_sha256": "d43869d2fd789395d22a7752674c9f89d2d815409d8a9261506c5dd8e04edbbb",
+  "audit_sha256": "eb8beb3b9be0cffe0b16113e38d7b1e8e6c231fe13ab4e55fc979e11618d0324",
+  "started_epoch": 1795246152.9925575,
+  "finished_epoch": 1795247992.3495297,
+  "terminal_stage": "completed",
+  "audit_passed": true,
+  "collection_gate_passed": true,
+  "qualified_tasks": 9,
+  "qualified_families": 5,
+  "journal_requests_verified": 91,
+  "private_export_counts": {
+    "records": 27,
+    "supervised_tokens": 2449
+  },
+  "pairs": [
+    {
+      "pair": 1,
+      "family": 1,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": null,
+          "seconds": 178.71947694200207,
+          "qualification_reason": "repair_or_submission_failed",
+          "correct_patch": false,
+          "verified_and_submitted_within_budget": false,
+          "qualified": false,
+          "timeout_recovered": false,
+          "edit_actions": 0,
+          "attempted_calls": 6,
+          "generated_tokens": 2091,
+          "input_tokens": 32797,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 72.61315234200083,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 4,
+          "generated_tokens": 834,
+          "input_tokens": 17228,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "family": 2,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 50.64267561200177,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 6,
+          "generated_tokens": 555,
+          "input_tokens": 23358,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 90.13689945599981,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 4,
+          "generated_tokens": 1082,
+          "input_tokens": 14555,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 3,
+      "family": 2,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 2,
+          "seconds": 43.40890353500072,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 482,
+          "input_tokens": 21552,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 120.29847417000201,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 1443,
+          "input_tokens": 21600,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 4,
+      "family": 3,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 4,
+          "seconds": 53.790183199998864,
+          "qualification_reason": "repair_or_submission_failed",
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": false,
+          "qualified": false,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 6,
+          "generated_tokens": 580,
+          "input_tokens": 24603,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 71.49254989699693,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 813,
+          "input_tokens": 18771,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 5,
+      "family": 4,
+      "language": "javascript",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 4,
+          "seconds": 35.18657861899919,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 6,
+          "generated_tokens": 375,
+          "input_tokens": 20432,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 42.92380550899907,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 497,
+          "input_tokens": 13895,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 6,
+      "family": 2,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 2,
+          "seconds": 30.061160223001934,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 325,
+          "input_tokens": 19110,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 125.15168489700227,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 1515,
+          "input_tokens": 19430,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 7,
+      "family": 5,
+      "language": "javascript",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": null,
+          "seconds": 452.8753599860029,
+          "qualification_reason": "repair_or_submission_failed",
+          "correct_patch": false,
+          "verified_and_submitted_within_budget": false,
+          "qualified": false,
+          "timeout_recovered": false,
+          "edit_actions": 0,
+          "attempted_calls": 3,
+          "generated_tokens": 5399,
+          "input_tokens": 17420,
+          "invalid_actions": 3
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 94.57419957199818,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 1081,
+          "input_tokens": 25186,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 8,
+      "family": 2,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 2,
+          "seconds": 44.12599973400211,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 488,
+          "input_tokens": 20249,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 65.80124359399997,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 771,
+          "input_tokens": 19731,
+          "invalid_actions": 0
+        }
+      }
+    },
+    {
+      "pair": 9,
+      "family": 1,
+      "language": "python",
+      "arms": {
+        "direct": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 44.625357988999895,
+          "qualification_reason": "repair_or_submission_failed",
+          "correct_patch": false,
+          "verified_and_submitted_within_budget": false,
+          "qualified": false,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 6,
+          "generated_tokens": 474,
+          "input_tokens": 21567,
+          "invalid_actions": 0
+        },
+        "low": {
+          "audited": true,
+          "first_edit_call": 1,
+          "seconds": 69.41587914800039,
+          "qualification_reason": null,
+          "correct_patch": true,
+          "verified_and_submitted_within_budget": true,
+          "qualified": true,
+          "timeout_recovered": false,
+          "edit_actions": 1,
+          "attempted_calls": 5,
+          "generated_tokens": 816,
+          "input_tokens": 17690,
+          "invalid_actions": 0
+        }
+      }
+    }
+  ],
+  "new_optimizer_updates": 0,
+  "final_test_opened": false,
+  "hardware": {
+    "samples": 365,
+    "collector": {
+      "samples": 365,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "interval_seconds": 5,
+    "first_to_last_seconds": 1836.0316190719604,
+    "maximum_gap_seconds": 5.067760229110718,
+    "pipeline_seconds": 1839.3569722175598,
+    "first_sample_delay_seconds": 0.06280136108398438,
+    "last_sample_to_finish_seconds": 3.262551784515381,
+    "temperature_c": {
+      "mean": 48.775342465753425,
+      "maximum": 62.0
+    },
+    "power_w": {
+      "mean": 265.9103561643836,
+      "maximum": 546.94
+    },
+    "utilization_percent": {
+      "mean": 47.83013698630137,
+      "maximum": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 54648.58630136986,
+      "maximum": 58141.0
+    },
+    "sampled_gpu_energy_kwh": 0.13576136704182523,
+    "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity"
+  }
+}
