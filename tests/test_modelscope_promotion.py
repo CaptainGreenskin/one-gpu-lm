@@ -4,6 +4,7 @@ from pathlib import Path
 import shutil
 import sys
 import tempfile
+import time
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -18,12 +19,13 @@ from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','candidate_release','promotion','recovery','host_restart','final_campaign','final_audit',
-               'release_package','report')
+entrypoints = ('analysis','candidate_comparison','candidate_release','promotion','recovery','host_restart',
+               'final_campaign','final_audit','release_package','report','run')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
+    import candidate_comparison
     import candidate_release
     import final_audit
     import final_campaign
@@ -183,6 +185,93 @@ class ModelScopePromotionTests(unittest.TestCase):
             self.assertEqual(candidate_release.advance(args),{'stage':'fixture-scheduled'})
         training.assert_called_once_with(permission,absent,absent,absent,absent)
         run.assert_called_once_with(absent.resolve(),absent,permission,adapter_profile=profile)
+
+    def test_comparison_records_both_weight_arms_and_rejects_extra_requests(self):
+        work = self.directory
+        environment = {'fixture_runtime':True}
+        runtime_path = self.save('offline-runtime',{})
+        env_path = self.save('environment',environment)
+        plan = dict(self.plan,task_count=2,repetitions=1,rollout_count=4,block_size=2,
+                    families={'example/development':2},selected_opening='original',
+                    run_directory='runs/fixture',frozen_files={})
+        order = schedule([1,2],plan)
+        plan['schedule_sha256'] = fingerprint(order)
+        files = plan['all_adapter_files_sha256']
+        common = dict(model_id=plan['pretrained_model'],revision=plan['base_revision'],
+                      adapter_directory='private/adapter',all_adapter_files_sha256=files,
+                      adapter_sha256=served_weight_hashes(files),evaluation_profile_sha256='f'*64,
+                      environment_path=env_path.name,model_manifest_path='fixture-model')
+        cases = {}
+        for number in (1,2):
+            task = {'id':f'case-{number}','family':'example/development','description':f'opening {number}'}
+            cases[number] = {'prompts':{'original':task},'source':{},'before':{},'opening':{
+                'multifile':False,'openings':{'original':{'input_sha256':fingerprint(task),'input_tokens':7}}}}
+        panel = candidate_comparison.Panel(work,runtime_path,{'model':'fixture'},common,{},None,{},cases)
+        lock = work/'device.lock'
+        used = []
+
+        class JournalProvider:
+            def __init__(self, root, out, runtime, protocol, record, changed):
+                self.out,self.protocol,self.record = out,protocol,record
+                self.number,self.role,self.process = 0,None,None
+
+            def ensure(self, role, deadline):
+                if self.role != role:
+                    self.stop()
+                    self.role,self.process = role,object()
+                    self.number += 1
+                    self.record.append(dict(index=self.number,role=role,ready_epoch=time.time()))
+                    directory = self.out/'private/backends'/f'{self.number:04d}-{role}'
+                    self.journal_path = directory/'requests'
+                    self.journal_path.mkdir(parents=True)
+                    candidate_comparison.write_json(directory.with_name(directory.name+'-environment.json'),environment)
+                    self.artifact = dict(model_id=common['model_id'],revision=common['revision'],
+                                         adapter=role=='student',adapter_sha256=self.protocol['adapter_sha256'],
+                                         profile_sha256=common['evaluation_profile_sha256'])
+                    candidate_comparison.write_json(directory/'served-artifact.json',self.artifact)
+                return self.artifact
+
+            def check_exclusive(self):
+                pass
+
+            def stop(self):
+                if self.process is not None:
+                    self.record[-1]['stopped_epoch'] = time.time()
+                self.role,self.process = None,None
+
+        def record(root,data,task,source,backend,sandbox,protocol,directory,arm,*,journal_path,**options):
+            used.append((arm,task['description'],protocol['adapter_sha256']))
+            directory.mkdir(parents=True)
+            candidate_comparison.write_json(directory/'trajectory.json',{
+                'backend':backend,'steps':[{'generation':{'input_tokens':7,'input_tokens_sha256':fingerprint(task)}}]})
+            (journal_path/fingerprint(directory.name)).touch()
+            return {'id':task['id']}
+
+        def replay(root,data,directory,result,task,*arguments):
+            row = dict(task_number=result['task_number'],arm=result['contrast_arm'],family=task['family'],
+                       audit_passed=True,completed_repair=False,attempted_calls=1,input_tokens=7,
+                       generated_tokens=1,actor_seconds=1,no_edit=True,correct_without_submission=False,
+                       timeout_recovered=False,first_edit_call=None)
+            return row,fingerprint(task),{fingerprint(directory.name)}
+
+        with patch.multiple(candidate_comparison,JournalBackend=JournalProvider,rollout=record,
+                            gpu_lock_path=lambda:lock,Sandbox=lambda *_:None,verify_model=lambda *_:None,
+                            Telemetry=lambda *_:SimpleNamespace(start=lambda:None,stop=lambda:{'thread_stopped':True})):
+            state = candidate_comparison.evaluate(work,plan,'c'*64,order,panel)
+        self.assertEqual(state['stage'],'completed')
+        self.assertEqual([item[1] for item in used[:2]],[item[1] for item in used[2:]])
+        self.assertEqual([bool(item[2]) for item in used],[False,False,True,True])
+        extra = next((work/'runs/fixture/private/backends').glob('*/requests'))/'extra'
+        extra.touch()
+        with patch.multiple(candidate_comparison,load=lambda *_:SimpleNamespace(audited_row=replay),
+                            normalization=lambda *_:None):
+            with self.assertRaisesRegex(ValueError,'Unaccounted backend journal entries'):
+                candidate_comparison.audit(work,plan,'c'*64,'d'*64,order,panel)
+            extra.unlink()
+            result = candidate_comparison.audit(work,plan,'c'*64,'d'*64,order,panel)
+        self.assertEqual(result['verified_requests'],4)
+        self.assertFalse(result['analysis']['development_gate_passed'])
+        self.assertFalse(result['final_test_opened'])
 
     def test_fresh_comparison_can_promote_with_its_own_audit_and_the_original_final_gate(self):
         evidence = self.comparison_fixture(True)

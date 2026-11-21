@@ -16,6 +16,9 @@ from report import reproduce_analysis
 REPO = Path(__file__).resolve().parents[2]
 REFERENCE = REPO/'experiments/022-action-repair'
 WEIGHT_FILES = ('adapter_config.json', 'adapter_model.safetensors')
+COMPARISON_RULES = ('pretrained_model','base_revision','task_count','language_counts','repetitions','rollout_count',
+                    'block_size','evaluation_budget','pipeline_limit_seconds','recovery_accounting_seconds','gate',
+                    'optimizer_updates_during_development','final_test_opened','weight_publication_allowed_by_development')
 
 
 def read(path):
@@ -139,18 +142,15 @@ def _seal_permission(protocol, protocol_hash, audit_hash, result, seal_path, rev
             'final_test_opened':False,'weights_public':False}
 
 
-def verify_comparison(protocol_path, controller_path, audit_path, publication_path, openings_path):
-    """Recompute the new development decision using development files alone."""
+def comparison_registration(protocol_path, publication_path, openings_path):
+    """Check the frozen prompt, model, budget and order before starting the evaluation."""
     protocol,protocol_hash = _read_digest(protocol_path)
     publication = read(publication_path)
     if (publication['protocol_sha256']!=protocol_hash or publication['anonymous_files_verified'] is not True
             or publication['ci_conclusion']!='success' or not re.fullmatch(r'[0-9a-f]{40}',publication['commit'])):
         raise ValueError('Require this comparison’s public preregistration and passing CI')
     design = read(Path(__file__).with_name('design.json'))
-    same_design = ('pretrained_model','base_revision','task_count','language_counts','repetitions','rollout_count',
-                   'block_size','evaluation_budget','pipeline_limit_seconds','recovery_accounting_seconds','gate',
-                   'optimizer_updates_during_development','final_test_opened','weight_publication_allowed_by_development')
-    if (any(protocol.get(k)!=design[k] for k in same_design)
+    if (any(protocol.get(k)!=design[k] for k in COMPARISON_RULES)
             or protocol.get('comparison_kind')!='independent_adapter_comparison'
             or sorted(protocol['families'].values())!=sorted(design['families'].values())
             or {_family(name) for name in design['families']} & {_family(name) for name in protocol['families']}):
@@ -171,7 +171,15 @@ def verify_comparison(protocol_path, controller_path, audit_path, publication_pa
     order = schedule(list(expected_openings),protocol)
     if fingerprint(order)!=protocol['schedule_sha256']:
         raise ValueError('The paired trial schedule differs from the preregistration')
+    return protocol,protocol_hash,openings,opening_hash,order
 
+
+def verify_comparison(protocol_path, controller_path, audit_path, publication_path, openings_path):
+    """Recompute the new development decision using development files alone."""
+    protocol,protocol_hash,openings,opening_hash,order = comparison_registration(
+        protocol_path,publication_path,openings_path)
+    selected = protocol['selected_opening']
+    expected_openings = {row['task_number']:row for row in openings['rows']}
     controller,controller_hash = _read_digest(controller_path)
     audit,audit_hash = _read_digest(audit_path)
     if (controller['stage']!='completed' or controller['complete'] is not True
