@@ -7,9 +7,9 @@ import shutil
 from tempfile import TemporaryDirectory
 
 from one_gpu_lm.common.receipts import sha256, write_json
-from one_gpu_lm.verified.tasks import relative
-from .adapter_bundle import FILES, restore_adapter, verify_adapter
-from .release_lineage import audited_training, read_digest
+from one_gpu_lm.models.adapter_bundle import FILES, restore_adapter, verify_adapter
+from one_gpu_lm.models.release_lineage import audited_training, read_digest
+from .tasks import relative
 
 
 TRAINING_RECEIPTS = {'adapter.json','curve.json','environment.json','result.json','selection.json','updates.json'}
