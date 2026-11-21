@@ -29,6 +29,10 @@ python -m one_gpu_lm.models.adapter_bundle \
   --restore-to /path/to/restored-adapter
 ```
 
+## 绑定候选训练记录
+
+后续实验的晋级入口可将通过开发复验的授权、同一候选的适配器和经核验的训练配方交给 `run_approved`，随后用 `audit_approved` 复核原登记的最终测试。打包时成组提供 `--training-protocol`、`--training-profile` 和 `--training-integrity`，核对晋级授权、训练数据、来源清单、配方及适配器哈希。模型卡根据通过核验的记录填写候选名称和训练种子。打包同时重算原最终验收门槛，并核对逐文件许可材料和独立重载回执。[最终验收入口](../experiments/039-release-development/final_campaign.py) · [打包入口](../experiments/039-release-development/release_package.py) · [训练来源校验](../one_gpu_lm/models/release_lineage.py)
+
 ## 核对 ModelScope 上的发布版本
 
 [发布入口](../experiments/039-release-development/publish_package.py)使用通过验收的打包目录和 ModelScope 国际站的登录态。在本机安装 `modelscope-hub==0.7.0` 后，`check` 核对回执与本地文件。`stage` 创建私有模型仓库，只上传经审核的文件，从实际 Git 提交重新下载并逐文件校验。`publish` 再次比对同一提交后开放访问，匿名下载到新目录。状态保存在打包目录的 `modelscope-release.json`，网络中断后可按原提交恢复。[ModelScope Hub SDK](https://github.com/modelscope/modelscope_hub)
@@ -63,6 +67,6 @@ python -m one_gpu_lm.verified.reload_probe compare \
   --out /path/to/reload-comparison.json
 ```
 
-第二次 `capture` 使用恢复后的适配器目录，将输出写入 `after.json`。公开下载校验完成后，将下载目录再做一次 `capture`，与发布前的 `before.json` 比较。[重载校验实现](../one_gpu_lm/verified/reload_probe.py)
+第二次 `capture` 使用恢复后的适配器目录，将输出写入 `after.json`。候选的 LoRA 配方与评测配置里的默认配方有差异时，两次都通过 `--adapter-profile` 提供经审计的配方。公开下载校验完成后，将下载目录再做一次 `capture`，与发布前的 `before.json` 比较。[重载校验实现](../one_gpu_lm/verified/reload_probe.py)
 
 031、032 等历史候选保留已验证备份，模型卡会注明测试任务分布、训练种子和局限。短仓库修复结果描述本轮预算内的能力。长任务另有独立证据后在发布记录中报告。若候选落败，公开该轮开发结论，后续候选继续使用封存边界。

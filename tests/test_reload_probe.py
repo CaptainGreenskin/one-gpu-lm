@@ -52,3 +52,12 @@ class ReloadProbeTests(unittest.TestCase):
         self.after['probes'][0]['generated_tokens'] = 17
         with self.assertRaisesRegex(ValueError,'complete token fingerprints'):
             compare(self.before,self.after)
+
+    def test_separate_adapter_profile_is_bound_to_both_reloads(self):
+        for receipt in (self.before,self.after):
+            receipt['schema_version'] = 2
+            receipt['configuration']['adapter_profile_sha256'] = '7'*64
+        self.assertTrue(compare(self.before,self.after)['save_reload_greedy_match'])
+        self.after['configuration']['adapter_profile_sha256'] = '8'*64
+        with self.assertRaisesRegex(ValueError,'configuration changed'):
+            compare(self.before,self.after)

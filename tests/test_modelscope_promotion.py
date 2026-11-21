@@ -111,9 +111,14 @@ class ModelScopePromotionTests(unittest.TestCase):
         audit = self.synthetic_audit(False)
         audit['analysis']['costs']['base']['actor_seconds'] += 2e-12
         self.assertEqual(reproduce_analysis(audit,self.plan),audit['analysis'])
+        absent = self.directory/'sealed-absent'
+        self.assertEqual(authorize(self.plan_path,self.save('audit',audit),absent,absent)['stage'],
+                         'development_gate')
         audit['analysis']['successes']['base'] += 1
         with self.assertRaisesRegex(ValueError,'Exact audited repetitions'):
             reproduce_analysis(audit,self.plan)
+        with self.assertRaisesRegex(ValueError,'Exact audited repetitions'):
+            authorize(self.plan_path,self.save('audit',audit),absent,absent)
 
     def test_final_entry_waits_for_the_completed_audited_controller(self):
         root = self.directory/'working'
@@ -152,6 +157,17 @@ class ModelScopePromotionTests(unittest.TestCase):
         control.write_text(json.dumps(dict(controller,finished_epoch=201)))
         with self.assertRaisesRegex(ValueError,'completed controller'):
             final_campaign.promotion_from_finished_run(root,absent,absent)
+
+    def test_swapped_checkpoint_is_rejected_before_any_sealed_read(self):
+        adapter = self.directory/'wrong-adapter'
+        adapter.mkdir()
+        for name in release_package.FILES:
+            (adapter/name).write_text('unexpected bytes')
+        promotion = {'approved':True,'stage':'final_evaluation',
+                     'checkpoint_sha256':{name:'c'*64 for name in release_package.FILES}}
+        with patch.object(final_campaign,'verify_sealed_files',side_effect=AssertionError('Seal should remain closed')):
+            with self.assertRaisesRegex(ValueError,'promoted adapter changed'):
+                final_campaign.run_approved(self.directory/'unused-seal',adapter,promotion)
 
     def test_final_seal_verifier_checks_bytes_without_reading_task_schema(self):
         root = self.directory/'archive'
@@ -380,3 +396,53 @@ class ModelScopePromotionTests(unittest.TestCase):
         evidence = read(args.out/'release-evidence.json')
         self.assertTrue(evidence['decision']['accepted'])
         self.assertFalse(evidence['weights_public'])
+
+        successor_profile = read(training/'candidate-profile.json')
+        successor_profile['training']['seed'] = 152
+        successor_profile['lora']['r'] = 16
+        args.training_profile = self.save('successor-profile.json', successor_profile)
+        sources = 'c'*64
+        data = 'd'*64
+        args.training_protocol = self.save('successor-protocol.json', {
+            'profile_path':'training/profile.json','data_path':'private/training.jsonl','sources_path':'private/sources.json',
+            'frozen_files':{'training/profile.json':sha256(args.training_profile),'private/training.jsonl':data,
+                            'private/sources.json':sources},'final_test_opened':False,'weights_public':False})
+        args.training_integrity = self.save('successor-integrity.json', {
+            'passed':True,'protocol_sha256':sha256(args.training_protocol),'adapter_files_sha256':adapter_hashes,
+            'audit_model_generations':0,'audit_optimizer_updates':0,'optimizer_updates':18,
+            'final_test_opened':False,'weights_public':False})
+        self.save('inputs.json',dict(read(review),experiment='candidate-fixture',actual_training_data_sha256=data,
+            source_manifest_sha256=sources,training_integrity_sha256=sha256(args.training_integrity),
+            eligible_for_existing_scope_of_development=True,audited_checkpoint_matches=True,
+            source_snapshots_match=True,all_source_notices_and_lineage_reviewed_for_training=True,
+            model_id=identity['model_id'],revision=identity['base_revision'],checkpoint_files_sha256=adapter_hashes,
+            final_test_opened=False,weights_public=False))
+        permission['candidate_review_sha256']=sha256(review)
+        promotion.write_text(json.dumps(permission))
+        audit_path=out/'execution-audit.json'
+        audit_value=read(audit_path)
+        audit_value['promotion_sha256']=sha256(promotion)
+        audit_path.write_text(json.dumps(audit_value))
+        self.save('rights.json',dict(rights,approved_for_weight_publication=True,input_review_sha256=sha256(review)))
+        args.out=self.directory/'successor-release'
+        with patch.object(release_package,'TRAINING',self.directory/'absent-031'), \
+                patch.object(release_package,'restore_adapter',side_effect=copy_fixture):
+            args.training_profile.write_text(json.dumps(dict(successor_profile,training={'seed':1})))
+            with self.assertRaisesRegex(ValueError,'frozen training protocol'):
+                release_package.assemble_approved(args,permission,out)
+            self.assertFalse(args.out.exists())
+            self.save('successor-profile.json',successor_profile)
+            with self.assertRaisesRegex(ValueError,'audited adapter profile'):
+                release_package.assemble_approved(args,permission,out)
+            self.assertFalse(args.out.exists())
+            successor_captures = dict(captures, schema_version=2,configuration=dict(
+                captures['configuration'],adapter_profile_sha256=sha256(args.training_profile)))
+            self.save('before.json',dict(successor_captures,capture_id='a'*32))
+            self.save('after.json',dict(successor_captures,capture_id='b'*32))
+            release_package.assemble_approved(args,permission,out)
+        card=(args.out/'payload/README.md').read_text()
+        self.assertIn('candidate-fixture 使用一个训练种子 `152`',card)
+        self.assertNotIn('031-correction-mix',card)
+        self.assertNotIn('039 在六个',card)
+        self.assertIn('秩为 16',card)
+        self.assertEqual(read(args.out/'release-evidence.json')['training_lineage']['training_data_sha256'],data)

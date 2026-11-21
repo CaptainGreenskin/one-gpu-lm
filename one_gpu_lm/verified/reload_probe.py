@@ -48,10 +48,18 @@ def load_json(path):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
-def capture(model, adapter, profile_path, manifest_path, adapter_receipt):
+def capture(model, adapter, profile_path, manifest_path, adapter_receipt, *, adapter_profile_path=None):
     """Load pinned local files and record token fingerprints from a new model instance."""
     profile_bytes = Path(profile_path).read_bytes()
     profile = json.loads(profile_bytes)
+    adapter_identity = {}
+    adapter_profile = profile
+    if adapter_profile_path is not None:
+        adapter_profile_bytes = Path(adapter_profile_path).read_bytes()
+        adapter_profile = json.loads(adapter_profile_bytes)
+        if any(adapter_profile[k] != profile[k] for k in ('model_id', 'revision')):
+            raise ValueError('Adapter recipe and serving profile require the same base')
+        adapter_identity['adapter_profile_sha256'] = hash_bytes(adapter_profile_bytes).hexdigest()
     files = load_json(adapter_receipt)['adapter_files_sha256']
     expected = {name:files[name] for name in FILES}
     requests = probe_requests()
@@ -59,7 +67,7 @@ def capture(model, adapter, profile_path, manifest_path, adapter_receipt):
     with single_writer(gpu_lock_path()):
         require_idle_gpu()
         base = verify_model(model,manifest_path,profile)
-        verified = verify_adapter(adapter,profile,expected)
+        verified = verify_adapter(adapter,adapter_profile,expected)
         require_idle_gpu()
         environment = runtime_identity()
         with tempfile.TemporaryDirectory(prefix='one-gpu-lm-reload-') as temporary:
@@ -80,23 +88,26 @@ def capture(model, adapter, profile_path, manifest_path, adapter_receipt):
             del model_runtime
     if any(sha256(Path(adapter)/name)!=expected[name] for name in FILES):
         raise ValueError('Adapter bytes changed during the reload probe')
-    return {'schema_version':1,'capture_id':uuid4().hex,
+    return {'schema_version':2 if adapter_identity else 1,'capture_id':uuid4().hex,
             'configuration':{'model_id':base['model_id'],'base_revision':base['revision'],
                              'base_manifest_sha256':base['manifest_sha256'],'profile_sha256':hash_bytes(profile_bytes).hexdigest(),
                              'adapter_files_sha256':verified['adapter_files_sha256'],
                              'runtime_sha256':sha256(Path(hf_runtime.__file__)),
-                             'probe_definition_sha256':identity_digest(requests),'software':environment},
+                             'probe_definition_sha256':identity_digest(requests),'software':environment,
+                             **adapter_identity},
             'probes':evidence}
 
 
 def compare(before, after):
-    required_hashes = ('base_manifest_sha256','profile_sha256','runtime_sha256','probe_definition_sha256')
     for receipt in (before,after):
-        if (receipt['schema_version']!=1 or not re.fullmatch(r'[0-9a-f]{32}',receipt['capture_id'])
+        if (receipt['schema_version'] not in (1, 2) or not re.fullmatch(r'[0-9a-f]{32}',receipt['capture_id'])
                 or receipt['configuration']['probe_definition_sha256']!=identity_digest(probe_requests())
                 or [p['name'] for p in receipt['probes']]!=[name for name,_ in PROBES]):
             raise ValueError('Expected a complete fixed-probe receipt')
         config = receipt['configuration']
+        required_hashes = ('base_manifest_sha256','profile_sha256','runtime_sha256','probe_definition_sha256')
+        if receipt['schema_version'] == 2:
+            required_hashes += ('adapter_profile_sha256',)
         if (set(config)!={'model_id','base_revision','adapter_files_sha256','software',*required_hashes}
                 or not config['model_id'] or not re.fullmatch(r'[0-9a-f]{40}',config['base_revision'])
                 or set(config['adapter_files_sha256'])!=set(FILES)
@@ -126,6 +137,7 @@ def main():
     load = modes.add_parser('capture')
     for key in ('model','adapter','profile','base-manifest','adapter-receipt','out'):
         load.add_argument('--'+key,required=True,type=Path)
+    load.add_argument('--adapter-profile',type=Path)
     match = modes.add_parser('compare')
     for key in ('before','after','out'):
         match.add_argument('--'+key,required=True,type=Path)
@@ -133,7 +145,8 @@ def main():
     if args.out.exists() or args.out.is_symlink():
         raise FileExistsError('Preserve the existing probe receipt')
     if args.operation=='capture':
-        result = capture(args.model,args.adapter,args.profile,args.base_manifest,args.adapter_receipt)
+        result = capture(args.model,args.adapter,args.profile,args.base_manifest,args.adapter_receipt,
+                         adapter_profile_path=args.adapter_profile)
     else:
         result = compare(load_json(args.before),load_json(args.after))
         result.update(before_sha256=sha256(args.before),after_sha256=sha256(args.after))

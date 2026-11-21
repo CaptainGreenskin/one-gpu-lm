@@ -114,21 +114,35 @@ def terminate(process):
 def run(root, sealed, permission):
     if permission['approved'] is not True or permission['stage'] != 'final_evaluation':
         raise ValueError('Final scoring requires a passed development gate')
+    candidate = read(root/EXP/'protocol.json')
+    return run_approved(sealed, root/relative(candidate['adapter_directory']), permission)
+
+
+def run_approved(sealed, adapter, permission, *, adapter_profile=None):
+    """Score a promoted checkpoint on the original single-attempt final suite."""
+    if permission['approved'] is not True or permission['stage'] != 'final_evaluation':
+        raise ValueError('Final scoring requires a passed development gate')
+    adapter = Path(adapter)
+    if (set(permission['checkpoint_sha256']) != set(FILES)
+            or any(not (adapter/name).is_file() or (adapter/name).is_symlink()
+                   or sha256(adapter/name) != permission['checkpoint_sha256'][name] for name in FILES)):
+        raise ValueError('The promoted adapter changed before final scoring')
     protocol = verify_sealed_files(sealed)
     reference_path = sealed/SEALED_EXPERIMENT/'protocol.json'
     if (permission['reference_release_protocol_sha256'] != sha256(reference_path)
             or any(protocol['frozen_files'][n] != h for n,h in permission['frozen_final_files'].items())):
         raise ValueError('The permitted seal and the executing protocol differ')
 
-    candidate = read(root/EXP/'protocol.json')
-    adapter = root/relative(candidate['adapter_directory'])
     runtime = read(sealed/'runtime.json')
     model = Path(runtime['model'])
     profile_path = sealed/SEALED_EXPERIMENT/'profile-action.json'
     profile = read(profile_path)
     if (profile['model_id'],profile['revision']) != (permission['model_id'],permission['base_revision']):
         raise ValueError('The final serving profile differs from the approved base')
-    adapter_receipt = verify_adapter(adapter,profile,permission['checkpoint_sha256'])
+    expected_adapter = profile if adapter_profile is None else adapter_profile
+    if (expected_adapter['model_id'],expected_adapter['revision']) != (profile['model_id'],profile['revision']):
+        raise ValueError('The reviewed adapter recipe has a different base')
+    adapter_receipt = verify_adapter(adapter,expected_adapter,permission['checkpoint_sha256'])
     verify_model(model,sealed/'experiments/011-coding-model-selection/weights-manifest.json',profile)
     env = dict(os.environ)
     env.update(read(sealed/'private/inputs.json'))

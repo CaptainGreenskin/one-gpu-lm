@@ -1,4 +1,4 @@
-"""Assemble a ModelScope payload from an accepted 039/022 release decision."""
+"""Assemble a ModelScope payload after the registered development and final gates."""
 import argparse
 import json
 from pathlib import Path
@@ -9,6 +9,7 @@ from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.common.runstate import atomic_json
 from one_gpu_lm.models.adapter_bundle import FILES, restore_adapter
 from one_gpu_lm.models.modelscope_readback import file_path, model_endpoint, validate_files
+from one_gpu_lm.models.release_lineage import reviewed_training
 from one_gpu_lm.verified.reload_probe import compare
 
 from final_audit import require
@@ -108,7 +109,7 @@ def approved_notices(permission, input_review_path, rights_path, readback_path):
     return rights['release_license'],expected
 
 
-def model_card(repo_id, permission, evaluation, training, software, metrics, license_id):
+def model_card(repo_id, permission, evaluation, training, software, metrics, license_id, *, lineage=None):
     model, revision = permission['model_id'], permission['base_revision']
     packages = software['packages']
     require(all(re.fullmatch(r'[A-Za-z0-9.+!-]+',v) for v in [software['python'],*packages.values()]),
@@ -116,6 +117,17 @@ def model_card(repo_id, permission, evaluation, training, software, metrics, lic
     rows = '\n'.join(f'| {label} | {count} | {base} | {selected} |' for label,count,base,selected in metrics)
     dependencies = ' '.join(f'`{name}=={value}`' for name,value in packages.items())
     adapter_hashes = '\n'.join(f'| `{name}` | `{permission["checkpoint_sha256"][name]}` |' for name in FILES)
+    if lineage is None:
+        experiment = '031'
+        scope = '039 在六个仓库家族的 60 道开发题上复跑三轮。'
+        source = (f'训练由本地底座生成、实际执行并审计的轨迹组成。适配器分发适用 `{license_id}`。'
+                  '底座与训练来源的许可及署名原文随包保留。'
+                  f'[训练来源核验](https://github.com/{OWNER}/one-gpu-lm/blob/main/experiments/031-correction-mix/release-provenance.md)')
+    else:
+        experiment = lineage['experiment']
+        scope = ''
+        source = (f'候选的训练记录与输入来源已核验，共执行 {lineage["optimizer_updates"]} 次优化器更新。'
+                  f'适配器分发适用 `{license_id}`。底座与训练来源的许可及署名原文随包保留。')
     return f'''---
 license: {license_id.lower()}
 ---
@@ -130,13 +142,13 @@ license: {license_id.lower()}
 
 ## 验收结果
 
-039 在六个仓库家族的 60 道开发题上复跑三轮。相同推理流程和预算下，LoRA 的完成率提高 {permission['development_gain_pp']:+.2f} 个百分点。
+{scope}开发集采用相同的推理流程和预算，LoRA 的完成率提高 {permission['development_gain_pp']:+.2f} 个百分点。
 
 | 最终测试 | 题数 | 底座通过 | LoRA 通过 |
 | --- | ---: | ---: | ---: |
 {rows}
 
-同一题内，两组使用相同的工具流程和预算。031 只使用一个训练种子 `{training['training']['seed']}`。仓库内任务共享代码和依赖，结果受家族分布影响。结论限于这些仓库和函数测试，长任务能力需单独验证。[实验与复现入口](https://github.com/{OWNER}/one-gpu-lm/blob/main/docs/modelscope-release.md)
+同一题内，两组使用相同的工具流程和预算。{experiment} 使用一个训练种子 `{training['training']['seed']}`。仓库内任务共享代码和依赖，结果受家族分布影响。结论限于这些仓库和函数测试，长任务能力需单独验证。[实验与复现入口](https://github.com/{OWNER}/one-gpu-lm/blob/main/docs/modelscope-release.md)
 
 ## 加载
 
@@ -160,16 +172,30 @@ base = {evaluation['loader']}.from_pretrained(
 model = PeftModel.from_pretrained(base, "./adapter", is_trainable=False).eval()
 ```
 
-训练由本地底座生成、实际执行并审计的轨迹组成。适配器分发适用 `{license_id}`。底座与训练来源的许可及署名原文随包保留。[训练来源核验](https://github.com/{OWNER}/one-gpu-lm/blob/main/experiments/031-correction-mix/release-provenance.md)
+{source}
 '''
 
 
-def assemble(args):
-    permission = promotion_from_finished_run(args.root,args.seal,args.input_review)
+def training_for_release(args, permission):
+    paths = [getattr(args, key, None) for key in ('training_protocol', 'training_profile', 'training_integrity')]
+    if any(path is not None for path in paths):
+        require(all(path is not None for path in paths), 'Provide the training protocol, profile and integrity receipt together')
+        return reviewed_training(permission, args.input_review, *paths)
+    training = read(TRAINING/'candidate-profile.json')
+    integrity = read(TRAINING/'results/2026-11-17-training/integrity.json')
+    require(integrity['passed'] is True
+            and all(integrity['adapter_files_sha256'][name] == permission['checkpoint_sha256'][name] for name in FILES),
+            'Expected the published 031 training lineage for this adapter')
+    return training, None
+
+
+def assemble_approved(args, permission, out):
+    """Package the same final-suite evidence using an experiment's verified promotion."""
     require(permission['approved'] is True, 'Development release gate: '+permission['stage'])
-    out = args.sealed/FINAL
     pairs,checks,table = audited_scores(out,permission)
     license_id,notices = approved_notices(permission,args.input_review,args.rights,args.notice_readback)
+    training, lineage = training_for_release(args, permission)
+    serving = read(PROFILE)
 
     reloaded = compare(read(args.before),read(args.after))
     config = reloaded['configuration']
@@ -180,15 +206,17 @@ def assemble(args):
             and config['base_manifest_sha256'] == frozen[BASE_MANIFEST]
             and config['profile_sha256'] == frozen[PROFILE_KEY] == sha256(PROFILE),
             'Require independent matching reloads of the accepted adapter and final serving profile')
+    if 'adapter_profile_sha256' in config:
+        expected_profile = lineage['profile_sha256'] if lineage else sha256(TRAINING/'candidate-profile.json')
+        require(config['adapter_profile_sha256'] == expected_profile,
+                'The reload receipt used a different training profile')
+    else:
+        require(training['lora'] == serving['lora'],
+                'Capture the reloads with the audited adapter profile when the LoRA recipe differs')
 
     model_endpoint(ENDPOINT,args.repo_id)
     require(args.repo_id.split('/')[0] == OWNER,'Use the authorized ModelScope owner')
-    training = read(TRAINING/'candidate-profile.json')
-    integrity = read(TRAINING/'results/2026-11-17-training/integrity.json')
-    require(integrity['passed'] is True
-            and all(integrity['adapter_files_sha256'][name] == permission['checkpoint_sha256'][name] for name in FILES),
-            'Expected the published 031 training lineage for this adapter')
-    card = model_card(args.repo_id,permission,read(PROFILE),training,config['software'],table,license_id)
+    card = model_card(args.repo_id,permission,serving,training,config['software'],table,license_id,lineage=lineage)
     checks.update(save_reload_greedy_match=True,rights_and_secret_scan_pass=True,
                   single_training_seed_and_repository_cluster_limits_disclosed=True)
     decision = release_decision(permission,*pairs,checks)
@@ -217,10 +245,18 @@ def assemble(args):
                    'execution_audit_sha256':sha256(out/'execution-audit.json'),
                    'rights_review_sha256':sha256(args.rights),
                    'reload_captures_sha256':[sha256(args.before),sha256(args.after)]}
+        if lineage is not None:
+            receipt['training_lineage'] = lineage
         atomic_json(stage/'release-evidence.json',receipt)
         require(not args.out.exists() and not args.out.is_symlink(),'Release destination appeared during staging')
         stage.rename(args.out)
     return manifest
+
+
+def assemble(args):
+    permission = promotion_from_finished_run(args.root,args.seal,args.input_review)
+    require(permission['approved'] is True, 'Development release gate: '+permission['stage'])
+    return assemble_approved(args, permission, args.sealed/FINAL)
 
 
 def main():
@@ -229,6 +265,8 @@ def main():
                  'before','after','adapter','out'):
         parser.add_argument('--'+name,required=True,type=Path)
     parser.add_argument('--repo-id',required=True)
+    for name in ('training-protocol', 'training-profile', 'training-integrity'):
+        parser.add_argument('--'+name, type=Path)
     args = parser.parse_args()
     try:
         manifest = assemble(args)

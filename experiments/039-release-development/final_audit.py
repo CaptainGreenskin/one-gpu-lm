@@ -151,11 +151,18 @@ def replay_grade(sealed, runtime, task, directory, result, limit, scratch):
 
 
 def audit(root, sealed, seal_path, review_path):
+    permission = promotion_from_finished_run(root,seal_path,review_path)
+    return audit_approved(sealed, permission)
+
+
+def audit_approved(sealed, permission):
+    """Replay the frozen suite for the exact candidate that was authorized."""
+    require(permission['approved'] is True and permission['stage'] == 'final_evaluation',
+            'Require the approved development promotion before final replay')
     out = sealed/FINAL
     target = out/'execution-audit.json'
     require(not target.exists(),'Preserve existing final execution evidence')
-    permission = promotion_from_finished_run(root,seal_path,review_path)
-    require(permission['approved'] is True and permission == read(out/'promotion.json'),
+    require(permission == read(out/'promotion.json'),
             'A completed development promotion must match the launch receipt')
     control = out/'controller.json'
     state = read(control)

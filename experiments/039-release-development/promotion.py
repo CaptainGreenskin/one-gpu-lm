@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 from one_gpu_lm.common.receipts import sha256
-from analysis import analyze
+from report import reproduce_analysis
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -34,8 +34,8 @@ def authorize(protocol_path, audit_path, seal_path, review_path):
                    or not 0<=row['generated_tokens']<=budget['max_total_generated_tokens']
                    or not 1<=row['opening_input_tokens']<=budget['max_input_tokens'] for row in audit['rows'])):
         raise ValueError('Require complete audited development results for the unchanged protocol')
-    result = analyze(audit['rows'], protocol)
-    if result!=audit['analysis'] or result['received_runs']!=protocol['rollout_count']:
+    result = reproduce_analysis(audit, protocol)
+    if result['received_runs']!=protocol['rollout_count']:
         raise ValueError('Stored development decision differs from independent recomputation')
     amendment_path=Path(__file__).with_name('recovery-plan.json')
     amendment=read(amendment_path)
