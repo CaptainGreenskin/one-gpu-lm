@@ -1,6 +1,7 @@
 """Replay 028 continuations from a separately verified admitted failure snapshot."""
 import base64
 import argparse
+from copy import deepcopy
 import json
 from pathlib import Path
 import traceback
@@ -20,9 +21,16 @@ from .tasks import digest, files, prepare, grade, relative, validate_source
 
 
 def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, prefix):
+    messages = initial_messages(prefix, protocol, trace['branch'])
+    return replay_from_state(directory, trace, task, protocol, profile, tokenizer, normalizer,
+                             messages, prefix['failed_source_sha256'])
+
+
+def replay_from_state(directory, trace, task, protocol, profile, tokenizer, normalizer,
+                      initial, source_before):
     directory=Path(directory);budget=protocol['evaluation_budget'];policy=protocol['agent_policy']
-    arm=trace['branch']; messages=initial_messages(prefix,protocol,arm);total=0;input_total=0;checks=[];actions=[];feedback=[]
-    errors=[];last_source=prefix['failed_source_sha256'];verified=None
+    arm=trace['branch']; messages=deepcopy(initial);total=0;input_total=0;checks=[];actions=[];feedback=[]
+    errors=[];last_source=source_before;verified=None
     guard=True; pending=False
     expected_roles = {'base'}
     from .recovery_rollout import identity_ok

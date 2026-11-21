@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_count": 9,
+  "historical_calls": 6,
+  "cpu_inputs_sha256": "562fe0aed03fdf4e0b05c05ad7f39c1982121820bbfef44ecdae4d11fd6f3d08",
+  "total_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 2048,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "minimum_qualified_tasks": 6,
+  "minimum_qualified_families": 3,
+  "max_pipeline_seconds": 16200,
+  "recovery_seconds": 120,
+  "final_test_opened": false
+}

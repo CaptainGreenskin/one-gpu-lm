@@ -11,6 +11,7 @@ from one_gpu_lm.common.reasoning import request_options, action_text
 from one_gpu_lm.common.agent_policy import format_feedback
 from one_gpu_lm.common.receipts import write_json
 from one_gpu_lm.serving.client import request
+from one_gpu_lm.serving.receipt_client import generate_once
 from .correction_policy import initial_messages, CorrectionGuard, feedback_notice
 from .decision_policy import guard_arm, notice as continuation_notice
 from .evaluation_rollout import atomic, normalization
@@ -39,7 +40,8 @@ def initialize(data, task, source, protocol, out, arm):
     return state
 
 
-def advance(root, task, protocol, out, state, backend, runner, arm):
+def advance(root, task, protocol, out, state, backend, runner, arm, *,
+            journal_path=None, recovery_seconds=0):
     """Continue only from a known feedback boundary, with cumulative path costs."""
     out = Path(out); budget = protocol['evaluation_budget']; policy = protocol['agent_policy']
     if (state['complete'] or state.get('unknown_inflight_generation_cost')
@@ -53,6 +55,8 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
     health = request(backend, {'operation': 'health'})
     if not identity_ok(health, protocol, role):
         raise ValueError('Unexpected continuation artifact')
+    if journal_path is not None and (health.get('request_journal_version') != 1 or recovery_seconds <= 0):
+        raise ValueError('Journaled continuations require a verified journal and recovery budget')
     state['backend_identities'][role] = health
     norm = normalization(root)
     workspace = out/'workspace'; key = str(workspace.resolve())
@@ -81,7 +85,13 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
         write_json(request_path, payload)
         state.update(boundary='in_flight', attempted_calls=call); save()
         try:
-            generated = request(backend, payload, timeout=max(1, min(180, remaining['actor_seconds'])))
+            timeout = max(1, min(180, remaining['actor_seconds']))
+            recovery = None
+            if journal_path is None:
+                generated = request(backend, payload, timeout=timeout)
+            else:
+                generated, recovery = generate_once(backend, journal_path, out.name, call, payload,
+                                                    timeout=timeout, recovery_seconds=recovery_seconds)
         except Exception as error:
             state.update(terminal_reason='backend_error', backend_error_type=type(error).__name__,
                          unknown_inflight_generation_cost=True)
@@ -91,16 +101,23 @@ def advance(root, task, protocol, out, state, backend, runner, arm):
         evidence_before, protected_before = save_source(out, workspace, task, original_inventory)
         step = {'source_evidence_before': evidence_before, 'protected_before': protected_before, 'call': call, 'model_role': role, 'request_sha256': digest(request_path.read_bytes()),
                 'generation': generated, 'source_before': guard.source_state(workspace, task), 'action_format_valid': False}
+        if recovery is not None:
+            step['transport_timeout_receipt'] = recovery
+            state.update(timeout_call=call, accounting_drain_seconds=recovery['accounting_drain_seconds'])
         assistant = {'role': 'assistant', 'content': action_text(generated, protocol), 'extra': {}}
         state['messages'].append(assistant)
         try:
             action = parse_action(action_text(generated, protocol))
         except ValueError:
             state['messages'].append({'role': 'user', 'content': format_feedback(policy)})
-            state['steps'].append(step); state['boundary'] = 'completed_step'; save(); continue
+            state['steps'].append(step)
+            if recovery is not None:
+                state['terminal_reason'] = 'time_limit'
+                break
+            state['boundary'] = 'completed_step'; save(); continue
         step.update(action_format_valid=True, command=action['command']); assistant['extra']['actions'] = [action]
         seconds = budget['max_task_seconds'] - (consumed + time.monotonic() - started)
-        if seconds <= 0:
+        if recovery is not None or seconds <= 0:
             state['steps'].append(step); state['terminal_reason'] = 'time_limit_before_tool'; break
         guard.timeout = max(1, min(budget['max_tool_seconds'], int(seconds)))
         output = guard.execute(workspace, action['command'])

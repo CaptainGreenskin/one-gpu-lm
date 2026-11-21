@@ -45,7 +45,6 @@ def make_server(socket_path, journal, generate, identity):
 
 def main():
     from one_gpu_lm.common.receipts import sha256, write_json
-    from one_gpu_lm.models.hf_runtime import Runtime
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ['model', 'profile', 'socket', 'out']:
         parser.add_argument('--' + name, type=Path, required=True)
@@ -56,6 +55,10 @@ def main():
     os.umask(0o077)
     args.out.mkdir(parents=True, mode=0o700)
     profile = json.loads(args.profile.read_text())
+    if profile.get('generation_modes'):
+        from one_gpu_lm.models.reasoning_runtime import Runtime
+    else:
+        from one_gpu_lm.models.hf_runtime import Runtime
     runtime = Runtime(args.model, profile, args.out, args.adapter)
     identity = {'ready': True, 'model_id': profile['model_id'], 'revision': profile['revision'],
                 'profile_sha256': sha256(args.profile), 'adapter': bool(args.adapter),
