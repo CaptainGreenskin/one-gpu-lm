@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "experiment": "042-first-edit-sft",
+  "private_protocol_sha256": "eabcafc9ed55dee996d4704d3bb6db0a0268ad9cae153fc1b3b2a995a7cdacef",
+  "training_integrity_sha256": "ef093061681e11b21554fb12b39af8f69f43d0f67f81ccb29dd154df6973ace2",
+  "training_report": {
+    "path": "experiments/042-first-edit-sft/results/2026-11-21-training/measurements.json",
+    "sha256": "f0678b1dd6133c92cb8cbda85b6ce027cdcb6119cd5270df153cb5e74c8e92b8"
+  },
+  "comparison_code_commit": "978102e87958f38c9cc63b7267fe4d0d442040ad",
+  "comparison_code_sha256": {
+    "experiments/039-release-development/candidate_comparison.py": "feb2ce3b3d233d402ef2d03df81cd46444cb3fa4059e8c8cbd7cc54fb20bd66c",
+    "experiments/039-release-development/candidate_restart.py": "5bc44741fa30dfc79a1113177d489170a3c2a7ff90cb391965299e1580727309",
+    "experiments/039-release-development/promotion.py": "2e7c19f39fbec3224cc9864b0338d8b40183402a30d5cd704afda4f6efce5a82"
+  },
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "task_count": 60,
+  "language_counts": {
+    "python": 30,
+    "javascript": 30
+  },
+  "repetitions": 3,
+  "rollout_count": 360,
+  "block_size": 10,
+  "cohort_sha256": "0fea72fa51e672b36f819a95dc9dc6b38805805f93b87ff499904f07e32b03f9",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "opening_preflight_sha256": "8cb05d18b56889cbbc1ede263f3738a85fe7384e8a9c7e0745201b9cd4d7c598",
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "selected_opening": "original",
+  "source_context_audit_sha256": "f4e8899e191049e0772cbf349f4abc791c4d4c4daa19247bdb2d592b30e23ac6",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 39039,
+    "complete_audited_repetitions_required": true
+  },
+  "optimizer_updates_during_development": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed_by_development": false,
+  "tasks_per_family": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ]
+}
