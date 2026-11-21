@@ -15,6 +15,8 @@
 
 041 在九道训练题上采集到 27 条经审计的接续训练记录。042 将这些记录加入既有训练样本，完成 126 次更新并验证重载生成一致。独立开发对照使用六个新仓库家族的 60 道题，每题以同一推理流程和预算分别运行底座与 LoRA 各三次。完整审计后，底座完成 30/180，LoRA 完成 24/180。042 未通过开发门槛。[041 采集结果](../experiments/041-first-edit-continuation/results/2026-11-21/) · [042 训练曲线](../experiments/042-first-edit-sft/results/2026-11-21-training/) · [042 独立对照与硬件记录](../experiments/042-first-edit-sft/results/2026-11-21-development/)
 
+044 加入符合正式评测流程的完整修复轨迹，完成 126 次更新。训练来源复核将 1,116 条动作、五个上游仓库的固定版本和十份许可与署名文件绑定到该适配器，底座许可为 Apache-2.0。独立开发对照登记了六个新仓库家族的 60 道题，每题跑三轮配对。完整开发审计通过后才会开启封存题。 [044 训练曲线与审计](../experiments/044-deployment-recovery-sft/results/2026-11-22-training/) · [044 独立开发登记](../experiments/044-deployment-recovery-sft/development-registration.json)
+
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
 [发布打包入口](../experiments/039-release-development/release_package.py)重算已经回放审计的最终配对分数，核对同一适配器的分发审查、许可原文和两次独立重载。全部门槛通过后，才在新目录生成 `payload/` 和 `release-evidence.json`。前者包含两份适配器文件、带聚合结果和加载示例的模型卡，以及核验过的许可材料。后者保留在本地，记录逐文件大小与 SHA-256。发布后用实际 ModelScope 提交号补全下载校验回执。
@@ -31,7 +33,7 @@ python -m one_gpu_lm.models.adapter_bundle \
   --restore-to /path/to/restored-adapter
 ```
 
-042 已用私有备份在独立目录完成一次 CPU 恢复，核验逐文件哈希并读取全部 992 个张量。用上述命令恢复 042 时，`--profile` 和 `--receipt` 分别使用备份内的 `training-profile.json` 和 `integrity.json`。
+042 和 044 都已从各自的私有备份恢复到独立目录，经 CPU 核验逐文件哈希并读取各自的全部 992 个张量。用上述命令恢复这两个适配器时，`--profile` 和 `--receipt` 分别使用对应备份内的 `training-profile.json` 和 `integrity.json`。发布验收另需在匹配底座上独立加载并比对固定输入的生成结果。
 
 ## 绑定候选训练记录
 
