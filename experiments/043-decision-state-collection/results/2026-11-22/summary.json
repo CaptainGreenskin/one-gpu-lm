@@ -1,0 +1,138 @@
+{
+  "training_only": true,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "expected_pairs": 133,
+  "audit_passed": true,
+  "journal_requests_verified": 570,
+  "phase": {
+    "pipeline_seconds": 6633.557023048401,
+    "started_utc": "2026-11-21T19:12:12.522669+00:00",
+    "finished_utc": "2026-11-21T21:02:46.079692+00:00",
+    "reserved_single_gpu_hours": 1.8426547286245558,
+    "complete": true,
+    "backend_loads": 1,
+    "completed_backend_load_seconds": 71.61218023300171,
+    "incomplete_backend_loads": 0,
+    "cost_definition": "single-GPU pipeline wall time, including loading, CPU tools and grading; not kernel-active time"
+  },
+  "hardware": {
+    "samples": 1316,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.188822031021118,
+    "sample_span_seconds": 6632.559994935989,
+    "boundary_uncovered_seconds": 0.997028112411499,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 49.96732522796353,
+      "peak": 62.0
+    },
+    "power_w": {
+      "mean": 280.9249392097264,
+      "peak": 534.9
+    },
+    "utilization_percent": {
+      "mean": 50.702887537993924,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 57674.02203647416,
+      "peak": 58727.0
+    }
+  },
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "registration_commit": "9ae62f7dc2c53b00f61978dda72ccbc978810ebf",
+  "audit_sha256": "810d55e9cab832ea63415ebe03005ebc9b0ff3015662f63717cda6f2b63a81d6",
+  "telemetry_sha256": "f0651332e57890dbe9cc6126f4565b1f1692e46ce9be93eb8934c90ca78cb1e8",
+  "strata": {
+    "early_edit": {
+      "registered_pairs": 22,
+      "complete_pairs": 22,
+      "paired_outcomes": {
+        "low_only": 8,
+        "both": 13,
+        "neither": 1
+      },
+      "contrast_counts": {
+        "winning_action_not_the_verified_first_edit": 6,
+        "same_completion_outcome": 14,
+        "no_matched_executed_fork": 2
+      },
+      "modes": {
+        "direct": {
+          "first_edit": 17,
+          "independently_correct": 14,
+          "verified_and_submitted": 13,
+          "correct_without_submit": 1,
+          "attempted_calls": 187,
+          "input_tokens": 601603,
+          "generated_tokens": 27025,
+          "actor_seconds": 2328.5358709530265,
+          "grader_seconds": 4.409985852020327,
+          "invalid_actions": 6,
+          "timeout_recovered": 0
+        },
+        "low": {
+          "first_edit": 21,
+          "independently_correct": 21,
+          "verified_and_submitted": 21,
+          "correct_without_submit": 0,
+          "attempted_calls": 159,
+          "input_tokens": 458987,
+          "generated_tokens": 37061,
+          "actor_seconds": 3100.6101820109907,
+          "grader_seconds": 5.869731092025177,
+          "invalid_actions": 4,
+          "timeout_recovered": 0
+        }
+      }
+    },
+    "verified_finish": {
+      "registered_pairs": 111,
+      "complete_pairs": 111,
+      "paired_outcomes": {
+        "both": 111
+      },
+      "contrast_counts": {
+        "same_completion_outcome": 111
+      },
+      "modes": {
+        "direct": {
+          "first_edit": 0,
+          "independently_correct": 111,
+          "verified_and_submitted": 111,
+          "correct_without_submit": 0,
+          "attempted_calls": 111,
+          "input_tokens": 271339,
+          "generated_tokens": 3663,
+          "actor_seconds": 352.11976894499094,
+          "grader_seconds": 31.970667753063026,
+          "invalid_actions": 0,
+          "timeout_recovered": 0
+        },
+        "low": {
+          "first_edit": 0,
+          "independently_correct": 111,
+          "verified_and_submitted": 111,
+          "correct_without_submit": 0,
+          "attempted_calls": 113,
+          "input_tokens": 280582,
+          "generated_tokens": 6563,
+          "actor_seconds": 588.2362897439452,
+          "grader_seconds": 31.993044874994666,
+          "invalid_actions": 0,
+          "timeout_recovered": 0
+        }
+      },
+      "one_or_two_calls_left": {
+        "pairs": 21,
+        "verified_and_submitted": {
+          "direct": 21,
+          "low": 21
+        }
+      }
+    }
+  },
+  "paired_count": 133
+}
