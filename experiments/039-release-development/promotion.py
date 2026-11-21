@@ -46,6 +46,18 @@ def authorize(protocol_path, audit_path, seal_path, review_path):
             or recovery['retained_rollouts']+recovery['resumed_rollouts']!=protocol['rollout_count']
             or not 0<audit['finished_epoch']-audit['started_epoch']<=protocol['pipeline_limit_seconds']):
         raise ValueError('Require the audited continuation inside the original deadline')
+    if 'restart' in recovery:
+        restart_path=Path(__file__).with_name('host-restart-plan.json')
+        restart=read(restart_path)
+        evidence=recovery['restart']
+        if (restart['original_protocol_sha256']!=protocol_hash or restart['first_recovery_plan_sha256']!=sha256(amendment_path)
+                or evidence['plan_sha256']!=sha256(restart_path)
+                or any(evidence.get(key)!=value for key,value in restart['incident'].items())
+                or evidence['replayed_rollouts']!=evidence['remaining_rollouts']
+                or evidence['retained_rollouts']+evidence['replayed_rollouts']!=protocol['rollout_count']
+                or not recovery['resumed_epoch']<evidence['last_pre_restart_sample_epoch']<evidence['boot_epoch']
+                       <=evidence['resumed_epoch']<=audit['finished_epoch']):
+            raise ValueError('Require the verified host restart continuation')
     if result['development_gate_passed'] is not True:
         return {'approved':False,'stage':'development_gate','checks':result.get('checks',{}),
                 'development_protocol_sha256':protocol_hash,'final_test_opened':False,'weights_public':False}

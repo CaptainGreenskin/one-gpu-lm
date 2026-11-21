@@ -83,12 +83,22 @@ def run(directory, design):
     start,end=(datetime.fromtimestamp(raw[k],BEIJING) for k in ('started_epoch','finished_epoch'))
     recovery=raw.get('recovery')
     pause=recovery['resumed_epoch']-recovery['previous_finished_epoch'] if recovery else 0
+    restart=recovery.get('restart') if recovery else None
+    restart_pause=restart['resumed_epoch']-restart['last_pre_restart_sample_epoch'] if restart else 0
     lines+=['',f'北京时间 {start:%Y-%m-%d %H:%M:%S} 至 {end:%Y-%m-%d %H:%M:%S}。'
-              f'包含 {raw["backend_loads"]} 次加载，评测进程占用单卡 {(end-start).total_seconds()/3600-pause/3600:.2f} 小时。'
+              f'包含 {raw["backend_loads"]} 次加载，按评测窗口和可见采样估算单卡占用 {(end-start).total_seconds()/3600-(pause+restart_pause)/3600:.2f} 小时。'
               f'{raw["verified_requests"]:,} 次生成请求通过回执审计。']
     if recovery:
         lines.extend(['',f'保留首段 {recovery["retained_rollouts"]} 次评测，随后续跑 {recovery["resumed_rollouts"]} 次。'
                      f'曾在首个候选生成前中断，排除等待恢复的 {pause/60:.1f} 分钟。'])
+    if restart:
+        lines.extend(['',f'工作站重启时已完成 {restart["retained_rollouts"]} 次，恢复后完成其余 {restart["replayed_rollouts"]} 次。'
+                     f'从最后一条重启前样本到恢复开始间隔 {restart_pause/60:.1f} 分钟。'
+                     f'受中断题额外收到 {restart["interrupted_complete_responses"]} 条完成回执，'
+                     f'已知消耗 {restart["known_interrupted_input_tokens"]:,} 输入和 '
+                     f'{restart["known_interrupted_generated_tokens"]:,} 生成 token，'
+                     f'{restart["interrupted_unknown_responses"]} 条响应成本未知。'
+                     '这次中断的生成开销单列，配对只计完整执行。重启前未写入文件的采样错误计数未知。'])
     lines+=['',
         '范围为六个仓库家族的 60 道历史功能修复。每题重复三次，配对区间保留题目内的重复关联。'
         '保护评分器在独立副本重跑原公开测试。预训练去污染、长任务和公开参数验收需要独立证据。','',

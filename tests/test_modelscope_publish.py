@@ -10,7 +10,7 @@ from one_gpu_lm.common.receipts import sha256
 
 
 EXP = Path(__file__).resolve().parents[1]/'experiments/039-release-development'
-ENTRYPOINTS = ('analysis','promotion','recovery','final_campaign','final_audit','release_package','publish_package')
+ENTRYPOINTS = ('analysis','promotion','recovery','host_restart','final_campaign','final_audit','release_package','publish_package')
 original = {name:sys.modules.pop(name) for name in ENTRYPOINTS if name in sys.modules}
 sys.path.insert(0,str(EXP))
 try:

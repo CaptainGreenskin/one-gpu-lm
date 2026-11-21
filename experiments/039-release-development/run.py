@@ -22,6 +22,7 @@ from one_gpu_lm.verified.sandbox import Sandbox
 from one_gpu_lm.verified.tasks import relative, validate_source
 
 from analysis import schedule
+import host_restart
 from recovery import AMENDMENT, EXP, RESUMED, inspect, restore, served_weight_hashes, validate_amendment
 
 
@@ -74,6 +75,7 @@ class Context:
     runtime: dict
     files: dict
     recovery: dict = None
+    restart: dict = None
 
 
 def reference_protocol(root):
@@ -91,12 +93,15 @@ def prefix_prompt(root, common, task, output):
     return evidence.make_task(task,output,'transcript',normalization(root),common['evaluation_budget']['max_tool_output_chars'])
 
 
-def inputs(root, *, resume=False):
+def inputs(root, *, resume=False, after_restart=False):
     path=root/EXP/'protocol.json'
     plan=read(path)
     design=read(root/EXP/'design.json')
     recovery, files = (validate_amendment(root,path,plan,root/PRIVATE/'recovery-publication.json')
-                       if resume else (None,plan['frozen_files']))
+                       if resume or after_restart else (None,plan['frozen_files']))
+    restart = None
+    if after_restart:
+        restart,files = host_restart.validate_amendment(root,path,plan,files)
     if any(plan.get(k)!=v for k,v in design.items()) or not frozen(root,files):
         raise ValueError('Changed scientific design or frozen input')
     publication=read(root/PRIVATE/'publication.json')
@@ -141,11 +146,11 @@ def inputs(root, *, resume=False):
     if fingerprint(order)!=plan['schedule_sha256']:
         raise ValueError('Evaluation schedule changed')
     return Context(plan,path,common,tasks,sources,prompts,proof,order,
-                   read(root/'private/parent-runtime.json'),files,recovery)
+                   read(root/'private/parent-runtime.json'),files,recovery,restart)
 
 
 def run(root, context):
-    out=root/(RESUMED if context.recovery else OUT)
+    out=root/(host_restart.RESTARTED if context.restart else RESUMED if context.recovery else OUT)
     if out.exists():
         raise ValueError('Preserve the original registered attempt')
     if len(str(out/'backend.sock').encode())>=108:
@@ -156,13 +161,20 @@ def run(root, context):
     budget=plan['evaluation_budget']
     sandboxes={path:Sandbox(read(root/path),budget['max_tool_seconds'])
                for path in {test_runtime(t['family']) for t in context.tasks.values()}}
-    retained=inspect(root/OUT,context) if context.recovery else None
+    original=inspect(root/OUT,context) if context.recovery else None
+    retained=original
+    if context.restart:
+        retained,telemetry_prefix,cut_ids=host_restart.interrupted(root,context,original)
     resume_start=time.time()
     start=retained['started_epoch'] if retained else resume_start
     deadline=start+plan['pipeline_limit_seconds']
     if resume_start>=deadline:
         raise TimeoutError('Original registered deadline has expired')
-    if retained:
+    if context.restart:
+        if not context.restart['incident']['boot_epoch'] <= resume_start:
+            raise ValueError('The restart was registered after the attempted continuation')
+        host_restart.restore(root,out,retained,telemetry_prefix,cut_ids)
+    elif retained:
         restore(root/OUT,out,retained)
     else:
         (out/'private').mkdir(mode=0o700,parents=True)
@@ -170,12 +182,16 @@ def run(root, context):
            'protocol_sha256':sha256(context.plan_path),'schedule_sha256':plan['schedule_sha256'],
            'expected_runs':len(context.order),'runs':[],'backend_lifecycles':[],
            'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
-    if retained:
-        state.update(runs=retained['runs'],backend_lifecycles=retained['backend_lifecycles'],
-                     recovery={'plan_sha256':sha256(root/AMENDMENT),'resumed_epoch':resume_start,
-                               'previous_finished_epoch':retained['finished_epoch'],
-                               'retained_rollouts':len(retained['runs']),
-                               'retained_telemetry':retained['telemetry']})
+    if original:
+        recovery={'plan_sha256':sha256(root/AMENDMENT),'resumed_epoch':resume_start,
+                  'previous_finished_epoch':original['finished_epoch'],'retained_rollouts':len(original['runs']),
+                  'retained_telemetry':original['telemetry']}
+        if context.restart:
+            recovery={**retained['recovery'],'restart':{'plan_sha256':sha256(root/host_restart.RESTART_AMENDMENT),
+                         'resumed_epoch':resume_start,'retained_rollouts':len(retained['runs']),
+                         'replayed_rollouts':len(context.order)-len(retained['runs']),
+                         'pre_restart_sampling_errors_unknown':True}}
+        state.update(runs=retained['runs'],backend_lifecycles=retained['backend_lifecycles'],recovery=recovery)
     remaining=context.order[len(state['runs']):]
 
     def save():
@@ -222,10 +238,14 @@ def run(root, context):
         backend.stop()
         unchanged=frozen(root,context.files)
         samples=telemetry.stop()
-        if retained:
+        if original:
+            if context.restart:
+                old_samples=context.restart['incident']['valid_telemetry_samples']
+                state['recovery']['restart']['new_telemetry']=samples.copy()
+                samples['samples']+=old_samples-original['telemetry']['samples']
             state['recovery']['new_telemetry']=samples.copy()
             for key in ('samples','errors'):
-                samples[key]+=retained['telemetry'][key]
+                samples[key]+=original['telemetry'][key]
         state.update(frozen_inputs_unchanged=unchanged,backend_stopped=True,telemetry=samples,
                      finished_epoch=time.time(),finished_utc=datetime.now(timezone.utc).isoformat())
         if not unchanged:
@@ -238,10 +258,13 @@ if __name__=='__main__':
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--check',action='store_true')
     p.add_argument('--resume',action='store_true',help='Use the published recovery amendment')
+    p.add_argument('--after-restart',action='store_true',help='Use the published host restart amendment')
     a=p.parse_args()
-    root=a.root.resolve(); context=inputs(root,resume=a.resume)
+    root=a.root.resolve(); context=inputs(root,resume=a.resume,after_restart=a.after_restart)
     if a.check:
-        retained=inspect(root/OUT,context) if a.resume else None
+        retained=inspect(root/OUT,context) if context.recovery else None
+        if context.restart:
+            retained,_,_=host_restart.interrupted(root,context,retained)
         print(json.dumps({'tasks':len(context.tasks),'rollouts':len(context.order),
                           'retained_rollouts':len(retained['runs']) if retained else 0,'final_test_opened':False}))
     else:

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "original_protocol_sha256": "fa0dfeea4a7480571c035ab51c6a5fdc3d57587d5e49ecf6528dfc20ad252b5f",
+  "first_recovery_plan_sha256": "90576f7ae70fa1ab79fdeaa4fb063193e48176ddeecaac0ff11d04fee2f1557b",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "incident": {
+    "prior_controller_sha256": "8133f80bdff1c6eb42846ad6227221ae852b5297d42d32d3edce1585824b431e",
+    "prior_pipeline_sha256": "b8fd7a764714c9a998b6cb2a37771145f74ec415aba44aa748ab5645b72eebf7",
+    "prior_launch_sha256": "70f8b0708ca772040fd7dfe831f625225374e6bf01df82c86c88a9b43019e3b7",
+    "prior_telemetry_sha256": "573a4b9fd22d283d2b1b401e0600522f013f767e2e406bfa3e149d37bf55ba5c",
+    "interrupted_trajectory_sha256": "e3ce67e34d6e0056afa21def333ea172a179cf9fe199756d09f66e19f9423431",
+    "retained_rollouts": 227,
+    "remaining_rollouts": 133,
+    "remaining_schedule_sha256": "6e5baf52ab9bfc1cc94c419c678e84af3c9a6678e0bdc6135159dbb551da6a20",
+    "first_recovery_controller_prefix_verified": true,
+    "boot_epoch": 1795215894,
+    "last_pre_restart_sample_epoch": 1795210966.829496,
+    "valid_telemetry_samples": 4759,
+    "damaged_telemetry_rows": 0,
+    "first_recovery_resumed_epoch": 1795187810.368867,
+    "first_recovery_pause_seconds": 1149.0713152885437,
+    "prior_started_epoch": 1795185825.8104858,
+    "prior_deadline_epoch": 1795358625.8104858,
+    "prior_backend_count": 14,
+    "interrupted_attempted_calls": 7,
+    "interrupted_journaled_requests": 7,
+    "interrupted_complete_responses": 6,
+    "interrupted_unknown_responses": 1,
+    "known_interrupted_input_tokens": 14812,
+    "known_interrupted_generated_tokens": 328
+  },
+  "frozen_replacements": {
+    "experiments/039-release-development/run.py": "a04c32c47147b6e70e83d656eaa7dcd98c80cf15f0b057f90d60ef60f329a7b0",
+    "experiments/039-release-development/audit.py": "61b714614ab2e722c48ddd7454271041d1fe67596577af47ddf72d5eaa145cdb"
+  },
+  "frozen_additions": {
+    "experiments/039-release-development/host_restart.py": "282c5fd5c7b1ab7e51a16d951456cc82fda0ef7a284d66d299542f6b698781ab"
+  }
+}

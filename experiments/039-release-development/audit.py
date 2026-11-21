@@ -13,13 +13,14 @@ from one_gpu_lm.verified.historic_tasks import prepare
 from one_gpu_lm.verified.rollout import normalization
 
 from analysis import analyze
+import host_restart
 from recovery import AMENDMENT, RESUMED, inspect
 from run import DATA, OUT, effective, inputs, load, read
 
 
-def run(root, *, resume=False):
-    context=inputs(root,resume=resume)
-    out=root/(RESUMED if resume else OUT)
+def run(root, *, resume=False, after_restart=False):
+    context=inputs(root,resume=resume,after_restart=after_restart)
+    out=root/(host_restart.RESTARTED if after_restart else RESUMED if resume else OUT)
     target=out/'audit.json'
     if target.exists():
         raise ValueError('Preserve the original audit')
@@ -33,7 +34,7 @@ def run(root, *, resume=False):
         raise ValueError('Expected the complete original scheduled development run')
     empty_backend=None
     recovery=None
-    if resume:
+    if context.recovery:
         original=inspect(root/OUT,context)
         evidence=state['recovery']
         if (evidence['plan_sha256']!=sha256(root/AMENDMENT)
@@ -51,6 +52,25 @@ def run(root, *, resume=False):
         empty_backend=context.recovery['incident']['failed_backend_index']
         recovery={**evidence,**context.recovery['incident'],
                   'resumed_rollouts':len(state['runs'])-len(original['runs'])}
+        if context.restart:
+            archived,telemetry,_=host_restart.interrupted(root,context,original)
+            incident=context.restart['incident']
+            restart=evidence['restart']
+            retained=len(archived['runs'])
+            extra_samples=incident['valid_telemetry_samples']-original['telemetry']['samples']
+            if (restart['plan_sha256']!=sha256(root/host_restart.RESTART_AMENDMENT)
+                    or restart['retained_rollouts']!=retained
+                    or restart['replayed_rollouts']!=len(state['runs'])-retained
+                    or state['runs'][:retained]!=archived['runs']
+                    or state['backend_lifecycles'][:len(archived['backend_lifecycles'])]!=archived['backend_lifecycles']
+                    or evidence['resumed_epoch']!=archived['recovery']['resumed_epoch']
+                    or not incident['last_pre_restart_sample_epoch']<incident['boot_epoch']<=restart['resumed_epoch']<=state['finished_epoch']
+                    or restart['pre_restart_sampling_errors_unknown'] is not True
+                    or restart['new_telemetry']['samples']+extra_samples!=evidence['new_telemetry']['samples']
+                    or restart['new_telemetry']['errors']!=evidence['new_telemetry']['errors']
+                    or not (out/'telemetry.csv').read_bytes().startswith(telemetry)):
+                raise ValueError('The restart did not preserve the registered rollouts and telemetry')
+            recovery['restart']={**restart,**incident}
     common=context.common
     prior=root/'experiments/035-edit-bottleneck'
     sys.path.insert(0,str(prior))
@@ -130,7 +150,8 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',type=Path,required=True)
     p.add_argument('--resume',action='store_true')
+    p.add_argument('--after-restart',action='store_true')
     args=p.parse_args()
-    value=run(args.root.resolve(),resume=args.resume)
+    value=run(args.root.resolve(),resume=args.resume,after_restart=args.after_restart)
     print(json.dumps({'passed':value['passed'],'verified_requests':value['verified_requests'],
           'development_gate_passed':value['analysis']['development_gate_passed']}))

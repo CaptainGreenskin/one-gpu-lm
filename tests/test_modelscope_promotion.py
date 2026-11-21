@@ -17,13 +17,14 @@ from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery','final_campaign','final_audit','release_package')
+entrypoints = ('analysis','promotion','recovery','host_restart','final_campaign','final_audit','release_package')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
     import final_audit
     import final_campaign
+    import host_restart
     import release_package
     from promotion import REFERENCE, authorize, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
@@ -74,9 +75,24 @@ class ModelScopePromotionTests(unittest.TestCase):
         pub = dict(protocol_sha256=sha256(self.plan_path),recovery_plan_sha256=sha256(self.amendment_path),
                    anonymous_files_verified=True,ci_conclusion='success')
         _, frozen = validate_amendment(ROOT,self.plan_path,self.plan,self.save('publication',pub))
-        for name in ('run.py','audit.py','recovery.py'):
+        for name,digest in self.amendment['frozen_replacements'].items():
+            self.assertEqual(frozen[name],digest)
+        restart = ROOT/host_restart.RESTART_AMENDMENT
+        restart_inputs = self.directory/'registered'
+        for source in (self.amendment_path,restart):
+            location = restart_inputs/source.relative_to(ROOT)
+            location.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(source,location)
+        receipt = restart_inputs/host_restart.PRIVATE/'restart-publication.json'
+        receipt.parent.mkdir(parents=True)
+        receipt.write_text(json.dumps(dict(pub,restart_plan_sha256=sha256(restart))))
+        _, continued = host_restart.validate_amendment(restart_inputs,self.plan_path,self.plan,frozen)
+        for name in ('run.py','audit.py','recovery.py','host_restart.py'):
             path = EXP/name
-            self.assertEqual(frozen[str(path.relative_to(ROOT))],sha256(path))
+            self.assertEqual(continued[str(path.relative_to(ROOT))],sha256(path))
+        receipt.write_text(json.dumps(dict(pub,restart_plan_sha256='bad')))
+        with self.assertRaisesRegex(ValueError,'verified public restart amendment'):
+            host_restart.validate_amendment(restart_inputs,self.plan_path,self.plan,frozen)
         with self.assertRaises(ValueError):
             validate_amendment(ROOT,self.plan_path,self.plan,self.save('publication',dict(pub,recovery_plan_sha256='bad')))
 
@@ -100,6 +116,14 @@ class ModelScopePromotionTests(unittest.TestCase):
             result = final_campaign.promotion_from_finished_run(root,absent,absent)
         self.assertEqual(result,{'approved':False,'stage':'development_pending','final_test_opened':False})
         self.assertFalse(absent.exists())
+
+        restart_launch = status.parent/host_restart.RESTART_LAUNCH
+        restart_launch.write_text('{}')
+        status.write_text(json.dumps({'stage':'complete','complete':True,'final_test_opened':False}))
+        with patch.object(final_campaign,'authorize',side_effect=AssertionError('The seal is still closed')):
+            result = final_campaign.promotion_from_finished_run(root,absent,absent)
+        self.assertEqual(result['stage'],'development_pending')
+        restart_launch.unlink()
 
         plan = root/final_campaign.EXP/'protocol.json'
         plan.parent.mkdir(parents=True)

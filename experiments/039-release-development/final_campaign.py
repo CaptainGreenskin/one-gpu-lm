@@ -17,6 +17,7 @@ from one_gpu_lm.serving.client import request
 from one_gpu_lm.verified.tasks import relative
 
 from promotion import REFERENCE, authorize, read
+from host_restart import RESTARTED, RESTART_STATUS, RESTART_LAUNCH
 from recovery import EXP, RESUMED
 
 
@@ -48,11 +49,12 @@ if {str(p.relative_to(framework)):sha256(p) for p in framework.rglob('*.py')} !=
 
 
 def promotion_from_finished_run(root, seal_path, review_path):
-    status_path = root/PRIVATE/'pipeline-resumed.json'
+    restarted = (root/PRIVATE/RESTART_LAUNCH).is_file() or (root/PRIVATE/RESTART_STATUS).is_file()
+    status_path = root/PRIVATE/(RESTART_STATUS if restarted else 'pipeline-resumed.json')
     status = read(status_path) if status_path.is_file() else {}
     if status.get('stage') != 'complete' or status.get('complete') is not True:
         return {'approved':False, 'stage':'development_pending', 'final_test_opened':False}
-    run = root/RESUMED
+    run = root/(RESTARTED if restarted else RESUMED)
     controller_path = run/'controller.json'
     audit_path = run/'audit.json'
     controller = read(controller_path)
@@ -63,7 +65,8 @@ def promotion_from_finished_run(root, seal_path, review_path):
             or audit['controller_sha256'] != sha256(controller_path)
             or audit['started_epoch'] != controller['started_epoch']
             or audit['finished_epoch'] != controller['finished_epoch']
-            or len(audit['rows']) != len(controller['runs'])):
+            or len(audit['rows']) != len(controller['runs'])
+            or restarted != ('restart' in audit['recovery'])):
         raise ValueError('Development audit differs from its completed controller')
     return authorize(root/EXP/'protocol.json',audit_path,seal_path,review_path)
 
