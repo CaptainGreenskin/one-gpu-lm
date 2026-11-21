@@ -189,10 +189,19 @@ class ModelScopePromotionTests(unittest.TestCase):
     def test_comparison_records_both_weight_arms_and_rejects_extra_requests(self):
         work = self.directory
         environment = {'fixture_runtime':True}
-        runtime_path = self.save('offline-runtime',{})
+        families = ('example/development-0','example/development-1')
+        family_paths = {family: self.save(f'offline-runtime-{i}',{'marker':i})
+                        for i,family in enumerate(families)}
+        family_hashes = {family:sha256(path) for family,path in family_paths.items()}
+        runtime_path = self.save('runtime-map',{'schema_version':1,'final_test_opened':False,'runtimes':{
+            family:{'path':path.name,'sha256':family_hashes[family]} for family,path in family_paths.items()}})
+        self.assertEqual(candidate_comparison.runtime_files(work,runtime_path,families),
+                         {family:path.resolve() for family,path in family_paths.items()})
+        with self.assertRaisesRegex(ValueError,'full development panel'):
+            candidate_comparison.runtime_files(work,runtime_path,families[:1])
         env_path = self.save('environment',environment)
         plan = dict(self.plan,task_count=2,repetitions=1,rollout_count=4,block_size=2,
-                    families={'example/development':2},selected_opening='original',
+                    families=dict.fromkeys(families,1),selected_opening='original',
                     run_directory='runs/fixture',frozen_files={})
         order = schedule([1,2],plan)
         plan['schedule_sha256'] = fingerprint(order)
@@ -202,11 +211,12 @@ class ModelScopePromotionTests(unittest.TestCase):
                       adapter_sha256=served_weight_hashes(files),evaluation_profile_sha256='f'*64,
                       environment_path=env_path.name,model_manifest_path='fixture-model')
         cases = {}
-        for number in (1,2):
-            task = {'id':f'case-{number}','family':'example/development','description':f'opening {number}'}
+        for number,family in enumerate(families,1):
+            task = {'id':f'case-{number}','family':family,'description':f'opening {number}'}
             cases[number] = {'prompts':{'original':task},'source':{},'before':{},'opening':{
                 'multifile':False,'openings':{'original':{'input_sha256':fingerprint(task),'input_tokens':7}}}}
-        panel = candidate_comparison.Panel(work,runtime_path,{'model':'fixture'},common,{},None,{},cases)
+        proof = {'family_runtime_sha256':family_hashes}
+        panel = candidate_comparison.Panel(work,runtime_path,{'model':'fixture'},common,{},None,proof,cases,family_paths)
         lock = work/'device.lock'
         used = []
 
@@ -240,7 +250,7 @@ class ModelScopePromotionTests(unittest.TestCase):
                 self.role,self.process = None,None
 
         def record(root,data,task,source,backend,sandbox,protocol,directory,arm,*,journal_path,**options):
-            used.append((arm,task['description'],protocol['adapter_sha256']))
+            used.append((arm,task['description'],protocol['adapter_sha256'],sandbox['marker']))
             directory.mkdir(parents=True)
             write_json(directory/'trajectory.json',{
                 'backend':backend,'steps':[{'generation':{'input_tokens':7,'input_tokens_sha256':fingerprint(task)}}]})
@@ -255,13 +265,16 @@ class ModelScopePromotionTests(unittest.TestCase):
             return row,fingerprint(task),{fingerprint(directory.name)}
 
         with patch.multiple(candidate_comparison,JournalBackend=JournalProvider,rollout=record,
-                            gpu_lock_path=lambda:lock,Sandbox=lambda *_:None,verify_model=lambda *_:None,
+                            gpu_lock_path=lambda:lock,Sandbox=lambda data,_:data,verify_model=lambda *_:None,
                             host_boot=lambda:('fixture-boot',1),
                             Telemetry=lambda *_:SimpleNamespace(start=lambda:None,stop=lambda:{'thread_stopped':True})):
             state = candidate_comparison.evaluate(work,plan,'c'*64,order,panel)
         self.assertEqual(state['stage'],'completed')
         self.assertEqual([item[1] for item in used[:2]],[item[1] for item in used[2:]])
         self.assertEqual([bool(item[2]) for item in used],[False,False,True,True])
+        self.assertEqual([item[3] for item in used],[row['task_number']-1 for row in order])
+        self.assertEqual([row['offline_runtime_sha256'] for row in state['runs']],
+                         [family_hashes[families[row['task_number']-1]] for row in order])
         extra = next((work/'runs/fixture/private/backends').glob('*/requests'))/'extra'
         extra.touch()
         with patch.multiple(candidate_comparison,load=lambda *_:SimpleNamespace(audited_row=replay),

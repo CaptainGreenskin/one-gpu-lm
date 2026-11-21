@@ -59,10 +59,10 @@ def update_metrics(curve, updates):
     return projected, len(curve) - cursor
 
 
-def capture(root, protocol_path, job_path, publication_path):
+def capture(root, protocol_path, job_path, publication_path, *, candidate='042-first-edit-sft'):
     plan, job, publication = map(read, (protocol_path, job_path, publication_path))
     identity = sha256(protocol_path)
-    require(plan['candidate'] == '042-first-edit-sft' and publication['protocol_sha256'] == identity
+    require(plan['candidate'] == candidate and publication['protocol_sha256'] == identity
             and re.fullmatch(r'[0-9a-f]{40}', publication['commit'])
             and publication['anonymous_files_verified'] is True and publication['ci_conclusion'] == 'success'
             and not plan['final_test_opened'] and not plan['weights_public'] and not job['final_test_opened']
@@ -150,7 +150,7 @@ def figure(path, updates):
     plt.close(fig)
 
 
-def render(directory, registration_path):
+def render(directory, registration_path, *, heading='042 · 首次改码示范微调结果'):
     value = read(directory / 'measurements.json')
     registration = read(registration_path)
     planned = registration['training']
@@ -182,7 +182,7 @@ def render(directory, registration_path):
     duration = (end - start).total_seconds()
     scope = '运行窗口' if value['stage'] == 'not_started' else '单卡训练流水线'
     outcome = '通过' if value['audit_passed'] else '未通过'
-    lines = ['# 042 · 首次改码示范微调结果', '',
+    lines = ['# '+heading, '',
              f'北京时间 {start:%Y-%m-%d %H:%M:%S} 至 {end:%Y-%m-%d %H:%M:%S}。{scope}用时 {duration:.2f} 秒。训练产物审计**{outcome}**。',
              '',
              f'完成 {len(rows)}/{planned["optimizer_updates"]} 次优化器更新，已计入 {consumed:,} 条动作、{input_tokens:,} 个输入 token 和 {supervised:,} 个监督 token。']
@@ -214,12 +214,14 @@ def main():
     capture_args = actions.add_parser('capture')
     for name in ('root', 'protocol', 'job', 'publication'):
         capture_args.add_argument('--' + name, type=Path, required=True)
+    capture_args.add_argument('--candidate', default='042-first-edit-sft')
     render_args = actions.add_parser('render')
     render_args.add_argument('--directory', type=Path, required=True)
     render_args.add_argument('--registration', type=Path, required=True)
+    render_args.add_argument('--heading', default='042 · 首次改码示范微调结果')
     args = parser.parse_args()
-    result = (capture(args.root, args.protocol, args.job, args.publication) if args.action == 'capture'
-              else render(args.directory, args.registration))
+    result = (capture(args.root, args.protocol, args.job, args.publication, candidate=args.candidate) if args.action == 'capture'
+              else render(args.directory, args.registration, heading=args.heading))
     print(json.dumps(result, allow_nan=False))
 
 

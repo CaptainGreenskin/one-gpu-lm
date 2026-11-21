@@ -1,7 +1,7 @@
 """Score and replay a registered base-versus-LoRA comparison on a fresh development panel."""
 import argparse
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 import os
 from pathlib import Path
@@ -18,6 +18,7 @@ from one_gpu_lm.common.telemetry import Telemetry
 from one_gpu_lm.common.tokenization import encode_prefix
 from one_gpu_lm.models.verify import verify_model
 from one_gpu_lm.serving.request_journal import RequestJournal
+from one_gpu_lm.verified.family_runtime import runtime_files
 from one_gpu_lm.verified.first_action_loss import fingerprint
 from one_gpu_lm.verified.historic_policy import initial_messages
 from one_gpu_lm.verified.historic_tasks import prepare, validate_split
@@ -50,6 +51,7 @@ class Panel:
     tokenizer: object
     proof: dict
     cases: dict
+    runtimes: dict = field(default_factory=dict)
 
 
 def build_panel(root, data, openings_path, runtime_path):
@@ -89,6 +91,11 @@ def build_panel(root, data, openings_path, runtime_path):
             or len({task['id'] for task in tasks}) != len(tasks)):
         raise ValueError('Expected the complete cohort with unique cases and opening proofs')
     validate_split(sources)
+    runtimes = runtime_files(root,runtime_path,{source['family'] for source in sources})
+    family_runtimes = proof.get('family_runtime_sha256')
+    if family_runtimes is not None or set(runtimes.values()) != {runtime_path.resolve()}:
+        if family_runtimes != {family: sha256(path) for family, path in runtimes.items()}:
+            raise ValueError('Family runtimes differ from the paired opening preflight')
     cases = {}
     with TemporaryDirectory(prefix='compare-inputs-') as tmp:
         for number, (task, source, row) in enumerate(zip(tasks, sources, rows), 1):
@@ -111,7 +118,7 @@ def build_panel(root, data, openings_path, runtime_path):
                         or width != row['window_lines']):
                     raise ValueError('Actual tokenizer does not reproduce the established opening')
             cases[number] = {'prompts':options,'source':source,'before':before,'opening':row}
-    return Panel(data,runtime_path,model_runtime,common,profile,tokenizer,proof,cases)
+    return Panel(data,runtime_path,model_runtime,common,profile,tokenizer,proof,cases,runtimes)
 
 
 def approved_opening(root, plan):
@@ -192,7 +199,8 @@ def freeze_protocol(args):
     reviewed_adapter(review,files,plan)
     plan['selected_opening'] = approved_opening(root,plan)
     plan['schedule_sha256'] = fingerprint(schedule(list(panel.cases),plan))
-    evidence = [review_path,runtime,openings,data/'cohort.private.json',data/'sources.json',data/'tasks.json']
+    evidence = [review_path,runtime,openings,data/'cohort.private.json',data/'sources.json',data/'tasks.json',
+                *panel.runtimes.values()]
     evidence += [checkpoint/name for name in files]
     evidence += [openings.parent/'first-checks'/f't{n:02d}.json' for n in panel.cases]
     evidence += [root/'private/parent-runtime.json',root/CONTEXT_RUN/'controller.json',root/CONTEXT_RUN/'audit.json']
@@ -230,6 +238,8 @@ def registered_inputs(args):
     served = reviewed_adapter(review,adapter_files(root / relative(plan['adapter_directory'])),plan)
     panel = build_panel(root,data,args.openings,runtime_path)
     if (panel.proof != openings or Counter(case['source']['language'] for case in panel.cases.values()) != plan['language_counts']
+            or any(plan['frozen_files'].get(str(path.relative_to(root))) != sha256(path)
+                   for path in panel.runtimes.values())
             or sha256(args.protocol) != plan_hash or sha256(args.openings) != openings_hash):
         raise ValueError('Loaded candidate inputs differ from the registered comparison')
     panel.common.update(adapter_directory=plan['adapter_directory'],all_adapter_files_sha256=files,
@@ -252,7 +262,9 @@ def evaluate(root, plan, plan_hash, order, panel, *, resume=False):
         elif out.exists():
             raise FileExistsError('Preserve the original development attempt')
         verify_model(panel.model_runtime['model'],root/relative(panel.common['model_manifest_path']),panel.profile)
-        sandbox = Sandbox(read(panel.runtime_path),budget['max_tool_seconds'])
+        sandbox_paths = set(panel.runtimes.values()) or {panel.runtime_path}
+        sandboxes = {path: Sandbox(read(path),budget['max_tool_seconds']) for path in sandbox_paths}
+        family_runtimes = panel.proof.get('family_runtime_sha256',{})
         if not resume:
             start = time.time()
             state = {'schema_version':1,'stage':'loading','complete':False,'started_epoch':start,'started_utc':utc(),
@@ -286,6 +298,8 @@ def evaluate(root, plan, plan_hash, order, panel, *, resume=False):
                 if time.time() + required + (600 if backend.role != role else 0) > deadline:
                     raise TimeoutError('Registered wall budget cannot fit the next task')
                 case = panel.cases[item['task_number']]
+                task = case['prompts'][chosen]
+                sandbox = sandboxes[panel.runtimes.get(task['family'],panel.runtime_path)]
                 state.update(stage='evaluating',current_run=item,current_backend_index=None)
                 save()
                 backend.protocol = effective(panel.common,arm)
@@ -293,7 +307,7 @@ def evaluate(root, plan, plan_hash, order, panel, *, resume=False):
                 state['current_backend_index'] = backend.number
                 save()
                 directory = actor_directory(out, attempt, item['run_id'])
-                result = rollout(root,panel.data,case['prompts'][chosen],case['source'],socket,sandbox,
+                result = rollout(root,panel.data,task,case['source'],socket,sandbox,
                                  backend.protocol,directory,role+'_current',journal_path=backend.journal_path,
                                  recovery_seconds=plan['recovery_accounting_seconds'])
                 backend.check_exclusive()
@@ -304,6 +318,8 @@ def evaluate(root, plan, plan_hash, order, panel, *, resume=False):
                     raise ValueError('Physical generation did not use the frozen paired opening')
                 result.update(run_id=item['run_id'],task_number=item['task_number'],repetition=item['repetition'],
                               block=item['block'],contrast_arm=arm,backend_index=backend.number,attempt=attempt)
+                if family_runtimes:
+                    result['offline_runtime_sha256'] = family_runtimes[task['family']]
                 atomic_json(directory/'result.json',result)
                 state['runs'].append(result)
                 save()
@@ -371,10 +387,12 @@ def audit(root, plan, plan_hash, openings_hash, order, panel):
             number,index,arm = item['task_number'],result['backend_index'],item['arm']
             case = panel.cases[number]
             task,opening = case['prompts'][chosen],case['opening']['openings'][chosen]
+            expected_runtime = panel.proof.get('family_runtime_sha256',{}).get(task['family'])
             run_dir = actor_directory(out, result.get('attempt',1), item['run_id'])
             trace = read(run_dir/'trajectory.json')
             if (backends[index]['role'] != ('base' if arm=='base' else 'student') or trace['backend'] != artifacts[index]
                     or result.get('attempt',1) != backends[index].get('attempt',1)
+                    or result.get('offline_runtime_sha256') != expected_runtime
                     or result['id'] != task['id'] or result['contrast_arm'] != arm
                     or any(result[key] != item[key] for key in ('task_number','repetition','block'))):
                 raise ValueError('Physical run differs from the paired schedule')
