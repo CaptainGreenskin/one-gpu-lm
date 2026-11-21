@@ -41,7 +41,7 @@ def initialize(data, task, source, protocol, out, arm):
 
 
 def advance(root, task, protocol, out, state, backend, runner, arm, *,
-            journal_path=None, recovery_seconds=0):
+            journal_path=None, recovery_seconds=0, initial_verified_source=None):
     """Continue only from a known feedback boundary, with cumulative path costs."""
     out = Path(out); budget = protocol['evaluation_budget']; policy = protocol['agent_policy']
     if (state['complete'] or state.get('unknown_inflight_generation_cost')
@@ -62,6 +62,8 @@ def advance(root, task, protocol, out, state, backend, runner, arm, *,
     workspace = out/'workspace'; key = str(workspace.resolve())
     guard = CorrectionGuard(runner, {key: {k: task[k] for k in ['editable_files', 'regression_command']}}, guard_arm(protocol, arm))
     original_inventory = json.loads((out/'before.json').read_text())
+    if initial_verified_source is not None and state.get('verified_source') != initial_verified_source:
+        raise ValueError('Continuation verification differs from the restored evidence')
     if state.get('verified_source') is not None:
         if state['verified_source'] != guard.source_state(workspace, task):
             raise ValueError('Saved verification is stale')
@@ -130,7 +132,8 @@ def advance(root, task, protocol, out, state, backend, runner, arm, *,
             step['source_evidence_after'], step['protected_after'] = save_source(out, workspace, task, original_inventory)
         except ValueError:
             state['steps'].append(step); state['terminal_reason'] = 'unsafe_workspace'; break
-        notice = continuation_notice(protocol, arm, task, state['steps'], step)
+        notice = continuation_notice(protocol, arm, task, state['steps'], step,
+                                     initial_verified_source=initial_verified_source)
         step['policy_notice'] = notice
         state['messages'].append({'role': 'user', 'content': f"Exit code: {output['returncode']}\n{delivered}{notice}",
                                   'extra': {'tool': step['observation']}})

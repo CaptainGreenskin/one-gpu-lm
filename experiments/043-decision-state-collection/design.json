@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "reference_path": "experiments/030-teacher-reasoning/execution-protocol.json",
+  "collection_provenance_path": "experiments/025-verified-distillation/collection-protocol.json",
+  "student_profile_path": "experiments/031-correction-mix/candidate-profile.json",
+  "reasoning_modes": {
+    "control": "direct",
+    "correction": "low"
+  },
+  "training_states": {
+    "early_edit": 22,
+    "verified_finish": 111
+  },
+  "training_families": 5,
+  "expected_rollouts": 266,
+  "total_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 2048,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "max_new_calls_across_both_arms": 1658,
+  "max_new_tokens_across_both_arms": 1543564,
+  "recovery_seconds_per_rollout": 120,
+  "final_test_opened": false
+}

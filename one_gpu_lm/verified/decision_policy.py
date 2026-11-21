@@ -43,14 +43,14 @@ def extra_initial(protocol, arm):
     return GUIDANCE if enabled(protocol) and (arm == 'correction' or protocol['continuation_policy'] == REASONING_VERSION) else ''
 
 
-def notice(protocol, arm, task, prior_steps, step):
+def notice(protocol, arm, task, prior_steps, step, *, initial_verified_source=None):
     base = previous_notice(guard_arm(protocol, arm), task, prior_steps, step)
     if not enabled(protocol) or (arm != 'correction' and protocol['continuation_policy'] != REASONING_VERSION):
         return base
     steps = [*prior_steps, step]
     before, after = step['source_before'], step.get('source_after')
     changed = after is not None and before != after
-    verified = None
+    verified = initial_verified_source
     for item in steps:
         obs = item.get('observation', {})
         if 'source_after' in item and item['source_after'] != item['source_before']:

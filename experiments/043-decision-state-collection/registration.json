@@ -1,0 +1,13 @@
+{
+  "private_protocol_sha256": "5d3503140973752b6e1d764b3ff549102fa888ad386434107e55c9def5f42dca",
+  "public_design_sha256": "89acbd86e79f36be20dd0731ea718c8615305e9efa5b1df8a33cf7644cc44e9f",
+  "cpu_inputs_sha256": "e5f1aae627c04fd5dbdb61d6deffa113ec26293d09439fb31878fce4d743e9ee",
+  "cpu_replay_sha256": "28fbb962d3f60c9f9e19160dad84bba88927bd9d183d9b9d6d33bb2142ebc1a5",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "training_cases": 133,
+  "restored_actor_states": 266,
+  "frozen_files": 188,
+  "new_generations": 0,
+  "final_test_opened": false
+}

@@ -27,10 +27,12 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer, pre
 
 
 def replay_from_state(directory, trace, task, protocol, profile, tokenizer, normalizer,
-                      initial, source_before):
+                      initial, source_before, *, initial_verified_source=None):
     directory=Path(directory);budget=protocol['evaluation_budget'];policy=protocol['agent_policy']
     arm=trace['branch']; messages=deepcopy(initial);total=0;input_total=0;checks=[];actions=[];feedback=[]
-    errors=[];last_source=source_before;verified=None
+    if initial_verified_source is not None and initial_verified_source != source_before:
+        raise ValueError('Replayed verification does not belong to the restored source')
+    errors=[];last_source=source_before;verified=initial_verified_source
     guard=True; pending=False
     expected_roles = {'base'}
     from .recovery_rollout import identity_ok
@@ -114,7 +116,8 @@ def replay_from_state(directory, trace, task, protocol, profile, tokenizer, norm
                             if after!=step['source_before'] or (command==task['regression_command'] and raw['returncode']!=0):verified=None
                             if command==task['regression_command'] and raw['returncode']==0 and after==step['source_before'] and all(v is not None for v in after.values()):verified=after
                         last_source=after
-                        notice=continuation_notice(protocol,arm,task,trace['steps'][:index-1],step)
+                        notice=continuation_notice(protocol,arm,task,trace['steps'][:index-1],step,
+                                                   initial_verified_source=initial_verified_source)
                         flags['policy_notice'] = notice==step.get('policy_notice')
                         messages.append({'role':'user','content':f"Exit code: {raw['returncode']}\n{delivered}{notice}",'extra':{'tool':step['observation']}})
                         feedback.append(digest(messages[-1]['content'].encode()))
