@@ -1,4 +1,4 @@
-"""Recompute and publish the independent 042 comparison using anonymous rows."""
+"""Recompute and publish a registered independent comparison using anonymous rows."""
 import argparse
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
@@ -99,16 +99,16 @@ def evaluation_timing(out, state):
                                                for entry in state['backend_lifecycles'] if 'ready_epoch' in entry)}
 
 
-def capture(root, protocol, controller, audit_path, publication, openings):
+def capture(root, protocol, controller, audit_path, publication, openings, *, candidate='042-first-edit-sft'):
     sys.path.insert(0, str(root/SHARED))
     from analysis import analyze
     from promotion import verify_comparison
 
     plan,protocol_hash,audit_hash,decision = verify_comparison(protocol,controller,audit_path,publication,openings)
     state,audit,published = read(controller),read(audit_path),read(publication)
-    if (plan['candidate']!='042-first-edit-sft' or plan['task_count']!=60 or plan['rollout_count']!=360
+    if (plan['candidate']!=candidate or plan['task_count']!=60 or plan['rollout_count']!=360
             or audit['controller_sha256']!=sha256(controller) or sha256(audit_path)!=audit_hash):
-        raise ValueError('Require the exact completed 042 comparison')
+        raise ValueError('Require the exact completed candidate comparison')
     design = {key:plan[key] for key in ('task_count','repetitions','gate','evaluation_budget')}
     rows,aliases = project_rows(audit['rows'],plan['families'],design['evaluation_budget'])
     design['families'] = {alias:plan['families'][name] for name,alias in aliases.items()}
@@ -135,7 +135,7 @@ def capture(root, protocol, controller, audit_path, publication, openings):
             'rows':rows,'analysis':public,'passed':True,'optimizer_updates':0,'final_test_opened':False,'weights_public':False}
 
 
-def render(root, directory, registration):
+def render(root, directory, registration, *, experiment='042'):
     sys.path.insert(0, str(root/SHARED))
     from report import call_curves, plot, reproduce_analysis, write_csv
 
@@ -145,7 +145,7 @@ def render(root, directory, registration):
             or any(design[key]!=plan[key] for key in ('task_count','repetitions','gate','evaluation_budget'))
             or sorted(design['families'].values())!=plan['tasks_per_family'] or value['passed'] is not True
             or value['optimizer_updates'] or value['final_test_opened'] or value['weights_public']):
-        raise ValueError('Public report does not match the registered 042 comparison')
+        raise ValueError('Public report does not match the registered candidate comparison')
     rows,_ = project_rows(value['rows'],design['families'],design['evaluation_budget'])
     if rows!=value['rows'] or value['verified_requests']!=sum(row['attempted_calls'] for row in rows):
         raise ValueError('Public rows contain unexpected fields or costs')
@@ -154,18 +154,19 @@ def render(root, directory, registration):
     points = call_curves(rows,design['evaluation_budget']['max_model_calls'])
     write_csv(directory/'call-curves.csv',points)
     write_csv(directory/'matched-repeats.csv',sorted(rows,key=lambda r:(r['task_number'],r['repetition'],r['arm'])))
-    plot(directory/'call-curves.svg',points,labels=('Base weights','042 LoRA'))
+    label = f'{experiment} LoRA'
+    plot(directory/'call-curves.svg',points,labels=('Base weights',label))
     start,end = (datetime.fromtimestamp(value[key],BEIJING) for key in ('started_epoch','finished_epoch'))
     base,candidate = (result['successes'][arm] for arm in ('base','candidate'))
     total = design['task_count']*design['repetitions']
     low,high = result['gain_interval_95_pp']
     status = '通过' if result['development_gate_passed'] else '未通过'
-    lines = ['# 042 · 独立开发对照','',
-             f'底座完成 **{base}/{total}**，042 LoRA 完成 **{candidate}/{total}**。'
+    lines = [f'# {experiment} · 独立开发对照','',
+             f'底座完成 **{base}/{total}**，{label} 完成 **{candidate}/{total}**。'
              f'净变化 **{result["gain_pp"]:+.2f} 个百分点**，配对 95% 区间为 [{low:+.2f}, {high:+.2f}]。开发门槛**{status}**。',
              '',f'六个独立仓库家族的 60 道题各执行三轮。每组每题最多 12 次调用、6,144 个生成 token，'
              '实际改码后通过独立评分并在预算内提交才计为成功。','',
-             '| 指标 | 底座 | 042 LoRA |','|---|---:|---:|']
+             f'| 指标 | 底座 | {label} |','|---|---:|---:|']
     for group,key,label in (('behaviors','no_edit','全程未改码'),
                            ('behaviors','correct_without_submission','修对未提交'),
                            ('costs','attempted_calls','调用数'),('costs','input_tokens','输入 token'),
@@ -205,12 +206,15 @@ def main():
     capture_args = actions.add_parser('capture')
     for name in ('protocol','controller','audit','publication','openings'):
         capture_args.add_argument('--'+name,type=Path,required=True)
+    capture_args.add_argument('--candidate',default='042-first-edit-sft')
     render_args = actions.add_parser('render')
     for name in ('directory','registration'):
         render_args.add_argument('--'+name,type=Path,required=True)
+    render_args.add_argument('--experiment',default='042')
     args = parser.parse_args()
-    output = (capture(args.root.resolve(),args.protocol,args.controller,args.audit,args.publication,args.openings)
-              if args.mode=='capture' else render(args.root.resolve(),args.directory,args.registration))
+    output = (capture(args.root.resolve(),args.protocol,args.controller,args.audit,args.publication,args.openings,
+                      candidate=args.candidate) if args.mode=='capture'
+              else render(args.root.resolve(),args.directory,args.registration,experiment=args.experiment))
     print(json.dumps(output,allow_nan=False))
 
 
