@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "experiment": "044-deployment-recovery-sft",
+  "private_protocol_sha256": "47b8549d6067b4bc706dd2009cd71094ed7215abd2350bc6fb3b76ece40d63d4",
+  "training_integrity_sha256": "236d6b2c0e79cdc05861624ff6baab134638b24c3dcfeda12a6899f42daa2845",
+  "training_report": {
+    "path": "experiments/044-deployment-recovery-sft/results/2026-11-22-training/measurements.json",
+    "sha256": "ab2fe04cf7f43e40890de42fa49814dadb158fbe82bb933ab65d04e0d78724a2"
+  },
+  "comparison_code_commit": "1ef6aad99f741d0a904f303943974b5249b5e289",
+  "comparison_code_sha256": {
+    "experiments/039-release-development/candidate_comparison.py": "73e28ea11788fd44e795ce691493d8c339fb22b08d5b20692a4986f2355820d6",
+    "one_gpu_lm/verified/family_runtime.py": "954f735d6841f531f3294e7f1f895a6c69b7e30fe505e22586c39e412af6afa1"
+  },
+  "runtime_variants": 5,
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "task_count": 60,
+  "language_counts": {
+    "python": 30,
+    "javascript": 30
+  },
+  "repetitions": 3,
+  "rollout_count": 360,
+  "block_size": 10,
+  "cohort_sha256": "d519f377030374a2ac2b67826d622772906385ba88627a3ed5ca8e13d681e9ef",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "opening_preflight_sha256": "d418c2428a079eeeec9cb3bb7232d894915836703cc7c91514d8cbc6b1355dbb",
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "selected_opening": "original",
+  "source_context_audit_sha256": "f4e8899e191049e0772cbf349f4abc791c4d4c4daa19247bdb2d592b30e23ac6",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 39039,
+    "complete_audited_repetitions_required": true
+  },
+  "optimizer_updates_during_development": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed_by_development": false,
+  "tasks_per_family": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ]
+}
