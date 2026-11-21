@@ -11,22 +11,25 @@ from unittest.mock import patch
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.common.edit_progress import EditableProgress
 from one_gpu_lm.common.runstate import identity_digest
+from one_gpu_lm.verified.first_action_loss import fingerprint
 from one_gpu_lm.verified.reload_probe import PROBES, probe_requests
 from one_gpu_lm.verified.runtime_identity import PACKAGES
 
 
 ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT/'experiments/039-release-development'
-entrypoints = ('analysis','promotion','recovery','host_restart','final_campaign','final_audit','release_package','report')
+entrypoints = ('analysis','candidate_release','promotion','recovery','host_restart','final_campaign','final_audit',
+               'release_package','report')
 original_modules = {name:sys.modules.pop(name) for name in entrypoints if name in sys.modules}
 sys.path.insert(0, str(EXP))
 try:
     from analysis import analyze, schedule
+    import candidate_release
     import final_audit
     import final_campaign
     import host_restart
     import release_package
-    from promotion import REFERENCE, authorize, read, release_decision
+    from promotion import REFERENCE, authorize, authorize_comparison, read, release_decision
     from recovery import served_weight_hashes, validate_amendment
     from report import reproduce_analysis
 finally:
@@ -106,6 +109,113 @@ class ModelScopePromotionTests(unittest.TestCase):
         audit.update(analysis=analyze(audit['rows'],self.plan),verified_requests=359)
         with self.assertRaises(ValueError):
             authorize(self.plan_path,self.save('audit',audit),absent,absent)
+
+    def comparison_fixture(self, gain):
+        plan = {key:self.plan[key] for key in ('pretrained_model','base_revision','task_count','language_counts',
+                'repetitions','rollout_count','block_size','evaluation_budget','pipeline_limit_seconds',
+                'recovery_accounting_seconds','gate','optimizer_updates_during_development','final_test_opened',
+                'weight_publication_allowed_by_development','all_adapter_files_sha256')}
+        families = [f'example/development-{i}' for i in range(6)]
+        plan.update(comparison_kind='independent_adapter_comparison', families=dict.fromkeys(families,10),
+                    selected_opening='original',cohort_sha256='c'*64,evaluation_profile_sha256='d'*64)
+        preflight = dict(cohort_sha256=plan['cohort_sha256'],profile_sha256=plan['evaluation_profile_sha256'],
+                         budget=plan['evaluation_budget'],model_id=plan['pretrained_model'],revision=plan['base_revision'],
+                         model_generations=0,optimizer_updates=0,final_test_opened=False,rows=[])
+        for n in range(1,61):
+            code = hashlib.sha256(str(n).encode()).hexdigest()
+            preflight['rows'].append(dict(task_number=n,family=families[(n-1)//10],
+                                          openings={'original':{'input_sha256':code,'input_tokens':20}}))
+        proof = self.save('opening-preflight',preflight)
+        order = schedule(list(range(1,61)),plan)
+        plan.update(opening_preflight_sha256=sha256(proof),schedule_sha256=fingerprint(order))
+        protocol = self.save('new-protocol',plan)
+        registration = self.save('published-comparison',dict(protocol_sha256=sha256(protocol),
+            anonymous_files_verified=True,ci_conclusion='success',commit='f'*40))
+        controller = self.save('new-controller',dict(stage='completed',complete=True,backend_stopped=True,
+            frozen_inputs_unchanged=True,final_test_opened=False,weights_public=False,optimizer_updates=0,
+            protocol_sha256=sha256(protocol),schedule_sha256=plan['schedule_sha256'],started_epoch=1,finished_epoch=200,
+            deadline_epoch=1+plan['pipeline_limit_seconds'],runs=[dict(item,contrast_arm=item['arm']) for item in order]))
+        rows = [dict(item,family=preflight['rows'][item['task_number']-1]['family'],audit_passed=True,
+            completed_repair=gain and item['arm']=='candidate',attempted_calls=1,input_tokens=20,
+            generated_tokens=10,actor_seconds=1,opening_input_tokens=20,no_edit=False,
+            correct_without_submission=False,timeout_recovered=False,first_edit_call=1,
+            opening_input_sha256=preflight['rows'][item['task_number']-1]['openings']['original']['input_sha256'])
+            for item in order]
+        audit = self.save('new-audit',dict(passed=True,final_test_opened=False,weights_public=False,optimizer_updates=0,
+            protocol_sha256=sha256(protocol),controller_sha256=sha256(controller),opening_preflight_sha256=sha256(proof),
+            started_epoch=1,finished_epoch=200,rows=rows,analysis=analyze(rows,plan),verified_requests=len(rows),
+            served_checkpoints={arm:dict(adapter_files_sha256=files,profile_sha256=plan['evaluation_profile_sha256'])
+                                for arm,files in [('base',{}),('candidate',plan['all_adapter_files_sha256'])]}))
+        return protocol,controller,audit,registration,proof
+
+    def test_fresh_comparison_checks_both_openings_before_the_seal(self):
+        evidence = self.comparison_fixture(False)
+        absent = self.directory/'must-stay-unopened'
+        refusal = authorize_comparison(*evidence,absent,absent)
+        self.assertEqual(refusal['stage'],'development_gate')
+        self.assertFalse(refusal['approved'])
+        audit = read(evidence[2])
+        audit['rows'][0]['opening_input_sha256'] = '0'*64
+        self.save(evidence[2].name,audit)
+        with self.assertRaisesRegex(ValueError,'different task, order or opening'):
+            authorize_comparison(*evidence,absent,absent)
+
+    def test_fresh_release_entry_does_not_touch_final_suite_when_candidate_fails(self):
+        protocol,controller,audit,publication,openings = self.comparison_fixture(False)
+        absent = self.directory/'must-stay-unopened'
+        for action in ('check','score','audit','package'):
+            with self.subTest(action=action):
+                result = candidate_release.advance(SimpleNamespace(protocol=protocol,controller=controller,audit=audit,
+                    publication=publication,openings=openings,seal=absent,input_review=absent,action=action))
+                self.assertEqual(result,dict(approved=False,stage='development_gate',
+                                             final_test_opened=False,weights_public=False))
+
+    def test_fresh_release_scores_using_the_audited_training_profile(self):
+        absent = self.directory/'unopened-fixture'
+        args = SimpleNamespace(protocol=absent,controller=absent,audit=absent,publication=absent,openings=absent,
+            seal=absent,input_review=absent,action='score',sealed=absent,adapter=absent,training_protocol=absent,
+            training_profile=absent,training_integrity=absent)
+        permission = {'approved':True,'stage':'final_evaluation'}
+        profile = {'actual': 'reviewed training profile'}
+        with patch.object(candidate_release,'authorize_comparison',return_value=permission), \
+                patch.object(candidate_release,'reviewed_training',return_value=(profile,{})) as training, \
+                patch.object(candidate_release,'run_approved',return_value={'stage':'fixture-scheduled'}) as run:
+            self.assertEqual(candidate_release.advance(args),{'stage':'fixture-scheduled'})
+        training.assert_called_once_with(permission,absent,absent,absent,absent)
+        run.assert_called_once_with(absent.resolve(),absent,permission,adapter_profile=profile)
+
+    def test_fresh_comparison_can_promote_with_its_own_audit_and_the_original_final_gate(self):
+        evidence = self.comparison_fixture(True)
+        protocol = read(evidence[0])
+        reference_path = REFERENCE/'protocol.json'
+        reference = read(reference_path)
+        inventory_path = REFERENCE/'results/2026-11-12/task-inventory.json'
+        inventory = read(inventory_path)
+        cohorts = {}
+        for key,role in [('fresh','fresh_final_not_selection'),('historical','historical_final_regression_not_selection')]:
+            ids = sorted(row['id'] for row in inventory if row.get('evaluation_role')==role)
+            cohorts[key] = dict(tasks=len(ids),ids_sha256=hashlib.sha256(json.dumps(ids,separators=(',',':')).encode()).hexdigest())
+        seal = self.save('fixture-seal',dict(reference_release_protocol_sha256=sha256(reference_path),
+            public_task_inventory_sha256=sha256(inventory_path),development_protocol_sha256=sha256(evidence[0]),
+            release_gate=reference['release_gate'],fresh_family_overlap=[],final_campaign_directories=0,
+            final_test_opened=False,private_task_schema_read=False,authorized_model_scoring=False,
+            cohorts=cohorts,frozen_file_digests=reference['frozen_files']))
+        review = self.save('fixture-review',dict(audited_checkpoint_matches=True,
+            eligible_for_existing_scope_of_development=True,model_id=protocol['pretrained_model'],
+            revision=protocol['base_revision'],checkpoint_files_sha256=protocol['all_adapter_files_sha256'],
+            sources={'example/training':{}},weights_public=False,final_test_opened=False))
+        permission = authorize_comparison(*evidence,seal,review)
+        self.assertTrue(permission['approved'])
+        self.assertEqual(permission['cohorts'],{'fresh':24,'historical':48,'legacy':9})
+        self.assertEqual(permission['checkpoint_sha256'],{n:protocol['all_adapter_files_sha256'][n]
+                                                         for n in release_package.FILES})
+        self.assertFalse(permission['final_test_opened'])
+        different = dict(read(review),checkpoint_files_sha256={name:'0'*64 for name in release_package.FILES})
+        with self.assertRaisesRegex(ValueError,'different from the measured candidate'):
+            authorize_comparison(*evidence,self.directory/'must-stay-unopened',self.save('swapped',different))
+        changed = dict(read(review),sources={'EXAMPLE/Development-0:variant':{}})
+        with self.assertRaisesRegex(ValueError,'families must stay separate'):
+            authorize_comparison(*evidence,self.directory/'must-stay-unopened',self.save('overlap',changed))
 
     def test_report_permits_duration_roundoff_and_checks_completed_counts_exactly(self):
         audit = self.synthetic_audit(False)
