@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "experiment": "048-expanded-action-preference",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "private_protocol_sha256": "d976603154bd3fd7298038749d2b8379d7e50994c6992a4d8898675234a116f4",
+  "trainer_commit": "00a1889650095712310b625a4548477ff6823d3b",
+  "collection_results": {
+    "045": "45eec0544ad63ade96881c898bc7d6b2776dd7ef",
+    "047": "d6184937d6e6d9ef0007841dd87d8afbce546b64"
+  },
+  "training": {
+    "baseline_pairs": 5,
+    "expansion_pairs": 16,
+    "pairs": 21,
+    "scheduled_updates": 6,
+    "order_sha256": "2280a362146b9603f445b26c313baf5244aadb10d1f461d1dce733ea59a2aa72",
+    "recipe": {
+      "seed": 101,
+      "beta": 0.1,
+      "pairs_per_update": 4,
+      "learning_rate": 1e-05,
+      "max_grad_norm": 1.0
+    }
+  },
+  "development": {
+    "cohort_sha256": "d9ecb508cfe471491a7c533afc5f6d75ee63edcf1a962c5d34ed58428889d087",
+    "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+    "tasks": 60,
+    "families": 6,
+    "pair_repetitions": 3,
+    "scheduled_rollouts": 360,
+    "selected_opening": "original",
+    "gate": {
+      "minimum_gain_pp": 10,
+      "maximum_family_drop_pp": 10,
+      "require_positive_95_percent_lower_bound": true,
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 39039,
+      "complete_audited_repetitions_required": true
+    },
+    "budget": {
+      "max_model_calls": 12,
+      "max_generated_tokens_per_call": 512,
+      "max_total_generated_tokens": 6144,
+      "max_input_tokens": 8192,
+      "max_task_seconds": 600,
+      "max_tool_seconds": 60,
+      "max_tool_output_chars": 2400
+    }
+  },
+  "optimizer_updates_before_registration": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}
