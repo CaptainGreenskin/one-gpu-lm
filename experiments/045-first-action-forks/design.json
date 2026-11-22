@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment": "045-first-action-forks",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "parent_training_design_sha256": "beaf94080794523109c6a4b89153d5c2b709452c86b4f925054f667ceea97c29",
+  "expected_training_states": 22,
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "arms": ["greedy", "sampled"],
+  "sampling": {"temperature": 0.7, "top_p": 0.9, "seed_offset": 45100},
+  "subsequent_decoding": "greedy",
+  "training_success": "independent_score_pass_with_standalone_regression_and_submission_within_matched_budget",
+  "pair_rule": "distinct_executed_first_commands_on_identical_restored_state_and_prompt_with_discordant_success",
+  "pipeline_seconds": 43200,
+  "recovery_seconds_per_request": 120,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "experiment": "045-first-action-forks",
+  "training_only": true,
+  "prior_development_commit": "ed7bbb9bbe4f665a06caa44ab9a7f6f9773926aa",
+  "protocol_sha256": "1d50349c8fb919ab6a9d87bcb3d29c19787b34951420265e99eef0e051a83c39",
+  "training_states": 22,
+  "families": 5,
+  "historical_calls": {
+    "1": 20,
+    "2": 2
+  },
+  "prompt_tokens_min": 1040,
+  "prompt_tokens_max": 1912,
+  "generation_ceiling": 268260,
+  "rollout_ceiling": 44,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "code_sha256": {
+    "design.json": "448130bf8d6fc49d6c22d22119e3f10235fa27bac7dd60058bf246ed6a09121d",
+    "prepare.py": "0003b93a7060565ddea323518995804faa52b3f0c141a882415eacec926230c0",
+    "run.py": "6377c45cc61b25806b2ca1ace1e9c21ec3031af5ab5e0b09049a6baba5196a0e"
+  }
+}
