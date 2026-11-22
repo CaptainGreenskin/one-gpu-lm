@@ -7,3 +7,5 @@
 独立评分、重新运行回归检查和实际提交均通过，才计为修复成功。两组首个命令均实际执行、命令相异、成功结果相反且 token 前缀一致，才可进入偏好样本池。报告统计完整配对、失败类别、请求回执和硬件测量。
 
 训练工作站可用 `run.py freeze` 校验原始审计和复放工作区并固定六个批次。登记通过公开读回和 CI 后，用 `run.py campaign --publication <核验回执>` 执行，两个入口都用 `--root <训练目录> --plan <登记文件>` 指定输入。原始轨迹和生成回执保存在私有工作区。 [实验设计](design.json) · [执行入口](run.py)
+
+完整回执可生成匿名的逐次结果、分批硬件记录和按调用次数累计的曲线。在仓库根目录使用 `PYTHONPATH=. python experiments/047-expanded-action-forks/report.py --results <结果目录>` 从匿名 `measurements.json` 重建报告。 [报告入口](report.py)

@@ -24,6 +24,20 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
+def anonymous_pairs(rows, aliases):
+    matched = []
+    for row in rows:
+        if set(row['arms']) != set(ARMS):
+            raise ValueError('A matched pair has an incomplete arm inventory')
+        arms = {arm:{**{key:row['arms'][arm][key] for key in (*FLAGS,*COUNTS)},
+                     'first_edit_call':row['arms'][arm]['first_edit_call'],
+                     'completion_call':row['arms'][arm]['submit_call'] if row['arms'][arm]['verified_and_submitted'] else None,
+                     'actor_seconds':row['arms'][arm]['actor_seconds']} for arm in ARMS}
+        matched.append({'pair':row['pair'],'family':aliases[row['family']], 'available_calls':row['available_calls'],
+                        'arms':arms,'contrast':row['contrast']})
+    return matched
+
+
 def capture(out, protocol, publication):
     controller, audit = out/'controller.json', out/'audit.json'
     state, replay, registered = read(controller), read(audit), read(publication)
@@ -40,16 +54,7 @@ def capture(out, protocol, publication):
             or replay['audited_attempts'] != len(state['runs']) or 2*len(replay['pairs']) != len(state['runs'])):
         raise ValueError('Expected the completed first-action registration and replay')
     aliases = {value:f'F{i:02d}' for i,value in enumerate(sorted({row['family'] for row in replay['pairs']}),1)}
-    matched = []
-    for row in replay['pairs']:
-        if set(row['arms']) != set(ARMS):
-            raise ValueError('A matched pair has an incomplete arm inventory')
-        arms = {arm:{**{key:row['arms'][arm][key] for key in (*FLAGS,*COUNTS)},
-                     'first_edit_call':row['arms'][arm]['first_edit_call'],
-                     'completion_call':row['arms'][arm]['submit_call'] if row['arms'][arm]['verified_and_submitted'] else None,
-                     'actor_seconds':row['arms'][arm]['actor_seconds']} for arm in ARMS}
-        matched.append({'pair':row['pair'],'family':aliases[row['family']], 'available_calls':row['available_calls'],
-                        'arms':arms,'contrast':row['contrast']})
+    matched = anonymous_pairs(replay['pairs'], aliases)
     telemetry = hardware(out/'telemetry.csv',state)
     keep = ('samples','first_to_last_seconds','maximum_gap_seconds','utilization_percent',
             'power_w','memory_used_mib','temperature_c')
@@ -125,26 +130,23 @@ def write_csv(path, rows):
         writer.writerows(rows)
 
 
-def render(directory, registration):
+def write_curves(directory, pairs, *, salt):
     import matplotlib
     matplotlib.use('Agg')
-    matplotlib.rcParams['svg.hashsalt'] = '045-first-action-forks'
+    matplotlib.rcParams['svg.hashsalt'] = salt
     import matplotlib.pyplot as plt
 
-    value = read(directory/'measurements.json')
-    result = summarize(value, registration)
-    write_json(directory/'summary.json',result)
     rows = [dict(pair=pair['pair'],family=pair['family'],available_calls=pair['available_calls'],
-                 arm=arm,contrast=pair['contrast'],**pair['arms'][arm]) for pair in value['pairs'] for arm in ARMS]
+                 arm=arm,contrast=pair['contrast'],**pair['arms'][arm]) for pair in pairs for arm in ARMS]
     write_csv(directory/'matched-actions.csv',rows)
-    points = list(curves(value['pairs']))
+    points = list(curves(pairs))
     write_csv(directory/'call-curves.csv',points)
     fig, axes = plt.subplots(1,2,figsize=(9,3.6),layout='constrained',sharey=True)
     for axis,key,title in zip(axes,('first_edit','completed_repair'),('First source edit','Verified repair and submission')):
         for arm,color,label in zip(ARMS,('#2D6496','#B85034'),('Greedy','Sampled first response')):
             axis.step([point['new_call'] for point in points],[point[f'{key}_{arm}'] for point in points],
                       where='post',color=color,label=label,linewidth=2)
-        axis.set(title=title,xlabel='New model calls after restoration',ylim=(0,result['paired_states']+1))
+        axis.set(title=title,xlabel='New model calls after restoration',ylim=(0,len(pairs)+1))
         axis.grid(axis='y',alpha=.25)
     axes[0].set_ylabel('Training states')
     axes[0].legend(loc='best',frameon=False)
@@ -152,6 +154,13 @@ def render(directory, registration):
     fig.savefig(graphic,metadata={'Date':None})
     plt.close(fig)
     graphic.write_text('\n'.join(line.rstrip() for line in graphic.read_text().splitlines())+'\n',encoding='utf-8')
+
+
+def render(directory, registration):
+    value = read(directory/'measurements.json')
+    result = summarize(value, registration)
+    write_json(directory/'summary.json',result)
+    write_curves(directory, value['pairs'], salt='045-first-action-forks')
     start,end = (datetime.fromtimestamp(value[key],BEIJING) for key in ('started_epoch','finished_epoch'))
     greedy, sampled = (result['arms'][arm]['completed_repairs'] for arm in ARMS)
     counts = result['outcomes']
