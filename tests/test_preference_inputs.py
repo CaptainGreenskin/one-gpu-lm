@@ -8,7 +8,9 @@ from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.serving.receipt_client import request_identity
 from one_gpu_lm.serving.request_journal import RequestJournal
 from one_gpu_lm.training.decision_preference import EncodedDecision, token_digest
-from one_gpu_lm.verified.decision_training_data import admitted_sources, verify_first_choices
+from one_gpu_lm.verified.decision_training_data import (
+    SECRET_PATTERNS, admitted_sources, verify_first_choices, verify_private_labels,
+)
 from one_gpu_lm.verified.expanded_preference import OUTPUT, expansion_run, merge_source_reviews
 
 
@@ -77,6 +79,14 @@ class FirstActionPreferenceInputs(unittest.TestCase):
 
 
 class ExpandedPreferenceInputs(unittest.TestCase):
+    def test_reported_zero_counts_cover_every_pattern(self):
+        records = [{'chosen': 'Repair the arithmetic regression.'}]
+        self.assertEqual(verify_private_labels(records, ()), dict.fromkeys(SECRET_PATTERNS, 0))
+        with self.assertRaisesRegex(ValueError, 'credential pattern'):
+            verify_private_labels([{'chosen': 'ghp_' + 'x' * 36}], ())
+        with self.assertRaisesRegex(ValueError, 'private identifier'):
+            verify_private_labels(records, ('arithmetic regression',))
+
     def test_does_not_consume_blocks_before_the_terminal_audit(self):
         with TemporaryDirectory() as temp:
             root = Path(temp)

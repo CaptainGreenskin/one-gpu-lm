@@ -111,7 +111,6 @@ def extend_review(base, root, base_protocol, protocol, published_path, cohort_pa
             raise ValueError('Block differs from the completed global audit')
         audit, raw = audited_records(out, summary['audit_sha256'])
         source_rights = admitted_sources(data, cases, audit, raw, excluded, arms=FORK_ARMS, first_ordinal=ordinals[0])
-        verify_private_labels(raw, private_identifiers)
         encoded = [encode_decision(row, tokenizer, base.profile) for row in raw]
         for choice in encoded:
             prompt = choice.chosen[:choice.prefix_tokens]
@@ -134,13 +133,15 @@ def extend_review(base, root, base_protocol, protocol, published_path, cohort_pa
     added = len(records) - first_count
     if not added or added != terminal['qualifying_preference_pairs'] or len(records) != len(choices):
         raise ValueError('Require the new verified labels from the complete registered physical collection')
+    findings = verify_private_labels(records, private_identifiers)
     data_bytes = (json.dumps(records, indent=2, ensure_ascii=False, allow_nan=False) + '\n').encode()
     expanded = {'protocol_sha256': sha256(protocol), 'audit_sha256': published['audit_sha256'],
                 'results_commit': published['commit'], 'result_publication_sha256': sha256(published_path),
                 'blocks': verified_blocks, 'pairs': added, 'baseline_pairs': first_count}
     review = dict(base.review, collection_experiment=EXPANSION_PATH.name, expansion=expanded,
                   physical_first_actions_reverified=base.review['physical_first_actions_reverified'] + 2 * added,
-                  actual_training_data_sha256=hash_bytes(data_bytes).hexdigest(), sources=dict(sorted(reviewed.items())),
+                  actual_training_data_sha256=hash_bytes(data_bytes).hexdigest(), known_pattern_findings=findings,
+                  sources=dict(sorted(reviewed.items())),
                   pairs=len(choices), decision_counts=dict(Counter(value.kind for value in choices)),
                   longest_sequence=max(max(len(choice.chosen), len(choice.rejected)) for choice in choices),
                   recorded_release_rights_complete=all(item['recorded_weight_publication_approval'] for item in reviewed.values()))

@@ -25,7 +25,7 @@ from one_gpu_lm.training.preference_epoch import PreferenceRecipe, replay_histor
 from one_gpu_lm.training.state import state_digest
 from .candidate_handoff import TRAINING_RECEIPTS
 from .continuation_training import unchanged
-from .decision_training_data import review_inputs
+from .decision_training_data import SECRET_PATTERNS, review_inputs
 from .expanded_preference import EXPANSION_PATH, extend_review
 from .runtime_identity import verify as verify_environment
 from .tasks import relative
@@ -144,13 +144,16 @@ def registered(root, protocol, publication):
     data_path, source_path, review_path, profile_path, environment, manifest = (
         root/relative(plan[key]) for key in keys)
     review, profile = read(review_path), read(profile_path)
+    findings = review['known_pattern_findings']
     if (review['collection_protocol_sha256'] != plan['collection_protocol_sha256']
             or review['collection_audit_sha256'] != plan['collection_audit_sha256']
             or review['actual_training_data_sha256'] != sha256(data_path)
             or review['source_manifest_sha256'] != sha256(source_path)
             or review.get('expansion') != plan.get('source_expansion')
             or review['final_test_opened'] is not False or review['weights_public'] is not False
-            or review['known_pattern_findings'] or (profile['model_id'], profile['revision']) !=
+            or not isinstance(findings, dict) or (findings and set(findings) != set(SECRET_PATTERNS))
+            or any(type(count) is not int or count != 0 for count in findings.values())
+            or (profile['model_id'], profile['revision']) !=
             (plan['model_id'], plan['revision'])):
         raise ValueError('Preference input provenance changed')
     model, tokenizer = base_tokenizer(root)

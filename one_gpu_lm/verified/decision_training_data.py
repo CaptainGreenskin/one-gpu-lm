@@ -186,11 +186,13 @@ def verify_first_choices(out, plan, design, rows, records, choices):
 
 
 def verify_private_labels(records, private_identifiers):
+    """Record every checked pattern after the reviewed records pass the scan."""
     for record in records:
         text = json.dumps(record, ensure_ascii=False)
         if (any(pattern.search(text) for pattern in SECRET_PATTERNS.values())
                 or any(value and value in text for value in private_identifiers)):
             raise ValueError('The preference export matches a private identifier or credential pattern')
+    return dict.fromkeys(SECRET_PATTERNS, 0)
 
 
 def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256, cohort_path, cohort_sha256,
@@ -224,7 +226,7 @@ def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256,
         raise ValueError('The audited collection length differs from its registration')
     source_review = admitted_sources(data, cases, audit, records, excluded, arms=arms)
 
-    verify_private_labels(records, private_identifiers)
+    findings = verify_private_labels(records, private_identifiers)
     profile = json.loads(profile_path.read_bytes())
     if ((profile['model_id'], profile['revision']) != (reference['model_id'], reference['revision'])
             or profile['training']['dialogue_format'] != 'native_roundtrip'):
@@ -242,7 +244,7 @@ def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256,
               'actual_training_data_sha256': audit['training_export_sha256'],
               'source_manifest_sha256': sha256(source_path), 'task_manifest_sha256': sha256(data/'tasks.json'),
               'source_snapshots_match': True, 'all_source_notices_and_lineage_reviewed_for_training': True,
-              'known_pattern_findings': {}, 'sources': source_review, 'pairs': len(choices),
+              'known_pattern_findings': findings, 'sources': source_review, 'pairs': len(choices),
               'decision_counts': dict(Counter(value.kind for value in choices)),
               'longest_sequence': max(max(len(item.chosen), len(item.rejected)) for item in choices),
               'recorded_release_rights_complete': all(row['recorded_weight_publication_approval']
