@@ -1,0 +1,33 @@
+{
+  "paired_states": 22,
+  "rollouts": 44,
+  "verified_requests": 431,
+  "outcomes": {
+    "neither": 11,
+    "both": 6,
+    "greedy_only": 3,
+    "sampled_only": 2
+  },
+  "arms": {
+    "greedy": {
+      "completed_repairs": 9,
+      "never_edited": 8,
+      "generated_tokens": 16210,
+      "attempted_calls": 218
+    },
+    "sampled": {
+      "completed_repairs": 8,
+      "never_edited": 7,
+      "generated_tokens": 19607,
+      "attempted_calls": 213
+    }
+  },
+  "contrast_counts": {
+    "same_outcome": 17,
+    "matched_executed_contrast": 5
+  },
+  "qualified_pairs": 5,
+  "wall_seconds": 3358.541095018387,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}
