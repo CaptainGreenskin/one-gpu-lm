@@ -1,13 +1,15 @@
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 import unittest
 
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.serving.receipt_client import request_identity
 from one_gpu_lm.serving.request_journal import RequestJournal
 from one_gpu_lm.training.decision_preference import EncodedDecision, token_digest
-from one_gpu_lm.verified.decision_training_data import verify_first_choices
+from one_gpu_lm.verified.decision_training_data import admitted_sources, verify_first_choices
+from one_gpu_lm.verified.expanded_preference import OUTPUT, expansion_run, merge_source_reviews
 
 
 class FirstActionPreferenceInputs(unittest.TestCase):
@@ -72,6 +74,37 @@ class FirstActionPreferenceInputs(unittest.TestCase):
         self.record['provenance'].update(fork_call=1,remaining_generated_tokens=1199)
         with self.assertRaisesRegex(ValueError,'physical first-decision prefix'):
             self.verify()
+
+
+class ExpandedPreferenceInputs(unittest.TestCase):
+    def test_does_not_consume_blocks_before_the_terminal_audit(self):
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            protocol = root / 'protocol.json'
+            protocol.write_text('{}')
+            (root / OUTPUT / 'block-01').mkdir(parents=True)
+            (root / OUTPUT / 'block-01/audit.json').write_text('{}')
+            with self.assertRaises(FileNotFoundError):
+                expansion_run(root, protocol, {'protocol_sha256':sha256(protocol),'audit_sha256':'c'*64})
+
+    def test_consumes_audited_ordinals_without_renumbering_later_blocks(self):
+        case = SimpleNamespace(kind='early_edit', task={'family':'fixture'})
+        cells = {arm:{'audited':True} for arm in ('greedy','sampled')}
+        audit = {'pairs':[{'pair':23,'kind':'early_edit','family':'fixture','arms':cells,'contrast':'same_outcome'}]}
+        self.assertEqual(admitted_sources(None,{'one':case},audit,[],set(),arms=tuple(cells),first_ordinal=23),{})
+        with self.assertRaisesRegex(ValueError, 'complete executed audit'):
+            admitted_sources(None,{'one':case},audit,[],set(),arms=tuple(cells),first_ordinal=22)
+
+    def test_merges_counts_only_when_source_approval_is_identical(self):
+        source = {'license':'MIT','revision':'a'*40,'used_records':2,'verified_fragment_records':2,
+                  'notices':{'LICENSE':'e'*64},'recorded_weight_publication_approval':True}
+        merged = {'example/lib':dict(source)}
+        merge_source_reviews(merged,{'example/lib':source})
+        self.assertEqual(merged['example/lib']['used_records'],4)
+        self.assertEqual(merged['example/lib']['verified_fragment_records'],4)
+        self.assertEqual(source['used_records'],2)
+        with self.assertRaisesRegex(ValueError,'source rights'):
+            merge_source_reviews(merged,{'example/lib':dict(source,revision='b'*40)})
 
 
 if __name__ == '__main__':

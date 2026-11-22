@@ -26,6 +26,7 @@ from one_gpu_lm.training.state import state_digest
 from .candidate_handoff import TRAINING_RECEIPTS
 from .continuation_training import unchanged
 from .decision_training_data import review_inputs
+from .expanded_preference import EXPANSION_PATH, extend_review
 from .runtime_identity import verify as verify_environment
 from .tasks import relative
 
@@ -61,6 +62,13 @@ def freeze(root, protocol, args):
     selected = review_inputs(args.collection_root, args.collection_protocol, args.collection_protocol_sha256,
                              args.collection_audit_sha256, args.development_cohort, args.development_cohort_sha256,
                              tokenizer,private_identifiers=identifiers)
+    expansion = getattr(args, 'expanded_collection_protocol', None)
+    results_publication = getattr(args, 'expanded_results_publication', None)
+    if (expansion is None) != (results_publication is None):
+        raise ValueError('Supply both the complete expanded collection and its verified result publication')
+    if expansion is not None:
+        selected = extend_review(selected, args.collection_root, args.collection_protocol, expansion,
+                                 results_publication, args.development_cohort, tokenizer, private_identifiers=identifiers)
     parent = read(root/PARENT)
     profile_path = root/relative(parent['profile_path'])
     profile = read(profile_path)
@@ -81,8 +89,12 @@ def freeze(root, protocol, args):
             staged = Path(area)/'selected'
             staged.mkdir(mode=0o700)
             for key, digest in expected.items():
-                shutil.copyfile(selected.paths[key], staged/names[key])
-                if sha256(staged/names[key]) != digest:
+                target = staged/names[key]
+                if key == 'data' and selected.data_bytes is not None:
+                    target.write_bytes(selected.data_bytes)
+                else:
+                    shutil.copyfile(selected.paths[key], target)
+                if sha256(target) != digest:
                     raise ValueError('Copied preference input differs from the verified digest')
             atomic_json(staged/names['review'], selected.review)
             staged.rename(inputs)
@@ -93,8 +105,9 @@ def freeze(root, protocol, args):
     evidence = [root/name for name in (PARENT, RUNTIME, parent['profile_path'], parent['environment_path'],
                                        parent['model_manifest_path'], parent['cycle_spec'], *paths.values())]
     evidence += list((root/'one_gpu_lm').rglob('*.py'))
-    name = ('046-first-action-preference' if selected.review['collection_experiment']=='045-first-action-forks'
-            else '044-action-preference')
+    name = {EXPANSION_PATH.name:'048-expanded-action-preference',
+            '045-first-action-forks':'046-first-action-preference'}.get(selected.review['collection_experiment'],
+                                                                    '044-action-preference')
     plan = {'schema_version': 1, 'candidate': name, 'kind': KIND,
             'model_id': profile['model_id'], 'revision': profile['revision'],
             'profile_path': parent['profile_path'], 'sources_path': paths['sources'], 'data_path': paths['data'],
@@ -107,6 +120,8 @@ def freeze(root, protocol, args):
             'recipe': asdict(recipe), 'planned_pairs': len(selected.choices), 'expected_optimizer_updates': len(batches),
             'order_sha256': identity_digest(batches), 'final_test_opened': False, 'weights_public': False,
             'frozen_files': {path.relative_to(root).as_posix(): sha256(path) for path in sorted(set(evidence))}}
+    if 'expansion' in selected.review:
+        plan['source_expansion'] = selected.review['expansion']
     with protocol.open('x', encoding='utf-8') as stream:
         json.dump(plan, stream, indent=2, allow_nan=False)
         stream.write('\n')
@@ -133,6 +148,7 @@ def registered(root, protocol, publication):
             or review['collection_audit_sha256'] != plan['collection_audit_sha256']
             or review['actual_training_data_sha256'] != sha256(data_path)
             or review['source_manifest_sha256'] != sha256(source_path)
+            or review.get('expansion') != plan.get('source_expansion')
             or review['final_test_opened'] is not False or review['weights_public'] is not False
             or review['known_pattern_findings'] or (profile['model_id'], profile['revision']) !=
             (plan['model_id'], plan['revision'])):
@@ -324,6 +340,8 @@ def main():
     for name in ('collection-protocol-sha256', 'collection-audit-sha256', 'development-cohort-sha256'):
         preparation.add_argument('--'+name, required=True)
     preparation.add_argument('--private-identifiers',type=Path)
+    preparation.add_argument('--expanded-collection-protocol',type=Path)
+    preparation.add_argument('--expanded-results-publication',type=Path)
     for mode in ('train', 'audit'):
         command = modes.add_parser(mode)
         command.add_argument('--publication', type=Path, required=True)

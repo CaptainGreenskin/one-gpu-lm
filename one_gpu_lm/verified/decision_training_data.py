@@ -35,14 +35,15 @@ class DecisionTrainingData:
     profile: dict
     review: dict
     paths: dict
+    data_bytes: bytes | None = None
 
 
-def admitted_sources(data, cases, audit, records, excluded, *, arms=('control', 'correction')):
+def admitted_sources(data, cases, audit, records, excluded, *, arms=('control', 'correction'), first_ordinal=1):
     """Check exact eligible forks and the provenance of every selected training source."""
     expected = []
     if len(audit['pairs']) != len(cases):
         raise ValueError('The audit does not cover the registered decision states')
-    for number, (case, pair) in enumerate(zip(cases.values(), audit['pairs']), 1):
+    for number, (case, pair) in enumerate(zip(cases.values(), audit['pairs']), first_ordinal):
         if (pair['pair'] != number or pair['kind'] != case.kind or pair['family'] != case.task['family']
                 or set(pair['arms']) != set(arms)
                 or any(cell['audited'] is not True for cell in pair['arms'].values())):
@@ -184,6 +185,14 @@ def verify_first_choices(out, plan, design, rows, records, choices):
     return len(seen)
 
 
+def verify_private_labels(records, private_identifiers):
+    for record in records:
+        text = json.dumps(record, ensure_ascii=False)
+        if (any(pattern.search(text) for pattern in SECRET_PATTERNS.values())
+                or any(value and value in text for value in private_identifiers)):
+            raise ValueError('The preference export matches a private identifier or credential pattern')
+
+
 def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256, cohort_path, cohort_sha256,
                   tokenizer, *, private_identifiers=()):
     """Open only audited training data and the score-independent development manifest."""
@@ -215,14 +224,7 @@ def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256,
         raise ValueError('The audited collection length differs from its registration')
     source_review = admitted_sources(data, cases, audit, records, excluded, arms=arms)
 
-    findings = Counter()
-    for record in records:
-        text = json.dumps(record, ensure_ascii=False)
-        findings.update(name for name, pattern in SECRET_PATTERNS.items() if pattern.search(text))
-        if any(value and value in text for value in private_identifiers):
-            findings['known_private_identifier'] += 1
-    if findings:
-        raise ValueError('The preference export matches a private identifier or credential pattern')
+    verify_private_labels(records, private_identifiers)
     profile = json.loads(profile_path.read_bytes())
     if ((profile['model_id'], profile['revision']) != (reference['model_id'], reference['revision'])
             or profile['training']['dialogue_format'] != 'native_roundtrip'):
