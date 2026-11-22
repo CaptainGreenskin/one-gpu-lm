@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "d976603154bd3fd7298038749d2b8379d7e50994c6992a4d8898675234a116f4",
+  "registration_commit": "3f28d876382fefe14df2b8a98248a8e8ba872c57",
+  "integrity_sha256": "bf342db6206ac521eaab71c9dcdf002b25d88fbc5f8ec9f36cb7461b6688d986",
+  "audit_passed": true,
+  "stage": "completed",
+  "started_utc": "2026-11-22T16:00:41.924082+00:00",
+  "finished_utc": "2026-11-22T16:03:49.426997+00:00",
+  "trainable_parameters": 58363904,
+  "order_sha256": "2280a362146b9603f445b26c313baf5244aadb10d1f461d1dce733ea59a2aa72",
+  "saved_reload_greedy_ids_equal": true,
+  "saved_reload_action_scores_equal": true,
+  "attempt_count": 1,
+  "commands": [
+    {
+      "command": 1,
+      "action": "train",
+      "finished": true,
+      "exit_code": 0,
+      "error_type": null,
+      "attempt": 1,
+      "stage": "completed"
+    },
+    {
+      "command": 2,
+      "action": "audit",
+      "finished": true,
+      "exit_code": 0,
+      "error_type": null
+    }
+  ],
+  "gpu_attempts": [
+    {
+      "samples": 37,
+      "interval_seconds": 5,
+      "first_to_last_seconds": 184.51504707336426,
+      "maximum_gap_seconds": 7.623269081115723,
+      "pipeline_seconds": 187.5029149055481,
+      "first_sample_delay_seconds": 0.05017900466918945,
+      "last_sample_to_finish_seconds": 2.9376888275146484,
+      "temperature_c": {
+        "mean": 39.729729729729726,
+        "maximum": 65.0
+      },
+      "power_w": {
+        "mean": 275.72945945945946,
+        "maximum": 551.34
+      },
+      "utilization_percent": {
+        "mean": 50.945945945945944,
+        "maximum": 100.0
+      },
+      "memory_used_mib": {
+        "mean": 42324.89189189189,
+        "maximum": 56921.0
+      },
+      "sampled_gpu_energy_kwh": 0.014294323129450283,
+      "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity",
+      "attempt": 1,
+      "telemetry_available": true,
+      "telemetry_sha256": "af2092ee7d3ec3966d21c3a1005a8a5ecd143a5aed24a95547c6083524c647e9",
+      "sampling_errors": 0,
+      "collector_stopped": true
+    }
+  ],
+  "updates": [
+    {
+      "step": 1,
+      "pairs": 4,
+      "grad_norm": 1.8749867677688599,
+      "seconds": 18.674755725020077,
+      "peak_allocated_bytes": 57549323776,
+      "peak_reserved_bytes": 58367934464,
+      "mean_loss": 0.6931471824645996,
+      "mean_policy_margin": -2.1566332578659058,
+      "mean_reference_margin": -2.1566332578659058,
+      "mean_margin_gain": 0.0
+    },
+    {
+      "step": 2,
+      "pairs": 4,
+      "grad_norm": 1.793716549873352,
+      "seconds": 17.088356344000204,
+      "peak_allocated_bytes": 58032681984,
+      "peak_reserved_bytes": 58367934464,
+      "mean_loss": 0.6915892213582993,
+      "mean_policy_margin": 1.3397703766822815,
+      "mean_reference_margin": 1.3083145022392273,
+      "mean_margin_gain": 0.0314558744430542
+    },
+    {
+      "step": 3,
+      "pairs": 4,
+      "grad_norm": 1.777919054031372,
+      "seconds": 17.63056398698245,
+      "peak_allocated_bytes": 58032681984,
+      "peak_reserved_bytes": 58367934464,
+      "mean_loss": 0.6943008452653885,
+      "mean_policy_margin": 0.008417129516601562,
+      "mean_reference_margin": 0.03111189603805542,
+      "mean_margin_gain": -0.022694766521453857
+    },
+    {
+      "step": 4,
+      "pairs": 4,
+      "grad_norm": 1.8987493515014648,
+      "seconds": 16.083324158011237,
+      "peak_allocated_bytes": 58319334400,
+      "peak_reserved_bytes": 58932068352,
+      "mean_loss": 0.6987926512956619,
+      "mean_policy_margin": 0.14410972595214844,
+      "mean_reference_margin": 0.2558160424232483,
+      "mean_margin_gain": -0.11170631647109985
+    },
+    {
+      "step": 5,
+      "pairs": 4,
+      "grad_norm": 1.5390946865081787,
+      "seconds": 18.16829970901017,
+      "peak_allocated_bytes": 58319334400,
+      "peak_reserved_bytes": 58932068352,
+      "mean_loss": 0.6917114406824112,
+      "mean_policy_margin": -0.3074648380279541,
+      "mean_reference_margin": -0.33629560470581055,
+      "mean_margin_gain": 0.028830766677856445
+    },
+    {
+      "step": 6,
+      "pairs": 1,
+      "grad_norm": 2.2560651302337646,
+      "seconds": 4.9876612949883565,
+      "peak_allocated_bytes": 58319334400,
+      "peak_reserved_bytes": 58932068352,
+      "mean_loss": 0.6968351006507874,
+      "mean_policy_margin": 0.0701608657836914,
+      "mean_reference_margin": 0.1437840461730957,
+      "mean_margin_gain": -0.0736231803894043
+    }
+  ],
+  "final_test_opened": false,
+  "weights_public": false
+}
