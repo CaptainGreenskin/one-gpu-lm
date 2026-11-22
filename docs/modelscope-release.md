@@ -15,7 +15,7 @@
 
 041 在九道训练题上采集到 27 条经审计的接续训练记录。042 将这些记录加入既有训练样本，完成 126 次更新并验证重载生成一致。独立开发对照使用六个新仓库家族的 60 道题，每题以同一推理流程和预算分别运行底座与 LoRA 各三次。完整审计后，底座完成 30/180，LoRA 完成 24/180。042 未通过开发门槛。[041 采集结果](../experiments/041-first-edit-continuation/results/2026-11-21/) · [042 训练曲线](../experiments/042-first-edit-sft/results/2026-11-21-training/) · [042 独立对照与硬件记录](../experiments/042-first-edit-sft/results/2026-11-21-development/)
 
-044 加入符合正式评测流程的完整修复轨迹，完成 126 次更新。训练来源复核将 1,116 条动作、五个上游仓库的固定版本和十份许可与署名文件绑定到该适配器，底座许可为 Apache-2.0。独立开发对照登记了六个新仓库家族的 60 道题，每题跑三轮配对。完整开发审计通过后才会开启封存题。 [044 训练曲线与审计](../experiments/044-deployment-recovery-sft/results/2026-11-22-training/) · [044 独立开发登记](../experiments/044-deployment-recovery-sft/development-registration.json)
+044 加入符合正式评测流程的完整修复轨迹，完成 126 次更新。训练来源复核将 1,116 条动作、五个上游仓库的固定版本和十份许可与署名文件绑定到该适配器，底座许可为 Apache-2.0。六个新仓库家族的 60 道题各运行三轮配对，底座修对并提交 27/180，LoRA 21/180。开发审计完整，候选未达到净提升门槛，最终测试仍封存。 [044 训练记录](../experiments/044-deployment-recovery-sft/results/2026-11-22-training/) · [044 独立开发对照](../experiments/044-deployment-recovery-sft/results/2026-11-22-development/)
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "controller_sha256": "1d56a796b95fba8317d8692f8f92ec1601a2b449a1181b7b22d6e450b519e7eb",
+  "protocol_sha256": "47b8549d6067b4bc706dd2009cd71094ed7215abd2350bc6fb3b76ece40d63d4",
+  "original_audit_failure_sha256": "e90ba1c23ed832b6daea54c9a416cb8acab737beb5139ae2056fa9df2f4c9091",
+  "recovery_code_sha256": "cd8db791bb5b61d824ecdff905cdfd86ed4f2fee6c3505653264356049850833",
+  "private_build_proof_sha256": "b927bda1188979360e14d970ca389b1d746536a94c9fc4c7b41f34149f3666c6",
+  "audited_rollouts": 360,
+  "grader_commands_repeated": 15,
+  "matched_grading_workspaces": 60,
+  "reproduced_build_files": 15,
+  "model_generations": 0,
+  "final_test_opened": false
+}
