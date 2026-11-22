@@ -94,9 +94,9 @@ def sampled_generate(runtime, payload, options):
     return dict(result,first_action_sampling=options)
 
 
-def serve(args):
-    plan,design,_,_ = registered(args)
-    output = args.root/OUTPUT/'private/backend'
+def serve(args, *, inputs=None):
+    plan,design,_,_ = registered(args) if inputs is None else inputs
+    output = args.root/relative(plan['output'])/'private/backend'
     require(not output.exists() and not args.socket.exists(), 'Preserve the original backend evidence')
     output.mkdir(parents=True)
     files = plan['deployment_inputs']
@@ -130,14 +130,14 @@ def gpu_processes():
     return {int(pid) for pid in pids.split()}
 
 
-def collect(args):
-    plan,design,data,cases = registered(args)
-    root, out = args.root,args.root/OUTPUT
+def collect(args, *, inputs=None, entrypoint=None):
+    plan,design,data,cases = registered(args) if inputs is None else inputs
+    root, out = args.root,args.root/relative(plan['output'])
     collection = Path(plan['collection'])
     runner = Sandbox(read(collection/'private/task-runtime.json'))
     staged = list(schedule(plan['rows']))
     controller = out/'controller.json'
-    with single_writer(gpu_lock_path()), TemporaryDirectory(prefix='fork-045-') as sockets:
+    with single_writer(gpu_lock_path()), TemporaryDirectory(prefix='action-fork-') as sockets:
         require(not out.exists() and not gpu_processes(), 'New collection requires an unused directory and the idle GPU')
         (out/'private').mkdir(parents=True)
         start = time.time()
@@ -152,7 +152,8 @@ def collect(args):
         backend = None
         try:
             python = read(root/RUNTIME)['model_python']
-            options = [python,'-u',str(DIR/'run.py'),'serve','--root',str(root),'--plan',str(args.plan),
+            script = entrypoint if entrypoint is not None else DIR/'run.py'
+            options = [python,'-u',str(script),'serve','--root',str(root),'--plan',str(args.plan),
                        '--publication',str(args.publication),'--socket',str(socket)]
             with (out/'private/backend.log').open('xb') as log:
                 backend = subprocess.Popen(options,cwd=root,stdout=log,stderr=subprocess.STDOUT,
@@ -249,12 +250,12 @@ def compare_first(case, trajectories, scores, directories, tokenizer, profile, s
     return record,'matched_executed_contrast'
 
 
-def audit(args):
+def audit(args, *, inputs=None):
     import re
     from transformers import AutoTokenizer
 
-    plan,design,data,cases = registered(args)
-    root, out = args.root,args.root/OUTPUT
+    plan,design,data,cases = registered(args) if inputs is None else inputs
+    root, out = args.root,args.root/relative(plan['output'])
     target = out/'audit.json'
     controller = out/'controller.json'
     expected = list(schedule(plan['rows']))
