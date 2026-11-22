@@ -1,0 +1,58 @@
+{
+  "paired_states": 129,
+  "rollouts": 258,
+  "verified_requests": 1822,
+  "outcomes": {
+    "both": 97,
+    "neither": 16,
+    "sampled_only": 4,
+    "greedy_only": 12
+  },
+  "arms": {
+    "greedy": {
+      "completed_repairs": 109,
+      "never_edited": 11,
+      "generated_tokens": 62272,
+      "attempted_calls": 909
+    },
+    "sampled": {
+      "completed_repairs": 101,
+      "never_edited": 13,
+      "generated_tokens": 66395,
+      "attempted_calls": 913
+    }
+  },
+  "contrast_counts": {
+    "same_outcome": 113,
+    "matched_executed_contrast": 16
+  },
+  "qualified_pairs": 16,
+  "wall_seconds": 12267.037801742554,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "audited_blocks": 6,
+  "hardware": {
+    "utilization_percent": {
+      "mean": 49.46084089035449,
+      "maximum": 100.0
+    },
+    "power_w": {
+      "mean": 280.18874690849134,
+      "maximum": 549.35
+    },
+    "memory_used_mib": {
+      "mean": 57422.47155812036,
+      "maximum": 63353.0
+    },
+    "temperature_c": {
+      "mean": 50.72217642209398,
+      "maximum": 63.0
+    },
+    "samples": 2426,
+    "sampling_errors": 0,
+    "maximum_gap_seconds": 5.278435945510864,
+    "sampled_gpu_energy_kwh": 0.9511089372247589,
+    "active_pipeline_seconds": 12219.222309589386,
+    "covered_sampling_seconds": 12207.171382188797
+  }
+}
