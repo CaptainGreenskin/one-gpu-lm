@@ -193,7 +193,7 @@ def render(directory, registration):
                     and all(type(metric) in (int, float) and math.isfinite(metric) for metric in row.values())
                     for index, row in enumerate(rows, 1)), 'Public measurements differ from the registered training')
     with (directory / 'updates.csv').open('w', encoding='utf-8', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=UPDATE_FIELDS)
+        writer = csv.DictWriter(stream, fieldnames=UPDATE_FIELDS, lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     figure(directory / 'training.png', rows)
