@@ -29,6 +29,8 @@
 
 051 用这 243 个动作从固定的 27B 底座训练秩 8 LoRA，完整执行 31 次更新，通过保存后重载和参数审计。独立开发对照已冻结 6 个新家族，每家族 10 道题，各做三轮配对。 [训练曲线与硬件测量](../experiments/051-repair-closure-sft/results/2026-11-23-training/) · [051 开发登记](../experiments/051-repair-closure-sft/development-registration.json)
 
+051 开发对照完成 360 次评测，底座修对并提交 35／180，LoRA 为 44／180。净增 5.0 个百分点，配对区间下界为 −6.11 个百分点，单家族最大退步 13.33 个百分点。051 未达到开发门槛，最终测试仍封存。 [051 开发结果与曲线](../experiments/051-repair-closure-sft/results/2026-11-24-development/)
+
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
 [发布打包入口](../experiments/039-release-development/release_package.py)重算已经回放审计的最终配对分数，核对同一适配器的分发审查、许可原文和两次独立重载。全部门槛通过后，才在新目录生成 `payload/` 和 `release-evidence.json`。前者包含两份适配器文件、带聚合结果和加载示例的模型卡，以及核验过的许可材料。后者保留在本地，记录逐文件大小与 SHA-256。发布后用实际 ModelScope 提交号补全下载校验回执。
