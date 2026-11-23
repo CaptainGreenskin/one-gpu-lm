@@ -10,9 +10,9 @@ from one_gpu_lm.common.runstate import atomic_json
 from one_gpu_lm.models.adapter_bundle import FILES, restore_adapter
 from one_gpu_lm.models.modelscope_readback import file_path, model_endpoint, validate_files
 from one_gpu_lm.models.release_lineage import reviewed_training
-from one_gpu_lm.verified.decision_training_data import SECRET_PATTERNS
 from one_gpu_lm.verified.reload_probe import compare
 
+import final_audit
 from final_audit import require
 from final_campaign import ARMS, FINAL, promotion_from_finished_run
 from promotion import REFERENCE, read, release_decision
@@ -26,6 +26,7 @@ PROFILE_KEY = 'experiments/022-action-repair/profile-action.json'
 BASE_MANIFEST = 'experiments/011-coding-model-selection/weights-manifest.json'
 TRAINING = REFERENCE.parent/'031-correction-mix'
 BASE_LICENSE = 'BASE-MODEL-LICENSE.txt'
+TRAINING_SCAN_KEYS = {'private_key', 'github_token', 'aws_key_id', 'service_token'}
 
 
 def audited_scores(out, permission):
@@ -41,7 +42,7 @@ def audited_scores(out, permission):
             and audit['controller_sha256'] == sha256(control)
             and audit['promotion_sha256'] == sha256(promotion_path)
             and audit['adapter_files_sha256'] == permission['checkpoint_sha256']
-            and audit['audit_source_sha256'] == sha256(Path(__file__).with_name('final_audit.py')),
+            and audit['audit_source_sha256'] == sha256(Path(final_audit.__file__)),
             'Require completed final replay for the approved development checkpoint')
 
     inventory = read(REFERENCE/'results/2026-11-12/task-inventory.json')
@@ -118,7 +119,7 @@ def training_scan(review, readback, review_hash):
             and readback.get('training_integrity_sha256') == review['training_integrity_sha256']
             and scan.get('training_data_sha256') == review['actual_training_data_sha256']
             and scan.get('records') == sum(source['used_records'] for source in review['sources'].values()) > 0
-            and set(scan.get('known_pattern_findings', {})) == set(SECRET_PATTERNS),
+            and set(scan.get('known_pattern_findings', {})) == TRAINING_SCAN_KEYS,
             'Require a complete sensitive-content scan of the exact audited training data')
     return scan['known_pattern_findings']
 

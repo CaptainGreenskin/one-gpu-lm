@@ -520,7 +520,7 @@ class ModelScopePromotionTests(unittest.TestCase):
                 {'revision':rev, 'notices':{'LICENSE':expected[path]}} for rev,path in zip(revisions,paths)]}}})
         permission = dict(base, checkpoint_sha256=weights, candidate_review_sha256=sha256(review))
         scan = {'records':5, 'training_data_sha256':data_sha,
-                'known_pattern_findings':dict.fromkeys(release_package.SECRET_PATTERNS, 0)}
+                'known_pattern_findings':dict.fromkeys(release_package.TRAINING_SCAN_KEYS, 0)}
         readback = dict(base, source_revisions={repo:revisions}, candidate_review_sha256=sha256(review),
                         training_integrity_sha256=training_sha, training_input_scan=scan,
                         notices={name:{'source_sha256':digest,'byte_equal':True} for name,digest in expected.items()})
