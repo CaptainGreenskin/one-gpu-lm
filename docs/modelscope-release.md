@@ -25,6 +25,8 @@
 
 050 实际重放 59 条经审查的历史修复。39 条保留完整的改码、回归和提交示范，合计 160 个训练动作。5 条是必要多文件修复，低于 6 条门槛。20 条在动作规划时遇到单个补丁片段超过 512 token 上限。 [050 首轮结果和曲线](../experiments/050-verified-repair-closure/results/2026-11-23/)
 
+050 补充轮按原预算重放这 20 条，新增 15 条合格示范。合并后有 54 条示范和 243 个训练动作，其中 8 条是必要多文件修复，达到数据准入门槛。 [050 补充轮结果和曲线](../experiments/050-verified-repair-closure/results/2026-11-23-supplement/)
+
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
 [发布打包入口](../experiments/039-release-development/release_package.py)重算已经回放审计的最终配对分数，核对同一适配器的分发审查、许可原文和两次独立重载。全部门槛通过后，才在新目录生成 `payload/` 和 `release-evidence.json`。前者包含两份适配器文件、带聚合结果和加载示例的模型卡，以及核验过的许可材料。后者保留在本地，记录逐文件大小与 SHA-256。发布后用实际 ModelScope 提交号补全下载校验回执。

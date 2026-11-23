@@ -16,7 +16,7 @@ FAILURES = {'regression_not_reproduced', 'opening_source_identity', 'opening_cha
             'missing_verified_reference_submission', 'protected_grade_failed',
             'audit_actor_budget', 'audit_tool_or_encoding_mismatch', 'audit_submission_or_export_mismatch'}
 FAILURES.update('tool_failed_' + kind for kind in (*TARGETS, 'focused_inspection', 'partial_repair_regression'))
-FAILURES.add('reference_hunk_over_budget')
+FAILURES.update(('reference_hunk_over_budget', 'reference_line_over_budget'))
 
 
 def read(path):
@@ -48,10 +48,17 @@ def measurements(status, status_sha256, registration, diagnosis=None):
         cases.append({key: row[key] for key in ('case', 'family', 'multifile', 'qualified', 'actor_calls',
                                                 'target_counts', 'target_tokens', 'replay_seconds')}
                      | {'failure': failure})
-    return {'protocol_sha256': status['protocol_sha256'], 'status_sha256': status_sha256,
-            'start': status['started_epoch'], 'end': status['finished_epoch'], 'cases': cases,
-            'total_targets': status['export_rows'], 'gate_passed': status['data_gate_passed'],
-            'model_generations': 0, 'optimizer_updates': 0, 'final_test_opened': False}
+    value = {'protocol_sha256': status['protocol_sha256'], 'status_sha256': status_sha256,
+             'start': status['started_epoch'], 'end': status['finished_epoch'], 'cases': cases,
+             'total_targets': status['export_rows'], 'gate_passed': status['data_gate_passed'],
+             'model_generations': 0, 'optimizer_updates': 0, 'final_test_opened': False}
+    if 'retained_episodes' in registration:
+        keys = ('retained_episodes', 'rerun_episodes')
+        if (any(status[key] != registration[key] for key in keys)
+                or status['previous_status_sha256'] != registration['first_status_sha256']):
+            raise ValueError('Supplement carryover differs from the published registration')
+        value.update({key: status[key] for key in keys})
+    return value
 
 
 def analyze(value, design):
@@ -89,11 +96,17 @@ def analyze(value, design):
     checks = {key: count >= gate['minimum_' + key] for key, count in coverage.items()}
     if sum(target_counts.values()) != value['total_targets'] or all(checks.values()) != value['gate_passed']:
         raise ValueError('Collection decision or export accounting differs')
-    return {'cases': len(rows), 'qualified': coverage, 'targets_by_kind': dict(target_counts),
-            'targets': value['total_targets'], 'supervised_tokens': sum(row['target_tokens'] for row in qualified),
-            'failures': dict(Counter(row['failure'] for row in rows if row['failure'])),
-            'seconds': value['end'] - value['start'], 'gate_checks': checks, 'data_gate_passed': all(checks.values()),
-            'model_generations': 0, 'optimizer_updates': 0, 'final_test_opened': False}, curves
+    summary = {'cases': len(rows), 'qualified': coverage, 'targets_by_kind': dict(target_counts),
+               'targets': value['total_targets'], 'supervised_tokens': sum(row['target_tokens'] for row in qualified),
+               'failures': dict(Counter(row['failure'] for row in rows if row['failure'])),
+               'seconds': value['end'] - value['start'], 'gate_checks': checks, 'data_gate_passed': all(checks.values()),
+               'model_generations': 0, 'optimizer_updates': 0, 'final_test_opened': False}
+    if 'retained_episodes' in value:
+        retained, rerun = value['retained_episodes'], value['rerun_episodes']
+        if retained + rerun != len(rows) or not 0 <= retained <= len(qualified):
+            raise ValueError('Supplement case accounting differs')
+        summary.update(retained_episodes=retained, rerun_episodes=rerun, newly_qualified=len(qualified) - retained)
+    return summary, curves
 
 
 def plot(path, curves):
@@ -117,7 +130,8 @@ def plot(path, curves):
 
 
 def render(out, value, design, registration):
-    if value['protocol_sha256'] != registration['protocol_sha256']:
+    if (value['protocol_sha256'] != registration['protocol_sha256']
+            or any(value.get(key) != registration.get(key) for key in ('retained_episodes', 'rerun_episodes'))):
         raise ValueError('Replay protocol does not match the public registration')
     summary, curves = analyze(value, design)
     out.mkdir(parents=True, exist_ok=True)
@@ -132,8 +146,13 @@ def render(out, value, design, registration):
     start, end = (datetime.fromtimestamp(value[key], zone) for key in ('start', 'end'))
     keep = summary['qualified']
     gate = '通过' if summary['data_gate_passed'] else '未通过'
-    lines = ['# 050 · 历史修复示范重放结果', '',
-             f'共重放 **{summary["cases"]}** 条，**{keep["episodes"]}** 条通过回归、提交、独立评分和输入重建。'
+    supplement = 'rerun_episodes' in summary
+    label = '补充重放结果' if supplement else '重放结果'
+    scope = (f'保留首轮 {summary["retained_episodes"]} 条示范，重放 {summary["rerun_episodes"]} 条，'
+             f'新增 **{summary["newly_qualified"]}** 条。两轮合计 ' if supplement else
+             f'共重放 **{summary["cases"]}** 条，')
+    lines = [f'# 050 · 历史修复示范{label}', '',
+             scope + f'**{keep["episodes"]}** 条通过回归、提交、独立评分和输入重建。'
              f'合格示范覆盖 {keep["families"]} 个家族，其中 {keep["multifile_episodes"]} 条来自 '
              f'{keep["multifile_families"]} 个家族的必要多文件修复。数据门槛**{gate}**。', '',
              f'共保留 **{summary["targets"]}** 个动作和 **{summary["supervised_tokens"]:,}** 个受监督 token。'
@@ -159,9 +178,11 @@ if __name__ == '__main__':
     parser.add_argument('source', type=Path)
     parser.add_argument('out', type=Path)
     parser.add_argument('--diagnosis', type=Path)
+    parser.add_argument('--supplement', action='store_true')
     args = parser.parse_args()
     directory = Path(__file__).resolve().parent
-    design, registration = (read(directory / name) for name in ('design.json', 'registration.json'))
+    registration_file = 'supplement-registration.json' if args.supplement else 'registration.json'
+    design, registration = (read(directory / name) for name in ('design.json', registration_file))
     value = read(args.source)
     if 'status' in value:
         value = measurements(value['status'], value['status_sha256'], registration,
