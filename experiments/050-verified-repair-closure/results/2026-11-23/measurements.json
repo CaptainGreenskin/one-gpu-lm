@@ -1,0 +1,818 @@
+{
+  "protocol_sha256": "349e475c1047ae522993e05fc21634771b58feaf9a6a3ec6218a70016753fffb",
+  "status_sha256": "779289621321d250e6df687fb81438cbc3586bdadbb7349491dd6be5337cb5df",
+  "start": 1795414012.951472,
+  "end": 1795414327.2909985,
+  "cases": [
+    {
+      "case": 1,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 759,
+      "replay_seconds": 6.339016870013438,
+      "failure": null
+    },
+    {
+      "case": 2,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 0.9983064100088086,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 3,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 0.9310896690003574,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 4,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1004,
+      "replay_seconds": 3.767685689002974,
+      "failure": null
+    },
+    {
+      "case": 5,
+      "family": 1,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 9,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2157,
+      "replay_seconds": 10.018226454005344,
+      "failure": null
+    },
+    {
+      "case": 6,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 734,
+      "replay_seconds": 6.293375688022934,
+      "failure": null
+    },
+    {
+      "case": 7,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.18614069497562,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 8,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 904,
+      "replay_seconds": 9.09473276900826,
+      "failure": null
+    },
+    {
+      "case": 9,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1466,
+      "replay_seconds": 11.226866965007503,
+      "failure": null
+    },
+    {
+      "case": 10,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 3.419041296991054,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 11,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 526,
+      "replay_seconds": 9.30309085600311,
+      "failure": null
+    },
+    {
+      "case": 12,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 386,
+      "replay_seconds": 8.531345847004559,
+      "failure": null
+    },
+    {
+      "case": 13,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 3.266117455990752,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 14,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.8498939770215657,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 15,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.8922797680133954,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 16,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1492,
+      "replay_seconds": 10.287214211013634,
+      "failure": null
+    },
+    {
+      "case": 17,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1021,
+      "replay_seconds": 9.955290446989238,
+      "failure": null
+    },
+    {
+      "case": 18,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 531,
+      "replay_seconds": 8.73074936599005,
+      "failure": null
+    },
+    {
+      "case": 19,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.787341582996305,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 20,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 3.0837288970069494,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 21,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.754702564008767,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 22,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.7314997669891454,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 23,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.98305499900016,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 24,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2054,
+      "replay_seconds": 10.472317379986634,
+      "failure": null
+    },
+    {
+      "case": 25,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1362,
+      "replay_seconds": 9.810954578017117,
+      "failure": null
+    },
+    {
+      "case": 26,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 426,
+      "replay_seconds": 8.243301455979235,
+      "failure": null
+    },
+    {
+      "case": 27,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 542,
+      "replay_seconds": 8.729485914023826,
+      "failure": null
+    },
+    {
+      "case": 28,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 832,
+      "replay_seconds": 8.730358753993642,
+      "failure": null
+    },
+    {
+      "case": 29,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1359,
+      "replay_seconds": 9.452108498982852,
+      "failure": null
+    },
+    {
+      "case": 30,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 417,
+      "replay_seconds": 8.308379900001455,
+      "failure": null
+    },
+    {
+      "case": 31,
+      "family": 1,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.5978175420023035,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 32,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.9525063499750104,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 33,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 534,
+      "replay_seconds": 7.97223648900399,
+      "failure": null
+    },
+    {
+      "case": 34,
+      "family": 1,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 690,
+      "replay_seconds": 11.1321802129969,
+      "failure": null
+    },
+    {
+      "case": 35,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 338,
+      "replay_seconds": 8.00130861697835,
+      "failure": null
+    },
+    {
+      "case": 36,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 292,
+      "replay_seconds": 7.585706153011415,
+      "failure": null
+    },
+    {
+      "case": 37,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2202,
+      "replay_seconds": 9.045855582022341,
+      "failure": null
+    },
+    {
+      "case": 38,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 330,
+      "replay_seconds": 7.662902882002527,
+      "failure": null
+    },
+    {
+      "case": 39,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 540,
+      "replay_seconds": 7.766344237985322,
+      "failure": null
+    },
+    {
+      "case": 40,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 326,
+      "replay_seconds": 7.632426216005115,
+      "failure": null
+    },
+    {
+      "case": 41,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 404,
+      "replay_seconds": 1.4863614470232278,
+      "failure": null
+    },
+    {
+      "case": 42,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 404,
+      "replay_seconds": 1.4962008750007953,
+      "failure": null
+    },
+    {
+      "case": 43,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 305,
+      "replay_seconds": 1.7421741120051593,
+      "failure": null
+    },
+    {
+      "case": 44,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1626,
+      "replay_seconds": 5.1058723329915665,
+      "failure": null
+    },
+    {
+      "case": 45,
+      "family": 3,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 902,
+      "replay_seconds": 2.248085117986193,
+      "failure": null
+    },
+    {
+      "case": 46,
+      "family": 3,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 0.3447918820020277,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 47,
+      "family": 3,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 0.4701868830015883,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 48,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 581,
+      "replay_seconds": 1.6072507459903136,
+      "failure": null
+    },
+    {
+      "case": 49,
+      "family": 3,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 0.4883144369814545,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 50,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 391,
+      "replay_seconds": 4.213674227008596,
+      "failure": null
+    },
+    {
+      "case": 51,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 327,
+      "replay_seconds": 4.208308655011933,
+      "failure": null
+    },
+    {
+      "case": 52,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 321,
+      "replay_seconds": 4.167550305020995,
+      "failure": null
+    },
+    {
+      "case": 53,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 372,
+      "replay_seconds": 3.8382356890069786,
+      "failure": null
+    },
+    {
+      "case": 54,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 11,
+      "target_counts": {
+        "reference_edit": 8,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 3173,
+      "replay_seconds": 6.509267426998122,
+      "failure": null
+    },
+    {
+      "case": 55,
+      "family": 4,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1073,
+      "replay_seconds": 5.5619394450041,
+      "failure": null
+    },
+    {
+      "case": 56,
+      "family": 4,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 1.1363712759921327,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 57,
+      "family": 2,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 839,
+      "replay_seconds": 5.2585107639897615,
+      "failure": null
+    },
+    {
+      "case": 58,
+      "family": 2,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 1.1480987029790413,
+      "failure": "reference_hunk_over_budget"
+    },
+    {
+      "case": 59,
+      "family": 2,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.6468188999861013,
+      "failure": "reference_hunk_over_budget"
+    }
+  ],
+  "total_targets": 160,
+  "gate_passed": false,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}
