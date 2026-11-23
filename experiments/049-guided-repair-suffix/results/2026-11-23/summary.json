@@ -1,0 +1,47 @@
+{
+  "paired_states": 13,
+  "physical_rollouts": 26,
+  "verified_requests": 156,
+  "arms": {
+    "control": {
+      "attempted_calls": 78,
+      "input_tokens": 286719,
+      "generated_tokens": 7597,
+      "invalid_actions": 0,
+      "actor_seconds": 682.5679841319507,
+      "completed_repairs": 0,
+      "independently_correct": 0,
+      "no_edit": 13
+    },
+    "guided": {
+      "attempted_calls": 78,
+      "input_tokens": 286725,
+      "generated_tokens": 7357,
+      "invalid_actions": 0,
+      "actor_seconds": 667.019727982959,
+      "completed_repairs": 0,
+      "independently_correct": 2,
+      "no_edit": 11
+    }
+  },
+  "outcomes": {
+    "neither": 13
+  },
+  "net_paired_wins": 0,
+  "admissions": {
+    "same_outcome": 13
+  },
+  "qualified_episodes": 0,
+  "qualified_targets": 0,
+  "qualified_families": 0,
+  "collection_gate_checks": {
+    "qualified_episodes": false,
+    "qualified_families": false,
+    "net_paired_wins": false
+  },
+  "collection_gate_passed": false,
+  "pipeline_seconds": 1459.1315636634827,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

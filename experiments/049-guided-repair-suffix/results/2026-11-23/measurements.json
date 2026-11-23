@@ -1,0 +1,426 @@
+{
+  "protocol_sha256": "60af00438d3b6c10f78dcd4ee5ed1f27f02f7c890cc90776390f579a66b85d6d",
+  "controller_sha256": "084547ff19bce6e12ae05bbf9135ceeed19d6da3eacff3f4481a84e5a6bdd6a3",
+  "passed": true,
+  "pairs": [
+    {
+      "pair": 1,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 25646,
+          "generated_tokens": 1095,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 96.20224039899767
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 25551,
+          "generated_tokens": 742,
+          "first_edit_call": 3,
+          "independently_correct": true,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 66.26751368600526
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 23686,
+          "generated_tokens": 447,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 42.54948708700249
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 22702,
+          "generated_tokens": 359,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 34.61170993000269
+        }
+      }
+    },
+    {
+      "pair": 3,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 20385,
+          "generated_tokens": 761,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 65.37006539400318
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 20508,
+          "generated_tokens": 601,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 52.45359001500765
+        }
+      }
+    },
+    {
+      "pair": 4,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 26640,
+          "generated_tokens": 810,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 71.25337479199516
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 27456,
+          "generated_tokens": 1002,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 86.99182767697494
+        }
+      }
+    },
+    {
+      "pair": 5,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 18360,
+          "generated_tokens": 224,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 21.995903214992722
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 16530,
+          "generated_tokens": 272,
+          "first_edit_call": 4,
+          "independently_correct": true,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 25.436881995003205
+        }
+      }
+    },
+    {
+      "pair": 6,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 22833,
+          "generated_tokens": 256,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 25.366317556996364
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 23109,
+          "generated_tokens": 256,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 25.47941542600165
+        }
+      }
+    },
+    {
+      "pair": 7,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 20346,
+          "generated_tokens": 648,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 57.62297112197848
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 20622,
+          "generated_tokens": 648,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 59.22109989897581
+        }
+      }
+    },
+    {
+      "pair": 8,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 20190,
+          "generated_tokens": 291,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 27.562163074995624
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 19863,
+          "generated_tokens": 256,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 25.674889001005795
+        }
+      }
+    },
+    {
+      "pair": 9,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 24505,
+          "generated_tokens": 1117,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 97.29955574500491
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 24606,
+          "generated_tokens": 1170,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 99.88101731200004
+        }
+      }
+    },
+    {
+      "pair": 10,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 23147,
+          "generated_tokens": 386,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 37.2240005969943
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 23423,
+          "generated_tokens": 386,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 37.94528107097722
+        }
+      }
+    },
+    {
+      "pair": 11,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 23653,
+          "generated_tokens": 599,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 53.60744229197735
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 23776,
+          "generated_tokens": 604,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 54.863384708995
+        }
+      }
+    },
+    {
+      "pair": 12,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 14562,
+          "generated_tokens": 235,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 22.00215295801172
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 14833,
+          "generated_tokens": 238,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 22.537398537999252
+        }
+      }
+    },
+    {
+      "pair": 13,
+      "admission": "same_outcome",
+      "qualified_targets": 0,
+      "arms": {
+        "control": {
+          "attempted_calls": 6,
+          "input_tokens": 22766,
+          "generated_tokens": 728,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 64.51230989900068
+        },
+        "guided": {
+          "attempted_calls": 6,
+          "input_tokens": 23746,
+          "generated_tokens": 823,
+          "first_edit_call": null,
+          "independently_correct": false,
+          "verified_and_submitted": false,
+          "invalid_actions": 0,
+          "timeout_recovered": false,
+          "actor_seconds": 75.65571872401051
+        }
+      }
+    }
+  ],
+  "qualified_families": 0,
+  "verified_requests": 156,
+  "training_only": true,
+  "final_test_opened": false,
+  "optimizer_updates": 0,
+  "weights_public": false,
+  "audit_sha256": "0dfaebab558f468c9e9dba1429d889093431d974eb75923ffffab16111c286c7",
+  "registration_commit": "b3f660982571bd07e8acbd1b45f48dfc7f84351c",
+  "hardware": {
+    "samples": 290,
+    "collector": {
+      "samples": 290,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "interval_seconds": 5,
+    "first_to_last_seconds": 1457.6566820144653,
+    "maximum_gap_seconds": 5.068559169769287,
+    "pipeline_seconds": 1459.1315636634827,
+    "first_sample_delay_seconds": 0.06859207153320312,
+    "last_sample_to_finish_seconds": 1.4062895774841309,
+    "temperature_c": {
+      "mean": 49.751724137931035,
+      "maximum": 64.0
+    },
+    "power_w": {
+      "mean": 275.4222068965517,
+      "maximum": 494.29
+    },
+    "utilization_percent": {
+      "mean": 50.04827586206896,
+      "maximum": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 54391.40689655172,
+      "maximum": 57467.0
+    },
+    "sampled_gpu_energy_kwh": 0.11169538971846268,
+    "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity"
+  },
+  "started_epoch": 1795402404.363374,
+  "finished_epoch": 1795403863.4949377
+}
