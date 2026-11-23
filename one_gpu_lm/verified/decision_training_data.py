@@ -6,6 +6,7 @@ from pathlib import Path
 import json
 import re
 
+from one_gpu_lm.common.privacy import SECRET_PATTERNS, verify_private_labels
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.serving.receipt_client import payload_sha256, request_identity
 from one_gpu_lm.serving.request_journal import RequestJournal
@@ -18,12 +19,6 @@ from .recovery_sft_projection import collection_inputs
 from .tasks import relative, validate_source
 
 
-SECRET_PATTERNS = {
-    'private_key': re.compile(r'-----BEGIN (?:ENCRYPTED |RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----'),
-    'github_token': re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,})\b'),
-    'aws_key_id': re.compile(r'\b(?:AKIA|ASIA)[A-Z0-9]{16}\b'),
-    'service_token': re.compile(r'\b(?:sk-proj-[A-Za-z0-9_-]{30,}|sk-ant-[A-Za-z0-9_-]{30,}|hf_[A-Za-z0-9]{30,})\b'),
-}
 FORK_OUTPUT = 'runs/q045-first-action-forks'
 FORK_PATH = Path('experiments/045-first-action-forks')
 FORK_ARMS = ('greedy', 'sampled')
@@ -183,16 +178,6 @@ def verify_first_choices(out, plan, design, rows, records, choices):
                 raise ValueError('A preference label differs from the audited physical first action')
             seen.add(request_id)
     return len(seen)
-
-
-def verify_private_labels(records, private_identifiers):
-    """Record every checked pattern after the reviewed records pass the scan."""
-    for record in records:
-        text = json.dumps(record, ensure_ascii=False)
-        if (any(pattern.search(text) for pattern in SECRET_PATTERNS.values())
-                or any(value and value in text for value in private_identifiers)):
-            raise ValueError('The preference export matches a private identifier or credential pattern')
-    return dict.fromkeys(SECRET_PATTERNS, 0)
 
 
 def review_inputs(collection_root, protocol_path, protocol_sha256, audit_sha256, cohort_path, cohort_sha256,

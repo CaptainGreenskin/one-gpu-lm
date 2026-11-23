@@ -9,12 +9,12 @@ import runpy
 import sys
 
 from one_gpu_lm.common.actions import parse_action
+from one_gpu_lm.common.privacy import verify_private_labels
 from one_gpu_lm.common.receipts import sha256
 from one_gpu_lm.common.runstate import atomic_json, identity_digest
 from one_gpu_lm.common.training_encoding import encode_training_example
 from one_gpu_lm.models.release_lineage import audited_training
 from one_gpu_lm.verified import continuation_training as trainer
-from one_gpu_lm.verified.decision_training_data import verify_private_labels
 
 
 EXP = Path('experiments/052-grounded-first-edit')
