@@ -1,0 +1,44 @@
+{
+  "protocol_sha256": "7834d23acd2ea22d74e2239a0aeba9a72e66ecfc7eaa1f328b0b5173dbd8ab91",
+  "design_sha256": "83878cf45d2caab79a71ec3d6988e5fcbc3bfb5eb4f5e3e3ad0b8d91e510938f",
+  "collection_status_sha256": "801db7296e916e7c195bfca2b3d6c36731380dcccd47b4523f464cd127c7847f",
+  "schedule_sha256": "9d3239393bc6aa8a7ad372ffc118ecb392faf3b24b3b8b5d231e6548e40ebce3",
+  "order_sha256": "d4fd4191bd29f5f4f342714b3378b8c3780c7b39e36c5fcb1a72012024757866",
+  "source_review_sha256": "bae1909135cde7367c16276e8e7a0963bbf24ca7b31d5b5c3f79207056a56493",
+  "selection": {
+    "records": 287,
+    "episodes": 67,
+    "input_tokens": 730227,
+    "supervised_tokens": 58465,
+    "target_counts": {
+      "explicit_submission": 67,
+      "final_verification": 67,
+      "reference_edit": 153
+    },
+    "optimizer_updates": 36
+  },
+  "coverage": {
+    "episodes": 67,
+    "multifile_episodes": 10,
+    "families": 7,
+    "multifile_families": 4
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "source_sha256": {
+    "experiments/052-grounded-first-edit/design.json": "83878cf45d2caab79a71ec3d6988e5fcbc3bfb5eb4f5e3e3ad0b8d91e510938f",
+    "experiments/052-grounded-first-edit/collect.py": "0ab7ea75339609cbb19ce61eecc4ff1fb7edf028055f6487b57ea676d030015e",
+    "experiments/052-grounded-first-edit/collection-registration.json": "dc3ad5c0b3e4f54e6b0798b9e60dce54cae7c18ae4ec1a24762406cf41b5505b",
+    "experiments/052-grounded-first-edit/train.py": "264013f80262bdfc19a2abe2a0a0861ed77f1806d5434caf8b790a08b01fcb7d",
+    "one_gpu_lm/common/privacy.py": "713c2390fcdca73be90a92d314ddf5d9939b1e2639eb61ad3ecb651f2c96d18d",
+    "one_gpu_lm/verified/continuation_training.py": "b34a355431736a7d8ae8a9c7026239bf8f8d9e17d16708e77f3175d2d45db641",
+    "one_gpu_lm/verified/runtime_identity.py": "d98fa228a30a3f7dc013297f8a5610f39d7212396c2c46bc8a3e63230786e3e7",
+    "one_gpu_lm/verified/candidate_data.py": "ddc3a847412025b563e82ac3c1da586bfc24ad805f51e450d3b23bd5cc59a60a",
+    "one_gpu_lm/common/training_encoding.py": "d1b73171f7d6edfbbea5188c71a4d5bf6ada1807c1a5cda11a3fd96ca9c88113",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/models/adapter_bundle.py": "816511118bd481cc2c3edd1881497d2a9f8baee6a6c2085322d8b3bee28c93e8",
+    "one_gpu_lm/models/release_lineage.py": "58d3d170660bd7aa243d15639f8a1f0dc96410a160457459ae2c9b6de2712301",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450"
+  }
+}
