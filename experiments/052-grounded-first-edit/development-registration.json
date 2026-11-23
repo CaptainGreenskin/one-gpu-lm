@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "experiment": "052-grounded-first-edit",
+  "private_protocol_sha256": "b180125e8e5bb04883696446419176260805fac68a55d94990f75f2802e2c9f1",
+  "training_integrity_sha256": "c59ef577163a7ec9cbd0ff96cfd06ad2e379aa84e11b3cb686c11cd7cd606e8f",
+  "training_report": {
+    "path": "experiments/052-grounded-first-edit/results/2026-11-24-training/measurements.json",
+    "sha256": "6053e75ce7d5b0548e3d5920c88d8f0e4ed2e53d731cb3e18eeab7d46fb6a0ae",
+    "commit": "442316f907a07e1ba0b914a16c9de26ce64a4a9c"
+  },
+  "comparison_code_sha256": {
+    "experiments/039-release-development/candidate_comparison.py": "73e28ea11788fd44e795ce691493d8c339fb22b08d5b20692a4986f2355820d6",
+    "experiments/039-release-development/promotion.py": "2e7c19f39fbec3224cc9864b0338d8b40183402a30d5cd704afda4f6efce5a82",
+    "experiments/039-release-development/analysis.py": "e3580d393e6993d668d6aa2655b57853a947bf3487b041a521bbca7ee3b31412",
+    "experiments/039-release-development/design.json": "1d4f7cccf5ae27edea0065bbe4b70ded033c1dabbac17c80f3c902ca78e93c40",
+    "one_gpu_lm/verified/family_runtime.py": "954f735d6841f531f3294e7f1f895a6c69b7e30fe505e22586c39e412af6afa1",
+    "one_gpu_lm/verified/resilient_rollout.py": "8a18675086f1a07abe49addb40ff4f5e50a45c30f7663c789298b6b561935b23",
+    "one_gpu_lm/verified/historic_replay.py": "87fab2728b04a817229928758c029fc74864f3d3c9a8ef4463b3d44bbce38367"
+  },
+  "tasks_per_family": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "confirmed_multifile_tasks": 9,
+  "opening_preflight": {
+    "repeated_normalized_failure_text_matches": 43,
+    "max_selected_opening_tokens": 2600,
+    "first_transcript_shared_within_all_task_pairs": true
+  },
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "task_count": 60,
+  "language_counts": {
+    "python": 30,
+    "javascript": 30
+  },
+  "repetitions": 3,
+  "rollout_count": 360,
+  "block_size": 10,
+  "cohort_sha256": "12d89b429768756ea988a5d9c3c9035b0ecc278107f359a5af502c630b8053f8",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "opening_preflight_sha256": "14667b560a23ca5f14eb7a46a8e7d965665cd4596d28b645e0c8812bb5cd2bdf",
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "selected_opening": "original",
+  "source_context_audit_sha256": "f4e8899e191049e0772cbf349f4abc791c4d4c4daa19247bdb2d592b30e23ac6",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 39039,
+    "complete_audited_repetitions_required": true
+  },
+  "optimizer_updates_during_development": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed_by_development": false
+}
