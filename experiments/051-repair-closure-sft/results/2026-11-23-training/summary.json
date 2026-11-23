@@ -1,0 +1,52 @@
+{
+  "input_tokens": 673966,
+  "supervised_tokens": 55299,
+  "target_counts": {
+    "explicit_submission": 54,
+    "final_verification": 54,
+    "reference_edit": 135
+  },
+  "updates": 31,
+  "records": 243,
+  "episodes": 54,
+  "audit_passed": true,
+  "reload_generation_matches": true,
+  "trainable_parameters": 58363904,
+  "pipeline_seconds": 761.8789639472961,
+  "training_seconds": 636.2517130999768,
+  "peak_allocated_bytes": 81995465728,
+  "hardware": {
+    "samples": 151,
+    "collector": {
+      "samples": 151,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "interval_seconds": 5,
+    "first_to_last_seconds": 757.8974778652191,
+    "maximum_gap_seconds": 5.296424865722656,
+    "pipeline_seconds": 761.8789639472961,
+    "first_sample_delay_seconds": 0.06191229820251465,
+    "last_sample_to_finish_seconds": 3.9195737838745117,
+    "temperature_c": {
+      "mean": 54.205298013245034,
+      "maximum": 71.0
+    },
+    "power_w": {
+      "mean": 461.7085430463576,
+      "maximum": 554.85
+    },
+    "utilization_percent": {
+      "mean": 81.17880794701986,
+      "maximum": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 75781.92715231788,
+      "maximum": 94997.0
+    },
+    "sampled_gpu_energy_kwh": 0.0976662023662226,
+    "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity"
+  },
+  "final_test_opened": false,
+  "weights_public": false
+}
