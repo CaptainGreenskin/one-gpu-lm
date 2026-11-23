@@ -109,19 +109,19 @@ def analyze(value, design):
     return summary, curves
 
 
-def plot(path, curves):
+def plot(path, curves, *, experiment='050'):
     import matplotlib
 
     matplotlib.use('Agg')
     from matplotlib import pyplot as plt
 
-    matplotlib.rcParams['svg.hashsalt'] = '050-verified-repair-closure'
+    matplotlib.rcParams['svg.hashsalt'] = f'{experiment}-verified-repair-closure'
     fig, axis = plt.subplots(figsize=(7, 3.8), layout='constrained')
     for label, key, color in (('Verified repairs', 'qualified_episodes', '#2D6496'),
                               ('Verified multi-file repairs', 'multifile_episodes', '#B85034')):
         axis.step([row['cases_processed'] for row in curves], [row[key] for row in curves],
                   where='post', linewidth=2, label=label, color=color)
-    axis.set(xlabel='Replayed cases', ylabel='Cumulative demonstrations', title='050 CPU replay qualification')
+    axis.set(xlabel='Replayed cases', ylabel='Cumulative demonstrations', title=f'{experiment} CPU replay qualification')
     axis.grid(axis='y', alpha=.25)
     axis.legend(frameon=False)
     fig.savefig(path, metadata={'Date': None})
@@ -129,7 +129,7 @@ def plot(path, curves):
     path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines()) + '\n')
 
 
-def render(out, value, design, registration):
+def render(out, value, design, registration, *, experiment='050'):
     if (value['protocol_sha256'] != registration['protocol_sha256']
             or any(value.get(key) != registration.get(key) for key in ('retained_episodes', 'rerun_episodes'))):
         raise ValueError('Replay protocol does not match the public registration')
@@ -141,7 +141,7 @@ def render(out, value, design, registration):
         writer = csv.DictWriter(stream, fieldnames=curves[0], lineterminator='\n')
         writer.writeheader()
         writer.writerows(curves)
-    plot(out / 'replay-curve.svg', curves)
+    plot(out / 'replay-curve.svg', curves, experiment=experiment)
     zone = timezone(timedelta(hours=8))
     start, end = (datetime.fromtimestamp(value[key], zone) for key in ('start', 'end'))
     keep = summary['qualified']
@@ -151,7 +151,7 @@ def render(out, value, design, registration):
     scope = (f'保留首轮 {summary["retained_episodes"]} 条示范，重放 {summary["rerun_episodes"]} 条，'
              f'新增 **{summary["newly_qualified"]}** 条。两轮合计 ' if supplement else
              f'共重放 **{summary["cases"]}** 条，')
-    lines = [f'# 050 · 历史修复示范{label}', '',
+    lines = [f'# {experiment} · 历史修复示范{label}', '',
              scope + f'**{keep["episodes"]}** 条通过回归、提交、独立评分和输入重建。'
              f'合格示范覆盖 {keep["families"]} 个家族，其中 {keep["multifile_episodes"]} 条来自 '
              f'{keep["multifile_families"]} 个家族的必要多文件修复。数据门槛**{gate}**。', '',
