@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "collection_protocol_sha256": "a9807ad84798730e7ccf68b8c21d33a5b779c03932aa20150c0cc1007c19bb58",
+  "collector_code_sha256": "0ab7ea75339609cbb19ce61eecc4ff1fb7edf028055f6487b57ea676d030015e",
+  "training_pool_sha256": "d53b164e685876fd39b8bfaa19af9e9e962a02efdb543bbc3b48be5d398f0f20",
+  "previous_development_audit_sha256": "ef9cd9e71d35a092c534001c78f8004650ba383e669cc038555e3131b3b45b5b",
+  "paired_losses_reviewed": 6,
+  "no_edit_losses": 5,
+  "no_edit_losses_with_observed_editable_source": 5,
+  "registered_episodes": 79,
+  "registered_families": 7,
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "data_gate": {
+    "minimum_episodes": 32,
+    "minimum_multifile_episodes": 6,
+    "minimum_multifile_families": 2,
+    "minimum_families": 4
+  },
+  "training_only": true,
+  "development_examples_included": 0,
+  "final_test_opened": false
+}

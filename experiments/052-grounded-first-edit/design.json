@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment": "052-grounded-first-edit",
+  "previous_development_result_commit": "3029fef19cd82c6c18ee930275cadf5376e0200c",
+  "candidate_episodes": 79,
+  "candidate_families": 7,
+  "inspection": "show_the_original_source_required_by_the_first_recorded_edit",
+  "target_kinds": ["reference_edit", "final_verification", "explicit_submission"],
+  "data_gate": {
+    "minimum_episodes": 32,
+    "minimum_multifile_episodes": 6,
+    "minimum_multifile_families": 2,
+    "minimum_families": 4
+  },
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "training_only": true,
+  "final_test_opened": false,
+  "weights_public": false
+}
