@@ -1,0 +1,31 @@
+{
+  "cases": 79,
+  "qualified": {
+    "episodes": 67,
+    "families": 7,
+    "multifile_episodes": 10,
+    "multifile_families": 4
+  },
+  "targets_by_kind": {
+    "reference_edit": 153,
+    "final_verification": 67,
+    "explicit_submission": 67
+  },
+  "targets": 287,
+  "supervised_tokens": 58465,
+  "failures": {
+    "first_edit_anchor_not_in_original_source": 1,
+    "exact_first_edit_source_not_visible_in_model_feedback": 11
+  },
+  "seconds": 1398.521010875702,
+  "gate_checks": {
+    "episodes": true,
+    "families": true,
+    "multifile_episodes": true,
+    "multifile_families": true
+  },
+  "data_gate_passed": true,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}

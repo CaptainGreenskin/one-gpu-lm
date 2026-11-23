@@ -1,0 +1,1150 @@
+{
+  "protocol_sha256": "a9807ad84798730e7ccf68b8c21d33a5b779c03932aa20150c0cc1007c19bb58",
+  "status_sha256": "801db7296e916e7c195bfca2b3d6c36731380dcccd47b4523f464cd127c7847f",
+  "start": 1795466135.240473,
+  "end": 1795467533.761484,
+  "cases": [
+    {
+      "case": 1,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 759,
+      "replay_seconds": 6.3972706549975555,
+      "failure": null
+    },
+    {
+      "case": 2,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1004,
+      "replay_seconds": 3.709726214001421,
+      "failure": null
+    },
+    {
+      "case": 3,
+      "family": 1,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 9,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2157,
+      "replay_seconds": 10.010475944989594,
+      "failure": null
+    },
+    {
+      "case": 4,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 2.0343112100090366,
+      "failure": "first_edit_anchor_not_in_original_source"
+    },
+    {
+      "case": 5,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 904,
+      "replay_seconds": 9.231765164993703,
+      "failure": null
+    },
+    {
+      "case": 6,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 7.739035410020733,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 7,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 526,
+      "replay_seconds": 9.154539220005972,
+      "failure": null
+    },
+    {
+      "case": 8,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 5.798259055009112,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 9,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1492,
+      "replay_seconds": 10.596515335026197,
+      "failure": null
+    },
+    {
+      "case": 10,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 6.6503075170039665,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 11,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 531,
+      "replay_seconds": 8.4979355079995,
+      "failure": null
+    },
+    {
+      "case": 12,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2054,
+      "replay_seconds": 10.347450511995703,
+      "failure": null
+    },
+    {
+      "case": 13,
+      "family": 1,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 6.6925434520235285,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 14,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 426,
+      "replay_seconds": 8.363620895019267,
+      "failure": null
+    },
+    {
+      "case": 15,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 542,
+      "replay_seconds": 8.814803885004949,
+      "failure": null
+    },
+    {
+      "case": 16,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 832,
+      "replay_seconds": 8.93798984499881,
+      "failure": null
+    },
+    {
+      "case": 17,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1359,
+      "replay_seconds": 9.130880360025913,
+      "failure": null
+    },
+    {
+      "case": 18,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 417,
+      "replay_seconds": 8.31166655101697,
+      "failure": null
+    },
+    {
+      "case": 19,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 534,
+      "replay_seconds": 8.093683110986603,
+      "failure": null
+    },
+    {
+      "case": 20,
+      "family": 1,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 8.56909600898507,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 21,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 338,
+      "replay_seconds": 8.104894650023198,
+      "failure": null
+    },
+    {
+      "case": 22,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 292,
+      "replay_seconds": 7.602768965996802,
+      "failure": null
+    },
+    {
+      "case": 23,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2202,
+      "replay_seconds": 9.190935250982875,
+      "failure": null
+    },
+    {
+      "case": 24,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 330,
+      "replay_seconds": 7.670322516001761,
+      "failure": null
+    },
+    {
+      "case": 25,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 540,
+      "replay_seconds": 7.903743121016305,
+      "failure": null
+    },
+    {
+      "case": 26,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 326,
+      "replay_seconds": 7.664723119989503,
+      "failure": null
+    },
+    {
+      "case": 27,
+      "family": 4,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 1.1512070010066964,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 28,
+      "family": 4,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 1.157897438009968,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 29,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 305,
+      "replay_seconds": 1.758560837013647,
+      "failure": null
+    },
+    {
+      "case": 30,
+      "family": 4,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 3.4289539640012663,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 31,
+      "family": 4,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 902,
+      "replay_seconds": 2.29707613599021,
+      "failure": null
+    },
+    {
+      "case": 32,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 581,
+      "replay_seconds": 1.7264444539905526,
+      "failure": null
+    },
+    {
+      "case": 33,
+      "family": 4,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 3.052651268983027,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 34,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 327,
+      "replay_seconds": 4.258280914014904,
+      "failure": null
+    },
+    {
+      "case": 35,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 321,
+      "replay_seconds": 4.235095095005818,
+      "failure": null
+    },
+    {
+      "case": 36,
+      "family": 7,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 372,
+      "replay_seconds": 3.798128556984011,
+      "failure": null
+    },
+    {
+      "case": 37,
+      "family": 7,
+      "multifile": false,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 4.981759765010793,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 38,
+      "family": 7,
+      "multifile": true,
+      "qualified": false,
+      "actor_calls": 0,
+      "target_counts": {},
+      "target_tokens": 0,
+      "replay_seconds": 4.353033974999562,
+      "failure": "exact_first_edit_source_not_visible_in_model_feedback"
+    },
+    {
+      "case": 39,
+      "family": 3,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 839,
+      "replay_seconds": 5.310502292995807,
+      "failure": null
+    },
+    {
+      "case": 40,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1319,
+      "replay_seconds": 4.210556162986904,
+      "failure": null
+    },
+    {
+      "case": 41,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 576,
+      "replay_seconds": 3.5678133410110604,
+      "failure": null
+    },
+    {
+      "case": 42,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1077,
+      "replay_seconds": 10.300457610981539,
+      "failure": null
+    },
+    {
+      "case": 43,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 291,
+      "replay_seconds": 9.122000995994313,
+      "failure": null
+    },
+    {
+      "case": 44,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 290,
+      "replay_seconds": 9.187826007982949,
+      "failure": null
+    },
+    {
+      "case": 45,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1397,
+      "replay_seconds": 9.656713299016701,
+      "failure": null
+    },
+    {
+      "case": 46,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 354,
+      "replay_seconds": 8.391971608012682,
+      "failure": null
+    },
+    {
+      "case": 47,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 539,
+      "replay_seconds": 9.30673292602296,
+      "failure": null
+    },
+    {
+      "case": 48,
+      "family": 1,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 9,
+      "target_counts": {
+        "reference_edit": 5,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1987,
+      "replay_seconds": 12.956946328020422,
+      "failure": null
+    },
+    {
+      "case": 49,
+      "family": 1,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1472,
+      "replay_seconds": 9.165195639012381,
+      "failure": null
+    },
+    {
+      "case": 50,
+      "family": 4,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 7,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1673,
+      "replay_seconds": 2.9753255599935073,
+      "failure": null
+    },
+    {
+      "case": 51,
+      "family": 4,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 12,
+      "target_counts": {
+        "reference_edit": 8,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 3061,
+      "replay_seconds": 4.379022317007184,
+      "failure": null
+    },
+    {
+      "case": 52,
+      "family": 7,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1563,
+      "replay_seconds": 4.95118135001394,
+      "failure": null
+    },
+    {
+      "case": 53,
+      "family": 3,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 11,
+      "target_counts": {
+        "reference_edit": 7,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 2679,
+      "replay_seconds": 7.508820342016406,
+      "failure": null
+    },
+    {
+      "case": 54,
+      "family": 3,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 10,
+      "target_counts": {
+        "reference_edit": 7,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 3079,
+      "replay_seconds": 6.965346668002894,
+      "failure": null
+    },
+    {
+      "case": 55,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 972,
+      "replay_seconds": 145.33564681501593,
+      "failure": null
+    },
+    {
+      "case": 56,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 469,
+      "replay_seconds": 139.12639433098957,
+      "failure": null
+    },
+    {
+      "case": 57,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 644,
+      "replay_seconds": 74.29610238701571,
+      "failure": null
+    },
+    {
+      "case": 58,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 485,
+      "replay_seconds": 73.43900913200923,
+      "failure": null
+    },
+    {
+      "case": 59,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 347,
+      "replay_seconds": 151.45136781298788,
+      "failure": null
+    },
+    {
+      "case": 60,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 503,
+      "replay_seconds": 149.1083220979781,
+      "failure": null
+    },
+    {
+      "case": 61,
+      "family": 5,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 550,
+      "replay_seconds": 145.84019279200584,
+      "failure": null
+    },
+    {
+      "case": 62,
+      "family": 6,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 838,
+      "replay_seconds": 4.7221202139917295,
+      "failure": null
+    },
+    {
+      "case": 63,
+      "family": 6,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 270,
+      "replay_seconds": 4.124087970994879,
+      "failure": null
+    },
+    {
+      "case": 64,
+      "family": 6,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 537,
+      "replay_seconds": 4.220922185020754,
+      "failure": null
+    },
+    {
+      "case": 65,
+      "family": 6,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 354,
+      "replay_seconds": 3.9346994740189984,
+      "failure": null
+    },
+    {
+      "case": 66,
+      "family": 6,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 4,
+      "target_counts": {
+        "reference_edit": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 284,
+      "replay_seconds": 3.832660851010587,
+      "failure": null
+    },
+    {
+      "case": 67,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 3,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1000,
+      "replay_seconds": 4.663612644013483,
+      "failure": null
+    },
+    {
+      "case": 68,
+      "family": 2,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1628,
+      "replay_seconds": 5.742483984009596,
+      "failure": null
+    },
+    {
+      "case": 69,
+      "family": 2,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 8,
+      "target_counts": {
+        "reference_edit": 4,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 1114,
+      "replay_seconds": 5.796511408989318,
+      "failure": null
+    },
+    {
+      "case": 70,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 551,
+      "replay_seconds": 4.0076127240026835,
+      "failure": null
+    },
+    {
+      "case": 71,
+      "family": 2,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 559,
+      "replay_seconds": 5.069123021006817,
+      "failure": null
+    },
+    {
+      "case": 72,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 517,
+      "replay_seconds": 4.762024743977236,
+      "failure": null
+    },
+    {
+      "case": 73,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 740,
+      "replay_seconds": 3.9379672729992308,
+      "failure": null
+    },
+    {
+      "case": 74,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 644,
+      "replay_seconds": 4.013428589998512,
+      "failure": null
+    },
+    {
+      "case": 75,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 668,
+      "replay_seconds": 3.723349589999998,
+      "failure": null
+    },
+    {
+      "case": 76,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 547,
+      "replay_seconds": 3.749155414989218,
+      "failure": null
+    },
+    {
+      "case": 77,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 551,
+      "replay_seconds": 3.8914127649914008,
+      "failure": null
+    },
+    {
+      "case": 78,
+      "family": 2,
+      "multifile": false,
+      "qualified": true,
+      "actor_calls": 5,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 587,
+      "replay_seconds": 3.6551741510047577,
+      "failure": null
+    },
+    {
+      "case": 79,
+      "family": 2,
+      "multifile": true,
+      "qualified": true,
+      "actor_calls": 6,
+      "target_counts": {
+        "reference_edit": 2,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "target_tokens": 537,
+      "replay_seconds": 4.540947840985609,
+      "failure": null
+    }
+  ],
+  "total_targets": 287,
+  "gate_passed": true,
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false
+}
