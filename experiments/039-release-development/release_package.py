@@ -10,6 +10,7 @@ from one_gpu_lm.common.runstate import atomic_json
 from one_gpu_lm.models.adapter_bundle import FILES, restore_adapter
 from one_gpu_lm.models.modelscope_readback import file_path, model_endpoint, validate_files
 from one_gpu_lm.models.release_lineage import reviewed_training
+from one_gpu_lm.verified.decision_training_data import SECRET_PATTERNS
 from one_gpu_lm.verified.reload_probe import compare
 
 from final_audit import require
@@ -86,25 +87,62 @@ def audited_scores(out, permission):
     return pairs,checks,table
 
 
+def training_notices(sources):
+    """Keep each notice with the upstream revision that supplied the training records."""
+    revisions, notices = {}, {}
+    for repo, source in sources.items():
+        folder = f'training-source-notices/{repo.replace("/", "--")}'
+        if 'revisions' in source:
+            by_revision = {row['revision']: row['notices'] for row in source['revisions']}
+            require(by_revision and len(by_revision) == len(source['revisions'])
+                    and all(re.fullmatch(r'[0-9a-f]{40}', key) and value for key, value in by_revision.items()),
+                    'Require distinct pinned training-source revisions with notices')
+            revisions[repo] = sorted(by_revision)
+            entries = [(f'{folder}/{revision}', by_revision[revision]) for revision in revisions[repo]]
+        else:
+            revisions[repo] = source.get('revision')
+            entries = [(folder, source['notices'])]
+        for prefix, files in entries:
+            for name, digest in files.items():
+                path = f'{prefix}/{file_path(name)}'
+                require(path not in notices, 'Training-source notice paths must be distinct')
+                notices[path] = digest
+    return revisions, notices
+
+
+def training_scan(review, readback, review_hash):
+    if 'known_pattern_findings' in review:
+        return review['known_pattern_findings']
+    scan = readback.get('training_input_scan', {})
+    require(readback.get('candidate_review_sha256') == review_hash
+            and readback.get('training_integrity_sha256') == review['training_integrity_sha256']
+            and scan.get('training_data_sha256') == review['actual_training_data_sha256']
+            and scan.get('records') == sum(source['used_records'] for source in review['sources'].values()) > 0
+            and set(scan.get('known_pattern_findings', {})) == set(SECRET_PATTERNS),
+            'Require a complete sensitive-content scan of the exact audited training data')
+    return scan['known_pattern_findings']
+
+
 def approved_notices(permission, input_review_path, rights_path, readback_path):
     review, rights, readback = (read(path) for path in (input_review_path,rights_path,readback_path))
+    review_hash = sha256(input_review_path)
     identity = {'model_id':permission['model_id'],'base_revision':permission['base_revision']}
     require(rights['schema_version'] == 1 and rights['approved_for_weight_publication'] is True
             and rights['rights_and_secret_scan_pass'] is True and rights['publication_basis'].strip()
             and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9.+-]*',rights['release_license'])
             and all(rights[key] == readback[key] == value for key,value in identity.items())
             and rights['adapter_files_sha256'] == permission['checkpoint_sha256']
-            and rights['input_review_sha256'] == sha256(input_review_path) == permission['candidate_review_sha256']
-            and rights['notice_readback_sha256'] == sha256(readback_path)
-            and review['known_pattern_findings'] and all(n == 0 for n in review['known_pattern_findings'].values()),
+            and rights['input_review_sha256'] == review_hash == permission['candidate_review_sha256']
+            and rights['notice_readback_sha256'] == sha256(readback_path),
             'Require a distribution and sensitive-content review for the exact checkpoint and source notices')
-    if 'source_revisions' in readback:
-        require(readback['source_revisions'] == {repo: source['revision'] for repo,source in review['sources'].items()},
+    findings = training_scan(review, readback, review_hash)
+    require(findings and all(n == 0 for n in findings.values()),
+            'Require zero sensitive-content findings in all reviewed training records')
+    revisions, expected = training_notices(review['sources'])
+    if 'source_revisions' in readback or any(isinstance(value, list) for value in revisions.values()):
+        require(readback.get('source_revisions') == revisions,
                 'The notice readback covers different training-source revisions')
-    expected = {BASE_LICENSE:readback['notices'][BASE_LICENSE]['source_sha256']}
-    for repo,source in review['sources'].items():
-        for name,digest in source['notices'].items():
-            expected[f'training-source-notices/{repo.replace("/", "--")}/{name}'] = digest
+    expected[BASE_LICENSE] = readback['notices'][BASE_LICENSE]['source_sha256']
     require(set(expected) == readback['notices'].keys()
             and all(readback['notices'][name]['byte_equal'] is True
                     and readback['notices'][name]['source_sha256'] == digest for name,digest in expected.items()),

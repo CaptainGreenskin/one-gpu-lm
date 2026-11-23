@@ -507,6 +507,41 @@ class ModelScopePromotionTests(unittest.TestCase):
         self.assertEqual(license_id,'Apache-2.0')
         self.assertEqual(len(notices),2)
 
+    def test_packaging_requires_all_pinned_notices_and_the_matching_post_training_scan(self):
+        repo = 'owner/training-source'
+        revisions = ['a'*40, 'b'*40]
+        paths = [f'training-source-notices/owner--training-source/{rev}/LICENSE' for rev in revisions]
+        base = {'model_id':'fixture/base', 'base_revision':'c'*40}
+        weights = {name:'e'*64 for name in release_package.FILES}
+        data_sha, training_sha = 'f'*64, '1'*64
+        expected = {release_package.BASE_LICENSE:'2'*64, paths[0]:'3'*64, paths[1]:'4'*64}
+        review = self.save('source-review.json', {'actual_training_data_sha256':data_sha,
+            'training_integrity_sha256':training_sha, 'sources':{repo:{'used_records':5, 'revisions':[
+                {'revision':rev, 'notices':{'LICENSE':expected[path]}} for rev,path in zip(revisions,paths)]}}})
+        permission = dict(base, checkpoint_sha256=weights, candidate_review_sha256=sha256(review))
+        scan = {'records':5, 'training_data_sha256':data_sha,
+                'known_pattern_findings':dict.fromkeys(release_package.SECRET_PATTERNS, 0)}
+        readback = dict(base, source_revisions={repo:revisions}, candidate_review_sha256=sha256(review),
+                        training_integrity_sha256=training_sha, training_input_scan=scan,
+                        notices={name:{'source_sha256':digest,'byte_equal':True} for name,digest in expected.items()})
+
+        def check(receipt):
+            path = self.save('notice-readback.json', receipt)
+            rights = self.save('rights.json', dict(base, schema_version=1, approved_for_weight_publication=True,
+                rights_and_secret_scan_pass=True, publication_basis='Synthetic packaging test',
+                release_license='Apache-2.0', adapter_files_sha256=weights,
+                input_review_sha256=sha256(review), notice_readback_sha256=sha256(path)))
+            return release_package.approved_notices(permission, review, rights, path)
+
+        self.assertEqual(check(readback), ('Apache-2.0', expected))
+        with self.assertRaisesRegex(ValueError, 'different training-source revisions'):
+            check(dict(readback, source_revisions={repo:revisions[:1]}))
+        with self.assertRaisesRegex(ValueError, 'exact audited training data'):
+            check(dict(readback, training_input_scan=dict(scan, training_data_sha256='0'*64)))
+        altered = dict(readback['notices'], **{paths[1]:readback['notices'][paths[0]]})
+        with self.assertRaisesRegex(ValueError, 'exact official readback'):
+            check(dict(readback, notices=altered))
+
     def test_release_packaging_checks_development_before_reading_final_state(self):
         destination = self.directory/'staged'
         args = SimpleNamespace(root=self.directory,seal=self.directory/'absent',
