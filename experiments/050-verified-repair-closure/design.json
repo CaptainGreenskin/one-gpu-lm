@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "experiment": "050-verified-repair-closure",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "evaluation_profile": "experiments/025-verified-distillation/teacher-profile.json",
+  "student_profile": "experiments/031-correction-mix/candidate-profile.json",
+  "model_manifest": "experiments/011-coding-model-selection/weights-manifest.json",
+  "candidate_episodes": 59,
+  "candidate_families": 4,
+  "candidate_multifile_episodes": 9,
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "agent_policy": {
+    "format": "native_roundtrip",
+    "context": "bounded_history_v1"
+  },
+  "normalization": "024 extended plus direct TAP diagnostic timing metadata, cap raw output first",
+  "data_gate": {
+    "minimum_episodes": 32,
+    "minimum_multifile_episodes": 6,
+    "minimum_multifile_families": 2,
+    "minimum_families": 4
+  },
+  "target_kinds": [
+    "reference_edit",
+    "final_verification",
+    "explicit_submission"
+  ],
+  "training_only": true,
+  "final_test_opened": false,
+  "weights_public": false
+}

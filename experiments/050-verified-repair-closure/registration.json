@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "349e475c1047ae522993e05fc21634771b58feaf9a6a3ec6218a70016753fffb",
+  "registered_episodes": 59,
+  "registered_families": 4,
+  "registered_multifile_episodes": 9,
+  "design_sha256": "15df7547c8dfd96f419405646ee0bd78845a3fd5f6d8926036eaa96fcccab463",
+  "source_sha256": {
+    "experiments/050-verified-repair-closure/run.py": "4ba2d592d725446e205e9bb0dcb032140aa251e0562288f5c24f4a69db7ac2d8",
+    "experiments/050-verified-repair-closure/design.json": "15df7547c8dfd96f419405646ee0bd78845a3fd5f6d8926036eaa96fcccab463",
+    "experiments/031-correction-mix/candidate-profile.json": "ac89c9d5333237a72bb88c9899149e3f58f14bc1d0726d7966409238371c1443"
+  },
+  "training_only": true,
+  "model_generations": 0,
+  "final_test_opened": false
+}
