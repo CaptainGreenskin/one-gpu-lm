@@ -1,5 +1,5 @@
 {
-  "protocol_sha256": "82d530edcb17795e2db1fae419123287744e3aa10a6542b7019e5f1a104e7f87",
+  "protocol_sha256": "60af00438d3b6c10f78dcd4ee5ed1f27f02f7c890cc90776390f579a66b85d6d",
   "design_sha256": "c73b7b3b029317a606894af3104c993e1ba54f1b3c58703864207c375d97925b",
   "states": 13,
   "families": 5,
@@ -8,10 +8,16 @@
     46
   ],
   "physical_rollouts": 26,
+  "actor_initializations_verified": 26,
   "training_only": true,
   "final_test_opened": false,
   "source_sha256": {
-    "experiments/049-guided-repair-suffix/run.py": "77969c21a04762e9976517bbddac2a4a95bd65811cb16677c03dd5564c237b74",
+    "experiments/049-guided-repair-suffix/run.py": "f97f75c975db75933bdbe0f532e323204019ba6bf7253da9ca897b2aa3cb92c1",
     "experiments/049-guided-repair-suffix/design.json": "c73b7b3b029317a606894af3104c993e1ba54f1b3c58703864207c375d97925b"
+  },
+  "supersedes_protocol_sha256": "82d530edcb17795e2db1fae419123287744e3aa10a6542b7019e5f1a104e7f87",
+  "startup_fault": {
+    "phase": "actor_initialization",
+    "requests": 0
   }
 }

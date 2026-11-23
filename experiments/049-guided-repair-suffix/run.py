@@ -39,7 +39,7 @@ INTAKE = Path('private/049-no-edit-prefix-intake-v1.json')
 REPLAY = Path('private/049-no-edit-tokenizer-replay-v1.json')
 INITIAL = Path('private/first-action-045-retry-002/protocol.json')
 RUNTIME = Path('private/parent-runtime.json')
-OUTPUT = Path('runs/q049-guided')
+OUTPUT = Path('runs/q049-guided-v2')
 ARMS = ('control', 'guided')
 CELL_FIELDS = ('attempted_calls', 'input_tokens', 'generated_tokens', 'first_edit_call',
                'independently_correct', 'verified_and_submitted', 'invalid_actions',
@@ -89,6 +89,19 @@ def reviewed_corpus(root, initial):
     tasks = {item['id']: item for item in read(data / 'tasks.json')['tasks']}
     sources = {item['repository']: item for item in read(data / 'sources.json')['sources']}
     return data, tasks, sources
+
+
+def actor_cases(task, source, snapshot, prefix, manifest, protocol):
+    cases = {}
+    for arm in ARMS:
+        opening = prefix['openings'][arm]
+        messages = prefix['messages'][arm]
+        proof = {'prefix_sha256': sha256(snapshot / 'prefix.json'), 'arms': {'control': opening},
+                 'request_messages_sha256': message_hash(messages),
+                 'packed_messages_sha256': opening['packed_messages_sha256']}
+        cases[arm] = DecisionCase(task, source, snapshot, manifest, prefix, proof, messages,
+                                  dict(protocol, evaluation_budget=prefix['budget']))
+    return cases
 
 
 def prepare_case(root, stage, row, number, proof, task, source, profile, tokenizer, design):
@@ -143,11 +156,19 @@ def prepare_case(root, stage, row, number, proof, task, source, profile, tokeniz
     copy_tree(actor / 'workspace', snapshot / 'workspace', manifest)
     atomic_json(snapshot / 'manifest.json', manifest)
     copyfile(actor / 'before.json', snapshot / 'before.json')
-    atomic_json(snapshot / 'prefix.json', {'kind': 'early_edit', 'verified_source': None,
-                'original_source_sha256': step['source_before'], 'origin_request_sha256': row['request_sha256'],
-                'origin_state_sha256': row['state_sha256'], 'charged_calls': row['charged_calls'],
-                'charged_generated_tokens': row['charged_generated_tokens'], 'messages': messages,
-                'openings': openings, 'budget': budget})
+    prefix = {'kind': 'early_edit', 'verified_source': None, 'original_source_sha256': step['source_before'],
+              'decision_source_sha256': step['source_before'], 'origin_request_sha256': row['request_sha256'],
+              'origin_state_sha256': row['state_sha256'], 'charged_calls': row['charged_calls'],
+              'charged_generated_tokens': row['charged_generated_tokens'], 'messages': messages,
+              'openings': openings, 'budget': budget}
+    atomic_json(snapshot / 'prefix.json', prefix)
+    with TemporaryDirectory(prefix='.actor-preflight-', dir=stage) as area:
+        branches = actor_cases(task, source, snapshot, prefix, manifest, {})
+        for arm, case in branches.items():
+            trace = initialize(Path(area) / arm, case, 'control')
+            require(trace['attempted_calls'] == 0 and trace['messages'] == messages[arm]
+                    and trace['original_source_sha256'] == step['source_before'],
+                    'Exercise the actual actor initializer before any GPU launch')
     return {'number': number, 'task_id': task['id'], 'family': task['family'],
             'snapshot': f'snapshots/{number:02d}', 'added_input_tokens':
                 openings['guided']['prompt_tokens'] - initial['prompt_tokens']}
@@ -221,7 +242,8 @@ def freeze(args):
     additions = [row['added_input_tokens'] for row in selected]
     return {'protocol_sha256': sha256(plan), 'design_sha256': sha256(DESIGN), 'states': len(selected),
             'families': len(visited), 'added_input_tokens_range': [min(additions), max(additions)],
-            'physical_rollouts': 2 * len(selected), 'training_only': True, 'final_test_opened': False}
+            'physical_rollouts': 2 * len(selected), 'actor_initializations_verified': 2 * len(selected),
+            'training_only': True, 'final_test_opened': False}
 
 
 def registered(args):
@@ -249,16 +271,7 @@ def registered(args):
         require(task['split'] == source['split'] == 'training' and task['family'] == row['family'] == source['family']
                 and prefix['messages']['guided'] == with_guide(prefix['messages']['control'], design['guide'])
                 and inventory(snapshot / 'workspace') == manifest, 'The frozen training state or paired guide changed')
-        branches = {}
-        for arm in ARMS:
-            opening = prefix['openings'][arm]
-            messages = prefix['messages'][arm]
-            proof = {'prefix_sha256': sha256(snapshot / 'prefix.json'), 'arms': {'control': opening},
-                     'request_messages_sha256': message_hash(messages),
-                     'packed_messages_sha256': opening['packed_messages_sha256']}
-            branches[arm] = DecisionCase(task, source, snapshot, manifest, prefix, proof, messages,
-                                         dict(reference, evaluation_budget=prefix['budget']))
-        cases[row['number']] = branches
+        cases[row['number']] = actor_cases(task, source, snapshot, prefix, manifest, reference)
     return plan, design, reference, data, cases
 
 
