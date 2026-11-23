@@ -208,7 +208,7 @@ def protected(before, after, editable):
     return all(after.get(name) == digest for name, digest in before.items() if name not in editable)
 
 
-def perform(case, sandbox, tokenizer, profile, protocol, norm, directory):
+def perform(case, sandbox, tokenizer, profile, protocol, norm, directory, make_plan=actor_plan):
     """Execute actual actions, preserving each raw receipt before using its observation."""
     task = case.task
     budget = protocol['design']['evaluation_budget']
@@ -223,7 +223,7 @@ def perform(case, sandbox, tokenizer, profile, protocol, norm, directory):
     atomic_json(directory / 'opening.json', baseline)
     require(protected(before, files(baseline_workspace), ()), 'opening_changed_source')
     messages = opening(task, baseline, budget, policy, norm)
-    planned = actor_plan(case, messages, tokenizer, profile, budget)
+    planned = make_plan(case, messages, tokenizer, profile, budget)
     require(len(planned) <= budget['max_model_calls'], 'actor_call_budget')
     guard = SubmissionGuard(sandbox, {str(workspace): {
         'editable_files': task['editable_files'], 'regression_command': task['regression_command']}})
@@ -285,14 +285,14 @@ def independently_grade(case, sandbox, directory, before, budget):
     return proof
 
 
-def audit(case, tokenizer, profile, protocol, norm, directory, trace, rows):
+def audit(case, tokenizer, profile, protocol, norm, directory, trace, rows, make_plan=actor_plan):
     """Reconstruct the exact original dialogue independently of the export."""
     task = case.task
     budget = protocol['design']['evaluation_budget']
     policy = protocol['design']['agent_policy']
     baseline = linked_result(directory / 'opening.json', trace['opening_sha256'])
     messages = opening(task, baseline, budget, policy, norm)
-    planned = actor_plan(case, messages, tokenizer, profile, budget)
+    planned = make_plan(case, messages, tokenizer, profile, budget)
     steps = trace['steps']
     require(len(steps) == len(planned) <= budget['max_model_calls']
             and sum(s['supervised_tokens'] for s in steps) <= budget['max_total_generated_tokens'],
@@ -324,7 +324,40 @@ def audit(case, tokenizer, profile, protocol, norm, directory, trace, rows):
     return returned
 
 
-def run(root, protocol_path, output):
+def previous_replay(root, protocol, cases):
+    previous = protocol.get('previous_replay')
+    if previous is None:
+        return {}, []
+    output = root / relative(previous['run_directory'])
+    status = read(checked(output, 'status.json', previous['status_sha256']))
+    export = checked(output, 'private/data.jsonl', status['export_sha256'])
+    kept = {row['case']: row for row in status['rows'] if row['qualified']}
+    accepted = [json.loads(line) for line in export.read_bytes().splitlines()]
+    require(status['complete'] and not status['data_gate_passed'] and not status['final_test_opened']
+            and status['protocol_sha256'] == previous['protocol_sha256']
+            and status['model_generations'] == status['optimizer_updates'] == 0
+            and [row['case'] for row in status['rows']] == list(range(1, len(cases) + 1))
+            and [row['case'] for row in status['rows'] if not row['qualified']] == previous['rerun_cases']
+            and len(accepted) == status['export_rows'], 'Prior replay is not the audited first attempt')
+    retained = []
+    for index in kept:
+        folder = output / 'private' / f'{index:03d}'
+        trace = sha256(folder / 'actor-trace.json')
+        proof = read(folder / 'grade.json')
+        group = read(folder / 'export.json')
+        source = cases[index - 1].source
+        task = cases[index - 1].task
+        require(proof['passed'] and proof['source_sha256'] ==
+                {name: source['files'][name] for name in task['editable_files']}
+                and all(row['episode_id'] == f'050:{index:03d}' and row['provenance']['trajectory_sha256'] == trace
+                        and row['provenance']['source_id'] == source['source_id'] for row in group),
+                'Prior episode regrade or export no longer matches')
+        retained.extend(group)
+    require(retained == accepted, 'Retained case exports differ from the original selection')
+    return kept, accepted
+
+
+def run(root, protocol_path, output, *, make_plan=actor_plan):
     protocol = read(protocol_path)
     design = protocol['design']
     with single_writer(output.parent / (output.name + '.lock')):
@@ -334,14 +367,20 @@ def run(root, protocol_path, output):
         tokenizer, profile = launch_context(root, protocol)
         norm = normalization(root)
         cases, runtimes = inputs(root, protocol)
+        previous, selected = previous_replay(root, protocol, cases)
         sandboxes = {path: Sandbox(value) for path, value in runtimes.items()}
         status = {'schema_version': 1, 'protocol_sha256': sha256(protocol_path), 'started_utc': utc(),
                   'started_epoch': time.time(), 'complete': False, 'rows': [], 'model_generations': 0,
                   'optimizer_updates': 0, 'final_test_opened': False}
         atomic_json(output / 'status.json', status)
-        selected = []
+        if previous:
+            status.update(retained_episodes=len(previous), rerun_episodes=len(cases) - len(previous),
+                          previous_status_sha256=protocol['previous_replay']['status_sha256'])
         families = {family: index for index, family in enumerate(sorted({c.task['family'] for c in cases}), 1)}
         for index, case in enumerate(cases, 1):
+            if index in previous:
+                status['rows'].append(previous[index])
+                continue
             case_path = tasks / f'{index:03d}'
             case_path.mkdir()
             sandbox = sandboxes[case.runtime]
@@ -349,13 +388,13 @@ def run(root, protocol_path, output):
                    'qualified': False, 'actor_calls': 0, 'target_counts': {}, 'target_tokens': 0}
             start = time.monotonic()
             try:
-                records, trace, before = perform(case, sandbox, tokenizer, profile, protocol, norm, case_path)
+                records, trace, before = perform(case, sandbox, tokenizer, profile, protocol, norm, case_path, make_plan)
                 atomic_json(case_path / 'actor-trace.json', trace)
                 row.update(actor_calls=len(trace['steps']), actor_seconds=trace['actor_seconds'])
                 proof = independently_grade(case, sandbox, case_path, before, design['evaluation_budget'])
                 atomic_json(case_path / 'grade.json', proof)
                 replay = audit(case, tokenizer, profile, protocol, norm, case_path,
-                               read(case_path / 'actor-trace.json'), records)
+                               read(case_path / 'actor-trace.json'), records, make_plan)
                 episode = f"050:{index:03d}"
                 source_proof = sha256(case_path / 'actor-trace.json')
                 accepted = [{'id': f"{episode}:{record['call']}", 'episode_id': episode,

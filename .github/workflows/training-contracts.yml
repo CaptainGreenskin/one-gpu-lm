@@ -29,3 +29,4 @@ jobs:
       - run: python -m py_compile experiments/034-first-action-ablation/*.py experiments/035-edit-bottleneck/*.py experiments/036-regression-evidence/*.py experiments/037-compact-regression/*.py experiments/038-independent-compact/*.py experiments/039-release-development/*.py
       - run: python -m py_compile experiments/040-editable-source-context/*.py experiments/041-first-edit-continuation/*.py experiments/042-first-edit-sft/*.py
       - run: python -m py_compile experiments/043-decision-state-collection/*.py experiments/044-deployment-recovery-sft/*.py experiments/045-first-action-forks/*.py experiments/047-expanded-action-forks/*.py experiments/048-expanded-action-preference/*.py experiments/049-guided-repair-suffix/*.py experiments/050-verified-repair-closure/*.py
+      - run: python -m unittest tests.test_verified_repair_closure

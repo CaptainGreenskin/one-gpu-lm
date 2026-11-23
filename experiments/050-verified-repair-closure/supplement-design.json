@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "first_protocol_sha256": "349e475c1047ae522993e05fc21634771b58feaf9a6a3ec6218a70016753fffb",
+  "first_status_sha256": "779289621321d250e6df687fb81438cbc3586bdadbb7349491dd6be5337cb5df",
+  "retained_episodes": 39,
+  "rerun_episodes": 20,
+  "eligible_rerun": "reference_hunk_over_budget_before_any_actor_action",
+  "edit_representation": "budgeted_bottom_up_line_windows",
+  "shared_budget_and_gate": "design.json",
+  "train_update_count_before_replay": 0,
+  "final_test_opened": false,
+  "weights_public": false
+}

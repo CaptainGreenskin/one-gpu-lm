@@ -1,0 +1,19 @@
+{
+  "protocol_sha256": "c405d144991592bcef481ea80e3985b8616a29c23aa344727751dc8a4abf5a04",
+  "registered_episodes": 59,
+  "registered_families": 4,
+  "registered_multifile_episodes": 9,
+  "design_sha256": "15df7547c8dfd96f419405646ee0bd78845a3fd5f6d8926036eaa96fcccab463",
+  "source_sha256": {
+    "experiments/050-verified-repair-closure/run.py": "0989ff78cee560942bdf4277171f730862659b5187767bdc05e114be860d6519",
+    "experiments/050-verified-repair-closure/supplement.py": "9f0ef43b9ef20d954c04f6e3c50a5e30bf344fc55f3cf62b58bbf67d9cb20c1e",
+    "experiments/050-verified-repair-closure/supplement-design.json": "d10230f11e54c280b32363435c2ab5e6f09da89c13007fe58d3956e93c86ac22"
+  },
+  "training_only": true,
+  "model_generations": 0,
+  "final_test_opened": false,
+  "retained_episodes": 39,
+  "rerun_episodes": 20,
+  "first_status_sha256": "779289621321d250e6df687fb81438cbc3586bdadbb7349491dd6be5337cb5df",
+  "amendment_sha256": "d10230f11e54c280b32363435c2ab5e6f09da89c13007fe58d3956e93c86ac22"
+}
