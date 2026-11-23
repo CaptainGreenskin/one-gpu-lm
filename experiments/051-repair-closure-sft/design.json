@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "experiment": "051-repair-closure-sft",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "profile_path": "experiments/031-correction-mix/candidate-profile.json",
+  "environment_path": "experiments/025-verified-distillation/preparation/model-environment-observed.json",
+  "model_manifest_path": "experiments/011-coding-model-selection/weights-manifest.json",
+  "collection_result_commit": "657f0bb3f5eed25f0e7c62e3504f4b2d15dcbd11",
+  "collection_protocol_sha256": "c405d144991592bcef481ea80e3985b8616a29c23aa344727751dc8a4abf5a04",
+  "collection_status_sha256": "95d9635c7922b87313a08766c66470430792eb93cfd96581f67e676a0b65bde0",
+  "selection": {
+    "records": 243,
+    "episodes": 54,
+    "input_tokens": 673966,
+    "supervised_tokens": 55299,
+    "target_counts": {
+      "reference_edit": 135,
+      "final_verification": 54,
+      "explicit_submission": 54
+    },
+    "optimizer_updates": 31
+  },
+  "training_families": 4,
+  "required_multifile_examples": 8,
+  "largest_family_records": 152,
+  "maximum_observed_record_tokens": 6272,
+  "trainable_parameters": 58363904,
+  "recipe": {
+    "seed": 101,
+    "epochs": 1,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "gradient_accumulation_records": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 1e-05,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 8192,
+    "maximum_training_pipeline_seconds": 43200
+  },
+  "schedule_order_sha256": "85e1d376569015a3e72d55ccb86975a49f1013ee065c7934162b2cf09bcd3f99",
+  "initialization": "pinned_pretrained_base",
+  "checkpoint_selection": "only_complete_epoch",
+  "development": {
+    "task_count": 60,
+    "language_counts": {
+      "python": 30,
+      "javascript": 30
+    },
+    "repetitions": 3,
+    "rollout_count": 360,
+    "block_size": 10,
+    "selected_opening": "original",
+    "evaluation_budget": {
+      "max_model_calls": 12,
+      "max_generated_tokens_per_call": 512,
+      "max_total_generated_tokens": 6144,
+      "max_input_tokens": 8192,
+      "max_task_seconds": 600,
+      "max_tool_seconds": 60,
+      "max_tool_output_chars": 2400
+    },
+    "gate": {
+      "minimum_gain_pp": 10,
+      "maximum_family_drop_pp": 10,
+      "require_positive_95_percent_lower_bound": true,
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 39039,
+      "complete_audited_repetitions_required": true
+    }
+  },
+  "new_development_families": 6,
+  "final_test_opened": false,
+  "weights_public": false
+}

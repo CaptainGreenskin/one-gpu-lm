@@ -1,0 +1,34 @@
+{
+  "protocol_sha256": "c6ec27620dc591ed31f51d196c2763dabfe13f0b48facd5e57064b856eabacac",
+  "design_sha256": "6ad5a561f4a033d538b4e99c9c6a42770b0e813aac666cf6b54d51b61d04cd5c",
+  "schedule_sha256": "1d422e416a99f60f75fad704b027c1cd34c3784fc59705c3fb87797f670bd952",
+  "order_sha256": "85e1d376569015a3e72d55ccb86975a49f1013ee065c7934162b2cf09bcd3f99",
+  "source_review_sha256": "8dbe3c5e3276d1307f75d9a94370fcde1d29bf1176942a0f5e2be01176d1238c",
+  "selection": {
+    "records": 243,
+    "episodes": 54,
+    "input_tokens": 673966,
+    "supervised_tokens": 55299,
+    "target_counts": {
+      "explicit_submission": 54,
+      "final_verification": 54,
+      "reference_edit": 135
+    },
+    "optimizer_updates": 31
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "source_sha256": {
+    "experiments/051-repair-closure-sft/train.py": "2480d1d68e64644e7bbab06d18c6e7ffc48f931977a96351f5e594cc8609eaeb",
+    "experiments/051-repair-closure-sft/design.json": "6ad5a561f4a033d538b4e99c9c6a42770b0e813aac666cf6b54d51b61d04cd5c",
+    "one_gpu_lm/verified/continuation_training.py": "b34a355431736a7d8ae8a9c7026239bf8f8d9e17d16708e77f3175d2d45db641",
+    "one_gpu_lm/verified/runtime_identity.py": "d98fa228a30a3f7dc013297f8a5610f39d7212396c2c46bc8a3e63230786e3e7",
+    "one_gpu_lm/verified/candidate_data.py": "ddc3a847412025b563e82ac3c1da586bfc24ad805f51e450d3b23bd5cc59a60a",
+    "one_gpu_lm/common/training_encoding.py": "d1b73171f7d6edfbbea5188c71a4d5bf6ada1807c1a5cda11a3fd96ca9c88113",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/models/adapter_bundle.py": "816511118bd481cc2c3edd1881497d2a9f8baee6a6c2085322d8b3bee28c93e8",
+    "one_gpu_lm/models/release_lineage.py": "58d3d170660bd7aa243d15639f8a1f0dc96410a160457459ae2c9b6de2712301",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450"
+  }
+}
