@@ -1,0 +1,2899 @@
+{
+  "protocol_sha256": "7834d23acd2ea22d74e2239a0aeba9a72e66ecfc7eaa1f328b0b5173dbd8ab91",
+  "integrity_sha256": "c59ef577163a7ec9cbd0ff96cfd06ad2e379aa84e11b3cb686c11cd7cd606e8f",
+  "metrics": {
+    "started_epoch": 1795468328.7029326,
+    "finished_epoch": 1795469126.5281937,
+    "training_seconds": 720.85477828898,
+    "trainable_parameters": 58363904,
+    "input_tokens": 730227,
+    "supervised_tokens": 58465,
+    "optimizer_steps": 36,
+    "action_records_consumed": 287,
+    "peak_allocated_bytes": 81755794432,
+    "peak_reserved_bytes": 100667490304,
+    "telemetry": {
+      "samples": 158,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "saved_reload_greedy_ids_equal": true,
+    "frozen_sample_unchanged": true,
+    "frozen_gradients_absent": true,
+    "all_selected_records_consumed": true,
+    "frozen_files_unchanged": true
+  },
+  "records": [
+    {
+      "record": 1,
+      "update": 1,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3169,
+      "supervised_tokens": 34,
+      "loss": 0.023888181895017624,
+      "seconds": 4.259181032975903
+    },
+    {
+      "record": 2,
+      "update": 1,
+      "record_group_kind": "final_verification",
+      "tokens": 2101,
+      "supervised_tokens": 63,
+      "loss": 0.008180388249456882,
+      "seconds": 1.9254694849951193
+    },
+    {
+      "record": 3,
+      "update": 1,
+      "record_group_kind": "final_verification",
+      "tokens": 1953,
+      "supervised_tokens": 55,
+      "loss": 0.030187496915459633,
+      "seconds": 1.9416327270155307
+    },
+    {
+      "record": 4,
+      "update": 1,
+      "record_group_kind": "reference_edit",
+      "tokens": 2119,
+      "supervised_tokens": 446,
+      "loss": 0.27009811997413635,
+      "seconds": 1.9451468819752336
+    },
+    {
+      "record": 5,
+      "update": 1,
+      "record_group_kind": "reference_edit",
+      "tokens": 1896,
+      "supervised_tokens": 446,
+      "loss": 0.29582858085632324,
+      "seconds": 1.658876016997965
+    },
+    {
+      "record": 6,
+      "update": 1,
+      "record_group_kind": "reference_edit",
+      "tokens": 2214,
+      "supervised_tokens": 297,
+      "loss": 0.14042018353939056,
+      "seconds": 1.9999034790089354
+    },
+    {
+      "record": 7,
+      "update": 1,
+      "record_group_kind": "final_verification",
+      "tokens": 3794,
+      "supervised_tokens": 162,
+      "loss": 0.0012573315761983395,
+      "seconds": 3.5958204729831778
+    },
+    {
+      "record": 8,
+      "update": 1,
+      "record_group_kind": "final_verification",
+      "tokens": 1976,
+      "supervised_tokens": 55,
+      "loss": 0.020113322883844376,
+      "seconds": 1.759725468000397
+    },
+    {
+      "record": 9,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 2743,
+      "supervised_tokens": 495,
+      "loss": 0.44408494234085083,
+      "seconds": 2.550419998005964
+    },
+    {
+      "record": 10,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 1749,
+      "supervised_tokens": 325,
+      "loss": 0.5971226096153259,
+      "seconds": 1.6072935390111525
+    },
+    {
+      "record": 11,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 2644,
+      "supervised_tokens": 498,
+      "loss": 0.220311239361763,
+      "seconds": 2.5972159250231925
+    },
+    {
+      "record": 12,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 1994,
+      "supervised_tokens": 437,
+      "loss": 0.3325425684452057,
+      "seconds": 1.7991693160147406
+    },
+    {
+      "record": 13,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 2079,
+      "supervised_tokens": 455,
+      "loss": 0.7019480466842651,
+      "seconds": 1.9555941259895917
+    },
+    {
+      "record": 14,
+      "update": 2,
+      "record_group_kind": "explicit_submission",
+      "tokens": 4822,
+      "supervised_tokens": 34,
+      "loss": 0.02025078609585762,
+      "seconds": 4.816718204994686
+    },
+    {
+      "record": 15,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 1586,
+      "supervised_tokens": 246,
+      "loss": 1.1091864109039307,
+      "seconds": 1.422584852
+    },
+    {
+      "record": 16,
+      "update": 2,
+      "record_group_kind": "reference_edit",
+      "tokens": 4872,
+      "supervised_tokens": 321,
+      "loss": 0.2955826222896576,
+      "seconds": 4.974583818984684
+    },
+    {
+      "record": 17,
+      "update": 3,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3382,
+      "supervised_tokens": 34,
+      "loss": 0.014632519334554672,
+      "seconds": 3.229938543983735
+    },
+    {
+      "record": 18,
+      "update": 3,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2707,
+      "supervised_tokens": 34,
+      "loss": 0.01842459850013256,
+      "seconds": 2.673926843999652
+    },
+    {
+      "record": 19,
+      "update": 3,
+      "record_group_kind": "reference_edit",
+      "tokens": 2658,
+      "supervised_tokens": 396,
+      "loss": 0.5742611289024353,
+      "seconds": 2.4732166689937003
+    },
+    {
+      "record": 20,
+      "update": 3,
+      "record_group_kind": "reference_edit",
+      "tokens": 3434,
+      "supervised_tokens": 462,
+      "loss": 0.5084077715873718,
+      "seconds": 3.2953541000024416
+    },
+    {
+      "record": 21,
+      "update": 3,
+      "record_group_kind": "reference_edit",
+      "tokens": 2783,
+      "supervised_tokens": 455,
+      "loss": 1.0390527248382568,
+      "seconds": 2.6304981680004857
+    },
+    {
+      "record": 22,
+      "update": 3,
+      "record_group_kind": "final_verification",
+      "tokens": 1508,
+      "supervised_tokens": 71,
+      "loss": 0.04319983348250389,
+      "seconds": 1.3529835609951988
+    },
+    {
+      "record": 23,
+      "update": 3,
+      "record_group_kind": "explicit_submission",
+      "tokens": 5645,
+      "supervised_tokens": 34,
+      "loss": 0.030560748651623726,
+      "seconds": 5.90711055000429
+    },
+    {
+      "record": 24,
+      "update": 3,
+      "record_group_kind": "reference_edit",
+      "tokens": 2573,
+      "supervised_tokens": 477,
+      "loss": 0.4960876405239105,
+      "seconds": 2.468479407019913
+    },
+    {
+      "record": 25,
+      "update": 4,
+      "record_group_kind": "final_verification",
+      "tokens": 2171,
+      "supervised_tokens": 71,
+      "loss": 0.03653402999043465,
+      "seconds": 2.2051766060176305
+    },
+    {
+      "record": 26,
+      "update": 4,
+      "record_group_kind": "reference_edit",
+      "tokens": 1628,
+      "supervised_tokens": 194,
+      "loss": 0.8761183619499207,
+      "seconds": 1.4714691420085728
+    },
+    {
+      "record": 27,
+      "update": 4,
+      "record_group_kind": "reference_edit",
+      "tokens": 3383,
+      "supervised_tokens": 197,
+      "loss": 0.07406290620565414,
+      "seconds": 3.3327612570137717
+    },
+    {
+      "record": 28,
+      "update": 4,
+      "record_group_kind": "reference_edit",
+      "tokens": 1967,
+      "supervised_tokens": 377,
+      "loss": 0.6502281427383423,
+      "seconds": 1.8421979139966425
+    },
+    {
+      "record": 29,
+      "update": 4,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2851,
+      "supervised_tokens": 34,
+      "loss": 0.01611931249499321,
+      "seconds": 2.764510480017634
+    },
+    {
+      "record": 30,
+      "update": 4,
+      "record_group_kind": "reference_edit",
+      "tokens": 2000,
+      "supervised_tokens": 432,
+      "loss": 0.6216611266136169,
+      "seconds": 1.8362547449942213
+    },
+    {
+      "record": 31,
+      "update": 4,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3867,
+      "supervised_tokens": 34,
+      "loss": 0.049799103289842606,
+      "seconds": 3.886257822974585
+    },
+    {
+      "record": 32,
+      "update": 4,
+      "record_group_kind": "explicit_submission",
+      "tokens": 4381,
+      "supervised_tokens": 34,
+      "loss": 0.030841931700706482,
+      "seconds": 4.476870793005219
+    },
+    {
+      "record": 33,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 1811,
+      "supervised_tokens": 370,
+      "loss": 0.8323696851730347,
+      "seconds": 1.8895438030012883
+    },
+    {
+      "record": 34,
+      "update": 5,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3244,
+      "supervised_tokens": 34,
+      "loss": 0.013958469964563847,
+      "seconds": 3.1765342940052506
+    },
+    {
+      "record": 35,
+      "update": 5,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1703,
+      "supervised_tokens": 34,
+      "loss": 0.049506790935993195,
+      "seconds": 1.6069401889981236
+    },
+    {
+      "record": 36,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 1908,
+      "supervised_tokens": 448,
+      "loss": 0.9943651556968689,
+      "seconds": 1.7424307580222376
+    },
+    {
+      "record": 37,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 1620,
+      "supervised_tokens": 328,
+      "loss": 0.4953542649745941,
+      "seconds": 1.4823168700095266
+    },
+    {
+      "record": 38,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 5186,
+      "supervised_tokens": 265,
+      "loss": 0.36960336565971375,
+      "seconds": 5.388213352998719
+    },
+    {
+      "record": 39,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 2929,
+      "supervised_tokens": 250,
+      "loss": 0.2277417629957199,
+      "seconds": 2.8352905380015727
+    },
+    {
+      "record": 40,
+      "update": 5,
+      "record_group_kind": "reference_edit",
+      "tokens": 2008,
+      "supervised_tokens": 445,
+      "loss": 0.27161696553230286,
+      "seconds": 2.012119459977839
+    },
+    {
+      "record": 41,
+      "update": 6,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2438,
+      "supervised_tokens": 34,
+      "loss": 0.00852749403566122,
+      "seconds": 2.3417226999881677
+    },
+    {
+      "record": 42,
+      "update": 6,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2206,
+      "supervised_tokens": 34,
+      "loss": 0.011206687428057194,
+      "seconds": 2.089653642993653
+    },
+    {
+      "record": 43,
+      "update": 6,
+      "record_group_kind": "explicit_submission",
+      "tokens": 5326,
+      "supervised_tokens": 34,
+      "loss": 0.04261331632733345,
+      "seconds": 5.550518639996881
+    },
+    {
+      "record": 44,
+      "update": 6,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3463,
+      "supervised_tokens": 34,
+      "loss": 0.027900870889425278,
+      "seconds": 3.4917237400077283
+    },
+    {
+      "record": 45,
+      "update": 6,
+      "record_group_kind": "final_verification",
+      "tokens": 5238,
+      "supervised_tokens": 81,
+      "loss": 0.01399050373584032,
+      "seconds": 5.446662614995148
+    },
+    {
+      "record": 46,
+      "update": 6,
+      "record_group_kind": "final_verification",
+      "tokens": 1664,
+      "supervised_tokens": 86,
+      "loss": 0.02973826229572296,
+      "seconds": 1.507849799003452
+    },
+    {
+      "record": 47,
+      "update": 6,
+      "record_group_kind": "reference_edit",
+      "tokens": 2196,
+      "supervised_tokens": 280,
+      "loss": 0.4563230574131012,
+      "seconds": 2.247481594007695
+    },
+    {
+      "record": 48,
+      "update": 6,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2495,
+      "supervised_tokens": 34,
+      "loss": 0.00916519109159708,
+      "seconds": 2.439101632015081
+    },
+    {
+      "record": 49,
+      "update": 7,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3905,
+      "supervised_tokens": 34,
+      "loss": 0.11499662697315216,
+      "seconds": 3.9419859040062875
+    },
+    {
+      "record": 50,
+      "update": 7,
+      "record_group_kind": "reference_edit",
+      "tokens": 1830,
+      "supervised_tokens": 442,
+      "loss": 0.2932327091693878,
+      "seconds": 1.7125565229798667
+    },
+    {
+      "record": 51,
+      "update": 7,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1666,
+      "supervised_tokens": 34,
+      "loss": 0.006634537596255541,
+      "seconds": 1.5840330950159114
+    },
+    {
+      "record": 52,
+      "update": 7,
+      "record_group_kind": "reference_edit",
+      "tokens": 2734,
+      "supervised_tokens": 225,
+      "loss": 0.449197918176651,
+      "seconds": 2.629829687997699
+    },
+    {
+      "record": 53,
+      "update": 7,
+      "record_group_kind": "reference_edit",
+      "tokens": 3225,
+      "supervised_tokens": 228,
+      "loss": 0.3498072326183319,
+      "seconds": 3.244319455989171
+    },
+    {
+      "record": 54,
+      "update": 7,
+      "record_group_kind": "reference_edit",
+      "tokens": 1900,
+      "supervised_tokens": 251,
+      "loss": 0.683505117893219,
+      "seconds": 1.7551667499938048
+    },
+    {
+      "record": 55,
+      "update": 7,
+      "record_group_kind": "final_verification",
+      "tokens": 1596,
+      "supervised_tokens": 71,
+      "loss": 0.028871139511466026,
+      "seconds": 1.6614313359896187
+    },
+    {
+      "record": 56,
+      "update": 7,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1848,
+      "supervised_tokens": 34,
+      "loss": 0.017453370615839958,
+      "seconds": 1.721015744988108
+    },
+    {
+      "record": 57,
+      "update": 8,
+      "record_group_kind": "reference_edit",
+      "tokens": 2075,
+      "supervised_tokens": 488,
+      "loss": 0.669326663017273,
+      "seconds": 2.011681577016134
+    },
+    {
+      "record": 58,
+      "update": 8,
+      "record_group_kind": "final_verification",
+      "tokens": 2816,
+      "supervised_tokens": 52,
+      "loss": 0.02043996937572956,
+      "seconds": 2.676909565983806
+    },
+    {
+      "record": 59,
+      "update": 8,
+      "record_group_kind": "final_verification",
+      "tokens": 2551,
+      "supervised_tokens": 55,
+      "loss": 0.0273178331553936,
+      "seconds": 2.4850446470081806
+    },
+    {
+      "record": 60,
+      "update": 8,
+      "record_group_kind": "final_verification",
+      "tokens": 1438,
+      "supervised_tokens": 56,
+      "loss": 0.024942565709352493,
+      "seconds": 1.3468870939977933
+    },
+    {
+      "record": 61,
+      "update": 8,
+      "record_group_kind": "reference_edit",
+      "tokens": 4531,
+      "supervised_tokens": 509,
+      "loss": 0.7733940482139587,
+      "seconds": 4.737528741999995
+    },
+    {
+      "record": 62,
+      "update": 8,
+      "record_group_kind": "reference_edit",
+      "tokens": 1431,
+      "supervised_tokens": 282,
+      "loss": 0.9440842270851135,
+      "seconds": 1.5474490130145568
+    },
+    {
+      "record": 63,
+      "update": 8,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1924,
+      "supervised_tokens": 34,
+      "loss": 0.01890360377728939,
+      "seconds": 1.832677340018563
+    },
+    {
+      "record": 64,
+      "update": 8,
+      "record_group_kind": "reference_edit",
+      "tokens": 2207,
+      "supervised_tokens": 300,
+      "loss": 0.6831005811691284,
+      "seconds": 2.141434802993899
+    },
+    {
+      "record": 65,
+      "update": 9,
+      "record_group_kind": "explicit_submission",
+      "tokens": 6270,
+      "supervised_tokens": 34,
+      "loss": 0.021559813991189003,
+      "seconds": 6.723698061017785
+    },
+    {
+      "record": 66,
+      "update": 9,
+      "record_group_kind": "reference_edit",
+      "tokens": 3704,
+      "supervised_tokens": 249,
+      "loss": 0.28078290820121765,
+      "seconds": 3.700092560990015
+    },
+    {
+      "record": 67,
+      "update": 9,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2226,
+      "supervised_tokens": 34,
+      "loss": 0.0058965180069208145,
+      "seconds": 2.1238581250072457
+    },
+    {
+      "record": 68,
+      "update": 9,
+      "record_group_kind": "final_verification",
+      "tokens": 3375,
+      "supervised_tokens": 106,
+      "loss": 0.0019943949300795794,
+      "seconds": 3.402462473983178
+    },
+    {
+      "record": 69,
+      "update": 9,
+      "record_group_kind": "reference_edit",
+      "tokens": 3313,
+      "supervised_tokens": 509,
+      "loss": 0.5595666170120239,
+      "seconds": 3.321990608004853
+    },
+    {
+      "record": 70,
+      "update": 9,
+      "record_group_kind": "reference_edit",
+      "tokens": 2450,
+      "supervised_tokens": 429,
+      "loss": 0.07014000415802002,
+      "seconds": 2.551949341985164
+    },
+    {
+      "record": 71,
+      "update": 9,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1892,
+      "supervised_tokens": 34,
+      "loss": 0.003749978030100465,
+      "seconds": 1.7695753180014435
+    },
+    {
+      "record": 72,
+      "update": 9,
+      "record_group_kind": "reference_edit",
+      "tokens": 1372,
+      "supervised_tokens": 238,
+      "loss": 0.5787996053695679,
+      "seconds": 1.254356153018307
+    },
+    {
+      "record": 73,
+      "update": 10,
+      "record_group_kind": "reference_edit",
+      "tokens": 3137,
+      "supervised_tokens": 448,
+      "loss": 0.57179194688797,
+      "seconds": 3.1585277289850637
+    },
+    {
+      "record": 74,
+      "update": 10,
+      "record_group_kind": "reference_edit",
+      "tokens": 1324,
+      "supervised_tokens": 211,
+      "loss": 0.6706116199493408,
+      "seconds": 1.2288269640121143
+    },
+    {
+      "record": 75,
+      "update": 10,
+      "record_group_kind": "final_verification",
+      "tokens": 2314,
+      "supervised_tokens": 62,
+      "loss": 0.021511217579245567,
+      "seconds": 2.2691907229891513
+    },
+    {
+      "record": 76,
+      "update": 10,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1852,
+      "supervised_tokens": 34,
+      "loss": 0.0032777737360447645,
+      "seconds": 1.7388188620097935
+    },
+    {
+      "record": 77,
+      "update": 10,
+      "record_group_kind": "reference_edit",
+      "tokens": 3843,
+      "supervised_tokens": 509,
+      "loss": 0.4794577658176422,
+      "seconds": 3.949407648004126
+    },
+    {
+      "record": 78,
+      "update": 10,
+      "record_group_kind": "reference_edit",
+      "tokens": 3536,
+      "supervised_tokens": 482,
+      "loss": 0.070018470287323,
+      "seconds": 3.622031673992751
+    },
+    {
+      "record": 79,
+      "update": 10,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1922,
+      "supervised_tokens": 34,
+      "loss": 0.03411334007978439,
+      "seconds": 1.8306485390057787
+    },
+    {
+      "record": 80,
+      "update": 10,
+      "record_group_kind": "final_verification",
+      "tokens": 1967,
+      "supervised_tokens": 55,
+      "loss": 0.008959109894931316,
+      "seconds": 1.880029674997786
+    },
+    {
+      "record": 81,
+      "update": 11,
+      "record_group_kind": "final_verification",
+      "tokens": 2092,
+      "supervised_tokens": 155,
+      "loss": 0.007215576712042093,
+      "seconds": 1.9931712370016612
+    },
+    {
+      "record": 82,
+      "update": 11,
+      "record_group_kind": "final_verification",
+      "tokens": 3015,
+      "supervised_tokens": 94,
+      "loss": 0.010024800896644592,
+      "seconds": 2.9998920369835105
+    },
+    {
+      "record": 83,
+      "update": 11,
+      "record_group_kind": "reference_edit",
+      "tokens": 2045,
+      "supervised_tokens": 456,
+      "loss": 0.33431196212768555,
+      "seconds": 1.921395498997299
+    },
+    {
+      "record": 84,
+      "update": 11,
+      "record_group_kind": "reference_edit",
+      "tokens": 1807,
+      "supervised_tokens": 288,
+      "loss": 0.6298143267631531,
+      "seconds": 1.72533007900347
+    },
+    {
+      "record": 85,
+      "update": 11,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2398,
+      "supervised_tokens": 34,
+      "loss": 0.07794022560119629,
+      "seconds": 2.2988158380030654
+    },
+    {
+      "record": 86,
+      "update": 11,
+      "record_group_kind": "reference_edit",
+      "tokens": 2008,
+      "supervised_tokens": 180,
+      "loss": 0.33772116899490356,
+      "seconds": 2.032202213013079
+    },
+    {
+      "record": 87,
+      "update": 11,
+      "record_group_kind": "reference_edit",
+      "tokens": 2939,
+      "supervised_tokens": 149,
+      "loss": 0.10746981203556061,
+      "seconds": 2.861503944004653
+    },
+    {
+      "record": 88,
+      "update": 11,
+      "record_group_kind": "reference_edit",
+      "tokens": 2528,
+      "supervised_tokens": 482,
+      "loss": 0.3597373366355896,
+      "seconds": 2.4239995290117804
+    },
+    {
+      "record": 89,
+      "update": 12,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2224,
+      "supervised_tokens": 34,
+      "loss": 0.012687872163951397,
+      "seconds": 2.0869461789843626
+    },
+    {
+      "record": 90,
+      "update": 12,
+      "record_group_kind": "reference_edit",
+      "tokens": 1551,
+      "supervised_tokens": 201,
+      "loss": 0.5544056296348572,
+      "seconds": 1.467774542979896
+    },
+    {
+      "record": 91,
+      "update": 12,
+      "record_group_kind": "final_verification",
+      "tokens": 1802,
+      "supervised_tokens": 63,
+      "loss": 0.013131956569850445,
+      "seconds": 1.6947656729898881
+    },
+    {
+      "record": 92,
+      "update": 12,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2267,
+      "supervised_tokens": 34,
+      "loss": 0.007787395268678665,
+      "seconds": 2.1668182270077523
+    },
+    {
+      "record": 93,
+      "update": 12,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3335,
+      "supervised_tokens": 34,
+      "loss": 0.010106096044182777,
+      "seconds": 3.3468119140015915
+    },
+    {
+      "record": 94,
+      "update": 12,
+      "record_group_kind": "reference_edit",
+      "tokens": 2900,
+      "supervised_tokens": 145,
+      "loss": 0.14455527067184448,
+      "seconds": 2.79001414499362
+    },
+    {
+      "record": 95,
+      "update": 12,
+      "record_group_kind": "reference_edit",
+      "tokens": 2017,
+      "supervised_tokens": 403,
+      "loss": 0.33549726009368896,
+      "seconds": 2.1240830100141466
+    },
+    {
+      "record": 96,
+      "update": 12,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2116,
+      "supervised_tokens": 34,
+      "loss": 0.009023794904351234,
+      "seconds": 2.0144605780078564
+    },
+    {
+      "record": 97,
+      "update": 13,
+      "record_group_kind": "reference_edit",
+      "tokens": 3070,
+      "supervised_tokens": 504,
+      "loss": 0.27610403299331665,
+      "seconds": 2.9550249859748874
+    },
+    {
+      "record": 98,
+      "update": 13,
+      "record_group_kind": "reference_edit",
+      "tokens": 1885,
+      "supervised_tokens": 154,
+      "loss": 0.2606050670146942,
+      "seconds": 1.7573967420030385
+    },
+    {
+      "record": 99,
+      "update": 13,
+      "record_group_kind": "reference_edit",
+      "tokens": 3931,
+      "supervised_tokens": 169,
+      "loss": 0.10018161684274673,
+      "seconds": 3.962646094005322
+    },
+    {
+      "record": 100,
+      "update": 13,
+      "record_group_kind": "reference_edit",
+      "tokens": 1724,
+      "supervised_tokens": 157,
+      "loss": 0.6779071688652039,
+      "seconds": 1.6053851949982345
+    },
+    {
+      "record": 101,
+      "update": 13,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2421,
+      "supervised_tokens": 34,
+      "loss": 0.015101129189133644,
+      "seconds": 2.33255373800057
+    },
+    {
+      "record": 102,
+      "update": 13,
+      "record_group_kind": "final_verification",
+      "tokens": 3813,
+      "supervised_tokens": 88,
+      "loss": 0.004064605105668306,
+      "seconds": 3.8320779660134576
+    },
+    {
+      "record": 103,
+      "update": 13,
+      "record_group_kind": "reference_edit",
+      "tokens": 1877,
+      "supervised_tokens": 265,
+      "loss": 0.6293171048164368,
+      "seconds": 1.9301144469936844
+    },
+    {
+      "record": 104,
+      "update": 13,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2580,
+      "supervised_tokens": 34,
+      "loss": 0.004380989354103804,
+      "seconds": 2.4764936460123863
+    },
+    {
+      "record": 105,
+      "update": 14,
+      "record_group_kind": "reference_edit",
+      "tokens": 4197,
+      "supervised_tokens": 262,
+      "loss": 0.32290956377983093,
+      "seconds": 4.255498013022589
+    },
+    {
+      "record": 106,
+      "update": 14,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2495,
+      "supervised_tokens": 34,
+      "loss": 0.0025370893999934196,
+      "seconds": 2.4290276300162077
+    },
+    {
+      "record": 107,
+      "update": 14,
+      "record_group_kind": "reference_edit",
+      "tokens": 2795,
+      "supervised_tokens": 161,
+      "loss": 0.28325605392456055,
+      "seconds": 2.6880076020024717
+    },
+    {
+      "record": 108,
+      "update": 14,
+      "record_group_kind": "final_verification",
+      "tokens": 2100,
+      "supervised_tokens": 71,
+      "loss": 0.014684168621897697,
+      "seconds": 1.9991486350190826
+    },
+    {
+      "record": 109,
+      "update": 14,
+      "record_group_kind": "reference_edit",
+      "tokens": 2299,
+      "supervised_tokens": 284,
+      "loss": 0.36696356534957886,
+      "seconds": 2.1758383179840166
+    },
+    {
+      "record": 110,
+      "update": 14,
+      "record_group_kind": "final_verification",
+      "tokens": 1700,
+      "supervised_tokens": 55,
+      "loss": 0.012460469268262386,
+      "seconds": 1.7742865799809806
+    },
+    {
+      "record": 111,
+      "update": 14,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1901,
+      "supervised_tokens": 34,
+      "loss": 0.004189710132777691,
+      "seconds": 1.7638054759881925
+    },
+    {
+      "record": 112,
+      "update": 14,
+      "record_group_kind": "reference_edit",
+      "tokens": 1823,
+      "supervised_tokens": 446,
+      "loss": 0.32462212443351746,
+      "seconds": 1.7195756480214186
+    },
+    {
+      "record": 113,
+      "update": 15,
+      "record_group_kind": "reference_edit",
+      "tokens": 1589,
+      "supervised_tokens": 241,
+      "loss": 0.5294439196586609,
+      "seconds": 1.4640470759768505
+    },
+    {
+      "record": 114,
+      "update": 15,
+      "record_group_kind": "reference_edit",
+      "tokens": 1557,
+      "supervised_tokens": 234,
+      "loss": 0.9567158222198486,
+      "seconds": 1.465296912996564
+    },
+    {
+      "record": 115,
+      "update": 15,
+      "record_group_kind": "reference_edit",
+      "tokens": 1383,
+      "supervised_tokens": 168,
+      "loss": 0.5619376301765442,
+      "seconds": 1.250713325018296
+    },
+    {
+      "record": 116,
+      "update": 15,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3706,
+      "supervised_tokens": 34,
+      "loss": 0.0070271603763103485,
+      "seconds": 3.668783981993329
+    },
+    {
+      "record": 117,
+      "update": 15,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1756,
+      "supervised_tokens": 34,
+      "loss": 0.037153154611587524,
+      "seconds": 1.8018125639937352
+    },
+    {
+      "record": 118,
+      "update": 15,
+      "record_group_kind": "final_verification",
+      "tokens": 1696,
+      "supervised_tokens": 55,
+      "loss": 0.011499936692416668,
+      "seconds": 1.5853482639940921
+    },
+    {
+      "record": 119,
+      "update": 15,
+      "record_group_kind": "reference_edit",
+      "tokens": 3362,
+      "supervised_tokens": 359,
+      "loss": 0.24097491800785065,
+      "seconds": 3.307784683012869
+    },
+    {
+      "record": 120,
+      "update": 15,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1910,
+      "supervised_tokens": 34,
+      "loss": 0.003510238602757454,
+      "seconds": 1.7455922920198645
+    },
+    {
+      "record": 121,
+      "update": 16,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1979,
+      "supervised_tokens": 34,
+      "loss": 0.040554460138082504,
+      "seconds": 1.8473436600179411
+    },
+    {
+      "record": 122,
+      "update": 16,
+      "record_group_kind": "final_verification",
+      "tokens": 2306,
+      "supervised_tokens": 120,
+      "loss": 0.011787817813456059,
+      "seconds": 2.2285710670112167
+    },
+    {
+      "record": 123,
+      "update": 16,
+      "record_group_kind": "final_verification",
+      "tokens": 2171,
+      "supervised_tokens": 142,
+      "loss": 0.005674215033650398,
+      "seconds": 2.070074712013593
+    },
+    {
+      "record": 124,
+      "update": 16,
+      "record_group_kind": "reference_edit",
+      "tokens": 3698,
+      "supervised_tokens": 479,
+      "loss": 0.8673862814903259,
+      "seconds": 3.7560605879989453
+    },
+    {
+      "record": 125,
+      "update": 16,
+      "record_group_kind": "reference_edit",
+      "tokens": 1504,
+      "supervised_tokens": 150,
+      "loss": 0.6426486968994141,
+      "seconds": 1.3685712250007782
+    },
+    {
+      "record": 126,
+      "update": 16,
+      "record_group_kind": "final_verification",
+      "tokens": 2045,
+      "supervised_tokens": 139,
+      "loss": 0.005957397632300854,
+      "seconds": 1.9054164520057384
+    },
+    {
+      "record": 127,
+      "update": 16,
+      "record_group_kind": "reference_edit",
+      "tokens": 1916,
+      "supervised_tokens": 171,
+      "loss": 0.4358710050582886,
+      "seconds": 1.7508200040028896
+    },
+    {
+      "record": 128,
+      "update": 16,
+      "record_group_kind": "final_verification",
+      "tokens": 1606,
+      "supervised_tokens": 71,
+      "loss": 0.022437462583184242,
+      "seconds": 1.4771577820065431
+    },
+    {
+      "record": 129,
+      "update": 17,
+      "record_group_kind": "final_verification",
+      "tokens": 3015,
+      "supervised_tokens": 55,
+      "loss": 0.0178921390324831,
+      "seconds": 2.9545224600005895
+    },
+    {
+      "record": 130,
+      "update": 17,
+      "record_group_kind": "reference_edit",
+      "tokens": 1361,
+      "supervised_tokens": 202,
+      "loss": 0.7546093463897705,
+      "seconds": 1.4569451250135899
+    },
+    {
+      "record": 131,
+      "update": 17,
+      "record_group_kind": "reference_edit",
+      "tokens": 2475,
+      "supervised_tokens": 144,
+      "loss": 0.13728976249694824,
+      "seconds": 2.414344101998722
+    },
+    {
+      "record": 132,
+      "update": 17,
+      "record_group_kind": "final_verification",
+      "tokens": 2977,
+      "supervised_tokens": 55,
+      "loss": 0.016616301611065865,
+      "seconds": 2.9462862470245454
+    },
+    {
+      "record": 133,
+      "update": 17,
+      "record_group_kind": "explicit_submission",
+      "tokens": 4189,
+      "supervised_tokens": 34,
+      "loss": 0.010882556438446045,
+      "seconds": 4.260083393979585
+    },
+    {
+      "record": 134,
+      "update": 17,
+      "record_group_kind": "final_verification",
+      "tokens": 1611,
+      "supervised_tokens": 86,
+      "loss": 0.009485958144068718,
+      "seconds": 1.4928521050023846
+    },
+    {
+      "record": 135,
+      "update": 17,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1406,
+      "supervised_tokens": 34,
+      "loss": 0.0015167363453656435,
+      "seconds": 1.2488550610141829
+    },
+    {
+      "record": 136,
+      "update": 17,
+      "record_group_kind": "reference_edit",
+      "tokens": 3165,
+      "supervised_tokens": 500,
+      "loss": 0.0639110654592514,
+      "seconds": 3.126666230993578
+    },
+    {
+      "record": 137,
+      "update": 18,
+      "record_group_kind": "reference_edit",
+      "tokens": 2017,
+      "supervised_tokens": 443,
+      "loss": 0.34859341382980347,
+      "seconds": 2.056964745017467
+    },
+    {
+      "record": 138,
+      "update": 18,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2174,
+      "supervised_tokens": 34,
+      "loss": 0.0025679911486804485,
+      "seconds": 2.03993365901988
+    },
+    {
+      "record": 139,
+      "update": 18,
+      "record_group_kind": "reference_edit",
+      "tokens": 1718,
+      "supervised_tokens": 241,
+      "loss": 0.6803121566772461,
+      "seconds": 1.597635642014211
+    },
+    {
+      "record": 140,
+      "update": 18,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1909,
+      "supervised_tokens": 34,
+      "loss": 0.0027445261366665363,
+      "seconds": 1.7659544140042271
+    },
+    {
+      "record": 141,
+      "update": 18,
+      "record_group_kind": "reference_edit",
+      "tokens": 2571,
+      "supervised_tokens": 474,
+      "loss": 0.2565295100212097,
+      "seconds": 2.498922187020071
+    },
+    {
+      "record": 142,
+      "update": 18,
+      "record_group_kind": "final_verification",
+      "tokens": 1935,
+      "supervised_tokens": 139,
+      "loss": 0.006129294168204069,
+      "seconds": 1.8410223230021074
+    },
+    {
+      "record": 143,
+      "update": 18,
+      "record_group_kind": "final_verification",
+      "tokens": 3665,
+      "supervised_tokens": 52,
+      "loss": 0.055146411061286926,
+      "seconds": 3.683077488996787
+    },
+    {
+      "record": 144,
+      "update": 18,
+      "record_group_kind": "reference_edit",
+      "tokens": 1531,
+      "supervised_tokens": 398,
+      "loss": 0.9710395932197571,
+      "seconds": 1.6149710919999052
+    },
+    {
+      "record": 145,
+      "update": 19,
+      "record_group_kind": "reference_edit",
+      "tokens": 1533,
+      "supervised_tokens": 165,
+      "loss": 0.7577071785926819,
+      "seconds": 1.388260226987768
+    },
+    {
+      "record": 146,
+      "update": 19,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1574,
+      "supervised_tokens": 34,
+      "loss": 0.014996937476098537,
+      "seconds": 1.4562947530066594
+    },
+    {
+      "record": 147,
+      "update": 19,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3105,
+      "supervised_tokens": 34,
+      "loss": 0.025186538696289062,
+      "seconds": 3.090006166981766
+    },
+    {
+      "record": 148,
+      "update": 19,
+      "record_group_kind": "reference_edit",
+      "tokens": 2668,
+      "supervised_tokens": 459,
+      "loss": 0.3369693160057068,
+      "seconds": 2.523657057026867
+    },
+    {
+      "record": 149,
+      "update": 19,
+      "record_group_kind": "final_verification",
+      "tokens": 1908,
+      "supervised_tokens": 55,
+      "loss": 0.01203680969774723,
+      "seconds": 1.7441039760014974
+    },
+    {
+      "record": 150,
+      "update": 19,
+      "record_group_kind": "final_verification",
+      "tokens": 3585,
+      "supervised_tokens": 63,
+      "loss": 0.016184039413928986,
+      "seconds": 3.626269420987228
+    },
+    {
+      "record": 151,
+      "update": 19,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2006,
+      "supervised_tokens": 34,
+      "loss": 0.01637796312570572,
+      "seconds": 2.0320040250080638
+    },
+    {
+      "record": 152,
+      "update": 19,
+      "record_group_kind": "reference_edit",
+      "tokens": 2488,
+      "supervised_tokens": 502,
+      "loss": 0.44766679406166077,
+      "seconds": 2.3838583900069352
+    },
+    {
+      "record": 153,
+      "update": 20,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2246,
+      "supervised_tokens": 34,
+      "loss": 0.009203883819282055,
+      "seconds": 2.093690206995234
+    },
+    {
+      "record": 154,
+      "update": 20,
+      "record_group_kind": "reference_edit",
+      "tokens": 3501,
+      "supervised_tokens": 410,
+      "loss": 0.35641226172447205,
+      "seconds": 3.5042195089918096
+    },
+    {
+      "record": 155,
+      "update": 20,
+      "record_group_kind": "reference_edit",
+      "tokens": 1453,
+      "supervised_tokens": 457,
+      "loss": 0.380421906709671,
+      "seconds": 1.3615442870068364
+    },
+    {
+      "record": 156,
+      "update": 20,
+      "record_group_kind": "final_verification",
+      "tokens": 2275,
+      "supervised_tokens": 58,
+      "loss": 0.005038934759795666,
+      "seconds": 2.158177507983055
+    },
+    {
+      "record": 157,
+      "update": 20,
+      "record_group_kind": "reference_edit",
+      "tokens": 1603,
+      "supervised_tokens": 169,
+      "loss": 0.3559831976890564,
+      "seconds": 1.4909400370088406
+    },
+    {
+      "record": 158,
+      "update": 20,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1941,
+      "supervised_tokens": 34,
+      "loss": 0.005197187885642052,
+      "seconds": 1.973672787018586
+    },
+    {
+      "record": 159,
+      "update": 20,
+      "record_group_kind": "reference_edit",
+      "tokens": 2138,
+      "supervised_tokens": 368,
+      "loss": 0.24434122443199158,
+      "seconds": 2.0200692760117818
+    },
+    {
+      "record": 160,
+      "update": 20,
+      "record_group_kind": "reference_edit",
+      "tokens": 4041,
+      "supervised_tokens": 484,
+      "loss": 0.04406683146953583,
+      "seconds": 4.09327953500906
+    },
+    {
+      "record": 161,
+      "update": 21,
+      "record_group_kind": "reference_edit",
+      "tokens": 2125,
+      "supervised_tokens": 509,
+      "loss": 0.5306101441383362,
+      "seconds": 2.022199584986083
+    },
+    {
+      "record": 162,
+      "update": 21,
+      "record_group_kind": "reference_edit",
+      "tokens": 3592,
+      "supervised_tokens": 216,
+      "loss": 0.42164328694343567,
+      "seconds": 3.578801897005178
+    },
+    {
+      "record": 163,
+      "update": 21,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2914,
+      "supervised_tokens": 34,
+      "loss": 0.0009242574451491237,
+      "seconds": 2.7855413149809465
+    },
+    {
+      "record": 164,
+      "update": 21,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1960,
+      "supervised_tokens": 34,
+      "loss": 0.002040807157754898,
+      "seconds": 1.8231712009874173
+    },
+    {
+      "record": 165,
+      "update": 21,
+      "record_group_kind": "final_verification",
+      "tokens": 1958,
+      "supervised_tokens": 141,
+      "loss": 0.007260869722813368,
+      "seconds": 1.9605395389953628
+    },
+    {
+      "record": 166,
+      "update": 21,
+      "record_group_kind": "reference_edit",
+      "tokens": 1476,
+      "supervised_tokens": 180,
+      "loss": 0.722644567489624,
+      "seconds": 1.354375697002979
+    },
+    {
+      "record": 167,
+      "update": 21,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2005,
+      "supervised_tokens": 34,
+      "loss": 0.0032755406573414803,
+      "seconds": 1.8804900179966353
+    },
+    {
+      "record": 168,
+      "update": 21,
+      "record_group_kind": "reference_edit",
+      "tokens": 2815,
+      "supervised_tokens": 495,
+      "loss": 0.2209547609090805,
+      "seconds": 2.6939583889907226
+    },
+    {
+      "record": 169,
+      "update": 22,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2986,
+      "supervised_tokens": 34,
+      "loss": 0.0004150293243583292,
+      "seconds": 2.888325951003935
+    },
+    {
+      "record": 170,
+      "update": 22,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3247,
+      "supervised_tokens": 34,
+      "loss": 0.00853384006768465,
+      "seconds": 3.22497044299962
+    },
+    {
+      "record": 171,
+      "update": 22,
+      "record_group_kind": "reference_edit",
+      "tokens": 1775,
+      "supervised_tokens": 168,
+      "loss": 0.3629889488220215,
+      "seconds": 1.6534713380096946
+    },
+    {
+      "record": 172,
+      "update": 22,
+      "record_group_kind": "final_verification",
+      "tokens": 1887,
+      "supervised_tokens": 130,
+      "loss": 0.006682373117655516,
+      "seconds": 1.923830730986083
+    },
+    {
+      "record": 173,
+      "update": 22,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2775,
+      "supervised_tokens": 34,
+      "loss": 0.017184706404805183,
+      "seconds": 2.667743383004563
+    },
+    {
+      "record": 174,
+      "update": 22,
+      "record_group_kind": "final_verification",
+      "tokens": 3029,
+      "supervised_tokens": 79,
+      "loss": 0.008169306442141533,
+      "seconds": 2.9771923329972196
+    },
+    {
+      "record": 175,
+      "update": 22,
+      "record_group_kind": "final_verification",
+      "tokens": 2093,
+      "supervised_tokens": 71,
+      "loss": 0.02536800503730774,
+      "seconds": 2.018381275993306
+    },
+    {
+      "record": 176,
+      "update": 22,
+      "record_group_kind": "reference_edit",
+      "tokens": 2858,
+      "supervised_tokens": 428,
+      "loss": 0.2615529000759125,
+      "seconds": 2.751403903006576
+    },
+    {
+      "record": 177,
+      "update": 23,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2062,
+      "supervised_tokens": 34,
+      "loss": 0.000681104080285877,
+      "seconds": 1.9519983450009022
+    },
+    {
+      "record": 178,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 1564,
+      "supervised_tokens": 165,
+      "loss": 0.5653582811355591,
+      "seconds": 1.4487934810167644
+    },
+    {
+      "record": 179,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 2769,
+      "supervised_tokens": 298,
+      "loss": 0.1608985960483551,
+      "seconds": 2.7923099090112373
+    },
+    {
+      "record": 180,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 1752,
+      "supervised_tokens": 203,
+      "loss": 0.5665551424026489,
+      "seconds": 1.6143338750116527
+    },
+    {
+      "record": 181,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 3008,
+      "supervised_tokens": 414,
+      "loss": 0.24656879901885986,
+      "seconds": 2.9138917720119935
+    },
+    {
+      "record": 182,
+      "update": 23,
+      "record_group_kind": "explicit_submission",
+      "tokens": 4251,
+      "supervised_tokens": 34,
+      "loss": 0.0013968137791380286,
+      "seconds": 4.3533753079827875
+    },
+    {
+      "record": 183,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 1314,
+      "supervised_tokens": 195,
+      "loss": 0.6474414467811584,
+      "seconds": 1.1945059940044302
+    },
+    {
+      "record": 184,
+      "update": 23,
+      "record_group_kind": "reference_edit",
+      "tokens": 2310,
+      "supervised_tokens": 151,
+      "loss": 0.10875710844993591,
+      "seconds": 2.2308244770101737
+    },
+    {
+      "record": 185,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 1202,
+      "supervised_tokens": 324,
+      "loss": 0.6460038423538208,
+      "seconds": 1.0845652649877593
+    },
+    {
+      "record": 186,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 3741,
+      "supervised_tokens": 196,
+      "loss": 0.1482805460691452,
+      "seconds": 3.853727751993574
+    },
+    {
+      "record": 187,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 1691,
+      "supervised_tokens": 194,
+      "loss": 0.3128889501094818,
+      "seconds": 1.6068151229992509
+    },
+    {
+      "record": 188,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 2545,
+      "supervised_tokens": 405,
+      "loss": 0.06431632488965988,
+      "seconds": 2.4556074450083543
+    },
+    {
+      "record": 189,
+      "update": 24,
+      "record_group_kind": "final_verification",
+      "tokens": 1216,
+      "supervised_tokens": 52,
+      "loss": 0.006694810464978218,
+      "seconds": 1.1058324059995357
+    },
+    {
+      "record": 190,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 2231,
+      "supervised_tokens": 480,
+      "loss": 0.42851319909095764,
+      "seconds": 2.1325511890172493
+    },
+    {
+      "record": 191,
+      "update": 24,
+      "record_group_kind": "reference_edit",
+      "tokens": 1832,
+      "supervised_tokens": 358,
+      "loss": 0.3479297459125519,
+      "seconds": 1.697961212019436
+    },
+    {
+      "record": 192,
+      "update": 24,
+      "record_group_kind": "final_verification",
+      "tokens": 1627,
+      "supervised_tokens": 55,
+      "loss": 0.013948388397693634,
+      "seconds": 1.5010948610142805
+    },
+    {
+      "record": 193,
+      "update": 25,
+      "record_group_kind": "reference_edit",
+      "tokens": 3914,
+      "supervised_tokens": 510,
+      "loss": 0.27829453349113464,
+      "seconds": 3.877713075984502
+    },
+    {
+      "record": 194,
+      "update": 25,
+      "record_group_kind": "final_verification",
+      "tokens": 2704,
+      "supervised_tokens": 139,
+      "loss": 0.000991583219729364,
+      "seconds": 2.732494249008596
+    },
+    {
+      "record": 195,
+      "update": 25,
+      "record_group_kind": "reference_edit",
+      "tokens": 2993,
+      "supervised_tokens": 510,
+      "loss": 0.43659937381744385,
+      "seconds": 2.9504774500092026
+    },
+    {
+      "record": 196,
+      "update": 25,
+      "record_group_kind": "reference_edit",
+      "tokens": 2901,
+      "supervised_tokens": 336,
+      "loss": 0.2317543476819992,
+      "seconds": 2.816497363994131
+    },
+    {
+      "record": 197,
+      "update": 25,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2110,
+      "supervised_tokens": 34,
+      "loss": 0.0004345343913882971,
+      "seconds": 2.000693309993949
+    },
+    {
+      "record": 198,
+      "update": 25,
+      "record_group_kind": "reference_edit",
+      "tokens": 1595,
+      "supervised_tokens": 173,
+      "loss": 0.18903033435344696,
+      "seconds": 1.48360991498339
+    },
+    {
+      "record": 199,
+      "update": 25,
+      "record_group_kind": "final_verification",
+      "tokens": 1906,
+      "supervised_tokens": 55,
+      "loss": 0.006434575654566288,
+      "seconds": 1.7421594409970567
+    },
+    {
+      "record": 200,
+      "update": 25,
+      "record_group_kind": "reference_edit",
+      "tokens": 1550,
+      "supervised_tokens": 202,
+      "loss": 0.4786263704299927,
+      "seconds": 1.4423678109887987
+    },
+    {
+      "record": 201,
+      "update": 26,
+      "record_group_kind": "reference_edit",
+      "tokens": 2076,
+      "supervised_tokens": 512,
+      "loss": 0.49874597787857056,
+      "seconds": 2.1765997699985746
+    },
+    {
+      "record": 202,
+      "update": 26,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3031,
+      "supervised_tokens": 34,
+      "loss": 0.002345762215554714,
+      "seconds": 2.9778908039734233
+    },
+    {
+      "record": 203,
+      "update": 26,
+      "record_group_kind": "final_verification",
+      "tokens": 1623,
+      "supervised_tokens": 71,
+      "loss": 0.02199849672615528,
+      "seconds": 1.500153903994942
+    },
+    {
+      "record": 204,
+      "update": 26,
+      "record_group_kind": "reference_edit",
+      "tokens": 1413,
+      "supervised_tokens": 243,
+      "loss": 0.9321044087409973,
+      "seconds": 1.3364713400078472
+    },
+    {
+      "record": 205,
+      "update": 26,
+      "record_group_kind": "reference_edit",
+      "tokens": 2382,
+      "supervised_tokens": 434,
+      "loss": 0.5267941355705261,
+      "seconds": 2.270899194991216
+    },
+    {
+      "record": 206,
+      "update": 26,
+      "record_group_kind": "reference_edit",
+      "tokens": 2058,
+      "supervised_tokens": 346,
+      "loss": 0.3669474422931671,
+      "seconds": 1.9695903650135733
+    },
+    {
+      "record": 207,
+      "update": 26,
+      "record_group_kind": "final_verification",
+      "tokens": 1665,
+      "supervised_tokens": 55,
+      "loss": 0.00868846196681261,
+      "seconds": 1.591945771011524
+    },
+    {
+      "record": 208,
+      "update": 26,
+      "record_group_kind": "reference_edit",
+      "tokens": 1416,
+      "supervised_tokens": 242,
+      "loss": 0.7475308775901794,
+      "seconds": 1.5383595610037446
+    },
+    {
+      "record": 209,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 3033,
+      "supervised_tokens": 484,
+      "loss": 0.09021907299757004,
+      "seconds": 2.9625084219733253
+    },
+    {
+      "record": 210,
+      "update": 27,
+      "record_group_kind": "final_verification",
+      "tokens": 3920,
+      "supervised_tokens": 56,
+      "loss": 0.022876588627696037,
+      "seconds": 3.890332385984948
+    },
+    {
+      "record": 211,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 3427,
+      "supervised_tokens": 181,
+      "loss": 0.24910390377044678,
+      "seconds": 3.389490442001261
+    },
+    {
+      "record": 212,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 2605,
+      "supervised_tokens": 494,
+      "loss": 0.385272741317749,
+      "seconds": 2.5161711260152515
+    },
+    {
+      "record": 213,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 1624,
+      "supervised_tokens": 337,
+      "loss": 0.48390164971351624,
+      "seconds": 1.481275774014648
+    },
+    {
+      "record": 214,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 1652,
+      "supervised_tokens": 192,
+      "loss": 0.676138162612915,
+      "seconds": 1.4979903270141222
+    },
+    {
+      "record": 215,
+      "update": 27,
+      "record_group_kind": "reference_edit",
+      "tokens": 1690,
+      "supervised_tokens": 237,
+      "loss": 0.6707977652549744,
+      "seconds": 1.7920803710003383
+    },
+    {
+      "record": 216,
+      "update": 27,
+      "record_group_kind": "final_verification",
+      "tokens": 1766,
+      "supervised_tokens": 55,
+      "loss": 0.010003151372075081,
+      "seconds": 1.6243473350186832
+    },
+    {
+      "record": 217,
+      "update": 28,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3178,
+      "supervised_tokens": 34,
+      "loss": 0.0033249761909246445,
+      "seconds": 3.076773092005169
+    },
+    {
+      "record": 218,
+      "update": 28,
+      "record_group_kind": "final_verification",
+      "tokens": 3891,
+      "supervised_tokens": 63,
+      "loss": 0.023827530443668365,
+      "seconds": 3.9206477949919645
+    },
+    {
+      "record": 219,
+      "update": 28,
+      "record_group_kind": "reference_edit",
+      "tokens": 2165,
+      "supervised_tokens": 236,
+      "loss": 0.23227989673614502,
+      "seconds": 2.0638505310053006
+    },
+    {
+      "record": 220,
+      "update": 28,
+      "record_group_kind": "final_verification",
+      "tokens": 4008,
+      "supervised_tokens": 56,
+      "loss": 0.004681657999753952,
+      "seconds": 4.00970161400619
+    },
+    {
+      "record": 221,
+      "update": 28,
+      "record_group_kind": "final_verification",
+      "tokens": 3088,
+      "supervised_tokens": 59,
+      "loss": 0.030261246487498283,
+      "seconds": 3.0310149440192617
+    },
+    {
+      "record": 222,
+      "update": 28,
+      "record_group_kind": "final_verification",
+      "tokens": 2149,
+      "supervised_tokens": 161,
+      "loss": 0.00546454219147563,
+      "seconds": 2.14861293399008
+    },
+    {
+      "record": 223,
+      "update": 28,
+      "record_group_kind": "reference_edit",
+      "tokens": 2827,
+      "supervised_tokens": 235,
+      "loss": 0.2499431073665619,
+      "seconds": 2.770101108995732
+    },
+    {
+      "record": 224,
+      "update": 28,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2518,
+      "supervised_tokens": 34,
+      "loss": 0.00439783139154315,
+      "seconds": 2.40768822300015
+    },
+    {
+      "record": 225,
+      "update": 29,
+      "record_group_kind": "final_verification",
+      "tokens": 2290,
+      "supervised_tokens": 55,
+      "loss": 0.008154233917593956,
+      "seconds": 2.1148851230100263
+    },
+    {
+      "record": 226,
+      "update": 29,
+      "record_group_kind": "reference_edit",
+      "tokens": 3355,
+      "supervised_tokens": 476,
+      "loss": 0.28235065937042236,
+      "seconds": 3.341057245997945
+    },
+    {
+      "record": 227,
+      "update": 29,
+      "record_group_kind": "final_verification",
+      "tokens": 5555,
+      "supervised_tokens": 291,
+      "loss": 0.0025413709226995707,
+      "seconds": 5.85791442997288
+    },
+    {
+      "record": 228,
+      "update": 29,
+      "record_group_kind": "final_verification",
+      "tokens": 3099,
+      "supervised_tokens": 55,
+      "loss": 0.009563405066728592,
+      "seconds": 3.0815283639822155
+    },
+    {
+      "record": 229,
+      "update": 29,
+      "record_group_kind": "final_verification",
+      "tokens": 1448,
+      "supervised_tokens": 55,
+      "loss": 0.005909801460802555,
+      "seconds": 1.460117699985858
+    },
+    {
+      "record": 230,
+      "update": 29,
+      "record_group_kind": "reference_edit",
+      "tokens": 3248,
+      "supervised_tokens": 296,
+      "loss": 0.2534556984901428,
+      "seconds": 3.1789403989969287
+    },
+    {
+      "record": 231,
+      "update": 29,
+      "record_group_kind": "final_verification",
+      "tokens": 2648,
+      "supervised_tokens": 62,
+      "loss": 0.004241152200847864,
+      "seconds": 2.507693608000409
+    },
+    {
+      "record": 232,
+      "update": 29,
+      "record_group_kind": "reference_edit",
+      "tokens": 1736,
+      "supervised_tokens": 373,
+      "loss": 0.6105725169181824,
+      "seconds": 1.6064737240085378
+    },
+    {
+      "record": 233,
+      "update": 30,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2163,
+      "supervised_tokens": 34,
+      "loss": 0.0009994924766942859,
+      "seconds": 2.0426618630008306
+    },
+    {
+      "record": 234,
+      "update": 30,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3888,
+      "supervised_tokens": 34,
+      "loss": 0.0005266119842417538,
+      "seconds": 3.8756567880045623
+    },
+    {
+      "record": 235,
+      "update": 30,
+      "record_group_kind": "reference_edit",
+      "tokens": 4530,
+      "supervised_tokens": 468,
+      "loss": 0.06670088320970535,
+      "seconds": 4.617766581010073
+    },
+    {
+      "record": 236,
+      "update": 30,
+      "record_group_kind": "reference_edit",
+      "tokens": 1710,
+      "supervised_tokens": 224,
+      "loss": 0.6241771578788757,
+      "seconds": 1.5907051359827165
+    },
+    {
+      "record": 237,
+      "update": 30,
+      "record_group_kind": "reference_edit",
+      "tokens": 2630,
+      "supervised_tokens": 405,
+      "loss": 0.5200312733650208,
+      "seconds": 2.6202381199982483
+    },
+    {
+      "record": 238,
+      "update": 30,
+      "record_group_kind": "final_verification",
+      "tokens": 2455,
+      "supervised_tokens": 52,
+      "loss": 0.0020880913361907005,
+      "seconds": 2.4026967200043146
+    },
+    {
+      "record": 239,
+      "update": 30,
+      "record_group_kind": "reference_edit",
+      "tokens": 3807,
+      "supervised_tokens": 424,
+      "loss": 0.2711898386478424,
+      "seconds": 3.8136243690096308
+    },
+    {
+      "record": 240,
+      "update": 30,
+      "record_group_kind": "reference_edit",
+      "tokens": 2544,
+      "supervised_tokens": 221,
+      "loss": 0.28679922223091125,
+      "seconds": 2.4164888710074592
+    },
+    {
+      "record": 241,
+      "update": 31,
+      "record_group_kind": "reference_edit",
+      "tokens": 1522,
+      "supervised_tokens": 382,
+      "loss": 0.30394601821899414,
+      "seconds": 1.363492309988942
+    },
+    {
+      "record": 242,
+      "update": 31,
+      "record_group_kind": "final_verification",
+      "tokens": 1825,
+      "supervised_tokens": 147,
+      "loss": 0.003882288234308362,
+      "seconds": 1.7171774129965343
+    },
+    {
+      "record": 243,
+      "update": 31,
+      "record_group_kind": "final_verification",
+      "tokens": 1486,
+      "supervised_tokens": 82,
+      "loss": 0.006251409184187651,
+      "seconds": 1.3610686349857133
+    },
+    {
+      "record": 244,
+      "update": 31,
+      "record_group_kind": "reference_edit",
+      "tokens": 5715,
+      "supervised_tokens": 508,
+      "loss": 0.16187094151973724,
+      "seconds": 6.050430745002814
+    },
+    {
+      "record": 245,
+      "update": 31,
+      "record_group_kind": "reference_edit",
+      "tokens": 1504,
+      "supervised_tokens": 169,
+      "loss": 0.30932003259658813,
+      "seconds": 1.3663390260189772
+    },
+    {
+      "record": 246,
+      "update": 31,
+      "record_group_kind": "reference_edit",
+      "tokens": 1514,
+      "supervised_tokens": 169,
+      "loss": 0.3358982801437378,
+      "seconds": 1.378254609007854
+    },
+    {
+      "record": 247,
+      "update": 31,
+      "record_group_kind": "final_verification",
+      "tokens": 2751,
+      "supervised_tokens": 100,
+      "loss": 0.006700826343148947,
+      "seconds": 2.6566015669959597
+    },
+    {
+      "record": 248,
+      "update": 31,
+      "record_group_kind": "final_verification",
+      "tokens": 1851,
+      "supervised_tokens": 139,
+      "loss": 0.003693157806992531,
+      "seconds": 1.7317754520045128
+    },
+    {
+      "record": 249,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 3611,
+      "supervised_tokens": 163,
+      "loss": 0.226552814245224,
+      "seconds": 3.6255879609961994
+    },
+    {
+      "record": 250,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 4900,
+      "supervised_tokens": 381,
+      "loss": 0.5882655382156372,
+      "seconds": 5.063628020026954
+    },
+    {
+      "record": 251,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 3198,
+      "supervised_tokens": 197,
+      "loss": 0.4846734404563904,
+      "seconds": 3.105801602010615
+    },
+    {
+      "record": 252,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 2409,
+      "supervised_tokens": 467,
+      "loss": 0.4784756898880005,
+      "seconds": 2.472369830997195
+    },
+    {
+      "record": 253,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 5243,
+      "supervised_tokens": 166,
+      "loss": 0.14327922463417053,
+      "seconds": 5.481771594990278
+    },
+    {
+      "record": 254,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 2565,
+      "supervised_tokens": 409,
+      "loss": 0.2566678524017334,
+      "seconds": 2.4909490330028348
+    },
+    {
+      "record": 255,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 1657,
+      "supervised_tokens": 205,
+      "loss": 0.47797808051109314,
+      "seconds": 1.5174920779827517
+    },
+    {
+      "record": 256,
+      "update": 32,
+      "record_group_kind": "reference_edit",
+      "tokens": 1941,
+      "supervised_tokens": 512,
+      "loss": 0.3081340789794922,
+      "seconds": 1.8441999909991864
+    },
+    {
+      "record": 257,
+      "update": 33,
+      "record_group_kind": "reference_edit",
+      "tokens": 1796,
+      "supervised_tokens": 211,
+      "loss": 0.5767424702644348,
+      "seconds": 1.660879175993614
+    },
+    {
+      "record": 258,
+      "update": 33,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3016,
+      "supervised_tokens": 34,
+      "loss": 0.0002246605872642249,
+      "seconds": 2.920899906021077
+    },
+    {
+      "record": 259,
+      "update": 33,
+      "record_group_kind": "reference_edit",
+      "tokens": 2544,
+      "supervised_tokens": 478,
+      "loss": 0.2535216808319092,
+      "seconds": 2.5210414409812074
+    },
+    {
+      "record": 260,
+      "update": 33,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2142,
+      "supervised_tokens": 34,
+      "loss": 0.001294023240916431,
+      "seconds": 2.0201687779917847
+    },
+    {
+      "record": 261,
+      "update": 33,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1969,
+      "supervised_tokens": 34,
+      "loss": 0.00042730034328997135,
+      "seconds": 1.8586798830074258
+    },
+    {
+      "record": 262,
+      "update": 33,
+      "record_group_kind": "reference_edit",
+      "tokens": 5136,
+      "supervised_tokens": 243,
+      "loss": 0.23571541905403137,
+      "seconds": 5.3338832310109865
+    },
+    {
+      "record": 263,
+      "update": 33,
+      "record_group_kind": "reference_edit",
+      "tokens": 1986,
+      "supervised_tokens": 217,
+      "loss": 0.44223761558532715,
+      "seconds": 1.8430342199862935
+    },
+    {
+      "record": 264,
+      "update": 33,
+      "record_group_kind": "final_verification",
+      "tokens": 2955,
+      "supervised_tokens": 139,
+      "loss": 0.00023027026327326894,
+      "seconds": 2.9316442160052247
+    },
+    {
+      "record": 265,
+      "update": 34,
+      "record_group_kind": "final_verification",
+      "tokens": 1626,
+      "supervised_tokens": 55,
+      "loss": 0.008049518801271915,
+      "seconds": 1.4638745190168265
+    },
+    {
+      "record": 266,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 1569,
+      "supervised_tokens": 168,
+      "loss": 0.47340673208236694,
+      "seconds": 1.469023643003311
+    },
+    {
+      "record": 267,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 2090,
+      "supervised_tokens": 472,
+      "loss": 0.3643050193786621,
+      "seconds": 2.11869424500037
+    },
+    {
+      "record": 268,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 3524,
+      "supervised_tokens": 510,
+      "loss": 0.30226218700408936,
+      "seconds": 3.4779338119842578
+    },
+    {
+      "record": 269,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 2001,
+      "supervised_tokens": 169,
+      "loss": 0.2931464910507202,
+      "seconds": 1.8804092099890113
+    },
+    {
+      "record": 270,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 1143,
+      "supervised_tokens": 219,
+      "loss": 0.5045022964477539,
+      "seconds": 1.020753368997248
+    },
+    {
+      "record": 271,
+      "update": 34,
+      "record_group_kind": "final_verification",
+      "tokens": 5798,
+      "supervised_tokens": 62,
+      "loss": 0.007144259754568338,
+      "seconds": 6.063128565001534
+    },
+    {
+      "record": 272,
+      "update": 34,
+      "record_group_kind": "reference_edit",
+      "tokens": 2982,
+      "supervised_tokens": 356,
+      "loss": 0.2556152641773224,
+      "seconds": 2.9046831039886456
+    },
+    {
+      "record": 273,
+      "update": 35,
+      "record_group_kind": "reference_edit",
+      "tokens": 1891,
+      "supervised_tokens": 437,
+      "loss": 0.243379145860672,
+      "seconds": 1.7365832659997977
+    },
+    {
+      "record": 274,
+      "update": 35,
+      "record_group_kind": "reference_edit",
+      "tokens": 1886,
+      "supervised_tokens": 495,
+      "loss": 0.45109033584594727,
+      "seconds": 1.7313320070097689
+    },
+    {
+      "record": 275,
+      "update": 35,
+      "record_group_kind": "reference_edit",
+      "tokens": 5056,
+      "supervised_tokens": 504,
+      "loss": 0.6524319648742676,
+      "seconds": 5.268674683989957
+    },
+    {
+      "record": 276,
+      "update": 35,
+      "record_group_kind": "explicit_submission",
+      "tokens": 2029,
+      "supervised_tokens": 34,
+      "loss": 0.001412582932971418,
+      "seconds": 1.8927356509957463
+    },
+    {
+      "record": 277,
+      "update": 35,
+      "record_group_kind": "reference_edit",
+      "tokens": 2135,
+      "supervised_tokens": 499,
+      "loss": 0.2563788592815399,
+      "seconds": 2.0461828040133696
+    },
+    {
+      "record": 278,
+      "update": 35,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1905,
+      "supervised_tokens": 34,
+      "loss": 0.00025114798336289823,
+      "seconds": 1.762706130015431
+    },
+    {
+      "record": 279,
+      "update": 35,
+      "record_group_kind": "reference_edit",
+      "tokens": 4001,
+      "supervised_tokens": 282,
+      "loss": 0.4607780873775482,
+      "seconds": 4.061231550003868
+    },
+    {
+      "record": 280,
+      "update": 35,
+      "record_group_kind": "final_verification",
+      "tokens": 1906,
+      "supervised_tokens": 62,
+      "loss": 0.003949345555156469,
+      "seconds": 1.7407667730003595
+    },
+    {
+      "record": 281,
+      "update": 36,
+      "record_group_kind": "final_verification",
+      "tokens": 2912,
+      "supervised_tokens": 64,
+      "loss": 0.011537316255271435,
+      "seconds": 2.759790771000553
+    },
+    {
+      "record": 282,
+      "update": 36,
+      "record_group_kind": "final_verification",
+      "tokens": 1481,
+      "supervised_tokens": 52,
+      "loss": 0.0028013831470161676,
+      "seconds": 1.3771721609809902
+    },
+    {
+      "record": 283,
+      "update": 36,
+      "record_group_kind": "final_verification",
+      "tokens": 4272,
+      "supervised_tokens": 54,
+      "loss": 0.038835808634757996,
+      "seconds": 4.306297843984794
+    },
+    {
+      "record": 284,
+      "update": 36,
+      "record_group_kind": "explicit_submission",
+      "tokens": 3978,
+      "supervised_tokens": 34,
+      "loss": 0.0009262781823053956,
+      "seconds": 4.1102929940097965
+    },
+    {
+      "record": 285,
+      "update": 36,
+      "record_group_kind": "reference_edit",
+      "tokens": 3023,
+      "supervised_tokens": 187,
+      "loss": 0.08500698208808899,
+      "seconds": 2.9747740239836276
+    },
+    {
+      "record": 286,
+      "update": 36,
+      "record_group_kind": "explicit_submission",
+      "tokens": 1900,
+      "supervised_tokens": 34,
+      "loss": 0.0008761348435655236,
+      "seconds": 1.7386971839878242
+    },
+    {
+      "record": 287,
+      "update": 36,
+      "record_group_kind": "reference_edit",
+      "tokens": 1408,
+      "supervised_tokens": 235,
+      "loss": 0.4615590274333954,
+      "seconds": 1.2465559790143743
+    }
+  ],
+  "updates": [
+    {
+      "step": 1,
+      "records": 8,
+      "grad_norm": 0.1289101243019104,
+      "learning_rate": 1e-05,
+      "seconds": 19.476464834006038
+    },
+    {
+      "step": 2,
+      "records": 8,
+      "grad_norm": 0.3873227834701538,
+      "learning_rate": 1e-05,
+      "seconds": 21.857825926999794
+    },
+    {
+      "step": 3,
+      "records": 8,
+      "grad_norm": 0.3193393647670746,
+      "learning_rate": 1e-05,
+      "seconds": 24.157075882016215
+    },
+    {
+      "step": 4,
+      "records": 8,
+      "grad_norm": 0.31342431902885437,
+      "learning_rate": 1e-05,
+      "seconds": 21.945898735983064
+    },
+    {
+      "step": 5,
+      "records": 8,
+      "grad_norm": 0.4377646744251251,
+      "learning_rate": 1e-05,
+      "seconds": 20.25774324897793
+    },
+    {
+      "step": 6,
+      "records": 8,
+      "grad_norm": 0.28984421491622925,
+      "learning_rate": 1e-05,
+      "seconds": 25.246083122998243
+    },
+    {
+      "step": 7,
+      "records": 8,
+      "grad_norm": 0.3852607011795044,
+      "learning_rate": 1e-05,
+      "seconds": 18.383828621997964
+    },
+    {
+      "step": 8,
+      "records": 8,
+      "grad_norm": 0.2365475296974182,
+      "learning_rate": 1e-05,
+      "seconds": 18.913162821001606
+    },
+    {
+      "step": 9,
+      "records": 8,
+      "grad_norm": 0.1891065388917923,
+      "learning_rate": 1e-05,
+      "seconds": 24.98118626300129
+    },
+    {
+      "step": 10,
+      "records": 8,
+      "grad_norm": 0.24070724844932556,
+      "learning_rate": 1e-05,
+      "seconds": 19.812977513007354
+    },
+    {
+      "step": 11,
+      "records": 8,
+      "grad_norm": 0.38966599106788635,
+      "learning_rate": 1e-05,
+      "seconds": 18.39142316899961
+    },
+    {
+      "step": 12,
+      "records": 8,
+      "grad_norm": 0.21431328356266022,
+      "learning_rate": 1e-05,
+      "seconds": 17.826867177995155
+    },
+    {
+      "step": 13,
+      "records": 8,
+      "grad_norm": 0.2678270637989044,
+      "learning_rate": 1e-05,
+      "seconds": 21.000267155992333
+    },
+    {
+      "step": 14,
+      "records": 8,
+      "grad_norm": 0.23740272223949432,
+      "learning_rate": 1e-05,
+      "seconds": 18.939779084001202
+    },
+    {
+      "step": 15,
+      "records": 8,
+      "grad_norm": 0.44701647758483887,
+      "learning_rate": 1e-05,
+      "seconds": 16.42651156100328
+    },
+    {
+      "step": 16,
+      "records": 8,
+      "grad_norm": 0.2646292746067047,
+      "learning_rate": 1e-05,
+      "seconds": 16.532353165006498
+    },
+    {
+      "step": 17,
+      "records": 8,
+      "grad_norm": 0.17113687098026276,
+      "learning_rate": 1e-05,
+      "seconds": 20.02167261199793
+    },
+    {
+      "step": 18,
+      "records": 8,
+      "grad_norm": 0.204726904630661,
+      "learning_rate": 1e-05,
+      "seconds": 17.22056543600047
+    },
+    {
+      "step": 19,
+      "records": 8,
+      "grad_norm": 0.27647146582603455,
+      "learning_rate": 1e-05,
+      "seconds": 18.367777365026996
+    },
+    {
+      "step": 20,
+      "records": 8,
+      "grad_norm": 0.2634184658527374,
+      "learning_rate": 1e-05,
+      "seconds": 18.82392685499508
+    },
+    {
+      "step": 21,
+      "records": 8,
+      "grad_norm": 0.2821379601955414,
+      "learning_rate": 1e-05,
+      "seconds": 18.231466138007818
+    },
+    {
+      "step": 22,
+      "records": 8,
+      "grad_norm": 0.15839575231075287,
+      "learning_rate": 1e-05,
+      "seconds": 20.236813940980937
+    },
+    {
+      "step": 23,
+      "records": 8,
+      "grad_norm": 0.371836394071579,
+      "learning_rate": 1e-05,
+      "seconds": 18.632026152976323
+    },
+    {
+      "step": 24,
+      "records": 8,
+      "grad_norm": 0.31138503551483154,
+      "learning_rate": 1e-05,
+      "seconds": 15.570339502999559
+    },
+    {
+      "step": 25,
+      "records": 8,
+      "grad_norm": 0.23523283004760742,
+      "learning_rate": 1e-05,
+      "seconds": 19.180102423997596
+    },
+    {
+      "step": 26,
+      "records": 8,
+      "grad_norm": 0.420672208070755,
+      "learning_rate": 1e-05,
+      "seconds": 15.496147805009969
+    },
+    {
+      "step": 27,
+      "records": 8,
+      "grad_norm": 0.32155659794807434,
+      "learning_rate": 1e-05,
+      "seconds": 19.30781175100128
+    },
+    {
+      "step": 28,
+      "records": 8,
+      "grad_norm": 0.16468146443367004,
+      "learning_rate": 1e-05,
+      "seconds": 23.5486795049801
+    },
+    {
+      "step": 29,
+      "records": 8,
+      "grad_norm": 0.13115397095680237,
+      "learning_rate": 1e-05,
+      "seconds": 23.267543983005453
+    },
+    {
+      "step": 30,
+      "records": 8,
+      "grad_norm": 0.2091810405254364,
+      "learning_rate": 1e-05,
+      "seconds": 23.500472207000712
+    },
+    {
+      "step": 31,
+      "records": 8,
+      "grad_norm": 0.24873918294906616,
+      "learning_rate": 1e-05,
+      "seconds": 17.754183459008345
+    },
+    {
+      "step": 32,
+      "records": 8,
+      "grad_norm": 0.3358477056026459,
+      "learning_rate": 1e-05,
+      "seconds": 25.72840871399967
+    },
+    {
+      "step": 33,
+      "records": 8,
+      "grad_norm": 0.2183987945318222,
+      "learning_rate": 1e-05,
+      "seconds": 21.223422968992963
+    },
+    {
+      "step": 34,
+      "records": 8,
+      "grad_norm": 0.2761783301830292,
+      "learning_rate": 1e-05,
+      "seconds": 20.527551025006687
+    },
+    {
+      "step": 35,
+      "records": 8,
+      "grad_norm": 0.22530251741409302,
+      "learning_rate": 1e-05,
+      "seconds": 20.375624560023425
+    },
+    {
+      "step": 36,
+      "records": 7,
+      "grad_norm": 0.19576813280582428,
+      "learning_rate": 1e-05,
+      "seconds": 18.634779554005945
+    }
+  ],
+  "hardware": {
+    "samples": 158,
+    "collector": {
+      "samples": 158,
+      "errors": 0,
+      "thread_stopped": true
+    },
+    "interval_seconds": 5,
+    "first_to_last_seconds": 793.543447971344,
+    "maximum_gap_seconds": 5.858607053756714,
+    "pipeline_seconds": 797.8252611160278,
+    "first_sample_delay_seconds": 0.06812548637390137,
+    "last_sample_to_finish_seconds": 4.2136876583099365,
+    "temperature_c": {
+      "mean": 54.88607594936709,
+      "maximum": 71.0
+    },
+    "power_w": {
+      "mean": 453.95208860759493,
+      "maximum": 510.49
+    },
+    "utilization_percent": {
+      "mean": 89.22784810126582,
+      "maximum": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 78404.79113924051,
+      "maximum": 92107.0
+    },
+    "sampled_gpu_energy_kwh": 0.1004560476330168,
+    "energy_scope": "GPU-only sampled trapezoid estimate, includes loading; not wall electricity"
+  },
+  "weights_public": false,
+  "final_test_opened": false
+}

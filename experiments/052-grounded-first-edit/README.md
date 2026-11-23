@@ -8,4 +8,6 @@
 
 通过采集门槛后，按 051 的 27B 底座和 BF16 LoRA 配方冻结了 287 个监督动作和 36 次参数更新。本轮可以检验这组示范是否提高任务通过率。要单独测量源码可见性的作用，需要让两个训练组使用同一批示范。
 
-[采集结果与曲线](results/2026-11-24-collection/) · [训练登记](training-registration.json)
+[采集结果与曲线](results/2026-11-24-collection/) · [训练登记](training-registration.json) · [训练结果与曲线](results/2026-11-24-training/)
+
+在仓库根目录运行 `PYTHONPATH=. python experiments/052-grounded-first-edit/report.py experiments/052-grounded-first-edit/results/2026-11-24-training`，即可用公开测量重新生成训练曲线。绘图需要 Matplotlib。
