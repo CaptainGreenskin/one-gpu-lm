@@ -11,3 +11,5 @@
 [采集结果与曲线](results/2026-11-24-collection/) · [训练登记](training-registration.json) · [训练结果与曲线](results/2026-11-24-training/)
 
 在仓库根目录运行 `PYTHONPATH=. python experiments/052-grounded-first-edit/report.py experiments/052-grounded-first-edit/results/2026-11-24-training`，即可用公开测量重新生成训练曲线。绘图需要 Matplotlib。
+
+开发对照用六个独立仓库家族的 60 道题，Python 和 JavaScript 各 30 道。每题做三组配对，底座和 LoRA 使用相同的首条工具反馈、调用和 token 预算。沿用 051 的通过率门槛。 [开发验收规则](development-design.json)
