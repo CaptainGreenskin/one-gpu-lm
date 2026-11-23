@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "experiment": "049-guided-repair-suffix",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "intake_sha256": "073fd6925d9b7d998448b3801c6f07a0b588b5f359f89bc08546b761a42f160c",
+  "tokenizer_replay_sha256": "d1ebcc5877c0d09f2194cad49d8eb6002a0aa89d4c42c9480aa5378b570d4a17",
+  "training_states": 13,
+  "training_families": 5,
+  "consumed_calls": 6,
+  "remaining_calls": 6,
+  "max_generated_tokens_per_call": 512,
+  "guide": "Use the editable source and failure already visible to make the smallest supported source edit now. Run the declared regression as a standalone tool call. If it fails, revise the edit and rerun it. Submit after the regression passes.",
+  "collection_gate": {
+    "minimum_qualified_episodes": 4,
+    "minimum_qualified_families": 3,
+    "minimum_net_paired_wins": 1
+  },
+  "pipeline_seconds": 24000,
+  "recovery_seconds_per_request": 120,
+  "training_only": true,
+  "final_test_opened": false,
+  "weights_public": false
+}
