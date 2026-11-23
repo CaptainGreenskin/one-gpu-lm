@@ -119,16 +119,30 @@ def replay(directory, trace, task, protocol, profile, tokenizer, normalizer):
 def recorded_grade(root, data, directory, task, source, before, destination):
     """Reconstruct recorded grader input, never rerun test commands."""
     snapshot=Path(data)/'snapshots'/task['source_id']
+    directory = Path(directory)
+
     def recorded_execute(workspace,command):
-        if command!=task['grading_command'] or files(workspace)!=files(Path(directory)/'grader'):
+        trace_path = directory/'trajectory.json'
+        trace = json.loads(trace_path.read_bytes()) if trace_path.is_file() else {}
+        receipt = directory/'grader-input.json'
+        if 'grader_input_sha256' in trace or receipt.exists() or receipt.is_symlink():
+            if receipt.is_symlink() or not receipt.is_file():
+                raise ValueError('Missing or unsafe recorded grader input')
+            payload = receipt.read_bytes()
+            if digest(payload)!=trace.get('grader_input_sha256'):
+                raise ValueError('Recorded grader input differs from its trajectory checksum')
+            recorded = json.loads(payload)
+        else:
+            recorded = files(directory/'grader')
+        if command!=task['grading_command'] or files(workspace)!=recorded:
             raise ValueError('Actual independent grader files differ from the submitted patch and frozen checks')
-        return json.loads((Path(directory)/'grader-output.json').read_text())
+        return json.loads((directory/'grader-output.json').read_text())
     try:
-        return grade(snapshot,destination,source,task,Path(directory)/'workspace',before,recorded_execute)
+        return grade(snapshot,destination,source,task,directory/'workspace',before,recorded_execute)
     except ValueError as error:
         # Unsafe workspaces are a registered ordinary failure; other provenance
         # errors remain audit failures rather than being relabeled as failures.
-        try:files(Path(directory)/'workspace')
+        try:files(directory/'workspace')
         except ValueError:return {'passed':False,'reason':'unsafe_workspace'}
         raise error
 

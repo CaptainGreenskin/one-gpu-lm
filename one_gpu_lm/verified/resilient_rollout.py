@@ -106,7 +106,11 @@ def run(root,data,task,source,backend,sandbox,protocol,out,arm,*,journal_path,re
         and all(s['generation']['generated_tokens']<=budget['max_generated_tokens_per_call']
                 and s['generation']['input_tokens']<=budget['max_input_tokens'] for s in state['steps']))
     def independent_execute(workspace,command):
-        sandbox.timeout=budget['max_tool_seconds'];value=sandbox.execute(workspace,command)
+        inputs = out/'grader-input.json'
+        atomic(inputs,files(workspace))
+        state['grader_input_sha256'] = digest(inputs.read_bytes())
+        sandbox.timeout = budget['max_tool_seconds']
+        value = sandbox.execute(workspace,command)
         write_json(out/'grader-output.json',value);return value
     try:
         result=grade(snapshot,out/'grader',source,task,out/'workspace',before,independent_execute)
