@@ -19,6 +19,8 @@
 
 045 和 047 都从每个训练状态执行两条轨迹，分别使用贪心和采样首步，再用相同规则核对修复和提交。045 得到 5 对偏好样本，047 在 129 对训练状态上得到 16 对。048 用合计 21 对样本训练 Qwen3.8-27B 的秩 8 LoRA，完成 6 次更新。独立开发对照在六个新仓库家族的 60 道题上各做三轮配对。两组统一使用 038 保留的原始开场和相同预算，按登记的门槛从完整回放审计中判断是否晋级。 [045 配对结果](../experiments/045-first-action-forks/results/2026-11-22/) · [047 配对结果](../experiments/047-expanded-action-forks/results/2026-11-22/) · [048 训练曲线](../experiments/048-expanded-action-preference/results/2026-11-23-training/) · [048 开发登记](../experiments/048-expanded-action-preference/development-registration.json)
 
+048 的 360 次开发评测已通过完整执行审计。底座修对并提交 24/180，LoRA 为 27/180，净增 1.67 个百分点，未达到开发门槛。两组始终未改码的 47 道题中，有 45 道在每轮都向两组模型提供过原始可编辑源码片段。最终测试继续封存。 [048 独立开发结果](../experiments/048-expanded-action-preference/results/2026-11-23-development/) · [未改码诊断](../experiments/048-expanded-action-preference/#开发结果)
+
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
 [发布打包入口](../experiments/039-release-development/release_package.py)重算已经回放审计的最终配对分数，核对同一适配器的分发审查、许可原文和两次独立重载。全部门槛通过后，才在新目录生成 `payload/` 和 `release-evidence.json`。前者包含两份适配器文件、带聚合结果和加载示例的模型卡，以及核验过的许可材料。后者保留在本地，记录逐文件大小与 SHA-256。发布后用实际 ModelScope 提交号补全下载校验回执。
