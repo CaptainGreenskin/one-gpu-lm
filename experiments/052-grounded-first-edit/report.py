@@ -53,7 +53,7 @@ def project(value, registration):
     return updates, totals
 
 
-def render(directory, registration_path):
+def render(directory, registration_path, *, title='052 · 源码证据微调结果'):
     value = read(directory/'measurements.json')
     registration = read(registration_path)
     updates, totals = project(value,registration)
@@ -75,7 +75,7 @@ def render(directory, registration_path):
         writer.writerows(updates)
     parent['figure'](directory/'training.png',updates)
     (directory/'summary.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8')
-    lines = ['# 052 · 源码证据微调结果', '',
+    lines = [f'# {title}', '',
              f'完成 **{len(updates)}** 次更新，共用 **{totals["records"]}** 个动作和 '
              f'**{totals["supervised_tokens"]:,}** 个监督 token。LoRA 可训练参数 {metrics["trainable_parameters"]:,}，'
              '保存后重载的贪心生成 ID 一致。训练产物通过独立审计。', '',
