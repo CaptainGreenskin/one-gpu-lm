@@ -62,6 +62,26 @@ class ModelScopePublishTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'accepted 039 release'):
             release.approved_package(self.root)
 
+    def test_upload_hook_requires_an_existing_private_model(self):
+        class SDK:
+            def __init__(self, *, endpoint):
+                self.endpoint = endpoint
+
+            def create_repo(self, *_args):
+                raise AssertionError('An upload must never create a repository')
+
+        with patch.dict(sys.modules, {'modelscope_hub':SimpleNamespace(HubApi=SDK)}):
+            hub = release.publishing_hub()
+        self.assertEqual(hub.endpoint,release.ENDPOINT)
+        private = SimpleNamespace(visibility=release.PRIVATE)
+        public = SimpleNamespace(visibility=release.PUBLIC)
+        with patch.object(release,'repository',side_effect=[None,public,private]) as lookup:
+            for _ in range(2):
+                with self.assertRaisesRegex(ValueError,'existing private ModelScope'):
+                    hub._create_repo_exist_ok(self.repo,'model')
+            hub._create_repo_exist_ok(self.repo,'model')
+            self.assertEqual(lookup.call_count,3)
+
     def test_private_commit_and_public_readback_resume_after_remote_writes(self):
         state_path = self.root/'modelscope-release.json'
         state = {'schema_version':1,'release_evidence_sha256':sha256(self.evidence_path)}

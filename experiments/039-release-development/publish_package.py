@@ -79,6 +79,19 @@ def repository(hub, repo_id):
         return None
 
 
+def publishing_hub():
+    from modelscope_hub import HubApi
+
+    class PrivateUploadHub(HubApi):
+        def _create_repo_exist_ok(self, repo_id, repo_type):
+            # The pinned upload SDK invokes this hook before sending files.
+            info = repository(self, repo_id) if repo_type == 'model' else None
+            require(info is not None and info.visibility == PRIVATE,
+                    'Upload requires the existing private ModelScope model repository')
+
+    return PrivateUploadHub(endpoint=ENDPOINT)
+
+
 def branch_head(repo_id, token=None, *, allow_empty=False):
     model_endpoint(ENDPOINT,repo_id)
     url = f'{ENDPOINT}/models/{repo_id}.git'
@@ -183,6 +196,10 @@ def stage(hub, directory, state_path, state, manifest, license_id):
             hub.upload_folder(repo_id,'model',snapshot,revision=BRANCH,allow_patterns=sorted(payload),
                               commit_message='Upload the accepted 27B coding adapter',use_cache=False,
                               disable_tqdm=True,sync_remote_repo=False)
+        info = repository(hub, repo_id)
+        repo_identity(info, repo_id, license_id)
+        require(info.id == state['repo_uid'] and info.visibility == PRIVATE,
+                'The staged repository identity and privacy must survive the upload')
     head = branch_head(repo_id,hub.legacy.token)
     require(inventory(hub,repo_id,head) == expected,'Private commit inventory differs from the release package')
     pinned = dict(manifest,revision=head,files=expected)
@@ -232,9 +249,7 @@ def main():
             print(json.dumps({'repo_id':repo_id,'files_verified':len(manifest['files']),'eligible':True}))
             return
 
-        from modelscope_hub import HubApi
-
-        hub = HubApi(endpoint=ENDPOINT)
+        hub = publishing_hub()
         require(hub.legacy.endpoint == ENDPOINT and bool(hub.legacy.token),
                 'Sign in to the authorized ModelScope international account')
         require(hub.whoami().username.casefold() == OWNER.casefold(),
