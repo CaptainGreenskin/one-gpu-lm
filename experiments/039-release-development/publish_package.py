@@ -220,17 +220,30 @@ def publish(hub, state_path, state, manifest, license_id, destination):
             and branch_head(repo_id,hub.legacy.token) == pinned['revision']
             and inventory(hub,repo_id,pinned['revision']) == pinned['files'],
             'Require the exact staged commit and repository before publication')
+    existing = destination.exists() or destination.is_symlink()
     if 'public_readback' in state:
         require(destination.resolve() == Path(state['download_directory']),'Use the recorded public download directory')
-        verify_tree(destination,pinned['files'])
         require(branch_head(repo_id) == pinned['revision'],'Public Git head differs from the release commit')
+        if existing:
+            verify_tree(destination,pinned['files'])
+        else:
+            require(readback(pinned,destination) == state['public_readback'],
+                    'The restored download differs from the recorded ModelScope receipt')
         return state['public_readback']
-    require(destination.parent.is_dir() and not destination.exists() and not destination.is_symlink(),
-            'Choose a fresh public download directory')
+    require(destination.parent.is_dir() and not destination.is_symlink(),
+            'Choose a normal public download directory')
+    if existing:
+        require(info.visibility == PUBLIC,'An existing download can only be recovered for a public release')
+        verify_tree(destination,pinned['files'])
     if info.visibility == PRIVATE:
         hub.update_repo_settings(repo_id,'model',visibility='public')
     require(branch_head(repo_id) == pinned['revision'],'Public Git head differs from the release commit')
-    receipt = readback(pinned,destination)
+    if existing:
+        # An interruption can leave the completed download before its receipt is saved.
+        with tempfile.TemporaryDirectory(prefix='.modelscope-public-retry-',dir=destination.parent) as temp:
+            receipt = readback(pinned,Path(temp)/'snapshot')
+    else:
+        receipt = readback(pinned,destination)
     state.update(public_readback=receipt,download_directory=str(destination.resolve()))
     atomic_json(state_path,state)
     return receipt

@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 from types import SimpleNamespace
@@ -149,3 +150,50 @@ class ModelScopePublishTests(unittest.TestCase):
             self.assertEqual(published.call_count,1)
             self.assertEqual(public_read.call_count,2)
             public_read.assert_called_with(pinned,downloaded)
+
+    def test_public_readback_recovers_local_snapshot_and_receipt_independently(self):
+        pinned = dict(self.manifest, revision='b'*40)
+        state = {'repo_uid':'fixture-repo', 'initial_files':{}, 'staged_manifest':pinned}
+        state_path = self.root / 'modelscope-release.json'
+        state_path.write_text(json.dumps(state))
+        info = SimpleNamespace(id='fixture-repo', owner=release.OWNER, name='fixture',
+                               license='apache-2.0', visibility=release.PUBLIC)
+        hub = SimpleNamespace(legacy=SimpleNamespace(token='fixture-auth'))
+        downloaded = self.root / 'downloaded'
+        shutil.copytree(self.payload, downloaded)
+        expected = {'model_url':release.ENDPOINT+'/models/'+self.repo,
+                    'anonymous_public_readback_verified':True}
+
+        def download(manifest, directory):
+            self.assertEqual(manifest, pinned)
+            self.assertFalse(directory.exists())
+            shutil.copytree(self.payload, directory)
+            return expected
+
+        with patch.object(release, 'repository', return_value=info), \
+                patch.object(release, 'branch_head', return_value=pinned['revision']), \
+                patch.object(release, 'inventory', return_value=pinned['files']), \
+                patch.object(release, 'readback', side_effect=download) as readback, \
+                patch.object(hub, 'update_repo_settings', create=True) as visibility:
+            unrelated = downloaded / 'unrelated.txt'
+            unrelated.write_text('separate file')
+            with self.assertRaisesRegex(ValueError, 'payload inventory'):
+                release.publish(hub, state_path, state, self.manifest, 'apache-2.0', downloaded)
+            self.assertEqual(unrelated.read_text(), 'separate file')
+            readback.assert_not_called()
+            unrelated.unlink()
+
+            receipt = release.publish(hub, state_path, state, self.manifest, 'apache-2.0', downloaded)
+            self.assertEqual(receipt, expected)
+            self.assertNotEqual(readback.call_args.args[1], downloaded)
+            release.verify_tree(downloaded, pinned['files'])
+            recorded = json.loads(state_path.read_bytes())
+            self.assertEqual(recorded['public_readback'], expected)
+
+            shutil.rmtree(downloaded)
+            receipt = release.publish(hub, state_path, recorded, self.manifest, 'apache-2.0', downloaded)
+            self.assertEqual(receipt, expected)
+            self.assertEqual(readback.call_count, 2)
+            readback.assert_called_with(pinned, downloaded)
+            release.verify_tree(downloaded, pinned['files'])
+            visibility.assert_not_called()
