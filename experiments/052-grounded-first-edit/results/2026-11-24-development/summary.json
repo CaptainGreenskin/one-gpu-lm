@@ -1,0 +1,842 @@
+{
+  "complete_accounting": true,
+  "scheduled_runs": 360,
+  "received_runs": 360,
+  "development_gate_passed": false,
+  "costs": {
+    "base": {
+      "attempted_calls": 2087,
+      "input_tokens": 8520284,
+      "generated_tokens": 133125,
+      "actor_seconds": 13394.326566359698
+    },
+    "candidate": {
+      "attempted_calls": 2031,
+      "input_tokens": 8274428,
+      "generated_tokens": 129525,
+      "actor_seconds": 22391.190817627124
+    }
+  },
+  "final_test_opened": false,
+  "weights_public": false,
+  "paired_tasks": 60,
+  "successes": {
+    "base": 20,
+    "candidate": 27
+  },
+  "pairs": [
+    {
+      "task_number": 1,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 2,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 3,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 4,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 5,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 6,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 3
+      },
+      "gain": 1.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 7,
+      "family": "F01",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 8,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 9,
+      "family": "F01",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 10,
+      "family": "F01",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 11,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 12,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 13,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 14,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 15,
+      "family": "F02",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 16,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 17,
+      "family": "F02",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 18,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 19,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 20,
+      "family": "F02",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 21,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 22,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 23,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 24,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 25,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 26,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 27,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 28,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 29,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 30,
+      "family": "F03",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 31,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 32,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 33,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 34,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 35,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 36,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 37,
+      "family": "F04",
+      "passes": {
+        "base": 2,
+        "candidate": 0
+      },
+      "gain": -0.6666666666666666,
+      "score_disagreement": {
+        "base": true,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 38,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 39,
+      "family": "F04",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 40,
+      "family": "F04",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 41,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 42,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 43,
+      "family": "F05",
+      "passes": {
+        "base": 3,
+        "candidate": 3
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 44,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 45,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 46,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 47,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 48,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 49,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 3
+      },
+      "gain": 1.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 50,
+      "family": "F05",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 51,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 52,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 53,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 54,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 55,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 56,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 57,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 58,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 59,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 0
+      },
+      "gain": 0.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    },
+    {
+      "task_number": 60,
+      "family": "F06",
+      "passes": {
+        "base": 0,
+        "candidate": 3
+      },
+      "gain": 1.0,
+      "score_disagreement": {
+        "base": false,
+        "candidate": false
+      }
+    }
+  ],
+  "checks": {
+    "complete_audit": true,
+    "minimum_gain": false,
+    "positive_interval_lower_bound": false,
+    "maximum_family_drop": true
+  },
+  "behaviors": {
+    "base": {
+      "no_edit": 142,
+      "correct_without_submission": 11,
+      "timeout_recovered": 0,
+      "first_edit": 38
+    },
+    "candidate": {
+      "no_edit": 127,
+      "correct_without_submission": 5,
+      "timeout_recovered": 0,
+      "first_edit": 53
+    }
+  },
+  "gain_pp": 3.888888888888889,
+  "gain_interval_95_pp": [
+    -3.3333333333333335,
+    11.666666666666666
+  ],
+  "family_gain_pp": {
+    "F01": 10.0,
+    "F02": 0.0,
+    "F03": 0.0,
+    "F04": -6.666666666666667,
+    "F05": 10.0,
+    "F06": 10.0
+  }
+}

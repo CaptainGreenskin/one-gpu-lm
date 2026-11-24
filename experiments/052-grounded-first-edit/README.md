@@ -13,3 +13,9 @@
 在仓库根目录运行 `PYTHONPATH=. python experiments/052-grounded-first-edit/report.py experiments/052-grounded-first-edit/results/2026-11-24-training`，即可用公开测量重新生成训练曲线。绘图需要 Matplotlib。
 
 开发对照用六个独立仓库家族的 60 道题，Python 和 JavaScript 各 30 道。60 道题的失败均独立复现两次，其中 43 道的规范化输出一致。每题做三组配对，底座和 LoRA 共用同一条冻结的首条工具反馈，以及相同的调用和 token 预算。沿用 051 的通过率门槛。 [开发验收规则](development-design.json) · [开发登记](development-registration.json)
+
+## 开发结果
+
+360 次评测和 4,118 条生成请求全部通过执行审计。底座完成 20／180，LoRA 完成 27／180，配对提升 3.89 个百分点，95% 区间为 [−3.33, +11.67]。六个家族中最大退步 6.67 个百分点，符合家族门槛。整体提升及其置信区间未达到晋级要求，最终测试保持封存。 [开发结果与曲线](results/2026-11-24-development/)
+
+LoRA 的未改码次数从 142 降至 127，修对后未提交从 11 降至 5。两组实际改码分别为 38 和 53 次，其中未修对的分别为 7 和 21 次。按任务汇总三轮，有 3 道净改善、1 道净退步、56 道持平。 [匿名逐次结果](results/2026-11-24-development/matched-repeats.csv)
