@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "experiment": "053-post-edit-recheck",
+  "prior_development_commit": "90938c67fc81219dcaf9b86f53d1f8f0f927b0c7",
+  "prior_development_audit_sha256": "ff04101cd5a7b173ea4eb5e3523f4cd079ffff20f88fc0b73b6d0834561695c1",
+  "prior_training_protocol_sha256": "7834d23acd2ea22d74e2239a0aeba9a72e66ecfc7eaa1f328b0b5173dbd8ab91",
+  "original_export_sha256": "3fc6e5b0e249ef1d0f83c21c6b5eb8faec0146e8ddadcda2ed039a010c35b287",
+  "seed_export_sha256": "939536c7115072639b787825c2293e910d14e159e351180c470dd31c9a28391d",
+  "preflight_protocol_sha256": "6da88bad7d5de9d17c0433df6d8c8a85fd5afdfdbcff1a672542d950a70cda84",
+  "preflight_status_sha256": "15c7ef76b5ff34134da50fdfd4d002ecf249de41a5f5e8db732329d4651a4d72",
+  "preflight_export_sha256": "4d988c0f790d62c7bc04cdf737c8366cc38ad49c639de1cd38a2199e947f8f8a",
+  "combined_data_sha256": "3375f62d24723a4e3a1e02929fc3cad91666f7225e10c766aaad331886d6b01c",
+  "episodes": 67,
+  "training_families": 7,
+  "partial_regression_families": 6,
+  "target_counts": {
+    "reference_edit": 153,
+    "final_verification": 67,
+    "explicit_submission": 67,
+    "partial_repair_regression": 25,
+    "post_failure_edit": 15
+  },
+  "supervised_tokens": 66282,
+  "optimizer_updates": 41,
+  "training_rule": "Retain each of the 287 original actions once. Add one executed partial regression from each of 10 historical replays, and a partial regression and a subsequent executed edit from each of 15 new CPU replays. Train a new adapter from the same base with the 052 optimizer recipe.",
+  "development_rule": "Compare against the same pinned base on an independent development panel of 60 tasks across six new repository families with three paired repeats and the frozen 052 opening, budgets and promotion gate.",
+  "final_test_opened": false,
+  "weights_public": false
+}
