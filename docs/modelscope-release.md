@@ -82,6 +82,21 @@ python -m one_gpu_lm.models.modelscope_readback \
   --out /path/to/fresh-download
 ```
 
+### 下载适配器用于推理
+
+用公开发布回执中的 `repo_id` 和完整 `revision` 分别设置 `RELEASE_REPO` 和 `RELEASE_COMMIT`。以下命令从 ModelScope 国际站的指定版本下载两个适配器文件。
+
+```bash
+python -m pip install modelscope-hub==0.7.0
+modelscope-hub --endpoint https://www.modelscope.ai download \
+  "$RELEASE_REPO" adapter_config.json adapter_model.safetensors \
+  --revision "$RELEASE_COMMIT" --local-dir ./adapter
+```
+
+下载后按模型卡核对两个文件的 SHA-256，再用模型卡中固定的底座版本和加载示例运行推理。
+
+### 核对恢复后的生成结果
+
 发布前，在空闲 GPU 上分别独立加载原始适配器和恢复到新目录的副本。两次使用同一份底座文件清单、评测配置和适配器哈希回执。回执记录两个固定输入的 token 哈希与 greedy 输出 token 哈希。
 
 ```bash
