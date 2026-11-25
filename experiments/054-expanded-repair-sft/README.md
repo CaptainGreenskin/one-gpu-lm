@@ -4,4 +4,6 @@
 
 沿用原来的 LoRA 配置、优化器和一遍训练。数据量增大后，更新次数从 41 增至 50。开发验收使用独立的新仓库任务，沿用推理流程、每题调用和 token 预算以及既定门槛。最终测试继续封存。
 
-[训练设计](design.json) · [训练登记](training-registration.json) · [训练曲线与硬件记录](results/2026-11-25-training/) · [开发验收规则](development-design.json)
+开发预检发现一个仓库的旧依赖包含该项目的源码副本。移除副本后重放了参考修复，重新核对依赖挂载和目标文件的哈希，随后冻结六个仓库的 60 道题，其中 11 道需要修改多个文件。每道题由底座和 LoRA 各跑三次。
+
+[训练设计](design.json) · [训练登记](training-registration.json) · [训练曲线与硬件记录](results/2026-11-25-training/) · [开发验收规则](development-design.json) · [正式计分登记](development-registration.json)
