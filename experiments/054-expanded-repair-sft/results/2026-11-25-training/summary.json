@@ -1,0 +1,28 @@
+{
+  "protocol_sha256": "9fe1d6a34dfca41e2c1a0d8fc2c986205cc81499ecad164b39f8dfb2ced692a5",
+  "integrity_sha256": "74f91797e1a6642b8650919b6ab9e11d67c8bcb6145615d10299e91cd199dd25",
+  "records": 394,
+  "input_tokens": 1029321,
+  "supervised_tokens": 81338,
+  "optimizer_updates": 50,
+  "trainable_parameters": 58363904,
+  "training_seconds": 968.9689130649786,
+  "pipeline_seconds": 1044.472447,
+  "gpu_samples": 207,
+  "gpu_sampling_errors": 0,
+  "gpu_utilization_percent": {
+    "mean": 91.03381642512078,
+    "maximum": 100.0
+  },
+  "gpu_memory_used_mib": {
+    "mean": 79949.95169082125,
+    "maximum": 92103.0
+  },
+  "gpu_temperature_c": {
+    "mean": 60.091787439613526,
+    "maximum": 71.0
+  },
+  "reload_output_matched": true,
+  "final_test_opened": false,
+  "weights_public": false
+}

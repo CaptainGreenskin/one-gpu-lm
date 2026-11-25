@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "experiment": "054-expanded-repair-sft",
+  "development": {
+    "task_count": 60,
+    "language_counts": {
+      "python": 30,
+      "javascript": 30
+    },
+    "repetitions": 3,
+    "rollout_count": 360,
+    "block_size": 10,
+    "selected_opening": "original",
+    "evaluation_budget": {
+      "max_model_calls": 12,
+      "max_generated_tokens_per_call": 512,
+      "max_total_generated_tokens": 6144,
+      "max_input_tokens": 8192,
+      "max_task_seconds": 600,
+      "max_tool_seconds": 60,
+      "max_tool_output_chars": 2400
+    },
+    "gate": {
+      "minimum_gain_pp": 10,
+      "maximum_family_drop_pp": 10,
+      "require_positive_95_percent_lower_bound": true,
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 39039,
+      "complete_audited_repetitions_required": true
+    }
+  },
+  "source_scope": "Six new repository families, with ten independently admitted ordinary repair tasks in each, disjoint from all prior training, development evaluation and final-test families.",
+  "selection_order": "Verified multifile repairs first, then offline admission order. Freeze the complete panel before any model calls.",
+  "comparison": "Compare the expanded 054 adapter with the original pinned base using the same runtime and per-task budgets. Sample count and optimizer updates increased together in training.",
+  "secondary_trace_counts": [
+    "Source-changing rollouts",
+    "Source-changing rollouts that run the declared regression after the first edit",
+    "Source-changing rollouts with a failed declared regression after the first edit",
+    "Later source edits after such a failed regression",
+    "Edited rollouts failing independent grading",
+    "Independently correct rollouts with no explicit submission"
+  ],
+  "base_and_candidate_use_same_opening_and_tool_pipeline": true,
+  "final_test_opened": false,
+  "weights_public": false
+}

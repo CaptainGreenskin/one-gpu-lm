@@ -4,4 +4,4 @@
 
 沿用原来的 LoRA 配置、优化器和一遍训练。数据量增大后，更新次数从 41 增至 50。开发验收使用独立的新仓库任务，沿用推理流程、每题调用和 token 预算以及既定门槛。最终测试继续封存。
 
-[训练设计](design.json) · [训练登记](training-registration.json)
+[训练设计](design.json) · [训练登记](training-registration.json) · [训练曲线与硬件记录](results/2026-11-25-training/) · [开发验收规则](development-design.json)
