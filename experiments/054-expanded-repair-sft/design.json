@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "experiment": "054-expanded-repair-sft",
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "previous_training_protocol_sha256": "17c4dae9824e8f10c3e2ae6dda9d8d242a17302af650a51929596fce2b2ade2b",
+  "previous_development_commit": "ec9a086a6761aad7f5d95a6d0efdc260f2246f3e",
+  "previous_development_audit_sha256": "d71316797ae8168340dc24588a592aca27672360f87580cca1e063619a9e5045",
+  "input_sha256": {
+    "data_path": "fe38a4f4c89cd5ddf7059a4c4be4cb826a55add42a1f449f496984caae6d4c62",
+    "sources_path": "3f00e96702ca747b579d5474952b5c0138321665805343a85039a590076f6bd6",
+    "schedule_path": "aa8d8f1fdbb5f634eb846c6a285f4ca6c00ad5bb1e6b12e295946cb13a0da52f"
+  },
+  "sample_order_sha256": "2697296f7f345617fbb81bb59e7e557b3880a4f1436bc93b4efb38eba8bcb97e",
+  "materializer_sha256": "2480d1d68e64644e7bbab06d18c6e7ffc48f931977a96351f5e594cc8609eaeb",
+  "selection": {
+    "records": 394,
+    "episodes": 79,
+    "input_tokens": 1029321,
+    "supervised_tokens": 81338,
+    "target_counts": {
+      "reference_edit": 182,
+      "final_verification": 79,
+      "explicit_submission": 79,
+      "partial_repair_regression": 32,
+      "post_failure_edit": 22
+    },
+    "optimizer_updates": 50
+  },
+  "source_revisions": 79,
+  "previous_training_examples": 327,
+  "new_source_revisions": 12,
+  "training_families": 7,
+  "training_rule": "Initialize one new adapter from the same pinned base and reuse the original optimizer settings. Add only approved repairs and executed failure-to-correction examples from training sources. Run one epoch in the fixed order. The larger set requires 50 updates instead of 41.",
+  "development_rule": "Retain the inference setup, equal budgets and frozen promotion gate. Use an independent development panel before any access to the final test.",
+  "final_test_opened": false,
+  "weights_public": false
+}
