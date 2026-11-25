@@ -15,9 +15,26 @@ EXP = ROOT/'experiments/039-release-development'
 ANALYZE = runpy.run_path(str(EXP/'analysis.py'))['analyze']
 REPORT = runpy.run_path(str(ROOT/'experiments/042-first-edit-sft/development_report.py'))
 PROJECT = REPORT['project_rows']
+with patch.object(sys, 'path', [str(EXP), *sys.path]):
+    REPAIR_SCOPE = runpy.run_path(str(EXP/'report.py'))['repair_scope']
 
 
 class IndependentDevelopmentReport(unittest.TestCase):
+    def test_repair_scope_uses_the_same_label_for_both_arms(self):
+        rows = [
+            {'task_number': 1, 'arm': 'base', 'multifile': False, 'completed_repair': False},
+            {'task_number': 1, 'arm': 'candidate', 'multifile': False, 'completed_repair': True},
+            {'task_number': 2, 'arm': 'base', 'multifile': True, 'completed_repair': True},
+            {'task_number': 2, 'arm': 'candidate', 'multifile': True, 'completed_repair': False},
+        ]
+        self.assertEqual(REPAIR_SCOPE(rows), {
+            'single_file': {'tasks': 1, 'paired_repeats': 1, 'successes': {'base': 0, 'candidate': 1}},
+            'multi_file': {'tasks': 1, 'paired_repeats': 1, 'successes': {'base': 1, 'candidate': 0}},
+        })
+        rows[-1]['multifile'] = False
+        with self.assertRaisesRegex(ValueError, 'same boolean multi-file label'):
+            REPAIR_SCOPE(rows)
+
     def test_real_039_decision_is_exact_after_anonymization(self):
         measured = json.loads((EXP/'results/2026-11-20/measurements.json').read_bytes())
         design = json.loads((EXP/'design.json').read_bytes())

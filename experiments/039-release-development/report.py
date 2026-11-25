@@ -64,6 +64,27 @@ def call_curves(rows, limit):
     return points
 
 
+def repair_scope(rows):
+    """Count successful repairs by the task's audited multi-file label."""
+    tasks = {}
+    groups = {False: [], True: []}
+    for row in rows:
+        task, multifile = row['task_number'], row.get('multifile')
+        if type(multifile) is not bool or tasks.setdefault(task, multifile) is not multifile:
+            raise ValueError('Every repeat for a task must have the same boolean multi-file label')
+        groups[multifile].append(row)
+    result = {}
+    for multifile, label in ((False, 'single_file'), (True, 'multi_file')):
+        group = groups[multifile]
+        result[label] = {
+            'tasks': sum(scope is multifile for scope in tasks.values()),
+            'paired_repeats': sum(row['arm'] == 'base' for row in group),
+            'successes': {arm: sum(row['completed_repair'] for row in group if row['arm'] == arm)
+                          for arm in ARMS},
+        }
+    return result
+
+
 def run(directory, design):
     raw=json.loads((directory/'measurements.json').read_text(encoding='utf-8'))
     if not raw['passed'] or raw['final_test_opened'] or raw['weights_public'] or raw['optimizer_updates']:

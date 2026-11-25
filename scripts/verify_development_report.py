@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "experiments/039-release-development"))
 
-from report import call_curves, reproduce_analysis
+from report import call_curves, repair_scope, reproduce_analysis
 
 
 def verify_table(path, rows):
@@ -42,14 +42,17 @@ def main():
     rows = sorted(measurements["rows"], key=lambda row: (row["task_number"], row["repetition"], row["arm"]))
     verify_table(directory / "matched-repeats.csv", rows)
     verify_table(directory / "call-curves.csv", call_curves(rows, design["evaluation_budget"]["max_model_calls"]))
-    print(json.dumps({
+    result = {
         "base_successes": verdict["successes"]["base"],
         "candidate_successes": verdict["successes"]["candidate"],
         "gain_pp": verdict["gain_pp"],
         "gain_interval_95_pp": verdict["gain_interval_95_pp"],
         "development_gate_passed": verdict["development_gate_passed"],
         "files_verified": ["summary.json", "matched-repeats.csv", "call-curves.csv"],
-    }, indent=2, allow_nan=False))
+    }
+    if any("multifile" in row for row in rows):
+        result["repair_scope"] = repair_scope(rows)
+    print(json.dumps(result, indent=2, allow_nan=False))
 
 
 if __name__ == "__main__":

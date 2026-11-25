@@ -24,8 +24,11 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
-def project_rows(rows, families, budget):
+def project_rows(rows, families, budget, *, include_multifile=False):
     aliases = {family: f'F{index:02}' for index,family in enumerate(sorted(families), 1)}
+    fields = (*FLAGS, *COUNTS, 'arm', 'first_edit_call', 'actor_seconds')
+    if include_multifile:
+        fields += ('multifile',)
     projected = []
     for row in rows:
         calls, first = row['attempted_calls'],row['first_edit_call']
@@ -35,10 +38,10 @@ def project_rows(rows, families, budget):
                 or row['generated_tokens']>budget['max_total_generated_tokens']
                 or (first is not None and (type(first) is not int or not 1<=first<=calls))
                 or not math.isfinite(row['actor_seconds']) or row['actor_seconds']<0
+                or (include_multifile and type(row.get('multifile')) is not bool)
                 or row['arm'] not in ('base','candidate')):
             raise ValueError('Unexpected audited task metrics')
-        projected.append(dict({key:row[key] for key in (*FLAGS,*COUNTS,'arm','first_edit_call','actor_seconds')},
-                              family=aliases[row['family']]))
+        projected.append(dict({key:row[key] for key in fields}, family=aliases[row['family']]))
     return projected, aliases
 
 
@@ -99,7 +102,8 @@ def evaluation_timing(out, state):
                                                for entry in state['backend_lifecycles'] if 'ready_epoch' in entry)}
 
 
-def capture(root, protocol, controller, audit_path, publication, openings, *, candidate='042-first-edit-sft'):
+def capture(root, protocol, controller, audit_path, publication, openings, *, candidate='042-first-edit-sft',
+            include_multifile=False):
     sys.path.insert(0, str(root/SHARED))
     from analysis import analyze
     from promotion import verify_comparison
@@ -110,7 +114,8 @@ def capture(root, protocol, controller, audit_path, publication, openings, *, ca
             or audit['controller_sha256']!=sha256(controller) or sha256(audit_path)!=audit_hash):
         raise ValueError('Require the exact completed candidate comparison')
     design = {key:plan[key] for key in ('task_count','repetitions','gate','evaluation_budget')}
-    rows,aliases = project_rows(audit['rows'],plan['families'],design['evaluation_budget'])
+    rows,aliases = project_rows(audit['rows'],plan['families'],design['evaluation_budget'],
+                               include_multifile=include_multifile)
     design['families'] = {alias:plan['families'][name] for name,alias in aliases.items()}
     expected = deepcopy(decision)
     for pair in expected['pairs']:
@@ -137,7 +142,7 @@ def capture(root, protocol, controller, audit_path, publication, openings, *, ca
 
 def render(root, directory, registration, *, experiment='042'):
     sys.path.insert(0, str(root/SHARED))
-    from report import call_curves, plot, reproduce_analysis, write_csv
+    from report import call_curves, plot, repair_scope, reproduce_analysis, write_csv
 
     value, plan = read(directory/'measurements.json'), read(registration)
     design = value['design']
@@ -146,10 +151,15 @@ def render(root, directory, registration, *, experiment='042'):
             or sorted(design['families'].values())!=plan['tasks_per_family'] or value['passed'] is not True
             or value['optimizer_updates'] or value['final_test_opened'] or value['weights_public']):
         raise ValueError('Public report does not match the registered candidate comparison')
-    rows,_ = project_rows(value['rows'],design['families'],design['evaluation_budget'])
+    include_multifile = any('multifile' in row for row in value['rows'])
+    rows,_ = project_rows(value['rows'],design['families'],design['evaluation_budget'],
+                         include_multifile=include_multifile)
     if rows!=value['rows'] or value['verified_requests']!=sum(row['attempted_calls'] for row in rows):
         raise ValueError('Public rows contain unexpected fields or costs')
     result = reproduce_analysis(value,design)
+    scope = repair_scope(rows) if include_multifile else None
+    if scope is not None and scope['multi_file']['tasks'] != plan['confirmed_multifile_tasks']:
+        raise ValueError('Multi-file task count differs from the registered cohort')
     write_json(directory/'summary.json',result)
     points = call_curves(rows,design['evaluation_budget']['max_model_calls'])
     write_csv(directory/'call-curves.csv',points)
@@ -172,6 +182,15 @@ def render(root, directory, registration, *, experiment='042'):
                            ('costs','attempted_calls','调用数'),('costs','input_tokens','输入 token'),
                            ('costs','generated_tokens','生成 token')):
         lines.append(f'| {label} | {result[group]["base"][key]:,} | {result[group]["candidate"][key]:,} |')
+    if scope is not None:
+        lines += ['', '### 按修复范围拆分', '',
+                  f'| 修复范围 | 题数 | 底座修对并提交 | {experiment} LoRA 修对并提交 |',
+                  '|---|---:|---:|---:|']
+        for key, name in (('single_file', '单文件'), ('multi_file', '多文件')):
+            segment = scope[key]
+            paired = segment['paired_repeats']
+            lines.append(f'| {name} | {segment["tasks"]} | {segment["successes"]["base"]}/{paired} | '
+                         f'{segment["successes"]["candidate"]}/{paired} |')
     lines += ['','![累计首次改码和完成提交曲线](call-curves.svg)','',
               f'北京时间 {start:%Y-%m-%d %H:%M:%S} 至 {end:%Y-%m-%d %H:%M:%S}。'
               f'流水线历时 {(end-start).total_seconds()/3600:.2f} 小时，完成配对中的 {value["verified_requests"]:,} 条生成请求已逐条核对。']
@@ -207,13 +226,14 @@ def main():
     for name in ('protocol','controller','audit','publication','openings'):
         capture_args.add_argument('--'+name,type=Path,required=True)
     capture_args.add_argument('--candidate',default='042-first-edit-sft')
+    capture_args.add_argument('--include-multifile',action='store_true')
     render_args = actions.add_parser('render')
     for name in ('directory','registration'):
         render_args.add_argument('--'+name,type=Path,required=True)
     render_args.add_argument('--experiment',default='042')
     args = parser.parse_args()
     output = (capture(args.root.resolve(),args.protocol,args.controller,args.audit,args.publication,args.openings,
-                      candidate=args.candidate) if args.mode=='capture'
+                      candidate=args.candidate,include_multifile=args.include_multifile) if args.mode=='capture'
               else render(args.root.resolve(),args.directory,args.registration,experiment=args.experiment))
     print(json.dumps(output,allow_nan=False))
 
