@@ -1,0 +1,120 @@
+# 实验索引
+
+[返回项目首页](../README.md) · [当前发布进度](modelscope-release.md)
+
+## 近期 27B 实验
+
+| 实验 | 公开记录 |
+| --- | --- |
+| 054 · 扩充可验证修复样本 | [训练曲线](../experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [新一轮开发登记](../experiments/054-expanded-repair-sft/development-registration.json) |
+| 053 · 改码后的回归检查与纠错 | [开发配对结果和曲线](../experiments/053-post-edit-recheck/results/2026-11-25-development/) |
+| 052 · 首次修改前的源码证据 | [开发配对结果和曲线](../experiments/052-grounded-first-edit/results/2026-11-24-development/) |
+| 051 · 可验证的修复到提交 | [开发配对结果和曲线](../experiments/051-repair-closure-sft/results/2026-11-24-development/) |
+
+## 早期实验与复现记录
+
+在一台工作站上，把数据准备、训练与验证、模型导出和推理服务串起来，记录模型质量、卡时、吞吐与显存成本。每项改动都提供对照、原始记录和复现入口，让读者用自己的文档或显卡核验结论。
+
+目前包含三条相互补充的实验线：约 85.6M 参数的中文模型用于真实文档训练、早停、独立测试和部署；约 7B 参数的随机模型用于训练系统的容量与性能测量；已有 27B 开源权重用于编码后训练链路验收。随机 7B 使用合成 token，并未作为具有中文能力的预训练模型发布。
+
+目标是能持续使用的多语言编码模型：在已有开源底座上做后训练，以仓库任务完成率和长任务恢复能力验收，同时保留模型、教师与训练数据的来源和许可记录。[首次真实 27B LoRA 链路](../experiments/011-coding-model-selection/) 已完成；小样本试验出现 9/9 → 7/9 的回归，微调版未被推荐或发布为日用模型。
+
+本仓库保存训练程序、实验配置、复现命令和结果。配套知识项目 [InfraGuide](https://github.com/CaptainGreenskin/infra-guide) 讲原理。理解第一个训练脚本时，可以对照它的 [Transformer 模块](https://captaingreenskin.github.io/infra-guide/article/transformer-block/) 和 [自动微分与训练](https://captaingreenskin.github.io/infra-guide/article/autograd-training/)。
+
+**让下一代基模复用成果。** [模型升级协议](../docs/model-upgrades.md) 规定新模型如何接入、对照和发布；[training_lab](../training_lab/) 把模型 profile 与数据、隔离评测、LoRA 和报告流程分开。GitHub 保存可审计的实现和实验，ModelScope 承载后续通过验收的具体模型版本，InfraGuide 解释原理。[27B 的 ModelScope 发布目标](../docs/modelscope-release.md)记录从独立开发到公开加载复验的验收证据。当前尚未发布编码模型权重。
+
+**一个主仓库，明确模块职责。** 当前仓库编码链路的实现已划入 [one_gpu_lm](../one_gpu_lm/)：数据、模型适配、训练、评测、推理服务和共享契约各有目录。旧 `repo_lab` 命令保留兼容入口；历史实验和已发布结果保留原身份。新能力优先放入对应模块，待出现独立使用与发布需求时再拆仓库。
+
+**仓库级对照已完成。** [012 的 36 道配对结果](../experiments/012-repository-agent/results/2026-11-09/)：训练 14/21 → 15/21，开发 3/8 → 3/8，独立留出 3/7 → 3/7，旧回归保持 9/9；实际工具步骤恢复通过，但候选没有达到留出提升门槛，未晋升。[repo_lab](../repo_lab/) 提供更换合法任务、本地模型后端和独立判分的入口。
+
+**27B 训练基础设施。** [统一操作手册](../docs/27b-training.md) 提供独立环境、权重与数据预检、有限步数 LoRA、完整状态检查点、换进程恢复、产物回归及公开证据收集。实际恢复对照、失败修复和硬件记录见 [013 的验收结果](../experiments/013-training-infrastructure/results/2026-11-09/)。它是单卡后训练基础设施，模型质量仍需独立验收。
+
+**训练覆盖与独立质量筛查。** [014 的完整结果](../experiments/014-coding-quality/results/2026-11-09/)将同一 96 条预算的训练覆盖从 12/21 补到 21/21，纳入全部 7 条参考修复；新仓库仍为 4/12 → 4/12，历史回归 6/15 → 6/15，旧函数 9/9 → 9/9，未达晋级门槛。格式、上下文失败和未合并 LoRA 的推理成本分别留档，权重保持私有。
+
+**拿自己的文档做实验。** 把 UTF-8 文档按篇放入训练和留出两个目录，即可逐遍比较训练分数和留出分数，找出继续训练何时开始影响未见文档。可用小型 CPU 模型先检查流程，也可用单张支持 BF16 的 CUDA 显卡跑完整配置。[用自己的文档训练和出图](../experiments/007-document-curves/#用自己的文档跑)
+
+**首轮实测。** RTX PRO 6000 Blackwell 单卡完成了 100 步训练。8,565 万参数的 GPT 在中文维基验证样本上从 8.106 降到 5.386 bits/byte，训练更新用时 4.376 秒。读者可按相同数据、软件和计时口径复跑。[实测条件与原始结果](../experiments/002-first-train/results/pro6000-first/) · [安装与复现](../experiments/002-first-train/README.md#linux-工作站上的首轮-gpu-训练)
+
+| 实验 | 能回答什么 | 复现入口 |
+| --- | --- | --- |
+| 001 · 同一段文字被切成几个 token | 两个公开分词器编码 12 条固定样例时，输入长度有什么不同？ | [实验记录](../experiments/001-tokenizer/README.md) |
+| 002 · 从零训练一个 GPT | 训练、留出验证、指标记录和保存权重能否整套跑通？ | [CPU 自检和首轮 GPU 命令](../experiments/002-first-train/README.md) |
+| 003 · 训练步数对照 | 同一条训练轨迹多训练 900 步，完整验证集的 bits/byte 改善多少？ | [实验方法与结果](../experiments/003-training-budget/) |
+| 004 · 八小时分词对照 | 在同样的单卡时间内，两种表示怎样影响验证分数和原文字节吞吐？ | [实验设计与复现](../experiments/004-tokenizer-soak/) |
+| 005 · 中文技术语料 | 长预算的维基结果能否迁移到 Rust 技术文本？相同原文字节数下哪组学习效果更好？ | [预注册方案与复现](../experiments/005-technical-bytes/) |
+| 006 · 中文 BPE 学习曲线 | 逐遍比较训练章节和留出章节，从哪一遍起出现过拟合迹象？ | [实验方法、曲线与结果](../experiments/006-bpe-epoch-curve/) |
+| 007 · 换文档复验过拟合 | Rust 的拐点能迁移到 Vue 文档吗？自己的文档应该练几遍？ | [两个目录跑出自己的验证曲线](../experiments/007-document-curves/) |
+| 008 · 在线早停 | 只用当前验证分数何时停机？与固定 8、24 遍比，独立测试质量与卡时如何？ | [规则、曲线与独立测试](../experiments/008-online-early-stop/results/2026-11-05/) |
+| 009 · 数据到部署 | 训练、早停、模型导出、KV cache 和 HTTP 续写如何串起来？单卡能否实际更新 7B 参数？ | [全链路入口](../experiments/009-training-to-serving/) · [吞吐与显存实测](../experiments/009-training-to-serving/results/2026-11-05/) |
+| 010 · 7B 长序列训练 | 512–4096 token 的全参数与 LoRA 训练需要多少显存？按层重算何时值得开启？ | [复现与数值审计](../experiments/010-7b-context-scaling/) · [曲线与原始结果](../experiments/010-7b-context-scaling/results/2026-11-09/) |
+| 011 · 编码底座与 LoRA 链路 | 真实 27B 能否加载、微调、重载和隔离评测？工程成功是否等于能力提升？ | [固定版本与复用入口](../experiments/011-coding-model-selection/) · [9/9 → 7/9 的回归结果](../experiments/011-coding-model-selection/results/2026-11-09/) |
+| 012 · 仓库编码 agent | 固定任务、工具和预算后，后训练能否提高独立仓库的修复率？中断恢复是否保留预算？ | [冻结协议与准入控制](../experiments/012-repository-agent/) · [未达晋升门槛的完整结果](../experiments/012-repository-agent/results/2026-11-09/) · [换自己的任务](../repo_lab/) |
+| 013 · 27B 训练基础设施 | 独立环境能否重建？换进程恢复后是否与连续训练一致？保存的产物能否完成回归？ | [操作手册](../docs/27b-training.md) · [协议与实测](../experiments/013-training-infrastructure/) |
+| 014 · 固定候选质量筛查 | 补齐训练任务覆盖后，新仓库修复率和历史能力是否改善？推理成本如何变化？ | [均衡数据准备与冻结流程](../experiments/014-coding-quality/) · [零净提升的配对结果与失败审计](../experiments/014-coding-quality/results/2026-11-09/) |
+| 015 · 工具格式与上下文对照 | 同一底座下，明确工具定义、裁剪历史及两者组合，分别怎样影响新仓库成功率和成本？ | [四组协议](../experiments/015-agent-interface/) · [完整结果与曲线](../experiments/015-agent-interface/results/2026-11-10/) |
+| 016 · 工具结果回传对照 | 保持预算不变，原生工具对话格式能否减少重复调用并修复历史退步？ | [冻结协议与诊断流程](../experiments/016-tool-roundtrip/) · [9/24 → 11/24 与三个退步任务](../experiments/016-tool-roundtrip/results/2026-11-11/) · [可复用接入契约](../docs/tool-conversation-contract.md) |
+| 017 · 从阅读到修改代码 | 同样 12 次调用下，进度提醒能否减少不改代码，并真正提高修复成功率？ | [规则与实现](../experiments/017-edit-progress/) · [主对照、曲线与失败分析](../experiments/017-edit-progress/results/2026-11-11/) · [单独的新仓库补测](../experiments/017-edit-progress/supplement/) |
+| 018 · 从修改到正确修复 | 修改后提醒检查当前代码、根据失败继续修复，能否在同样预算下提高新仓库成功率？ | [冻结规则与诊断](../experiments/018-repair-verification/) · [全部配对、曲线与复盘](../experiments/018-repair-verification/results/2026-11-11/) · [验证证据契约](../docs/tool-conversation-contract.md#修改后的验证证据) |
+| 019 · 27B 参数发布候选 | 真实工具修复 SFT 能否带来独立仓库收益，并通过回归、授权与导出检查？ | [冻结规则](../experiments/019-coding-release/) · [真实训练、45 次开发运行与曲线](../experiments/019-coding-release/results/2026-11-11/)；底座 6/15、低学习率 7/15、高学习率 1/15，两组均未过门槛，参数不发布 |
+| 020 · 实际修复与失败后纠错 | 更好的源码定位、停滞状态覆盖和执行过的纠错示范能否改善修复成功率？ | [冻结设计与复现](../experiments/020-repair-curriculum/) · [真实训练、48 道配对与曲线](../experiments/020-repair-curriculum/results/2026-11-12/) · [全部候选失败复盘](../experiments/020-repair-curriculum/results/2026-11-12/behavior-review.md)；25/48 → 29/48，但 4 道退步违反固定门槛，参数不发布 |
+| 021 · 从真实停滞状态学习修复 | 用底座在训练题上的实际历史替换脚本历史，能否改善独立修复与历史回归？ | [固定规则、采集与数据构建](../experiments/021-observed-recovery/) · [330 次更新、45 条开发轨迹与曲线](../experiments/021-observed-recovery/results/2026-11-12/) · [执行总结](../experiments/021-observed-recovery/STATUS.md)；底座 6/15、020 对照 8/15、021 候选 6/15，开发未过关，最终测试未开启、参数不发布 |
+| 022 · 更早执行有依据的修复 | 保留失败后纠错示范，提前编辑并测试，能否减少耗尽调用仍不改代码？ | [55 条替换、330 次更新与完整曲线](../experiments/022-action-repair/results/2026-11-12/) · [执行总结](../experiments/022-action-repair/STATUS.md) · [冻结措辞更正](../experiments/022-action-repair/ERRATA.md)；底座 7/15、020 为 6/15、022 为 7/15，未超过底座，最终测试封存、参数不发布 |
+| 023 · 评测重复运行稳定性 | 原始工具反馈与固定无关元数据的反馈，是否产生不同的跨轮波动？ | [270 次任务、36 个探针与完整曲线](../experiments/023-evaluation-stability/results/2026-11-13/) · [中文复盘](../experiments/023-evaluation-stability/results/2026-11-13/behavior-review.md)；原始反馈 020、022 各一题翻转，规范化组零翻转，总成功数不变，最终测试封存 |
+| 024 · 测试耗时与动作稳定性 | 在 023 规则上处理额外耗时，能否减少动作和评分波动？ | [270 次任务、36 个探针与曲线](../experiments/024-feedback-noise/results/2026-11-14/) · [中文复盘](../experiments/024-feedback-noise/results/2026-11-14/behavior-review.md)；动作分歧 19/135 → 0/135，新增两次通过来自同一道题的重复运行，最终测试封存 |
+| 025 · 执行验证轨迹蒸馏 | 完整成功轨迹能否改善独立仓库修复？参数与执行流程分别贡献多少？ | [完整四臂结果与曲线](../experiments/025-verified-distillation/results/2026-11-15-factorial/) · [失败与成本复盘](../experiments/025-verified-distillation/results/2026-11-15-factorial/behavior-review.md)；127 条轨迹训练唯一候选，60 题 × 4 组 × 3 轮全部核验。学生 75.00% / 底座 76.67%，参数提升门槛未达成；最终测试继续封存 |
+| 026 · 学生状态与动作分配 | 从学生未修改源码的同一现场接手，能否获得有效修复示范？ | [884 条轨迹诊断](../experiments/026-action-allocation/results/2026-11-16-diagnosis/) · [48 题接手试跑、曲线与复盘](../experiments/026-action-allocation/results/2026-11-16-recovery-pilot/discussion.md)；34 组配对学生成功 23 / 教师 25，净增 2 题未达采集门槛；21 条合格轨迹仍全部只有一次修改，参数未更新，最终测试继续封存 |
+| 027 · 失败后纠错样本 | 通用反馈与修改后单独验证，能否采到真实失败后多次修改成功的示范？ | [冻结规则与 8 题复盘](../experiments/027-correction-sampling/) · [32 组配对、曲线与结论](../experiments/027-correction-sampling/results/2026-11-16-collection/discussion.md)；原流程成功 18/32、纠错流程 26/32，但合格多次纠错示范仅 0 → 1，未达采集门槛，本轮不训练，最终测试继续封存 |
+| 028 · 错误补丁状态接手 | 能否从历史训练轨迹恢复真实修改后失败的现场，再采集成功修正？ | [冻结规则与实现](../experiments/028-failed-state-recovery/) · [9 组配对、曲线与失败复盘](../experiments/028-failed-state-recovery/results/2026-11-17-collection/discussion.md)；从 310 条训练轨迹确认并选择 9 个错误状态，独立修复 3/9 → 4/9、合格示范 2 → 3，未达至少 6 道的采集门槛，本轮不训练，最终测试继续封存 |
+| 029 · 依据可见证据修复与收尾 | 明确历史补丁不可信、真实源码变化和剩余预算，能否提高合格纠错示范产量？ | [冻结规则与实现](../experiments/029-repair-decisions/) · [9 组配对、三张曲线与失败复盘](../experiments/029-repair-decisions/results/2026-11-17-collection/discussion.md)；修复 4/9 → 4/9、合格示范 3 → 4、调用 88 → 72，1 改善伴随 1 退步，未达采集门槛，本轮不训练，最终测试继续封存 |
+| 030 · 有预算约束的教师思考 | 同一教师开启低强度思考，能否提高失败后修复示范的产量？ | [冻结规则](../experiments/030-teacher-reasoning/) · [9 组配对、曲线与结论](../experiments/030-teacher-reasoning/results/2026-11-17-collection/discussion.md)；修复 4/9 → 9/9、合格片段 3 → 9、调用 76 → 48，采集门槛通过；取得错误状态接手片段，严格的新纠错链仍为 0，本轮未更新学生参数，最终测试继续封存 |
+| 031 · 完整示范与纠错片段混合训练 | 教师修复收益能否转移到关闭思考的学生？ | [训练曲线与逐条审计](../experiments/031-correction-mix/results/2026-11-17-training/) · [540 次同预算开发对照、曲线与复盘](../experiments/031-correction-mix/results/2026-11-17-development/discussion.md) · [最终状态](../experiments/031-correction-mix/STATUS.md)；新候选 81.67%、底座 76.67%、原 025 为 75.00%；相对底座改善 7 题、退步 4 题，+5 个百分点未过门槛，最终测试封存、参数不发布 |
+| 032 · 真实多文件修复与完成任务 | 能否减少只读不改、最后一轮才修改的失败？ | [开发对照已完成](../experiments/032-multifile-completion/results/2026-11-18-development-recovered/)。底座 25／108（23.15%）、031 24／108（22.22%）、032 12／108（11.11%）。032 开发门槛未通过，最终测试封存。 |
+| 033 · 复盘首次修改 | 三组权重看到同一段编辑前历史，下一步动作有何不同？ | [42 次生成、逐题矩阵和独立审计](../experiments/033-first-edit-probe/)。五道退步题使用底座历史时，已观察首次编辑命令命中数为底座 5、031 2、032 0。单步诊断，最终测试封存。 |
+| 034 · 首步目标权重对照 | 固定数据和训练步数，屏蔽 40 条首步测试目标会改变预算内修复表现吗？ | [训练曲线](../experiments/034-first-action-ablation/results/2026-11-19-training/)与[20 对独立开发题结果](../experiments/034-first-action-ablation/results/2026-11-19-development/)。原样首步测试 10 → 0，修复且提交 1 → 0，未达复验门槛。 |
+| 035 · 首次改码瓶颈 | 长时间查阅后加一次提示，能否提高预算内修复并提交率？ | [同题底座诊断](../experiments/035-edit-bottleneck/results/2026-11-19-baseline/) · [提示对照](../experiments/035-edit-bottleneck/results/2026-11-19-reminder/)。修复并提交 1 → 2，全程未改码 12 → 14，未达复验门槛。 |
+| 036 · 公开回归失败证据 | 在同预算下直接提供失败输出，能否带来更多正确修复？ | [20 对结果和曲线](../experiments/036-regression-evidence/results/2026-11-20/) · [重启恢复协议](../experiments/036-regression-evidence/recovery-plan.json)。修复并提交 3 → 3，新增 2 道、退步 2 道，未达复验门槛。 |
+| 037 · 失败输出摘录 | 从同一份输出保留断言和位置，能否改善预算内修复？ | [20 对结果和曲线](../experiments/037-compact-regression/results/2026-11-20/)。修复并提交 3 → 5，全程未改码 14 → 10，满足独立复验门槛。 |
+| 038 · 新仓库复验 | 失败摘录的收益能否在独立仓库复现？ | [24 对审计结果和曲线](../experiments/038-independent-compact/results/2026-11-20/)。修复并提交 7 → 9，零退步，净增未达到三道门槛。 |
+| 039 · 27B 参数独立开发筛查 | 同一推理流程下，031 LoRA 的收益能否迁移到六个新家族？ | [360 次审计结果和曲线](../experiments/039-release-development/results/2026-11-20/)。两组各完成 48/180，净变化 0 个百分点，031 未通过开发门槛。 |
+| 040 · 开场源码与首次改码 | 给底座直接看原始可编辑源码片段，能否让更多任务在同预算内修复并提交？ | [60 组配对、曲线与成本](../experiments/040-editable-source-context/results/2026-11-21/)。修复并提交 16/60 → 17/60，未达到独立复验门槛。 |
+| 041 · 首次改码前的接续 | 在已经读过源码但仍没改码的状态下，低档思考能否产出更多正确修复示范？ | [9 道训练题的配对结果](../experiments/041-first-edit-continuation/results/2026-11-21/)。预算内验证并提交 5/9 → 9/9，采集到 27 条经审计的动作记录。 |
+| 042 · 首次改码示范微调 | 加入 041 的示范后，LoRA 在新的独立仓库上能否比同预算底座修复并提交更多任务？ | [126 次更新的训练曲线](../experiments/042-first-edit-sft/results/2026-11-21-training/) · [360 次独立开发对照](../experiments/042-first-edit-sft/results/2026-11-21-development/)。底座 30/180，LoRA 24/180，净变化 −3.33 个百分点，未通过开发门槛。 |
+| 043 · 首次改码和验证后提交 | 两种思考模式在相同源码、可见历史和剩余预算下，会在哪些决策上产生可验证的差异？ | [133 组配对及曲线](../experiments/043-decision-state-collection/results/2026-11-22/)。首次改码前的训练状态中，预算内修复并提交从 13/22 提高到 21/22。 |
+| 044 · 重放完整修复轨迹后微调 | 同预算下，底座修对并提交 27/180，LoRA 21/180。全程未改码由 144 次增至 156 次。 | [训练曲线](../experiments/044-deployment-recovery-sft/results/2026-11-22-training/) · [独立开发对照](../experiments/044-deployment-recovery-sft/results/2026-11-22-development/) |
+| 045 · 同一状态分叉的首次动作采集 | 22 对训练状态中，贪心组修对并提交 9 次，首步采样组 8 次，得到 5 组经审计的偏好样本。 | [匿名配对与曲线](../experiments/045-first-action-forks/results/2026-11-22/) · [偏好训练入口](../experiments/046-first-action-preference/) |
+| 047 · 扩大首次动作配对 | 在另外 129 个复放训练状态上，第一步的不同选择能提供多少有独立结果的偏好样本？ | 129 对产生了 16 对经审计的偏好样本。[设计和预登记](../experiments/047-expanded-action-forks/) · [配对结果与曲线](../experiments/047-expanded-action-forks/results/2026-11-22/) |
+| 048 · 首次动作偏好训练 | 用经执行验证的首次动作训练 LoRA，能否提高同预算下的独立仓库修复率？ | 21 对样本完成 6 次更新。[训练曲线与核验记录](../experiments/048-expanded-action-preference/results/2026-11-23-training/) · [360 次独立开发对照登记](../experiments/048-expanded-action-preference/development-registration.json) |
+
+015 已完成 96 次配对运行：格式组和组合组的新仓库任务从基线 2/12 提高到 5/12，格式错误率约从 20.2% 降至 2.8%；两组都退步了 1 个历史任务，未通过冻结的晋级门槛。上下文管理消除了本轮少量超限请求，没有额外提高成功率。任务控制器耗时分别增加约 29% 和 31%。这是同一 27B 底座的接口评测，未更新权重；小样本构造任务结果不代表通用编码能力认证。
+
+016 完成 48 次运行：结构化工具调用与结果回传使历史任务从 9/24 提高到 11/24，任务控制器总耗时下降约 7.2%；修复了目标任务，同时有 5 个改善、3 个退步，**未通过预先冻结的零退步门槛**。连续完全相同命令的重复次数从 3 增至 8，不能据此声称解决了停滞问题。所有任务均已在 015 中观察过，未新增独立留出、未更新权重，默认策略保持不变。控制组相比 015 的 10/24 也有一个任务退步，报告保留了这种重复运行差异。
+
+017 主对照完成 72 次运行：历史任务中耗尽调用仍未改代码的数量从 13/24 降至 9/24，成功数从 11/24 升至 12/24。原来三个退步任务修复两个，同时新增两个历史退步，**未通过晋级门槛**；两个新增退步都更早开始编辑，但最终修复错误。任务控制器总耗时增加约 1.5%，默认策略和模型权重均未改变。原新仓库结果为 7/12 → 9/12，但启动后发现 p-map 和 Blinker 的环境中存在可读取的参考实现，因此保留全部结果并明确其限制；另对经过参考副本检查的 humanize 仓库做同规则、同预算补测，单独报告，不替换原门槛。
+
+[017 独立补测](../experiments/017-edit-progress/supplement/results/2026-11-11/)的 12 次运行也已完成：两组都通过同样的 3/6 个任务，无改善、无退步；耗尽调用仍未修改的任务从 2 个降至 1 个，任务控制器耗时却增加约 21.3%。这说明“更愿意修改”尚未转化为独立仓库上的修复收益。所有成功数指最终源码通过独立回归测试，不能等同于代理正常结束；上下文超限等退出原因另行公开。两阶段共 84 次运行，规则保持为显式实验选项。
+
+[018 的 72 次运行](../experiments/018-repair-verification/results/2026-11-11/)已完成：修改后验证提醒使历史任务从 12/24 升至 13/24，新仓库从 6/12 升至 7/12，没有新增退步；36 道任务中修改过但最终失败的数量从 4 降至 2。两个重点退步任务修复了 JSON 边界问题，签名序列化仍失败；新仓库净增 1 道，也低于预定的 2 道门槛，因此**未通过晋级门槛**。两组首次编辑曲线相同，任务控制器耗时增加约 2.1%。两道改善题均在组合命令中完成修改和测试，严格的独立命令识别没有记录到最终新鲜验证；报告保留这种观测与最终判分的差别。权重和默认策略不变，新增[验证证据契约](../docs/tool-conversation-contract.md#修改后的验证证据)供其他模型和仓库复用。
+
+[019 的真实 LoRA SFT](../experiments/019-coding-release/results/2026-11-11/)已完成：55 道训练任务形成 330 条实际执行示范、21,760 个监督 token；两组各更新 330 步。开发集底座 6/15，低学习率 7/15（3 道改善、2 道退步），高学习率 1/15（1 道改善、6 道退步）。两组都超过最多 1 道退步的门槛，因此保留底座，候选参数不上传 ModelScope，48 道最终任务保持封存。445 次请求回放、冻结内容和实际参数审计通过，训练和评测共约 2.24 小时；低训练损失没有转化成合格的编码收益。公开结果保留全部配对、失败行为、硬件记录、曲线和不发布决定。
+
+[020 的修复/纠错课程对照](../experiments/020-repair-curriculum/results/2026-11-12/)已完成：两组各更新 330 次，开发集从底座 6/15 到 repair 7/15、recovery 8/15，按固定规则选择 recovery。最终历史任务 12/24 → 12/24（3 改善、3 退步），新仓库 13/24 → 17/24（5 改善、1 退步），函数检查两臂均 9/9。净收益未满足零退步要求，**候选参数不上传 ModelScope**。未编辑失败仍为 16 → 16，四道新增退步均未实际修改源码；格式错误明显减少，但任务耗时增加。141 条执行轨迹的核验、实际输入与参数审计通过，原始轨迹及权重保持私有，公开完整配对、曲线、硬件记录及不发布决定。
+
+[021 的真实停滞状态对照](../experiments/021-observed-recovery/results/2026-11-12/)已完成：从 55 道训练任务的 392 个实际状态中取得 84 条经执行验证的替换，唯一候选更新 330 次。开发集底座 6/15、固定 020 对照 8/15、新候选 6/15；相对 020 新增两道退步，均耗尽调用而未编辑，未编辑失败从 3 道增至 7 道。**开发门槛未通过，本轮最终测试未开启，候选参数不上传 ModelScope**。45 条开发轨迹、448 次请求及实际输入/参数审计通过，公开训练曲线、配对、失败复盘和硬件记录。原 CPU 构建故障及约 38.8 分钟硬件采样空档均保留披露；训练损失下降没有转化为开发集收益。
+
+[022 的提前修复对照](../experiments/022-action-repair/results/2026-11-12/)已完成：保留 275 条原训练记录，替换 55 条为有执行证据的提前编辑与测试，完成 330 次更新。相对本轮底座改善 1 题、退步 1 题，净增 0；相对固定 020 净增 1。未编辑失败为底座 6、020 为 4、022 为 4，但原两道诊断题仍未修好。**开发门槛未通过，72 道最终任务继续封存，不上传 ModelScope**。固定 020 复跑也在同两题从通过变为失败；首条反馈差异可由日期字段解释，未验证其对最终成绩的因果影响。完整记录见[行为复盘](../experiments/022-action-repair/results/2026-11-12/behavior-review.md)。
+
+[023 的重复评测](../experiments/023-evaluation-stability/results/2026-11-13/behavior-review.md)已完成：底座两组均为 6/6/6，020 原始为 7/8/7、规范化为 7/7/7，022 原始为 9/9/8、规范化为 9/9/9（每轮 15 题）。两道翻转题的首次反馈差异均为文件列表日期；相同输入探针未发现生成变化。规范化减少了本批评测波动，但三模型合计成功数不变，仍有动作变化，不能宣称彻底确定或提高通用能力。**本轮不训练、不重开最终测试、不发布权重**。
+
+[024 的稳定性诊断](../experiments/024-feedback-noise/results/2026-11-14/behavior-review.md)已完成：新增耗时处理后，底座由 7/6/6 变为 7/7/7，020 与 022 分别保持 7/7/7、9/9/9（每轮 15 题）；三模型本轮均未再出现跨轮动作或评分变化。仍有截断相关的反馈差异；这些重复开发题不足以证明通用能力提升。
+
+[下一阶段目标：可验证的 27B 编码改进周期](../plans/verified-coding-cycle.json)已经登记：024 公开核验后，建立不少于 60 道、6 个新仓库、2 种语言的开发对照，准备 100～300 条实际执行验证的教师轨迹，区分模型蒸馏与执行流程的收益。目标是较底座提高至少 10 个百分点并通过回归检查；这是研发目标，不是效果承诺。具体预算与计分规则将在新开发评分前冻结，既有最终测试继续封存，开发结果不直接触发参数发布。
+
+**首月验收。** 先用单卡记录 100 步的训练吞吐、峰值显存和验证集 bits/byte（预测每个原始字节所需的平均比特数，越低越好）。再在同一显卡和时间预算上改变一个因素，例如分词器。公开实验要固定训练和验证文档、模型参数预算、上下文策略与计时口径，并保留多个种子的结果。不同词表会改变输入长度、输出层开销和每步读到的原始字节数，应分别记录。
+
+**后续重点。** 先建立真实仓库任务、独立留出和统一工具预算，再用有明确来源与授权的代码轨迹比较底座与后训练版本。确认质量收益后，完善长任务恢复、部署、首 token 延迟和吞吐对照，再考虑向较小模型蒸馏。每次新基模发布都沿用升级协议和回归系统，欢迎外部贡献者提供其他模型、显卡和合法任务的复测。
+
+**每个实验留什么。** 记录假设、数据来源与版本、设备与环境、代码提交、完整配置、命令、原始指标、失败原因及下一步。权重另存并按数据许可提供获取方式。InfraGuide 的 AI Infra 章节提供对应知识点。
+
+设计参考包括 [build-nanogpt](https://github.com/karpathy/build-nanogpt) 的渐进式教学、[nanochat](https://github.com/karpathy/nanochat) 的完整训练流程和 [autoresearch](https://github.com/karpathy/autoresearch) 的固定算时实验。中文从零训练可以与 [MiniMind](https://github.com/jingyaogong/minimind) 交叉学习。
+
+本仓库的原创代码采用 MIT 许可。中文维基百科语料和实验调用的第三方分词器分别遵循各自的许可，文章出处和处理方式随数据准备脚本生成。[代码许可](../LICENSE) · [语料来源与许可](../experiments/002-first-train/README.md#本次中文语料) · [分词器来源](../experiments/001-tokenizer/README.md)

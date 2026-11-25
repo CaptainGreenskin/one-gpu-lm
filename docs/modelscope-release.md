@@ -1,5 +1,7 @@
 # 27B 编码模型发布目标
 
+**当前状态 · 054 开发验收。** 代码、训练曲线和匿名开发记录已公开。首个 27B 适配器将在通过开发及独立最终验收后发布。
+
 首个发布物是通过验收的 27B 编码 LoRA，发布到 ModelScope 国际站的 CaptainGreenskin 账号。认证、发布与公开下载均使用该账号所在站点。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。[ModelScope 发布账号](https://www.modelscope.ai/profile/CaptainGreenskin) · [官方站点说明](https://www.modelscope.cn/skills/modelscope/ms-hub)
 
 | 阶段 | 验收证据 |
