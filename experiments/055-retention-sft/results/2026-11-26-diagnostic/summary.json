@@ -1,0 +1,145 @@
+{
+  "groups": {
+    "prior_regressions": {
+      "paired_rollouts": 9,
+      "old_base": 8,
+      "old_054": 2,
+      "fresh_base": 6,
+      "fresh_055": 6,
+      "fresh_gains": 3,
+      "fresh_regressions": 3,
+      "prior_054_regressions": 6,
+      "prior_054_gains": 0,
+      "prior_054_regressions_recovered": 5,
+      "prior_054_gains_retained": 0
+    },
+    "prior_gains": {
+      "paired_rollouts": 9,
+      "old_base": 0,
+      "old_054": 9,
+      "fresh_base": 0,
+      "fresh_055": 6,
+      "fresh_gains": 6,
+      "fresh_regressions": 0,
+      "prior_054_regressions": 0,
+      "prior_054_gains": 9,
+      "prior_054_regressions_recovered": 0,
+      "prior_054_gains_retained": 6
+    },
+    "prior_retained": {
+      "paired_rollouts": 9,
+      "old_base": 9,
+      "old_054": 9,
+      "fresh_base": 9,
+      "fresh_055": 6,
+      "fresh_gains": 0,
+      "fresh_regressions": 3,
+      "prior_054_regressions": 0,
+      "prior_054_gains": 0,
+      "prior_054_regressions_recovered": 0,
+      "prior_054_gains_retained": 0
+    }
+  },
+  "protocol_sha256": "5384aad85e3a61e61d0cd7470f373d0de962824546926674fcf66017b808a03b",
+  "audit_sha256": "149022458861c171aaf830328a348b8a618f2463bf8f8fcbdf0a95f61880a934",
+  "submissions_by_call": [
+    {
+      "calls": 0,
+      "prior_base": 0,
+      "054": 0,
+      "rerun_base": 0,
+      "055": 0
+    },
+    {
+      "calls": 1,
+      "prior_base": 0,
+      "054": 0,
+      "rerun_base": 0,
+      "055": 0
+    },
+    {
+      "calls": 2,
+      "prior_base": 0,
+      "054": 0,
+      "rerun_base": 0,
+      "055": 0
+    },
+    {
+      "calls": 3,
+      "prior_base": 0,
+      "054": 0,
+      "rerun_base": 0,
+      "055": 0
+    },
+    {
+      "calls": 4,
+      "prior_base": 0,
+      "054": 6,
+      "rerun_base": 0,
+      "055": 6
+    },
+    {
+      "calls": 5,
+      "prior_base": 3,
+      "054": 6,
+      "rerun_base": 3,
+      "055": 6
+    },
+    {
+      "calls": 6,
+      "prior_base": 3,
+      "054": 9,
+      "rerun_base": 3,
+      "055": 6
+    },
+    {
+      "calls": 7,
+      "prior_base": 6,
+      "054": 15,
+      "rerun_base": 6,
+      "055": 6
+    },
+    {
+      "calls": 8,
+      "prior_base": 6,
+      "054": 15,
+      "rerun_base": 6,
+      "055": 9
+    },
+    {
+      "calls": 9,
+      "prior_base": 12,
+      "054": 15,
+      "rerun_base": 12,
+      "055": 15
+    },
+    {
+      "calls": 10,
+      "prior_base": 12,
+      "054": 18,
+      "rerun_base": 12,
+      "055": 18
+    },
+    {
+      "calls": 11,
+      "prior_base": 12,
+      "054": 18,
+      "rerun_base": 12,
+      "055": 18
+    },
+    {
+      "calls": 12,
+      "prior_base": 17,
+      "054": 20,
+      "rerun_base": 15,
+      "055": 18
+    }
+  ],
+  "repository_requests": 510,
+  "elapsed_seconds": 6744.247694730759,
+  "started_epoch": 1795681370.7552574,
+  "finished_epoch": 1795688115.002952,
+  "final_test_opened": false,
+  "weights_public": false,
+  "eligible_for_final_promotion": false
+}
