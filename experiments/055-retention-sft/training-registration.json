@@ -1,0 +1,38 @@
+{
+  "protocol_sha256": "518de29e97ee746cf93ac3f760f152a6d0dc8917ea1ee49cbe61999a7fd393cf",
+  "design_sha256": "56ba789761806e9714b853ed682818b27c639f7a7d779758ceda8f8a6ad43586",
+  "data_sha256": "fe38a4f4c89cd5ddf7059a4c4be4cb826a55add42a1f449f496984caae6d4c62",
+  "source_review_sha256": "3f00e96702ca747b579d5474952b5c0138321665805343a85039a590076f6bd6",
+  "schedule_sha256": "aa8d8f1fdbb5f634eb846c6a285f4ca6c00ad5bb1e6b12e295946cb13a0da52f",
+  "order_sha256": "2697296f7f345617fbb81bb59e7e557b3880a4f1436bc93b4efb38eba8bcb97e",
+  "selection": {
+    "records": 394,
+    "episodes": 79,
+    "input_tokens": 1029321,
+    "supervised_tokens": 81338,
+    "target_counts": {
+      "reference_edit": 182,
+      "final_verification": 79,
+      "explicit_submission": 79,
+      "partial_repair_regression": 32,
+      "post_failure_edit": 22
+    },
+    "optimizer_updates": 50
+  },
+  "optimizer_updates": 0,
+  "learning_rate": 5e-06,
+  "final_test_opened": false,
+  "source_sha256": {
+    "experiments/055-retention-sft/train.py": "75724d96b79612555944d0ab58ded7cd77074afad455c3328d2cceb812e56993",
+    "experiments/055-retention-sft/design.json": "56ba789761806e9714b853ed682818b27c639f7a7d779758ceda8f8a6ad43586",
+    "one_gpu_lm/verified/continuation_training.py": "b34a355431736a7d8ae8a9c7026239bf8f8d9e17d16708e77f3175d2d45db641",
+    "one_gpu_lm/verified/runtime_identity.py": "d98fa228a30a3f7dc013297f8a5610f39d7212396c2c46bc8a3e63230786e3e7",
+    "one_gpu_lm/verified/candidate_data.py": "ddc3a847412025b563e82ac3c1da586bfc24ad805f51e450d3b23bd5cc59a60a",
+    "one_gpu_lm/common/training_encoding.py": "d1b73171f7d6edfbbea5188c71a4d5bf6ada1807c1a5cda11a3fd96ca9c88113",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/models/adapter_bundle.py": "816511118bd481cc2c3edd1881497d2a9f8baee6a6c2085322d8b3bee28c93e8",
+    "one_gpu_lm/models/release_lineage.py": "58d3d170660bd7aa243d15639f8a1f0dc96410a160457459ae2c9b6de2712301",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450"
+  }
+}
