@@ -3,8 +3,9 @@
 No host /usr tree, home, package manager, model or reference snapshot is mounted.
 This remains a single-user experiment harness, not a hostile multi-tenant service.
 """
-from pathlib import Path
+from contextlib import nullcontext
 import os
+from pathlib import Path
 import resource
 import signal
 import subprocess
@@ -59,7 +60,7 @@ class Sandbox:
             args += ['--ro-bind', mount['source'], mount['destination']]
         for key, value in self.runtime['environment'].items():
             args += ['--setenv', key, str(value)]
-        args += ['--', '/bin/bash', '-c', command]
+        loopback_hosts = self.runtime.get('policy', {}).get('loopback_hosts') is True
         def limits():
             resource.setrlimit(resource.RLIMIT_CPU, (self.timeout, self.timeout + 1))
             resource.setrlimit(resource.RLIMIT_AS, (16 * 2**30,) * 2)
@@ -68,9 +69,17 @@ class Sandbox:
             resource.setrlimit(resource.RLIMIT_NPROC, (512, 512))
             resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
         started = time.monotonic()
-        with tempfile.TemporaryFile() as stdout, tempfile.TemporaryFile() as stderr:
+        with (tempfile.TemporaryFile() as stdout, tempfile.TemporaryFile() as stderr,
+              (tempfile.TemporaryFile() if loopback_hosts else nullcontext()) as hosts):
+            pass_fds = ()
+            if hosts is not None:
+                hosts.write(b'127.0.0.1 localhost\n::1 localhost\n')
+                hosts.seek(0)
+                pass_fds = (hosts.fileno(),)
+                args += ['--ro-bind-data', str(hosts.fileno()), '/etc/hosts']
+            args += ['--', '/bin/bash', '-c', command]
             p = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=stdout, stderr=stderr,
-                                 preexec_fn=limits, start_new_session=True)
+                                 preexec_fn=limits, start_new_session=True, pass_fds=pass_fds)
             try:
                 p.wait(timeout=self.timeout + 2)
                 reason = 'ok' if p.returncode == 0 else 'runtime_error'
