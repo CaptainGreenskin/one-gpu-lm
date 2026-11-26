@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "final_audit_sha256": "fdfadfbcbf80ef4e0a5b7bc62ee2a25162f8ea9e957e4584b26a678056339a67",
+  "development_audit_sha256": "01068a1cbf59a5636a1f67310aa16d3c1a96c14c9d01e864ce813cd624162054",
+  "reference_protocol_sha256": "9ddf583f54d7b75e977a13b11c1bb87481449118f57387d8c0b410bc9abd74a4",
+  "cohorts": {
+    "fresh": {
+      "pairs": 24,
+      "base_passed": 10,
+      "candidate_passed": 14,
+      "net_gain": 4,
+      "base_format": {
+        "failures": 15,
+        "calls": 243,
+        "rate": 0.06172839506172839
+      },
+      "candidate_format": {
+        "failures": 2,
+        "calls": 205,
+        "rate": 0.00975609756097561
+      },
+      "gained": 6,
+      "regressed": 2
+    },
+    "historical": {
+      "pairs": 48,
+      "base_passed": 25,
+      "candidate_passed": 30,
+      "net_gain": 5,
+      "base_format": {
+        "failures": 20,
+        "calls": 449,
+        "rate": 0.044543429844097995
+      },
+      "candidate_format": {
+        "failures": 6,
+        "calls": 416,
+        "rate": 0.014423076923076924
+      },
+      "gained": 6,
+      "regressed": 1
+    }
+  },
+  "function_regression": {
+    "pairs": 9,
+    "base_passed": 9,
+    "candidate_passed": 9
+  },
+  "submission_curve": [
+    {
+      "calls": 0,
+      "base": 0,
+      "lora": 0
+    },
+    {
+      "calls": 1,
+      "base": 0,
+      "lora": 0
+    },
+    {
+      "calls": 2,
+      "base": 0,
+      "lora": 0
+    },
+    {
+      "calls": 3,
+      "base": 1,
+      "lora": 1
+    },
+    {
+      "calls": 4,
+      "base": 2,
+      "lora": 7
+    },
+    {
+      "calls": 5,
+      "base": 9,
+      "lora": 15
+    },
+    {
+      "calls": 6,
+      "base": 16,
+      "lora": 22
+    },
+    {
+      "calls": 7,
+      "base": 25,
+      "lora": 29
+    },
+    {
+      "calls": 8,
+      "base": 26,
+      "lora": 32
+    },
+    {
+      "calls": 9,
+      "base": 28,
+      "lora": 37
+    },
+    {
+      "calls": 10,
+      "base": 29,
+      "lora": 41
+    },
+    {
+      "calls": 11,
+      "base": 30,
+      "lora": 42
+    },
+    {
+      "calls": 12,
+      "base": 35,
+      "lora": 44
+    }
+  ],
+  "hardware": {
+    "samples": 2648,
+    "collection_errors": 0,
+    "maximum_sample_gap_seconds": 5.060754060745239,
+    "sample_span_seconds": 13347.032437086105,
+    "boundary_uncovered_seconds": 2.559600591659546,
+    "means_are_sample_means_not_utilization_weighted": true,
+    "temperature_c": {
+      "mean": 49.577416918429,
+      "peak": 67.0
+    },
+    "power_w": {
+      "mean": 236.6606080060423,
+      "peak": 557.72
+    },
+    "utilization_percent": {
+      "mean": 41.01283987915408,
+      "peak": 100.0
+    },
+    "memory_used_mib": {
+      "mean": 61019.53625377644,
+      "peak": 63087.0
+    },
+    "recorded_samples": 2648,
+    "sample_statistics_verified": true
+  },
+  "repository_requests": 1318,
+  "started_epoch": 1795664886.1412702,
+  "finished_epoch": 1795678235.7333078,
+  "final_test_opened": true,
+  "quality_checks": {
+    "all_execution_audits_pass": true,
+    "format_failure_rate": true,
+    "fresh_gain": true,
+    "fresh_pairs": true,
+    "fresh_regressions": false,
+    "historical_pairs": true,
+    "historical_regressions": false,
+    "legacy": true
+  },
+  "quality_gate_passed": false,
+  "release_checks_pending_at_scoring": [
+    "rights_and_secret_scan_pass",
+    "save_reload_greedy_match",
+    "single_training_seed_and_repository_cluster_limits_disclosed"
+  ],
+  "weights_public_at_scoring": false
+}

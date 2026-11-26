@@ -6,7 +6,7 @@
 
 | 实验 | 公开记录 |
 | --- | --- |
-| 054 · 扩充可验证修复样本 | [训练曲线](../experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [通过门槛的开发配对与曲线](../experiments/054-expanded-repair-sft/results/2026-11-26-development/) |
+| 054 · 扩充可验证修复样本 | [训练曲线](../experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [通过门槛的开发配对与曲线](../experiments/054-expanded-repair-sft/results/2026-11-26-development/) · [最终验收及退步记录](../experiments/054-expanded-repair-sft/results/2026-11-26-final/) |
 | 053 · 改码后的回归检查与纠错 | [开发配对结果和曲线](../experiments/053-post-edit-recheck/results/2026-11-25-development/) |
 | 052 · 首次修改前的源码证据 | [开发配对结果和曲线](../experiments/052-grounded-first-edit/results/2026-11-24-development/) |
 | 051 · 可验证的修复到提交 | [开发配对结果和曲线](../experiments/051-repair-closure-sft/results/2026-11-24-development/) |

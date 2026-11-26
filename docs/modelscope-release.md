@@ -1,6 +1,6 @@
 # 27B 编码模型发布目标
 
-**当前状态 · 054 已通过开发验收，等待独立最终验收。** 代码、训练曲线和匿名开发记录已公开。首个 27B 适配器还需通过最终质量、分发和重载检查。
+**当前状态 · 054 的独立最终验收已完成，因 3 道退步未达到发布门槛。** 训练记录、开发对照和最终审计汇总已公开。ModelScope 首发仍待通过质量、分发和重载检查的候选。[054 最终结果](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
 
 首个发布物是通过验收的 27B 编码 LoRA，发布到 ModelScope 国际站的 CaptainGreenskin 账号。认证、发布与公开下载均使用该账号所在站点。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。[ModelScope 发布账号](https://www.modelscope.ai/profile/CaptainGreenskin) · [官方站点说明](https://www.modelscope.cn/skills/modelscope/ms-hub)
 
@@ -40,6 +40,8 @@
 054 使用 79 个修复案例、394 条动作和 50 次优化器更新，适配器已通过独立恢复校验。新的 60 道开发题已完成离线参考修复核验，登记底座与 LoRA 的 360 次同预算对照。 [054 训练曲线与硬件记录](../experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [054 开发验收登记](../experiments/054-expanded-repair-sft/development-registration.json)
 
 054 的开发对照已完成 180 个配对。底座修对并提交 38／180，LoRA 为 77／180。配对提升 21.67 个百分点，95% 区间为 +6.67 至 +38.33 个百分点，满足全部开发门槛。11 道必要多文件题两组均未完成。 [054 开发结果、曲线与卡时](../experiments/054-expanded-repair-sft/results/2026-11-26-development/)
+
+054 在 24 道新留出题上从 10／24 提高到 14／24，其中新增成功 6 道、退步 2 道。在 48 道历史回归题上从 25／48 提高到 30／48，其中新增成功 6 道、退步 1 道。工具调用格式及 9 道函数回归达到门槛。两组仓库题均出现退步，因而未通过最终质量门槛。[054 最终验收与调用曲线](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
