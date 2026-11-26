@@ -1,12 +1,14 @@
 """Recompute and publish a registered independent comparison using anonymous rows."""
 import argparse
 from copy import deepcopy
+import csv
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256 as hash_bytes
 import json
 import math
 from pathlib import Path
 import sys
+from tempfile import TemporaryDirectory
 
 from one_gpu_lm.common.receipts import sha256, write_json
 
@@ -56,22 +58,40 @@ def gpu_statistics(out, state):
     for attempt, (start, end) in enumerate(zip(starts, ends), 1):
         path = attempt_directory(out, attempt)/'telemetry.csv'
         collector = state['telemetry'] if attempt == len(starts) else None
+        dropped_bytes = 0
         try:
             expected = restarts[attempt - 1]['prior_telemetry_sha256'] if collector is None else None
-            source_hash = sha256(path)
+            original = path.read_bytes()
+            source_hash = hash_bytes(original).hexdigest()
             if collector is None and source_hash != expected:
                 raise ValueError('Telemetry differs from the recorded restart')
-            checked = hardware(path, {'started_epoch':start,'finished_epoch':end,'telemetry':collector})
+            execution = {'started_epoch':start,'finished_epoch':end,'telemetry':collector}
+            if b'\x00' in original:
+                prefix = original.rstrip(b'\x00')
+                if collector is not None or not prefix.endswith(b'\n') or b'\x00' in prefix:
+                    raise ValueError('NUL bytes corrupt a telemetry row')
+                # A reboot may leave a zero-filled tail after the last complete row.
+                # Keep the original bytes untouched for the execution audit.
+                dropped_bytes = len(original) - len(prefix)
+                with TemporaryDirectory(prefix='telemetry-prefix-') as temporary:
+                    clean = Path(temporary)/path.name
+                    clean.write_bytes(prefix)
+                    checked = hardware(clean,execution)
+            else:
+                checked = hardware(path,execution)
             if ((collector is not None and checked['samples'] != collector['samples'])
                     or any(not math.isfinite(v) for key in GPU_FIELDS if checked[key]
                            for v in checked[key].values())):
                 raise ValueError('Hardware samples differ from their collector receipt')
-        except (OSError, ValueError, TypeError, KeyError):
+        except (OSError, ValueError, TypeError, KeyError, csv.Error):
             unavailable.append(attempt)
             continue
         keep = ('samples','first_to_last_seconds','maximum_gap_seconds',*GPU_FIELDS)
-        segments.append({**{key:checked[key] for key in keep},'attempt':attempt,
-                         'telemetry_sha256':source_hash,'collector_errors':collector['errors'] if collector else None})
+        segment = {**{key:checked[key] for key in keep},'attempt':attempt,
+                   'telemetry_sha256':source_hash,'collector_errors':collector['errors'] if collector else None}
+        if dropped_bytes:
+            segment['discarded_trailing_nul_bytes'] = dropped_bytes
+        segments.append(segment)
     samples = sum(segment['samples'] for segment in segments)
     summary = {'samples':samples,'segments':segments,'unavailable_attempts':unavailable,
                'sample_span_seconds':sum(segment['first_to_last_seconds'] for segment in segments)}
@@ -207,6 +227,10 @@ def render(root, directory, registration, *, experiment='042'):
         if gpu['unavailable_attempts']:
             attempts = ', '.join(str(n) for n in gpu['unavailable_attempts'])
             lines += ['',f'第 {attempts} 次执行的硬件记录无法核验。']
+        for segment in gpu['segments']:
+            if dropped := segment.get('discarded_trailing_nul_bytes'):
+                lines += ['',f'第 {segment["attempt"]} 次执行的采样文件在重启时留下 {dropped} 字节的零填充尾部。'
+                          '统计使用此前的完整采样行，已审计的原始文件保留。']
     overhead = value['interruptions']
     if overhead['reboots']:
         lines += ['',f'工作站重启 {overhead["reboots"]} 次。中断分支中的 {overhead["journaled_requests"]} 条请求单独记账，'

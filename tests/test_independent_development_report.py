@@ -79,6 +79,33 @@ class IndependentDevelopmentReport(unittest.TestCase):
             self.assertEqual(gpu['samples'],2)
             self.assertEqual(gpu['utilization_percent']['mean'],95)
 
+    def test_hardware_keeps_complete_rows_before_a_zero_filled_reboot_tail(self):
+        header = b'utc,attempt,temperature_c,power_w,utilization_percent,memory_used_mib\r\n'
+        first_row = b'1970-01-01T00:00:01+00:00,1,50,150,20,1000\r\n'
+        second_row = b'1970-01-01T00:10:01+00:00,2,51,180,90,1200\r\n'
+        with TemporaryDirectory() as directory, patch.object(sys,'path',[str(EXP),*sys.path]):
+            out = Path(directory)
+            first = out/'telemetry.csv'
+            original = header + first_row + b'\x00' * 61
+            first.write_bytes(original)
+            second = out/'private/attempts/002/telemetry.csv'
+            second.parent.mkdir(parents=True)
+            second.write_bytes(header + second_row)
+            state = {'started_epoch':0,'finished_epoch':610,'telemetry':{'samples':1,'errors':0},
+                     'restarts':[{'boot_epoch':590,'resumed_epoch':600,
+                                  'prior_telemetry_sha256':sha256(original).hexdigest()}]}
+            gpu = REPORT['gpu_statistics'](out,state)
+            self.assertEqual(gpu['samples'],2)
+            self.assertEqual(gpu['segments'][0]['discarded_trailing_nul_bytes'],61)
+            self.assertEqual(gpu['segments'][0]['telemetry_sha256'],sha256(original).hexdigest())
+            self.assertEqual(first.read_bytes(),original)
+
+            corrupt = header + first_row.replace(b'150',b'1\x000')
+            first.write_bytes(corrupt)
+            state['restarts'][0]['prior_telemetry_sha256'] = sha256(corrupt).hexdigest()
+            second.write_bytes(header + second_row + b'\x00')
+            self.assertEqual(REPORT['gpu_statistics'](out,state)['unavailable_attempts'],[1,2])
+
 
 if __name__=='__main__':
     unittest.main()

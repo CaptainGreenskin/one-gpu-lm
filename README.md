@@ -8,24 +8,24 @@
 
 ## 公开结果
 
-053 在六个新的仓库家族上测试了 60 道题，每组各跑三次。底座修对并提交 **36/180（20%）**，LoRA 为 **54/180（30%）**。配对 95% 区间为 **−1.67 至 +23.33 个百分点**，这一轮未通过开发门槛。曲线记录首次改码和修对并提交的进度。[逐题结果、曲线与卡时](experiments/053-post-edit-recheck/results/2026-11-25-development/)
+054 在六个新仓库家族的 60 道题上各跑三轮。底座修对并提交 **38/180（21.1%）**，LoRA 为 **77/180（42.8%）**。增幅 **21.67 个百分点**，配对 95% 区间为 **+6.67 至 +38.33 个百分点**，通过开发门槛。39 次净增全部来自单文件任务，11 道必要多文件题两组均未完成。适配器还需通过独立最终验收。[逐题结果、曲线与卡时](experiments/054-expanded-repair-sft/results/2026-11-26-development/)
 
-![053 底座和 LoRA 随调用次数累计首次改码及成功提交的曲线](experiments/053-post-edit-recheck/results/2026-11-25-development/call-curves.svg)
+![054 底座和 LoRA 随调用次数累计首次改码及成功提交的曲线](experiments/054-expanded-repair-sft/results/2026-11-26-development/call-curves.svg)
 
-054 在一张 RTX PRO 6000 Blackwell 96 GB 上对 27B 底座做 LoRA 微调。50 次更新的训练循环用时 **16.1 分钟**，实测峰值显存约 **90 GiB**。首个 27B 适配器仍待质量验收和发布。[训练曲线与硬件记录](experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [开发对照登记](experiments/054-expanded-repair-sft/development-registration.json)
+054 在一张 RTX PRO 6000 Blackwell 96 GB 上对 27B 底座做 LoRA 微调。50 次更新的训练循环用时 **16.1 分钟**，实测峰值显存约 **90 GiB**。上一轮 053 的开发配对区间跨零，结果和曲线也保留在仓库中。[054 训练曲线与硬件记录](experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [053 开发结果](experiments/053-post-edit-recheck/results/2026-11-25-development/)
 
 ## CPU 快速复算
 
-用公开的 053 匿名测量重算通过率、配对区间和开发门槛，核对逐次结果与曲线数值。使用 Python 3.10 或以上版本的标准库即可。
+用公开的 054 匿名测量重算通过率、配对区间和开发门槛，核对逐次结果与曲线数值。使用 Python 3.10 或以上版本的标准库即可。
 
 ```bash
 git clone https://github.com/CaptainGreenskin/one-gpu-lm.git
 cd one-gpu-lm
 python3 -B scripts/verify_development_report.py \
-  experiments/053-post-edit-recheck/results/2026-11-25-development
+  experiments/054-expanded-repair-sft/results/2026-11-26-development
 ```
 
-输出包含 `"base_successes": 36`、`"candidate_successes": 54` 和 `"development_gate_passed": false`，以及三份逐项核对过的数值文件。053 的任务快照、推理和训练记录由实验方保留，下面的入口可以用自己的任务实际训练和评测。
+输出包含 `"base_successes": 38`、`"candidate_successes": 77`、`"development_gate_passed": true` 和单文件、多文件分组结果。054 的任务快照、推理和训练记录保存在私有实验目录。下面的入口可用自己的任务实际训练和评测。
 
 ## 换成自己的工作
 
