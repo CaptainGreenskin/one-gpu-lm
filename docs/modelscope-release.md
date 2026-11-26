@@ -67,7 +67,15 @@ python -m one_gpu_lm.models.adapter_bundle \
 
 ## 核对 ModelScope 上的发布版本
 
-[发布入口](../experiments/039-release-development/publish_package.py)使用通过验收的打包目录和 ModelScope 国际站的登录态。在本机安装 `modelscope-hub==0.7.0` 后，`check` 核对回执与本地文件。`stage` 创建私有模型仓库，只上传经审核的文件，从实际 Git 提交重新下载并逐文件校验。`publish` 再次比对同一提交后开放访问，匿名下载到新目录。状态保存在打包目录的 `modelscope-release.json`，网络中断后可按原提交恢复。[ModelScope Hub SDK](https://github.com/modelscope/modelscope_hub)
+在国际站账号下创建有写权限的访问令牌。在发布电脑的终端安装固定版本的 SDK，运行 `login` 并在隐藏提示中输入令牌，再用 `whoami` 核对账号。浏览器登录和命令行登录各自保存会话，国内站访问令牌仅适用于国内站。[国际站访问令牌](https://www.modelscope.ai/my/myaccesstoken) · [ModelScope 站点说明](https://github.com/modelscope/modelscope-skills#sites-domestic--international)
+
+```bash
+python -m pip install modelscope-hub==0.7.0
+modelscope-hub --endpoint https://www.modelscope.ai login
+modelscope-hub --endpoint https://www.modelscope.ai whoami
+```
+
+[发布入口](../experiments/039-release-development/publish_package.py)使用通过验收的打包目录和上述命令行登录态。`check` 核对回执与本地文件。`stage` 创建私有模型仓库，只上传经审核的文件，从实际 Git 提交重新下载并逐文件校验。`publish` 再次比对同一提交后开放访问，匿名下载到新目录。状态保存在打包目录的 `modelscope-release.json`，网络中断后可按原提交恢复。[ModelScope Hub SDK](https://github.com/modelscope/modelscope_hub)
 
 ```bash
 PYTHONPATH=. python experiments/039-release-development/publish_package.py check --package /path/to/accepted-release
