@@ -1,6 +1,6 @@
 # 27B 编码模型发布目标
 
-**当前状态 · 057 已完成训练和私有备份恢复验证，独立开发对照已登记。** 最终测试继续封存。ModelScope 首发仍待通过质量、分发和重载检查的候选。 [057 训练结果](../experiments/057-multifile-correction-sft/results/2026-11-27-training/) · [057 开发登记](../experiments/057-multifile-correction-sft/development-registration.json) · [054 最终结果](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
+**当前状态 · 057 的独立开发评测已完成审计，未达到晋级门槛。** ModelScope 首发仍待通过独立验收、许可与重载检查的候选。 [057 开发结果](../experiments/057-multifile-correction-sft/results/2026-11-28-development/) · [054 最终结果](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
 
 首个发布物是通过验收的 27B 编码 LoRA，发布到 ModelScope 国际站的 CaptainGreenskin 账号。认证、发布与公开下载均使用该账号所在站点。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。[ModelScope 发布账号](https://www.modelscope.ai/profile/CaptainGreenskin) · [官方站点说明](https://www.modelscope.cn/skills/modelscope/ms-hub)
 
@@ -46,6 +46,8 @@
 055 降低学习率后，对固定的 9 道旧开发题做了 27 个配对，并审计了 510 条仓库请求。底座成功 15 次，055 成功 18 次，其中新增 9 次、退步 6 次。下一阶段在六个独立仓库家族上按既定预算和门槛验收。[055 诊断曲线与决策记录](../experiments/055-retention-sft/results/2026-11-26-diagnostic/)
 
 055 的独立开发中，底座完成 12／180 次，LoRA 完成 21／180 次。净增 5.00 个百分点，配对 95% 区间为 −5.00 至 +16.67 个百分点。多文件任务两组均完成 3／48。 [055 匿名配对结果与调用曲线](../experiments/055-retention-sft/results/2026-11-27-development/)
+
+057 增加了三条经执行验证的多文件修复示范，在六个独立家族上完成 180 个配对。底座修对并提交 27／180 次，057 为 39／180 次，净增 6.67 个百分点，配对 95% 区间为 0.00 至 +16.67 个百分点。收益来自四道单文件题，多文件题两组均为 0／30。057 未通过开发门槛，本轮对封存集的调用数为零。 [057 训练与开发记录](../experiments/057-multifile-correction-sft/)
 
 最终验收从 [022 的公开任务清单](../experiments/022-action-repair/results/2026-11-12/task-inventory.json)绑定两组任务身份。新留出包含四个仓库家族，与 039 已核对的训练及开发来源无重叠。封存文件完整性以原协议哈希为准。[晋级检查](../experiments/039-release-development/promotion.py)重算 039 的开发门槛，并核对入选适配器和封存清单的身份。
 
