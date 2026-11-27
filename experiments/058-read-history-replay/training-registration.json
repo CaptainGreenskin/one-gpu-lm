@@ -1,0 +1,38 @@
+{
+  "protocol_sha256": "f15151c76b05a82b09bc8245ef74a6443d39b7a1d01cfa99bd0809322f08d44f",
+  "design_sha256": "f95658db35dce82c93236e06a6ef695b24240856adec4521909b1cece1137182",
+  "data_sha256": "62ed93e457f5d8e324795ca52f867e4a369d020a1be60da6f9e33d072fac0cae",
+  "source_review_sha256": "7c772bb3ca8342a1d0def9dff0bcd7215fe24a403940d254f639f4a2bd2aeccd",
+  "schedule_sha256": "db95d05e7f8da2a4006cc05f64b7f4b1129b9566cf0642b24c5acf96011bfc9b",
+  "order_sha256": "29a49da986642e9b04f83472bb37beb808ef70a89a3ad9fea70880a03e479719",
+  "selection": {
+    "records": 412,
+    "episodes": 82,
+    "input_tokens": 1200374,
+    "supervised_tokens": 84481,
+    "target_counts": {
+      "reference_edit": 191,
+      "final_verification": 82,
+      "explicit_submission": 82,
+      "partial_repair_regression": 35,
+      "post_failure_edit": 22
+    },
+    "optimizer_updates": 52
+  },
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "source_sha256": {
+    "experiments/058-read-history-replay/train.py": "477f24fb763663af73233a20627c4ae931127f3f6ffc2d89100f02d9c4bbb2f3",
+    "experiments/058-read-history-replay/plan.py": "f7e6a5c57ed21000bbb5b57f5154f25943e68a5714ab04d82150b42eb400af71",
+    "experiments/058-read-history-replay/design.json": "f95658db35dce82c93236e06a6ef695b24240856adec4521909b1cece1137182",
+    "one_gpu_lm/verified/continuation_training.py": "b34a355431736a7d8ae8a9c7026239bf8f8d9e17d16708e77f3175d2d45db641",
+    "one_gpu_lm/verified/runtime_identity.py": "d98fa228a30a3f7dc013297f8a5610f39d7212396c2c46bc8a3e63230786e3e7",
+    "one_gpu_lm/verified/candidate_data.py": "ddc3a847412025b563e82ac3c1da586bfc24ad805f51e450d3b23bd5cc59a60a",
+    "one_gpu_lm/common/training_encoding.py": "d1b73171f7d6edfbbea5188c71a4d5bf6ada1807c1a5cda11a3fd96ca9c88113",
+    "one_gpu_lm/models/hf_runtime.py": "c31d5eefd387ecef625519890640dc8de08f680981cfb39a6b08ea2829226513",
+    "one_gpu_lm/models/verify.py": "2c315eff6671a8f1eccbafbcfb14eba3c53826bbda817deaceb5342ddfb5be43",
+    "one_gpu_lm/models/adapter_bundle.py": "816511118bd481cc2c3edd1881497d2a9f8baee6a6c2085322d8b3bee28c93e8",
+    "one_gpu_lm/models/release_lineage.py": "58d3d170660bd7aa243d15639f8a1f0dc96410a160457459ae2c9b6de2712301",
+    "one_gpu_lm/common/telemetry.py": "478bb86a863b24b0a2742c5722fbad900ca046e7ea6713a27c5f46c30b56b450"
+  }
+}

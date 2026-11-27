@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment": "058-read-history-replay",
+  "selection": {
+    "records": 412,
+    "episodes": 82,
+    "input_tokens": 1200374,
+    "supervised_tokens": 84481,
+    "target_counts": {
+      "reference_edit": 191,
+      "final_verification": 82,
+      "explicit_submission": 82,
+      "partial_repair_regression": 35,
+      "post_failure_edit": 22
+    },
+    "optimizer_updates": 52
+  },
+  "recipe": {
+    "seed": 101,
+    "epochs": 1,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "gradient_accumulation_records": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 1e-05,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 8192,
+    "maximum_training_pipeline_seconds": 43200
+  },
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "sample_order_sha256": "29a49da986642e9b04f83472bb37beb808ef70a89a3ad9fea70880a03e479719",
+  "parent_training_protocol_sha256": "9890b63af569ee790ffe57f6851b8e2107913c223c07b0aa4fc4f93f059aea43",
+  "materialization_status_sha256": "c98a695eee8b7adf3c36590a196c242f928fde37178b048407191f3b1daf036a",
+  "materialization_protocol_sha256": "25e394148caa02c6c12bf7cdccf117f26978290574d828425ccf74698f112f50",
+  "input_sha256": {
+    "data_path": "62ed93e457f5d8e324795ca52f867e4a369d020a1be60da6f9e33d072fac0cae",
+    "schedule_path": "db95d05e7f8da2a4006cc05f64b7f4b1129b9566cf0642b24c5acf96011bfc9b",
+    "sources_path": "7c772bb3ca8342a1d0def9dff0bcd7215fe24a403940d254f639f4a2bd2aeccd"
+  },
+  "revised_records": 379,
+  "extended_episodes": 79,
+  "extended_multifile_episodes": 13,
+  "retained_reasons": {
+    "actor_call_budget": 3
+  },
+  "final_test_opened": false,
+  "weights_public": false
+}
