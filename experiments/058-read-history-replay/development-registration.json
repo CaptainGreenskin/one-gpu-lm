@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "experiment": "058-read-history-replay",
+  "private_protocol_sha256": "489f2393964b2569181a00422e02f67001490d9519d696704577c17d122ddd76",
+  "training_integrity_sha256": "2d5a514364a82875a118988c2a20fab06cda25242705eb2e211d51cb82fd58f1",
+  "training_report": {
+    "path": "experiments/058-read-history-replay/results/2026-11-28-training/measurements.json",
+    "sha256": "bbe2f53fd1ad58332d48d4d530b2c625194754914bde14633a5f4444cfecdd34",
+    "commit": "000b246b666e8289e13cfd7de07adaf119fa72df"
+  },
+  "comparison_code_sha256": {
+    "experiments/039-release-development/candidate_comparison.py": "73e28ea11788fd44e795ce691493d8c339fb22b08d5b20692a4986f2355820d6",
+    "experiments/039-release-development/promotion.py": "2e7c19f39fbec3224cc9864b0338d8b40183402a30d5cd704afda4f6efce5a82",
+    "experiments/039-release-development/analysis.py": "e3580d393e6993d668d6aa2655b57853a947bf3487b041a521bbca7ee3b31412",
+    "experiments/039-release-development/design.json": "1d4f7cccf5ae27edea0065bbe4b70ded033c1dabbac17c80f3c902ca78e93c40",
+    "one_gpu_lm/verified/family_runtime.py": "954f735d6841f531f3294e7f1f895a6c69b7e30fe505e22586c39e412af6afa1",
+    "one_gpu_lm/verified/resilient_rollout.py": "8a18675086f1a07abe49addb40ff4f5e50a45c30f7663c789298b6b561935b23",
+    "one_gpu_lm/verified/historic_replay.py": "87fab2728b04a817229928758c029fc74864f3d3c9a8ef4463b3d44bbce38367",
+    "one_gpu_lm/verified/sandbox.py": "a6641c61516e323d07230cbca2b79513b899c28acce485c6e6026a12346a781a"
+  },
+  "tasks_per_family": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "confirmed_multifile_tasks": 16,
+  "opening_preflight": {
+    "repeated_normalized_failure_text_matches": 42,
+    "max_selected_opening_tokens": 2076,
+    "first_transcript_shared_within_all_task_pairs": true
+  },
+  "pretrained_model": "Qwen/Qwen3.8-27B",
+  "base_revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "task_count": 60,
+  "language_counts": {
+    "python": 30,
+    "javascript": 30
+  },
+  "repetitions": 3,
+  "rollout_count": 360,
+  "block_size": 10,
+  "cohort_sha256": "62aeaee1c44ba44607223d4ce6eb41e3f650b2c6ad7d1a41600033e9aa3bcbd9",
+  "schedule_sha256": "e1ac10b497ddae364c4fe612e8c381bdd1946820454d742092326a1994e88bed",
+  "opening_preflight_sha256": "0cff08c0244d71bf1ecdaa77f7064a3a5df166efba750b0a57eb6833925e0958",
+  "evaluation_profile_sha256": "3f8c4cc5577958be255f60249936edc8958db2817ce80cc5af062475d48af4be",
+  "selected_opening": "original",
+  "source_context_audit_sha256": "f4e8899e191049e0772cbf349f4abc791c4d4c4daa19247bdb2d592b30e23ac6",
+  "evaluation_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "recovery_accounting_seconds": 180,
+  "pipeline_limit_seconds": 172800,
+  "gate": {
+    "minimum_gain_pp": 10,
+    "maximum_family_drop_pp": 10,
+    "require_positive_95_percent_lower_bound": true,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 39039,
+    "complete_audited_repetitions_required": true
+  },
+  "optimizer_updates_during_development": 0,
+  "final_test_opened": false,
+  "weight_publication_allowed_by_development": false
+}
