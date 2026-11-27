@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "rule_sha256": "f7e6a5c57ed21000bbb5b57f5154f25943e68a5714ab04d82150b42eb400af71",
+  "cases": [
+    {
+      "example": 1,
+      "original_calls": 9,
+      "replay_calls": 11,
+      "original_first_edit": 2,
+      "replay_first_edit": 4,
+      "same_supervised_actions": 8,
+      "original_supervised_tokens": 2028,
+      "replay_supervised_tokens": 2028,
+      "protected_grade_passed": true
+    },
+    {
+      "example": 2,
+      "original_calls": 6,
+      "replay_calls": 8,
+      "original_first_edit": 2,
+      "replay_first_edit": 4,
+      "same_supervised_actions": 5,
+      "original_supervised_tokens": 595,
+      "replay_supervised_tokens": 595,
+      "protected_grade_passed": true
+    },
+    {
+      "example": 3,
+      "original_calls": 6,
+      "replay_calls": 8,
+      "original_first_edit": 2,
+      "replay_first_edit": 4,
+      "same_supervised_actions": 5,
+      "original_supervised_tokens": 520,
+      "replay_supervised_tokens": 520,
+      "protected_grade_passed": true
+    }
+  ],
+  "model_generations": 0,
+  "optimizer_updates": 0,
+  "final_test_opened": false,
+  "input_inventory": {
+    "training_episodes": 82,
+    "training_records": 412,
+    "original_trajectory_receipts": 104,
+    "verified_source_snapshots": 82,
+    "records_with_call_capacity": 379,
+    "episodes_without_two_calls": 3
+  }
+}
