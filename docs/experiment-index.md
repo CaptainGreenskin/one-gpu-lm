@@ -6,6 +6,7 @@
 
 | 实验 | 公开记录 |
 | --- | --- |
+| 058 · 有多次查阅记录的修复训练 | [重放试点与训练登记](../experiments/058-read-history-replay/) · [训练曲线与硬件记录](../experiments/058-read-history-replay/results/2026-11-28-training/) |
 | 057 · 多文件纠错微调 | [训练设计与记录](../experiments/057-multifile-correction-sft/) · [独立开发配对与调用曲线](../experiments/057-multifile-correction-sft/results/2026-11-28-development/) |
 | 055 · 降低学习率与底座能力保留 | [训练设计与登记](../experiments/055-retention-sft/) · [训练曲线与硬件记录](../experiments/055-retention-sft/results/2026-11-26-training/) · [审计后的配对诊断](../experiments/055-retention-sft/results/2026-11-26-diagnostic/) |
 | 054 · 扩充可验证修复样本 | [训练曲线](../experiments/054-expanded-repair-sft/results/2026-11-25-training/) · [通过门槛的开发配对与曲线](../experiments/054-expanded-repair-sft/results/2026-11-26-development/) · [最终验收及退步记录](../experiments/054-expanded-repair-sft/results/2026-11-26-final/) |
