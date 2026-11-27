@@ -1,6 +1,6 @@
 # 27B 编码模型发布目标
 
-**当前状态 · 055 完成 180 个开发配对，未达到晋级门槛。** 最终测试继续封存。ModelScope 首发仍待通过质量、分发和重载检查的候选。 [055 开发结果](../experiments/055-retention-sft/results/2026-11-27-development/) · [054 最终结果](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
+**当前状态 · 057 已完成训练和私有备份恢复验证，独立开发对照已登记。** 最终测试继续封存。ModelScope 首发仍待通过质量、分发和重载检查的候选。 [057 训练结果](../experiments/057-multifile-correction-sft/results/2026-11-27-training/) · [057 开发登记](../experiments/057-multifile-correction-sft/development-registration.json) · [054 最终结果](../experiments/054-expanded-repair-sft/results/2026-11-26-final/)
 
 首个发布物是通过验收的 27B 编码 LoRA，发布到 ModelScope 国际站的 CaptainGreenskin 账号。认证、发布与公开下载均使用该账号所在站点。代码、评测协议、匿名曲线和复现入口保存在 `one-gpu-lm`。模型卡固定底座及 adapter 的版本、许可、依赖和加载命令。合并权重另经导出与加载验证。[ModelScope 发布账号](https://www.modelscope.ai/profile/CaptainGreenskin) · [官方站点说明](https://www.modelscope.cn/skills/modelscope/ms-hub)
 
