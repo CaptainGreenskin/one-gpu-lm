@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "experiment": "056-multifile-repair-intake",
+  "source_split": "training",
+  "development_reference_commit": "6e6dce0fcd83e15d58e979cd9b736a15f2657a2a",
+  "cohorts": {
+    "Python": {
+      "native_cases_checked": 3,
+      "necessary_multifile_cases": 1,
+      "completed_failure_correction_replays": 1,
+      "action_labels": {
+        "reference_edit": 5,
+        "partial_repair_regression": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "supervised_tokens": 2028
+    },
+    "TypeScript": {
+      "native_cases_checked": 1,
+      "necessary_multifile_cases": 1,
+      "completed_failure_correction_replays": 1,
+      "action_labels": {
+        "reference_edit": 2,
+        "partial_repair_regression": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "supervised_tokens": 595
+    }
+  },
+  "total_action_labels": {
+    "reference_edit": 7,
+    "partial_repair_regression": 2,
+    "final_verification": 2,
+    "explicit_submission": 2
+  },
+  "all_failed_checks_followed_by_edits_to_another_file": true,
+  "capture_budget": {
+    "max_model_calls": 12,
+    "max_generated_tokens_per_call": 512,
+    "max_total_generated_tokens": 6144,
+    "max_input_tokens": 8192,
+    "max_task_seconds": 600,
+    "max_tool_seconds": 60,
+    "max_tool_output_chars": 2400
+  },
+  "private_archives_independently_restored": 2,
+  "optimizer_updates": 0,
+  "model_generations": 0,
+  "development_gate_evaluated": false,
+  "final_test_opened": false,
+  "weights_public": false
+}
