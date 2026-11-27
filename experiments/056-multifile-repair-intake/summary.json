@@ -27,13 +27,32 @@
         "explicit_submission": 1
       },
       "supervised_tokens": 595
+    },
+    "JavaScript": {
+      "native_cases_checked": 2,
+      "necessary_multifile_cases": 1,
+      "completed_failure_correction_replays": 1,
+      "action_labels": {
+        "reference_edit": 2,
+        "partial_repair_regression": 1,
+        "final_verification": 1,
+        "explicit_submission": 1
+      },
+      "supervised_tokens": 520
     }
   },
+  "development_reference_no_edit": {
+    "paired_runs": 180,
+    "both_no_edit_pairs": 147,
+    "both_no_edit_actors_used_full_call_budget": true,
+    "both_no_edit_actor_seconds": 28581.134361540135,
+    "paired_actor_seconds": 35832.83848920709
+  },
   "total_action_labels": {
-    "reference_edit": 7,
-    "partial_repair_regression": 2,
-    "final_verification": 2,
-    "explicit_submission": 2
+    "reference_edit": 9,
+    "partial_repair_regression": 3,
+    "final_verification": 3,
+    "explicit_submission": 3
   },
   "all_failed_checks_followed_by_edits_to_another_file": true,
   "capture_budget": {
@@ -45,7 +64,7 @@
     "max_tool_seconds": 60,
     "max_tool_output_chars": 2400
   },
-  "private_archives_independently_restored": 2,
+  "private_archives_independently_restored": 3,
   "optimizer_updates": 0,
   "model_generations": 0,
   "development_gate_evaluated": false,
