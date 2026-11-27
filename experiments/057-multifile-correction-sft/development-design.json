@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "experiment": "057-multifile-correction-sft",
+  "development": {
+    "task_count": 60,
+    "language_counts": {
+      "python": 30,
+      "javascript": 30
+    },
+    "repetitions": 3,
+    "rollout_count": 360,
+    "block_size": 10,
+    "selected_opening": "original",
+    "evaluation_budget": {
+      "max_model_calls": 12,
+      "max_generated_tokens_per_call": 512,
+      "max_total_generated_tokens": 6144,
+      "max_input_tokens": 8192,
+      "max_task_seconds": 600,
+      "max_tool_seconds": 60,
+      "max_tool_output_chars": 2400
+    },
+    "gate": {
+      "minimum_gain_pp": 10,
+      "maximum_family_drop_pp": 10,
+      "require_positive_95_percent_lower_bound": true,
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 39039,
+      "complete_audited_repetitions_required": true
+    }
+  },
+  "source_scope": "Six new repository families with ten admitted ordinary repair tasks per family, disjoint from training, prior scored development and the reserved final suites.",
+  "selection_order": "Use offline admission order with verified multifile repairs first. Freeze the mixed cohort before generation.",
+  "comparison": "Compare the 057 adapter and the original pinned base with the same opening, budgets, runtime and independent grading. Added actions and optimizer updates changed together.",
+  "secondary_trace_counts": [
+    "Correct and submitted single-file repairs",
+    "Correct and submitted necessary multifile repairs",
+    "Base passes with adapter regressions",
+    "Rollouts with no source edit",
+    "Correct rollouts without explicit submission"
+  ],
+  "base_and_candidate_use_same_opening_and_tool_pipeline": true,
+  "final_test_opened": false,
+  "weights_public": false
+}

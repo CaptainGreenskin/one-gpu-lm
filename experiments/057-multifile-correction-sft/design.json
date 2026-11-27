@@ -1,0 +1,53 @@
+{
+  "selection": {
+    "records": 412,
+    "episodes": 82,
+    "input_tokens": 1079041,
+    "supervised_tokens": 84481,
+    "target_counts": {
+      "reference_edit": 191,
+      "final_verification": 82,
+      "explicit_submission": 82,
+      "partial_repair_regression": 35,
+      "post_failure_edit": 22
+    },
+    "optimizer_updates": 52
+  },
+  "model_id": "Qwen/Qwen3.8-27B",
+  "revision": "37561816e66b5b9153b1b64c10968c18c1e6f4a0",
+  "parent_training_protocol_sha256": "9fe1d6a34dfca41e2c1a0d8fc2c986205cc81499ecad164b39f8dfb2ced692a5",
+  "sample_order_sha256": "29a49da986642e9b04f83472bb37beb808ef70a89a3ad9fea70880a03e479719",
+  "materializer_sha256": "2480d1d68e64644e7bbab06d18c6e7ffc48f931977a96351f5e594cc8609eaeb",
+  "training_families": 10,
+  "source_revisions": 82,
+  "final_test_opened": false,
+  "weights_public": false,
+  "schema_version": 1,
+  "experiment": "057-multifile-correction-sft",
+  "recipe": {
+    "seed": 101,
+    "epochs": 1,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "gradient_accumulation_records": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 1e-05,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 8192,
+    "maximum_training_pipeline_seconds": 43200
+  },
+  "input_sha256": {
+    "data_path": "8a2f546a1a9ff0982d0cfc0647a2269d35dbfd126dc3ce14feed9ebcc623acad",
+    "sources_path": "7c772bb3ca8342a1d0def9dff0bcd7215fe24a403940d254f639f4a2bd2aeccd",
+    "schedule_path": "f4e2b4f0ad03e66a113841142fbac359f9a0743c8c1497b7158583c2d699f5b5"
+  },
+  "additions": {
+    "actions": 18,
+    "verified_multifile_repairs": 3,
+    "source_families": 3,
+    "intake_commit": "06f5bc27e27d24a63cbc5ab452eb4df6b60cd9be"
+  },
+  "total_verified_multifile_repairs": 15
+}
